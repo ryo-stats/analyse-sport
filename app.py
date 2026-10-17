@@ -45,6 +45,13 @@ LEAGUES = [
     ("Bundesliga", "ger.1"),
     ("Ligue des champions", "uefa.champions"),
 ]
+# bandeau de chaque championnat sur le site : pays et logo ESPN
+LEAGUE_INFO = {
+    "fra.1": ("France", 9), "eng.1": ("Angleterre", 23), "esp.1": ("Espagne", 15),
+    "ita.1": ("Italie", 12), "ger.1": ("Allemagne", 10), "uefa.champions": ("Europe", 2),
+}
+LEAGUE_LOGO = "https://a.espncdn.com/i/leaguelogos/soccer/500/{}.png"
+NHL_LOGO = "https://assets.nhle.com/logos/nhl/svg/{}_{}.svg"
 ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard"
 ESPN_STANDINGS = "https://site.api.espn.com/apis/v2/sports/soccer/{league}/standings"
 ESPN_LEADERS = "https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league}/statistics"
@@ -571,7 +578,15 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
         pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
-        ctx=ctx, reading=reading)
+        ctx=ctx, reading=reading, **foot_visuals(league, H, A))
+
+
+def foot_visuals(league, H, A):
+    """Logos des équipes et du championnat, pays affiché dans le bandeau."""
+    code = dict(LEAGUES).get(league, "")
+    country, lid = LEAGUE_INFO.get(code, ("", None))
+    return dict(country=country, league_logo=LEAGUE_LOGO.format(lid) if lid else "",
+                logo_h=(H.get("team") or {}).get("logo", ""), logo_a=(A.get("team") or {}).get("logo", ""))
 
 
 # ---------------------------------------------------------------- NHL
@@ -834,7 +849,11 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
-        ctx=ctx, reading=reading)
+        ctx=ctx, reading=reading,
+        logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
+        logo_a=g["awayTeam"].get("logo") or NHL_LOGO.format(A, "light"),
+        logo_h_dark=g["homeTeam"].get("darkLogo") or NHL_LOGO.format(H, "dark"),
+        logo_a_dark=g["awayTeam"].get("darkLogo") or NHL_LOGO.format(A, "dark"))
 
 
 # ---------------------------------------------------------------- bilan
