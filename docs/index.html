@@ -243,6 +243,10 @@ td.r,th.r{text-align:right}
 }
 .explain{color:var(--muted);font-size:.88rem;max-width:70ch;display:grid;gap:.5rem;margin-top:1.5rem}
 .explain h2{font-size:1.15rem;color:var(--ink)}
+.legal{margin-top:1.5rem;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;display:grid;gap:6px;max-width:70ch}
+.legal p{margin:0}
+.legal b{display:inline-block;border:1.5px solid var(--muted);border-radius:4px;padding:0 4px;margin-right:4px;color:var(--ink)}
+.legal a{color:inherit}
 @media (max-width:640px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .cols,.goalies{grid-template-columns:1fr}
@@ -275,6 +279,11 @@ td.r,th.r{text-align:right}
     <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités viennent des cotes : elles disent ce qui est le plus probable, pas où le bookmaker se trompe.</p>
     <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est. Elle devrait se stabiliser vers 0,58 en foot et 0,48 en NHL (niveau des bookmakers). À juger après 200 matchs.</p>
   </section>
+  <footer class="legal">
+    <p><b>18+</b> Analyses statistiques gratuites, sans aucune garantie : un pronostic peut toujours être faux. Les jeux d'argent sont interdits aux moins de 18 ans. Joue de manière responsable, avec un budget que tu peux te permettre de perdre.</p>
+    <p>Besoin d'aide ? <a href="https://www.sos-jeu.ch" rel="noopener">sos-jeu.ch</a> (Suisse) · <a href="https://www.joueurs-info-service.fr" rel="noopener">joueurs-info-service.fr</a> (France).</p>
+    <p>Notifications : aucun compte, aucun e-mail. Le site garde seulement l'adresse technique d'abonnement de ton navigateur et tes matchs en favori ; tout est effacé quand tu coupes les notifications. Données : ESPN et NHL.</p>
+  </footer>
 </div>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
