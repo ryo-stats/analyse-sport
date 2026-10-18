@@ -170,6 +170,41 @@ td.r,th.r{text-align:right}
   .leagues .n{margin-left:auto}
 }
 @media (prefers-reduced-motion: reduce){.chev{transition:none}}
+/* ---- onglet Pronostics */
+.warnline{font-size:.86rem;color:var(--muted);margin:0 0 12px}
+.stars{color:var(--warn);letter-spacing:1px;font-size:.92rem;white-space:nowrap}
+.conf{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;justify-self:end}
+.pp{font-family:var(--display);font-size:1.05rem;min-width:40px;text-align:right}
+.selbox{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:18px}
+.selbox h2,.sech{font-size:1.35rem;margin:0 0 2px}
+.sech{margin:6px 0 10px}
+.selbox .src{margin:0 0 10px}
+.sellist{list-style:none;margin:0;padding:0;display:grid}
+.sel{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.sel:first-child{border-top:0}
+.rank{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--muted);text-align:center}
+.sbody{min-width:0;display:grid;gap:2px}
+.spick{font-weight:700;font-size:1rem}
+.smatch{display:flex;align-items:center;gap:6px;font-size:.86rem;min-width:0}
+.smatch span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.smeta{font-size:.76rem;color:var(--muted)}
+.lg.sm{width:16px;height:16px}
+.pm{padding:10px 12px;display:grid;gap:6px}
+.pm+.pm{border-top:1px solid var(--line)}
+.pmhead{display:flex;align-items:center;gap:7px;min-width:0;font-weight:600}
+.pmteams{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tagst{margin-left:auto;font:700 .64rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.plines{display:grid;gap:4px}
+.pl{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:8px;align-items:center;font-size:.9rem}
+.pl .pk{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.pl .pv{min-width:0}
+.pl.main .pv{font-weight:700}
+@media (max-width:640px){
+  .tabs button{padding:7px 12px;font-size:.9rem}
+  .pl{grid-template-columns:minmax(0,1fr) auto}
+  .pl .pk{grid-column:1 / -1;margin-bottom:-4px}
+  .stars{font-size:.8rem;letter-spacing:0}
+}
 .explain{color:var(--muted);font-size:.88rem;max-width:70ch;display:grid;gap:.5rem;margin-top:1.5rem}
 .explain h2{font-size:1.15rem;color:var(--ink)}
 @media (max-width:640px){
@@ -191,6 +226,7 @@ td.r,th.r{text-align:right}
   <nav class="tabs" role="tablist" aria-label="Sections">
     <button id="tab-foot" role="tab" aria-selected="true" data-tab="foot">Foot</button>
     <button id="tab-nhl" role="tab" aria-selected="false" data-tab="nhl">NHL</button>
+    <button id="tab-pronos" role="tab" aria-selected="false" data-tab="pronos">Pronostics</button>
     <button id="tab-bilan" role="tab" aria-selected="false" data-tab="bilan">Bilan</button>
   </nav>
   <div id="notes"></div>
@@ -199,6 +235,7 @@ td.r,th.r{text-align:right}
     <h2>Comment lire ces chiffres</h2>
     <p><strong>Barre de couleur :</strong> chances de victoire tirées des cotes du bookmaker affiché par ESPN, marge retirée. C'est l'estimation publique la plus fiable ; elle intègre déjà forme, absents connus et avantage du terrain. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
     <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En Ligue des champions, ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
+    <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités viennent des cotes : elles disent ce qui est le plus probable, pas où le bookmaker se trompe.</p>
     <p><strong>Bilan :</strong> chaque pronostic est archivé avant le match puis comparé au résultat. Si les matchs annoncés à 60 % sont gagnés environ 6 fois sur 10, les probabilités sont fiables. Il faut au moins 200 matchs pour en juger.</p>
   </section>
 </div>
@@ -421,6 +458,55 @@ function nhlView(){
   if (!all.length) return `<div class="empty">Pas de match NHL aujourd'hui.</div>`;
   return `${group("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, all, nhlDetail)}<p class="hint">Touchez un match pour voir son analyse complète.</p>${nhlRecap(all)}`;
 }
+// ---- onglet Pronostics : le plus sûr de chaque match, sélection du jour, étoiles + pourcentage
+const starStr = n => "★".repeat(n) + "☆".repeat(5 - n);
+function conf(pk){
+  return `<span class="conf"><span class="stars" aria-label="${pk.stars} étoile${pk.stars > 1 ? "s" : ""} sur 5">${starStr(pk.stars)}</span><b class="pp num">${pk.prob} %</b></span>`;
+}
+function selItem(c, i){
+  return `<li class="sel"><span class="rank num">${i + 1}</span>
+    <div class="sbody"><div class="spick">${esc(c.label)}</div>
+      <div class="smatch">${logo(c.logo_h, c.logo_h_dark, "lg sm")}<span>${esc(c.home)} – ${esc(c.away)}</span>${logo(c.logo_a, c.logo_a_dark, "lg sm")}</div>
+      <div class="smeta">${esc(c.time)} · ${esc(c.sport === "nhl" ? "NHL" : c.league)}</div></div>
+    ${conf(c)}</li>`;
+}
+function pronoMatch(m){
+  const pk = m.picks || {};
+  const lines = [["Le plus sûr", pk.main], ["Vainqueur", pk.winner],
+                 [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
+  const started = !["pre", "FUT", "PRE"].includes(m.state);
+  return `<div class="pm">
+    <div class="pmhead"><b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started ? `<span class="tagst">${DONE.includes(m.state) ? "Terminé" : "Commencé"}</span>` : ""}</div>
+    <div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Le plus sûr" ? " main" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span>${conf(p)}</div>`).join("")}
+    ${pk.score ? `<div class="pl"><span class="pk">Score</span><span class="pv">${esc(String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b></span></div>` : ""}</div></div>`;
+}
+function pronoView(){
+  const sel = DATA.selection || [];
+  const foot = DATA.foot || [], nhl = DATA.nhl || [];
+  if (!foot.length && !nhl.length) return `<div class="empty">Pas de match aujourd'hui.</div>`;
+  const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
+  const leagues = [...new Set(foot.map(m => m.league))].sort((a, b) => rank(a) - rank(b));
+  const block = (title, lg, list) => `<section class="grp"><div class="band">${lg ? `<img class="bl" src="${esc(lg)}" alt="" width="20" height="20" loading="lazy" onerror="this.remove()">` : ""}<span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(pronoMatch).join("")}</section>`;
+  const groups = leagues.map(l => { const f = foot.find(m => m.league === l) || {};
+      return block(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, foot.filter(m => m.league === l)); }).join("")
+    + (nhl.length ? block("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, nhl) : "");
+  return `<p class="warnline">Pronostics les plus probables selon les analyses du site. « Sûr » ne veut pas dire certain : un pronostic à 75 % échoue en moyenne 1 fois sur 4.</p>
+    <section class="selbox"><h2>Sélection du jour</h2><p class="src">Les pronostics les plus sûrs parmi les matchs pas encore commencés.</p>
+    ${sel.length ? `<ol class="sellist">${sel.map(selItem).join("")}</ol>` : `<div class="empty">Tous les matchs du jour ont commencé. La sélection reviendra avec les matchs de demain.</div>`}</section>
+    <h2 class="sech">Tous les matchs</h2>${groups}`;
+}
+function picksBlock(b){
+  if (!b || !b.n) return `<div class="empty">Pronostics : le suivi apparaîtra après les premiers matchs terminés.</div>`;
+  return `<h2 style="margin:6px 0 10px">Pronostics</h2>
+    <div class="tiles num">
+      <div class="tile"><div class="v">${b.n}</div><div class="k">pronostics vérifiés</div></div>
+      <div class="tile"><div class="v">${b.rate}%</div><div class="k">réussis (annoncé : ${b.expected} %)</div></div>
+    </div>
+    <div class="tablewrap"><table class="num"><thead><tr><th>Confiance</th><th class="r">Pronostics</th><th class="r">Annoncé</th><th class="r">Réussis</th></tr></thead>
+    <tbody>${b.by_stars.map(r => `<tr><td><span class="stars">${starStr(r.stars)}</span></td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>
+    <div class="tablewrap"><table><thead><tr><th>Date</th><th>Match</th><th>Pronostic</th><th></th></tr></thead>
+    <tbody>${b.recent.map(r => `<tr><td class="num">${esc(r.date.slice(5).split("-").reverse().join("/"))}</td><td>${esc(r.match)}</td><td>${esc(r.label)} <small class="num">(${r.prob} %)</small></td><td class="${r.ok ? "ok" : "ko"}">${r.ok ? "✓" : "✗"}</td></tr>`).join("")}</tbody></table></div>`;
+}
 function bilanBlock(b, label, naive){
   if (!b || !b.n) return `<div class="empty">${label} : le bilan apparaîtra après les premiers résultats.</div>`;
   return `<h2 style="margin:6px 0 10px">${label}</h2>
@@ -435,7 +521,7 @@ function bilanBlock(b, label, naive){
 function bilanView(){
   const b = DATA.bilan || {};
   const recent = b.recent || [];
-  return `${bilanBlock(b.foot, "Foot", "0,667")}${bilanBlock(b.nhl, "NHL", "0,500")}
+  return `${picksBlock(b.picks)}${bilanBlock(b.foot, "Foot", "0,667")}${bilanBlock(b.nhl, "NHL", "0,500")}
     ${recent.length ? `<h2 style="margin:6px 0 10px">Derniers résultats</h2><div class="tablewrap"><table><thead><tr><th>Date</th><th>Match</th><th>Score</th><th>Favori</th><th></th></tr></thead>
     <tbody>${recent.map(r=>`<tr><td class="num">${esc(r.date.slice(5).split("-").reverse().join("/"))}</td><td>${esc(r.home)} – ${esc(r.away)}</td><td class="num">${esc(r.score)}</td><td>${esc(r.fav)} (${r.favp} %)</td><td class="${r.ok?"ok":"ko"}">${r.ok?"✓":"✗"}</td></tr>`).join("")}</tbody></table></div>` : ""}`;
 }
@@ -444,7 +530,7 @@ function render(){
   document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === TAB)));
   if (!DATA) return;
   const view = document.getElementById("view");
-  view.innerHTML = TAB === "foot" ? footView() : TAB === "nhl" ? nhlView() : bilanView();
+  view.innerHTML = TAB === "foot" ? footView() : TAB === "nhl" ? nhlView() : TAB === "pronos" ? pronoView() : bilanView();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));
   view.querySelectorAll(".mrow").forEach(b => b.addEventListener("click", () => {
     const id = b.dataset.id;

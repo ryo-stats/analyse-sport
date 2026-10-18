@@ -128,6 +128,9 @@ def fake_get_json(url, params=None):
         abbr = url.split("/club-schedule-season/")[1].split("/")[0]
         gid = 55 if abbr == "WSH" else 56
         return dict(games=[dict(id=gid, gameState="OFF", startTimeUTC="2026-10-10T23:00:00Z", gameDate="2026-10-10")])
+    if "/gamecenter/777/boxscore" in url:
+        return dict(playerByGameStats=dict(homeTeam=dict(forwards=[dict(playerId=88, goals=0, assists=2)], defense=[]),
+                                           awayTeam=dict(forwards=[], defense=[])))
     if "/gamecenter/55/boxscore" in url:
         return dict(homeTeam=dict(abbrev="WSH"), playerByGameStats=dict(homeTeam=dict(
             forwards=[dict(playerId=1)], defense=[dict(playerId=2)],
@@ -147,6 +150,7 @@ class AppTest(unittest.TestCase):
         app.NOTES.clear()
         app.SQUADS.clear()
         app.CACHE_FILE = os.path.join(self.tmp, "squads.json")
+        app.PICKS_FILE = os.path.join(self.tmp, "picks.json")
         app.get_json = fake_get_json
         app.time.sleep = lambda s: None
         history = {"foot-900": dict(sport="foot", league="Premier League", date="2026-10-10", home="Arsenal",
@@ -261,6 +265,45 @@ class AppTest(unittest.TestCase):
         self.assertTrue(run(3, 20, "workflow_dispatch"))   # lancement à la main : toujours
         winter = dt.datetime(2026, 12, 5, 19, 20, tzinfo=dt.timezone.utc)   # 20 h 20 à Paris en hiver
         self.assertTrue(horaires.should_run(winter, "schedule"))
+
+    def test_picks_and_selection(self):
+        m = self.data["foot"][0]
+        pk = m["picks"]
+        team_markets = ["1", "2", "1N", "N2", "o25", "u25", "btts_y", "btts_n"]
+        self.assertIn(pk["main"]["market"], team_markets)
+        self.assertGreaterEqual(pk["main"]["p"], pk["winner"]["p"])          # le plus sûr est au moins aussi probable
+        self.assertEqual(pk["winner"]["market"], "2")                          # Man City favori
+        self.assertEqual(pk["player"]["player"], "Erling Haaland")
+        self.assertTrue(1 <= pk["main"]["stars"] <= 5)
+        g = self.data["nhl"][0]["picks"]
+        self.assertIn(g["main"]["market"], ["win_h", "win_a", "o55", "u55"])
+        self.assertEqual(g["winner"]["market"], "win_h")
+        self.assertIn("au moins 1 point", g["player"]["label"])
+        sel = self.data["selection"]
+        self.assertEqual([c["p"] for c in sel], sorted((c["p"] for c in sel), reverse=True))
+        self.assertTrue(all(sum(c["id"] == x["id"] for x in sel) <= 2 for c in sel))
+        store = app.load_json(app.PICKS_FILE, {})
+        self.assertTrue(any(v["match"] == "foot-401" and v["result"] is None for v in store.values()))
+
+    def test_nhl_total_pick_is_json_safe(self):
+        # gros total de buts attendus : « Plus de 5,5 buts » (calcul scipy) devient le pronostic le plus sûr
+        pk = app.nhl_picks("A", "B", 0.5, 4.5, 4.5, {})
+        self.assertEqual(pk["main"]["market"], "o55")
+        json.dumps(pk)                                      # ne doit pas lever d'erreur
+
+    def test_resolve_picks(self):
+        history = {"foot-900": dict(sport="foot", score="2-1", result=0, scorers=["Bukayo Saka", "Kai Havertz"]),
+                   "nhl-777": dict(sport="nhl", score="5-1", result=0)}
+        def pk(match, sport, market, player=None, pid=None):
+            return dict(match=match, sport=sport, market=market, player=player, pid_player=pid, result=None)
+        store = {"a": pk("foot-900", "foot", "1"), "b": pk("foot-900", "foot", "o25"),
+                 "c": pk("foot-900", "foot", "u25"), "d": pk("foot-900", "foot", "btts_y"),
+                 "e": pk("foot-900", "foot", "scorer", "Bukayo Saka"), "f": pk("foot-900", "foot", "scorer", "Cole Palmer"),
+                 "g": pk("nhl-777", "nhl", "win_a"), "h": pk("nhl-777", "nhl", "o55"),
+                 "i": pk("nhl-777", "nhl", "point", "David Pastrnak", 88), "j": pk("nhl-777", "nhl", "goal", "David Pastrnak", 88)}
+        app.resolve_picks(store, history)
+        got = {k: v["result"] for k, v in store.items()}
+        self.assertEqual(got, dict(a=True, b=True, c=False, d=True, e=True, f=False, g=False, h=True, i=True, j=False))
 
     def test_name_matching(self):
         self.assertLess(app.similarity("Paris Saint-Germain", "Paris FC"), 0.8)

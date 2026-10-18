@@ -35,6 +35,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DOCS = os.path.join(ROOT, "docs")
 DATA_FILE = os.path.join(DOCS, "data.json")
 HIST_FILE = os.path.join(DOCS, "history.json")
+PICKS_FILE = os.path.join(DOCS, "picks.json")
 
 # (nom affiché, code de championnat ESPN)
 LEAGUES = [
@@ -491,6 +492,12 @@ def resolve_foot(e, history):
         return
     history[key]["score"] = f"{sh}-{sa}"
     history[key]["result"] = 0 if sh > sa else (1 if sh == sa else 2)
+    # buteurs (hors contre-son-camp) : servent à vérifier les pronostics « X marque »
+    comp = (e.get("competitions") or [{}])[0]
+    if "details" in comp:          # sans ce détail, les pronostics buteur restent non vérifiables
+        history[key]["scorers"] = [((d.get("athletesInvolved") or [{}])[0] or {}).get("displayName", "")
+                                   for d in comp.get("details") or []
+                                   if d.get("scoringPlay") and not d.get("ownGoal")]
 
 
 def foot_players(squad, team_goals, lam):
@@ -593,7 +600,163 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
         pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
-        ctx=ctx, reading=reading, **foot_visuals(league, H, A))
+        ctx=ctx, reading=reading, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep),
+        **foot_visuals(league, H, A))
+
+
+# ---------------------------------------------------------------- pronostics
+
+STAR_STEPS = (0.5, 0.6, 0.7, 0.8)      # 1 étoile sous 50 %, 5 étoiles à partir de 80 %
+
+
+def make_pick(market, label, p, **extra):
+    p = float(p)          # les calculs scipy renvoient des types numpy, refusés par json
+    return dict(market=market, label=label, p=round(p, 4), prob=int(pct(p)),
+                stars=1 + sum(int(p >= s) for s in STAR_STEPS), **extra)
+
+
+def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep):
+    """Le pronostic le plus sûr du match, le vainqueur probable, le buteur le plus probable, le score."""
+    team = [make_pick("1", f"Victoire {home}", p_h), make_pick("2", f"Victoire {away}", p_a),
+            make_pick("1N", f"{home} ou nul", p_h + p_d), make_pick("N2", f"Nul ou {away}", p_d + p_a),
+            # « pas de match nul » est volontairement exclu : souvent le plus probable, il ne dit pas qui gagne
+            make_pick("o25", "Plus de 2,5 buts", over25), make_pick("u25", "Moins de 2,5 buts", 1 - over25),
+            make_pick("btts_y", "Les deux équipes marquent", btts),
+            make_pick("btts_n", "Au moins une équipe ne marque pas", 1 - btts)]
+    picks = dict(main=max(team, key=lambda c: c["p"]),
+                 winner=team[0] if p_h >= p_a else team[1],
+                 score=dict(label=f"Score le plus probable : {scores[0]}", prob=scorep[0]))
+    players = (team_rows.get("h") or []) + (team_rows.get("a") or [])
+    if players:
+        best = max(players, key=lambda r: r["p_goal"])
+        picks["player"] = make_pick("scorer", f"{best['name']} marque", best["p_goal"] / 100,
+                                    player=best["name"], team=best["team"])
+    return picks
+
+
+def nhl_picks(hname, aname, win_h, lh, la, team_rows):
+    total = lh + la
+    over55 = 1 - sum(poisson.pmf(k, total) for k in range(6))     # les égalités sont paires : la prolongation ne change rien
+    team = [make_pick("win_h", f"Victoire {hname}", win_h), make_pick("win_a", f"Victoire {aname}", 1 - win_h),
+            make_pick("o55", "Plus de 5,5 buts", over55), make_pick("u55", "Moins de 5,5 buts", 1 - over55)]
+    picks = dict(main=max(team, key=lambda c: c["p"]), winner=team[0] if win_h >= 0.5 else team[1])
+    players = (team_rows.get("best_h") or []) + (team_rows.get("best_a") or [])
+    if players:
+        best = max(players, key=lambda r: r["p_point"])
+        picks["player"] = make_pick("point", f"{best['name']} : au moins 1 point", best["p_point"] / 100,
+                                    player=best["name"], pid=best.get("pid"), team=best["team"])
+        scorer = max(players, key=lambda r: r["p_goal"])
+        picks["scorer"] = make_pick("goal", f"{scorer['name']} marque", scorer["p_goal"] / 100,
+                                    player=scorer["name"], pid=scorer.get("pid"), team=scorer["team"])
+    return picks
+
+
+def record_picks(rows, store):
+    """Archive les pronostics affichés tant que le match n'a pas commencé (les dernières cotes l'emportent)."""
+    for m in rows:
+        if m["state"] not in ("pre", "FUT", "PRE"):
+            continue
+        for kind in ("main", "winner", "player", "scorer"):
+            pk = (m.get("picks") or {}).get(kind)
+            if not pk:
+                continue
+            pid = f"{m['id']}|{pk['market']}|{pk.get('player', '')}"
+            old = store.get(pid, {})
+            store[pid] = dict(match=m["id"], sport=m["sport"], league=m["league"], date=m["kickoff"][:10],
+                              home=m["home"], away=m["away"], market=pk["market"], label=pk["label"], p=pk["p"],
+                              stars=pk["stars"], player=pk.get("player"), pid_player=pk.get("pid"),
+                              kinds=sorted(set(old.get("kinds", [])) | {kind}), result=old.get("result"))
+        # un ancien pronostic que les nouvelles cotes ont remplacé n'est plus « affiché » : on le retire
+        shown = {f"{m['id']}|{pk['market']}|{pk.get('player', '')}" for pk in (m.get("picks") or {}).values()
+                 if isinstance(pk, dict) and pk.get("market")}
+        for pid in [k for k, v in store.items() if v["match"] == m["id"] and v.get("result") is None and k not in shown]:
+            del store[pid]
+
+
+def goals_of(score):
+    nums = [int(x) for x in str(score).split(" ")[0].split("-")]
+    return nums[0], nums[1]
+
+
+def resolve_picks(store, history):
+    """Compare chaque pronostic au résultat réel. Renvoie le nombre de pronostics vérifiés."""
+    boxes = {}
+    done = 0
+    for pk in store.values():
+        if pk.get("result") is not None:
+            continue
+        h = history.get(pk["match"]) or {}
+        if h.get("result") is None or not h.get("score"):
+            continue
+        gh, ga = goals_of(h["score"])
+        mk, ok = pk["market"], None
+        if pk["sport"] == "foot":
+            ok = {"1": gh > ga, "2": ga > gh, "1N": gh >= ga, "N2": ga >= gh, "12": gh != ga,
+                  "o25": gh + ga >= 3, "u25": gh + ga <= 2, "btts_y": gh > 0 and ga > 0,
+                  "btts_n": gh == 0 or ga == 0}.get(mk)
+            if mk == "scorer" and h.get("scorers") is not None:
+                ok = norm(pk["player"]) in {norm(s) for s in h["scorers"]}
+        else:
+            ok = {"win_h": h["result"] == 0, "win_a": h["result"] == 1,
+                  "o55": gh + ga >= 6, "u55": gh + ga <= 5}.get(mk)
+            if mk in ("point", "goal") and pk.get("pid_player"):
+                gid = pk["match"].split("-", 1)[1]
+                if gid not in boxes:
+                    boxes[gid] = nhl_player_lines(gid)
+                line = boxes[gid].get(pk["pid_player"])
+                if boxes[gid]:
+                    g, a = line if line else (0, 0)      # absent de la feuille : pronostic perdu
+                    ok = (g + a >= 1) if mk == "point" else (g >= 1)
+        if ok is not None:
+            pk["result"] = bool(ok)
+            done += 1
+    return done
+
+
+def nhl_player_lines(game_id):
+    """Buts et passes de chaque joueur d'un match NHL terminé : {playerId: (buts, passes)}."""
+    box = nhl_get(f"/gamecenter/{game_id}/boxscore") or {}
+    out = {}
+    for side in ((box.get("playerByGameStats") or {}).get("homeTeam") or {},
+                 (box.get("playerByGameStats") or {}).get("awayTeam") or {}):
+        for grp in ("forwards", "defense"):
+            for p in side.get(grp, []):
+                out[p.get("playerId")] = (p.get("goals", 0) or 0, p.get("assists", 0) or 0)
+    return out
+
+
+def selection(rows, n=10):
+    """Sélection du jour : les pronostics les plus sûrs des matchs pas encore commencés (2 au plus par match)."""
+    cands = []
+    for m in rows:
+        if m["state"] not in ("pre", "FUT", "PRE"):
+            continue
+        for kind in ("main", "player"):
+            pk = (m.get("picks") or {}).get(kind)
+            if pk:
+                cands.append(dict(pk, kind=kind, id=m["id"], sport=m["sport"], league=m["league"], time=m["time"],
+                                  kickoff=m["kickoff"], home=m["home"], away=m["away"],
+                                  logo_h=m.get("logo_h"), logo_a=m.get("logo_a"),
+                                  logo_h_dark=m.get("logo_h_dark"), logo_a_dark=m.get("logo_a_dark")))
+    return sorted(cands, key=lambda c: -c["p"])[:n]
+
+
+def picks_bilan(store):
+    done = [p for p in store.values() if p.get("result") is not None]
+    if not done:
+        return dict(n=0)
+    hits = sum(p["result"] for p in done)
+    by_stars = []
+    for s in range(1, 6):
+        grp = [p for p in done if p["stars"] == s]
+        if grp:
+            by_stars.append(dict(stars=s, n=len(grp), announced=pct(sum(p["p"] for p in grp) / len(grp)),
+                                 actual=pct(sum(p["result"] for p in grp) / len(grp))))
+    recent = sorted(done, key=lambda p: p["date"], reverse=True)[:40]
+    return dict(n=len(done), rate=pct(hits / len(done)), expected=pct(sum(p["p"] for p in done) / len(done)),
+                by_stars=by_stars,
+                recent=[dict(date=p["date"], sport=p["sport"], match=f"{p['home']} – {p['away']}", label=p["label"],
+                             prob=pct(p["p"]), stars=p["stars"], ok=p["result"]) for p in recent])
 
 
 def foot_visuals(league, H, A):
@@ -659,7 +822,7 @@ def team_profile(abbr, season):
         skaters.append(dict(
             name=f"{p['firstName']['default']} {p['lastName']['default']}",
             pos=POSITIONS.get(p.get("positionCode"), ""),
-            cur=f"{plural(cg, 'but')}, {plural(ca, 'passe')} en {cgp}", goals=cg, assists=ca, gp=cgp,
+            cur=f"{plural(cg, 'but')}, {plural(ca, 'passe')} en {cgp}", goals=cg, assists=ca, gp=cgp, pid=p["playerId"],
             gpg=(g + 0.10 * 20) / (gp + 20), ppg=(g + a + 0.35 * 20) / (gp + 20),
             apg=(a + 0.20 * 20) / (gp + 20), new=not q))
     return dict(skaters=skaters, goalies=cur.get("goalies", []),
@@ -813,7 +976,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         rows = []
         for p in prof["skaters"]:
             rows.append(dict(name=p["name"], pos=p["pos"], cur=p["cur"], new=p["new"], side=side, team=name,
-                             goals=p["goals"], assists=p["assists"], gp=p["gp"],
+                             goals=p["goals"], assists=p["assists"], gp=p["gp"], pid=p["pid"],
                              p_goal=pct(1 - math.exp(-p["gpg"] * k)),
                              p_point=pct(1 - math.exp(-p["ppg"] * k)),
                              p_assist=pct(1 - math.exp(-p["apg"] * k))))
@@ -865,7 +1028,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
-        ctx=ctx, reading=reading, espn_id=espn_id,
+        ctx=ctx, reading=reading, espn_id=espn_id, picks=nhl_picks(hname, aname, win_h, lh, la, team_rows),
         logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
         logo_a=g["awayTeam"].get("logo") or NHL_LOGO.format(A, "light"),
         logo_h_dark=g["homeTeam"].get("darkLogo") or NHL_LOGO.format(H, "dark"),
@@ -941,9 +1104,18 @@ def main(now=None):
     nhl_rows = nhl(nhl_day, history)
     cutoff = (today - dt.timedelta(days=400)).isoformat()
     history = {k: v for k, v in history.items() if v.get("date", "") >= cutoff}
+    # pronostics : archivage avant match, puis vérification une fois le résultat connu
+    store = load_json(PICKS_FILE, {})
+    record_picks(foot_rows + nhl_rows, store)
+    resolve_picks(store, history)
+    store = {k: v for k, v in store.items() if v.get("date", "") >= cutoff}
+    stats = bilan(history)
+    stats["picks"] = picks_bilan(store)
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
-                foot=foot_rows, nhl=nhl_rows, bilan=bilan(history), notes=NOTES[-12:])
+                foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
+                notes=NOTES[-12:])
     save_json(HIST_FILE, history)
+    save_json(PICKS_FILE, store)
     save_json(DATA_FILE, data)
     print(f"OK : {len(foot_rows)} matchs de foot, {len(nhl_rows)} matchs NHL, "
           f"{sum(1 for h in history.values() if h.get('result') is not None)} résultats archivés.")
