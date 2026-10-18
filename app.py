@@ -71,6 +71,14 @@ SQUAD_SIZE = 6        # joueurs affichés par équipe
 # part a priori des buts (et des buts + passes) de l'équipe selon le poste, pour un joueur qui joue tout
 GOAL_PRIOR = {"F": 0.22, "M": 0.08, "D": 0.03}
 DEC_PRIOR = {"F": 0.35, "M": 0.25, "D": 0.08}
+# Buteurs : buts (et buts + passes) par 90 minutes d'un joueur moyen du poste, et poids de cette moyenne en
+# matchs entiers. Sur 6 matchs, 2 buts d'un défenseur sont surtout du hasard (coups de pied arrêtés) : la
+# moyenne du poste pèse bien plus pour lui (15 matchs) que pour un attaquant (6 matchs).
+RATE90 = {"F": 0.30, "M": 0.10, "D": 0.035}
+RATE90_DEC = {"F": 0.45, "M": 0.27, "D": 0.10}
+RATE_WEIGHT = {"F": 6, "M": 8, "D": 15}
+ASSIST_RATE = 0.75     # environ 3 buts sur 4 ont un passeur décisif
+PLAY_SHARE = {"start": 0.88, "bench": 0.25, "out": 0.0}   # part du match jouée selon la composition officielle
 POSTES = {"F": "Attaquant", "M": "Milieu", "D": "Défenseur"}
 NHL_API = "https://api-web.nhle.com/v1"
 # deuxième avis, indépendant des cotes : ClubElo (foot) et buts attendus MoneyPuck (NHL)
@@ -495,8 +503,8 @@ def espn_squad(league, team_id):
             continue
         players.append(dict(name=a.get("displayName", ""), pos=a["position"]["abbreviation"], apps=apps,
                             minutes=float(s.get("minutes") or 0), goals=int(s.get("totalGoals") or 0),
-                            assists=int(s.get("goalAssists") or 0)))
-    squad = dict(players=players, league=domestic) if players else None
+                            assists=int(s.get("goalAssists") or 0), pid=str(a.get("id") or "")))
+    squad = dict(players=players, league=domestic, season=season) if players else None
     SQUADS[(league, team_id)] = squad
     return squad
 
@@ -541,23 +549,49 @@ def apply_lineup(rows, lineup):
 
 
 def squad_rows(squad, lam, side, team, lineup=None, missing=None):
-    """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ."""
+    """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ.
+
+    Rythme de chaque joueur par 90 minutes = ses buts de la saison ramenés vers la moyenne de son poste
+    (RATE90, poids RATE_WEIGHT). Multiplié par son temps de jeu attendu (habituel, ou composition officielle),
+    puis mis à l'échelle pour que l'équipe marque, au total, les buts attendus par l'analyse du match (lam).
+    """
     players = squad["players"]
     team_games = max(p["apps"] for p in players)
-    team_goals = max(sum(p["goals"] for p in players), 1)
-    k = 8          # lissage : l'équivalent d'environ 6 matchs de buts « moyens » réparti selon le poste
+    starts, bench = lineup if lineup else (None, None)
+
+    def status(name):
+        if not lineup:
+            return None
+        n = norm(name)
+        last = n.split()[-1] if n else ""
+        found = lambda grp: n in grp or (len(last) > 3 and any(g.split()[-1] == last for g in grp if g))
+        return "start" if found(starts) else "bench" if found(bench) else "out"
+
+    def probs(use_lineup):
+        raw = []
+        for p in players:
+            n90 = p["minutes"] / 90 if p["minutes"] else p["apps"] * 0.6
+            w = RATE_WEIGHT[p["pos"]]
+            rg = (p["goals"] + w * RATE90[p["pos"]]) / (n90 + w)
+            rd = (p["goals"] + p["assists"] + w * RATE90_DEC[p["pos"]]) / (n90 + w)
+            st = status(p["name"]) if use_lineup else None
+            share = PLAY_SHARE[st] if st else min(1.0, n90 / team_games)
+            raw.append((p, rg * share, rd * share, st))
+        sg, sd = sum(x[1] for x in raw) or 1, sum(x[2] for x in raw) or 1
+        kg, kd = 0.96 * lam / sg, 0.96 * lam * (1 + ASSIST_RATE) / sd       # 4 % de buts contre son camp
+        return [(p, pct(1 - math.exp(-g * kg)), pct(1 - math.exp(-d * kd)), st) for p, g, d, st in raw]
+
+    usual = {p["name"]: pg for p, pg, _, _ in probs(False)}
     rows = []
-    for p in players:
-        mfrac = min(1.0, p["minutes"] / (90 * team_games)) if p["minutes"] else min(1.0, p["apps"] / team_games) * 0.6
-        share_goal = (p["goals"] + k * GOAL_PRIOR[p["pos"]] * mfrac) / (team_goals + k)
-        share_dec = min(1.2, (p["goals"] + p["assists"] + k * DEC_PRIOR[p["pos"]] * mfrac) / (team_goals + k))
-        rows.append(dict(name=p["name"], pos=POSTES[p["pos"]], side=side, team=team,
-                         goals=p["goals"], assists=p["assists"], apps=p["apps"],
-                         p_goal=pct(1 - math.exp(-lam * share_goal)),
-                         p_dec=pct(1 - math.exp(-lam * share_dec))))
-    gone = apply_lineup(rows, lineup)
-    if missing is not None:
-        missing += gone
+    for p, pg, pd_, st in probs(bool(lineup)):
+        r = dict(name=p["name"], pos=POSTES[p["pos"]], side=side, team=team, goals=p["goals"], assists=p["assists"],
+                 apps=p["apps"], p_goal=pg, p_dec=pd_, pid=p.get("pid"), stats_league=squad.get("league"),
+                 season=squad.get("season"))
+        if st:
+            r["lineup"] = st
+            if st != "start" and usual[p["name"]] >= 15 and missing is not None:
+                missing.append(f"{p['name']} ({'remplaçant' if st == 'bench' else 'absent'})")
+        rows.append(r)
     rows.sort(key=lambda r: (-r["p_goal"], -r["p_dec"]))
     return rows[:SQUAD_SIZE]
 
@@ -1095,12 +1129,32 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
         best_score = coherent_score(lh, la, [market_fn("foot", mk) for mk in anchors])
         if best_score:
             picks["score"] = make_pick("exact", f"Score exact {best_score[0]}", best_score[1], value=best_score[0])
-    players = side_rows(team_rows, "h" if p_h >= p_a else "a", ("h", "a"))
-    if players:
-        best = max(players, key=lambda r: r["p_goal"])
+    best = pick_scorer(side_rows(team_rows, "h" if p_h >= p_a else "a", ("h", "a")))
+    if best:
+        extra = {k: best[k] for k in ("lineup", "pid", "stats_league", "season") if best.get(k)}
         picks["player"] = make_pick("scorer", f"{best['name']} marque", best["p_goal"] / 100,
-                                    player=best["name"], team=best["team"], **({"lineup": best["lineup"]} if best.get("lineup") else {}))
+                                    player=best["name"], team=best["team"], **extra)
+        if best.get("p_dec"):
+            picks["decisive"] = make_pick("dec", f"{best['name']} buteur ou passeur", best["p_dec"] / 100,
+                                          player=best["name"], team=best["team"],
+                                          base=[best.get("apps") or 0, best.get("goals") or 0, best.get("assists") or 0], **extra)
     return picks
+
+
+def pick_scorer(rows):
+    """Le buteur proposé : dans l'équipe annoncée gagnante, un titulaire quand la composition est connue,
+    un défenseur seulement s'il dépasse nettement (×1,3) le meilleur attaquant ou milieu."""
+    if any(r.get("lineup") for r in rows):
+        rows = [r for r in rows if r.get("lineup") == "start"] or rows
+    if not rows:
+        return None
+    best = max(rows, key=lambda r: r["p_goal"])
+    others = [r for r in rows if r.get("pos") != POSTES["D"]]
+    if best.get("pos") == POSTES["D"] and others:
+        alt = max(others, key=lambda r: r["p_goal"])
+        if best["p_goal"] < 1.3 * alt["p_goal"]:
+            best = alt
+    return best
 
 
 def nhl_picks(hname, aname, win_h, lh, la, team_rows, q=0.5):
@@ -1137,7 +1191,7 @@ def record_picks(rows, store):
     for m in rows:
         if m["state"] not in ("pre", "FUT", "PRE"):
             continue
-        for kind in ("main", "winner", "player", "scorer", "fun", "score"):
+        for kind in ("main", "winner", "player", "decisive", "scorer", "fun", "score"):
             pk = (m.get("picks") or {}).get(kind)
             if not pk or not pk.get("market"):
                 continue
@@ -1147,6 +1201,7 @@ def record_picks(rows, store):
             store[pid] = dict(match=m["id"], sport=m["sport"], league=m["league"], date=m["kickoff"][:10],
                               home=m["home"], away=m["away"], market=pk["market"], label=pk["label"], p=pk["p"],
                               stars=pk["stars"], player=pk.get("player"), pid_player=pk.get("pid"), value=pk.get("value"),
+                              stats_league=pk.get("stats_league"), season=pk.get("season"), base=pk.get("base"),
                               group="fun" if set(kinds) <= FUN_KINDS else "safe", kinds=kinds, result=old.get("result"))
         # un ancien pronostic que les nouvelles cotes ont remplacé n'est plus « affiché » : on le retire
         shown = {f"{m['id']}|{pk['market']}|{pk.get('player', '')}" for pk in (m.get("picks") or {}).values()
@@ -1186,6 +1241,8 @@ def resolve_picks(store, history):
                 ok = False if gh + ga == 0 else (h["first"] == mk[-1] if h.get("first") else None)
             if mk == "scorer" and h.get("scorers") is not None:
                 ok = norm(pk["player"]) in {norm(s) for s in h["scorers"]}
+            if mk == "dec":
+                ok = decisive_result(pk, h)
         else:
             ot = "prol" in h["score"] or "tirs" in h["score"]
             ok = {"win_h": h["result"] == 0, "win_a": h["result"] == 1, "ot": ot,
@@ -1202,6 +1259,26 @@ def resolve_picks(store, history):
             pk["result"] = bool(ok)
             done += 1
     return done
+
+
+def decisive_result(pk, h):
+    """« X buteur ou passeur » : validé s'il a marqué (feuille de match) ; sinon on compare ses buts + passes
+    de la saison avant et après le match (statistiques ESPN). None = pas encore vérifiable."""
+    if h.get("scorers") and norm(pk["player"]) in {norm(s) for s in h["scorers"]}:
+        return True
+    base = pk.get("base")
+    if not (pk.get("pid_player") and pk.get("stats_league") and pk.get("season") and base):
+        return None
+    s = stat_values(get_json(ESPN_PLAYER_STATS.format(league=pk["stats_league"], season=pk["season"], athlete=pk["pid_player"])))
+    if not s:
+        return None
+    apps, dec = int(s.get("appearances") or 0), int(s.get("totalGoals") or 0) + int(s.get("goalAssists") or 0)
+    if apps == base[0] + 1:
+        return dec > base[1] + base[2]
+    days = (dt.date.today() - dt.date.fromisoformat(pk["date"])).days
+    if apps == base[0] and days >= 2:          # n'a pas joué (statistiques à jour depuis longtemps) : perdu
+        return False
+    return None                                # pas encore à jour, ou un autre match joué depuis
 
 
 def nhl_player_lines(game_id):
@@ -1638,7 +1715,7 @@ def live_feed(now, foot_rows, nhl_rows, store, today, nhl_day):
         row = {k: m[k] for k in LIVE_KEYS if m.get(k) is not None}
         row["edate"] = day.strftime("%Y%m%d")         # date utilisée par le tableau des scores ESPN
         row["picks"] = {k: v for k, v in (m.get("picks") or {}).items()
-                        if k in ("main", "winner", "player", "scorer", "fun", "score") and isinstance(v, dict) and v.get("market")}
+                        if k in ("main", "winner", "player", "decisive", "scorer", "fun", "score") and isinstance(v, dict) and v.get("market")}
         return row
 
     days = {today.isoformat(), (today - dt.timedelta(days=1)).isoformat()}

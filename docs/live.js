@@ -156,9 +156,9 @@ export function liveProbs(m, s){
 export function pickProb(pk, m, s, lp){
   if (!pk) return null;
   if (pk.market in lp.markets) return lp.markets[pk.market];
-  if (pk.market === "scorer" && m.sport === "foot"){
+  if ((pk.market === "scorer" || pk.market === "dec") && m.sport === "foot"){
     if (scored(pk.player, s)) return 1;
-    if (s.state === "post") return 0;
+    if (s.state === "post") return pk.market === "scorer" ? 0 : null;     // passes décisives : vérifiées après le match
     return 1 - (1 - pk.p) ** lp.rem;        // s'il est encore sur le terrain
   }
   return null;
@@ -180,6 +180,7 @@ export function settle(pk, m, s){
     const goals = s.goals || [];
     if (mk === "fg_h" || mk === "fg_a") return t === 0 ? false : goals.length ? goals[0].side === mk.slice(-1) : null;
     if (mk === "scorer") return t === 0 || goals.length ? scored(pk.player, s) : null;
+    if (mk === "dec") return scored(pk.player, s) ? true : null;    // sans but : il faut les passes (Bilan)
     return null;
   }
   const ot = (s.period || 0) >= 4;                        // prolongation ou tirs au but

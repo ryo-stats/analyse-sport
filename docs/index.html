@@ -671,7 +671,7 @@ function picksTally(m){
   if (!isOver(m)) return null;
   const pk = m.picks || {}, seen = new Set();
   let ok = 0, n = 0;
-  for (const p of [pk.main, pk.winner, pk.player, pk.scorer, pk.fun, pk.score]){
+  for (const p of [pk.main, pk.winner, pk.player, pk.decisive, pk.scorer, pk.fun, pk.score]){
     if (!p || !p.market || seen.has(`${p.market}|${p.player || ""}`)) continue;
     seen.add(`${p.market}|${p.player || ""}`);
     const v = resultOf(m, p);
@@ -842,7 +842,7 @@ function pronoMatch(m){
   const funPk = pk.fun || (LIVEM ? LIVEM.momentPicks(m, PRE_STATE).fun : null);
   const fun = funPk ? {...funPk, prob: funPk.prob ?? pctr(funPk.p), stars: funPk.stars ?? starsOf(funPk.p)} : null;
   const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner],
-                 [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
+                 [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur ou passeur", pk.decisive], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
     <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started || isOver(m) ? `<span class="tagst">${isOver(m) ? "Terminé" : "Commencé"}</span>${tallyHtml(picksTally(m))}` : ""}</div>
@@ -1106,6 +1106,24 @@ function favList(){
   const blk = (title, list, row) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(row).join("")}</section>` : "";
   return blk("En cours", live, liveCard) + blk("À venir", next, pronoMatch) + blk("Terminés", done, liveCard);
 }
+// ---- sous-onglet Buteurs du jour : un joueur par match de foot (équipe annoncée gagnante, titulaire si la
+// composition est connue), « marque » et « buteur ou passeur », triés du plus probable au moins probable
+function scorerCard(m){
+  const pk = m.picks || {}, p = pk.player, d = pk.decisive;
+  const line = (k, x) => x ? `<div class="pl"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, x))}${esc(x.label)}</span>${conf(x)}${notStarted(m) ? addBtn(m, x) : ""}</div>` : "";
+  return `<div class="pm"><div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}</div>
+    <div class="smeta">${esc(p.team || "")}${p.lineup ? LINEUP_TAG[p.lineup] : ""} · ${esc(m.league)}</div>
+    <div class="plines">${line("Buteur", p)}${line("Buteur ou passeur", d)}</div></div>`;
+}
+function scorersView(){
+  const list = (DATA.foot || []).filter(m => (m.picks || {}).player);
+  const key = m => ((m.picks.decisive || m.picks.player).p);
+  const next = list.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); }).sort((a, b) => key(b) - key(a));
+  const rest = list.filter(m => !next.includes(m)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
+  const blk = (title, ms) => ms.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(ms.length, "match")}</span></div>${ms.map(scorerCard).join("")}</section>` : "";
+  return `<p class="warnline">⚽ Un joueur par match, choisi dans l'équipe que l'analyse donne gagnante, parmi les titulaires dès que la composition officielle est publiée (environ 1 h avant). <b>Buteur ou passeur</b> est plus sûr que <b>Buteur</b> (une passe décisive suffit), mais moins bien payé.</p>`
+    + (list.length ? blk("À venir", next) + blk("Commencés ou terminés", rest) : `<div class="empty">Pas de buteur proposé aujourd'hui.</div>`);
+}
 function favView(){
   return `${pushGuide()}<h2 class="sech">Mes matchs <span class="cnt num">${FAVS.size}/${MAX_FAVS}</span></h2><div id="favbox">${favList()}</div>`;
 }
@@ -1113,11 +1131,12 @@ function pronoView(){
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
   if (!foot.length && !nhl.length) return `<div class="empty">Pas de match aujourd'hui.</div>`;
   const nLive = [...foot, ...nhl].filter(m => (LIVEDATA[m.id] || {}).state === "in").length;
-  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null], ["live", "En direct", nLive || null], ["fun", "Fun 🎲", null]];
+  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null], ["scorers", "Buteurs ⚽", foot.filter(m => (m.picks || {}).player).length || null], ["live", "En direct", nLive || null], ["fun", "Fun 🎲", null]];
   const nav = `<nav class="leagues psubs" aria-label="Type de pronostics">${subs.map(([k, l, n]) => `<button type="button" data-psub="${k}" aria-pressed="${k === PSUB}"><span>${k === "live" ? '<i class="dot"></i>' : ""}${l}</span>${n != null ? `<span class="n num">${n}</span>` : ""}</button>`).join("")}</nav>`;
   if (PSUB === "combo") return nav + comboView();
   if (PSUB === "live") return nav + liveView();
   if (PSUB === "fun") return nav + funView();
+  if (PSUB === "scorers") return nav + scorersView();
   const isNhl = PSUB === "nhl", list = isNhl ? nhl : foot;
   if (!list.length) return nav + `<div class="empty">Pas de match ${isNhl ? "NHL" : "de foot"} aujourd'hui.</div>`;
   const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
@@ -1489,7 +1508,7 @@ function openReset(){
 // ---- bouton « + » sur les pronostics du site
 const BETREF = {};
 const MK_BOOK = {"1": "h", "2": "a", win_h: "h", win_a: "a"};
-const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|h2|a2|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|point|goal)$/;
+const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|h2|a2|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|dec|point|goal)$/;
 function addBtn(m, pk){
   if (!m || !pk || !pk.label || !pk.p) return "";
   // les cotes du bookmaker sont celles d'avant-match : pendant le match, seule la cote juste a un sens

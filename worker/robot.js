@@ -41,10 +41,11 @@ export function followedPicks(m){
 }
 
 // Bilan de fin de match : tous les pronostics affichés sur le site, Fun et score exact compris.
-const KIND = {main: "Safe", winner: "Vainqueur", player: "Joueur", fun: "Fun 🎲", score: ""};
+const KIND = {main: "Safe", winner: "Vainqueur", player: "Joueur", decisive: "Joueur", fun: "Fun 🎲", score: ""};
 export function finalPicks(m){
   const pk = m.picks || {}, out = followedPicks(m);
   if (m.sport !== "foot" && pk.player) out.push(["player", pk.player]);
+  if (pk.decisive) out.push(["decisive", pk.decisive]);
   if (pk.fun) out.push(["fun", pk.fun]);
   if (pk.score && pk.score.market) out.push(["score", pk.score]);
   return out;
