@@ -407,6 +407,12 @@ a.tile.tlink .k{color:var(--home)}
 .ihead{font:700 .66rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .minis{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--muted)}
 .minis b{color:var(--ink)}
+.agree{display:inline-block;margin:6px 0 2px;padding:2px 8px;border-radius:999px;font-size:.74rem;font-weight:700}
+.agree.ok{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok)}
+.agree.ko{background:color-mix(in srgb,var(--ko) 14%,transparent);color:var(--ko)}
+.pl.held .pv{color:var(--muted)}
+.second{display:grid;gap:4px;margin:0 0 12px;padding:8px 10px;border-radius:8px;background:var(--soft);font-size:.86rem}
+.second.ko{outline:1px solid color-mix(in srgb,var(--ko) 40%,transparent)}
 .ihead small{font-weight:500;text-transform:none;letter-spacing:0;margin-left:4px}
 .lblock{display:grid;gap:8px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
 .mdetail > .lblock{margin:0 0 12px;padding:0 0 12px;border-top:0;border-bottom:1px dashed var(--line)}
@@ -722,7 +728,7 @@ function teamLine(name, rank, f){
 }
 
 function footDetail(m){
-  return `${liveBlock(m)}<div class="tlines">${teamLine(m.home, m.rank_h, m.form_h)}${teamLine(m.away, m.rank_a, m.form_a)}</div>
+  return `${liveBlock(m)}${secondBox(m)}<div class="tlines">${teamLine(m.home, m.rank_h, m.form_h)}${teamLine(m.away, m.rank_a, m.form_a)}</div>
     ${bar(m, m.pH, m.pD, m.pA, "Victoire " + m.home, "Victoire " + m.away, "Nul")}${bookLine(m)}
     <div class="stats num">
       <div class="stat"><div class="v">${esc(m.scores[0])}</div><div class="k">Score le plus probable · ${m.scorep[0]}%</div></div>
@@ -738,7 +744,7 @@ function footDetail(m){
 
 function nhlDetail(m){
   const g = (x, team) => x ? `<div class="goalie"><small>Gardien probable · ${esc(team)}</small><b>${esc(x.name)}</b><small>${esc(x.sv)} · ${x.starts} départ${x.starts>1?"s":""}${x.note ? " · " + esc(x.note) : ""}</small></div>` : `<div class="goalie"><small>${esc(team)}</small>Gardien inconnu</div>`;
-  return `${liveBlock(m)}<div class="tlines"><div class="tline"><b>${esc(m.home)}</b><span class="sub">${esc(m.rec_h)}</span></div><div class="tline"><b>${esc(m.away)}</b><span class="sub">${esc(m.rec_a)}</span></div></div>
+  return `${liveBlock(m)}${secondBox(m)}<div class="tlines"><div class="tline"><b>${esc(m.home)}</b><span class="sub">${esc(m.rec_h)}</span></div><div class="tline"><b>${esc(m.away)}</b><span class="sub">${esc(m.rec_a)}</span></div></div>
     ${bar(m, m.pH, m.pD, m.pA, m.home + " après 60 min", m.away + " après 60 min", "Égalité")}${bookLine(m)}
     <div class="stats num">
       <div class="stat"><div class="v">${m.winH}%</div><div class="k">${esc(m.home)} au final</div></div>
@@ -813,6 +819,24 @@ function selItem(c, i){
       <div class="smeta">${esc(c.time)} · ${esc(c.sport === "nhl" ? "NHL" : c.league)}</div></div>
     ${conf(c)}${addBtn(c, c)}</li>`;
 }
+// deuxième avis (ClubElo pour le foot, xG MoneyPuck pour la NHL) : badge et détail
+const secondSrc = s => String(s || "").replace(/^ClubElo$/, "ClubElo.com");
+function agreeTag(m){
+  const s = m.second;
+  if (!s) return "";
+  return s.agree ? `<span class="agree ok" title="Les cotes et ${esc(secondSrc(s.src))} vont dans le même sens">✅ Avis concordants</span>`
+                 : `<span class="agree ko" title="${esc(s.note || "")}">⚠️ Avis partagés</span>`;
+}
+function secondBox(m){
+  const s = m.second;
+  if (!s) return "";
+  const probs = m.sport === "foot" ? `${esc(m.home)} <b>${s.pH} %</b> · nul <b>${s.pD} %</b> · ${esc(m.away)} <b>${s.pA} %</b>`
+                                   : `${esc(m.home)} <b>${s.winH} %</b> · ${esc(m.away)} <b>${100 - s.winH} %</b>`;
+  const odds = m.sport === "foot" ? `cotes : ${m.pH} / ${m.pD} / ${m.pA} %` : `cotes : ${m.winH} / ${m.winA} %`;
+  return `<div class="second ${s.agree ? "ok" : "ko"}"><div class="ihead">Deuxième avis · ${esc(secondSrc(s.src))}</div>
+    <div class="num">${probs} <span class="src">(${odds})</span></div>
+    <div>${s.agree ? "✅ Concordant avec les cotes." : `⚠️ Avis partagés : ${esc(s.note || "")}. Pas de Safe sur ce match.`}</div></div>`;
+}
 function pronoMatch(m){
   const pk = m.picks || {};
   const funPk = pk.fun || (LIVEM ? LIVEM.momentPicks(m, PRE_STATE).fun : null);
@@ -822,7 +846,7 @@ function pronoMatch(m){
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
     <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started || isOver(m) ? `<span class="tagst">${isOver(m) ? "Terminé" : "Commencé"}</span>${tallyHtml(picksTally(m))}` : ""}</div>
-    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+    ${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}</div>`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo

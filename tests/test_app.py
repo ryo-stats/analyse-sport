@@ -142,6 +142,30 @@ def fake_get_json(url, params=None):
     return None
 
 
+# deuxième avis simulé : ClubElo (probabilités du match Liverpool – Man City, classement Elo) et MoneyPuck
+GD_COLS = ["GD<-5", "GD=-5", "GD=-4", "GD=-3", "GD=-2", "GD=-1", "GD=0", "GD=1", "GD=2", "GD=3", "GD=4", "GD=5", "GD>5"]
+CLUBELO_FIX = ",".join(["Date", "Country", "Home", "Away"] + GD_COLS) + "\n" + \
+    ",".join(["2026-10-11", "ENG", "Liverpool", "Man City", "0", "0", "0", "0.03", "0.12", "0.25", "0.27",
+              "0.2", "0.1", "0.03", "0", "0", "0"]) + "\n"
+CLUBELO_DAY = "Rank,Club,Country,Level,Elo,From,To\n1,Man City,ENG,1,2010,2026-10-05,2026-10-12\n" \
+              "3,Liverpool,ENG,1,1960,2026-10-05,2026-10-12\n9,Paris SG,FRA,1,1900,2026-10-05,2026-10-12\n" \
+              "40,Paris FC,FRA,1,1610,2026-10-05,2026-10-12\n25,Forest,ENG,1,1750,2026-10-05,2026-10-12\n"
+MP_HEAD = "team,season,name,team,position,situation,games_played,xGoalsFor,xGoalsAgainst,iceTime\n"
+MONEYPUCK = {2026: MP_HEAD + "WSH,2026,WSH,WSH,Team Level,all,4,14.0,9.0,14400\nSEA,2026,SEA,SEA,Team Level,all,5,13.0,14.0,18000\n"
+                            "WSH,2026,WSH,WSH,Team Level,5on5,4,10.0,7.0,11000\n",
+             2025: MP_HEAD + "WSH,2025,WSH,WSH,Team Level,all,82,260,230,295200\nSEA,2025,SEA,SEA,Team Level,all,82,235,250,295200\n"}
+
+
+def fake_get_text(url):
+    if url == app.CLUBELO_FIXTURES:
+        return CLUBELO_FIX
+    if url.startswith("http://api.clubelo.com/"):
+        return CLUBELO_DAY
+    if "moneypuck.com" in url:
+        return MONEYPUCK.get(int(url.split("/seasonSummary/")[1].split("/")[0]))
+    return None
+
+
 class AppTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp()
@@ -153,6 +177,7 @@ class AppTest(unittest.TestCase):
         app.PICKS_FILE = os.path.join(self.tmp, "picks.json")
         app.LIVE_FILE = os.path.join(self.tmp, "live.json")
         app.get_json = fake_get_json
+        app.get_text = fake_get_text
         app.time.sleep = lambda s: None
         history = {"foot-900": dict(sport="foot", league="Premier League", date="2026-10-10", home="Arsenal",
                                     away="Chelsea", p=[0.5, 0.27, 0.23], result=None, score=None),
@@ -422,6 +447,43 @@ class AppTest(unittest.TestCase):
         # NHL : le Fun n'est jamais le même pari que le Safe sous un autre nom
         n = app.nhl_picks("Minnesota Wild", "Columbus", 0.63, 3.56, 2.74, {}, q=0.6)
         self.assertNotIn(n["fun"]["market"], (n["main"]["market"], "win_a", "reg_a"))
+
+    def test_second_opinion(self):
+        # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
+        self.assertEqual(self.data["second"]["foot"], dict(ok=1, missing=[]))
+        self.assertEqual(self.data["second"]["nhl"], dict(ok=1, missing=[]))
+        foot, nhl = self.data["foot"][0], self.data["nhl"][0]
+        self.assertEqual((foot["second"]["src"], foot["second"]["agree"]), ("ClubElo", True))
+        self.assertEqual((foot["second"]["pH"], foot["second"]["pD"], foot["second"]["pA"]), (33, 27, 40))
+        self.assertIn("main", foot["picks"])
+        self.assertTrue(nhl["second"]["agree"] and nhl["second"]["winH"] > 50, nhl["second"])
+        # noms : alias et pas de confusion Paris FC / Paris SG
+        clubs = ["Man City", "Liverpool", "Paris SG", "Paris FC", "Forest"]
+        self.assertEqual(app.best_club(["Paris FC"], clubs), "Paris FC")
+        self.assertEqual(app.best_club(["PSG", "Paris Saint-Germain"], clubs), "Paris SG")
+        self.assertEqual(app.best_club(["Nottm Forest", "Nottingham Forest"], clubs), "Forest")
+        self.assertIsNone(app.best_club(["Real Madrid"], clubs))
+        # classement Elo seul (match absent de la liste ClubElo) : probabilités calculées
+        sec = app.elo_second("eng.1", dt.date(2026, 10, 12), ["Forest"], ["Man City"])
+        h, d, a = sec["p"]
+        self.assertAlmostEqual(h + d + a, 1, places=6)
+        self.assertGreater(a, h)                                  # City 260 points Elo au-dessus
+        # désaccord : les cotes voient Lyon favori, le deuxième avis voit Nice → pas de Safe
+        picks = dict(main=app.make_pick("1N", "Lyon ou nul", 0.76), winner=app.make_pick("1", "Victoire Lyon", 0.52))
+        out = app.concord("foot", picks, (0.52, 0.25, 0.23), dict(src="ClubElo", p=(0.30, 0.27, 0.43)))
+        self.assertFalse(out["agree"])
+        self.assertNotIn("main", picks)
+        self.assertEqual(picks["held"]["label"], "Lyon ou nul")
+        # même favori mais Safe jugé bien moins sûr (76 % contre 60 %) → pas de Safe non plus
+        picks = dict(main=app.make_pick("1N", "Lyon ou nul", 0.76))
+        out = app.concord("foot", picks, (0.52, 0.25, 0.23), dict(src="ClubElo", p=(0.36, 0.24, 0.40 - 0.0)))
+        self.assertFalse(out["agree"])
+        # avis proches : Safe gardé
+        picks = dict(main=app.make_pick("1N", "Lyon ou nul", 0.76))
+        self.assertTrue(app.concord("foot", picks, (0.52, 0.25, 0.23), dict(src="ClubElo", p=(0.48, 0.26, 0.26)))["agree"])
+        self.assertIn("main", picks)
+        # source injoignable : pas de deuxième avis, rien ne change
+        self.assertIsNone(app.concord("foot", picks, (0.52, 0.25, 0.23), None))
 
     def test_official_lineup(self):
         # Lyon–Nice : Nuamah remplaçant, Openda absent → le pronostic buteur va à un titulaire

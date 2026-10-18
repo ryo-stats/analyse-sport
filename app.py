@@ -14,8 +14,10 @@ Chaque exécution :
 
 Usage : python app.py
 """
+import csv
 import datetime as dt
 import difflib
+import io
 import json
 import math
 import os
@@ -53,6 +55,7 @@ LEAGUE_INFO = {
     "fra.1": ("France", 9), "eng.1": ("Angleterre", 23), "esp.1": ("Espagne", 15),
     "ita.1": ("Italie", 12), "ger.1": ("Allemagne", 10), "uefa.champions": ("Europe", 2),
 }
+LEAGUE_CODE = dict(LEAGUES)
 LEAGUE_LOGO = "https://a.espncdn.com/i/leaguelogos/soccer/500/{}.png"
 NHL_LOGO = "https://assets.nhle.com/logos/nhl/svg/{}_{}.svg"
 ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard"
@@ -70,6 +73,15 @@ GOAL_PRIOR = {"F": 0.22, "M": 0.08, "D": 0.03}
 DEC_PRIOR = {"F": 0.35, "M": 0.25, "D": 0.08}
 POSTES = {"F": "Attaquant", "M": "Milieu", "D": "Défenseur"}
 NHL_API = "https://api-web.nhle.com/v1"
+# deuxième avis, indépendant des cotes : ClubElo (foot) et buts attendus MoneyPuck (NHL)
+CLUBELO_FIXTURES = "http://api.clubelo.com/Fixtures"
+CLUBELO_DAY = "http://api.clubelo.com/{date}"
+MONEYPUCK_TEAMS = "https://moneypuck.com/moneypuck/playerData/seasonSummary/{season}/regular/teams.csv"
+ELO_COUNTRY = {"fra.1": "FRA", "eng.1": "ENG", "esp.1": "ESP", "ita.1": "ITA", "ger.1": "GER"}
+ELO_HFA = 65          # avantage du terrain en points Elo (ordre de grandeur de ClubElo)
+ELO_DRAW = 0.28       # part de nuls entre deux équipes de même niveau
+SPLIT_GAP = 0.12      # le deuxième avis juge le Safe moins sûr d'au moins 12 points : avis partagés
+NHL_SHRINK = 12       # début de saison : les xG d'une équipe pèsent comme ses matchs, face à 12 matchs « moyens »
 
 NHL_TIE = 0.22        # part des matchs NHL à égalité après 60 minutes
 NHL_TOTAL = 6.2       # buts par match NHL quand aucune ligne de buts n'est disponible
@@ -108,6 +120,25 @@ def get_json(url, params=None):
             continue
         if r.status_code != 404:
             print(f"HTTP {r.status_code} sur {url}", file=sys.stderr)
+        return None
+    return None
+
+
+def get_text(url):
+    """GET d'un fichier texte (CSV), 3 tentatives. Renvoie le texte ou None."""
+    for attempt in range(3):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=30)
+        except requests.RequestException as exc:
+            print(f"Réseau : {exc.__class__.__name__} sur {url}", file=sys.stderr)
+            time.sleep(3 * (attempt + 1))
+            continue
+        if r.status_code == 200:
+            return r.text
+        if r.status_code in (429, 500, 502, 503, 504):
+            time.sleep(5 * (attempt + 1))
+            continue
+        print(f"HTTP {r.status_code} sur {url}", file=sys.stderr)
         return None
     return None
 
@@ -707,6 +738,17 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     if league == "Ligue des champions" and stats_from - {"uefa.champions"}:
         ctx.append("Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions).")
 
+    picks = foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la)
+    if state == "pre":
+        second = elo_second(LEAGUE_CODE.get(league), paris(kickoff).date(),
+                            [H["team"].get(k, "") for k in ("shortDisplayName", "displayName", "name")],
+                            [A["team"].get(k, "") for k in ("shortDisplayName", "displayName", "name")])
+        history[key]["second"] = second
+        SECOND_STATS["foot"][0] += bool(second)
+    else:
+        second = history.get(key, {}).get("second")
+    agree = concord("foot", picks, (p_h, p_d, p_a), second)
+
     fav, pf = (home, p_h) if p_h >= p_a else (away, p_a)
     if pf >= 0.6:
         reading = f"{fav} est nettement favori ({pct(pf)} %)."
@@ -729,8 +771,206 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
-        ctx=ctx, reading=reading, stakes=stakes, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la),
+        ctx=ctx, reading=reading, stakes=stakes, picks=picks, second=agree,
         **foot_visuals(league, H, A))
+
+
+# ---------------------------------------------------------------- deuxième avis (« grands analystes »)
+# Les cotes résument déjà l'avis du marché. Pour vérifier qu'elles concordent avec une analyse indépendante :
+# - foot : ClubElo (classement Elo de tous les clubs européens, mis à jour après chaque match) ;
+# - NHL : buts attendus (xG) de chaque équipe cette saison, données MoneyPuck.com.
+# En cas de désaccord, pas de Safe sur le match (règle de prudence).
+
+SECOND = {}           # sources lues une fois par passage
+SECOND_STATS = {"foot": [0, []], "nhl": [0, []]}     # matchs couverts, équipes non trouvées (diagnostic)
+ELO_ALIAS = {
+    "manchester united": "man united", "manchester city": "man city", "nottm forest": "forest",
+    "nottingham forest": "forest", "wolverhampton wanderers": "wolves", "wolverhampton": "wolves",
+    "tottenham hotspur": "tottenham", "west ham united": "west ham", "newcastle united": "newcastle",
+    "leeds united": "leeds", "brighton hove albion": "brighton", "afc bournemouth": "bournemouth",
+    "paris saint germain": "paris sg", "psg": "paris sg", "le havre": "le havre", "brest": "brest",
+    "atletico madrid": "atletico", "athletic club": "bilbao", "athletic bilbao": "bilbao", "real sociedad": "sociedad",
+    "celta vigo": "celta", "deportivo alaves": "alaves", "alaves": "alaves", "rayo vallecano": "rayo vallecano",
+    "real betis": "betis", "espanyol": "espanyol", "racing santander": "racing santander",
+    "internazionale": "inter", "inter milan": "inter", "hellas verona": "verona", "roma": "roma",
+    "bayern munich": "bayern", "borussia monchengladbach": "gladbach", "monchengladbach": "gladbach",
+    "borussia dortmund": "dortmund", "eintracht frankfurt": "frankfurt", "bayer leverkusen": "leverkusen",
+    "koln": "koeln", "cologne": "koeln", "1 koln": "koeln", "st pauli": "st pauli", "rb leipzig": "rb leipzig",
+    "hamburger": "hamburg", "werder bremen": "werder", "union berlin": "union berlin", "mainz": "mainz",
+    "sporting cp": "sporting", "psv eindhoven": "psv", "club brugge": "brugge",
+}
+
+
+def elo_key(name):
+    n = norm(name)
+    return ELO_ALIAS.get(n, n)
+
+
+def best_club(names, clubs):
+    """Club ClubElo correspondant le mieux à une équipe ESPN (plusieurs écritures possibles), ou None."""
+    keys = {elo_key(x) for x in names if x}
+    best, score = None, 0.0
+    for c in clubs:
+        s = max(similarity(k, elo_key(c)) for k in keys) if keys else 0
+        if s > score:
+            best, score = c, s
+    return best if score >= 0.8 else None
+
+
+def read_csv(text):
+    try:
+        return list(csv.DictReader(io.StringIO(text or "")))
+    except csv.Error:
+        return []
+
+
+def elo_wdl(dr):
+    """Victoire, nul, défaite à partir de l'écart Elo (avantage du terrain compris). Score attendu Elo :
+    1 / (1 + 10^(-dr/400)) ; les nuls sont plus rares quand l'écart grandit."""
+    e = 1 / (1 + 10 ** (-dr / 400))
+    d = ELO_DRAW * math.exp(-(dr / 600) ** 2)
+    h = max(0.01, min(0.98, e - d / 2))
+    return h, d, max(0.01, 1 - h - d)
+
+
+def gd_probs(row):
+    """Probabilités ClubElo d'un match (colonnes « GD… » : écart de buts domicile - extérieur)."""
+    h = d = a = 0.0
+    for k, v in row.items():
+        m = re.fullmatch(r"GD\s*([<>=])\s*(-?\d+)", (k or "").strip())
+        if not m:
+            continue
+        try:
+            x = float(v)
+        except (TypeError, ValueError):
+            continue
+        op, n = m.group(1), int(m.group(2))
+        if op == "<" or (op == "=" and n < 0):
+            a += x
+        elif op == ">" or (op == "=" and n > 0):
+            h += x
+        else:
+            d += x
+    tot = h + d + a
+    return (h / tot, d / tot, a / tot) if tot > 0.5 else None
+
+
+def elo_second(code, day, home_names, away_names):
+    """Deuxième avis foot : probabilités publiées par ClubElo si le match est dans sa liste, sinon calcul
+    à partir du classement Elo du jour. None si les équipes ne sont pas trouvées."""
+    if "fixtures" not in SECOND:
+        SECOND["fixtures"] = read_csv(get_text(CLUBELO_FIXTURES))
+    fx = [r for r in SECOND["fixtures"] if (r.get("Date") or "")[:10] == day.isoformat()]
+    if fx:
+        homes = [r.get("Home", "") for r in fx]
+        h = best_club(home_names, homes)
+        for r in fx:
+            if h and r.get("Home") == h and best_club(away_names, [r.get("Away", "")]):
+                p = gd_probs(r)
+                if p:
+                    return dict(src="ClubElo", p=p)
+    key = "elo-" + day.isoformat()
+    if key not in SECOND:
+        SECOND[key] = read_csv(get_text(CLUBELO_DAY.format(date=day.isoformat())))
+    rows = SECOND[key]
+    country = ELO_COUNTRY.get(code)
+    pool = [r for r in rows if not country or r.get("Country") == country]
+    clubs = {r.get("Club", ""): r for r in pool}
+    h, a = best_club(home_names, clubs), best_club(away_names, clubs)
+    if not h or not a or h == a:
+        SECOND_STATS["foot"][1].extend(n for n, c in ((home_names[0], h), (away_names[0], a)) if not c)
+        return None
+    try:
+        dr = float(clubs[h]["Elo"]) - float(clubs[a]["Elo"]) + ELO_HFA
+    except (KeyError, TypeError, ValueError):
+        return None
+    return dict(src=f"Classement Elo ClubElo ({h} {round(float(clubs[h]['Elo']))}, {a} {round(float(clubs[a]['Elo']))})",
+                p=elo_wdl(dr))
+
+
+MP_ABBR = {"TBL": "TB", "NJD": "NJ", "SJS": "SJ", "LAK": "LA"}
+
+
+def mp_rates(season):
+    """xG pour et contre par heure de jeu de chaque équipe (situation « all », corrigés du score et du terrain)."""
+    key = f"mp-{season}"
+    if key not in SECOND:
+        out = {}
+        for r in read_csv(get_text(MONEYPUCK_TEAMS.format(season=season))):
+            if r.get("situation") != "all":
+                continue
+            try:
+                ice = float(r["iceTime"]) / 3600
+                xf = float(r.get("scoreVenueAdjustedxGoalsFor") or r["xGoalsFor"])
+                xa = float(r.get("scoreVenueAdjustedxGoalsAgainst") or r["xGoalsAgainst"])
+                gp = int(float(r["games_played"]))
+            except (KeyError, TypeError, ValueError):
+                continue
+            if ice > 0:
+                out[(r.get("team") or "").replace(".", "")] = (xf / ice, xa / ice, gp)
+        SECOND[key] = out
+    return SECOND[key]
+
+
+def nhl_second(H, A, season):
+    """Deuxième avis NHL : buts attendus de chaque équipe (MoneyPuck), ramenés vers la saison passée (ou la
+    moyenne) tant que peu de matchs sont joués. Renvoie la chance de victoire finale de l'équipe à domicile."""
+    year = int(str(season)[:4])
+    cur, prev = mp_rates(year), mp_rates(year - 1)
+    teams = list(cur.values()) or list(prev.values())
+    if not teams:
+        return None
+    avg = sum(x[0] for x in teams) / len(teams)
+
+    def rate(abbr):
+        k = MP_ABBR.get(abbr, abbr)
+        base = prev.get(k, (avg, avg, 0))
+        c = cur.get(k)
+        if not c and k not in prev:
+            return None
+        if not c:
+            return base[0], base[1]
+        w = c[2] / (c[2] + NHL_SHRINK)
+        return w * c[0] + (1 - w) * base[0], w * c[1] + (1 - w) * base[1]
+    rh, ra = rate(H), rate(A)
+    if not rh or not ra:
+        SECOND_STATS["nhl"][1].extend(x for x, r in ((H, rh), (A, ra)) if not r)
+        return None
+    lh = rh[0] * ra[1] / avg * 1.03          # léger avantage de la glace
+    la = ra[0] * rh[1] / avg / 1.03
+    h, d, a = outcome_probs(lh, la, n=15)
+    return dict(src="Modèle xG (données MoneyPuck.com)", winH=round(float(h + d * 0.52), 4))
+
+
+def concord(sport, picks, odds_p, second):
+    """Compare les cotes au deuxième avis. Désaccord (pas le même favori, ou Safe jugé au moins 12 points
+    moins sûr) : le Safe est retiré (picks["held"]) et le match affiche « avis partagés »."""
+    if not second:
+        return None
+    if sport == "foot":
+        h2, d2, a2 = second["p"]
+        h1, d1, a1 = odds_p
+        prob = lambda h, d, a: {"1": h, "2": a, "X": d, "1N": h + d, "N2": d + a, "12": h + a}
+        out = dict(src=second["src"], pH=pct(h2), pD=pct(d2), pA=pct(a2))
+    else:
+        h2, a2, h1, a1 = second["winH"], 1 - second["winH"], odds_p[0], 1 - odds_p[0]
+        prob = lambda h, d, a: {"win_h": h, "win_a": a}
+        d1 = d2 = 0
+        out = dict(src=second["src"], winH=pct(h2))
+    fav1, fav2 = ("h" if h1 >= a1 else "a"), ("h" if h2 >= a2 else "a")
+    clash = bool(fav1 != fav2 and abs(h2 - a2) >= 0.05 and abs(h1 - a1) >= 0.05)
+    main = picks.get("main") or {}
+    p1, p2 = prob(h1, d1, a1).get(main.get("market")), prob(h2, d2, a2).get(main.get("market"))
+    gap = (p1 - p2) if p1 is not None and p2 is not None else 0
+    out["agree"] = bool(not clash and gap < SPLIT_GAP)
+    if clash:
+        out["note"] = f"les cotes et le deuxième avis ne désignent pas le même favori"
+    elif gap >= SPLIT_GAP:
+        out["note"] = f"« {main['label']} » : {pct(p1)} % selon les cotes, {pct(p2)} % selon le deuxième avis"
+    if not out["agree"] and main and (p2 is not None or clash):
+        picks["held"] = dict(main, note=out["note"])
+        del picks["main"]
+    return out
 
 
 # ---------------------------------------------------------------- pronostics
@@ -1304,6 +1544,16 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
     else:
         reading = "Match très équilibré : au hockey, c'est presque un pile ou face."
 
+    picks = nhl_picks(hname, aname, win_h, lh, la, team_rows,
+                      q=min(0.75, max(0.25, (win_h - p_h) / p_d)) if p_d > 0 else 0.5)
+    if state in ("FUT", "PRE"):
+        second = nhl_second(H, A, season)
+        history[key]["second"] = second
+        SECOND_STATS["nhl"][0] += bool(second)
+    else:
+        second = history.get(key, {}).get("second")
+    agree = concord("nhl", picks, (win_h,), second)
+
     live = state in ("LIVE", "CRIT", "OFF", "FINAL")
     return dict(
         id=key, sport="nhl", league="NHL", kickoff=start.isoformat(), time=paris(start).strftime("%H:%M"),
@@ -1314,8 +1564,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
         ctx=ctx, reading=reading, stakes=nhl_stakes(hname, aname, sh, sa),
-        espn_id=espn_id, picks=nhl_picks(hname, aname, win_h, lh, la, team_rows,
-                                                       q=min(0.75, max(0.25, (win_h - p_h) / p_d)) if p_d > 0 else 0.5),
+        espn_id=espn_id, picks=picks, second=agree,
         logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
         logo_a=g["awayTeam"].get("logo") or NHL_LOGO.format(A, "light"),
         logo_h_dark=g["homeTeam"].get("darkLogo") or NHL_LOGO.format(H, "dark"),
@@ -1410,6 +1659,8 @@ def main(now=None):
     # la soirée NHL (matchs entre 0 h et 5 h à Paris) appartient au jour américain de la veille
     nhl_day = (now - dt.timedelta(hours=7)).date()
     history = load_json(HIST_FILE, {})
+    SECOND.clear()
+    SECOND_STATS.update(foot=[0, []], nhl=[0, []])
     load_squad_cache(today)
     foot_rows = foot(today, history)
     save_squad_cache(today)
@@ -1425,7 +1676,8 @@ def main(now=None):
     stats["picks"] = picks_bilan(store, history)
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
-                notes=NOTES[-12:])
+                notes=NOTES[-12:], second=dict(foot=dict(ok=SECOND_STATS["foot"][0], missing=sorted(set(SECOND_STATS["foot"][1]))),
+                                               nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])))))
     save_json(HIST_FILE, history)
     save_json(PICKS_FILE, store)
     save_json(DATA_FILE, data)
