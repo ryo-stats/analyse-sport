@@ -71,14 +71,6 @@ SQUAD_SIZE = 6        # joueurs affichés par équipe
 # part a priori des buts (et des buts + passes) de l'équipe selon le poste, pour un joueur qui joue tout
 GOAL_PRIOR = {"F": 0.22, "M": 0.08, "D": 0.03}
 DEC_PRIOR = {"F": 0.35, "M": 0.25, "D": 0.08}
-# Buteurs : buts (et buts + passes) par 90 minutes d'un joueur moyen du poste, et poids de cette moyenne en
-# matchs entiers. Sur 6 matchs, 2 buts d'un défenseur sont surtout du hasard (coups de pied arrêtés) : la
-# moyenne du poste pèse bien plus pour lui (15 matchs) que pour un attaquant (6 matchs).
-RATE90 = {"F": 0.30, "M": 0.10, "D": 0.035}
-RATE90_DEC = {"F": 0.45, "M": 0.27, "D": 0.10}
-RATE_WEIGHT = {"F": 6, "M": 8, "D": 15}
-ASSIST_RATE = 0.75     # environ 3 buts sur 4 ont un passeur décisif
-PLAY_SHARE = {"start": 0.88, "bench": 0.25, "out": 0.0}   # part du match jouée selon la composition officielle
 POSTES = {"F": "Attaquant", "M": "Milieu", "D": "Défenseur"}
 NHL_API = "https://api-web.nhle.com/v1"
 # deuxième avis, indépendant des cotes : ClubElo (foot) et buts attendus MoneyPuck (NHL)
@@ -549,49 +541,25 @@ def apply_lineup(rows, lineup):
 
 
 def squad_rows(squad, lam, side, team, lineup=None, missing=None):
-    """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ.
-
-    Rythme de chaque joueur par 90 minutes = ses buts de la saison ramenés vers la moyenne de son poste
-    (RATE90, poids RATE_WEIGHT). Multiplié par son temps de jeu attendu (habituel, ou composition officielle),
-    puis mis à l'échelle pour que l'équipe marque, au total, les buts attendus par l'analyse du match (lam).
-    """
+    """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ."""
     players = squad["players"]
     team_games = max(p["apps"] for p in players)
-    starts, bench = lineup if lineup else (None, None)
-
-    def status(name):
-        if not lineup:
-            return None
-        n = norm(name)
-        last = n.split()[-1] if n else ""
-        found = lambda grp: n in grp or (len(last) > 3 and any(g.split()[-1] == last for g in grp if g))
-        return "start" if found(starts) else "bench" if found(bench) else "out"
-
-    def probs(use_lineup):
-        raw = []
-        for p in players:
-            n90 = p["minutes"] / 90 if p["minutes"] else p["apps"] * 0.6
-            w = RATE_WEIGHT[p["pos"]]
-            rg = (p["goals"] + w * RATE90[p["pos"]]) / (n90 + w)
-            rd = (p["goals"] + p["assists"] + w * RATE90_DEC[p["pos"]]) / (n90 + w)
-            st = status(p["name"]) if use_lineup else None
-            share = PLAY_SHARE[st] if st else min(1.0, n90 / team_games)
-            raw.append((p, rg * share, rd * share, st))
-        sg, sd = sum(x[1] for x in raw) or 1, sum(x[2] for x in raw) or 1
-        kg, kd = 0.96 * lam / sg, 0.96 * lam * (1 + ASSIST_RATE) / sd       # 4 % de buts contre son camp
-        return [(p, pct(1 - math.exp(-g * kg)), pct(1 - math.exp(-d * kd)), st) for p, g, d, st in raw]
-
-    usual = {p["name"]: pg for p, pg, _, _ in probs(False)}
+    team_goals = max(sum(p["goals"] for p in players), 1)
+    k = 8          # lissage : l'équivalent d'environ 6 matchs de buts « moyens » réparti selon le poste
     rows = []
-    for p, pg, pd_, st in probs(bool(lineup)):
-        r = dict(name=p["name"], pos=POSTES[p["pos"]], side=side, team=team, goals=p["goals"], assists=p["assists"],
-                 apps=p["apps"], p_goal=pg, p_dec=pd_, pid=p.get("pid"), stats_league=squad.get("league"),
-                 season=squad.get("season"))
-        if st:
-            r["lineup"] = st
-            if st != "start" and usual[p["name"]] >= 15 and missing is not None:
-                missing.append(f"{p['name']} ({'remplaçant' if st == 'bench' else 'absent'})")
-        rows.append(r)
+    for p in players:
+        mfrac = min(1.0, p["minutes"] / (90 * team_games)) if p["minutes"] else min(1.0, p["apps"] / team_games) * 0.6
+        share_goal = (p["goals"] + k * GOAL_PRIOR[p["pos"]] * mfrac) / (team_goals + k)
+        share_dec = min(1.2, (p["goals"] + p["assists"] + k * DEC_PRIOR[p["pos"]] * mfrac) / (team_goals + k))
+        rows.append(dict(name=p["name"], pos=POSTES[p["pos"]], side=side, team=team,
+                         goals=p["goals"], assists=p["assists"], apps=p["apps"],
+                         p_goal=pct(1 - math.exp(-lam * share_goal)),
+                         p_dec=pct(1 - math.exp(-lam * share_dec)),
+                         # pour vérifier « buteur ou passeur » après le match (statistiques ESPN du joueur)
+                         pid=p.get("pid"), stats_league=squad.get("league"), season=squad.get("season")))
+    gone = apply_lineup(rows, lineup)
+    if missing is not None:
+        missing += gone
     rows.sort(key=lambda r: (-r["p_goal"], -r["p_dec"]))
     return rows[:SQUAD_SIZE]
 
@@ -1129,9 +1097,11 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
         best_score = coherent_score(lh, la, [market_fn("foot", mk) for mk in anchors])
         if best_score:
             picks["score"] = make_pick("exact", f"Score exact {best_score[0]}", best_score[1], value=best_score[0])
-    best = pick_scorer(side_rows(team_rows, "h" if p_h >= p_a else "a", ("h", "a")))
+    fav_h = p_h >= p_a
+    best = pick_scorer(side_rows(team_rows, "h" if fav_h else "a", ("h", "a")))
     if best:
         extra = {k: best[k] for k in ("lineup", "pid", "stats_league", "season") if best.get(k)}
+        extra["why"] = scorer_why(best, (home, p_h, lh) if best.get("side", "h" if fav_h else "a") == "h" else (away, p_a, la))
         picks["player"] = make_pick("scorer", f"{best['name']} marque", best["p_goal"] / 100,
                                     player=best["name"], team=best["team"], **extra)
         if best.get("p_dec"):
@@ -1139,6 +1109,20 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
                                           player=best["name"], team=best["team"],
                                           base=[best.get("apps") or 0, best.get("goals") or 0, best.get("assists") or 0], **extra)
     return picks
+
+
+def scorer_why(r, team):
+    """Pourquoi ce joueur : sa réussite cette saison et ce que dit l'analyse du match."""
+    name, p_win, lam = team
+    bits = []
+    if r.get("apps"):
+        bits.append(f"{plural(r.get('goals', 0), 'but')} et {plural(r.get('assists', 0), 'passe')} en {plural(r['apps'], 'match', 'matchs')}")
+    if r.get("lineup") == "start":
+        bits.append("titulaire")
+    bits.append(f"{name} {'favori' if p_win >= 0.45 else 'annoncé gagnant'} ({pct(p_win)} %)")
+    if lam:
+        bits.append(f"{str(round(lam, 1)).replace('.', ',')} but{'s' if lam >= 1.5 else ''} attendu{'s' if lam >= 1.5 else ''} pour {name}")
+    return " · ".join(bits)
 
 
 def pick_scorer(rows):

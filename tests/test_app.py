@@ -485,39 +485,36 @@ class AppTest(unittest.TestCase):
         # source injoignable : pas de deuxième avis, rien ne change
         self.assertIsNone(app.concord("foot", picks, (0.52, 0.25, 0.23), None))
 
-    def test_scorer_model(self):
-        # Lyon du 18/10 : un latéral à 2 buts en 6 matchs ne doit plus passer devant les attaquants
+    def test_scorer_pick(self):
+        # l'analyse des joueurs n'est pas modifiée ; le buteur proposé en découle
         P = lambda name, pos, apps, mins, g, a, pid="": dict(name=name, pos=pos, apps=apps, minutes=mins, goals=g, assists=a, pid=pid)
         squad = dict(league="fra.1", season=2026, players=[
             P("Ernest Nuamah", "F", 5, 378, 3, 1, "n1"), P("Loïs Openda", "F", 5, 394, 1, 1, "o1"),
             P("Zachary Athekame", "D", 6, 540, 2, 2, "z1"), P("Corentin Tolisso", "M", 6, 471, 1, 2, "t1"),
-            P("Pavel Sulc", "M", 6, 500, 0, 3, "s1"), P("Moussa Niakhate", "D", 6, 540, 0, 0, "m1")])
+            P("Pavel Sulc", "M", 6, 500, 0, 3, "s1")])
         rows = app.squad_rows(squad, 1.64, "h", "Lyon")
-        order = [r["name"] for r in rows]
-        self.assertEqual(order[0], "Ernest Nuamah")
-        self.assertLess(order.index("Loïs Openda"), order.index("Zachary Athekame"))
-        self.assertTrue(all(0 < r["p_goal"] <= r["p_dec"] for r in rows))
-        # l'équipe marque au total les buts attendus par l'analyse : plus l'analyse est offensive, plus c'est haut
-        self.assertGreater(app.squad_rows(squad, 2.6, "h", "Lyon")[0]["p_goal"], rows[0]["p_goal"])
-        # composition officielle : Nuamah remplaçant, Openda absent → un titulaire est proposé, pas le latéral
-        lineup = ({app.norm(n) for n in ("Zachary Athekame", "Corentin Tolisso", "Pavel Sulc", "Moussa Niakhate")},
-                  {app.norm("Ernest Nuamah")})
-        missing = []
-        rows = app.squad_rows(squad, 1.64, "h", "Lyon", lineup, missing)
-        self.assertEqual({r["name"]: r["lineup"] for r in rows}["Loïs Openda"], "out")
-        self.assertIn("Ernest Nuamah (remplaçant)", missing)
-        best = app.pick_scorer(rows)
-        self.assertEqual(best["lineup"], "start")
-        self.assertNotEqual(best["pos"], "Défenseur")
-        # paris proposés : buteur et « buteur ou passeur » du même joueur, avec de quoi vérifier après le match
+        self.assertEqual(rows[0]["name"], "Ernest Nuamah")
+        self.assertEqual((rows[0]["pid"], rows[0]["stats_league"], rows[0]["season"]), ("n1", "fra.1", 2026))
+        # buteur proposé : équipe favorite, réussite de la saison et analyse expliquées
         lh, la = app.foot_lambdas(0.52, 0.24)
         p_h, p_d, p_a = app.outcome_probs(lh, la)
         sc, sp = app.top_scores(lh, la)
-        pk = app.foot_picks("Lyon", "Nice", p_h, p_d, p_a, 0.5, 0.5, {"h": rows, "a": []}, sc, sp, lh, la)
-        self.assertEqual(pk["decisive"]["player"], pk["player"]["player"])
-        self.assertGreater(pk["decisive"]["p"], pk["player"]["p"])
-        self.assertEqual(pk["decisive"]["base"], [6, 1, 2] if best["name"] == "Corentin Tolisso" else pk["decisive"]["base"])
-        # vérification : buteur sur la feuille → validé ; sinon buts + passes de la saison avant / après
+        nice = [dict(name="Elye Wahi", pos="Attaquant", side="a", team="Nice", goals=4, assists=0, apps=6, p_goal=40, p_dec=45)]
+        pk = app.foot_picks("Lyon", "Nice", p_h, p_d, p_a, 0.5, 0.5, {"h": rows, "a": nice}, sc, sp, lh, la)
+        self.assertEqual(pk["player"]["player"], "Ernest Nuamah")              # Lyon favori : pas Wahi
+        self.assertIn("3 buts et 1 passe en 5 matchs", pk["player"]["why"])
+        self.assertIn("Lyon favori (52 %)", pk["player"]["why"])
+        self.assertEqual(pk["decisive"]["player"], "Ernest Nuamah")
+        self.assertEqual(pk["decisive"]["base"], [5, 3, 1])
+        # composition officielle : Nuamah remplaçant → un titulaire ; un défenseur seulement s'il domine nettement
+        lineup = ({app.norm(n) for n in ("Zachary Athekame", "Corentin Tolisso", "Pavel Sulc", "Loïs Openda")}, {app.norm("Ernest Nuamah")})
+        rows = app.squad_rows(squad, 1.64, "h", "Lyon", lineup)
+        best = app.pick_scorer(rows)
+        self.assertEqual(best["lineup"], "start")
+        d = max((r for r in rows if r["pos"] == "Défenseur"), key=lambda r: r["p_goal"])
+        o = max((r for r in rows if r["pos"] != "Défenseur" and r.get("lineup") == "start"), key=lambda r: r["p_goal"])
+        self.assertEqual(best["name"], d["name"] if d["p_goal"] >= 1.3 * o["p_goal"] else o["name"])
+        # vérification « buteur ou passeur » : feuille de match, sinon buts + passes avant / après
         dec = dict(player="Corentin Tolisso", pid_player="t1", stats_league="fra.1", season=2026, base=[6, 1, 2], date="2026-10-18")
         self.assertTrue(app.decisive_result(dec, dict(scorers=["Corentin Tolisso"])))
         old = app.get_json

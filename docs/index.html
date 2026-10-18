@@ -846,7 +846,7 @@ function pronoMatch(m){
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
     <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started || isOver(m) ? `<span class="tagst">${isOver(m) ? "Terminé" : "Commencé"}</span>${tallyHtml(picksTally(m))}` : ""}</div>
-    ${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+    ${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}</div>`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo
@@ -1112,7 +1112,7 @@ function scorerCard(m){
   const pk = m.picks || {}, p = pk.player, d = pk.decisive;
   const line = (k, x) => x ? `<div class="pl"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, x))}${esc(x.label)}</span>${conf(x)}${notStarted(m) ? addBtn(m, x) : ""}</div>` : "";
   return `<div class="pm"><div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}</div>
-    <div class="smeta">${esc(p.team || "")}${p.lineup ? LINEUP_TAG[p.lineup] : ""} · ${esc(m.league)}</div>
+    <div class="smeta">${esc(p.team || "")}${p.lineup ? LINEUP_TAG[p.lineup] : ""} · ${esc(m.league)}</div>${p.why ? `<p class="src">Pourquoi lui : ${esc(p.why)}.</p>` : ""}
     <div class="plines">${line("Buteur", p)}${line("Buteur ou passeur", d)}</div></div>`;
 }
 function scorersView(){
@@ -1121,7 +1121,7 @@ function scorersView(){
   const next = list.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); }).sort((a, b) => key(b) - key(a));
   const rest = list.filter(m => !next.includes(m)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
   const blk = (title, ms) => ms.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(ms.length, "match")}</span></div>${ms.map(scorerCard).join("")}</section>` : "";
-  return `<p class="warnline">⚽ Un joueur par match, choisi dans l'équipe que l'analyse donne gagnante, parmi les titulaires dès que la composition officielle est publiée (environ 1 h avant). <b>Buteur ou passeur</b> est plus sûr que <b>Buteur</b> (une passe décisive suffit), mais moins bien payé.</p>`
+  return `<p class="warnline">⚽ Un joueur par match : le plus susceptible de marquer selon l'analyse du match (sa réussite cette saison et les buts attendus de son équipe), dans l'équipe que l'analyse donne gagnante, parmi les titulaires dès que la composition officielle est publiée (environ 1 h avant). <b>Buteur ou passeur</b> est plus sûr que <b>Buteur</b> (une passe décisive suffit), mais moins bien payé.</p>`
     + (list.length ? blk("À venir", next) + blk("Commencés ou terminés", rest) : `<div class="empty">Pas de buteur proposé aujourd'hui.</div>`);
 }
 function favView(){
