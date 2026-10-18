@@ -245,7 +245,7 @@ td.r,th.r{text-align:right}
     <p><strong>Barre de couleur :</strong> chances de victoire tirées des cotes du bookmaker affiché par ESPN, marge retirée. C'est l'estimation publique la plus fiable ; elle intègre déjà forme, absents connus et avantage du terrain. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
     <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En Ligue des champions, ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
     <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités viennent des cotes : elles disent ce qui est le plus probable, pas où le bookmaker se trompe.</p>
-    <p><strong>Bilan :</strong> chaque pronostic est archivé avant le match puis comparé au résultat. Si les matchs annoncés à 60 % sont gagnés environ 6 fois sur 10, les probabilités sont fiables. Il faut au moins 200 matchs pour en juger.</p>
+    <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est. Elle devrait se stabiliser vers 0,58 en foot et 0,48 en NHL (niveau des bookmakers). À juger après 200 matchs.</p>
   </section>
 </div>
 <script>
@@ -565,7 +565,7 @@ function bilanBlock(b, label, naive){
     <div class="tiles num">
       <div class="tile"><div class="v">${b.n}</div><div class="k">matchs suivis</div></div>
       <div class="tile"><div class="v">${b.fav_rate}%</div><div class="k">favoris gagnants (annoncé : ${b.fav_expected} %)</div></div>
-      <div class="tile"><div class="v">${b.brier.toFixed(3)}</div><div class="k">score de Brier (plus bas = mieux ; au hasard : ${naive})</div></div>
+      <div class="tile"><div class="v">${b.brier.toFixed(3)}</div><div class="k">note d'erreur : 0 = parfait, ${naive} = hasard</div></div>
     </div>
     <div class="tablewrap"><table class="num"><thead><tr><th>Favori annoncé à</th><th class="r">Matchs</th><th class="r">Annoncé</th><th class="r">Réel</th></tr></thead>
     <tbody>${b.bins.map(r=>`<tr><td>${esc(r.range)}</td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>`;
