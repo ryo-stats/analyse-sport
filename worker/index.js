@@ -21,7 +21,11 @@ async function getJSON(url){
 
 async function ntfy(env, m){
   if (!env.NTFY_TOPIC) return "NTFY_TOPIC manquant";
-  const r = await fetch("https://ntfy.sh/", {method: "POST", headers: {"content-type": "application/json"},
+  // Sans compte, ntfy.sh limite par adresse IP ; or les robots Cloudflare partagent leurs IP (erreur 429).
+  // Avec un compte ntfy gratuit, le jeton NTFY_TOKEN fait compter les envois sur le compte et non sur l'IP.
+  const headers = {"content-type": "application/json"};
+  if (env.NTFY_TOKEN) headers.authorization = `Bearer ${env.NTFY_TOKEN}`;
+  const r = await fetch("https://ntfy.sh/", {method: "POST", headers,
     body: JSON.stringify({topic: env.NTFY_TOPIC, title: m.title, message: m.body || "", priority: m.priority || 3,
                           click: env.SITE})});
   return r.status;
