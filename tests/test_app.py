@@ -266,14 +266,20 @@ class AppTest(unittest.TestCase):
     def test_update_schedule(self):
         import horaires
         P = horaires.PARIS
-        run = lambda h, m, ev="schedule": horaires.should_run(dt.datetime(2026, 10, 18, h, m, tzinfo=P), ev)
-        self.assertTrue(run(20, 37))          # créneau 20 h 20 lancé avec 17 min de retard
-        self.assertTrue(run(7, 20))
-        self.assertFalse(run(20, 52))         # créneau 20 h 50 : pas un passage utile
-        self.assertFalse(run(3, 20))
-        self.assertTrue(run(3, 20, "workflow_dispatch"))   # lancement à la main : toujours
-        winter = dt.datetime(2026, 12, 5, 19, 20, tzinfo=dt.timezone.utc)   # 20 h 20 à Paris en hiver
-        self.assertTrue(horaires.should_run(winter, "schedule"))
+        at = lambda d, h, m: dt.datetime(2026, 10, d, h, m, tzinfo=P)
+        run = lambda h, m, last, ev="schedule": horaires.should_run(at(18, h, m), ev, last)
+        self.assertTrue(run(20, 37, at(18, 18, 8)))     # 20 h 20 lancé avec 17 min de retard
+        self.assertTrue(run(20, 56, at(18, 18, 8)))     # 20 h 20 lancé avec 36 min de retard (cas du 18/10) : rattrapé
+        self.assertFalse(run(20, 52, at(18, 20, 25)))   # 20 h 20 déjà publié : rien à refaire
+        self.assertFalse(run(19, 50, at(18, 18, 8)))    # aucun horaire prévu depuis 18 h 08
+        self.assertFalse(run(7, 10, at(17, 23, 55)))    # nuit : publication de 23 h 50 encore valable
+        self.assertTrue(run(7, 20, at(17, 23, 55)))
+        self.assertTrue(run(8, 20, at(17, 21, 30)))     # 23 h 50 et 7 h 20 ratés : rattrapés au passage suivant
+        self.assertTrue(run(3, 20, at(18, 3, 0), "workflow_dispatch"))   # lancement à la main : toujours
+        self.assertTrue(run(12, 50, None))             # pas encore de données publiées
+        winter = dt.datetime(2026, 12, 5, 19, 35, tzinfo=dt.timezone.utc)   # 20 h 35 à Paris en hiver
+        self.assertTrue(horaires.should_run(winter, "schedule", dt.datetime(2026, 12, 5, 18, 10, tzinfo=P)))
+        self.assertIsNotNone(horaires.published())     # le champ « generated » se relit bien
 
     def test_picks_and_selection(self):
         m = self.data["foot"][0]

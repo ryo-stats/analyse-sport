@@ -9,6 +9,7 @@ vague de coups d'envoi, pour archiver les cotes les plus récentes. Raisonner en
 Usage : python horaires.py  →  écrit « run=true » ou « run=false » (format GitHub Actions).
 """
 import datetime as dt
+import json
 import os
 import sys
 from zoneinfo import ZoneInfo
@@ -25,20 +26,39 @@ PASSAGES = {
 }
 
 
-def slot(now):
-    """Créneau prévu (:20 ou :50) dont ce passage est issu. GitHub démarre souvent avec 5 à 25 min de retard."""
-    minutes = (now.minute - 20) % 30
-    return (now - dt.timedelta(minutes=minutes)).strftime("%H:%M")
+def last_passage(now):
+    """Dernier horaire prévu déjà atteint (aujourd'hui ou hier soir), en heure de Paris."""
+    now = now.astimezone(PARIS)
+    times = []
+    for back in (0, 1):
+        day = (now - dt.timedelta(days=back)).date()
+        for p in PASSAGES:
+            h, m = map(int, p.split(":"))
+            t = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=PARIS)
+            if t <= now:
+                times.append(t)
+    return max(times)
 
 
-def should_run(now, event):
+def should_run(now, event, last=None):
+    """GitHub lance les passages avec 5 à 60 min de retard, et en saute parfois. On ne se fie donc pas au
+    créneau d'origine : on recalcule dès qu'un horaire prévu est passé depuis la dernière publication
+    (last = champ « generated » de docs/data.json). Un passage raté est rattrapé 30 minutes plus tard."""
     if event != "schedule":           # lancement à la main : toujours
         return True
-    return slot(now.astimezone(PARIS)) in PASSAGES
+    return last is None or last < last_passage(now)
+
+
+def published(path="docs/data.json"):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return dt.datetime.fromisoformat(json.load(f)["generated"])
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
 
 
 if __name__ == "__main__":
-    run = should_run(dt.datetime.now(PARIS), os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch"))
+    run = should_run(dt.datetime.now(PARIS), os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch"), published())
     line = f"run={'true' if run else 'false'}"
     print(line)
     out = os.environ.get("GITHUB_OUTPUT")

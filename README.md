@@ -71,7 +71,8 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Envoi réparti** : chaque minute, au plus 10 lots de 40 notifications, chacun confié à un petit robot « Envoi ». Le surplus part la minute suivante. De quoi servir quelques centaines de personnes gratuitement (confiance moyenne). Au-delà, il faudrait l'offre payante de Cloudflare (5 $ par mois).
 - **Libération des favoris** : un favori se libère 8 h après le coup d'envoi.
 - **Abonnements expirés** : ils sont oubliés automatiquement.
-- **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
+- **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). En foot, le déroulement du match compte aussi : tirs, tirs cadrés et corners (tableau des scores ESPN, toutes les 30 s) corrigent les buts attendus d'ici la fin. Le rythme d'avant-match pèse comme 2 matchs entiers, donc les tirs comptent pour environ 20 % à la mi-temps et un tiers en fin de match ; l'équipe qui a au moins 68 % des occasions est signalée « 📈 domine ». En NHL, ESPN ne donne pas les tirs du match en direct : seuls le score et le temps comptent. Ces chiffres n'entrent pas dans le Bilan.
+- Pendant un match, un **Safe du moment** (75 à 90 %) et un **Fun du moment** (35 à 66 %) s'affichent sous ses pronostics (onglet Pronostics), en haut de son analyse (onglet Matchs) et dans les alertes de but.
 - **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
 ## Présentation et bankroll
@@ -118,7 +119,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 | `docs/live.js` | Calcul des pronostics en direct (site et robot) |
 | `worker/`, `wrangler.jsonc` | Robot d'alertes Cloudflare. Tests : `node worker/test.mjs` |
 | `docs/manifest.webmanifest`, `docs/icon.svg` | Installation sur l'écran d'accueil |
-| `.github/workflows/update.yml` | Lance `app.py` aux 7 passages de `horaires.py` |
+| `.github/workflows/update.yml` | Lance `app.py` aux 7 passages de `horaires.py` ; un passage que GitHub lance en retard ou saute est rattrapé au lancement suivant (30 min plus tard au plus) |
 | `tests/test_app.py` | Vérifie les calculs avant chaque mise à jour |
 
 Pour tester sur ton ordinateur : `pip install -r requirements.txt`, puis `python -m unittest discover -s tests`, puis `python app.py`.

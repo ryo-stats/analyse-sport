@@ -6,9 +6,20 @@
 // actuel, et on recalcule chaque pronostic. Un carton rouge baisse les buts attendus de l'équipe réduite
 // (×0,7) et augmente ceux de l'adversaire (×1,25) : ordres de grandeur publiés, pas une mesure exacte.
 
+//
+// Foot : le déroulement du match compte aussi. Les tirs, tirs cadrés et corners de chaque équipe (tableau des
+// scores ESPN) donnent une mesure grossière des occasions créées, convertie en « buts mérités ». Ce rythme observé
+// est mélangé à celui d'avant-match : l'avant-match pèse comme 2 matchs entiers, donc à la mi-temps les tirs
+// comptent pour environ 20 %, en fin de match pour un tiers (30 minutes de tirs, c'est encore très bruité). Une équipe qui domine voit ses chances monter
+// même sans avoir marqué. NHL : ESPN ne donne pas les tirs du match en direct, seuls le score et le temps comptent.
+
 export const FOOT_LENGTH = 97;      // minutes réellement jouées en moyenne, temps additionnel compris
 export const NHL_LENGTH = 60;
 const RED_SELF = 0.7, RED_OPP = 1.25;
+// valeur moyenne en buts : calée pour qu'une équipe moyenne (12-13 tirs dont 4-5 cadrés, 5 corners) vaille ~1,35 but
+const XG_SOT = 0.22, XG_OFF = 0.04, XG_CORNER = 0.02;
+const PRIOR_WEIGHT = 2;             // poids de l'avant-match, en matchs entiers
+const DOMINATES = 0.68;             // part des occasions à partir de laquelle une équipe « domine »
 
 export const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
 
@@ -52,6 +63,12 @@ export function parseEspn(e, sport){
     if (/HALFTIME/.test(name) || t.shortDetail === "HT") s.elapsed = 47;
     else if ((st.period || 1) <= 1) s.elapsed = Math.min(minute, 50);
     else s.elapsed = 47 + Math.max(0, minute - 45);
+    const stat = x => {
+      const v = Object.fromEntries((x.statistics || []).map(t => [t.name, Number(t.displayValue)]));
+      return {shots: v.totalShots, sot: v.shotsOnTarget, corners: v.wonCorners, poss: v.possessionPct};
+    };
+    const sh = stat(H), sa = stat(A);
+    if (t.state !== "pre" && Number.isFinite(sh.shots) && Number.isFinite(sa.shots)) s.stats = {h: sh, a: sa};
     const hid = String(H.id || (H.team || {}).id || ""), aid = String(A.id || (A.team || {}).id || "");
     for (const d of c.details || []){
       const tid = String((d.team || {}).id || "");
@@ -74,14 +91,35 @@ export function parseEspn(e, sport){
   return s;
 }
 
+// Occasions créées par une équipe, en buts « mérités » (voir XG_SOT…).
+export function chances(t){
+  if (!t) return 0;
+  const sot = t.sot || 0, off = Math.max(0, (t.shots || 0) - sot);
+  return XG_SOT * sot + XG_OFF * off + XG_CORNER * (t.corners || 0);
+}
+
+// Foot : buts attendus d'ici la fin pour chaque équipe (lh, la), d'après l'avant-match, le temps qui reste,
+// les cartons rouges et les occasions déjà créées. dom = équipe qui domine nettement ("h", "a" ou null).
+export function liveRates(m, s){
+  const played = Math.min(1, (s.elapsed || 0) / FOOT_LENGTH);
+  const rem = s.state === "post" ? 0 : Math.max(0.01, 1 - played);
+  const red = s.red || {h: 0, a: 0};
+  let rh = m.xgH || 0, ra = m.xgA || 0, dom = null;
+  const st = s.stats;
+  if (st && played > 0){
+    const ch = chances(st.h), ca = chances(st.a);
+    rh = (rh * PRIOR_WEIGHT + ch) / (PRIOR_WEIGHT + played);
+    ra = (ra * PRIOR_WEIGHT + ca) / (PRIOR_WEIGHT + played);
+    if (ch + ca >= 0.6) dom = ch / (ch + ca) >= DOMINATES ? "h" : ca / (ch + ca) >= DOMINATES ? "a" : null;
+  }
+  return {rem, dom, lh: rh * rem * RED_SELF ** red.h * RED_OPP ** red.a, la: ra * rem * RED_SELF ** red.a * RED_OPP ** red.h};
+}
+
 // Probabilités en direct de chaque marché, à partir du score actuel et du temps restant.
 export function liveProbs(m, s){
   const done = s.state === "post";
   if (m.sport === "foot"){
-    const rem = done ? 0 : Math.max(0.01, (FOOT_LENGTH - (s.elapsed || 0)) / FOOT_LENGTH);
-    const red = s.red || {h: 0, a: 0};
-    const lh = (m.xgH || 0) * rem * RED_SELF ** red.h * RED_OPP ** red.a;
-    const la = (m.xgA || 0) * rem * RED_SELF ** red.a * RED_OPP ** red.h;
+    const {rem, lh, la} = liveRates(m, s);
     const ph = poisson(lh), pa = poisson(la);
     let p1 = 0, pN = 0, p2 = 0, o25 = 0, bt = 0, tot = 0;
     for (let i = 0; i < ph.length; i++) for (let j = 0; j < pa.length; j++){
@@ -164,16 +202,19 @@ export function funPicks(m, s, {lo = 0.35, hi = 0.66, max = 3} = {}){
   const out = [], H = m.home, A = m.away, n = s.sh + s.sa;
   const red = s.red || {h: 0, a: 0};
   const adv = red.h < red.a ? "h" : red.a < red.h ? "a" : null;     // équipe à 11 contre 10
+  let rem, lh, la, dom = null, q = 0.5;
+  const domWhy = side => {
+    const t = (s.stats || {})[side];
+    return `📈 ${side === "h" ? H : A} domine (${t.shots} tirs, ${t.sot} cadrés)`;
+  };
   const add = (fam, label, p, side = null) => {
     if (!(p >= lo && p <= hi)) return;
-    out.push({fam, label, p, why: adv && side === adv ? "🟥 Supériorité numérique" : ""});
+    const num = adv && side === adv;
+    out.push({fam, label, p, red: !!num, why: num ? "🟥 Supériorité numérique" : dom && side === dom ? domWhy(dom) : ""});
   };
   if (s.state === "post" || s.cancelled) return [];
-  let rem, lh, la, q = 0.5;
   if (m.sport === "foot"){
-    rem = Math.max(0.01, (FOOT_LENGTH - (s.elapsed || 0)) / FOOT_LENGTH);
-    lh = (m.xgH || 0) * rem * RED_SELF ** red.h * RED_OPP ** red.a;
-    la = (m.xgA || 0) * rem * RED_SELF ** red.a * RED_OPP ** red.h;
+    ({rem, lh, la, dom} = liveRates(m, s));
   } else {
     rem = s.period >= 4 ? 0 : Math.max(0, (NHL_LENGTH - (s.elapsed || 0)) / NHL_LENGTH);
     lh = (m.xgH || 0) * rem; la = (m.xgA || 0) * rem;
@@ -222,7 +263,7 @@ export function funPicks(m, s, {lo = 0.35, hi = 0.66, max = 3} = {}){
     add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, next("a"), "a");
   }
   // un seul pari par famille ; la supériorité numérique passe devant, puis le plus probable
-  const score = x => (x.why ? 0.15 : 0) + x.p;
+  const score = x => (x.red ? 0.15 : 0) + x.p;
   const best = {};
   for (const x of out.sort((a, b) => score(b) - score(a))) best[x.fam] ||= x;
   return Object.values(best).sort((a, b) => score(b) - score(a)).slice(0, max);

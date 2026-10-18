@@ -58,6 +58,16 @@ function finalBody(m, s){
     .filter(Boolean).join("\n");
 }
 
+// Pronostics du moment (mêmes calculs que le site) : un « safe » (75 à 90 %) et un « fun » (35 à 66 %),
+// d'après le score, la minute, les cartons et (foot) les tirs. Jamais le Safe d'avant-match en double.
+export function momentIdeas(m, s){
+  const main = ((m.picks || {}).main || {}).label;
+  const first = o => L.funPicks(m, s, {max: 4, ...o}).find(x => x.label !== main);
+  const safe = first({lo: 0.75, hi: 0.90}), fun = first({});
+  return [safe && `💡 Safe du moment : ${safe.label} (${L.pct(safe.p)} %)`,
+          fun && `🎲 Fun du moment : ${fun.label} (${L.pct(fun.p)} %)`].filter(Boolean);
+}
+
 export function parisNow(now){
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {timeZone: "Europe/Paris", year: "numeric",
     month: "2-digit", day: "2-digit", hour: "2-digit", hourCycle: "h23"}).formatToParts(new Date(now)).map(p => [p.type, p.value]));
@@ -109,11 +119,11 @@ export function update(w, s){
     const team = s.sh > prev.sh && s.sa > prev.sa ? "" : s.sh > prev.sh ? ` ${m.home}` : ` ${m.away}`;
     const who = s.goals.slice(prev.goals || 0).map(g => `${g.clock} ${g.name}${g.own ? " (contre son camp)" : g.pen ? " (penalty)" : ""}`.trim()).filter(Boolean);
     out.push({match: m.id, title: `${m.sport === "nhl" ? "🏒" : "⚽"} But${team} ! ${score}`, priority: 4,
-              body: [who.length ? who.join(", ") : s.label, ...picks.map(line)].filter(Boolean).join("\n")});
+              body: [who.length ? who.join(", ") : s.label, ...picks.map(line), ...momentIdeas(m, s)].filter(Boolean).join("\n")});
     commit();
   } else if (total < prevTotal){
     out.push({match: m.id, title: `↩️ But annulé : ${score}`, priority: 3,
-              body: [s.label, ...picks.map(line)].filter(Boolean).join("\n")});
+              body: [s.label, ...picks.map(line), ...momentIdeas(m, s)].filter(Boolean).join("\n")});
     commit();
   }
   return out;

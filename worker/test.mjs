@@ -32,10 +32,13 @@ const LIVE = {generated: "2026-10-18T07:20+02:00", date: "2026-10-18", matches: 
               summary: {date: "2026-10-18", yesterday: {n: 10, ok: 7}, foot: 12, nhl: 8,
                         top: [{label: "Arsenal ou nul", prob: 80, time: "15:00", match: "Arsenal – Chelsea"}]}};
 
-function footEvent({state = "in", name = "STATUS_FIRST_HALF", clock = "10'", period = 1, sh = 0, sa = 0, details = []}){
+// stats : {h: [tirs, cadrés, corners, possession], a: [...]}, comme le tableau des scores ESPN
+const espnStats = v => v ? [["totalShots", v[0]], ["shotsOnTarget", v[1]], ["wonCorners", v[2]], ["possessionPct", v[3]], ["foulsCommitted", 4]]
+  .map(([name, x]) => ({name, displayValue: String(x)})) : undefined;
+function footEvent({state = "in", name = "STATUS_FIRST_HALF", clock = "10'", period = 1, sh = 0, sa = 0, details = [], stats = null}){
   return {id: "1", status: {displayClock: clock, period, type: {state, name, shortDetail: clock}},
-          competitions: [{competitors: [{homeAway: "home", id: "359", score: String(sh), team: {id: "359", displayName: "Arsenal"}},
-                                        {homeAway: "away", id: "363", score: String(sa), team: {id: "363", displayName: "Chelsea"}}],
+          competitions: [{competitors: [{homeAway: "home", id: "359", score: String(sh), team: {id: "359", displayName: "Arsenal"}, statistics: espnStats(stats && stats.h)},
+                                        {homeAway: "away", id: "363", score: String(sa), team: {id: "363", displayName: "Chelsea"}, statistics: espnStats(stats && stats.a)}],
                           details}]};
 }
 const goal = (team, name, clock) => ({scoringPlay: true, team: {id: team}, clock: {displayValue: clock}, athletesInvolved: [{displayName: name}]});
@@ -62,6 +65,27 @@ test("carton rouge : l'équipe réduite perd des chances (affichage En direct)",
   const base = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "30'"}), "foot"));
   const r = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "30'", details: [red("359", "29'")]}), "foot"));
   assert.ok(r.p1 < base.p1 - 0.05);
+});
+
+test("déroulement du match : l'équipe qui domine aux tirs voit ses chances monter", () => {
+  const plain = L.parseEspn(footEvent({clock: "60'", period: 2, name: "STATUS_SECOND_HALF"}), "foot");
+  assert.equal(plain.stats, undefined);                         // pas de stats : comme avant
+  // 60e, 0-0 : Chelsea (outsider) écrase Arsenal aux tirs
+  const s = L.parseEspn(footEvent({clock: "60'", period: 2, name: "STATUS_SECOND_HALF", stats: {h: [3, 0, 1, 38], a: [14, 6, 7, 62]}}), "foot");
+  assert.deepEqual(s.stats.a, {shots: 14, sot: 6, corners: 7, poss: 62});
+  const base = L.liveProbs(FOOT, plain), now = L.liveProbs(FOOT, s);
+  assert.ok(now.p2 > base.p2 + 0.08 && now.p1 < base.p1 - 0.08, `p1 ${base.p1}→${now.p1}, p2 ${base.p2}→${now.p2}`);
+  const r = L.liveRates(FOOT, s);
+  assert.equal(r.dom, "a");
+  // 30e : la mention apparaît sur le pari Fun qui va dans le sens de l'équipe qui domine
+  const s30 = L.parseEspn(footEvent({clock: "30'", stats: {h: [2, 0, 0, 35], a: [9, 4, 4, 65]}}), "foot");
+  const fun = L.funPicks(FOOT, s30, {max: 6});
+  assert.ok(fun.some(x => x.why === "📈 Chelsea domine (9 tirs, 4 cadrés)" && /Chelsea/.test(x.label)), JSON.stringify(fun));
+  // match équilibré : personne ne « domine »
+  const even = L.parseEspn(footEvent({clock: "60'", period: 2, name: "STATUS_SECOND_HALF", stats: {h: [8, 3, 4, 50], a: [7, 3, 3, 50]}}), "foot");
+  assert.equal(L.liveRates(FOOT, even).dom, null);
+  // avant le coup d'envoi, les stats éventuelles ne comptent pas
+  assert.equal(L.parseEspn(footEvent({state: "pre", clock: "0'", stats: {h: [1, 1, 1, 50], a: [1, 1, 1, 50]}}), "foot").stats, undefined);
 });
 
 test("buteur : 100 % dès qu'il a marqué, 0 % s'il n'a pas marqué à la fin", () => {
@@ -130,6 +154,8 @@ assert.equal(msgs[0].match, "foot-1");
 assert.match(msgs[0].title, /⚽ But Arsenal ! Arsenal 1-0 Chelsea/);
 assert.match(msgs[0].body, /28' Bukayo Saka/);
 assert.match(msgs[0].body, /Bukayo Saka marque : 35 % → 100 % ✅/);
+assert.match(msgs[0].body, /\n🎲 Fun du moment : .+ \(\d+ %\)/);           // nouveau pari proposé après le but
+assert.ok(!/Safe du moment : Arsenal ou nul/.test(msgs[0].body));          // jamais le Safe d'avant-match en double
 current = footEvent({clock: "60'", period: 2, sh: 1, details: [goal("359", "Bukayo Saka", "28'"), red("363", "59'")]});
 assert.equal((await run(T + 76 * MIN)).length, 0, "pas d'alerte pour un carton rouge");
 current = footEvent({clock: "70'", period: 2, sh: 1, sa: 1, details: [goal("359", "Bukayo Saka", "28'"), goal("363", "Cole Palmer", "69'")]});

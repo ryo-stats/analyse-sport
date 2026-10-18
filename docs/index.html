@@ -407,6 +407,10 @@ a.tile.tlink .k{color:var(--home)}
 .ihead{font:700 .66rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .minis{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--muted)}
 .minis b{color:var(--ink)}
+.ihead small{font-weight:500;text-transform:none;letter-spacing:0;margin-left:4px}
+.lblock{display:grid;gap:8px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.mdetail > .lblock{margin:0 0 12px;padding:0 0 12px;border-top:0;border-bottom:1px dashed var(--line)}
+.minis.form{font-size:.8rem}
 .sel:has(.addbet){grid-template-columns:26px minmax(0,1fr) auto auto}
 @media (max-width:640px){.pl:has(.addbet){grid-template-columns:minmax(0,1fr) auto auto}.pl:has(.addbet) .pk{grid-column:1 / -1}}
 .toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:max-content;max-width:min(92vw,520px);background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;font-size:.9rem;z-index:9;box-shadow:0 4px 18px rgba(0,0,0,.25)}
@@ -630,6 +634,11 @@ async function pollLive(){
   if (bkAutoSettle() && ["home", "bankroll"].includes(TAB)) render();
   else { const mb = document.getElementById("mybets"); if (mb && BK.bets.some(b => b.status === "open")) mb.outerHTML = myBets(); }
   if (funbox && LIVEM) funbox.innerHTML = funList();
+  // blocs « en direct » sous les pronostics et dans l'analyse d'un match ouvert
+  if (LIVEM){
+    const all = [...foot, ...nhl];
+    document.querySelectorAll("[data-live]").forEach(el => { const m = all.find(x => x.id === el.dataset.live); if (m) el.outerHTML = liveBlock(m); });
+  }
   // toutes les 30 s si un match est en cours ou commence bientôt, sinon toutes les 5 min
   const now = Date.now();
   const hot = [...foot, ...nhl].some(m => {
@@ -713,7 +722,7 @@ function teamLine(name, rank, f){
 }
 
 function footDetail(m){
-  return `<div class="tlines">${teamLine(m.home, m.rank_h, m.form_h)}${teamLine(m.away, m.rank_a, m.form_a)}</div>
+  return `${liveBlock(m)}<div class="tlines">${teamLine(m.home, m.rank_h, m.form_h)}${teamLine(m.away, m.rank_a, m.form_a)}</div>
     ${bar(m, m.pH, m.pD, m.pA, "Victoire " + m.home, "Victoire " + m.away, "Nul")}${bookLine(m)}
     <div class="stats num">
       <div class="stat"><div class="v">${esc(m.scores[0])}</div><div class="k">Score le plus probable · ${m.scorep[0]}%</div></div>
@@ -729,7 +738,7 @@ function footDetail(m){
 
 function nhlDetail(m){
   const g = (x, team) => x ? `<div class="goalie"><small>Gardien probable · ${esc(team)}</small><b>${esc(x.name)}</b><small>${esc(x.sv)} · ${x.starts} départ${x.starts>1?"s":""}${x.note ? " · " + esc(x.note) : ""}</small></div>` : `<div class="goalie"><small>${esc(team)}</small>Gardien inconnu</div>`;
-  return `<div class="tlines"><div class="tline"><b>${esc(m.home)}</b><span class="sub">${esc(m.rec_h)}</span></div><div class="tline"><b>${esc(m.away)}</b><span class="sub">${esc(m.rec_a)}</span></div></div>
+  return `${liveBlock(m)}<div class="tlines"><div class="tline"><b>${esc(m.home)}</b><span class="sub">${esc(m.rec_h)}</span></div><div class="tline"><b>${esc(m.away)}</b><span class="sub">${esc(m.rec_a)}</span></div></div>
     ${bar(m, m.pH, m.pD, m.pA, m.home + " après 60 min", m.away + " après 60 min", "Égalité")}${bookLine(m)}
     <div class="stats num">
       <div class="stat"><div class="v">${m.winH}%</div><div class="k">${esc(m.home)} au final</div></div>
@@ -814,7 +823,7 @@ function pronoMatch(m){
   return `<div class="pm">
     <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started || isOver(m) ? `<span class="tagst">${isOver(m) ? "Terminé" : "Commencé"}</span>${tallyHtml(picksTally(m))}` : ""}</div>
     ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
-    ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div></div>`;
+    ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}</div>`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo
 try { PSUB = localStorage.getItem("psub") || "foot"; } catch (e) {}
@@ -877,7 +886,7 @@ function liveCard(m){
   const reds = s.red.h || s.red.a ? `<span>🟥 ${[s.red.h ? `${esc(m.home)} ${s.red.h}` : "", s.red.a ? `${esc(m.away)} ${s.red.a}` : ""].filter(Boolean).join(", ")}</span>` : "";
   const probs = done ? "" : m.sport === "foot"
     ? bar(m, pctr(lp.p1), pctr(lp.pN), pctr(lp.p2), "Victoire " + m.home, "Victoire " + m.away, "Nul") +
-      `<div class="minis num"><span>Plus de 2,5 buts <b>${pctr(lp.o25)} %</b></span><span>Les deux marquent <b>${pctr(lp.btts)} %</b></span>${reds}</div>`
+      `<div class="minis num"><span>Plus de 2,5 buts <b>${pctr(lp.o25)} %</b></span><span>Les deux marquent <b>${pctr(lp.btts)} %</b></span>${reds}</div>${formLine(m, s)}`
     : bar(m, pctr(lp.winH), 0, 100 - pctr(lp.winH), m.home + " au final", m.away + " au final", "") +
       `<div class="minis num"><span>Plus de 5,5 buts <b>${pctr(lp.markets.o55)} %</b></span>${s.period < 4 ? `<span>Prolongation <b>${pctr(lp.pD)} %</b></span>` : ""}</div>`;
   return `<div class="pm"><div class="pmhead">${favBtn(m)}${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}<span class="lscore num">${s.sh}-${s.sa}</span></div>
@@ -892,7 +901,21 @@ function liveIdeas(m, s){
   const row = (k, x, cls) => x ? `<div class="pl ${cls}"><span class="pk">${k}</span><span class="pv">${esc(x.label)}${x.why ? `<small class="why">${esc(x.why)}</small>` : ""}</span>
     <span class="conf"><b class="pp num">${pctr(x.p)} %</b><span class="odd num">@${fairOf(x.p)}</span></span>${addBtn(m, x)}</div>` : "";
   const body = row("Safe ✅ direct", safe, "main") + row("Fun 🎲 direct", fun, "funl");
-  return body ? `<div class="plines idea"><div class="ihead">Pronostics du moment</div>${body}</div>` : "";
+  return body ? `<div class="plines idea"><div class="ihead">Pronostics du moment <small>score, minute, ${m.sport === "foot" ? "tirs, cartons" : "temps restant"}</small></div>${body}</div>` : "";
+}
+// déroulement du match (foot) : tirs, cadrés, corners, possession
+function formLine(m, s){
+  const t = s.stats;
+  if (!t) return "";
+  const v = k => `${t.h[k] ?? "–"}-${t.a[k] ?? "–"}`;
+  return `<div class="minis num form"><span>Tirs <b>${v("shots")}</b></span><span>Cadrés <b>${v("sot")}</b></span><span>Corners <b>${v("corners")}</b></span>${Number.isFinite(t.h.poss) ? `<span>Possession <b>${t.h.poss}-${t.a.poss} %</b></span>` : ""}</div>`;
+}
+// bloc « en direct » d'un match : vide avant et après, rafraîchi toutes les 30 s par pollLive (data-live)
+function liveBlock(m){
+  const L = LIVEDATA[m.id];
+  if (!LIVEM || !L || !L.ev || L.state !== "in") return `<div data-live="${esc(m.id)}"></div>`;
+  const s = LIVEM.parseEspn(L.ev, m.sport);
+  return `<div data-live="${esc(m.id)}" class="lblock"><div class="lstat"><i class="dot"></i>${esc(s.label || "En direct")} · <b class="num">${s.sh}-${s.sa}</b></div>${formLine(m, s)}${liveIdeas(m, s)}</div>`;
 }
 // ---- sous-onglet Fun : paris plus risqués (35 à 70 %) mais plausibles, recalculés en direct (docs/live.js)
 const PRE_STATE = {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []};
