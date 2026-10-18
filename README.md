@@ -74,6 +74,19 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
 - **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
+## Cotes, Safe, Fun et enjeu
+
+- **Cotes du bookmaker** : les cotes d'avant-match relayées par ESPN, en décimal, sont affichées sur chaque match. Elles sont archivées pour rester visibles après le coup d'envoi, car ESPN ne fournit pas de cotes en direct.
+- **Cote juste** (« @ ») : 1 ÷ la probabilité calculée, sans la marge du bookmaker. Si un bookmaker propose plus, le pari est mathématiquement intéressant.
+- **Safe ✅ / Fun 🎲** :
+  - pour chaque match, le pari le plus sûr et un pari plus risqué (35 à 66 %), toujours différents ;
+  - pendant le match, « Pronostics du moment » : Safe entre 75 et 90 % et Fun, recalculés selon le score, la minute et les cartons rouges ;
+  - un pari qui profite à l'équipe à 11 contre 10 passe devant ;
+  - le sous-onglet **Pronostics › Fun** les regroupe, en direct et avant le match.
+- **Enjeu** dans la lecture du match :
+  - foot : choc au sommet, Europe, maintien, adversaires directs, début de saison ; en Ligue des champions, top 8, barrages ou élimination ;
+  - NHL : match de division, places en séries.
+
 ## Fichiers
 
 | Fichier | Rôle |

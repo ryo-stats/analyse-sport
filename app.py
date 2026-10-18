@@ -303,6 +303,70 @@ def espn_standings(league):
     return rows
 
 
+def foot_stakes(league, home, away, sh, sa, table):
+    """Enjeu du match d'après le classement : sommet, Europe, maintien, ou début de saison (texte court)."""
+    if not sh or not sa:
+        return ""
+    n = len(table) or 20
+    gp = min(sh["gp"], sa["gp"])
+    def nth(r):
+        return "1er" if r == 1 else f"{r}e"
+    if league == "Ligue des champions":
+        # phase de ligue à 36 : 1-8 qualifiés pour les 8es, 9-24 barrages, 25-36 éliminés
+        def zone(r):
+            return "top 8, qualification directe pour les 8es" if r <= 8 else "place de barrage" if r <= 24 else "zone d'élimination"
+        out = f"{home} ({nth(sh['rank'])}) : {zone(sh['rank'])}. {away} ({nth(sa['rank'])}) : {zone(sa['rank'])}."
+        if gp <= 2:
+            out += " Classement encore très provisoire."
+        return out
+    pts_at = {r["rank"]: r["pts"] for r in table.values()}
+    safe_line = pts_at.get(n - 3)                    # dernière place hors zone rouge (3 derniers)
+    parts = []
+    if sh["rank"] <= 4 and sa["rank"] <= 4:
+        parts.append(f"Choc au sommet : {nth(sh['rank'])} contre {nth(sa['rank'])}.")
+    else:
+        for name, st in ((home, sh), (away, sa)):
+            r = st["rank"]
+            if r == 1:
+                parts.append(f"{name} est leader ({plural(st['pts'], 'point')}).")
+            elif r <= 4:
+                parts.append(f"{name} ({nth(r)}) défend une place qualificative pour la Ligue des champions.")
+            elif r <= 7:
+                parts.append(f"{name} ({nth(r)}) est dans la course à l'Europe.")
+            elif r > n - 3:
+                parts.append(f"{name} ({nth(r)}) est en zone de relégation : match vital.")
+            elif r > n - 6 and safe_line is not None:
+                gap = st["pts"] - pts_at.get(n - 2, safe_line)
+                parts.append(f"{name} ({nth(r)}) lutte pour le maintien"
+                             + (f", {plural(gap, 'point')} d'avance sur la zone rouge." if gap >= 0 else "."))
+        if not parts:
+            parts.append("Match de milieu de tableau : enjeu modéré au classement.")
+    d = abs(sh["pts"] - sa["pts"])
+    if d <= 3 and abs(sh["rank"] - sa["rank"]) <= 4:
+        parts.append("Adversaires directs au classement : " + ("même nombre de points." if d == 0 else f"{plural(d, 'point')} d'écart."))
+    if gp < 6:
+        parts.append(f"Début de saison ({plural(gp, 'match', 'matchs')} joués) : le classement compte encore peu.")
+    return " ".join(parts)
+
+
+def nhl_stakes(home, away, sh, sa):
+    """Enjeu NHL : rivalité de division (match « à 4 points ») et course aux séries."""
+    if not sh or not sa:
+        return ""
+    parts = []
+    if sh.get("divisionName") and sh.get("divisionName") == sa.get("divisionName"):
+        parts.append(f"Match de division ({sh['divisionName']}) : battre un rival direct compte double au classement.")
+    gp = min(sh.get("gamesPlayed") or 0, sa.get("gamesPlayed") or 0)
+    if gp < 20:
+        parts.append(f"Début de saison ({plural(gp, 'match', 'matchs')} joués) : le classement bouge encore beaucoup.")
+    else:
+        for name, st in ((home, sh), (away, sa)):
+            div, wc = st.get("divisionSequence") or 99, st.get("wildcardSequence") or 99
+            parts.append(f"{name} est " + ("qualifié pour les séries s'ils commençaient ce soir." if div <= 3 or wc <= 2
+                                            else "hors des places en séries pour l'instant."))
+    return " ".join(parts)
+
+
 def espn_leaders(league):
     """Meilleurs buteurs et passeurs du championnat, regroupés par équipe (identifiant ESPN)."""
     data = get_json(ESPN_LEADERS.format(league=league)) or {}
@@ -595,6 +659,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
         reading = "Match très ouvert : aucune équipe ne dépasse 45 %."
     if p_d >= 0.29:
         reading += f" Le nul est une issue sérieuse ({pct(p_d)} %)."
+    stakes = foot_stakes(league, home, away, sh, sa, table)
 
     def form(c):
         return "".join(FORM_FR.get(ch, "") for ch in (c.get("form") or "")[-5:])
@@ -607,7 +672,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
         pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
-        ctx=ctx, reading=reading, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep),
+        ctx=ctx, reading=reading, stakes=stakes, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep),
         **foot_visuals(league, H, A))
 
 
@@ -1040,7 +1105,8 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
-        ctx=ctx, reading=reading, espn_id=espn_id, picks=nhl_picks(hname, aname, win_h, lh, la, team_rows),
+        ctx=ctx, reading=reading, stakes=nhl_stakes(hname, aname, sh, sa),
+        espn_id=espn_id, picks=nhl_picks(hname, aname, win_h, lh, la, team_rows),
         logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
         logo_a=g["awayTeam"].get("logo") or NHL_LOGO.format(A, "light"),
         logo_h_dark=g["homeTeam"].get("darkLogo") or NHL_LOGO.format(H, "dark"),

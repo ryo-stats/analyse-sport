@@ -294,6 +294,22 @@ class AppTest(unittest.TestCase):
         store = app.load_json(app.PICKS_FILE, {})
         self.assertTrue(any(v["match"] == "foot-401" and v["result"] is None for v in store.values()))
 
+    def test_match_stakes(self):
+        T = {str(i): dict(rank=i, pts=40 - 2 * i, gp=10) for i in range(1, 19)}
+        self.assertEqual(app.foot_stakes("Ligue 1", "PSG", "Lens", T["1"], T["3"], T), "Choc au sommet : 1er contre 3e.")
+        s = app.foot_stakes("Ligue 1", "Nice", "Metz", T["6"], T["17"], T)
+        self.assertIn("course à l'Europe", s)
+        self.assertIn("zone de relégation", s)
+        self.assertIn("lutte pour le maintien, 4 points d'avance", app.foot_stakes("Ligue 1", "A", "B", T["14"], T["9"], T))
+        early = dict(rank=9, pts=6, gp=3)
+        self.assertIn("Début de saison", app.foot_stakes("Ligue 1", "A", "B", early, dict(early, rank=10), T))
+        ucl = app.foot_stakes("Ligue des champions", "Real", "Slavia", dict(rank=3, pts=6, gp=2), dict(rank=30, pts=0, gp=2), {})
+        self.assertIn("top 8", ucl)
+        self.assertIn("zone d'élimination", ucl)
+        self.assertIn("Match de division", app.nhl_stakes("Boston", "Toronto", dict(divisionName="Atlantic", gamesPlayed=30),
+                                                          dict(divisionName="Atlantic", gamesPlayed=30, wildcardSequence=5)))
+        self.assertIn("stakes", self.data["foot"][0])
+
     def test_live_feed(self):
         live = app.load_json(app.LIVE_FILE, {})
         ids = {m["id"] for m in live["matches"]}

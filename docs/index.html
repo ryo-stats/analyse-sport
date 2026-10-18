@@ -240,6 +240,9 @@ td.r,th.r{text-align:right}
 .pl.fun{grid-template-columns:minmax(0,1fr) auto}
 .pl .why{display:block;font-size:.74rem;color:var(--away);font-weight:600}
 .rc{margin-left:6px;color:var(--away)}
+.pl.funl .pv{color:var(--away);font-weight:600}
+.idea{background:var(--soft);border-radius:8px;padding:8px 10px}
+.ihead{font:700 .66rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .minis{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--muted)}
 .minis b{color:var(--ink)}
 .toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:max-content;max-width:min(92vw,520px);background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;font-size:.9rem;z-index:9;box-shadow:0 4px 18px rgba(0,0,0,.25)}
@@ -509,7 +512,7 @@ function footDetail(m){
     <div><h3>Joueurs par équipe</h3>${topScorer(m)}
     <div class="cols">${squad(m.squad_h, m.home, "h", "p_dec", "Décisif", footSub)}${squad(m.squad_a, m.away, "a", "p_dec", "Décisif", footSub)}</div></div>
     ${m.ctx.length ? `<ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>` : ""}
-    <p class="reading"><b>Lecture :</b> ${esc(m.reading)} <span class="src">Autres scores fréquents : ${m.scores.slice(1).map((s,i)=>`${esc(s)} (${m.scorep[i+1]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>`;
+    <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Autres scores fréquents : ${m.scores.slice(1).map((s,i)=>`${esc(s)} (${m.scorep[i+1]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>`;
 }
 
 function nhlDetail(m){
@@ -526,7 +529,7 @@ function nhlDetail(m){
     <div><h3>Joueurs par équipe</h3>${topScorer(m)}
     <div class="cols">${squad(m.squad_h, m.home, "h", "p_point", "Point", nhlSub)}${squad(m.squad_a, m.away, "a", "p_point", "Point", nhlSub)}</div></div>
     <ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>
-    <p class="reading"><b>Lecture :</b> ${esc(m.reading)} <span class="src">Scores les plus fréquents : ${m.scores.map((s,i)=>`${esc(s)} (${m.scorep[i]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>`;
+    <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Scores les plus fréquents : ${m.scores.map((s,i)=>`${esc(s)} (${m.scorep[i]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>`;
 }
 
 function footView(){
@@ -591,12 +594,14 @@ function selItem(c, i){
 }
 function pronoMatch(m){
   const pk = m.picks || {};
-  const lines = [["Le plus sûr", pk.main], ["Vainqueur", pk.winner],
+  const funPk = LIVEM ? otherThan(LIVEM.funPicks(m, PRE_STATE, {max: 4}), m) : null;
+  const fun = funPk ? {...funPk, prob: pctr(funPk.p), stars: starsOf(funPk.p)} : null;
+  const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner],
                  [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
     <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started ? `<span class="tagst">${DONE.includes(m.state) ? "Terminé" : "Commencé"}</span>` : ""}</div>
-    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Le plus sûr" ? " main" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span>${conf(p)}</div>`).join("")}
+    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span>${conf(p)}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score</span><span class="pv">${esc(String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b></span></div>` : ""}</div></div>`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo
@@ -646,7 +651,7 @@ function liveCard(m){
   const L = LIVEDATA[m.id];
   const s = LIVEM.parseEspn(L.ev, m.sport), lp = LIVEM.liveProbs(m, s), done = s.state === "post";
   const seen = new Set(), lines = [];
-  for (const [k, kind] of [["Le plus sûr", "main"], ["Vainqueur", "winner"], ["Buteur", m.sport === "foot" ? "player" : ""]]){
+  for (const [k, kind] of [["Safe (avant)", "main"], ["Vainqueur", "winner"], ["Buteur", m.sport === "foot" ? "player" : ""]]){
     const p = (m.picks || {})[kind];
     if (!p || seen.has(p.market + "|" + (p.player || ""))) continue;
     seen.add(p.market + "|" + (p.player || ""));
@@ -665,7 +670,17 @@ function liveCard(m){
       `<div class="minis num"><span>Plus de 5,5 buts <b>${pctr(lp.markets.o55)} %</b></span>${s.period < 4 ? `<span>Prolongation <b>${pctr(lp.pD)} %</b></span>` : ""}</div>`;
   return `<div class="pm"><div class="pmhead">${favBtn(m)}${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}<span class="lscore num">${s.sh}-${s.sa}</span></div>
     <div class="lstat${done ? " done" : ""}">${done ? "" : '<i class="dot"></i>'}${esc(s.label || "En direct")} · ${esc(m.sport === "nhl" ? "NHL" : m.league)}</div>
-    ${probs}<div class="plines">${lines.join("")}</div></div>`;
+    ${probs}${done ? "" : liveIdeas(m, s)}<div class="plines">${lines.join("")}</div></div>`;
+}
+// le premier pari qui n'est pas déjà le « plus sûr » d'avant-match (pour ne jamais proposer deux fois le même)
+const otherThan = (list, m) => list.find(x => x.label !== ((m.picks || {}).main || {}).label) || null;
+// pendant le match : le pari « safe » (75 à 90 %, pas encore acquis) et le pari « fun » (35 à 70 %) du moment
+function liveIdeas(m, s){
+  const safe = otherThan(LIVEM.funPicks(m, s, {lo: 0.75, hi: 0.90, max: 4}), m), fun = otherThan(LIVEM.funPicks(m, s, {max: 4}), m);
+  const row = (k, x, cls) => x ? `<div class="pl ${cls}"><span class="pk">${k}</span><span class="pv">${esc(x.label)}${x.why ? `<small class="why">${esc(x.why)}</small>` : ""}</span>
+    <span class="conf"><b class="pp num">${pctr(x.p)} %</b><span class="odd num">@${fairOf(x.p)}</span></span></div>` : "";
+  const body = row("Safe ✅ direct", safe, "main") + row("Fun 🎲 direct", fun, "funl");
+  return body ? `<div class="plines idea"><div class="ihead">Pronostics du moment</div>${body}</div>` : "";
 }
 // ---- sous-onglet Fun : paris plus risqués (35 à 70 %) mais plausibles, recalculés en direct (docs/live.js)
 const PRE_STATE = {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []};
@@ -688,13 +703,13 @@ function funList(){
                   .filter(Boolean).map(x => ({...x, picks: LIVEM.funPicks(x.m, x.s)})).filter(x => x.picks.length)
                   .sort((a, b) => red(b.s) - red(a.s) || Date.parse(a.m.kickoff) - Date.parse(b.m.kickoff));   // cartons rouges d'abord
   const next = all.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); })
-                  .map(m => ({m, s: PRE_STATE, picks: LIVEM.funPicks(m, PRE_STATE, {max: 1})})).filter(x => x.picks.length)
+                  .map(m => ({m, s: PRE_STATE, picks: [otherThan(LIVEM.funPicks(m, PRE_STATE, {max: 4}), m)].filter(Boolean)})).filter(x => x.picks.length)
                   .sort((a, b) => b.picks[0].p - a.picks[0].p).slice(0, 12);
   const blk = (title, list) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(x => funCard(x.m, x.s, x.picks)).join("")}</section>` : "";
   return (live.length ? blk("En direct", live) : `<div class="empty">Aucun match en cours : les paris fun en direct apparaîtront au coup d'envoi.</div>`) + blk("Avant le match", next);
 }
 function funView(){
-  return `<p class="warnline">🎲 <b>Paris fun</b> : plus risqués (entre 35 et 70 %), donc mieux payés, mais <b>beaucoup vont perdre</b>, c'est normal. En direct, ils suivent le score, la minute et les cartons rouges (🟥 l'équipe à 11 contre 10 passe devant). « @ » = cote juste : si ton bookmaker propose plus, le pari est mathématiquement intéressant. Pour le plaisir, petites mises.</p><div id="funbox">${funList()}</div>`;
+  return `<p class="warnline">🎲 <b>Paris fun</b> : plus risqués (entre 35 et 66 %), donc mieux payés, mais <b>beaucoup vont perdre</b>, c'est normal. En direct, ils suivent le score, la minute et les cartons rouges (🟥 l'équipe à 11 contre 10 passe devant). « @ » = cote juste : si ton bookmaker propose plus, le pari est mathématiquement intéressant. Pour le plaisir, petites mises.</p><div id="funbox">${funList()}</div>`;
 }
 function liveList(){
   if (!LIVEM) return `<div class="empty">Chargement…</div>`;

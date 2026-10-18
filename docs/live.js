@@ -134,10 +134,10 @@ export function scored(player, s){
 export const pct = p => Math.round(p * 100);
 export const fair = p => (1 / Math.max(p, 0.01)).toFixed(2).replace(".", ",");      // cote juste, sans marge
 
-// ---- paris « fun » : plus risqués (35 à 70 %) mais plausibles, recalculés pendant le match.
+// ---- paris « fun » : plus risqués (35 à 66 %) mais plausibles, recalculés pendant le match.
 // Même modèle que liveProbs : buts restants selon le temps qui reste et les cartons rouges.
 // Un pari qui profite à l'équipe en supériorité numérique est mis en avant.
-export function funPicks(m, s, {lo = 0.35, hi = 0.70, max = 3} = {}){
+export function funPicks(m, s, {lo = 0.35, hi = 0.66, max = 3} = {}){
   const out = [], H = m.home, A = m.away, n = s.sh + s.sa;
   const red = s.red || {h: 0, a: 0};
   const adv = red.h < red.a ? "h" : red.a < red.h ? "a" : null;     // équipe à 11 contre 10
@@ -175,6 +175,7 @@ export function funPicks(m, s, {lo = 0.35, hi = 0.70, max = 3} = {}){
     add("dc", `${H} ou nul`, P((h, a) => h >= a), "h");
     add("dc", `Nul ou ${A}`, P((h, a) => a >= h), "a");
     for (const k of [n, n + 1, n + 2]) add("ou", `Plus de ${goals(k)} buts`, P((h, a) => h + a > k));
+    for (const k of [n + 1, n + 2, n + 3]) add("under", `Moins de ${goals(k)} buts`, P((h, a) => h + a <= k));
     if (!(s.sh > 0 && s.sa > 0)) add("btts", "Les deux équipes marquent", P((h, a) => h > 0 && a > 0));
     add("margin", `${H} gagne avec 2 buts d'écart ou plus`, P((h, a) => h - a >= 2), "h");
     add("margin", `${A} gagne avec 2 buts d'écart ou plus`, P((h, a) => a - h >= 2), "a");
@@ -192,6 +193,8 @@ export function funPicks(m, s, {lo = 0.35, hi = 0.70, max = 3} = {}){
     if (s.period < 4) add("ot", "Il y aura prolongation", P((h, a) => h === a));
     for (const k of [Math.max(n, 4), Math.max(n, 4) + 1, Math.max(n, 4) + 2])
       add("ou", `Plus de ${goals(k)} buts`, P((h, a) => h + a + (h === a ? 1 : 0) > k));
+    for (const k of [Math.max(n, 4) + 1, Math.max(n, 4) + 2, Math.max(n, 4) + 3])
+      add("under", `Moins de ${goals(k)} buts`, P((h, a) => h + a + (h === a ? 1 : 0) <= k));
     add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, next("h"), "h");
     add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, next("a"), "a");
   }
