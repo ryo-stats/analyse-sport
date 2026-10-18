@@ -2,8 +2,9 @@ name: Mise à jour des analyses
 
 on:
   schedule:
-    # toutes les 30 minutes ; horaires.py ne garde que les 7 passages utiles (heure de Paris) :
-    # 7 h 20, 12 h 20, 14 h 20, 16 h 20, 17 h 50, 20 h 20, 23 h 50
+    # toutes les 30 minutes ; horaires.py garde les 7 passages prévus (heure de Paris : 7 h 20, 12 h 20,
+    # 14 h 20, 16 h 20, 17 h 50, 20 h 20, 23 h 50, rattrapés s'ils sont lancés en retard) et, en plus,
+    # chaque lancement de 75 à 5 min avant un coup d'envoi (compositions officielles)
     - cron: "20,50 5-22 * * *"
   workflow_dispatch:         # bouton « Run workflow » pour lancer à la main (toujours exécuté)
 

@@ -6,6 +6,8 @@ recalculées qu'aux heures de Paris listées dans PASSAGES : environ 30 à 40 mi
 vague de coups d'envoi, pour archiver les cotes les plus récentes. Raisonner en heure de Paris
 évite d'avoir à modifier les horaires au changement d'heure.
 
+Avant chaque coup d'envoi, recalcul supplémentaire pour suivre les compositions officielles (voir should_run).
+
 Usage : python horaires.py  →  écrit « run=true » ou « run=false » (format GitHub Actions).
 """
 import datetime as dt
@@ -40,25 +42,51 @@ def last_passage(now):
     return max(times)
 
 
-def should_run(now, event, last=None):
+BEFORE_KICKOFF = (dt.timedelta(minutes=5), dt.timedelta(minutes=75))   # compos officielles : ~1 h avant
+REFRESH = dt.timedelta(minutes=20)
+
+
+def should_run(now, event, last=None, kickoffs=()):
     """GitHub lance les passages avec 5 à 60 min de retard, et en saute parfois. On ne se fie donc pas au
     créneau d'origine : on recalcule dès qu'un horaire prévu est passé depuis la dernière publication
-    (last = champ « generated » de docs/data.json). Un passage raté est rattrapé 30 minutes plus tard."""
+    (last = champ « generated » de docs/data.json). Un passage raté est rattrapé 30 minutes plus tard.
+    En plus, avant chaque coup d'envoi (de 75 à 5 min avant), on recalcule à chaque lancement (toutes les
+    30 min) pour suivre les compositions officielles, les blessés de dernière minute et les dernières cotes."""
     if event != "schedule":           # lancement à la main : toujours
         return True
-    return last is None or last < last_passage(now)
+    if last is None or last < last_passage(now):
+        return True
+    soon = any(BEFORE_KICKOFF[0] <= k - now <= BEFORE_KICKOFF[1] for k in kickoffs)
+    return soon and now - last >= REFRESH
+
+
+def _data(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
 
 
 def published(path="docs/data.json"):
     try:
-        with open(path, encoding="utf-8") as f:
-            return dt.datetime.fromisoformat(json.load(f)["generated"])
-    except (OSError, ValueError, KeyError, TypeError):
+        return dt.datetime.fromisoformat(_data(path)["generated"])
+    except (ValueError, KeyError, TypeError):
         return None
 
 
+def kickoffs(path="docs/data.json"):
+    d, out = _data(path), []
+    for m in (d.get("foot") or []) + (d.get("nhl") or []):
+        try:
+            out.append(dt.datetime.fromisoformat(m["kickoff"]))
+        except (ValueError, KeyError, TypeError):
+            pass
+    return out
+
+
 if __name__ == "__main__":
-    run = should_run(dt.datetime.now(PARIS), os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch"), published())
+    run = should_run(dt.datetime.now(PARIS), os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch"), published(), kickoffs())
     line = f"run={'true' if run else 'false'}"
     print(line)
     out = os.environ.get("GITHUB_OUTPUT")

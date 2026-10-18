@@ -195,23 +195,44 @@ export function scored(player, s){
 export const pct = p => Math.round(p * 100);
 export const fair = p => (1 / Math.max(p, 0.01)).toFixed(2).replace(".", ",");      // cote juste, sans marge
 
+// ---- cohérence : tous les pronostics d'un match racontent la même histoire.
+// Événement d'un pari sur le score final (h, a) : 1 s'il passe, 0 sinon (NHL : q = part des prolongations gagnées
+// à domicile). Même table que market_fn dans app.py. null = pas un pari sur le score.
+export function marketTest(sport, mk, q = 0.5){
+  const line = /^([ou])(\d)5$/.exec(mk || ""), ot = sport === "nhl" ? 1 : 0;
+  if (line){ const k = +line[2]; return line[1] === "o" ? (h, a) => +(h + a + ot * (h === a) > k) : (h, a) => +(h + a + ot * (h === a) <= k); }
+  const T = sport === "nhl"
+    ? {win_h: (h, a) => h > a ? 1 : h === a ? q : 0, win_a: (h, a) => a > h ? 1 : h === a ? 1 - q : 0,
+       reg_h: (h, a) => +(h > a), reg_a: (h, a) => +(a > h), ot: (h, a) => +(h === a)}
+    : {"1": (h, a) => +(h > a), "2": (h, a) => +(a > h), X: (h, a) => +(h === a), "1N": (h, a) => +(h >= a), N2: (h, a) => +(a >= h),
+       "12": (h, a) => +(h !== a), btts_y: (h, a) => +(h > 0 && a > 0), btts_n: (h, a) => +(h === 0 || a === 0),
+       h2: (h, a) => +(h - a >= 2), a2: (h, a) => +(a - h >= 2), cs_h: (h, a) => +(a === 0), cs_a: (h, a) => +(h === 0)};
+  return T[mk] || null;
+}
+
+// Avant le match, l'histoire, c'est l'analyse : son Safe et son Vainqueur. Pendant le match, c'est l'équipe qui a
+// le plus de chances de gagner à cet instant (score, minute, tirs, cartons) ; à égalité ou presque (moins de
+// 3 points d'écart), on garde le Vainqueur de l'analyse.
+export function storyAnchors(m, s){
+  const pk = m.picks || {};
+  if (s.state !== "in") return [pk.main, pk.winner].filter(x => x && x.market).map(x => x.market);
+  const lp = liveProbs(m, s), pre = (pk.winner || {}).market;
+  const [ph, pa, H, A] = m.sport === "foot" ? [lp.p1, lp.p2, "1", "2"] : [lp.winH, 1 - lp.winH, "win_h", "win_a"];
+  if (Math.abs(ph - pa) < 0.03) return [H, A].includes(pre) ? [pre] : [];
+  return [ph > pa ? H : A];
+}
+
 // ---- paris « fun » : plus risqués (35 à 66 %) mais plausibles, recalculés pendant le match.
-// Même modèle que liveProbs : buts restants selon le temps qui reste et les cartons rouges.
+// Même modèle que liveProbs : buts restants selon le temps qui reste, les cartons rouges et (foot) les tirs.
+// anchors : pronostics que le pari ne doit pas contredire (marchés comme "1N", ou paris déjà choisis) : quand le
+// pari passe, chacun d'eux doit avoir au moins autant de chances de passer (corrélation positive ou nulle).
 // Un pari qui profite à l'équipe en supériorité numérique est mis en avant.
-export function funPicks(m, s, {lo = 0.35, hi = 0.66, max = 3} = {}){
+// dedupe : refuser aussi le même marché qu'un appui (avant le match : jamais le Safe ou le Vainqueur sous un autre nom).
+export function funPicks(m, s, {lo = 0.35, hi = 0.66, max = 3, anchors = [], exclude = [], dedupe = true} = {}){
   const out = [], H = m.home, A = m.away, n = s.sh + s.sa;
   const red = s.red || {h: 0, a: 0};
   const adv = red.h < red.a ? "h" : red.a < red.h ? "a" : null;     // équipe à 11 contre 10
   let rem, lh, la, dom = null, q = 0.5;
-  const domWhy = side => {
-    const t = (s.stats || {})[side];
-    return `📈 ${side === "h" ? H : A} domine (${t.shots} tirs, ${t.sot} cadrés)`;
-  };
-  const add = (fam, label, p, side = null) => {
-    if (!(p >= lo && p <= hi)) return;
-    const num = adv && side === adv;
-    out.push({fam, label, p, red: !!num, why: num ? "🟥 Supériorité numérique" : dom && side === dom ? domWhy(dom) : ""});
-  };
   if (s.state === "post" || s.cancelled) return [];
   if (m.sport === "foot"){
     ({rem, lh, la, dom} = liveRates(m, s));
@@ -221,50 +242,71 @@ export function funPicks(m, s, {lo = 0.35, hi = 0.66, max = 3} = {}){
     if (m.pD > 0 && m.winH != null && m.pH != null) q = Math.min(0.75, Math.max(0.25, (m.winH - m.pH) / m.pD));
   }
   const ph = poisson(lh), pa = poisson(la);
+  // f(h, a, i, j) : score final h-a, dont i et j buts encore à marquer ; renvoie 0, 1 ou une probabilité
   const P = f => {
     let t = 0, z = 0;
     for (let i = 0; i < ph.length; i++) for (let j = 0; j < pa.length; j++){
       const w = ph[i] * pa[j]; z += w;
-      t += w * f(s.sh + i, s.sa + j, i, j);        // f renvoie 0, 1 ou une probabilité (prolongation)
+      t += w * f(s.sh + i, s.sa + j, i, j);
     }
     return t / z;
   };
-  const more = 1 - ph[0] * pa[0];                   // au moins un but de plus
-  const next = side => lh + la > 0 ? more * (side === "h" ? lh : la) / (lh + la) : 0;
+  const tests = anchors.map(x => typeof x === "function" ? x : typeof x === "string" ? marketTest(m.sport, x, q)
+                                  : x && x.test ? x.test : x && x.market ? marketTest(m.sport, x.market, q) : null).filter(Boolean);
+  const anchorMk = new Set(dedupe ? anchors.map(x => typeof x === "string" ? x : x && x.market).filter(Boolean) : []);
+  const coherent = (f, p) => tests.every(g => P((h, a, i, j) => g(h, a, i, j) * f(h, a, i, j)) >= P(g) * p - 1e-9);
+  const domWhy = side => { const t = s.stats[side]; return `📈 ${side === "h" ? H : A} domine (${t.shots} tirs, ${t.sot} cadrés)`; };
+  const add = (fam, label, f, side = null, market = null) => {
+    const p = P(f);
+    if (!(p >= lo && p <= hi) || exclude.includes(label) || (market && anchorMk.has(market)) || !coherent(f, p)) return;
+    const num = adv && side === adv;
+    out.push({fam, label, p, market, test: f, red: !!num, why: num ? "🟥 Supériorité numérique" : dom && side === dom ? domWhy(dom) : ""});
+  };
+  const mk = (sport, code) => (h, a) => marketTest(sport, code, q)(h, a);
   const goals = k => `${k + 0.5}`.replace(".", ",");
+  const line = (o, k) => k <= 9 ? `${o}${k}5` : null;
+  // prochain but : chaque but à venir est de l'équipe à domicile avec la probabilité lh / (lh + la)
+  const nextH = (h, a, i, j) => i + j ? i / (i + j) : 0, nextA = (h, a, i, j) => i + j ? j / (i + j) : 0;
   if (m.sport === "foot"){
-    add("res", `Victoire ${H}`, P((h, a) => h > a), "h");
-    add("res", `Victoire ${A}`, P((h, a) => a > h), "a");
-    add("res", "Match nul", P((h, a) => h === a));
-    add("dc", `${H} ou nul`, P((h, a) => h >= a), "h");
-    add("dc", `Nul ou ${A}`, P((h, a) => a >= h), "a");
-    for (const k of [n, n + 1, n + 2]) add("ou", `Plus de ${goals(k)} buts`, P((h, a) => h + a > k));
-    for (const k of [n + 1, n + 2, n + 3]) add("under", `Moins de ${goals(k)} buts`, P((h, a) => h + a <= k));
-    if (!(s.sh > 0 && s.sa > 0)) add("btts", "Les deux équipes marquent", P((h, a) => h > 0 && a > 0));
-    add("margin", `${H} gagne avec 2 buts d'écart ou plus`, P((h, a) => h - a >= 2), "h");
-    add("margin", `${A} gagne avec 2 buts d'écart ou plus`, P((h, a) => a - h >= 2), "a");
-    add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, next("h"), "h");
-    add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, next("a"), "a");
-    add("cs", `${A} ne marque plus`, P((h, a, i, j) => j === 0), "h");
-    add("cs", `${H} ne marque plus`, P((h, a, i, j) => i === 0), "a");
+    for (const [fam, code, label, side] of [["res", "1", `Victoire ${H}`, "h"], ["res", "2", `Victoire ${A}`, "a"], ["res", "X", "Match nul", null],
+                                            ["dc", "1N", `${H} ou nul`, "h"], ["dc", "N2", `Nul ou ${A}`, "a"],
+                                            ["margin", "h2", `${H} gagne avec 2 buts d'écart ou plus`, "h"], ["margin", "a2", `${A} gagne avec 2 buts d'écart ou plus`, "a"]])
+      add(fam, label, mk("foot", code), side, code);
+    for (const k of [n, n + 1, n + 2]) add("ou", `Plus de ${goals(k)} buts`, (h, a) => +(h + a > k), null, line("o", k));
+    for (const k of [n + 1, n + 2, n + 3]) add("under", `Moins de ${goals(k)} buts`, (h, a) => +(h + a <= k), null, line("u", k));
+    if (!(s.sh > 0 && s.sa > 0)) add("btts", "Les deux équipes marquent", mk("foot", "btts_y"), null, "btts_y");
+    add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, nextH, "h", n ? null : "fg_h");
+    add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, nextA, "a", n ? null : "fg_a");
+    add("cs", `${A} ne marque plus`, (h, a, i, j) => +(j === 0), "h", s.sa === 0 ? "cs_h" : null);
+    add("cs", `${H} ne marque plus`, (h, a, i, j) => +(i === 0), "a", s.sh === 0 ? "cs_a" : null);
   } else {
     // prolongation : le vainqueur marque 1 but de plus (une égalité donne un total pair)
-    const winH = P((h, a) => h > a ? 1 : h === a ? q : 0);
-    add("res", `Victoire ${H} (prolongation comprise)`, winH, "h");
-    add("res", `Victoire ${A} (prolongation comprise)`, 1 - winH, "a");
-    add("reg", `${H} gagne dans le temps réglementaire`, P((h, a) => h > a), "h");
-    add("reg", `${A} gagne dans le temps réglementaire`, P((h, a) => a > h), "a");
-    if (s.period < 4) add("ot", "Il y aura prolongation", P((h, a) => h === a));
-    for (const k of [Math.max(n, 4), Math.max(n, 4) + 1, Math.max(n, 4) + 2])
-      add("ou", `Plus de ${goals(k)} buts`, P((h, a) => h + a + (h === a ? 1 : 0) > k));
-    for (const k of [Math.max(n, 4) + 1, Math.max(n, 4) + 2, Math.max(n, 4) + 3])
-      add("under", `Moins de ${goals(k)} buts`, P((h, a) => h + a + (h === a ? 1 : 0) <= k));
-    add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, next("h"), "h");
-    add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, next("a"), "a");
+    add("res", `Victoire ${H} (prolongation comprise)`, mk("nhl", "win_h"), "h", "win_h");
+    add("res", `Victoire ${A} (prolongation comprise)`, mk("nhl", "win_a"), "a", "win_a");
+    add("reg", `${H} gagne dans le temps réglementaire`, mk("nhl", "reg_h"), "h", "reg_h");
+    add("reg", `${A} gagne dans le temps réglementaire`, mk("nhl", "reg_a"), "a", "reg_a");
+    if (s.period < 4) add("ot", "Il y aura prolongation", mk("nhl", "ot"), null, "ot");
+    const b = Math.max(n, 4);
+    for (const k of [b, b + 1, b + 2]) add("ou", `Plus de ${goals(k)} buts`, (h, a) => +(h + a + (h === a) > k), null, line("o", k));
+    for (const k of [b + 1, b + 2, b + 3]) add("under", `Moins de ${goals(k)} buts`, (h, a) => +(h + a + (h === a) <= k), null, line("u", k));
+    add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, nextH, "h");
+    add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, nextA, "a");
   }
   // un seul pari par famille ; la supériorité numérique passe devant, puis le plus probable
   const score = x => (x.red ? 0.15 : 0) + x.p;
   const best = {};
   for (const x of out.sort((a, b) => score(b) - score(a))) best[x.fam] ||= x;
   return Object.values(best).sort((a, b) => score(b) - score(a)).slice(0, max);
+}
+
+// Pronostics du moment d'un match : un Safe (75 à 90 %, pendant le match) puis un Fun (35 à 66 %) qui ne
+// contredit ni l'histoire du match (storyAnchors) ni ce Safe. Jamais le Safe d'avant-match en double.
+export function momentPicks(m, s){
+  if (s.state === "post" || s.cancelled) return {safe: null, fun: null};
+  const anchors = storyAnchors(m, s), exclude = [((m.picks || {}).main || {}).label].filter(Boolean);
+  const live = s.state === "in";       // en direct, le Safe peut être la victoire de l'équipe favorite
+  const safe = live ? funPicks(m, s, {lo: 0.75, hi: 0.90, max: 1, anchors, exclude, dedupe: false})[0] || null : null;
+  const fun = funPicks(m, s, {max: 1, anchors: safe ? [...anchors, safe] : anchors, dedupe: !live,
+                              exclude: safe ? [...exclude, safe.label] : exclude})[0] || null;
+  return {safe, fun};
 }

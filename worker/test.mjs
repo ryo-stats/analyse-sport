@@ -88,6 +88,34 @@ test("déroulement du match : l'équipe qui domine aux tirs voit ses chances mon
   assert.equal(L.parseEspn(footEvent({state: "pre", clock: "0'", stats: {h: [1, 1, 1, 50], a: [1, 1, 1, 50]}}), "foot").stats, undefined);
 });
 
+test("pronostics du moment : le Fun ne contredit ni le Safe du moment ni l'équipe favorite", () => {
+  // Leeds légèrement favori avant le match (comme le 18/10) : jamais « Nul ou Man United » à 0-0
+  const LEEDS = {...FOOT, home: "Leeds", away: "Man United", xgH: 1.19, xgA: 1.10,
+                 picks: {main: pick("1N", "Leeds ou nul", 0.67), winner: pick("1", "Victoire Leeds", 0.38)}};
+  const at = (clock, sh, sa, period = 1) => L.parseEspn(footEvent({clock, sh, sa, period, name: period > 1 ? "STATUS_SECOND_HALF" : "STATUS_FIRST_HALF"}), "foot");
+  const pre = L.momentPicks(LEEDS, {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []});
+  assert.ok(pre.fun && !/Man United/.test(pre.fun.label), JSON.stringify(pre.fun));
+  assert.equal(pre.safe, null);                                     // avant le match, le Safe est celui de l'analyse
+  const early = L.momentPicks(LEEDS, at("20'", 0, 0));
+  assert.ok(!early.fun || !/Nul ou Man United|Premier but : Man United/.test(early.fun.label), JSON.stringify(early));
+  // Man United mène : l'histoire change, le Fun suit le nouveau favori
+  assert.deepEqual(L.storyAnchors(LEEDS, at("35'", 0, 1)), ["2"]);
+  // règle générale vérifiée sur plusieurs situations : P(appui | Fun) >= P(appui)
+  for (const s of [at("10'", 0, 0), at("35'", 1, 0), at("35'", 0, 1), at("60'", 1, 1, 2), at("75'", 2, 0, 2)]){
+    const {safe, fun} = L.momentPicks(LEEDS, s);
+    if (!fun) continue;
+    const anchors = [...L.storyAnchors(LEEDS, s).map(mk => L.marketTest("foot", mk)), ...(safe ? [safe.test] : [])];
+    const lp = L.liveRates(LEEDS, s);
+    // espérance sur les buts à venir (Poisson), comme dans le calcul
+    const pois = (l, k) => Math.exp(-l) * l ** k / [1, 1, 2, 6, 24, 120, 720, 5040, 40320][k];
+    const E = f => { let t = 0; for (let i = 0; i < 9; i++) for (let j = 0; j < 9; j++) t += pois(lp.lh, i) * pois(lp.la, j) * f(s.sh + i, s.sa + j, i, j); return t; };
+    for (const g of anchors) assert.ok(E((h, a, i, j) => g(h, a, i, j) * fun.test(h, a, i, j)) >= E(g) * E(fun.test) - 1e-6, `${s.label} ${fun.label}`);
+    assert.ok(!safe || safe.label !== fun.label);
+  }
+  // un pari du moment a un marché : son résultat se calcule tout seul dans la bankroll
+  assert.ok(L.momentPicks(LEEDS, at("35'", 1, 0)).fun.market);
+});
+
 test("buteur : 100 % dès qu'il a marqué, 0 % s'il n'a pas marqué à la fin", () => {
   const s = L.parseEspn(footEvent({clock: "30'", sh: 1, details: [goal("359", "Bukayo Saka", "28'")]}), "foot");
   assert.equal(L.pickProb(FOOT.picks.player, FOOT, s, L.liveProbs(FOOT, s)), 1);

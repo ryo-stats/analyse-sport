@@ -73,6 +73,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Abonnements expirés** : ils sont oubliés automatiquement.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). En foot, le déroulement du match compte aussi : tirs, tirs cadrés et corners (tableau des scores ESPN, toutes les 30 s) corrigent les buts attendus d'ici la fin. Le rythme d'avant-match pèse comme 2 matchs entiers, donc les tirs comptent pour environ 20 % à la mi-temps et un tiers en fin de match ; l'équipe qui a au moins 68 % des occasions est signalée « 📈 domine ». En NHL, ESPN ne donne pas les tirs du match en direct : seuls le score et le temps comptent. Ces chiffres n'entrent pas dans le Bilan.
 - Pendant un match, un **Safe du moment** (75 à 90 %) et un **Fun du moment** (35 à 66 %) s'affichent sous ses pronostics (onglet Pronostics), en haut de son analyse (onglet Matchs) et dans les alertes de but.
+- **Cohérence** : tous les pronostics d'un match racontent la même histoire. Avant le match, le Fun est choisi parmi les paris qui vont dans le sens de l'analyse : quand il passe, le Safe et le Vainqueur ont au moins autant de chances de passer (calcul exact sur la grille des scores, `market_fn` / `marketTest`). Le score exact est le plus probable parmi ceux où le Safe et le Vainqueur passent, et le buteur vient de l'équipe annoncée gagnante. Pendant le match, l'histoire est celle de l'équipe qui a le plus de chances de gagner à cet instant (à égalité ou presque, le Vainqueur de l'analyse) ; le Fun du moment ne contredit ni elle ni le Safe du moment. S'il n'existe aucun pari cohérent dans la fourchette, rien n'est proposé.
 - **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
 ## Présentation et bankroll
@@ -119,7 +120,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 | `docs/live.js` | Calcul des pronostics en direct (site et robot) |
 | `worker/`, `wrangler.jsonc` | Robot d'alertes Cloudflare. Tests : `node worker/test.mjs` |
 | `docs/manifest.webmanifest`, `docs/icon.svg` | Installation sur l'écran d'accueil |
-| `.github/workflows/update.yml` | Lance `app.py` aux 7 passages de `horaires.py` ; un passage que GitHub lance en retard ou saute est rattrapé au lancement suivant (30 min plus tard au plus) |
+| `.github/workflows/update.yml` | Lance `app.py` aux 7 passages de `horaires.py` ; un passage que GitHub lance en retard ou saute est rattrapé au lancement suivant (30 min plus tard au plus) ; en plus, recalcul toutes les 30 min de 75 à 5 min avant chaque coup d'envoi (compositions officielles, blessés de dernière minute, dernières cotes) |
 | `tests/test_app.py` | Vérifie les calculs avant chaque mise à jour |
 
 Pour tester sur ton ordinateur : `pip install -r requirements.txt`, puis `python -m unittest discover -s tests`, puis `python app.py`.

@@ -59,11 +59,9 @@ function finalBody(m, s){
 }
 
 // Pronostics du moment (mêmes calculs que le site) : un « safe » (75 à 90 %) et un « fun » (35 à 66 %),
-// d'après le score, la minute, les cartons et (foot) les tirs. Jamais le Safe d'avant-match en double.
+// d'après le score, la minute, les cartons et (foot) les tirs ; le Fun ne contredit ni le Safe ni l'équipe favorite.
 export function momentIdeas(m, s){
-  const main = ((m.picks || {}).main || {}).label;
-  const first = o => L.funPicks(m, s, {max: 4, ...o}).find(x => x.label !== main);
-  const safe = first({lo: 0.75, hi: 0.90}), fun = first({});
+  const {safe, fun} = L.momentPicks(m, s);
   return [safe && `💡 Safe du moment : ${safe.label} (${L.pct(safe.p)} %)`,
           fun && `🎲 Fun du moment : ${fun.label} (${L.pct(fun.p)} %)`].filter(Boolean);
 }

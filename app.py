@@ -748,9 +748,39 @@ def make_pick(market, label, p, **extra):
 FUN_LO, FUN_HI = 0.35, 0.66          # pari « fun » : plus risqué que le plus sûr, mais plausible
 
 
-def fun_pick(sport, home, away, lh, la, q, exclude=()):
-    """Pari « fun » d'avant-match : un pari entre 35 et 66 %, un par famille, le plus probable d'abord,
-    jamais le même que le pronostic le plus sûr ni que le vainqueur annoncé. Même logique que funPicks dans docs/live.js."""
+def market_fn(sport, market, q=0.5):
+    """Événement d'un pronostic sur le score final (h, a) : 1 s'il passe, 0 sinon. En NHL, une égalité après
+    60 minutes va en prolongation : q = part des prolongations gagnées par l'équipe à domicile. None = pas un
+    pari sur le score (buteur…). Même table que market dans docs/live.js."""
+    line = re.fullmatch(r"([ou])(\d)5", market or "")
+    ot = 1 if sport == "nhl" else 0             # NHL : le but de la prolongation compte dans le total
+    if line:
+        k = int(line.group(2))
+        return (lambda h, a: h + a + ot * (h == a) > k) if line.group(1) == "o" else (lambda h, a: h + a + ot * (h == a) <= k)
+    if sport == "nhl":
+        return {"win_h": lambda h, a: 1 if h > a else (q if h == a else 0),
+                "win_a": lambda h, a: 1 if a > h else (1 - q if h == a else 0),
+                "reg_h": lambda h, a: h > a, "reg_a": lambda h, a: a > h, "ot": lambda h, a: h == a}.get(market)
+    return {"1": lambda h, a: h > a, "2": lambda h, a: a > h, "X": lambda h, a: h == a,
+            "1N": lambda h, a: h >= a, "N2": lambda h, a: a >= h, "12": lambda h, a: h != a,
+            "btts_y": lambda h, a: h > 0 and a > 0, "btts_n": lambda h, a: h == 0 or a == 0,
+            "h2": lambda h, a: h - a >= 2, "a2": lambda h, a: a - h >= 2,
+            "cs_h": lambda h, a: a == 0, "cs_a": lambda h, a: h == 0,
+            # premier but : avec deux lois de Poisson, chaque but est de l'équipe à domicile avec la probabilité h / (h + a)
+            "fg_h": lambda h, a: h / (h + a) if h + a else 0, "fg_a": lambda h, a: a / (h + a) if h + a else 0}.get(market)
+
+
+def coherent(P, anchors, f):
+    """Un pronostic est cohérent avec l'analyse s'il ne la contredit pas : quand il passe, chaque pronostic
+    d'appui (Safe, Vainqueur) a au moins autant de chances de passer (corrélation positive ou nulle)."""
+    pf = P(f)
+    return all(P(lambda h, a, g=g: g(h, a) * f(h, a)) >= P(g) * pf - 1e-9 for g in anchors)
+
+
+def fun_pick(sport, home, away, lh, la, q, exclude=(), anchors=()):
+    """Pari « fun » d'avant-match : un pari entre 35 et 66 %, le plus probable de ceux qui vont dans le sens
+    de l'analyse (cohérent avec le Safe et le Vainqueur : anchors = leurs marchés), jamais le même pari
+    qu'eux. Même logique que funPicks dans docs/live.js."""
     n = 11
     ph = [poisson.pmf(i, lh) for i in range(n)]
     pa = [poisson.pmf(j, la) for j in range(n)]
@@ -760,38 +790,50 @@ def fun_pick(sport, home, away, lh, la, q, exclude=()):
         return sum(ph[i] * pa[j] * f(i, j) for i in range(n) for j in range(n)) / z
     c = []
     if sport == "foot":
-        c += [("res", "1", f"Victoire {home}", P(lambda h, a: h > a)), ("res", "2", f"Victoire {away}", P(lambda h, a: a > h)),
-              ("res", "X", "Match nul", P(lambda h, a: h == a)),
-              ("dc", "1N", f"{home} ou nul", P(lambda h, a: h >= a)), ("dc", "N2", f"Nul ou {away}", P(lambda h, a: a >= h))]
-        c += [("ou", f"o{k}5", f"Plus de {k},5 buts", P(lambda h, a, k=k: h + a > k)) for k in (0, 1, 2)]
-        c += [("under", f"u{k}5", f"Moins de {k},5 buts", P(lambda h, a, k=k: h + a <= k)) for k in (1, 2, 3)]
-        c += [("btts", "btts_y", "Les deux équipes marquent", P(lambda h, a: h > 0 and a > 0)),
-              ("margin", "h2", f"{home} gagne avec 2 buts d'écart ou plus", P(lambda h, a: h - a >= 2)),
-              ("margin", "a2", f"{away} gagne avec 2 buts d'écart ou plus", P(lambda h, a: a - h >= 2)),
-              ("cs", "cs_h", f"{away} ne marque pas", P(lambda h, a: a == 0)),
-              ("cs", "cs_a", f"{home} ne marque pas", P(lambda h, a: h == 0))]
-        more = 1 - ph[0] * pa[0]
-        if lh + la > 0:
-            c += [("next", "fg_h", f"Premier but : {home}", more * lh / (lh + la)),
-                  ("next", "fg_a", f"Premier but : {away}", more * la / (lh + la))]
+        c += [("res", "1", f"Victoire {home}"), ("res", "2", f"Victoire {away}"), ("res", "X", "Match nul"),
+              ("dc", "1N", f"{home} ou nul"), ("dc", "N2", f"Nul ou {away}")]
+        c += [("ou", f"o{k}5", f"Plus de {k},5 buts") for k in (0, 1, 2)]
+        c += [("under", f"u{k}5", f"Moins de {k},5 buts") for k in (1, 2, 3)]
+        c += [("btts", "btts_y", "Les deux équipes marquent"),
+              ("margin", "h2", f"{home} gagne avec 2 buts d'écart ou plus"),
+              ("margin", "a2", f"{away} gagne avec 2 buts d'écart ou plus"),
+              ("cs", "cs_h", f"{away} ne marque pas"), ("cs", "cs_a", f"{home} ne marque pas"),
+              ("next", "fg_h", f"Premier but : {home}"), ("next", "fg_a", f"Premier but : {away}")]
     else:
-        win_h = P(lambda h, a: 1 if h > a else (q if h == a else 0))
-        c += [("res", "win_h", f"Victoire {home}", win_h),
-              ("res", "win_a", f"Victoire {away}", 1 - win_h),
-              ("reg", "reg_h", f"{home} gagne dans le temps réglementaire", P(lambda h, a: h > a)),
-              ("reg", "reg_a", f"{away} gagne dans le temps réglementaire", P(lambda h, a: a > h)),
-              ("ot", "ot", "Il y aura prolongation", P(lambda h, a: h == a))]
-        # une égalité est suivie d'un but de prolongation (ou tirs au but) : il compte dans le total
-        c += [("ou", f"o{k}5", f"Plus de {k},5 buts", P(lambda h, a, k=k: h + a + (h == a) > k)) for k in (4, 5, 6)]
-        c += [("under", f"u{k}5", f"Moins de {k},5 buts", P(lambda h, a, k=k: h + a + (h == a) <= k)) for k in (5, 6, 7)]
-    best = {}
-    for fam, market, label, prob in sorted(c, key=lambda x: -x[3]):
-        if FUN_LO <= prob <= FUN_HI and fam not in best and label not in exclude:
-            best[fam] = (market, label, prob)
-    if not best:
+        c += [("res", "win_h", f"Victoire {home}"), ("res", "win_a", f"Victoire {away}"),
+              ("reg", "reg_h", f"{home} gagne dans le temps réglementaire"),
+              ("reg", "reg_a", f"{away} gagne dans le temps réglementaire"),
+              ("ot", "ot", "Il y aura prolongation")]
+        c += [("ou", f"o{k}5", f"Plus de {k},5 buts") for k in (4, 5, 6)]
+        c += [("under", f"u{k}5", f"Moins de {k},5 buts") for k in (5, 6, 7)]
+    anchor_fns = [g for g in (market_fn(sport, mk, q) for mk in anchors) if g]
+    scored = []
+    for fam, market, label in c:
+        f = market_fn(sport, market, q)
+        prob = P(f)
+        if FUN_LO <= prob <= FUN_HI and label not in exclude and market not in anchors and coherent(P, anchor_fns, f):
+            scored.append((prob, market, label))
+    if not scored:
         return None
-    market, label, prob = max(best.values(), key=lambda x: x[2])
+    prob, market, label = max(scored)
     return make_pick(market, label, prob)
+
+
+def side_rows(team_rows, side, keys):
+    """Joueurs de l'équipe annoncée gagnante (s'il y en a), sinon de tout le match."""
+    own = [r for k in keys if k.endswith(side) for r in team_rows.get(k) or []]
+    return own or [r for k in keys for r in team_rows.get(k) or []]
+
+
+def coherent_score(lh, la, anchors, n=9):
+    """Score exact le plus probable parmi ceux où le Safe et le Vainqueur passent (pas de « Victoire Lyon »
+    avec un score exact 1-1)."""
+    g = score_grid(lh, la, n)
+    ok = [(g[i][j], i, j) for i in range(n) for j in range(n) if all(f(i, j) >= 0.5 for f in anchors)]
+    if not ok:
+        return None
+    p, i, j = max(ok)
+    return f"{i}-{j}", p
 
 
 def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh=None, la=None):
@@ -805,11 +847,15 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
     picks = dict(main=max(team, key=lambda c: c["p"]),
                  winner=team[0] if p_h >= p_a else team[1],
                  score=make_pick("exact", f"Score exact {scores[0]}", scorep[0] / 100, value=scores[0]))
+    anchors = (picks["main"]["market"], picks["winner"]["market"])
     if lh is not None:
-        fun = fun_pick("foot", home, away, lh, la, 0.5, {picks["main"]["label"], picks["winner"]["label"]})
+        fun = fun_pick("foot", home, away, lh, la, 0.5, {picks["main"]["label"], picks["winner"]["label"]}, anchors)
         if fun:
             picks["fun"] = fun
-    players = (team_rows.get("h") or []) + (team_rows.get("a") or [])
+        best_score = coherent_score(lh, la, [market_fn("foot", mk) for mk in anchors])
+        if best_score:
+            picks["score"] = make_pick("exact", f"Score exact {best_score[0]}", best_score[1], value=best_score[0])
+    players = side_rows(team_rows, "h" if p_h >= p_a else "a", ("h", "a"))
     if players:
         best = max(players, key=lambda r: r["p_goal"])
         picks["player"] = make_pick("scorer", f"{best['name']} marque", best["p_goal"] / 100,
@@ -823,10 +869,11 @@ def nhl_picks(hname, aname, win_h, lh, la, team_rows, q=0.5):
     team = [make_pick("win_h", f"Victoire {hname}", win_h), make_pick("win_a", f"Victoire {aname}", 1 - win_h),
             make_pick("o55", "Plus de 5,5 buts", over55), make_pick("u55", "Moins de 5,5 buts", 1 - over55)]
     picks = dict(main=max(team, key=lambda c: c["p"]), winner=team[0] if win_h >= 0.5 else team[1])
-    fun = fun_pick("nhl", hname, aname, lh, la, q, {picks["main"]["label"], picks["winner"]["label"]})
+    fun = fun_pick("nhl", hname, aname, lh, la, q, {picks["main"]["label"], picks["winner"]["label"]},
+                   (picks["main"]["market"], picks["winner"]["market"]))
     if fun:
         picks["fun"] = fun
-    players = (team_rows.get("best_h") or []) + (team_rows.get("best_a") or [])
+    players = side_rows(team_rows, "h" if win_h >= 0.5 else "a", ("best_h", "best_a"))
     if players:
         best = max(players, key=lambda r: r["p_point"])
         picks["player"] = make_pick("point", f"{best['name']} : au moins 1 point", best["p_point"] / 100,

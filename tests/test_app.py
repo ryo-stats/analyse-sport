@@ -280,6 +280,14 @@ class AppTest(unittest.TestCase):
         winter = dt.datetime(2026, 12, 5, 19, 35, tzinfo=dt.timezone.utc)   # 20 h 35 à Paris en hiver
         self.assertTrue(horaires.should_run(winter, "schedule", dt.datetime(2026, 12, 5, 18, 10, tzinfo=P)))
         self.assertIsNotNone(horaires.published())     # le champ « generated » se relit bien
+        # avant un coup d'envoi à 20 h 45 : recalcul toutes les 30 min pour suivre les compos officielles
+        ko = [at(18, 20, 45)]
+        self.assertTrue(horaires.should_run(at(18, 19, 52), "schedule", at(18, 19, 20), ko))   # 53 min avant
+        self.assertTrue(horaires.should_run(at(18, 20, 24), "schedule", at(18, 19, 53), ko))   # 21 min avant
+        self.assertFalse(horaires.should_run(at(18, 20, 24), "schedule", at(18, 20, 21), ko))  # publié il y a 3 min
+        self.assertFalse(horaires.should_run(at(18, 20, 43), "schedule", at(18, 20, 24), ko))  # coup d'envoi imminent
+        self.assertFalse(horaires.should_run(at(18, 19, 10), "schedule", at(18, 18, 8), ko))   # 1 h 35 avant : trop tôt
+        self.assertTrue(all(k.tzinfo for k in horaires.kickoffs()))
 
     def test_picks_and_selection(self):
         m = self.data["foot"][0]
@@ -388,6 +396,32 @@ class AppTest(unittest.TestCase):
         groups = {v["market"]: app.pick_group(v) for v in store.values() if v["match"] == "foot-401"}
         self.assertEqual(groups["exact"], "fun")
         self.assertEqual(groups[m["main"]["market"]], "safe")
+
+    def test_picks_tell_one_story(self):
+        # Leeds–Man United du 18/10 : Leeds légèrement favori. Avant : Fun « Nul ou Man United », score exact 1-1
+        # et buteur de Man United. Tous les pronostics doivent maintenant aller dans le sens de l'analyse.
+        lh, la = app.foot_lambdas(0.38, 0.33)
+        p_h, p_d, p_a = app.outcome_probs(lh, la)
+        scores, scorep = app.top_scores(lh, la)
+        rows = {"h": [dict(name="Joël Piroe", p_goal=22, team="Leeds", side="h")],
+                "a": [dict(name="Bryan Mbeumo", p_goal=28, team="Man United", side="a")]}
+        pk = app.foot_picks("Leeds", "Man United", p_h, p_d, p_a, 0.45, 0.5, rows, scores, scorep, lh, la)
+        self.assertEqual(pk["winner"]["label"], "Victoire Leeds")
+        h, a = map(int, pk["score"]["value"].split("-"))
+        self.assertGreater(h, a)                                   # score exact cohérent avec le vainqueur
+        self.assertEqual(pk["player"]["team"], "Leeds")            # buteur de l'équipe annoncée gagnante
+        fun = pk["fun"]
+        self.assertNotIn(fun["market"], ("N2", "2", "X", "fg_a", "cs_a", "a2"))
+        # règle générale : quand le Fun passe, le Safe et le Vainqueur ont au moins autant de chances de passer
+        g = app.score_grid(lh, la)
+        P = lambda f: sum(g[i][j] * f(i, j) for i in range(11) for j in range(11))
+        f = app.market_fn("foot", fun["market"])
+        for mk in (pk["main"]["market"], pk["winner"]["market"]):
+            a_ = app.market_fn("foot", mk)
+            self.assertGreaterEqual(P(lambda i, j: a_(i, j) * f(i, j)), P(a_) * P(f) - 1e-9, mk)
+        # NHL : le Fun n'est jamais le même pari que le Safe sous un autre nom
+        n = app.nhl_picks("Minnesota Wild", "Columbus", 0.63, 3.56, 2.74, {}, q=0.6)
+        self.assertNotIn(n["fun"]["market"], (n["main"]["market"], "win_a", "reg_a"))
 
     def test_official_lineup(self):
         # Lyon–Nice : Nuamah remplaçant, Openda absent → le pronostic buteur va à un titulaire
