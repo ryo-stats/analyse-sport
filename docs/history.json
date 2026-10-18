@@ -1688,14 +1688,20 @@
    0.2369
   ],
   "source": "Cotes DraftKings",
-  "result": null,
-  "score": null,
+  "result": 0,
+  "score": "2-1",
   "odds": {
    "h": 1.83,
    "d": 3.85,
    "a": 4.0,
    "by": "DraftKings"
-  }
+  },
+  "first": "a",
+  "scorers": [
+   "Elye Wahi",
+   "Pavel Sulc",
+   "Tanner Tessmann"
+  ]
  },
  "foot-401879263": {
   "sport": "foot",
@@ -1955,14 +1961,20 @@
    0.1681
   ],
   "source": "Cotes DraftKings",
-  "result": null,
-  "score": null,
+  "result": 2,
+  "score": "0-3",
   "odds": {
    "h": 1.57,
    "d": 3.8,
    "a": 5.5,
    "by": "DraftKings"
-  }
+  },
+  "first": "a",
+  "scorers": [
+   "Oliver Provstgaard",
+   "Gustav Isaksen",
+   "Fisayo Dele-Bashiru"
+  ]
  },
  "foot-401884771": {
   "sport": "foot",
@@ -2029,6 +2041,10 @@
    "a": 2.6,
    "by": "DraftKings",
    "total": 6.5
+  },
+  "second": {
+   "src": "Modèle xG (données MoneyPuck.com)",
+   "winH": 0.6154
   }
  },
  "nhl-2026020136": {
@@ -2049,6 +2065,10 @@
    "a": 1.46,
    "by": "DraftKings",
    "total": 6.5
+  },
+  "second": {
+   "src": "Modèle xG (données MoneyPuck.com)",
+   "winH": 0.2856
   }
  }
 }
