@@ -151,6 +151,7 @@ class AppTest(unittest.TestCase):
         app.SQUADS.clear()
         app.CACHE_FILE = os.path.join(self.tmp, "squads.json")
         app.PICKS_FILE = os.path.join(self.tmp, "picks.json")
+        app.LIVE_FILE = os.path.join(self.tmp, "live.json")
         app.get_json = fake_get_json
         app.time.sleep = lambda s: None
         history = {"foot-900": dict(sport="foot", league="Premier League", date="2026-10-10", home="Arsenal",
@@ -284,6 +285,20 @@ class AppTest(unittest.TestCase):
         self.assertTrue(all(sum(c["id"] == x["id"] for x in sel) <= 2 for c in sel))
         store = app.load_json(app.PICKS_FILE, {})
         self.assertTrue(any(v["match"] == "foot-401" and v["result"] is None for v in store.values()))
+
+    def test_live_feed(self):
+        live = app.load_json(app.LIVE_FILE, {})
+        ids = {m["id"] for m in live["matches"]}
+        self.assertIn("foot-401", ids)
+        foot = next(m for m in live["matches"] if m["id"] == "foot-401")
+        self.assertEqual(foot["code"], "eng.1")
+        self.assertEqual(foot["edate"], "20261011")
+        self.assertIn("main", foot["picks"])
+        self.assertNotIn("squad_h", foot)                       # version compacte
+        nhl = next(m for m in live["matches"] if m["sport"] == "nhl")
+        self.assertIn("winH", nhl)
+        self.assertEqual(live["summary"]["date"], "2026-10-11")
+        self.assertLessEqual(len(live["summary"]["top"]), 3)
 
     def test_nhl_total_pick_is_json_safe(self):
         # gros total de buts attendus : « Plus de 5,5 buts » (calcul scipy) devient le pronostic le plus sûr

@@ -154,7 +154,7 @@ td.r,th.r{text-align:right}
 .msc{display:grid;gap:5px;text-align:right;font-family:var(--display);font-size:1.08rem;line-height:22px}
 .chev{width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-2px);justify-self:center;transition:transform .15s}
 .match.open .chev{transform:rotate(-135deg) translateY(-2px)}
-.match.open>.mrow{background:var(--soft)}
+.match.open .mline{background:var(--soft)}
 .mdetail{padding:14px 12px;display:grid;gap:12px;border-top:1px solid var(--line)}
 .tlines{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .tline{display:grid;gap:2px;font-size:.9rem;min-width:0}
@@ -199,7 +199,7 @@ td.r,th.r{text-align:right}
 .pl .pk{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .pl .pv{min-width:0}
 .pl.main .pv{font-weight:700}
-.psubs{margin-bottom:12px}
+.psubs{margin-bottom:12px;flex-wrap:wrap;overflow:visible}
 @media (min-width:860px){.psubs{flex-direction:row;position:static}.psubs button{border-radius:999px}}
 .combo{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:12px}
 .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
@@ -208,6 +208,28 @@ td.r,th.r{text-align:right}
 .cleg{list-style:none;margin:0;padding:0}
 .cleg li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
 .cleg li:first-child{border-top:0}
+/* ---- favoris (étoile à côté de l'heure) et onglet En direct */
+.mline{display:flex;align-items:stretch}
+.mline .mrow{flex:1;min-width:0;padding-left:2px}
+.fav{all:unset;box-sizing:border-box;flex:none;width:38px;display:grid;place-items:center;cursor:pointer;color:var(--muted);font-size:1.2rem;line-height:1}
+.fav:hover{color:var(--warn)}
+.fav[aria-pressed="true"]{color:var(--warn)}
+.fav:focus-visible{outline:2px solid var(--home);outline-offset:-2px}
+.pmhead .fav{width:26px;height:26px;margin-left:-6px}
+.alerts{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 14px;margin-bottom:12px}
+.alerts summary{cursor:pointer;font-weight:700}
+.alerts .src{margin:8px 0}
+.arow{display:flex;flex-wrap:wrap;gap:8px}
+.arow input{flex:1 1 180px;min-width:0;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.arow button{font:600 .9rem var(--body);border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.lscore{margin-left:auto;font-family:var(--display);font-size:1.15rem;white-space:nowrap}
+.lstat{font:700 .7rem var(--body);text-transform:uppercase;letter-spacing:.03em;color:var(--away);white-space:nowrap}
+.lstat.done{color:var(--muted)}
+.was{color:var(--muted);font-size:.85rem}
+.pp.down{color:var(--away)}
+.minis{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--muted)}
+.minis b{color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:max-content;max-width:min(92vw,520px);background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;font-size:.9rem;z-index:9;box-shadow:0 4px 18px rgba(0,0,0,.25)}
 @media (max-width:640px){
   .tabs button{padding:7px 12px;font-size:.9rem}
   .pl{grid-template-columns:minmax(0,1fr) auto}
@@ -310,7 +332,7 @@ function liveLabel(st, sport){
     return "Terminé";
   }
   if (t.state !== "in") return "";
-  if (sport === "foot") return /HALF/.test(name) || short === "HT" ? "Mi-temps" : (st.displayClock || "En direct");
+  if (sport === "foot") return /HALFTIME/.test(name) || short === "HT" ? "Mi-temps" : (st.displayClock || "En direct");   // SECOND_HALF contient aussi HALF
   if (/END_PERIOD|INTERMISSION/.test(name)) return st.period >= 3 ? "Fin 3e pér." : `Pause ${st.period}e`;
   return `${st.period > 3 ? "Prol." : st.period + "e pér."} ${st.displayClock || ""}`.trim();
 }
@@ -318,7 +340,52 @@ function storeLive(id, e, sport){
   const c = (e.competitions || [])[0] || {};
   const h = (c.competitors || []).find(x => x.homeAway === "home") || {}, a = (c.competitors || []).find(x => x.homeAway === "away") || {};
   const st = e.status || {};
-  LIVEDATA[id] = {state: (st.type || {}).state, sh: h.score ?? "", sa: a.score ?? "", label: liveLabel(st, sport)};
+  LIVEDATA[id] = {state: (st.type || {}).state, sh: h.score ?? "", sa: a.score ?? "", label: liveLabel(st, sport), ev: e};
+}
+
+// ---- favoris : étoile à côté de l'heure. Gardés sur l'appareil, et chez le robot d'alertes s'il est configuré
+// (le robot n'envoie des alertes que pour ces matchs, et les favoris sont alors les mêmes sur tous les appareils).
+const ROBOT = "";           // adresse du robot Cloudflare (https://analyse-sport-alertes.<compte>.workers.dev)
+let FAVS = new Set(), ACODE = "";
+try { FAVS = new Set(JSON.parse(localStorage.getItem("favs") || "[]")); ACODE = localStorage.getItem("acode") || ""; } catch (e) {}
+const saveFavs = () => { try { localStorage.setItem("favs", JSON.stringify([...FAVS])); } catch (e) {} };
+let TOAST = null;
+function toast(msg){
+  document.querySelectorAll(".toast").forEach(t => t.remove());
+  const t = document.createElement("div");
+  t.className = "toast"; t.setAttribute("role", "status"); t.textContent = msg;
+  document.body.appendChild(t);
+  clearTimeout(TOAST); TOAST = setTimeout(() => t.remove(), 4500);
+}
+function favBtn(m){
+  const on = FAVS.has(m.id);
+  return `<button type="button" class="fav" data-fav="${esc(m.id)}" aria-pressed="${on}" aria-label="${on ? "Retirer des favoris" : "Ajouter aux favoris (alertes)"} : ${esc(m.home)} – ${esc(m.away)}">${on ? "★" : "☆"}</button>`;
+}
+async function robotCall(path, body){
+  const r = await fetch(ROBOT + path, body ? {method: "POST", headers: {"content-type": "text/plain"}, body: JSON.stringify(body)} : {cache: "no-store"});
+  return r.json();
+}
+async function loadFavs(){
+  if (!ROBOT) return;
+  try {
+    const j = await robotCall("/favoris");
+    if (Array.isArray(j.ids)){ FAVS = new Set(j.ids); saveFavs(); render(); }
+  } catch (e) {}
+}
+async function toggleFav(id){
+  const on = !FAVS.has(id);
+  on ? FAVS.add(id) : FAVS.delete(id);
+  saveFavs(); render();
+  if (!ROBOT || !ACODE){
+    if (on) toast("Favori enregistré sur cet appareil. Pour recevoir les alertes : Pronostics › En direct › Alertes.");
+    return;
+  }
+  try {
+    const j = await robotCall("/favoris", {code: ACODE, id, on});
+    if (!j.ok) return toast(j.message || "Le robot a refusé le favori.");
+    FAVS = new Set(j.ids); saveFavs();
+    toast(on ? "★ Ajouté : tu recevras les alertes de ce match." : "Retiré des favoris : plus d'alerte pour ce match.");
+  } catch (e) { toast("Robot d'alertes injoignable : favori gardé sur cet appareil seulement."); }
 }
 function sameTeams(m, e){
   const c = (e.competitions || [])[0] || {};
@@ -344,6 +411,8 @@ async function pollLive(){
   }
   await Promise.all(jobs);
   paintLive();
+  const box = document.getElementById("livebox");
+  if (box && LIVEM) box.innerHTML = liveList();
   // toutes les 30 s si un match est en cours ou commence bientôt, sinon toutes les 5 min
   const now = Date.now();
   const hot = [...foot, ...nhl].some(m => {
@@ -381,15 +450,15 @@ function paintLive(){
     b.querySelector(".msc").outerHTML = scoreHtml(m);
   });
 }
-document.addEventListener("visibilitychange", () => { if (!document.hidden) pollLive(); });
+document.addEventListener("visibilitychange", () => { if (!document.hidden){ pollLive(); loadFavs(); } });
 
 function matchRow(m, detail){
   const open = OPEN.has(m.id);
-  return `<div class="match${open ? " open" : ""}">
+  return `<div class="match${open ? " open" : ""}"><div class="mline">${favBtn(m)}
     <button type="button" class="mrow" data-id="${esc(m.id)}" aria-expanded="${open}" aria-label="${esc(m.home)} contre ${esc(m.away)}, ${esc(m.time)}. Voir l'analyse">
       <span class="mtime num">${statusHtml(m)}</span>
       <span class="mteams"><span class="mt">${logo(m.logo_h, m.logo_h_dark)}<span class="tn">${esc(m.home)}</span></span><span class="mt">${logo(m.logo_a, m.logo_a_dark)}<span class="tn">${esc(m.away)}</span></span></span>
-      ${scoreHtml(m)}<span class="chev" aria-hidden="true"></span></button>
+      ${scoreHtml(m)}<span class="chev" aria-hidden="true"></span></button></div>
     ${open ? `<div class="mdetail">${detail(m)}</div>` : ""}</div>`;
 }
 function group(title, logoSrc, list, detail){
@@ -485,7 +554,7 @@ function pronoMatch(m){
                  [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
-    <div class="pmhead"><b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started ? `<span class="tagst">${DONE.includes(m.state) ? "Terminé" : "Commencé"}</span>` : ""}</div>
+    <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started ? `<span class="tagst">${DONE.includes(m.state) ? "Terminé" : "Commencé"}</span>` : ""}</div>
     <div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Le plus sûr" ? " main" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span>${conf(p)}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score</span><span class="pv">${esc(String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b></span></div>` : ""}</div></div>`;
 }
@@ -528,12 +597,92 @@ function comboView(){
   const intro = `<p class="warnline">Les combinés assemblent les pronostics les plus sûrs de matchs différents. Tous doivent être bons : la probabilité du combiné est le produit des probabilités, donc elle baisse vite à chaque match ajouté. Par exemple, 3 pronostics à 80 % donnent environ 51 %.</p>`;
   return intro + (cards.length ? cards.join("") : `<div class="empty">Pas assez de matchs à venir aujourd'hui pour proposer un combiné.</div>`);
 }
+// ---- sous-onglet En direct : pronostics recalculés pendant les matchs (calcul dans docs/live.js)
+let LIVEM = null;
+import("./live.js").then(mod => { LIVEM = mod; if (TAB === "pronos" && PSUB === "live") render(); }).catch(() => {});
+const pctr = p => Math.round(p * 100);
+function liveCard(m){
+  const L = LIVEDATA[m.id];
+  const s = LIVEM.parseEspn(L.ev, m.sport), lp = LIVEM.liveProbs(m, s), done = s.state === "post";
+  const seen = new Set(), lines = [];
+  for (const [k, kind] of [["Le plus sûr", "main"], ["Vainqueur", "winner"], ["Buteur", m.sport === "foot" ? "player" : ""]]){
+    const p = (m.picks || {})[kind];
+    if (!p || seen.has(p.market + "|" + (p.player || ""))) continue;
+    seen.add(p.market + "|" + (p.player || ""));
+    const now = LIVEM.pickProb(p, m, s, lp);
+    // ✅ / ❌ seulement quand c'est acquis : fin du match, ou buteur qui a déjà marqué
+    const mark = now == null ? "" : done ? (now >= 0.5 ? " ✅" : " ❌") : now >= 0.9999 ? " ✅" : "";
+    const val = now == null ? `<span class="was">résultat après le match</span>`
+      : `<span class="was num">${p.prob} % →</span><b class="pp num${now < p.p - 0.005 ? " down" : ""}">${pctr(now)} %</b>${mark}`;
+    lines.push(`<div class="pl${kind === "main" ? " main" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span><span class="conf">${val}</span></div>`);
+  }
+  const reds = s.red.h || s.red.a ? `<span>🟥 ${[s.red.h ? `${esc(m.home)} ${s.red.h}` : "", s.red.a ? `${esc(m.away)} ${s.red.a}` : ""].filter(Boolean).join(", ")}</span>` : "";
+  const probs = done ? "" : m.sport === "foot"
+    ? bar(m, pctr(lp.p1), pctr(lp.pN), pctr(lp.p2), "Victoire " + m.home, "Victoire " + m.away, "Nul") +
+      `<div class="minis num"><span>Plus de 2,5 buts <b>${pctr(lp.o25)} %</b></span><span>Les deux marquent <b>${pctr(lp.btts)} %</b></span>${reds}</div>`
+    : bar(m, pctr(lp.winH), 0, 100 - pctr(lp.winH), m.home + " au final", m.away + " au final", "") +
+      `<div class="minis num"><span>Plus de 5,5 buts <b>${pctr(lp.markets.o55)} %</b></span>${s.period < 4 ? `<span>Prolongation <b>${pctr(lp.pD)} %</b></span>` : ""}</div>`;
+  return `<div class="pm"><div class="pmhead">${favBtn(m)}${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}<span class="lscore num">${s.sh}-${s.sa}</span></div>
+    <div class="lstat${done ? " done" : ""}">${done ? "" : '<i class="dot"></i>'}${esc(s.label || "En direct")} · ${esc(m.sport === "nhl" ? "NHL" : m.league)}</div>
+    ${probs}<div class="plines">${lines.join("")}</div></div>`;
+}
+function liveList(){
+  if (!LIVEM) return `<div class="empty">Chargement…</div>`;
+  const all = [...(DATA.foot || []), ...(DATA.nhl || [])];
+  const fav = m => FAVS.has(m.id) ? 0 : 1, ko = m => Date.parse(m.kickoff);
+  const by = st => all.filter(m => { const L = LIVEDATA[m.id]; return L && L.ev && L.state === st && L.label !== "Reporté"; })
+                     .sort((a, b) => fav(a) - fav(b) || ko(a) - ko(b));
+  const live = by("in"), done = by("post");
+  const next = all.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); })
+                  .sort((a, b) => ko(a) - ko(b)).slice(0, 6);
+  const blk = (title, list, row) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(row).join("")}</section>` : "";
+  const nextRow = m => `<div class="pm"><div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}</div></div>`;
+  const none = live.length ? "" : `<div class="empty">${Object.keys(LIVEDATA).length ? "Aucun match en cours pour l'instant." : "Chargement du direct…"}</div>`;
+  return blk("En cours", live, liveCard) + none + blk("Prochains matchs", next, nextRow) + blk("Terminés", done, liveCard);
+}
+function alertsPanel(){
+  const ready = !!(ROBOT && ACODE);
+  return `<details class="alerts"${ready ? "" : " open"}><summary>🔔 Alertes téléphone ${ready ? "· activées" : "· à configurer"}</summary>
+    <p class="src">Touchez ☆ à côté d'un match (onglets Foot, NHL ou ici) pour recevoir ses alertes sur l'app ntfy : rappel 15 min avant, buts, cartons rouges, pronostic qui bascule, résultat final. Plus un résumé chaque matin.</p>
+    ${ROBOT ? `<div class="arow"><input id="acode" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ton code d'alerte" value="${esc(ACODE)}" aria-label="Code d'alerte"><button type="button" id="asave">Enregistrer</button><button type="button" id="atest">Tester</button></div><p class="src" id="amsg" role="status"></p>`
+             : `<p class="src"><b>Robot d'alertes pas encore branché.</b> Les favoris sont déjà gardés sur cet appareil.</p>`}</details>`;
+}
+function liveView(){
+  return `${alertsPanel()}<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers.</p><div id="livebox">${liveList()}</div>`;
+}
+async function saveCode(){
+  const v = document.getElementById("acode").value.trim(), msg = document.getElementById("amsg");
+  ACODE = v;
+  try { localStorage.setItem("acode", v); } catch (e) {}
+  if (!v){ msg.textContent = "Code effacé : les favoris restent sur cet appareil seulement."; return; }
+  msg.textContent = "Vérification…";
+  try {
+    // envoie au robot les favoris gardés sur l'appareil, puis reprend sa liste (la même sur tous les appareils)
+    let j = await robotCall("/favoris", {code: v, id: "foot-0", on: false});
+    for (const id of [...FAVS]){ if (!j.ok) break; j = await robotCall("/favoris", {code: v, id, on: true}); }
+    if (!j.ok){ msg.textContent = j.message || "Code refusé."; return; }
+    FAVS = new Set(j.ids); saveFavs();
+    msg.textContent = "✅ Code enregistré. Les alertes de tes favoris arriveront sur ntfy.";
+  } catch (e) { msg.textContent = "Robot injoignable pour le moment. Réessaie dans une minute."; }
+}
+async function testAlerts(){
+  const msg = document.getElementById("amsg");
+  if (!ACODE){ msg.textContent = "Enregistre d'abord ton code d'alerte."; return; }
+  msg.textContent = "Envoi d'une notification de test…";
+  try {
+    const j = await robotCall("/test", {code: ACODE});
+    msg.textContent = j.ok ? `✅ Notification envoyée : regarde ton téléphone. ESPN : ${j.espn_foot && j.espn_foot.ok ? "OK" : "bloqué"}.`
+                           : (j.message || `Échec de l'envoi (ntfy : ${j.notification}).`);
+  } catch (e) { msg.textContent = "Robot injoignable pour le moment."; }
+}
 function pronoView(){
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
   if (!foot.length && !nhl.length) return `<div class="empty">Pas de match aujourd'hui.</div>`;
-  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null]];
-  const nav = `<nav class="leagues psubs" aria-label="Type de pronostics">${subs.map(([k, l, n]) => `<button type="button" data-psub="${k}" aria-pressed="${k === PSUB}"><span>${l}</span>${n != null ? `<span class="n num">${n}</span>` : ""}</button>`).join("")}</nav>`;
+  const nLive = [...foot, ...nhl].filter(m => (LIVEDATA[m.id] || {}).state === "in").length;
+  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null], ["live", "En direct", nLive || null]];
+  const nav = `<nav class="leagues psubs" aria-label="Type de pronostics">${subs.map(([k, l, n]) => `<button type="button" data-psub="${k}" aria-pressed="${k === PSUB}"><span>${k === "live" ? '<i class="dot"></i>' : ""}${l}</span>${n != null ? `<span class="n num">${n}</span>` : ""}</button>`).join("")}</nav>`;
   if (PSUB === "combo") return nav + comboView();
+  if (PSUB === "live") return nav + liveView();
   const isNhl = PSUB === "nhl", list = isNhl ? nhl : foot;
   if (!list.length) return nav + `<div class="empty">Pas de match ${isNhl ? "NHL" : "de foot"} aujourd'hui.</div>`;
   const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
@@ -587,6 +736,9 @@ function render(){
   view.querySelectorAll("[data-psub]").forEach(b => b.addEventListener("click", () => {
     PSUB = b.dataset.psub; try { localStorage.setItem("psub", PSUB); } catch (e) {} render();
   }));
+  const save = document.getElementById("asave"), tst = document.getElementById("atest");
+  if (save) save.addEventListener("click", saveCode);
+  if (tst) tst.addEventListener("click", testAlerts);
   view.querySelectorAll(".mrow").forEach(b => b.addEventListener("click", () => {
     const id = b.dataset.id;
     OPEN.has(id) ? OPEN.delete(id) : OPEN.add(id);
@@ -595,6 +747,11 @@ function render(){
     if (row) { row.focus({preventScroll: true}); if (OPEN.has(id)) row.scrollIntoView({block: "nearest", behavior: "smooth"}); }
   }));
 }
+// étoiles : un seul écouteur, car la liste En direct est redessinée toutes les 30 secondes
+document.getElementById("view").addEventListener("click", ev => {
+  const b = ev.target.closest("[data-fav]");
+  if (b){ ev.stopPropagation(); toggleFav(b.dataset.fav); }
+});
 document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
   TAB = b.dataset.tab; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
 }));
@@ -606,6 +763,7 @@ fetch("data.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error(r
   if (d.notes && d.notes.length) document.getElementById("notes").innerHTML = `<div class="notes"><strong>À savoir aujourd'hui :</strong><ul>${d.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
   render();
   pollLive();
+  loadFavs();
 }).catch(() => {
   document.getElementById("stamp").textContent = "Données indisponibles";
   document.getElementById("view").innerHTML = `<div class="empty">Les analyses n'ont pas encore été générées. Lance la mise à jour depuis l'onglet « Actions » de GitHub, puis recharge cette page.</div>`;

@@ -36,6 +36,7 @@ DOCS = os.path.join(ROOT, "docs")
 DATA_FILE = os.path.join(DOCS, "data.json")
 HIST_FILE = os.path.join(DOCS, "history.json")
 PICKS_FILE = os.path.join(DOCS, "picks.json")
+LIVE_FILE = os.path.join(DOCS, "live.json")      # version compacte lue chaque minute par le robot d'alertes
 
 # (nom affiché, code de championnat ESPN)
 LEAGUES = [
@@ -1092,6 +1093,30 @@ def save_json(path, obj):
     os.replace(tmp, path)
 
 
+LIVE_KEYS = ("id", "sport", "league", "code", "kickoff", "time", "home", "away", "state",
+             "xgH", "xgA", "pH", "pD", "pA", "winH", "espn_id")
+
+
+def live_feed(now, foot_rows, nhl_rows, store, today, nhl_day):
+    """Version compacte des analyses pour le robot d'alertes (quelques dizaines de Ko au lieu de data.json)."""
+    def compact(m, day):
+        row = {k: m[k] for k in LIVE_KEYS if m.get(k) is not None}
+        row["edate"] = day.strftime("%Y%m%d")         # date utilisée par le tableau des scores ESPN
+        row["picks"] = {k: v for k, v in (m.get("picks") or {}).items() if k in ("main", "winner", "player", "scorer")}
+        return row
+
+    days = {today.isoformat(), (today - dt.timedelta(days=1)).isoformat()}
+    done = [p for p in store.values() if p.get("result") is not None and p.get("date") in days]
+    top = selection(foot_rows + nhl_rows, n=3)
+    return dict(
+        generated=now.isoformat(timespec="minutes"), date=today.isoformat(),
+        matches=[compact(m, today) for m in foot_rows] + [compact(m, nhl_day) for m in nhl_rows],
+        summary=dict(date=today.isoformat(), yesterday=dict(n=len(done), ok=sum(bool(p["result"]) for p in done)),
+                     foot=len(foot_rows), nhl=len(nhl_rows),
+                     top=[dict(label=c["label"], prob=c["prob"], time=c["time"], match=f"{c['home']} – {c['away']}")
+                          for c in top]))
+
+
 def main(now=None):
     now = now or dt.datetime.now(PARIS)
     today = now.date()
@@ -1117,6 +1142,7 @@ def main(now=None):
     save_json(HIST_FILE, history)
     save_json(PICKS_FILE, store)
     save_json(DATA_FILE, data)
+    save_json(LIVE_FILE, live_feed(now, foot_rows, nhl_rows, store, today, nhl_day))
     print(f"OK : {len(foot_rows)} matchs de foot, {len(nhl_rows)} matchs NHL, "
           f"{sum(1 for h in history.values() if h.get('result') is not None)} résultats archivés.")
     return data
