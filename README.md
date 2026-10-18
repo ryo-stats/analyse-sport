@@ -74,6 +74,17 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
 - **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
+## Présentation et bankroll
+
+- **Menu** : sur la gauche sur ordinateur, barre en bas sur téléphone. Il donne accès à Accueil, Matchs (Foot / NHL), Pronostics, Favoris, Bankroll et Bilan.
+- **Accueil** : bénéfice net total, bankroll actuelle, dépôts, retraits, courbe d'évolution (Auj. / 7j / 30j / 90j / 1a / Tout), puis les pronostics les plus sûrs du jour.
+- **Bankroll**, gardée uniquement sur le téléphone (localStorage, sans sauvegarde) :
+  - dépôts et retraits ;
+  - paris ajoutés avec le bouton **+** à côté d'un pronostic (cote du bookmaker, ou cote juste) ou avec « Nouveau pari » ;
+  - résultat automatique pour les pronostics du site, sinon ✓ Gagné / ✗ Perdu / ↺ Remboursé à cocher ;
+  - indicateurs : ROI, taux de réussite, série en cours ;
+  - monnaie CHF ou EUR.
+
 ## Bilan des pronostics
 
 - **Filtre** : Tous, ⚽ Foot ou 🏒 NHL.
