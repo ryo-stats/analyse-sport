@@ -19,6 +19,7 @@ import difflib
 import json
 import math
 import os
+import re
 import sys
 import time
 import unicodedata
@@ -561,6 +562,10 @@ def resolve_foot(e, history):
     # buteurs (hors contre-son-camp) : servent à vérifier les pronostics « X marque »
     comp = (e.get("competitions") or [{}])[0]
     if "details" in comp:          # sans ce détail, les pronostics buteur restent non vérifiables
+        goals = [d for d in comp.get("details") or [] if d.get("scoringPlay")]
+        if goals:                  # qui a ouvert le score : pour « Premier but : X »
+            tid = str((goals[0].get("team") or {}).get("id", ""))
+            history[key]["first"] = "h" if tid == str(h["team"]["id"]) else "a" if tid == str(a["team"]["id"]) else None
         history[key]["scorers"] = [((d.get("athletesInvolved") or [{}])[0] or {}).get("displayName", "")
                                    for d in comp.get("details") or []
                                    if d.get("scoringPlay") and not d.get("ownGoal")]
@@ -672,7 +677,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
         pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
-        ctx=ctx, reading=reading, stakes=stakes, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep),
+        ctx=ctx, reading=reading, stakes=stakes, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la),
         **foot_visuals(league, H, A))
 
 
@@ -688,7 +693,56 @@ def make_pick(market, label, p, **extra):
                 stars=1 + sum(int(p >= s) for s in STAR_STEPS), **extra)
 
 
-def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep):
+FUN_LO, FUN_HI = 0.35, 0.66          # pari « fun » : plus risqué que le plus sûr, mais plausible
+
+
+def fun_pick(sport, home, away, lh, la, q, exclude=()):
+    """Pari « fun » d'avant-match : un pari entre 35 et 66 %, un par famille, le plus probable d'abord,
+    jamais le même que le pronostic le plus sûr ni que le vainqueur annoncé. Même logique que funPicks dans docs/live.js."""
+    n = 11
+    ph = [poisson.pmf(i, lh) for i in range(n)]
+    pa = [poisson.pmf(j, la) for j in range(n)]
+    z = sum(ph) * sum(pa)
+
+    def P(f):
+        return sum(ph[i] * pa[j] * f(i, j) for i in range(n) for j in range(n)) / z
+    c = []
+    if sport == "foot":
+        c += [("res", "1", f"Victoire {home}", P(lambda h, a: h > a)), ("res", "2", f"Victoire {away}", P(lambda h, a: a > h)),
+              ("res", "X", "Match nul", P(lambda h, a: h == a)),
+              ("dc", "1N", f"{home} ou nul", P(lambda h, a: h >= a)), ("dc", "N2", f"Nul ou {away}", P(lambda h, a: a >= h))]
+        c += [("ou", f"o{k}5", f"Plus de {k},5 buts", P(lambda h, a, k=k: h + a > k)) for k in (0, 1, 2)]
+        c += [("under", f"u{k}5", f"Moins de {k},5 buts", P(lambda h, a, k=k: h + a <= k)) for k in (1, 2, 3)]
+        c += [("btts", "btts_y", "Les deux équipes marquent", P(lambda h, a: h > 0 and a > 0)),
+              ("margin", "h2", f"{home} gagne avec 2 buts d'écart ou plus", P(lambda h, a: h - a >= 2)),
+              ("margin", "a2", f"{away} gagne avec 2 buts d'écart ou plus", P(lambda h, a: a - h >= 2)),
+              ("cs", "cs_h", f"{away} ne marque pas", P(lambda h, a: a == 0)),
+              ("cs", "cs_a", f"{home} ne marque pas", P(lambda h, a: h == 0))]
+        more = 1 - ph[0] * pa[0]
+        if lh + la > 0:
+            c += [("next", "fg_h", f"Premier but : {home}", more * lh / (lh + la)),
+                  ("next", "fg_a", f"Premier but : {away}", more * la / (lh + la))]
+    else:
+        win_h = P(lambda h, a: 1 if h > a else (q if h == a else 0))
+        c += [("res", "win_h", f"Victoire {home}", win_h),
+              ("res", "win_a", f"Victoire {away}", 1 - win_h),
+              ("reg", "reg_h", f"{home} gagne dans le temps réglementaire", P(lambda h, a: h > a)),
+              ("reg", "reg_a", f"{away} gagne dans le temps réglementaire", P(lambda h, a: a > h)),
+              ("ot", "ot", "Il y aura prolongation", P(lambda h, a: h == a))]
+        # une égalité est suivie d'un but de prolongation (ou tirs au but) : il compte dans le total
+        c += [("ou", f"o{k}5", f"Plus de {k},5 buts", P(lambda h, a, k=k: h + a + (h == a) > k)) for k in (4, 5, 6)]
+        c += [("under", f"u{k}5", f"Moins de {k},5 buts", P(lambda h, a, k=k: h + a + (h == a) <= k)) for k in (5, 6, 7)]
+    best = {}
+    for fam, market, label, prob in sorted(c, key=lambda x: -x[3]):
+        if FUN_LO <= prob <= FUN_HI and fam not in best and label not in exclude:
+            best[fam] = (market, label, prob)
+    if not best:
+        return None
+    market, label, prob = max(best.values(), key=lambda x: x[2])
+    return make_pick(market, label, prob)
+
+
+def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh=None, la=None):
     """Le pronostic le plus sûr du match, le vainqueur probable, le buteur le plus probable, le score."""
     team = [make_pick("1", f"Victoire {home}", p_h), make_pick("2", f"Victoire {away}", p_a),
             make_pick("1N", f"{home} ou nul", p_h + p_d), make_pick("N2", f"Nul ou {away}", p_d + p_a),
@@ -698,7 +752,11 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
             make_pick("btts_n", "Au moins une équipe ne marque pas", 1 - btts)]
     picks = dict(main=max(team, key=lambda c: c["p"]),
                  winner=team[0] if p_h >= p_a else team[1],
-                 score=dict(label=f"Score le plus probable : {scores[0]}", prob=scorep[0]))
+                 score=make_pick("exact", f"Score exact {scores[0]}", scorep[0] / 100, value=scores[0]))
+    if lh is not None:
+        fun = fun_pick("foot", home, away, lh, la, 0.5, {picks["main"]["label"], picks["winner"]["label"]})
+        if fun:
+            picks["fun"] = fun
     players = (team_rows.get("h") or []) + (team_rows.get("a") or [])
     if players:
         best = max(players, key=lambda r: r["p_goal"])
@@ -707,12 +765,15 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
     return picks
 
 
-def nhl_picks(hname, aname, win_h, lh, la, team_rows):
+def nhl_picks(hname, aname, win_h, lh, la, team_rows, q=0.5):
     total = lh + la
     over55 = 1 - sum(poisson.pmf(k, total) for k in range(6))     # les égalités sont paires : la prolongation ne change rien
     team = [make_pick("win_h", f"Victoire {hname}", win_h), make_pick("win_a", f"Victoire {aname}", 1 - win_h),
             make_pick("o55", "Plus de 5,5 buts", over55), make_pick("u55", "Moins de 5,5 buts", 1 - over55)]
     picks = dict(main=max(team, key=lambda c: c["p"]), winner=team[0] if win_h >= 0.5 else team[1])
+    fun = fun_pick("nhl", hname, aname, lh, la, q, {picks["main"]["label"], picks["winner"]["label"]})
+    if fun:
+        picks["fun"] = fun
     players = (team_rows.get("best_h") or []) + (team_rows.get("best_a") or [])
     if players:
         best = max(players, key=lambda r: r["p_point"])
@@ -724,21 +785,30 @@ def nhl_picks(hname, aname, win_h, lh, la, team_rows):
     return picks
 
 
+FUN_KINDS = {"fun", "score"}          # rangés à part : ils ne doivent pas fausser le bilan des pronostics sûrs
+
+
+def pick_group(p):
+    kinds = set(p.get("kinds") or [])
+    return p.get("group") or ("fun" if kinds and kinds <= FUN_KINDS else "safe")
+
+
 def record_picks(rows, store):
     """Archive les pronostics affichés tant que le match n'a pas commencé (les dernières cotes l'emportent)."""
     for m in rows:
         if m["state"] not in ("pre", "FUT", "PRE"):
             continue
-        for kind in ("main", "winner", "player", "scorer"):
+        for kind in ("main", "winner", "player", "scorer", "fun", "score"):
             pk = (m.get("picks") or {}).get(kind)
-            if not pk:
+            if not pk or not pk.get("market"):
                 continue
             pid = f"{m['id']}|{pk['market']}|{pk.get('player', '')}"
             old = store.get(pid, {})
+            kinds = sorted(set(old.get("kinds", [])) | {kind})
             store[pid] = dict(match=m["id"], sport=m["sport"], league=m["league"], date=m["kickoff"][:10],
                               home=m["home"], away=m["away"], market=pk["market"], label=pk["label"], p=pk["p"],
-                              stars=pk["stars"], player=pk.get("player"), pid_player=pk.get("pid"),
-                              kinds=sorted(set(old.get("kinds", [])) | {kind}), result=old.get("result"))
+                              stars=pk["stars"], player=pk.get("player"), pid_player=pk.get("pid"), value=pk.get("value"),
+                              group="fun" if set(kinds) <= FUN_KINDS else "safe", kinds=kinds, result=old.get("result"))
         # un ancien pronostic que les nouvelles cotes ont remplacé n'est plus « affiché » : on le retire
         shown = {f"{m['id']}|{pk['market']}|{pk.get('player', '')}" for pk in (m.get("picks") or {}).values()
                  if isinstance(pk, dict) and pk.get("market")}
@@ -763,15 +833,24 @@ def resolve_picks(store, history):
             continue
         gh, ga = goals_of(h["score"])
         mk, ok = pk["market"], None
-        if pk["sport"] == "foot":
-            ok = {"1": gh > ga, "2": ga > gh, "1N": gh >= ga, "N2": ga >= gh, "12": gh != ga,
-                  "o25": gh + ga >= 3, "u25": gh + ga <= 2, "btts_y": gh > 0 and ga > 0,
-                  "btts_n": gh == 0 or ga == 0}.get(mk)
+        line = re.fullmatch(r"([ou])(\d)5", mk or "")
+        if line:                                         # o25 = plus de 2,5 buts, u35 = moins de 3,5 buts…
+            k = int(line.group(2))
+            ok = gh + ga > k if line.group(1) == "o" else gh + ga <= k
+        elif mk == "exact":
+            ok = f"{gh}-{ga}" == pk.get("value")
+        elif pk["sport"] == "foot":
+            ok = {"1": gh > ga, "2": ga > gh, "X": gh == ga, "1N": gh >= ga, "N2": ga >= gh, "12": gh != ga,
+                  "btts_y": gh > 0 and ga > 0, "btts_n": gh == 0 or ga == 0,
+                  "h2": gh - ga >= 2, "a2": ga - gh >= 2, "cs_h": ga == 0, "cs_a": gh == 0}.get(mk)
+            if mk in ("fg_h", "fg_a"):                   # 0-0 : personne n'a marqué, pari perdu
+                ok = False if gh + ga == 0 else (h["first"] == mk[-1] if h.get("first") else None)
             if mk == "scorer" and h.get("scorers") is not None:
                 ok = norm(pk["player"]) in {norm(s) for s in h["scorers"]}
         else:
-            ok = {"win_h": h["result"] == 0, "win_a": h["result"] == 1,
-                  "o55": gh + ga >= 6, "u55": gh + ga <= 5}.get(mk)
+            ot = "prol" in h["score"] or "tirs" in h["score"]
+            ok = {"win_h": h["result"] == 0, "win_a": h["result"] == 1, "ot": ot,
+                  "reg_h": h["result"] == 0 and not ot, "reg_a": h["result"] == 1 and not ot}.get(mk)
             if mk in ("point", "goal") and pk.get("pid_player"):
                 gid = pk["match"].split("-", 1)[1]
                 if gid not in boxes:
@@ -815,7 +894,9 @@ def selection(rows, n=10):
 
 
 def picks_bilan(store):
-    done = [p for p in store.values() if p.get("result") is not None]
+    every = [p for p in store.values() if p.get("result") is not None]
+    done = [p for p in every if pick_group(p) == "safe"]
+    fun_done = [p for p in every if pick_group(p) == "fun"]
     if not done:
         return dict(n=0)
     hits = sum(p["result"] for p in done)
@@ -840,19 +921,21 @@ def picks_bilan(store):
 
     # bilan jour par jour (60 derniers jours), total depuis l'ouverture, par championnat
     dates = sorted({p["date"] for p in done}, reverse=True)
-    days = [dict(date=d, **by_sport([p for p in done if p["date"] == d])) for d in dates[:60]]
+    days = [dict(date=d, **by_sport([p for p in done if p["date"] == d]),
+                 fun=by_sport([p for p in fun_done if p["date"] == d])) for d in dates[:60]]
     leagues = [dict(sport=s, league=lg, **agg([p for p in done if p["sport"] == s and league_of(p) == lg]))
                for s, lg in {(p["sport"], league_of(p)) for p in done}]
     leagues.sort(key=lambda x: (x["sport"] != "foot", -x["n"], x["league"]))
     # détail des pronostics vérifiés des 30 derniers jours (pour les listes dépliables du site)
     last = set(dates[:30])
-    details = sorted((p for p in done if p["date"] in last), key=lambda p: (p["date"], p["home"]), reverse=True)
-    recent = details[:40]
+    details = sorted((p for p in every if p["date"] in last), key=lambda p: (p["date"], p["home"]), reverse=True)
+    recent = [p for p in details if pick_group(p) == "safe"][:40]
     return dict(n=len(done), rate=pct(hits / len(done)), expected=pct(sum(p["p"] for p in done) / len(done)),
-                since=dates[-1], total=by_sport(done), days=days, leagues=leagues, by_stars=by_stars,
-                details=[dict(date=p["date"], sport=p["sport"], league=league_of(p),
+                since=dates[-1], total=by_sport(done), fun=by_sport(fun_done), days=days, leagues=leagues,
+                by_stars=by_stars,
+                details=[dict(date=p["date"], sport=p["sport"], league=league_of(p), mid=p["match"],
                               match=f"{p['home']} – {p['away']}", label=p["label"], prob=pct(p["p"]),
-                              stars=p["stars"], ok=bool(p["result"])) for p in details],
+                              stars=p["stars"], ok=bool(p["result"]), fun=pick_group(p) == "fun") for p in details],
                 recent=[dict(date=p["date"], sport=p["sport"], match=f"{p['home']} – {p['away']}", label=p["label"],
                              prob=pct(p["p"]), stars=p["stars"], ok=p["result"]) for p in recent])
 
@@ -1131,7 +1214,8 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
         ctx=ctx, reading=reading, stakes=nhl_stakes(hname, aname, sh, sa),
-        espn_id=espn_id, picks=nhl_picks(hname, aname, win_h, lh, la, team_rows),
+        espn_id=espn_id, picks=nhl_picks(hname, aname, win_h, lh, la, team_rows,
+                                                       q=min(0.75, max(0.25, (win_h - p_h) / p_d)) if p_d > 0 else 0.5),
         logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
         logo_a=g["awayTeam"].get("logo") or NHL_LOGO.format(A, "light"),
         logo_h_dark=g["homeTeam"].get("darkLogo") or NHL_LOGO.format(H, "dark"),
@@ -1204,7 +1288,8 @@ def live_feed(now, foot_rows, nhl_rows, store, today, nhl_day):
     def compact(m, day):
         row = {k: m[k] for k in LIVE_KEYS if m.get(k) is not None}
         row["edate"] = day.strftime("%Y%m%d")         # date utilisée par le tableau des scores ESPN
-        row["picks"] = {k: v for k, v in (m.get("picks") or {}).items() if k in ("main", "winner", "player", "scorer")}
+        row["picks"] = {k: v for k, v in (m.get("picks") or {}).items()
+                        if k in ("main", "winner", "player", "scorer", "fun", "score") and isinstance(v, dict) and v.get("market")}
         return row
 
     days = {today.isoformat(), (today - dt.timedelta(days=1)).isoformat()}

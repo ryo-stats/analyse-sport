@@ -126,6 +126,29 @@ export function pickProb(pk, m, s, lp){
   return null;
 }
 
+// Résultat d'un pronostic une fois le match fini : true (validé), false (pas passé), null (pas vérifiable ici).
+// Mêmes règles que resolve_picks dans app.py.
+export function settle(pk, m, s){
+  if (!pk || !s || s.state !== "post" || s.cancelled) return null;
+  const h = s.sh, a = s.sa, t = h + a, mk = pk.market || "";
+  const line = /^([ou])(\d)5$/.exec(mk);                 // o25 = plus de 2,5 buts, u35 = moins de 3,5 buts…
+  if (line) return line[1] === "o" ? t > +line[2] : t <= +line[2];
+  if (mk === "exact") return pk.value === `${h}-${a}`;
+  if (m.sport === "foot"){
+    const r = {"1": h > a, "2": a > h, X: h === a, "1N": h >= a, N2: a >= h, "12": h !== a,
+               btts_y: h > 0 && a > 0, btts_n: h === 0 || a === 0, h2: h - a >= 2, a2: a - h >= 2,
+               cs_h: a === 0, cs_a: h === 0};
+    if (mk in r) return r[mk];
+    const goals = s.goals || [];
+    if (mk === "fg_h" || mk === "fg_a") return t === 0 ? false : goals.length ? goals[0].side === mk.slice(-1) : null;
+    if (mk === "scorer") return t === 0 || goals.length ? scored(pk.player, s) : null;
+    return null;
+  }
+  const ot = (s.period || 0) >= 4;                        // prolongation ou tirs au but
+  const r = {win_h: h > a, win_a: a > h, ot, reg_h: h > a && !ot, reg_a: a > h && !ot};
+  return mk in r ? r[mk] : null;
+}
+
 export function scored(player, s){
   const want = norm(player), last = want.split(" ").pop();
   return (s.goals || []).some(g => !g.own && (norm(g.name) === want || (last.length > 3 && norm(g.name).split(" ").pop() === last)));

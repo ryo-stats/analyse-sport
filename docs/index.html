@@ -343,6 +343,13 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 .vp{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
 .vp:first-child{border-top:0}
 .vk{font-weight:800;text-align:center}
+.vtally{font:800 .66rem var(--body);white-space:nowrap;margin-top:1px}
+.vtally.good{color:var(--ok)}
+.vtally.bad{color:var(--ko)}
+.pmhead .vtally{margin-left:6px;font-size:.74rem}
+.pv .vk{display:inline-block;min-width:1em}
+.funline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline;margin:10px 0 4px;padding:10px 12px;border:1px dashed var(--line);border-radius:12px;font-size:.88rem}
+.funday{margin:8px 0 0;font-size:.84rem;color:var(--muted)}
 .vk.ok{color:var(--ok)}
 .vk.ko{color:var(--ko)}
 .vb{display:grid;min-width:0}
@@ -587,13 +594,39 @@ async function pollLive(){
   });
   LIVE_TIMER = setTimeout(pollLive, hot ? 30e3 : 300e3);
 }
+// ---- résultat des pronostics d'un match terminé : ✓ validé, ✗ pas passé
+const isOver = m => { const L = LIVEDATA[m.id]; return L ? L.state === "post" && L.label !== "Reporté" : DONE.includes(m.state); };
+function resultOf(m, pk){
+  if (!pk || !pk.market || !isOver(m)) return null;
+  const L = LIVEDATA[m.id];
+  if (L && L.ev && LIVEM){
+    const v = LIVEM.settle(pk, m, LIVEM.parseEspn(L.ev, m.sport));
+    if (v != null) return v;
+  }
+  const r = ((((DATA || {}).bilan || {}).picks || {}).details || []).find(x => x.mid === m.id && x.label === pk.label);
+  return r ? r.ok : null;
+}
+function picksTally(m){
+  if (!isOver(m)) return null;
+  const pk = m.picks || {}, seen = new Set();
+  let ok = 0, n = 0;
+  for (const p of [pk.main, pk.winner, pk.player, pk.scorer, pk.fun, pk.score]){
+    if (!p || !p.market || seen.has(`${p.market}|${p.player || ""}`)) continue;
+    seen.add(`${p.market}|${p.player || ""}`);
+    const v = resultOf(m, p);
+    if (v != null){ n++; ok += v ? 1 : 0; }
+  }
+  return n ? {ok, n} : null;
+}
+const tallyHtml = x => x ? `<span class="vtally ${x.ok * 2 >= x.n ? "good" : "bad"}" aria-label="${x.ok} pronostic${x.ok > 1 ? "s" : ""} validé${x.ok > 1 ? "s" : ""} sur ${x.n}">${x.ok}/${x.n} ✓</span>` : "";
+const mark = ok => ok == null ? "" : `<span class="vk ${ok ? "ok" : "ko"}" aria-label="${ok ? "validé" : "pas passé"}">${ok ? "✓" : "✗"}</span> `;
 function statusHtml(m){
   const L = LIVEDATA[m.id];
   if (L && L.state === "in") return `<b class="lv">${esc(L.label)}</b><span class="st live"><i class="dot"></i>Direct</span>`;
-  if (L && L.state === "post") return `<b>${esc(m.time)}</b><span class="st">${esc(L.label)}</span>`;
+  if (L && L.state === "post") return `<b>${esc(m.time)}</b><span class="st">${esc(L.label)}</span>${tallyHtml(picksTally(m))}`;
   // sans réponse d'ESPN : état connu lors de la dernière mise à jour, sans score en cours (il serait périmé)
   if (!L && LIVE.includes(m.state)) return `<b>${esc(m.time)}</b><span class="st live">Commencé</span>`;
-  if (!L && DONE.includes(m.state)) return `<b>${esc(m.time)}</b><span class="st">Terminé</span>`;
+  if (!L && DONE.includes(m.state)) return `<b>${esc(m.time)}</b><span class="st">Terminé</span>${tallyHtml(picksTally(m))}`;
   return `<b>${esc(m.time)}</b>`;
 }
 function scoreHtml(m){
@@ -727,15 +760,15 @@ function selItem(c, i){
 }
 function pronoMatch(m){
   const pk = m.picks || {};
-  const funPk = LIVEM ? otherThan(LIVEM.funPicks(m, PRE_STATE, {max: 4}), m) : null;
-  const fun = funPk ? {...funPk, prob: pctr(funPk.p), stars: starsOf(funPk.p)} : null;
+  const funPk = pk.fun || (LIVEM ? otherThan(LIVEM.funPicks(m, PRE_STATE, {max: 4}), m) : null);
+  const fun = funPk ? {...funPk, prob: funPk.prob ?? pctr(funPk.p), stars: funPk.stars ?? starsOf(funPk.p)} : null;
   const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner],
                  [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
-    <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started ? `<span class="tagst">${DONE.includes(m.state) ? "Terminé" : "Commencé"}</span>` : ""}</div>
-    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
-    ${pk.score ? `<div class="pl"><span class="pk">Score</span><span class="pv">${esc(String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b></span></div>` : ""}</div></div>`;
+    <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started || isOver(m) ? `<span class="tagst">${isOver(m) ? "Terminé" : "Commencé"}</span>${tallyHtml(picksTally(m))}` : ""}</div>
+    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+    ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div></div>`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo
 try { PSUB = localStorage.getItem("psub") || "foot"; } catch (e) {}
@@ -836,7 +869,7 @@ function funList(){
                   .filter(Boolean).map(x => ({...x, picks: LIVEM.funPicks(x.m, x.s)})).filter(x => x.picks.length)
                   .sort((a, b) => red(b.s) - red(a.s) || Date.parse(a.m.kickoff) - Date.parse(b.m.kickoff));   // cartons rouges d'abord
   const next = all.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); })
-                  .map(m => ({m, s: PRE_STATE, picks: [otherThan(LIVEM.funPicks(m, PRE_STATE, {max: 4}), m)].filter(Boolean)})).filter(x => x.picks.length)
+                  .map(m => ({m, s: PRE_STATE, picks: [(m.picks || {}).fun || otherThan(LIVEM.funPicks(m, PRE_STATE, {max: 4}), m)].filter(Boolean)})).filter(x => x.picks.length)
                   .sort((a, b) => b.picks[0].p - a.picks[0].p).slice(0, 12);
   const blk = (title, list) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(x => funCard(x.m, x.s, x.picks)).join("")}</section>` : "";
   return (live.length ? blk("En direct", live) : `<div class="empty">Aucun match en cours : les paris fun en direct apparaîtront au coup d'envoi.</div>`) + blk("Avant le match", next);
@@ -1010,8 +1043,8 @@ try { BSPORT = localStorage.getItem("bsport") || "all"; } catch (e) {}
 const dmy = d => d.split("-").reverse().join("/");
 const dayName = d => { const s = new Date(d + "T12:00:00").toLocaleDateString("fr-FR", {weekday: "long", day: "numeric", month: "long"}); return s[0].toUpperCase() + s.slice(1); };
 function vPick(r){
-  return `<li class="vp"><span class="vk ${r.ok ? "ok" : "ko"}" aria-label="${r.ok ? "réussi" : "raté"}">${r.ok ? "✓" : "✗"}</span>
-    <span class="vb"><b>${esc(r.label)}</b><small>${esc(r.match)} · ${esc(dmy(r.date).slice(0, 5))}</small></span><span class="num vpp">${r.prob} %</span></li>`;
+  return `<li class="vp${r.fun ? " vfun" : ""}"><span class="vk ${r.ok ? "ok" : "ko"}" aria-label="${r.ok ? "réussi" : "raté"}">${r.ok ? "✓" : "✗"}</span>
+    <span class="vb"><b>${r.fun ? "🎲 " : ""}${esc(r.label)}</b><small>${esc(r.match)} · ${esc(dmy(r.date).slice(0, 5))}</small></span><span class="num vpp">${r.prob} %</span></li>`;
 }
 // liste groupée par championnat (Foot d'abord, NHL ensuite)
 function vByLeague(list){
@@ -1022,8 +1055,10 @@ function vByLeague(list){
     g.rows.push(r);
   }
   groups.sort((a, b) => (a.sport !== "foot") - (b.sport !== "foot"));
-  return groups.map(g => `<div class="vlh">${g.sport === "nhl" ? "🏒" : "⚽"} ${esc(g.league)} <span class="num">${g.rows.filter(r => r.ok).length}/${g.rows.length}</span></div>
-    <ul class="vlist">${g.rows.map(vPick).join("")}</ul>`).join("");
+  // le score du championnat ne compte que les pronostics sûrs ; les paris Fun suivent, marqués 🎲
+  return groups.map(g => { const safe = g.rows.filter(r => !r.fun);
+    return `<div class="vlh">${g.sport === "nhl" ? "🏒" : "⚽"} ${esc(g.league)} <span class="num">${safe.filter(r => r.ok).length}/${safe.length}</span></div>
+    <ul class="vlist">${[...safe, ...g.rows.filter(r => r.fun)].map(vPick).join("")}</ul>`; }).join("");
 }
 const vScore = a => a && a.n ? `<span class="num"><b>${a.ok}</b>/${a.n}</span><span class="num vr ${a.rate >= 60 ? "good" : a.rate < 45 ? "bad" : ""}">${a.rate} %</span>` : `<span></span><span class="vr">—</span>`;
 function picksBlock(b){
@@ -1032,24 +1067,25 @@ function picksBlock(b){
   const S = ["all", "foot", "nhl"].includes(BSPORT) ? BSPORT : "all";
   const keep = r => S === "all" || r.sport === S;
   const det = (b.details || []).filter(keep);
-  const tot = b.total[S], lastDay = b.days.find(d => d[S].n);
+  const tot = b.total[S], lastDay = b.days.find(d => d[S].n), fun = (b.fun || {})[S];
   const chips = `<nav class="leagues psubs" aria-label="Sport">${[["all", "Tous"], ["foot", "⚽ Foot"], ["nhl", "🏒 NHL"]].map(([k, l]) =>
     `<button type="button" data-bsport="${k}" aria-pressed="${k === S}"><span>${l}</span>${b.total[k].n ? `<span class="n num">${b.total[k].n}</span>` : ""}</button>`).join("")}</nav>`;
   const tiles = `<div class="tiles num">
       <div class="tile"><div class="v">${lastDay ? `${lastDay[S].ok}/${lastDay[S].n}` : "—"}</div><div class="k">${lastDay ? `Dernier jour, ${esc(dayName(lastDay.date).toLowerCase())} : ${lastDay[S].rate} % réussis` : "aucun jour vérifié"}</div></div>
       <a class="tile tlink" href="#vleagues"><div class="v">${tot.n ? `${tot.ok}/${tot.n}` : "—"}</div><div class="k">${tot.n ? `Total depuis l'ouverture (${esc(dmy(b.since))}) : ${tot.rate} % réussis, annoncé ${tot.expected} % ›` : "aucun pronostic vérifié"}</div></a>
-    </div>`;
+    </div>
+    <div class="funline num"><span>🎲 <b>Fun et score exact</b>, comptés à part</span>${fun && fun.n ? `<span><b>${fun.ok}</b>/${fun.n} · ${fun.rate} % réussis (annoncé ${fun.expected} %)</span>` : `<span class="src">aucun encore vérifié</span>`}</div>`;
   const days = b.days.filter(d => d[S].n).slice(0, 21).map(d => {
     const rows = det.filter(r => r.date === d.date);
     return `<details class="vd"><summary><span class="vday">${esc(dayName(d.date))}</span>${vScore(d[S])}</summary>
-      <div class="vin">${rows.length ? vByLeague(rows) : `<p class="src">Détail disponible sur les 30 derniers jours seulement.</p>`}</div></details>`;
+      <div class="vin">${rows.length ? vByLeague(rows) : `<p class="src">Détail disponible sur les 30 derniers jours seulement.</p>`}${d.fun && d.fun[S].n ? `<p class="funday">🎲 Fun et score exact ce jour-là : <b class="num">${d.fun[S].ok}/${d.fun[S].n}</b></p>` : ""}</div></details>`;
   }).join("");
   const sports = [["foot", "⚽ Foot"], ["nhl", "🏒 NHL"]].filter(([k]) => S === "all" || S === k);
   const leagues = sports.map(([k, title]) => {
     const ls = b.leagues.filter(x => x.sport === k);
     if (!ls.length) return "";
     return `<div class="vcat">${title}</div>` + ls.map(x => {
-      const rows = det.filter(r => r.sport === k && r.league === x.league);
+      const rows = det.filter(r => r.sport === k && r.league === x.league && !r.fun);
       return `<details class="vd"><summary><span class="vday">${esc(x.league)}</span>${vScore(x)}</summary>
         <div class="vin">${rows.length ? `<ul class="vlist">${rows.map(vPick).join("")}</ul>` : `<p class="src">Pas de pronostic vérifié ces 30 derniers jours.</p>`}</div></details>`;
     }).join("");
@@ -1301,15 +1337,15 @@ function openReset(){
 // ---- bouton « + » sur les pronostics du site
 const BETREF = {};
 const MK_BOOK = {"1": "h", "2": "a", win_h: "h", win_a: "a"};
-const AUTO_MK = ["1", "2", "1N", "N2", "12", "o25", "u25", "btts_y", "btts_n", "win_h", "win_a", "o55", "u55", "scorer", "point", "goal"];
+const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|h2|a2|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|point|goal)$/;
 function addBtn(m, pk){
   if (!m || !pk || !pk.label || !pk.p) return "";
   const book = m.odds && MK_BOOK[pk.market] && m.odds[MK_BOOK[pk.market]];
   const key = `${m.id}|${pk.label}`;
   BETREF[key] = {label: pk.label, match: `${m.home} – ${m.away}`, matchId: m.id, sport: m.sport, market: pk.market || null,
-                 player: pk.player || null, p: pk.p, odds: book || 1 / Math.max(pk.p, 0.01),
+                 player: pk.player || null, value: pk.value || null, p: pk.p, odds: book || 1 / Math.max(pk.p, 0.01),
                  oddsSrc: book ? `du bookmaker avant le match (${esc(m.odds.by || "ESPN")})` : "juste (1 ÷ probabilité) : les bookmakers paient souvent un peu moins",
-                 auto: AUTO_MK.includes(pk.market)};      // résultat automatique : marchés recalculables en fin de match
+                 auto: AUTO_MK.test(pk.market || "")};      // résultat automatique : marchés recalculables en fin de match
   return `<button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter « ${esc(pk.label)} » à ma bankroll">+</button>`;
 }
 // résultat automatique des paris ajoutés depuis le site
@@ -1324,7 +1360,7 @@ function bkAutoSettle(){
     if (L && L.ev && L.state === "post" && m && LIVEM){
       const s = LIVEM.parseEspn(L.ev, m.sport);
       if (s.cancelled) res = "void";
-      else { const v = LIVEM.pickProb({market: b.market, player: b.player, p: b.p}, m, s, LIVEM.liveProbs(m, s)); if (v != null) res = v >= 0.5 ? "won" : "lost"; }
+      else { const v = LIVEM.settle({market: b.market, player: b.player, value: b.value}, m, s); if (v != null) res = v ? "won" : "lost"; }
     }
     if (!res){ const r = det.find(x => x.match === b.match && x.label === b.label); if (r) res = r.ok ? "won" : "lost"; }
     if (res){ b.status = res; b.settledAt = Date.now(); changed++; }

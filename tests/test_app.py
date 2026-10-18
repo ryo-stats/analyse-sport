@@ -359,6 +359,45 @@ class AppTest(unittest.TestCase):
                          [("foot", "Ligue 1", 2), ("foot", "LaLiga", 1), ("nhl", "NHL", 1)])
         self.assertEqual(len(b["details"]), 4)
         self.assertEqual(app.picks_bilan({}), dict(n=0))
+        # les paris Fun et le score exact sont comptés à part, sans toucher au bilan des pronostics sûrs
+        store["6"] = dict(pk("2026-10-18", "foot", "LaLiga", False, 0.4), kinds=["fun"])
+        store["7"] = dict(pk("2026-10-18", "foot", "LaLiga", True, 0.12), kinds=["score"])
+        b = app.picks_bilan(store)
+        self.assertEqual(b["n"], 4)
+        self.assertEqual((b["fun"]["all"]["n"], b["fun"]["all"]["ok"]), (2, 1))
+        self.assertEqual(b["days"][0]["fun"]["all"]["n"], 2)
+        self.assertEqual(sum(d["fun"] for d in b["details"]), 2)
+
+    def test_fun_and_exact_score_picks(self):
+        m = self.data["foot"][0]["picks"]
+        self.assertEqual(m["score"]["market"], "exact")
+        self.assertRegex(m["score"]["value"], r"^\d+-\d+$")
+        fun = m.get("fun")
+        self.assertIsNotNone(fun)
+        self.assertTrue(0.35 <= fun["p"] <= 0.66)
+        self.assertNotIn(fun["label"], (m["main"]["label"], m["winner"]["label"]))
+        g = app.nhl_picks("A", "B", 0.55, 3.2, 2.9, {}, q=0.5)
+        self.assertTrue(0.35 <= g["fun"]["p"] <= 0.66)
+        store = app.load_json(app.PICKS_FILE, {})
+        groups = {v["market"]: app.pick_group(v) for v in store.values() if v["match"] == "foot-401"}
+        self.assertEqual(groups["exact"], "fun")
+        self.assertEqual(groups[m["main"]["market"]], "safe")
+
+    def test_resolve_fun_markets(self):
+        history = {"foot-1": dict(sport="foot", score="2-0", result=0, first="h", scorers=[]),
+                   "foot-2": dict(sport="foot", score="0-0", result=1, scorers=[]),
+                   "nhl-1": dict(sport="nhl", score="3-2 (prol.)", result=0)}
+        def pk(match, sport, market, value=None):
+            return dict(match=match, sport=sport, market=market, value=value, result=None)
+        store = {"a": pk("foot-1", "foot", "h2"), "b": pk("foot-1", "foot", "cs_h"), "c": pk("foot-1", "foot", "fg_h"),
+                 "d": pk("foot-1", "foot", "o15"), "e": pk("foot-1", "foot", "u15"), "f": pk("foot-1", "foot", "exact", "2-0"),
+                 "g": pk("foot-2", "foot", "X"), "h": pk("foot-2", "foot", "fg_a"), "i": pk("foot-2", "foot", "exact", "1-1"),
+                 "j": pk("nhl-1", "nhl", "ot"), "k": pk("nhl-1", "nhl", "reg_h"), "l": pk("nhl-1", "nhl", "o55"),
+                 "m": pk("nhl-1", "nhl", "u55")}
+        app.resolve_picks(store, history)
+        got = {k: v["result"] for k, v in store.items()}
+        self.assertEqual(got, dict(a=True, b=True, c=True, d=True, e=False, f=True, g=True, h=False, i=False,
+                                   j=True, k=False, l=False, m=True))
 
     def test_name_matching(self):
         self.assertLess(app.similarity("Paris Saint-Germain", "Paris FC"), 0.8)

@@ -23,7 +23,8 @@ const pick = (market, label, p, extra = {}) => ({market, label, p, prob: Math.ro
 const FOOT = {id: "foot-1", sport: "foot", league: "Premier League", code: "eng.1", edate: "20261018", kickoff: new Date(T).toISOString(),
               time: "15:00", home: "Arsenal", away: "Chelsea", state: "pre", xgH: 1.8, xgA: 0.9, pH: 55, pD: 25, pA: 20,
               picks: {main: pick("1N", "Arsenal ou nul", 0.8), winner: pick("1", "Victoire Arsenal", 0.55),
-                      player: pick("scorer", "Bukayo Saka marque", 0.35, {player: "Bukayo Saka", team: "Arsenal"})}};
+                      player: pick("scorer", "Bukayo Saka marque", 0.35, {player: "Bukayo Saka", team: "Arsenal"}),
+                      fun: pick("fg_a", "Premier but : Chelsea", 0.4), score: pick("exact", "Score exact 1-0", 0.12, {value: "1-0"})}};
 const NHL = {id: "nhl-2", sport: "nhl", league: "NHL", edate: "20261017", kickoff: "2026-10-17T23:00:00Z", time: "01:00",
              home: "Boston Bruins", away: "Philadelphia Flyers", state: "FUT", xgH: 3.3, xgA: 2.7, pH: 47, pD: 22, pA: 31,
              winH: 58, espn_id: "999", picks: {main: pick("win_h", "Victoire Boston Bruins", 0.58), winner: pick("win_h", "Victoire Boston Bruins", 0.58)}};
@@ -141,7 +142,14 @@ current = footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT", perio
                      details: [goal("359", "Bukayo Saka", "28'"), goal("359", "Kai Havertz", "88'")]});
 msgs = await run(T + 115 * MIN);
 assert.match(msgs[0].title, /🏁 Terminé : Arsenal 2-0 Chelsea/);
-assert.match(msgs[0].body, /✅ Arsenal ou nul/);
+assert.match(msgs[0].body, /^3\/5 pronostics validés/);
+assert.match(msgs[0].body, /✅ Safe : Arsenal ou nul/);
+assert.match(msgs[0].body, /❌ Fun 🎲 : Premier but : Chelsea/);
+assert.match(msgs[0].body, /\n❌ Score exact 1-0/);
+assert.equal(L.settle({market: "exact", value: "2-0"}, FOOT, L.parseEspn(current, "foot")), true);
+assert.equal(L.settle({market: "fg_h"}, FOOT, L.parseEspn(current, "foot")), true);
+assert.equal(L.settle({market: "u25"}, FOOT, L.parseEspn(current, "foot")), true);
+assert.equal(L.settle({market: "o25"}, FOOT, L.parseEspn(footEvent({clock: "80'"}), "foot")), null, "pas de résultat avant la fin");
 assert.equal((await run(T + 116 * MIN)).length, 0, "match terminé : plus d'alerte");
 ok++; console.log("ok - déroulé d'un match en favori : buts, but annulé, résultat (ni rappel ni carton)");
 

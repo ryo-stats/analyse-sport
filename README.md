@@ -7,7 +7,7 @@ Site installable sur téléphone, mis à jour automatiquement deux fois par jour
 - pour chaque équipe, les 6 joueurs les plus susceptibles de marquer, avec leur chance d'être décisifs (but ou passe) ;
 - pour la NHL, les gardiens probables et la fatigue (deuxième match en deux soirs).
 
-Un onglet **Bilan** compare chaque pronostic au résultat réel.
+Un onglet **Bilan** compare chaque pronostic au résultat réel. Quand un match est fini, sa ligne affiche le nombre de pronostics validés (par exemple « 3/5 ✓ »), et l'onglet Pronostics met ✓ ou ✗ devant chacun.
 
 **100 % gratuit, aucune clé d'API.** Sources :
 - l'API publique d'ESPN pour le foot (Ligue 1, Premier League, LaLiga, Serie A, Bundesliga, Ligue des champions), les effectifs et stats des joueurs, et les cotes NHL ;
@@ -60,7 +60,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
   - iPhone : il faut d'abord ajouter le site à l'écran d'accueil (iOS 16.4+), puis l'ouvrir depuis l'icône.
 - **Ce qui est envoyé** :
   - les buts (et les buts annulés) ;
-  - le résultat final, avec chaque pronostic gagné ou perdu ;
+  - le résultat final, avec le compte des pronostics validés et chaque pronostic ✅ ou ❌ : Safe, Vainqueur, Buteur, Fun et score exact ;
   - le résumé du matin vers 8 h, seulement pour ceux qui l'activent.
 - **Délai** : 1 à 2 minutes, téléphone verrouillé.
 - **Le robot** (`worker/`, offre gratuite Cloudflare Workers) se réveille chaque minute :
@@ -91,6 +91,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Deux cases** : le dernier jour, et le total depuis l'ouverture du site.
 - **Jour par jour** : on touche un jour pour voir ses pronostics, rangés par championnat, avec ✓ ou ✗.
 - **Pronostics vérifiés par championnat** : rangés en catégories Foot et NHL ; on touche un championnat pour voir ses pronostics. Le détail couvre les 30 derniers jours, le score toute la période.
+- **Fun et score exact** : comptés sur une ligne à part, pour ne pas fausser le taux des pronostics sûrs. Dans les listes, ils sont marqués 🎲.
 - **Niveau de confiance** : un tableau compare le taux de réussite annoncé et le taux réel, par nombre d'étoiles.
 
 ## Cotes, Safe, Fun et enjeu
@@ -98,7 +99,8 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Cotes du bookmaker** : les cotes d'avant-match relayées par ESPN, en décimal, sont affichées sur chaque match. Elles sont archivées pour rester visibles après le coup d'envoi, car ESPN ne fournit pas de cotes en direct.
 - **Cote juste** (« @ ») : 1 ÷ la probabilité calculée, sans la marge du bookmaker. Si un bookmaker propose plus, le pari est mathématiquement intéressant.
 - **Safe ✅ / Fun 🎲** :
-  - pour chaque match, le pari le plus sûr et un pari plus risqué (35 à 66 %), toujours différents ;
+  - pour chaque match, le pari le plus sûr et un pari plus risqué (35 à 66 %), toujours différents (et différent du vainqueur annoncé) ;
+  - le Fun d'avant-match et le score exact sont choisis par le calcul automatique, archivés avant le coup d'envoi et vérifiés après le match ;
   - pendant le match, « Pronostics du moment » : Safe entre 75 et 90 % et Fun, recalculés selon le score, la minute et les cartons rouges ;
   - un pari qui profite à l'équipe à 11 contre 10 passe devant ;
   - le sous-onglet **Pronostics › Fun** les regroupe, en direct et avant le match.

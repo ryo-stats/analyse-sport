@@ -40,6 +40,24 @@ export function followedPicks(m){
   return out;
 }
 
+// Bilan de fin de match : tous les pronostics affichés sur le site, Fun et score exact compris.
+const KIND = {main: "Safe", winner: "Vainqueur", player: "Joueur", fun: "Fun 🎲", score: ""};
+export function finalPicks(m){
+  const pk = m.picks || {}, out = followedPicks(m);
+  if (m.sport !== "foot" && pk.player) out.push(["player", pk.player]);
+  if (pk.fun) out.push(["fun", pk.fun]);
+  if (pk.score && pk.score.market) out.push(["score", pk.score]);
+  return out;
+}
+
+function finalBody(m, s){
+  const res = finalPicks(m).map(([k, pk]) => ({k, pk, ok: L.settle(pk, m, s)}));
+  const known = res.filter(x => x.ok != null);
+  const head = known.length ? `${known.filter(x => x.ok).length}/${known.length} pronostic${known.length > 1 ? "s" : ""} validé${known.length > 1 ? "s" : ""}` : "";
+  return [head, ...res.map(x => `${x.ok == null ? "•" : x.ok ? "✅" : "❌"} ${KIND[x.k] ? KIND[x.k] + " : " : ""}${x.pk.label}${x.ok == null ? " (résultat dans le Bilan)" : ""}`)]
+    .filter(Boolean).join("\n");
+}
+
 export function parisNow(now){
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {timeZone: "Europe/Paris", year: "numeric",
     month: "2-digit", day: "2-digit", hour: "2-digit", hourCycle: "h23"}).formatToParts(new Date(now)).map(p => [p.type, p.value]));
@@ -80,8 +98,7 @@ export function update(w, s){
   const score = `${m.home} ${s.sh}-${s.sa} ${m.away}`;
   if (s.state === "post"){
     w.done = true;
-    out.push({match: m.id, title: `🏁 Terminé : ${score}`, priority: 3,
-              body: picks.map(x => x.p == null ? `• ${x.pk.label} : résultat dans le Bilan` : `${x.p >= 0.5 ? "✅" : "❌"} ${x.pk.label}`).join("\n")});
+    out.push({match: m.id, title: `🏁 Terminé : ${score}`, priority: 3, body: finalBody(m, s)});
     commit();
     return out;
   }
