@@ -278,10 +278,11 @@ def espn_odds(comp, three_way):
             draw = line("draw") or (o.get("drawOdds") or {}).get("moneyLine")
             values = [home, draw, away]
         probs = [implied(v) for v in values]
-        if any(p is None for p in probs):
+        if any(p is None or p <= 0 for p in probs):
             continue
         s = sum(probs)
         return dict(p=[p / s for p in probs],
+                    dec=[round(1 / p, 2) for p in probs],       # cotes décimales du bookmaker (marge comprise)
                     provider=((o.get("provider") or {}).get("name") or "un bookmaker"),
                     total=o.get("overUnder"))
     return None
@@ -561,11 +562,16 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
                 r.update(side=side, team=name)
             team_rows[side] = sorted(rows, key=lambda r: -r["p_goal"])[:SQUAD_SIZE]
 
+    # cotes du bookmaker : lues avant le match, archivées pour rester affichées après le coup d'envoi
+    book = (dict(h=odds["dec"][0], d=odds["dec"][1], a=odds["dec"][2], by=odds["provider"])
+            if odds and state == "pre" else history.get(key, {}).get("odds"))
     if state == "pre":
         old = history.get(key, {})
         history[key] = dict(sport="foot", league=league, date=paris(kickoff).date().isoformat(),
                             home=home, away=away, p=[round(p_h, 4), round(p_d, 4), round(p_a, 4)],
                             source=source, result=old.get("result"), score=old.get("score"))
+        if book:
+            history[key]["odds"] = book
 
     ctx = []
     for name, st in ((home, sh), (away, sa)):
@@ -598,7 +604,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
         state=state, score=(f"{H.get('score')}-{A.get('score')}" if state != "pre" else None),
         home=home, away=away, form_h=form(H), form_a=form(A),
         rank_h=(sh or {}).get("rank"), rank_a=(sa or {}).get("rank"),
-        pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
+        pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
         ctx=ctx, reading=reading, picks=foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep),
@@ -613,6 +619,7 @@ STAR_STEPS = (0.5, 0.6, 0.7, 0.8)      # 1 étoile sous 50 %, 5 étoiles à part
 def make_pick(market, label, p, **extra):
     p = float(p)          # les calculs scipy renvoient des types numpy, refusés par json
     return dict(market=market, label=label, p=round(p, 4), prob=int(pct(p)),
+                fair=round(1 / max(p, 0.01), 2),          # « cote juste » : 1 / probabilité, sans marge de bookmaker
                 stars=1 + sum(int(p >= s) for s in STAR_STEPS), **extra)
 
 
@@ -987,11 +994,15 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
 
     state = g.get("gameState", "FUT")
     key = f"nhl-{g['id']}"
+    book = (dict(h=odds["dec"][0], a=odds["dec"][1], by=odds["provider"], total=odds.get("total"))
+            if odds else history.get(key, {}).get("odds"))
     if state in ("FUT", "PRE"):
         old = history.get(key, {})
         history[key] = dict(sport="nhl", league="NHL", date=paris(start).date().isoformat(),
                             home=hname, away=aname, p=[round(win_h, 4), round(win_a, 4)],
                             source=source, result=old.get("result"), score=old.get("score"))
+        if book:
+            history[key]["odds"] = book
 
     def record(st):
         if not st:
@@ -1025,7 +1036,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         id=key, sport="nhl", league="NHL", kickoff=start.isoformat(), time=paris(start).strftime("%H:%M"),
         state=state, score=(f"{g['homeTeam'].get('score', 0)}-{g['awayTeam'].get('score', 0)}" if live else None),
         home=hname, away=aname, rec_h=record(sh), rec_a=record(sa),
-        winH=pct(win_h), winA=pct(win_a), pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
+        winH=pct(win_h), winA=pct(win_a), pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],

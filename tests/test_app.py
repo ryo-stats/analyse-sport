@@ -169,6 +169,14 @@ class AppTest(unittest.TestCase):
         h, d, a = app.outcome_probs(m["xgH"], m["xgA"])
         self.assertAlmostEqual(h, fair[0], delta=0.01)
         self.assertAlmostEqual(a, fair[2], delta=0.01)
+        # cotes du bookmaker en décimal (+230 → 3,30 ; +275 → 3,75 ; +105 → 2,05), archivées pour après le coup d'envoi
+        self.assertEqual(m["odds"], dict(h=3.3, d=3.75, a=2.05, by="ESPN BET"))
+        self.assertEqual(app.load_json(app.HIST_FILE, {})["foot-401"]["odds"]["a"], 2.05)
+        # cote juste d'un pronostic = 1 / probabilité
+        pk = m["picks"]["main"]
+        self.assertAlmostEqual(pk["fair"], 1 / pk["p"], delta=0.01)
+        nhl = self.data["nhl"][0]
+        self.assertEqual((nhl["odds"]["h"], nhl["odds"]["a"]), (1.46, 2.8))
         # Man City : effectif complet, gardien exclu, joueurs triés par chance de marquer
         city = m["squad_a"]
         self.assertEqual([p["name"] for p in city][:2], ["Erling Haaland", "Phil Foden"])

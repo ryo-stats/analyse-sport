@@ -132,3 +132,72 @@ export function scored(player, s){
 }
 
 export const pct = p => Math.round(p * 100);
+export const fair = p => (1 / Math.max(p, 0.01)).toFixed(2).replace(".", ",");      // cote juste, sans marge
+
+// ---- paris « fun » : plus risqués (35 à 70 %) mais plausibles, recalculés pendant le match.
+// Même modèle que liveProbs : buts restants selon le temps qui reste et les cartons rouges.
+// Un pari qui profite à l'équipe en supériorité numérique est mis en avant.
+export function funPicks(m, s, {lo = 0.35, hi = 0.70, max = 3} = {}){
+  const out = [], H = m.home, A = m.away, n = s.sh + s.sa;
+  const red = s.red || {h: 0, a: 0};
+  const adv = red.h < red.a ? "h" : red.a < red.h ? "a" : null;     // équipe à 11 contre 10
+  const add = (fam, label, p, side = null) => {
+    if (!(p >= lo && p <= hi)) return;
+    out.push({fam, label, p, why: adv && side === adv ? "🟥 Supériorité numérique" : ""});
+  };
+  if (s.state === "post" || s.cancelled) return [];
+  let rem, lh, la, q = 0.5;
+  if (m.sport === "foot"){
+    rem = Math.max(0.01, (FOOT_LENGTH - (s.elapsed || 0)) / FOOT_LENGTH);
+    lh = (m.xgH || 0) * rem * RED_SELF ** red.h * RED_OPP ** red.a;
+    la = (m.xgA || 0) * rem * RED_SELF ** red.a * RED_OPP ** red.h;
+  } else {
+    rem = s.period >= 4 ? 0 : Math.max(0, (NHL_LENGTH - (s.elapsed || 0)) / NHL_LENGTH);
+    lh = (m.xgH || 0) * rem; la = (m.xgA || 0) * rem;
+    if (m.pD > 0 && m.winH != null && m.pH != null) q = Math.min(0.75, Math.max(0.25, (m.winH - m.pH) / m.pD));
+  }
+  const ph = poisson(lh), pa = poisson(la);
+  const P = f => {
+    let t = 0, z = 0;
+    for (let i = 0; i < ph.length; i++) for (let j = 0; j < pa.length; j++){
+      const w = ph[i] * pa[j]; z += w;
+      t += w * f(s.sh + i, s.sa + j, i, j);        // f renvoie 0, 1 ou une probabilité (prolongation)
+    }
+    return t / z;
+  };
+  const more = 1 - ph[0] * pa[0];                   // au moins un but de plus
+  const next = side => lh + la > 0 ? more * (side === "h" ? lh : la) / (lh + la) : 0;
+  const goals = k => `${k + 0.5}`.replace(".", ",");
+  if (m.sport === "foot"){
+    add("res", `Victoire ${H}`, P((h, a) => h > a), "h");
+    add("res", `Victoire ${A}`, P((h, a) => a > h), "a");
+    add("res", "Match nul", P((h, a) => h === a));
+    add("dc", `${H} ou nul`, P((h, a) => h >= a), "h");
+    add("dc", `Nul ou ${A}`, P((h, a) => a >= h), "a");
+    for (const k of [n, n + 1, n + 2]) add("ou", `Plus de ${goals(k)} buts`, P((h, a) => h + a > k));
+    if (!(s.sh > 0 && s.sa > 0)) add("btts", "Les deux équipes marquent", P((h, a) => h > 0 && a > 0));
+    add("margin", `${H} gagne avec 2 buts d'écart ou plus`, P((h, a) => h - a >= 2), "h");
+    add("margin", `${A} gagne avec 2 buts d'écart ou plus`, P((h, a) => a - h >= 2), "a");
+    add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, next("h"), "h");
+    add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, next("a"), "a");
+    add("cs", `${A} ne marque plus`, P((h, a, i, j) => j === 0), "h");
+    add("cs", `${H} ne marque plus`, P((h, a, i, j) => i === 0), "a");
+  } else {
+    // prolongation : le vainqueur marque 1 but de plus (une égalité donne un total pair)
+    const winH = P((h, a) => h > a ? 1 : h === a ? q : 0);
+    add("res", `Victoire ${H} (prolongation comprise)`, winH, "h");
+    add("res", `Victoire ${A} (prolongation comprise)`, 1 - winH, "a");
+    add("reg", `${H} gagne dans le temps réglementaire`, P((h, a) => h > a), "h");
+    add("reg", `${A} gagne dans le temps réglementaire`, P((h, a) => a > h), "a");
+    if (s.period < 4) add("ot", "Il y aura prolongation", P((h, a) => h === a));
+    for (const k of [Math.max(n, 4), Math.max(n, 4) + 1, Math.max(n, 4) + 2])
+      add("ou", `Plus de ${goals(k)} buts`, P((h, a) => h + a + (h === a ? 1 : 0) > k));
+    add("next", `${n ? "Prochain" : "Premier"} but : ${H}`, next("h"), "h");
+    add("next", `${n ? "Prochain" : "Premier"} but : ${A}`, next("a"), "a");
+  }
+  // un seul pari par famille ; la supériorité numérique passe devant, puis le plus probable
+  const score = x => (x.why ? 0.15 : 0) + x.p;
+  const best = {};
+  for (const x of out.sort((a, b) => score(b) - score(a))) best[x.fam] ||= x;
+  return Object.values(best).sort((a, b) => score(b) - score(a)).slice(0, max);
+}

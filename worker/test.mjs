@@ -82,6 +82,21 @@ test("NHL : 3-1 après deux périodes, Boston très favori ; prolongation proche
   assert.ok(ot.winH > 0.4 && ot.winH < 0.75, `prolongation ${ot.winH}`);
 });
 
+test("paris fun : entre 35 et 70 %, un par famille, supériorité numérique mise en avant", () => {
+  const pre = L.funPicks(FOOT, L.parseEspn(footEvent({state: "pre", clock: "0'"}), "foot"));
+  assert.ok(pre.length >= 2 && pre.every(x => x.p >= 0.35 && x.p <= 0.70), JSON.stringify(pre));
+  assert.equal(new Set(pre.map(x => x.fam)).size, pre.length);
+  // Chelsea réduit à 10 à la 30e, 0-0 : un pari côté Arsenal passe en tête, avec la mention
+  const red10 = L.funPicks(FOOT, L.parseEspn(footEvent({clock: "30'", details: [red("363", "29'")]}), "foot"));
+  assert.equal(red10[0].why, "🟥 Supériorité numérique");
+  assert.ok(red10.filter(x => x.why).every(x => /Arsenal|Chelsea ne marque plus/.test(x.label)), JSON.stringify(red10));
+  assert.equal(L.funPicks(FOOT, L.parseEspn(footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT"}), "foot")).length, 0);
+  assert.equal(L.fair(0.5), "2,00");
+  // NHL : les paris restent dans la fourchette
+  const nhl = L.funPicks(NHL, {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []});
+  assert.ok(nhl.length >= 1 && nhl.every(x => x.p >= 0.35 && x.p <= 0.70), JSON.stringify(nhl));
+});
+
 test("chacun ne reçoit que SES matchs ; résumé du matin seulement si activé", () => {
   const subs = {a: {favs: {"foot-1": 1}, morning: false}, b: {favs: {"nhl-2": 1}, morning: true}, c: {favs: {}, morning: false}};
   const r = route([{match: "foot-1", title: "but"}, {match: "nhl-2", title: "but nhl"}, {morning: true, title: "matin"}], subs);
