@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#0d6b4d">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +36,9 @@ h1{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1}
 .num{font-variant-numeric:tabular-nums}
 header{display:grid;gap:.3rem;margin-bottom:1rem}
 .tabs{display:flex;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--bg);padding-block:8px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.tabs{overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;white-space:nowrap}
 .tabs button,.chips button{font:600 .95rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer}
 .tabs button[aria-selected="true"],.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 button:focus-visible{outline:2px solid var(--home);outline-offset:2px}
@@ -231,7 +234,8 @@ td.r,th.r{text-align:right}
 .minis b{color:var(--ink)}
 .toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:max-content;max-width:min(92vw,520px);background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;font-size:.9rem;z-index:9;box-shadow:0 4px 18px rgba(0,0,0,.25)}
 @media (max-width:640px){
-  .tabs button{padding:7px 12px;font-size:.9rem}
+  .tabs{gap:5px}
+  .tabs button{padding:7px 10px;font-size:.86rem}
   .pl{grid-template-columns:minmax(0,1fr) auto}
   .pl .pk{grid-column:1 / -1;margin-bottom:-4px}
   .stars{font-size:.8rem;letter-spacing:0}
@@ -258,6 +262,7 @@ td.r,th.r{text-align:right}
     <button id="tab-foot" role="tab" aria-selected="true" data-tab="foot">Foot</button>
     <button id="tab-nhl" role="tab" aria-selected="false" data-tab="nhl">NHL</button>
     <button id="tab-pronos" role="tab" aria-selected="false" data-tab="pronos">Pronostics</button>
+    <button id="tab-favs" role="tab" aria-selected="false" data-tab="favs">★ Favoris</button>
     <button id="tab-bilan" role="tab" aria-selected="false" data-tab="bilan">Bilan</button>
   </nav>
   <div id="notes"></div>
@@ -377,7 +382,7 @@ async function toggleFav(id){
   on ? FAVS.add(id) : FAVS.delete(id);
   saveFavs(); render();
   if (!ROBOT || !ACODE){
-    if (on) toast("Favori enregistré sur cet appareil. Pour recevoir les alertes : Pronostics › En direct › Alertes.");
+    if (on) toast("Favori enregistré sur cet appareil. Pour les notifications : onglet ★ Favoris › Activer.");
     return;
   }
   try {
@@ -411,8 +416,9 @@ async function pollLive(){
   }
   await Promise.all(jobs);
   paintLive();
-  const box = document.getElementById("livebox");
+  const box = document.getElementById("livebox"), fbox = document.getElementById("favbox");
   if (box && LIVEM) box.innerHTML = liveList();
+  if (fbox && LIVEM) fbox.innerHTML = favList();
   // toutes les 30 s si un match est en cours ou commence bientôt, sinon toutes les 5 min
   const now = Date.now();
   const hot = [...foot, ...nhl].some(m => {
@@ -599,7 +605,7 @@ function comboView(){
 }
 // ---- sous-onglet En direct : pronostics recalculés pendant les matchs (calcul dans docs/live.js)
 let LIVEM = null;
-import("./live.js").then(mod => { LIVEM = mod; if (TAB === "pronos" && PSUB === "live") render(); }).catch(() => {});
+import("./live.js").then(mod => { LIVEM = mod; if ((TAB === "pronos" && PSUB === "live") || TAB === "favs") render(); }).catch(() => {});
 const pctr = p => Math.round(p * 100);
 function liveCard(m){
   const L = LIVEDATA[m.id];
@@ -640,40 +646,102 @@ function liveList(){
   const none = live.length ? "" : `<div class="empty">${Object.keys(LIVEDATA).length ? "Aucun match en cours pour l'instant." : "Chargement du direct…"}</div>`;
   return blk("En cours", live, liveCard) + none + blk("Prochains matchs", next, nextRow) + blk("Terminés", done, liveCard);
 }
-function alertsPanel(){
-  const ready = !!(ROBOT && ACODE);
-  return `<details class="alerts"${ready ? "" : " open"}><summary>🔔 Alertes téléphone ${ready ? "· activées" : "· à configurer"}</summary>
-    <p class="src">Touchez ☆ à côté d'un match (onglets Foot, NHL ou ici) pour recevoir ses alertes sur l'app ntfy : rappel 15 min avant, buts, cartons rouges, pronostic qui bascule, résultat final. Plus un résumé chaque matin.</p>
-    ${ROBOT ? `<div class="arow"><input id="acode" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ton code d'alerte" value="${esc(ACODE)}" aria-label="Code d'alerte"><button type="button" id="asave">Enregistrer</button><button type="button" id="atest">Tester</button></div><p class="src" id="amsg" role="status"></p>`
-             : `<p class="src"><b>Robot d'alertes pas encore branché.</b> Les favoris sont déjà gardés sur cet appareil.</p>`}</details>`;
+// ---- notifications du site (Web Push) : aucune appli à installer.
+// Android et PC : Chrome, Edge, Firefox. iPhone : site ajouté à l'écran d'accueil (iOS 16.4+), ouvert depuis l'icône.
+const PUSH_OK = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const STANDALONE = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+let SWREG = null, PUSH_ON = false;
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").then(r => { SWREG = r; refreshPush(); }).catch(() => {});
+async function refreshPush(){
+  try { PUSH_ON = !!(SWREG && await SWREG.pushManager.getSubscription()) && Notification.permission === "granted"; } catch (e) { PUSH_ON = false; }
+  const s = document.getElementById("pushstate");
+  if (s) s.textContent = PUSH_ON ? "· activées sur cet appareil" : "· à activer";
 }
-function liveView(){
-  return `${alertsPanel()}<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers.</p><div id="livebox">${liveList()}</div>`;
-}
-async function saveCode(){
-  const v = document.getElementById("acode").value.trim(), msg = document.getElementById("amsg");
+const keyBytes = k => Uint8Array.from(atob(k.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((k.length + 3) % 4)), c => c.charCodeAt(0));
+function readCode(){
+  const el = document.getElementById("acode"), v = el ? el.value.trim() : ACODE;
   ACODE = v;
   try { localStorage.setItem("acode", v); } catch (e) {}
-  if (!v){ msg.textContent = "Code effacé : les favoris restent sur cet appareil seulement."; return; }
-  msg.textContent = "Vérification…";
+  return v;
+}
+// envoie au robot les favoris gardés sur l'appareil, puis reprend sa liste (la même sur tous les appareils)
+async function syncFavs(code){
+  let j = await robotCall("/favoris", {code, id: "foot-0", on: false});
+  for (const id of [...FAVS]){ if (!j.ok) break; j = await robotCall("/favoris", {code, id, on: true}); }
+  if (j.ok){ FAVS = new Set(j.ids); saveFavs(); }
+  return j;
+}
+async function enablePush(){
+  const msg = document.getElementById("amsg"), code = readCode();
+  if (!code){ msg.textContent = "Entre d'abord ton code d'alerte."; return; }
+  if (!PUSH_OK || !SWREG){
+    msg.textContent = IOS && !STANDALONE
+      ? "Sur iPhone : touche Partager (carré avec une flèche), puis « Sur l'écran d'accueil ». Ouvre ensuite le site depuis cette nouvelle icône et reviens ici."
+      : "Ce navigateur ne gère pas les notifications. Utilise Chrome (Android, PC) ou, sur iPhone, le site ajouté à l'écran d'accueil.";
+    return;
+  }
+  msg.textContent = "Autorisation…";
+  const perm = await Notification.requestPermission();      // en premier : l'iPhone exige que ce soit juste après le toucher
+  if (perm !== "granted"){ msg.textContent = "Notifications refusées. Autorise-les pour ce site dans les réglages, puis réessaie."; return; }
   try {
-    // envoie au robot les favoris gardés sur l'appareil, puis reprend sa liste (la même sur tous les appareils)
-    let j = await robotCall("/favoris", {code: v, id: "foot-0", on: false});
-    for (const id of [...FAVS]){ if (!j.ok) break; j = await robotCall("/favoris", {code: v, id, on: true}); }
-    if (!j.ok){ msg.textContent = j.message || "Code refusé."; return; }
-    FAVS = new Set(j.ids); saveFavs();
-    msg.textContent = "✅ Code enregistré. Les alertes de tes favoris arriveront sur ntfy.";
-  } catch (e) { msg.textContent = "Robot injoignable pour le moment. Réessaie dans une minute."; }
+    msg.textContent = "Inscription de l'appareil…";
+    const {key} = await robotCall("/vapid");
+    let sub = await SWREG.pushManager.getSubscription();
+    if (!sub) sub = await SWREG.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: keyBytes(key)});
+    const j = await robotCall("/abonnement", {code, sub: sub.toJSON()});
+    if (j.message){ msg.textContent = j.message; return; }
+    const f = await syncFavs(code);
+    msg.textContent = j.ok ? `✅ Notifications activées : une confirmation vient d'arriver. ${f.ok ? FAVS.size + " match(s) en favori." : ""}`
+                           : `Appareil inscrit, mais la confirmation n'est pas passée (${(j.envoi || []).join(", ")}).`;
+  } catch (e) { msg.textContent = "Échec de l'activation : " + e.message; }
+  refreshPush();
+}
+async function disablePush(){
+  const msg = document.getElementById("amsg");
+  try {
+    const sub = SWREG && await SWREG.pushManager.getSubscription();
+    if (sub){ await robotCall("/desabonnement", {endpoint: sub.endpoint}); await sub.unsubscribe(); }
+    msg.textContent = "Notifications désactivées sur cet appareil.";
+  } catch (e) { msg.textContent = "Échec : " + e.message; }
+  refreshPush();
 }
 async function testAlerts(){
-  const msg = document.getElementById("amsg");
-  if (!ACODE){ msg.textContent = "Enregistre d'abord ton code d'alerte."; return; }
+  const msg = document.getElementById("amsg"), code = readCode();
+  if (!code){ msg.textContent = "Entre d'abord ton code d'alerte."; return; }
   msg.textContent = "Envoi d'une notification de test…";
   try {
-    const j = await robotCall("/test", {code: ACODE});
-    msg.textContent = j.ok ? `✅ Notification envoyée : regarde ton téléphone. ESPN : ${j.espn_foot && j.espn_foot.ok ? "OK" : "bloqué"}.`
-                           : (j.message || `Échec de l'envoi (ntfy : ${j.notification}).`);
+    const j = await robotCall("/test", {code});
+    msg.textContent = j.ok ? `✅ Notification envoyée à ${j.recus} appareil(s) sur ${j.appareils}.` : (j.message || `Échec de l'envoi (${(j.envoi || []).join(", ")}).`);
   } catch (e) { msg.textContent = "Robot injoignable pour le moment."; }
+}
+function alertsPanel(){
+  return `<details class="alerts"${PUSH_ON ? "" : " open"}><summary>🔔 Notifications <span id="pushstate">${PUSH_ON ? "· activées sur cet appareil" : "· à activer"}</span></summary>
+    <p class="src">Seuls les matchs en favori (★) envoient des notifications : rappel 15 min avant, buts, cartons rouges, pronostic qui bascule, résultat final. Plus un résumé chaque matin. Aucune appli à installer.</p>
+    ${IOS && !STANDALONE ? `<p class="src"><b>Sur iPhone :</b> touche Partager (carré avec une flèche), puis « Sur l'écran d'accueil ». Ouvre le site depuis cette icône pour activer les notifications.</p>` : ""}
+    <div class="arow"><input id="acode" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ton code d'alerte" value="${esc(ACODE)}" aria-label="Code d'alerte">
+      <button type="button" id="apush">${PUSH_ON ? "Réactiver" : "Activer les notifications"}</button><button type="button" id="atest">Tester</button>${PUSH_ON ? `<button type="button" id="aoff">Désactiver</button>` : ""}</div>
+    <p class="src" id="amsg" role="status"></p></details>`;
+}
+function liveView(){
+  return `<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers. Touchez ☆ pour recevoir les notifications d'un match (onglet ★ Favoris).</p><div id="livebox">${liveList()}</div>`;
+}
+// ---- onglet Favoris : les matchs étoilés, les seuls qui envoient des notifications
+function favList(){
+  const all = [...(DATA.foot || []), ...(DATA.nhl || [])].filter(m => FAVS.has(m.id)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
+  if (!all.length) return `<div class="empty">Aucun favori. Touchez ☆ à côté de l'heure d'un match (onglets Foot, NHL ou Pronostics) pour l'ajouter ici. Seuls ces matchs envoient des notifications.</div>`;
+  const live = [], next = [], done = [];
+  for (const m of all){
+    const L = LIVEDATA[m.id];
+    if (L && L.ev && L.state === "in" && LIVEM) live.push(m);
+    else if (L && L.ev && L.state === "post" && LIVEM) done.push(m);
+    else next.push(m);
+  }
+  const blk = (title, list, row) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(row).join("")}</section>` : "";
+  return blk("En cours", live, liveCard) + blk("À venir", next, pronoMatch) + blk("Terminés", done, liveCard);
+}
+function favView(){
+  return `${alertsPanel()}<div id="favbox">${favList()}</div>`;
 }
 function pronoView(){
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
@@ -731,13 +799,14 @@ function render(){
   document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === TAB)));
   if (!DATA) return;
   const view = document.getElementById("view");
-  view.innerHTML = TAB === "foot" ? footView() : TAB === "nhl" ? nhlView() : TAB === "pronos" ? pronoView() : bilanView();
+  view.innerHTML = TAB === "foot" ? footView() : TAB === "nhl" ? nhlView() : TAB === "pronos" ? pronoView() : TAB === "favs" ? favView() : bilanView();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));
   view.querySelectorAll("[data-psub]").forEach(b => b.addEventListener("click", () => {
     PSUB = b.dataset.psub; try { localStorage.setItem("psub", PSUB); } catch (e) {} render();
   }));
-  const save = document.getElementById("asave"), tst = document.getElementById("atest");
-  if (save) save.addEventListener("click", saveCode);
+  const on = document.getElementById("apush"), off = document.getElementById("aoff"), tst = document.getElementById("atest");
+  if (on) on.addEventListener("click", enablePush);
+  if (off) off.addEventListener("click", disablePush);
   if (tst) tst.addEventListener("click", testAlerts);
   view.querySelectorAll(".mrow").forEach(b => b.addEventListener("click", () => {
     const id = b.dataset.id;

@@ -2,6 +2,17 @@
 import assert from "node:assert/strict";
 import * as L from "../docs/live.js";
 import { tick, parisNow } from "./robot.js";
+import { encrypt, b64u, unb64u } from "./webpush.js";
+
+// chiffrement des notifications : exemple officiel de la RFC 8291 (section 5), octet pour octet
+{
+  const sub = {keys: {p256dh: "BCVxsr7N_eNgVRqvHtD0zTZsEc6-VV-JvLexhqUzORcxaOzi6-AYWXvTBHm4bjyPjs7Vd8pZGH6SRpkNtoIAiw4", auth: "BTBZMqHH6r4Tts7J_aSIgg"}};
+  const fixed = {salt: unb64u("DGv6ra1nlYgDCS1FRnbzlw"), asPrivateD: unb64u("yfWPiYE-n46HLnH0KqZOF1fJJU3MYrct3AELtAQ-oRw"),
+                 asPublic: unb64u("BP4z9KsN6nGRTbVYI_c7VJSPQTBtkgcy27mlmlMoZIIgDll6e3vCYLocInmYWAmS6TlzAC8wEqKK6PBru3jl7A8")};
+  const out = await encrypt("When I grow up, I want to be a watermelon", sub, fixed);
+  assert.equal(b64u(out), "DGv6ra1nlYgDCS1FRnbzlwAAEABBBP4z9KsN6nGRTbVYI_c7VJSPQTBtkgcy27mlmlMoZIIgDll6e3vCYLocInmYWAmS6TlzAC8wEqKK6PBru3jl7A_yl95bQpu6cVPTpK4Mqgkf1CXztLVBSt2Ks3oZwbuwXPXLWyouBWLVWGNWQexSgSxsj_Qulcy4a-fN");
+  console.log("ok - chiffrement Web Push identique à l'exemple de la RFC 8291");
+}
 
 const MIN = 60e3;
 const T = Date.parse("2026-10-18T13:00:00Z");          // coup d'envoi : 15 h à Paris
