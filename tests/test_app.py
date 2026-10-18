@@ -146,6 +146,7 @@ class AppTest(unittest.TestCase):
         app.HIST_FILE = os.path.join(self.tmp, "history.json")
         app.NOTES.clear()
         app.SQUADS.clear()
+        app.CACHE_FILE = os.path.join(self.tmp, "squads.json")
         app.get_json = fake_get_json
         app.time.sleep = lambda s: None
         history = {"foot-900": dict(sport="foot", league="Premier League", date="2026-10-10", home="Arsenal",
@@ -231,6 +232,35 @@ class AppTest(unittest.TestCase):
         g = app.projected_goalie(profile, back_to_back=False)
         self.assertEqual(g["name"], "Dylan Garand")
         self.assertIn("remplacé", g["note"])
+
+    def test_squad_cache_reused_same_day(self):
+        cache = app.load_json(app.CACHE_FILE, {})
+        self.assertEqual(cache["date"], "2026-10-11")
+        self.assertIn("eng.1|382", cache["squads"])
+        app.SQUADS.clear()
+        app.get_json = lambda url, params=None: None          # ESPN injoignable : le cache doit suffire
+        app.load_squad_cache(dt.date(2026, 10, 11))
+        self.assertEqual(app.espn_squad("eng.1", "382")["players"][0]["name"], "Erling Haaland")
+        app.SQUADS.clear()
+        app.load_squad_cache(dt.date(2026, 10, 12))          # le lendemain : cache ignoré
+        self.assertNotIn(("eng.1", "382"), app.SQUADS)
+
+    def test_nhl_night_belongs_to_previous_us_day(self):
+        self.assertEqual(self.data["nhl_date"], "2026-10-11")
+        late = dt.datetime(2026, 10, 12, 2, 30, tzinfo=app.PARIS)   # 2 h 30 à Paris : soirée NHL du 11
+        self.assertEqual((late - dt.timedelta(hours=7)).date().isoformat(), "2026-10-11")
+
+    def test_update_schedule(self):
+        import horaires
+        P = horaires.PARIS
+        run = lambda h, m, ev="schedule": horaires.should_run(dt.datetime(2026, 10, 18, h, m, tzinfo=P), ev)
+        self.assertTrue(run(20, 37))          # créneau 20 h 20 lancé avec 17 min de retard
+        self.assertTrue(run(7, 20))
+        self.assertFalse(run(20, 52))         # créneau 20 h 50 : pas un passage utile
+        self.assertFalse(run(3, 20))
+        self.assertTrue(run(3, 20, "workflow_dispatch"))   # lancement à la main : toujours
+        winter = dt.datetime(2026, 12, 5, 19, 20, tzinfo=dt.timezone.utc)   # 20 h 20 à Paris en hiver
+        self.assertTrue(horaires.should_run(winter, "schedule"))
 
     def test_name_matching(self):
         self.assertLess(app.similarity("Paris Saint-Germain", "Paris FC"), 0.8)

@@ -2,9 +2,10 @@ name: Mise à jour des analyses
 
 on:
   schedule:
-    - cron: "0 8 * * *"     # 10 h à Paris (9 h en hiver) : matchs du jour et résultats de la veille
-    - cron: "30 16 * * *"   # 18 h 30 à Paris (17 h 30 en hiver) : cotes de dernière minute, matchs du soir et NHL
-  workflow_dispatch:         # bouton « Run workflow » pour lancer à la main
+    # toutes les 30 minutes ; horaires.py ne garde que les 7 passages utiles (heure de Paris) :
+    # 7 h 20, 12 h 20, 14 h 20, 16 h 20, 17 h 50, 20 h 20, 23 h 50
+    - cron: "20,50 5-22 * * *"
+  workflow_dispatch:         # bouton « Run workflow » pour lancer à la main (toujours exécuté)
 
 permissions:
   contents: write
@@ -20,25 +21,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Faut-il lancer ?
+        id: gate
+        run: python3 horaires.py
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Installer les dépendances
+        if: steps.gate.outputs.run == 'true'
         run: pip install -r requirements.txt
 
       - name: Vérifier les calculs
+        if: steps.gate.outputs.run == 'true'
         run: python -m unittest discover -s tests
 
       - name: Calculer les analyses du jour
+        if: steps.gate.outputs.run == 'true'
         run: python app.py
 
       - name: Publier
+        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "analyse-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs
+          git pull --rebase --autostash -q || true
+          git add docs cache
           git diff --cached --quiet && echo "Rien de nouveau" && exit 0
           git commit -m "Analyses du $(date -u +%Y-%m-%d) $(date -u +%H:%M) UTC"
           git push

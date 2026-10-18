@@ -142,6 +142,11 @@ td.r,th.r{text-align:right}
 .mtime b{font-size:.98rem}
 .mtime .st{font-size:.64rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);white-space:nowrap}
 .mtime .st.live{color:var(--away);font-weight:700}
+.mtime .lv{color:var(--away);font-size:.92rem;white-space:nowrap}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--away);margin-right:4px;vertical-align:1px;animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.msc.on b{color:var(--away)}
+@media (prefers-reduced-motion: reduce){.dot{animation:none}}
 .mteams{display:grid;gap:5px;min-width:0}
 .mt{display:flex;align-items:center;gap:9px;min-width:0;font-weight:600;font-size:.97rem}
 .tn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -246,17 +251,99 @@ function logo(src, dark, cls = "lg"){
   const s = dark && darkMode() ? dark : src;
   return s ? `<img class="${cls}" src="${esc(s)}" alt="" width="22" height="22" loading="lazy" onerror="this.style.visibility='hidden'">` : `<span class="${cls}"></span>`;
 }
+// ---- direct : le navigateur interroge lui-même ESPN (score, minute, période), sans serveur
+const LIVEDATA = {};      // id du match -> {state: "pre"|"in"|"post", sh, sa, label}
+const ESPN = "https://site.api.espn.com/apis/site/v2/sports/";
+let LIVE_TIMER = null;
+const ymd = s => String(s || "").replaceAll("-", "");
+const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+function liveLabel(st, sport){
+  const t = st.type || {}, name = t.name || "", short = t.shortDetail || "";
+  if (t.state === "post"){
+    if (sport === "nhl") return /SO/.test(short) ? "Terminé (t.a.b.)" : /OT/.test(short) ? "Terminé (prol.)" : "Terminé";
+    return "Terminé";
+  }
+  if (t.state !== "in") return "";
+  if (sport === "foot") return /HALF/.test(name) || short === "HT" ? "Mi-temps" : (st.displayClock || "En direct");
+  if (/END_PERIOD|INTERMISSION/.test(name)) return st.period >= 3 ? "Fin 3e pér." : `Pause ${st.period}e`;
+  return `${st.period > 3 ? "Prol." : st.period + "e pér."} ${st.displayClock || ""}`.trim();
+}
+function storeLive(id, e, sport){
+  const c = (e.competitions || [])[0] || {};
+  const h = (c.competitors || []).find(x => x.homeAway === "home") || {}, a = (c.competitors || []).find(x => x.homeAway === "away") || {};
+  const st = e.status || {};
+  LIVEDATA[id] = {state: (st.type || {}).state, sh: h.score ?? "", sa: a.score ?? "", label: liveLabel(st, sport)};
+}
+function sameTeams(m, e){
+  const c = (e.competitions || [])[0] || {};
+  const h = (c.competitors || []).find(x => x.homeAway === "home"), a = (c.competitors || []).find(x => x.homeAway === "away");
+  return h && a && norm(h.team.displayName) === norm(m.home) && norm(a.team.displayName) === norm(m.away);
+}
+async function pollLive(){
+  clearTimeout(LIVE_TIMER);
+  if (!DATA || document.hidden) return;
+  const foot = DATA.foot || [], nhl = DATA.nhl || [], jobs = [];
+  for (const code of new Set(foot.map(m => m.code).filter(Boolean))){
+    jobs.push(fetch(`${ESPN}soccer/${code}/scoreboard?dates=${ymd(DATA.date)}`).then(r => r.json()).then(j => {
+      for (const e of j.events || []) if (foot.some(m => m.id === "foot-" + e.id)) storeLive("foot-" + e.id, e, "foot");
+    }).catch(() => {}));
+  }
+  if (nhl.length){
+    jobs.push(fetch(`${ESPN}hockey/nhl/scoreboard?dates=${ymd(DATA.nhl_date || DATA.date)}`).then(r => r.json()).then(j => {
+      for (const e of j.events || []){
+        const m = nhl.find(x => x.espn_id && x.espn_id === String(e.id)) || nhl.find(x => sameTeams(x, e));
+        if (m) storeLive(m.id, e, "nhl");
+      }
+    }).catch(() => {}));
+  }
+  await Promise.all(jobs);
+  paintLive();
+  // toutes les 30 s si un match est en cours ou commence bientôt, sinon toutes les 5 min
+  const now = Date.now();
+  const hot = [...foot, ...nhl].some(m => {
+    const L = LIVEDATA[m.id];
+    if (L && L.state === "in") return true;
+    const k = Date.parse(m.kickoff);
+    return !(L && L.state === "post") && k - now < 10 * 60e3 && now - k < 4 * 3600e3;
+  });
+  LIVE_TIMER = setTimeout(pollLive, hot ? 30e3 : 300e3);
+}
+function statusHtml(m){
+  const L = LIVEDATA[m.id];
+  if (L && L.state === "in") return `<b class="lv">${esc(L.label)}</b><span class="st live"><i class="dot"></i>Direct</span>`;
+  if (L && L.state === "post") return `<b>${esc(m.time)}</b><span class="st">${esc(L.label)}</span>`;
+  // sans réponse d'ESPN : état connu lors de la dernière mise à jour, sans score en cours (il serait périmé)
+  if (!L && LIVE.includes(m.state)) return `<b>${esc(m.time)}</b><span class="st live">Commencé</span>`;
+  if (!L && DONE.includes(m.state)) return `<b>${esc(m.time)}</b><span class="st">Terminé</span>`;
+  return `<b>${esc(m.time)}</b>`;
+}
+function scoreHtml(m){
+  const L = LIVEDATA[m.id];
+  if (L && (L.state === "in" || L.state === "post")) return `<span class="msc num${L.state === "in" ? " on" : ""}"><b>${esc(L.sh)}</b><b>${esc(L.sa)}</b></span>`;
+  if (!L && DONE.includes(m.state) && m.score){
+    const [sh, sa] = String(m.score).split(" ")[0].split("-");
+    return `<span class="msc num"><b>${esc(sh)}</b><b>${esc(sa)}</b></span>`;
+  }
+  return `<span class="msc"></span>`;
+}
+function paintLive(){
+  const all = [...(DATA.foot || []), ...(DATA.nhl || [])];
+  document.querySelectorAll(".mrow").forEach(b => {
+    const m = all.find(x => x.id === b.dataset.id);
+    if (!m) return;
+    b.querySelector(".mtime").innerHTML = statusHtml(m);
+    b.querySelector(".msc").outerHTML = scoreHtml(m);
+  });
+}
+document.addEventListener("visibilitychange", () => { if (!document.hidden) pollLive(); });
+
 function matchRow(m, detail){
-  const open = OPEN.has(m.id), live = LIVE.includes(m.state), done = DONE.includes(m.state);
-  const [sh, sa] = String(m.score || "").split(" ")[0].split("-");
-  // le site n'est mis à jour que 2 fois par jour : un score « en cours » serait périmé, on n'affiche que le score final
-  const status = live ? `<span class="st live">Commencé</span>` : done ? `<span class="st">Terminé</span>` : "";
-  const score = done && m.score ? `<span class="msc num"><b>${esc(sh)}</b><b>${esc(sa)}</b></span>` : `<span></span>`;
+  const open = OPEN.has(m.id);
   return `<div class="match${open ? " open" : ""}">
     <button type="button" class="mrow" data-id="${esc(m.id)}" aria-expanded="${open}" aria-label="${esc(m.home)} contre ${esc(m.away)}, ${esc(m.time)}. Voir l'analyse">
-      <span class="mtime num"><b>${esc(m.time)}</b>${status}</span>
+      <span class="mtime num">${statusHtml(m)}</span>
       <span class="mteams"><span class="mt">${logo(m.logo_h, m.logo_h_dark)}<span class="tn">${esc(m.home)}</span></span><span class="mt">${logo(m.logo_a, m.logo_a_dark)}<span class="tn">${esc(m.away)}</span></span></span>
-      ${score}<span class="chev" aria-hidden="true"></span></button>
+      ${scoreHtml(m)}<span class="chev" aria-hidden="true"></span></button>
     ${open ? `<div class="mdetail">${detail(m)}</div>` : ""}</div>`;
 }
 function group(title, logoSrc, list, detail){
@@ -377,6 +464,7 @@ fetch("data.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error(r
   document.getElementById("stamp").textContent = `Mis à jour le ${when.toLocaleDateString("fr-FR", {weekday:"long", day:"numeric", month:"long"})} à ${when.toLocaleTimeString("fr-FR", {hour:"2-digit", minute:"2-digit"})}`;
   if (d.notes && d.notes.length) document.getElementById("notes").innerHTML = `<div class="notes"><strong>À savoir aujourd'hui :</strong><ul>${d.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
   render();
+  pollLive();
 }).catch(() => {
   document.getElementById("stamp").textContent = "Données indisponibles";
   document.getElementById("view").innerHTML = `<div class="empty">Les analyses n'ont pas encore été générées. Lance la mise à jour depuis l'onglet « Actions » de GitHub, puis recharge cette page.</div>`;

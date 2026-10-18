@@ -331,6 +331,21 @@ def espn_leaders(league):
 
 
 SQUADS = {}
+CACHE_FILE = os.path.join(ROOT, "cache", "squads.json")
+
+
+def load_squad_cache(today):
+    """Effectifs déjà téléchargés aujourd'hui : évite ~1 000 requêtes ESPN à chaque passage."""
+    cache = load_json(CACHE_FILE, {})
+    if cache.get("date") == today.isoformat():
+        for key, squad in (cache.get("squads") or {}).items():
+            league, team = key.split("|", 1)
+            SQUADS[(league, team)] = squad
+
+
+def save_squad_cache(today):
+    save_json(CACHE_FILE, dict(date=today.isoformat(),
+                               squads={f"{lg}|{tm}": sq for (lg, tm), sq in SQUADS.items() if sq}))
 
 
 def stat_values(doc):
@@ -585,7 +600,7 @@ def foot_visuals(league, H, A):
     """Logos des équipes et du championnat, pays affiché dans le bandeau."""
     code = dict(LEAGUES).get(league, "")
     country, lid = LEAGUE_INFO.get(code, ("", None))
-    return dict(country=country, league_logo=LEAGUE_LOGO.format(lid) if lid else "",
+    return dict(country=country, code=code, league_logo=LEAGUE_LOGO.format(lid) if lid else "",
                 logo_h=(H.get("team") or {}).get("logo", ""), logo_a=(A.get("team") or {}).get("logo", ""))
 
 
@@ -747,12 +762,13 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
     aname = (sa.get("teamName") or {}).get("default") or A
     start = parse_time(g["startTimeUTC"])
 
-    odds = None
+    odds, espn_id = None, None
     for e in espn:
         comp, eh, ea = competitors(e)
         if similarity(hname, eh["team"].get("displayName", "")) >= 0.8 and \
                 similarity(aname, ea["team"].get("displayName", "")) >= 0.8:
             odds = espn_odds(comp, three_way=False)
+            espn_id = str(e.get("id") or "")      # sert au site pour suivre le score en direct
             break
     total = NHL_TOTAL
     started = g.get("gameState", "FUT") not in ("FUT", "PRE")
@@ -849,7 +865,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
-        ctx=ctx, reading=reading,
+        ctx=ctx, reading=reading, espn_id=espn_id,
         logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
         logo_a=g["awayTeam"].get("logo") or NHL_LOGO.format(A, "light"),
         logo_h_dark=g["homeTeam"].get("darkLogo") or NHL_LOGO.format(H, "dark"),
@@ -916,12 +932,16 @@ def save_json(path, obj):
 def main(now=None):
     now = now or dt.datetime.now(PARIS)
     today = now.date()
+    # la soirée NHL (matchs entre 0 h et 5 h à Paris) appartient au jour américain de la veille
+    nhl_day = (now - dt.timedelta(hours=7)).date()
     history = load_json(HIST_FILE, {})
+    load_squad_cache(today)
     foot_rows = foot(today, history)
-    nhl_rows = nhl(today, history)
+    save_squad_cache(today)
+    nhl_rows = nhl(nhl_day, history)
     cutoff = (today - dt.timedelta(days=400)).isoformat()
     history = {k: v for k, v in history.items() if v.get("date", "") >= cutoff}
-    data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(),
+    data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, bilan=bilan(history), notes=NOTES[-12:])
     save_json(HIST_FILE, history)
     save_json(DATA_FILE, data)
