@@ -248,6 +248,22 @@ td.r,th.r{text-align:right}
 .hgrid{display:grid;gap:12px}
 @media (min-width:860px){.hgrid{grid-template-columns:1fr 1fr}}
 .bets{list-style:none;margin:0;padding:0}
+.bhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.bhead h2{margin:0}
+.bkf{margin:0 0 10px;display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:6px;padding-bottom:2px}
+.bkf::-webkit-scrollbar{display:none}
+.bkf button{flex:0 0 auto}
+.bsum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 6px;padding:10px 12px;background:var(--soft);border-radius:12px}
+.bsum span{display:grid;gap:1px;min-width:0}
+.bsum small{font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.bsum b{font-family:var(--display);font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bsum .pos,.bday .pos{color:var(--ok)}.bsum .neg,.bday .neg{color:var(--ko)}
+.bday{display:flex;justify-content:space-between;gap:8px;margin:12px 0 0;padding-bottom:4px;font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.blive{display:block;margin-top:4px;font-size:.8rem;color:var(--muted)}
+.blive.on{color:var(--away);font-weight:600}
+.blive .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--away);margin-right:5px;vertical-align:1px}
+#mybets .more{margin-top:10px;width:100%}
+@media (min-width:520px){.bsum{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .bet{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:11px 0;border-top:1px solid var(--line)}
 .bet:first-child{border-top:0}
 .bet b{font-weight:700}
@@ -257,7 +273,7 @@ td.r,th.r{text-align:right}
 .bact{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px}
 .bact button{font:600 .85rem var(--body);border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:7px 12px;cursor:pointer;min-height:36px}
 .bact .w{border-color:var(--ok);color:var(--ok)}.bact .l{border-color:var(--ko);color:var(--ko)}
-.badge{font:700 .66rem var(--body);text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+.badge{white-space:nowrap;font:700 .66rem var(--body);text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
 .badge.won{background:var(--ok);color:var(--bg)}.badge.lost{background:var(--ko);color:var(--bg)}.badge.void{background:var(--draw);color:var(--ink)}.badge.open{border:1px solid var(--line);color:var(--muted)}
 .addbet{all:unset;box-sizing:border-box;width:30px;height:30px;border-radius:50%;display:inline-grid;place-items:center;border:1.5px solid var(--home);color:var(--home);font-weight:800;font-size:1.05rem;cursor:pointer;flex:none;margin-left:6px}
 .addbet:hover{background:var(--home);color:var(--bg)}
@@ -266,15 +282,29 @@ td.r,th.r{text-align:right}
 .pl.fun:has(.addbet){grid-template-columns:minmax(0,1fr) auto auto}
 dialog{border:0;border-radius:16px;padding:0;width:min(94vw,440px);background:var(--surface);color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.35)}
 dialog::backdrop{background:rgba(0,0,0,.45)}
-.dlg{display:grid;gap:12px;padding:18px}
+.dlg{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:18px;min-width:0}
+dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+.dlg label{min-width:0}
+.dlg input,.dlg select{box-sizing:border-box;width:100%;min-width:0;max-width:100%}
+.dlg input[type=date]{-webkit-appearance:none;appearance:none;display:block}
 .dlg h2{font-size:1.4rem}
 .dlg label{display:grid;gap:4px;font-size:.85rem;font-weight:600;color:var(--muted)}
 .dlg input,.dlg select{font:inherit;font-size:1.05rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;min-height:46px}
-.dlg .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dlg .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+/* téléphone : la fenêtre monte du bas de l'écran, sur toute la largeur, sans défilement de côté */
+@media (max-width:560px){
+  dialog{width:100%;max-width:100%;margin:auto 0 0;border-radius:18px 18px 0 0;max-height:92dvh}
+  .dlg{gap:10px;padding:16px 16px calc(14px + env(safe-area-inset-bottom,0px))}
+  .dlg h2{font-size:1.2rem}
+  .dlg input,.dlg select{min-height:44px;padding:9px 11px;font-size:16px}
+  .dlg .acts button{flex:1}
+  .dlg .hint2{font-size:.78rem}
+}
 .dlg .seg{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .dlg .seg button{font:700 .95rem var(--body);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:11px;cursor:pointer}
 .dlg .seg button[aria-pressed="true"]{background:var(--home);color:var(--bg);border-color:var(--home)}
 .dlg .hint2{font-size:.82rem;color:var(--muted);margin:0}
+.dlg p:empty{display:none}
 .dlg .acts{display:flex;gap:8px;justify-content:flex-end}
 .dlg .acts button{font:700 1rem var(--body);border-radius:12px;padding:12px 16px;cursor:pointer;border:1px solid var(--line);background:none;color:var(--ink)}
 .dlg .acts .ok2{background:var(--home);color:var(--bg);border-color:var(--home)}
@@ -583,6 +613,7 @@ async function pollLive(){
   if (box && LIVEM) box.innerHTML = liveList();
   if (fbox && LIVEM) fbox.innerHTML = favList();
   if (bkAutoSettle() && ["home", "bankroll"].includes(TAB)) render();
+  else { const mb = document.getElementById("mybets"); if (mb && BK.bets.some(b => b.status === "open")) mb.outerHTML = myBets(); }
   if (funbox && LIVEM) funbox.innerHTML = funList();
   // toutes les 30 s si un match est en cours ou commence bientôt, sinon toutes les 5 min
   const now = Date.now();
@@ -1234,27 +1265,74 @@ function betRow(b){
   const p = profitOf(b), done = DONE_ST.includes(b.status);
   const st = {won: "Gagné", lost: "Perdu", void: "Remboursé", open: "En cours"}[b.status];
   return `<li class="bet"><div><b>${esc(b.label)}</b><span class="badge ${b.status}">${st}</span>
-      <small>${b.match ? esc(b.match) + " · " : ""}cote ${odd(b.odds)} · mise ${money(b.stake)} · ${new Date(b.t).toLocaleDateString("fr-FR", {day: "numeric", month: "short"})}${b.src === "site" && b.auto && !done ? " · résultat automatique" : ""}</small></div>
+      <small>${b.match ? esc(b.match) + " · " : ""}cote ${odd(b.odds)} · mise ${money(b.stake)} · ${new Date(b.t).toLocaleDateString("fr-FR", {day: "numeric", month: "short"})}${b.src === "site" && b.auto && !done ? " · résultat automatique" : ""}</small>${betLive(b)}</div>
     <div class="amt num ${done ? (p > 0 ? "pos" : p < 0 ? "neg" : "") : ""}">${done ? money(p, true) : `<small>gain possible</small>${money(b.stake * b.odds)}`}</div>
     <div class="bact">${done ? `<button type="button" data-bkset="open" data-id="${b.id}">↺ Rouvrir</button>`
       : `<button type="button" class="w" data-bkset="won" data-id="${b.id}">✓ Gagné</button><button type="button" class="l" data-bkset="lost" data-id="${b.id}">✗ Perdu</button><button type="button" data-bkset="void" data-id="${b.id}">↺ Remboursé</button>`}
       <button type="button" data-bkdel="${b.id}" aria-label="Supprimer ce pari">🗑</button></div></li>`;
 }
+// ---- « Mes paris » : suivi de tous les paris, filtrés, avec le direct des paris en cours
+let BKF = "all", BKMORE = 30;
+try { BKF = localStorage.getItem("bkf") || "all"; } catch (e) {}
+const BK_FILTERS = [["all", "Tous"], ["open", "En cours"], ["won", "Gagnés"], ["lost", "Perdus"], ["void", "Remboursés"]];
+// où en est le match d'un pari ajouté depuis le site : pas commencé, en direct (score, chance actuelle), terminé
+function betLive(b){
+  if (b.status !== "open" || !b.matchId || !DATA) return "";
+  const m = [...(DATA.foot || []), ...(DATA.nhl || [])].find(x => x.id === b.matchId), L = LIVEDATA[b.matchId];
+  if (!m) return "";
+  if (L && L.state === "in"){
+    let chance = "";
+    if (LIVEM && L.ev && b.market){
+      const s = LIVEM.parseEspn(L.ev, m.sport), v = LIVEM.pickProb({market: b.market, player: b.player, p: b.p}, m, s, LIVEM.liveProbs(m, s));
+      if (v != null) chance = ` · chance actuelle <b>${Math.round(v * 100)} %</b>`;
+    }
+    return `<span class="blive on"><i class="dot"></i>${esc(L.label)} · ${esc(m.home)} <b class="num">${esc(L.sh)}-${esc(L.sa)}</b> ${esc(m.away)}${chance}</span>`;
+  }
+  if (L && L.state === "post") return `<span class="blive">Terminé · ${esc(m.home)} <b class="num">${esc(L.sh)}-${esc(L.sa)}</b> ${esc(m.away)} · résultat en cours de vérification</span>`;
+  if (notStarted(m)) return `<span class="blive">Coup d'envoi à ${esc(m.time)}</span>`;
+  return "";
+}
+function myBets(){
+  const all = [...BK.bets].sort((a, b) => b.t - a.t);
+  const count = k => k === "all" ? all.length : all.filter(b => b.status === k).length;
+  const F = BK_FILTERS.some(([k]) => k === BKF) ? BKF : "all";
+  const list = F === "all" ? all : all.filter(b => b.status === F);
+  const done = list.filter(b => b.status === "won" || b.status === "lost");
+  const staked = list.reduce((s, b) => s + b.stake, 0);
+  const profit = list.reduce((s, b) => s + profitOf(b), 0), stakedDone = done.reduce((s, b) => s + b.stake, 0);
+  const chips = `<nav class="leagues psubs bkf" aria-label="Filtrer mes paris">${BK_FILTERS.map(([k, l]) =>
+    `<button type="button" data-bkf="${k}" aria-pressed="${k === F}"><span>${l}</span><span class="n num">${count(k)}</span></button>`).join("")}</nav>`;
+  const sum = list.length ? `<div class="bsum num"><span><small>Paris</small><b>${list.length}</b></span><span><small>Misé</small><b>${money(staked)}</b></span>
+      ${F === "open" ? `<span><small>Gain possible</small><b>${money(list.reduce((s, b) => s + b.stake * b.odds, 0))}</b></span>`
+        : `<span><small>Bénéfice</small><b class="${profit > 0 ? "pos" : profit < 0 ? "neg" : ""}">${money(profit, true)}</b></span>
+           <span><small>ROI</small><b>${stakedDone ? `${profit >= 0 ? "+" : ""}${(profit / stakedDone * 100).toFixed(1).replace(".", ",")} %` : "—"}</b></span>`}</div>` : "";
+  // regroupés par jour, le plus récent d'abord
+  const shown = list.slice(0, BKMORE), days = [];
+  for (const b of shown){
+    const d = new Date(b.t).toLocaleDateString("fr-FR", {weekday: "long", day: "numeric", month: "long"});
+    let g = days.find(x => x.d === d);
+    if (!g) days.push(g = {d, rows: []});
+    g.rows.push(b);
+  }
+  const body = days.map(g => { const p = g.rows.reduce((s, b) => s + profitOf(b), 0);
+    return `<div class="bday"><span>${esc(g.d[0].toUpperCase() + g.d.slice(1))}</span>${g.rows.some(b => b.status !== "open") ? `<b class="num ${p > 0 ? "pos" : p < 0 ? "neg" : ""}">${money(p, true)}</b>` : ""}</div>
+      <ul class="bets">${g.rows.map(betRow).join("")}</ul>`; }).join("");
+  const empty = !all.length ? `<p class="src">Aucun pari pour l'instant. Touche <b>+</b> à côté d'un pronostic (onglets Pronostics ou Matchs) ou <b>Nouveau pari</b> : il apparaîtra ici, avec le score en direct et le résultat.</p>`
+    : `<p class="src">Aucun pari dans cette catégorie.</p>`;
+  return `<section class="card2" id="mybets"><div class="bhead"><h2>Mes paris</h2><button type="button" class="sbtn" data-bk="bet">+ Nouveau pari</button></div>
+    ${chips}${sum}${list.length ? body : empty}
+    ${list.length > shown.length ? `<button type="button" class="sbtn alt more" data-bkmore="1">Voir ${Math.min(30, list.length - shown.length)} paris de plus</button>` : ""}</section>`;
+}
 function bankrollView(){
   const s = bkStats();
-  const open = BK.bets.filter(b => b.status === "open").sort((a, b) => b.t - a.t);
-  const done = BK.bets.filter(b => b.status !== "open").sort((a, b) => (b.settledAt || b.t) - (a.settledAt || a.t)).slice(0, 60);
   const moves = [...BK.moves].sort((a, b) => b.t - a.t);
   return `${bkHero()}
     <div class="tiles num">
       <div class="tile"><div class="v">${s.roi >= 0 ? "+" : ""}${s.roi.toFixed(1).replace(".", ",")} %</div><div class="k">rendement (ROI) : bénéfice ÷ total misé</div></div>
       <div class="tile"><div class="v">${s.won}/${s.won + s.lost}</div><div class="k">paris gagnés (${Math.round(s.hit)} %)</div></div>
     </div>
+    ${myBets()}
     ${BK.moves.length || BK.bets.length ? bkChartCard() : ""}
-    <section class="card2"><h2>Paris en cours <span class="cnt num">${open.length}</span></h2>
-      ${open.length ? `<ul class="bets">${open.map(betRow).join("")}</ul>` : `<p class="src">Aucun pari en cours. Touche <b>+</b> à côté d'un pronostic (onglet Pronostics ou Matchs) pour l'ajouter : son résultat se mettra à jour tout seul.</p>`}</section>
-    <section class="card2"><h2>Paris terminés</h2>
-      ${done.length ? `<ul class="bets">${done.map(betRow).join("")}</ul>` : `<p class="src">Rien pour l'instant.</p>`}</section>
     <section class="card2"><h2>Dépôts et retraits</h2>
       ${moves.length ? `<ul class="bets">${moves.map(m => `<li class="bet"><div><b>${m.type === "dep" ? "Dépôt" : "Retrait"}</b><small>${new Date(m.t).toLocaleDateString("fr-FR", {day: "numeric", month: "long", year: "numeric"})}${m.note ? " · " + esc(m.note) : ""}</small></div>
           <div class="amt num ${m.type === "dep" ? "pos" : "neg"}">${m.type === "dep" ? "+" : "−"}${money(m.amount)}</div><div class="bact"><button type="button" data-mvdel="${m.id}" aria-label="Supprimer">🗑</button></div></li>`).join("")}</ul>`
@@ -1322,7 +1400,7 @@ function openBetForm(ref = null){
     const same = ref && label === ref.label;
     BK.bets.push({id: uid(), t: ref ? Date.now() : dayToT(fd.get("day")), label, match: String(fd.get("match") || "").trim(),
                   odds: Math.round(odds * 100) / 100, stake: Math.round(stake * 100) / 100, status: "open",
-                  ...(ref ? {src: "site", matchId: ref.matchId, sport: ref.sport, market: ref.market, player: ref.player || null, p: ref.p, auto: !!(ref.auto && same)} : {src: "manuel"})});
+                  ...(ref ? {src: "site", matchId: ref.matchId, sport: ref.sport, market: ref.market, player: ref.player || null, value: ref.value || null, p: ref.p, auto: !!(ref.auto && same)} : {src: "manuel"})});
     toast(stake > s.bank && s.dep > 0 ? "Pari ajouté. Attention : la mise dépasse ta bankroll." : "Pari ajouté à ta bankroll.");
   });
 }
@@ -1370,7 +1448,7 @@ function bkAutoSettle(){
 }
 // clics de la bankroll, de l'accueil et du menu (un seul écouteur pour toute la page)
 document.addEventListener("click", ev => {
-  const el = ev.target.closest("[data-bk],[data-addbet],[data-bkset],[data-bkdel],[data-mvdel],[data-cur],[data-range],[data-msport],[data-go],[data-tab]");
+  const el = ev.target.closest("[data-bk],[data-addbet],[data-bkset],[data-bkdel],[data-mvdel],[data-cur],[data-range],[data-msport],[data-go],[data-tab],[data-bkf],[data-bkmore]");
   if (!el) return;
   const ds = el.dataset;
   if (ds.tab) return goTab(ds.tab);
@@ -1383,6 +1461,8 @@ document.addEventListener("click", ev => {
   if (ds.bkdel){ BK.bets = BK.bets.filter(x => x.id !== ds.bkdel); bkSave(); render(); toast("Pari supprimé."); return; }
   if (ds.mvdel){ BK.moves = BK.moves.filter(x => x.id !== ds.mvdel); bkSave(); render(); toast("Mouvement supprimé."); return; }
   if (ds.cur){ BK.currency = ds.cur; bkSave(); render(); return; }
+  if (ds.bkf){ BKF = ds.bkf; BKMORE = 30; try { localStorage.setItem("bkf", BKF); } catch (e) {} const box = document.getElementById("mybets"); if (box) box.outerHTML = myBets(); return; }
+  if (ds.bkmore){ BKMORE += 30; const box = document.getElementById("mybets"); if (box) box.outerHTML = myBets(); return; }
   if (ds.range){ RANGE = ds.range; try { localStorage.setItem("range", RANGE); } catch (e) {} render(); return; }
   if (ds.msport){ MSPORT = ds.msport; try { localStorage.setItem("msport", MSPORT); } catch (e) {} render(); return; }
 });

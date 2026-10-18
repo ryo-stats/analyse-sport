@@ -82,6 +82,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
   - dépôts et retraits ;
   - paris ajoutés avec le bouton **+** à côté d'un pronostic (cote du bookmaker, ou cote juste) ou avec « Nouveau pari » ;
   - résultat automatique pour les pronostics du site, sinon ✓ Gagné / ✗ Perdu / ↺ Remboursé à cocher ;
+  - **Mes paris** : tous les paris par jour, filtres Tous / En cours / Gagnés / Perdus / Remboursés, avec mise, bénéfice et ROI du filtre ; pour un pari en cours, le score et la minute en direct ;
   - indicateurs : ROI, taux de réussite, série en cours ;
   - monnaie CHF ou EUR.
 
