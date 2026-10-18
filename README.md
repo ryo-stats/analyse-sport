@@ -74,6 +74,14 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
 - **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
+## Bilan des pronostics
+
+- **Filtre** : Tous, ⚽ Foot ou 🏒 NHL.
+- **Deux cases** : le dernier jour, et le total depuis l'ouverture du site.
+- **Jour par jour** : on touche un jour pour voir ses pronostics, rangés par championnat, avec ✓ ou ✗.
+- **Pronostics vérifiés par championnat** : rangés en catégories Foot et NHL ; on touche un championnat pour voir ses pronostics. Le détail couvre les 30 derniers jours, le score toute la période.
+- **Niveau de confiance** : un tableau compare le taux de réussite annoncé et le taux réel, par nombre d'étoiles.
+
 ## Cotes, Safe, Fun et enjeu
 
 - **Cotes du bookmaker** : les cotes d'avant-match relayées par ESPN, en décimal, sont affichées sur chaque match. Elles sont archivées pour rester visibles après le coup d'envoi, car ESPN ne fournit pas de cotes en direct.

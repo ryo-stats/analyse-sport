@@ -825,9 +825,34 @@ def picks_bilan(store):
         if grp:
             by_stars.append(dict(stars=s, n=len(grp), announced=pct(sum(p["p"] for p in grp) / len(grp)),
                                  actual=pct(sum(p["result"] for p in grp) / len(grp))))
-    recent = sorted(done, key=lambda p: p["date"], reverse=True)[:40]
+    def agg(rows):
+        if not rows:
+            return dict(n=0, ok=0)
+        ok = sum(bool(r["result"]) for r in rows)
+        return dict(n=len(rows), ok=ok, rate=pct(ok / len(rows)), expected=pct(sum(r["p"] for r in rows) / len(rows)))
+
+    def by_sport(rows):
+        return dict(all=agg(rows), foot=agg([r for r in rows if r["sport"] == "foot"]),
+                    nhl=agg([r for r in rows if r["sport"] == "nhl"]))
+
+    def league_of(p):
+        return p.get("league") or ("NHL" if p["sport"] == "nhl" else "?")
+
+    # bilan jour par jour (60 derniers jours), total depuis l'ouverture, par championnat
+    dates = sorted({p["date"] for p in done}, reverse=True)
+    days = [dict(date=d, **by_sport([p for p in done if p["date"] == d])) for d in dates[:60]]
+    leagues = [dict(sport=s, league=lg, **agg([p for p in done if p["sport"] == s and league_of(p) == lg]))
+               for s, lg in {(p["sport"], league_of(p)) for p in done}]
+    leagues.sort(key=lambda x: (x["sport"] != "foot", -x["n"], x["league"]))
+    # détail des pronostics vérifiés des 30 derniers jours (pour les listes dépliables du site)
+    last = set(dates[:30])
+    details = sorted((p for p in done if p["date"] in last), key=lambda p: (p["date"], p["home"]), reverse=True)
+    recent = details[:40]
     return dict(n=len(done), rate=pct(hits / len(done)), expected=pct(sum(p["p"] for p in done) / len(done)),
-                by_stars=by_stars,
+                since=dates[-1], total=by_sport(done), days=days, leagues=leagues, by_stars=by_stars,
+                details=[dict(date=p["date"], sport=p["sport"], league=league_of(p),
+                              match=f"{p['home']} – {p['away']}", label=p["label"], prob=pct(p["p"]),
+                              stars=p["stars"], ok=bool(p["result"])) for p in details],
                 recent=[dict(date=p["date"], sport=p["sport"], match=f"{p['home']} – {p['away']}", label=p["label"],
                              prob=pct(p["p"]), stars=p["stars"], ok=p["result"]) for p in recent])
 

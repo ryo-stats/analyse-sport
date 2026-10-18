@@ -344,6 +344,22 @@ class AppTest(unittest.TestCase):
         got = {k: v["result"] for k, v in store.items()}
         self.assertEqual(got, dict(a=True, b=True, c=False, d=True, e=True, f=False, g=False, h=True, i=True, j=False))
 
+    def test_picks_bilan_by_day_and_league(self):
+        def pk(day, sport, league, ok, p=0.7):
+            return dict(match="x", sport=sport, league=league, date=day, home="A", away="B", label="L", p=p, stars=3, result=ok)
+        store = {"1": pk("2026-10-17", "foot", "Ligue 1", True), "2": pk("2026-10-17", "foot", "Ligue 1", False),
+                 "3": pk("2026-10-18", "foot", "LaLiga", True), "4": pk("2026-10-18", "nhl", "NHL", True),
+                 "5": pk("2026-10-18", "nhl", "NHL", None)}                     # pas encore vérifié : ignoré
+        b = app.picks_bilan(store)
+        self.assertEqual((b["n"], b["since"]), (4, "2026-10-17"))
+        self.assertEqual((b["total"]["all"]["ok"], b["total"]["foot"]["n"], b["total"]["nhl"]["ok"]), (3, 3, 1))
+        self.assertEqual([d["date"] for d in b["days"]], ["2026-10-18", "2026-10-17"])       # le plus récent d'abord
+        self.assertEqual((b["days"][0]["all"]["n"], b["days"][0]["nhl"]["n"]), (2, 1))
+        self.assertEqual([(x["sport"], x["league"], x["n"]) for x in b["leagues"]],
+                         [("foot", "Ligue 1", 2), ("foot", "LaLiga", 1), ("nhl", "NHL", 1)])
+        self.assertEqual(len(b["details"]), 4)
+        self.assertEqual(app.picks_bilan({}), dict(n=0))
+
     def test_name_matching(self):
         self.assertLess(app.similarity("Paris Saint-Germain", "Paris FC"), 0.8)
         self.assertGreaterEqual(app.similarity("Olympique de Marseille", "Marseille"), 0.9)
