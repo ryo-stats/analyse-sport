@@ -945,7 +945,7 @@ def selection(rows, n=10):
     return sorted(cands, key=lambda c: -c["p"])[:n]
 
 
-def picks_bilan(store):
+def picks_bilan(store, history=None):
     every = [p for p in store.values() if p.get("result") is not None]
     done = [p for p in every if pick_group(p) == "safe"]
     fun_done = [p for p in every if pick_group(p) == "fun"]
@@ -986,6 +986,7 @@ def picks_bilan(store):
                 since=dates[-1], total=by_sport(done), fun=by_sport(fun_done), days=days, leagues=leagues,
                 by_stars=by_stars,
                 details=[dict(date=p["date"], sport=p["sport"], league=league_of(p), mid=p["match"],
+                              score=((history or {}).get(p["match"]) or {}).get("score"),
                               match=f"{p['home']} – {p['away']}", label=p["label"], prob=pct(p["p"]),
                               stars=p["stars"], ok=bool(p["result"]), fun=pick_group(p) == "fun") for p in details],
                 recent=[dict(date=p["date"], sport=p["sport"], match=f"{p['home']} – {p['away']}", label=p["label"],
@@ -1374,7 +1375,7 @@ def main(now=None):
     resolve_picks(store, history)
     store = {k: v for k, v in store.items() if v.get("date", "") >= cutoff}
     stats = bilan(history)
-    stats["picks"] = picks_bilan(store)
+    stats["picks"] = picks_bilan(store, history)
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
                 notes=NOTES[-12:])

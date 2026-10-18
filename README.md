@@ -90,7 +90,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 
 - **Filtre** : Tous, ⚽ Foot ou 🏒 NHL.
 - **Deux cases** : le dernier jour, et le total depuis l'ouverture du site.
-- **Jour par jour** : on touche un jour pour voir ses pronostics, rangés par championnat, avec ✓ ou ✗.
+- **Jour par jour** : on touche un jour pour voir ses matchs, rangés par sport (Foot, puis NHL), puis par championnat (Ligue 1, Premier League, LaLiga, Serie A, Bundesliga, Ligue des champions). Chaque match affiche son score final, le compte des pronostics réussis et chaque pronostic ✓ ou ✗.
 - **Pronostics vérifiés par championnat** : rangés en catégories Foot et NHL ; on touche un championnat pour voir ses pronostics. Le détail couvre les 30 derniers jours, le score toute la période.
 - **Fun et score exact** : comptés sur une ligne à part, pour ne pas fausser le taux des pronostics sûrs. Dans les listes, ils sont marqués 🎲.
 - **Niveau de confiance** : un tableau compare le taux de réussite annoncé et le taux réel, par nombre d'étoiles.

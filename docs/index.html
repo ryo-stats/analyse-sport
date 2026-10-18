@@ -370,6 +370,15 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .vcat:first-child{border-top:0}
 .vlh{display:flex;justify-content:space-between;font:700 .78rem var(--body);color:var(--muted);margin:10px 0 2px}
 .vlist{list-style:none;margin:0;padding:0}
+.vsp{display:flex;justify-content:space-between;align-items:center;margin:12px 0 4px;padding:6px 10px;background:var(--soft);border-radius:8px;font:800 .8rem var(--body);text-transform:uppercase;letter-spacing:.04em}
+.vsp:first-child{margin-top:4px}
+.vm{margin:6px 0 10px;border:1px solid var(--line);border-radius:10px;padding:8px 10px 2px}
+.vmh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding-bottom:6px}
+.vmh b{flex:1 1 140px;min-width:0;font-size:.92rem}
+.vmh small{color:var(--muted);font-size:.76rem}
+.vms{font-weight:800;font-size:.9rem;background:var(--soft);border-radius:6px;padding:1px 7px}
+.vmt{font-weight:800;font-size:.8rem}.vmt.good{color:var(--ok)}.vmt.bad{color:var(--ko)}
+.vm .vp{padding:6px 0}
 .vp{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
 .vp:first-child{border-top:0}
 .vk{font-weight:800;text-align:center}
@@ -1079,23 +1088,34 @@ let BSPORT = "all";
 try { BSPORT = localStorage.getItem("bsport") || "all"; } catch (e) {}
 const dmy = d => d.split("-").reverse().join("/");
 const dayName = d => { const s = new Date(d + "T12:00:00").toLocaleDateString("fr-FR", {weekday: "long", day: "numeric", month: "long"}); return s[0].toUpperCase() + s.slice(1); };
-function vPick(r){
+// Bilan rangé Sport → Championnat → Match : score final du match, puis ses pronostics ✓/✗
+const LEAGUE_RANK = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
+const okRate = (ok, n) => n ? (ok * 2 >= n ? "good" : "bad") : "";
+function vPickIn(r){
   return `<li class="vp${r.fun ? " vfun" : ""}"><span class="vk ${r.ok ? "ok" : "ko"}" aria-label="${r.ok ? "réussi" : "raté"}">${r.ok ? "✓" : "✗"}</span>
-    <span class="vb"><b>${r.fun ? "🎲 " : ""}${esc(r.label)}</b><small>${esc(r.match)} · ${esc(dmy(r.date).slice(0, 5))}</small></span><span class="num vpp">${r.prob} %</span></li>`;
+    <span class="vb"><b>${r.fun ? "🎲 " : ""}${esc(r.label)}</b></span><span class="num vpp">${r.prob} %</span></li>`;
 }
-// liste groupée par championnat (Foot d'abord, NHL ensuite)
-function vByLeague(list){
-  const groups = [];
-  for (const r of list){
-    let g = groups.find(x => x.league === r.league && x.sport === r.sport);
-    if (!g) groups.push(g = {league: r.league, sport: r.sport, rows: []});
-    g.rows.push(r);
-  }
-  groups.sort((a, b) => (a.sport !== "foot") - (b.sport !== "foot"));
-  // le score du championnat ne compte que les pronostics sûrs ; les paris Fun suivent, marqués 🎲
-  return groups.map(g => { const safe = g.rows.filter(r => !r.fun);
-    return `<div class="vlh">${g.sport === "nhl" ? "🏒" : "⚽"} ${esc(g.league)} <span class="num">${safe.filter(r => r.ok).length}/${safe.length}</span></div>
-    <ul class="vlist">${[...safe, ...g.rows.filter(r => r.fun)].map(vPick).join("")}</ul>`; }).join("");
+function groupBy(rows, key){
+  const out = [];
+  for (const r of rows){ const k = key(r); let g = out.find(x => x.k === k); if (!g) out.push(g = {k, rows: []}); g.rows.push(r); }
+  return out;
+}
+const safeOf = rows => rows.filter(r => !r.fun);
+const tally = rows => { const s = safeOf(rows), ok = s.filter(r => r.ok).length; return s.length ? `<span class="num vmt ${okRate(ok, s.length)}">${ok}/${s.length}</span>` : ""; };
+function vMatches(rows, withDate){
+  // le plus récent d'abord ; chaque match : score final, puis pronostics sûrs, puis Fun / score exact 🎲
+  return groupBy(rows, r => `${r.mid || r.match}|${r.date}`).map(g => { const r0 = g.rows[0];
+    return `<div class="vm"><div class="vmh"><b>${esc(r0.match)}</b>${r0.score ? `<span class="vms num">${esc(String(r0.score).replace("-", " – "))}</span>` : ""}${withDate ? `<small>${esc(dmy(r0.date).slice(0, 5))}</small>` : ""}${tally(g.rows)}</div>
+      <ul class="vlist">${[...safeOf(g.rows), ...g.rows.filter(r => r.fun)].map(vPickIn).join("")}</ul></div>`; }).join("");
+}
+function vTree(rows, withDate){
+  return [["foot", "⚽ Foot"], ["nhl", "🏒 NHL"]].map(([sp, title]) => {
+    const inSport = rows.filter(r => r.sport === sp);
+    if (!inSport.length) return "";
+    const leagues = groupBy(inSport, r => r.league).sort((a, b) => LEAGUE_RANK(a.k) - LEAGUE_RANK(b.k));
+    return `<div class="vsp">${title}${tally(inSport)}</div>` + leagues.map(l =>
+      (sp === "nhl" && leagues.length === 1 ? "" : `<div class="vlh">${esc(l.k)}${tally(l.rows)}</div>`) + vMatches(l.rows, withDate)).join("");
+  }).join("");
 }
 const vScore = a => a && a.n ? `<span class="num"><b>${a.ok}</b>/${a.n}</span><span class="num vr ${a.rate >= 60 ? "good" : a.rate < 45 ? "bad" : ""}">${a.rate} %</span>` : `<span></span><span class="vr">—</span>`;
 function picksBlock(b){
@@ -1115,21 +1135,21 @@ function picksBlock(b){
   const days = b.days.filter(d => d[S].n).slice(0, 21).map(d => {
     const rows = det.filter(r => r.date === d.date);
     return `<details class="vd"><summary><span class="vday">${esc(dayName(d.date))}</span>${vScore(d[S])}</summary>
-      <div class="vin">${rows.length ? vByLeague(rows) : `<p class="src">Détail disponible sur les 30 derniers jours seulement.</p>`}${d.fun && d.fun[S].n ? `<p class="funday">🎲 Fun et score exact ce jour-là : <b class="num">${d.fun[S].ok}/${d.fun[S].n}</b></p>` : ""}</div></details>`;
+      <div class="vin">${rows.length ? vTree(rows, false) : `<p class="src">Détail disponible sur les 30 derniers jours seulement.</p>`}${d.fun && d.fun[S].n ? `<p class="funday">🎲 Fun et score exact ce jour-là : <b class="num">${d.fun[S].ok}/${d.fun[S].n}</b></p>` : ""}</div></details>`;
   }).join("");
   const sports = [["foot", "⚽ Foot"], ["nhl", "🏒 NHL"]].filter(([k]) => S === "all" || S === k);
   const leagues = sports.map(([k, title]) => {
-    const ls = b.leagues.filter(x => x.sport === k);
+    const ls = b.leagues.filter(x => x.sport === k).sort((x, y) => LEAGUE_RANK(x.league) - LEAGUE_RANK(y.league));
     if (!ls.length) return "";
     return `<div class="vcat">${title}</div>` + ls.map(x => {
-      const rows = det.filter(r => r.sport === k && r.league === x.league && !r.fun);
+      const rows = det.filter(r => r.sport === k && r.league === x.league);
       return `<details class="vd"><summary><span class="vday">${esc(x.league)}</span>${vScore(x)}</summary>
-        <div class="vin">${rows.length ? `<ul class="vlist">${rows.map(vPick).join("")}</ul>` : `<p class="src">Pas de pronostic vérifié ces 30 derniers jours.</p>`}</div></details>`;
+        <div class="vin">${rows.length ? vMatches(rows, true) : `<p class="src">Pas de pronostic vérifié ces 30 derniers jours.</p>`}</div></details>`;
     }).join("");
   }).join("");
   return `<h2 style="margin:6px 0 10px">Pronostics</h2>${chips}${tiles}
-    <h3 class="vh">Jour par jour</h3><p class="src">Touche un jour pour voir ses pronostics, rangés par championnat.</p><div class="vbox">${days || `<p class="src">Rien pour ce sport.</p>`}</div>
-    <h3 class="vh" id="vleagues">Pronostics vérifiés par championnat</h3><p class="src">Touche un championnat pour voir ses pronostics (30 derniers jours). Le score couvre toute la période.</p><div class="vbox">${leagues}</div>
+    <h3 class="vh">Jour par jour</h3><p class="src">Touche un jour : ses matchs, rangés par sport puis par championnat, avec le score final et chaque pronostic ✓ ou ✗.</p><div class="vbox">${days || `<p class="src">Rien pour ce sport.</p>`}</div>
+    <h3 class="vh" id="vleagues">Pronostics vérifiés par championnat</h3><p class="src">Touche un championnat pour voir ses matchs (30 derniers jours). Le score couvre toute la période ; les paris 🎲 Fun et score exact n'y comptent pas.</p><div class="vbox">${leagues}</div>
     <h3 class="vh">Par niveau de confiance</h3>
     <div class="tablewrap"><table class="num"><thead><tr><th>Confiance</th><th class="r">Pronostics</th><th class="r">Annoncé</th><th class="r">Réussis</th></tr></thead>
     <tbody>${b.by_stars.map(r => `<tr><td><span class="stars">${starStr(r.stars)}</span></td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>`;
