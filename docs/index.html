@@ -205,12 +205,27 @@ td.r,th.r{text-align:right}
 .fav[aria-pressed="true"]{color:var(--warn)}
 .fav:focus-visible{outline:2px solid var(--home);outline-offset:-2px}
 .pmhead .fav{width:26px;height:26px;margin-left:-6px}
-.alerts{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 14px;margin-bottom:12px}
-.alerts summary{cursor:pointer;font-weight:700}
-.alerts .src{margin:8px 0}
+/* notifications : bandeau, guide pas à pas, gros bouton (pensés pour le pouce) */
+.pbanner{display:flex;align-items:center;gap:8px;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:8px 8px 8px 12px;margin-bottom:12px;font-size:.9rem}
+.pbanner span{flex:1;min-width:0}
+.pgo{font:700 .85rem var(--body);border:0;background:var(--home);color:var(--bg);border-radius:999px;padding:9px 14px;cursor:pointer;white-space:nowrap}
+.px{border:0;background:none;color:var(--muted);font-size:1.4rem;line-height:1;width:36px;height:36px;cursor:pointer;flex:none}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px;display:grid;gap:10px}
+.pcard h2{font-size:1.3rem;margin:0}
+.pcard .src{margin:0}
+.pcard.on{border-color:var(--home)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:st}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:center;font-size:1rem;line-height:1.35;counter-increment:st}
+.si{width:44px;height:44px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:1.35rem;position:relative}
+.si::after{content:counter(st);position:absolute;top:-4px;left:-4px;width:18px;height:18px;border-radius:50%;background:var(--home);color:var(--bg);font:700 .7rem/18px var(--body);text-align:center}
+.bigbtn{display:block;width:100%;border:0;border-radius:12px;background:var(--home);color:var(--bg);font:700 1.08rem var(--body);padding:16px;cursor:pointer;min-height:54px}
+.bigbtn.alt{background:var(--soft);color:var(--ink);border:1px solid var(--line);font-size:.98rem}
+.switch{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;cursor:pointer}
+.switch input{width:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--home)}
+.phelp summary{cursor:pointer;font-weight:700}
+.sech .cnt{font:600 .85rem var(--body);color:var(--muted);margin-left:6px}
 .arow{display:flex;flex-wrap:wrap;gap:8px}
-.arow input{flex:1 1 180px;min-width:0;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
-.arow button{font:600 .9rem var(--body);border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.arow button{font:600 .92rem var(--body);border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:10px 16px;cursor:pointer;min-height:44px}
 .lscore{margin-left:auto;font-family:var(--display);font-size:1.15rem;white-space:nowrap}
 .lstat{font:700 .7rem var(--body);text-transform:uppercase;letter-spacing:.03em;color:var(--away);white-space:nowrap}
 .lstat.done{color:var(--muted)}
@@ -250,6 +265,7 @@ td.r,th.r{text-align:right}
     <button id="tab-favs" role="tab" aria-selected="false" data-tab="favs">★ Favoris</button>
     <button id="tab-bilan" role="tab" aria-selected="false" data-tab="bilan">Bilan</button>
   </nav>
+  <div id="pbanner"></div>
   <div id="notes"></div>
   <main id="view"><div class="empty">Chargement des analyses…</div></main>
   <section class="explain" id="explain">
@@ -328,11 +344,13 @@ function storeLive(id, e, sport){
   LIVEDATA[id] = {state: (st.type || {}).state, sh: h.score ?? "", sa: a.score ?? "", label: liveLabel(st, sport), ev: e};
 }
 
-// ---- favoris : étoile à côté de l'heure. Gardés sur l'appareil, et chez le robot d'alertes s'il est configuré
-// (le robot n'envoie des alertes que pour ces matchs, et les favoris sont alors les mêmes sur tous les appareils).
+// ---- favoris : étoile à côté de l'heure, 15 au plus. Chaque téléphone a les siens.
+// Gardés sur le téléphone ; une fois les notifications activées, aussi chez le robot (qui n'envoie à ce téléphone
+// que les buts et le résultat de SES matchs).
 const ROBOT = "https://analyse-sport-alertes.barrierecedric-pro.workers.dev";   // robot d'alertes Cloudflare (worker/)
-let FAVS = new Set(), ACODE = "";
-try { FAVS = new Set(JSON.parse(localStorage.getItem("favs") || "[]")); ACODE = localStorage.getItem("acode") || ""; } catch (e) {}
+const MAX_FAVS = 15;
+let FAVS = new Set(), MORNING = false;
+try { FAVS = new Set(JSON.parse(localStorage.getItem("favs") || "[]")); localStorage.removeItem("acode"); } catch (e) {}
 const saveFavs = () => { try { localStorage.setItem("favs", JSON.stringify([...FAVS])); } catch (e) {} };
 let TOAST = null;
 function toast(msg){
@@ -344,33 +362,38 @@ function toast(msg){
 }
 function favBtn(m){
   const on = FAVS.has(m.id);
-  return `<button type="button" class="fav" data-fav="${esc(m.id)}" aria-pressed="${on}" aria-label="${on ? "Retirer des favoris" : "Ajouter aux favoris (alertes)"} : ${esc(m.home)} – ${esc(m.away)}">${on ? "★" : "☆"}</button>`;
+  return `<button type="button" class="fav" data-fav="${esc(m.id)}" aria-pressed="${on}" aria-label="${on ? "Retirer des favoris" : "Ajouter aux favoris"} : ${esc(m.home)} – ${esc(m.away)}">${on ? "★" : "☆"}</button>`;
 }
 async function robotCall(path, body){
   const r = await fetch(ROBOT + path, body ? {method: "POST", headers: {"content-type": "text/plain"}, body: JSON.stringify(body)} : {cache: "no-store"});
   return r.json();
 }
-async function loadFavs(){
-  if (!ROBOT) return;
-  try {
-    const j = await robotCall("/favoris");
-    if (Array.isArray(j.ids)){ FAVS = new Set(j.ids); saveFavs(); render(); }
-  } catch (e) {}
+// favoris d'anciens jours : on ne garde que les matchs encore affichés (sinon ils occuperaient les 15 places)
+function pruneFavs(){
+  if (!DATA) return;
+  const ids = new Set([...(DATA.foot || []), ...(DATA.nhl || [])].map(m => m.id));
+  const kept = [...FAVS].filter(id => ids.has(id));
+  if (kept.length !== FAVS.size){ FAVS = new Set(kept); saveFavs(); }
 }
 async function toggleFav(id){
   const on = !FAVS.has(id);
+  if (on && FAVS.size >= MAX_FAVS){ toast(`${MAX_FAVS} favoris au maximum : retire d'abord une étoile.`); return; }
   on ? FAVS.add(id) : FAVS.delete(id);
   saveFavs(); render();
-  if (!ROBOT || !ACODE){
-    if (on) toast("Favori enregistré sur cet appareil. Pour les notifications : onglet ★ Favoris › Activer.");
+  if (!PUSH_ON){
+    if (on) toast("★ Ajouté ! Pour être prévenu des buts, active les notifications dans l'onglet ★ Favoris.");
     return;
   }
   try {
-    const j = await robotCall("/favoris", {code: ACODE, id, on});
-    if (!j.ok) return toast(j.message || "Le robot a refusé le favori.");
-    FAVS = new Set(j.ids); saveFavs();
-    toast(on ? "★ Ajouté : tu recevras les alertes de ce match." : "Retiré des favoris : plus d'alerte pour ce match.");
-  } catch (e) { toast("Robot d'alertes injoignable : favori gardé sur cet appareil seulement."); }
+    const j = await robotCall("/favoris", {endpoint: SUB.endpoint, id, on});
+    if (j.inconnu){ await syncRobot(); return; }
+    if (!j.ok){
+      toast(j.message || "Le robot a refusé.");
+      if (j.favs){ FAVS = new Set(j.favs); saveFavs(); render(); }
+      return;
+    }
+    toast(on ? "★ Ajouté : tu recevras les buts et le résultat de ce match." : "Retiré : plus de notification pour ce match.");
+  } catch (e) { toast("Pas de connexion : le favori est gardé sur le téléphone, réessaie plus tard."); }
 }
 function sameTeams(m, e){
   const c = (e.competitions || [])[0] || {};
@@ -436,7 +459,7 @@ function paintLive(){
     b.querySelector(".msc").outerHTML = scoreHtml(m);
   });
 }
-document.addEventListener("visibilitychange", () => { if (!document.hidden){ pollLive(); loadFavs(); } });
+document.addEventListener("visibilitychange", () => { if (!document.hidden){ pollLive(); if (PUSH_ON) syncRobot().then(render); } });
 
 function matchRow(m, detail){
   const open = OPEN.has(m.id);
@@ -626,90 +649,117 @@ function liveList(){
   const none = live.length ? "" : `<div class="empty">${Object.keys(LIVEDATA).length ? "Aucun match en cours pour l'instant." : "Chargement du direct…"}</div>`;
   return blk("En cours", live, liveCard) + none + blk("Prochains matchs", next, nextRow) + blk("Terminés", done, liveCard);
 }
-// ---- notifications du site (Web Push) : aucune appli à installer.
-// Android et PC : Chrome, Edge, Firefox. iPhone : site ajouté à l'écran d'accueil (iOS 16.4+), ouvert depuis l'icône.
+// ---- notifications du site (Web Push) : aucune appli, aucun compte, aucun code.
+// Android et PC : Chrome, Edge, Firefox, Samsung Internet. iPhone : site ajouté à l'écran d'accueil (iOS 16.4+).
 const PUSH_OK = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
 const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 const STANDALONE = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
-let SWREG = null, PUSH_ON = false;
+let SWREG = null, SUB = null, PUSH_ON = false, INSTALL = null;
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").then(r => { SWREG = r; refreshPush(); }).catch(() => {});
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); INSTALL = e; if (TAB === "favs") render(); });   // Android : « Installer l'appli »
 async function refreshPush(){
-  try { PUSH_ON = !!(SWREG && await SWREG.pushManager.getSubscription()) && Notification.permission === "granted"; } catch (e) { PUSH_ON = false; }
-  const s = document.getElementById("pushstate");
-  if (s) s.textContent = PUSH_ON ? "· activées sur cet appareil" : "· à activer";
+  try { SUB = SWREG ? await SWREG.pushManager.getSubscription() : null; } catch (e) { SUB = null; }
+  PUSH_ON = !!SUB && Notification.permission === "granted";
+  if (PUSH_ON) await syncRobot();
+  render();
+}
+// reprend chez le robot les favoris et réglages de ce téléphone (et les lui renvoie s'il l'a oublié)
+async function syncRobot(){
+  if (!SUB) return;
+  try {
+    let j = await robotCall("/moi", {endpoint: SUB.endpoint});
+    if (j.inconnu) j = await robotCall("/abonnement", {sub: SUB.toJSON(), favs: [...FAVS], morning: MORNING, old: SUB.endpoint});
+    if (j.ok){ FAVS = new Set(j.favs); MORNING = !!j.morning; saveFavs(); }
+  } catch (e) {}
 }
 const keyBytes = k => Uint8Array.from(atob(k.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((k.length + 3) % 4)), c => c.charCodeAt(0));
-function readCode(){
-  const el = document.getElementById("acode"), v = el ? el.value.trim() : ACODE;
-  ACODE = v;
-  try { localStorage.setItem("acode", v); } catch (e) {}
-  return v;
-}
-// envoie au robot les favoris gardés sur l'appareil, puis reprend sa liste (la même sur tous les appareils)
-async function syncFavs(code){
-  let j = await robotCall("/favoris", {code, id: "foot-0", on: false});
-  for (const id of [...FAVS]){ if (!j.ok) break; j = await robotCall("/favoris", {code, id, on: true}); }
-  if (j.ok){ FAVS = new Set(j.ids); saveFavs(); }
-  return j;
-}
+const say = t => { const el = document.getElementById("amsg"); if (el) el.textContent = t; };
 async function enablePush(){
-  const msg = document.getElementById("amsg"), code = readCode();
-  if (!code){ msg.textContent = "Entre d'abord ton code d'alerte."; return; }
-  if (!PUSH_OK || !SWREG){
-    msg.textContent = IOS && !STANDALONE
-      ? "Sur iPhone : touche Partager (carré avec une flèche), puis « Sur l'écran d'accueil ». Ouvre ensuite le site depuis cette nouvelle icône et reviens ici."
-      : "Ce navigateur ne gère pas les notifications. Utilise Chrome (Android, PC) ou, sur iPhone, le site ajouté à l'écran d'accueil.";
-    return;
-  }
-  msg.textContent = "Autorisation…";
+  if (!PUSH_OK || !SWREG){ say(IOS && !STANDALONE ? "Sur iPhone, suis d'abord les étapes 1 à 3 juste au-dessus." : "Ton navigateur ne sait pas faire les notifications. Prends Chrome (Android, PC) ou Safari (iPhone)."); return; }
+  say("Ton téléphone va te demander la permission…");
   const perm = await Notification.requestPermission();      // en premier : l'iPhone exige que ce soit juste après le toucher
-  if (perm !== "granted"){ msg.textContent = "Notifications refusées. Autorise-les pour ce site dans les réglages, puis réessaie."; return; }
+  if (perm !== "granted"){ render(); say("Tu as dit non. Pas grave : regarde « J'ai appuyé sur Bloquer » juste en dessous."); return; }
   try {
-    msg.textContent = "Inscription de l'appareil…";
+    say("Inscription…");
     const {key} = await robotCall("/vapid");
-    let sub = await SWREG.pushManager.getSubscription();
-    if (!sub) sub = await SWREG.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: keyBytes(key)});
-    const j = await robotCall("/abonnement", {code, sub: sub.toJSON()});
-    if (j.message){ msg.textContent = j.message; return; }
-    const f = await syncFavs(code);
-    msg.textContent = j.ok ? `✅ Notifications activées : une confirmation vient d'arriver. ${f.ok ? FAVS.size + " match(s) en favori." : ""}`
-                           : `Appareil inscrit, mais la confirmation n'est pas passée (${(j.envoi || []).join(", ")}).`;
-  } catch (e) { msg.textContent = "Échec de l'activation : " + e.message; }
-  refreshPush();
+    SUB = await SWREG.pushManager.getSubscription() || await SWREG.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: keyBytes(key)});
+    const j = await robotCall("/abonnement", {sub: SUB.toJSON(), favs: [...FAVS], morning: MORNING});
+    if (!j.ok){ say(j.message || "Le robot a refusé l'inscription."); return; }
+    FAVS = new Set(j.favs); saveFavs();
+    PUSH_ON = true; render();
+    toast("🔔 C'est activé ! Une notification de bienvenue vient d'arriver.");
+  } catch (e) { say("Ça n'a pas marché : " + e.message + ". Réessaie dans un moment."); }
 }
 async function disablePush(){
-  const msg = document.getElementById("amsg");
   try {
-    const sub = SWREG && await SWREG.pushManager.getSubscription();
-    if (sub){ await robotCall("/desabonnement", {endpoint: sub.endpoint}); await sub.unsubscribe(); }
-    msg.textContent = "Notifications désactivées sur cet appareil.";
-  } catch (e) { msg.textContent = "Échec : " + e.message; }
-  refreshPush();
+    if (SUB){ await robotCall("/desabonnement", {endpoint: SUB.endpoint}); await SUB.unsubscribe(); }
+  } catch (e) {}
+  SUB = null; PUSH_ON = false; render();
+  toast("Notifications coupées sur ce téléphone. Tes étoiles restent sur le téléphone.");
 }
-async function testAlerts(){
-  const msg = document.getElementById("amsg"), code = readCode();
-  if (!code){ msg.textContent = "Entre d'abord ton code d'alerte."; return; }
-  msg.textContent = "Envoi d'une notification de test…";
+async function testPush(){
   try {
-    const j = await robotCall("/test", {code});
-    msg.textContent = j.ok ? `✅ Notification envoyée à ${j.recus} appareil(s) sur ${j.appareils}.` : (j.message || `Échec de l'envoi (${(j.envoi || []).join(", ")}).`);
-  } catch (e) { msg.textContent = "Robot injoignable pour le moment."; }
+    const j = await robotCall("/test", {endpoint: SUB.endpoint});
+    toast(j.ok ? "✅ Notification de test envoyée." : (j.message || "Le test n'est pas passé."));
+  } catch (e) { toast("Pas de connexion : réessaie."); }
 }
-function alertsPanel(){
-  return `<details class="alerts"${PUSH_ON ? "" : " open"}><summary>🔔 Notifications <span id="pushstate">${PUSH_ON ? "· activées sur cet appareil" : "· à activer"}</span></summary>
-    <p class="src">Seuls les matchs en favori (★) envoient des notifications : rappel 15 min avant, buts, cartons rouges, pronostic qui bascule, résultat final. Plus un résumé chaque matin. Aucune appli à installer.</p>
-    ${IOS && !STANDALONE ? `<p class="src"><b>Sur iPhone :</b> touche Partager (carré avec une flèche), puis « Sur l'écran d'accueil ». Ouvre le site depuis cette icône pour activer les notifications.</p>` : ""}
-    <div class="arow"><input id="acode" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ton code d'alerte" value="${esc(ACODE)}" aria-label="Code d'alerte">
-      <button type="button" id="apush">${PUSH_ON ? "Réactiver" : "Activer les notifications"}</button><button type="button" id="atest">Tester</button>${PUSH_ON ? `<button type="button" id="aoff">Désactiver</button>` : ""}</div>
-    <p class="src" id="amsg" role="status"></p></details>`;
+async function setMorning(on){
+  MORNING = on;
+  try { await robotCall("/reglages", {endpoint: SUB.endpoint, morning: on}); toast(on ? "☀️ Résumé du matin activé (vers 8 h)." : "Résumé du matin coupé."); }
+  catch (e) { toast("Pas de connexion : réessaie."); }
+}
+// bandeau en haut du site tant que les notifications ne sont pas activées
+function pushBanner(){
+  let off = false;
+  try { off = localStorage.getItem("pbanner") === "off"; } catch (e) {}
+  if (PUSH_ON || off || TAB === "favs" || !DATA) return "";
+  return `<div class="pbanner"><span>🔔 <b>Reçois les buts de tes matchs</b> sur ton téléphone, gratuit et sans appli.</span>
+    <button type="button" class="pgo" data-gofavs>Comment faire ?</button><button type="button" class="px" data-closebanner aria-label="Fermer">×</button></div>`;
+}
+// guide « comme à un enfant », adapté au téléphone
+function pushGuide(){
+  if (PUSH_ON){
+    return `<section class="pcard on"><h2>🔔 Notifications activées</h2>
+      <p class="src">Tu reçois les buts et le résultat de tes matchs en favori (★). Rien d'autre.</p>
+      <label class="switch"><input type="checkbox" id="amorning"${MORNING ? " checked" : ""}> <span>☀️ Résumé du matin vers 8 h (bilan d'hier et pronostics les plus sûrs)</span></label>
+      <div class="arow"><button type="button" id="atest">Envoyer un test</button><button type="button" id="aoff">Couper les notifications</button></div></section>`;
+  }
+  const step = (icon, txt) => `<li><span class="si" aria-hidden="true">${icon}</span><span>${txt}</span></li>`;
+  const denied = PUSH_OK && Notification.permission === "denied";
+  let steps, button = true;
+  if (IOS && !STANDALONE){
+    button = false;
+    steps = step("📤", "En bas de l'écran, touche le bouton <b>Partager</b> (le carré avec une flèche vers le haut).") +
+            step("➕", "Descends un peu et touche <b>« Sur l'écran d'accueil »</b>, puis <b>« Ajouter »</b>.") +
+            step("🟩", "Va sur ton écran d'accueil et ouvre la nouvelle icône verte <b>« Analyse »</b>.") +
+            step("🔔", "Dans l'appli, viens ici (<b>★ Favoris</b>) et touche le gros bouton <b>« Activer les notifications »</b>, puis <b>« Autoriser »</b>.") +
+            step("⭐", "Remets tes étoiles ☆ dans l'appli : celles de Safari n'y passent pas.");
+  } else if (!PUSH_OK){
+    button = false;
+    steps = step("🌐", "Ton navigateur ne sait pas faire les notifications. Ouvre le site avec <b>Chrome</b> (Android, PC) ou <b>Safari</b> (iPhone).");
+  } else {
+    steps = step("👉", "Touche le gros bouton vert <b>« Activer les notifications »</b> juste en dessous.") +
+            step("✅", "Ton téléphone te demande la permission : touche <b>« Autoriser »</b>.") +
+            step("⭐", "Va dans <b>Foot</b> ou <b>NHL</b> et touche l'étoile ☆ à côté de l'heure des matchs que tu aimes.") +
+            step("📳", "C'est tout ! Quand il y a un but dans un de ces matchs, ton téléphone sonne.");
+  }
+  const help = denied ? `<details class="phelp" open><summary>J'ai appuyé sur « Bloquer »</summary>
+      <p class="src"><b>Android :</b> touche le cadenas 🔒 à côté de l'adresse du site › <b>Autorisations</b> › <b>Notifications</b> › <b>Autoriser</b>. Puis reviens ici et touche le bouton.<br>
+      <b>iPhone :</b> <b>Réglages</b> › <b>Notifications</b> › <b>Analyse</b> › active <b>Autoriser les notifications</b>.</p></details>` : "";
+  const install = INSTALL && !STANDALONE ? `<button type="button" class="bigbtn alt" id="ainstall">📲 Mettre le site sur l'écran d'accueil</button>` : "";
+  return `<section class="pcard"><h2>🔔 Sois prévenu des buts</h2>
+    <p class="src">Gratuit, sans appli et sans compte. Tu ne reçois que <b>tes</b> matchs en favori (★) : les buts et le résultat final.</p>
+    <ol class="steps">${steps}</ol>
+    ${button ? `<button type="button" class="bigbtn" id="apush">Activer les notifications</button>` : ""}${install}
+    <p class="src" id="amsg" role="status"></p>${help}</section>`;
 }
 function liveView(){
-  return `<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers. Touchez ☆ pour recevoir les notifications d'un match (onglet ★ Favoris).</p><div id="livebox">${liveList()}</div>`;
+  return `<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers. Touche ☆ pour suivre un match (onglet ★ Favoris).</p><div id="livebox">${liveList()}</div>`;
 }
-// ---- onglet Favoris : les matchs étoilés, les seuls qui envoient des notifications
+// ---- onglet Favoris : les matchs étoilés de CE téléphone, les seuls qui envoient des notifications
 function favList(){
   const all = [...(DATA.foot || []), ...(DATA.nhl || [])].filter(m => FAVS.has(m.id)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
-  if (!all.length) return `<div class="empty">Aucun favori. Touchez ☆ à côté de l'heure d'un match (onglets Foot, NHL ou Pronostics) pour l'ajouter ici. Seuls ces matchs envoient des notifications.</div>`;
+  if (!all.length) return `<div class="empty">Pas encore de favori.<br>Va dans <b>Foot</b> ou <b>NHL</b> et touche l'étoile ☆ à côté de l'heure d'un match.</div>`;
   const live = [], next = [], done = [];
   for (const m of all){
     const L = LIVEDATA[m.id];
@@ -721,7 +771,7 @@ function favList(){
   return blk("En cours", live, liveCard) + blk("À venir", next, pronoMatch) + blk("Terminés", done, liveCard);
 }
 function favView(){
-  return `${alertsPanel()}<div id="favbox">${favList()}</div>`;
+  return `${pushGuide()}<h2 class="sech">Mes matchs <span class="cnt num">${FAVS.size}/${MAX_FAVS}</span></h2><div id="favbox">${favList()}</div>`;
 }
 function pronoView(){
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
@@ -778,16 +828,20 @@ function bilanView(){
 function render(){
   document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === TAB)));
   if (!DATA) return;
+  document.getElementById("pbanner").innerHTML = pushBanner();
   const view = document.getElementById("view");
   view.innerHTML = TAB === "foot" ? footView() : TAB === "nhl" ? nhlView() : TAB === "pronos" ? pronoView() : TAB === "favs" ? favView() : bilanView();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));
   view.querySelectorAll("[data-psub]").forEach(b => b.addEventListener("click", () => {
     PSUB = b.dataset.psub; try { localStorage.setItem("psub", PSUB); } catch (e) {} render();
   }));
-  const on = document.getElementById("apush"), off = document.getElementById("aoff"), tst = document.getElementById("atest");
+  const on = document.getElementById("apush"), off = document.getElementById("aoff"), tst = document.getElementById("atest"),
+        morn = document.getElementById("amorning"), inst = document.getElementById("ainstall");
   if (on) on.addEventListener("click", enablePush);
   if (off) off.addEventListener("click", disablePush);
-  if (tst) tst.addEventListener("click", testAlerts);
+  if (tst) tst.addEventListener("click", testPush);
+  if (morn) morn.addEventListener("change", () => setMorning(morn.checked));
+  if (inst) inst.addEventListener("click", async () => { INSTALL.prompt(); await INSTALL.userChoice.catch(() => {}); INSTALL = null; render(); });
   view.querySelectorAll(".mrow").forEach(b => b.addEventListener("click", () => {
     const id = b.dataset.id;
     OPEN.has(id) ? OPEN.delete(id) : OPEN.add(id);
@@ -801,18 +855,25 @@ document.getElementById("view").addEventListener("click", ev => {
   const b = ev.target.closest("[data-fav]");
   if (b){ ev.stopPropagation(); toggleFav(b.dataset.fav); }
 });
-document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
-  TAB = b.dataset.tab; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
-}));
+function goTab(tab){
+  TAB = tab; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
+  scrollTo({top: 0, behavior: "smooth"});
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => goTab(b.dataset.tab)));
+// bandeau « Reçois les buts » : ouvre le guide, ou se ferme pour de bon
+document.getElementById("pbanner").addEventListener("click", ev => {
+  if (ev.target.closest("[data-gofavs]")) goTab("favs");
+  if (ev.target.closest("[data-closebanner]")){ try { localStorage.setItem("pbanner", "off"); } catch (e) {} render(); }
+});
 
 fetch("data.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
   DATA = d;
   const when = new Date(d.generated);
   document.getElementById("stamp").textContent = `Mis à jour le ${when.toLocaleDateString("fr-FR", {weekday:"long", day:"numeric", month:"long"})} à ${when.toLocaleTimeString("fr-FR", {hour:"2-digit", minute:"2-digit"})}`;
   if (d.notes && d.notes.length) document.getElementById("notes").innerHTML = `<div class="notes"><strong>À savoir aujourd'hui :</strong><ul>${d.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
+  if (!PUSH_ON) pruneFavs();          // avec notifications, la liste du robot fait foi (il retire lui-même les vieux matchs)
   render();
   pollLive();
-  loadFavs();
 }).catch(() => {
   document.getElementById("stamp").textContent = "Données indisponibles";
   document.getElementById("view").innerHTML = `<div class="empty">Les analyses n'ont pas encore été générées. Lance la mise à jour depuis l'onglet « Actions » de GitHub, puis recharge cette page.</div>`;

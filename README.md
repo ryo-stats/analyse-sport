@@ -52,20 +52,27 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Le Bilan n'a de sens qu'après 200 à 300 matchs.**
 - **GitHub met en pause les automatisations planifiées** d'un dépôt resté 60 jours sans activité. Les mises à jour quotidiennes comptent normalement comme de l'activité. Si ça s'arrête, relance-le depuis l'onglet Actions.
 
-## Alertes en direct (robot Cloudflare + notifications du site)
+## Alertes en direct (site ouvert, sans appli ni compte)
 
-- **Étoile ☆ à côté de l'heure** : met un match en favori. Seuls les favoris déclenchent des alertes. Ils sont regroupés dans l'onglet ★ Favoris.
-- **Notifications sans appli** (Web Push, `docs/sw.js`) : onglet ★ Favoris, code d'alerte, puis **Activer les notifications**. Ça marche sur Android et PC avec Chrome ; sur iPhone, il faut d'abord ajouter le site à l'écran d'accueil (iOS 16.4+) puis l'ouvrir depuis l'icône.
-- **Le robot** (`worker/`, offre gratuite Cloudflare Workers) se réveille chaque minute et lit les scores ESPN. Il crée lui-même ses clés VAPID ; le chiffrement est vérifié sur l'exemple de la RFC 8291. Il envoie :
-  - un rappel 15 min avant le match ;
-  - les buts et les cartons rouges ;
-  - un pronostic qui bascule ;
-  - le résultat final ;
-  - un résumé chaque matin.
-- **Délai** : 1 à 2 minutes, téléphone verrouillé et PC éteint.
+- **Chacun ses favoris** : l'étoile ☆ à côté de l'heure met un match en favori, 15 au plus par téléphone. Ils sont regroupés dans l'onglet ★ Favoris. Chaque téléphone ne reçoit que les alertes de SES favoris.
+- **Notifications du site** (Web Push, `docs/sw.js`) : onglet ★ Favoris, puis **Activer les notifications**. Un guide pas à pas s'y trouve, et un bandeau le signale en haut du site.
+  - Android et PC : Chrome, Edge, Firefox, Samsung Internet.
+  - iPhone : il faut d'abord ajouter le site à l'écran d'accueil (iOS 16.4+), puis l'ouvrir depuis l'icône.
+- **Ce qui est envoyé** :
+  - les buts (et les buts annulés) ;
+  - le résultat final, avec chaque pronostic gagné ou perdu ;
+  - le résumé du matin vers 8 h, seulement pour ceux qui l'activent.
+- **Délai** : 1 à 2 minutes, téléphone verrouillé.
+- **Le robot** (`worker/`, offre gratuite Cloudflare Workers) se réveille chaque minute :
+  - il suit les matchs mis en favori par au moins une personne et lit les scores ESPN ;
+  - il reconnaît chaque téléphone à son adresse d'abonnement, sans compte, sans e-mail et sans code ;
+  - il n'accepte que les adresses des vrais services de notification (Google, Apple, Mozilla, Microsoft) ;
+  - il crée lui-même ses clés VAPID ; le chiffrement est vérifié sur l'exemple de la RFC 8291.
+- **Envoi réparti** : chaque minute, au plus 10 lots de 40 notifications, chacun confié à un petit robot « Envoi ». Le surplus part la minute suivante. De quoi servir quelques centaines de personnes gratuitement (confiance moyenne). Au-delà, il faudrait l'offre payante de Cloudflare (5 $ par mois).
+- **Libération des favoris** : un favori se libère 8 h après le coup d'envoi.
+- **Abonnements expirés** : ils sont oubliés automatiquement.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
-- **Le code d'alerte** n'est jamais dans le dépôt. Il est enregistré dans Cloudflare comme secret `NTFY_TOPIC` (le nom vient d'une première version passée par ntfy). Il protège l'ajout de favoris et l'inscription des appareils.
-- **État du robot** : adresse du robot suivie de `/etat`.
+- **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
 ## Fichiers
 

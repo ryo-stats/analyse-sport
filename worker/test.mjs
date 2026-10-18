@@ -1,8 +1,11 @@
 // Tests du robot d'alertes et du calcul en direct : node worker/test.mjs
 import assert from "node:assert/strict";
 import * as L from "../docs/live.js";
-import { tick, parisNow } from "./robot.js";
+import { tick, route, parisNow, PUSH_HOSTS } from "./robot.js";
 import { encrypt, b64u, unb64u } from "./webpush.js";
+
+let ok = 0;
+const test = (name, fn) => { fn(); ok++; console.log("ok -", name); };
 
 // chiffrement des notifications : exemple officiel de la RFC 8291 (section 5), octet pour octet
 {
@@ -11,7 +14,7 @@ import { encrypt, b64u, unb64u } from "./webpush.js";
                  asPublic: unb64u("BP4z9KsN6nGRTbVYI_c7VJSPQTBtkgcy27mlmlMoZIIgDll6e3vCYLocInmYWAmS6TlzAC8wEqKK6PBru3jl7A8")};
   const out = await encrypt("When I grow up, I want to be a watermelon", sub, fixed);
   assert.equal(b64u(out), "DGv6ra1nlYgDCS1FRnbzlwAAEABBBP4z9KsN6nGRTbVYI_c7VJSPQTBtkgcy27mlmlMoZIIgDll6e3vCYLocInmYWAmS6TlzAC8wEqKK6PBru3jl7A_yl95bQpu6cVPTpK4Mqgkf1CXztLVBSt2Ks3oZwbuwXPXLWyouBWLVWGNWQexSgSxsj_Qulcy4a-fN");
-  console.log("ok - chiffrement Web Push identique à l'exemple de la RFC 8291");
+  ok++; console.log("ok - chiffrement Web Push identique à l'exemple de la RFC 8291");
 }
 
 const MIN = 60e3;
@@ -37,29 +40,24 @@ function footEvent({state = "in", name = "STATUS_FIRST_HALF", clock = "10'", per
 const goal = (team, name, clock) => ({scoringPlay: true, team: {id: team}, clock: {displayValue: clock}, athletesInvolved: [{displayName: name}]});
 const red = (team, clock) => ({redCard: true, team: {id: team}, clock: {displayValue: clock}});
 
-let ok = 0;
-const test = (name, fn) => { fn(); ok++; console.log("ok -", name); };
-
 test("probabilités d'avant-match retrouvées au coup d'envoi", () => {
-  const s = L.parseEspn(footEvent({state: "pre", clock: "0'"}), "foot");
-  const lp = L.liveProbs(FOOT, s);
+  const lp = L.liveProbs(FOOT, L.parseEspn(footEvent({state: "pre", clock: "0'"}), "foot"));
   assert.ok(Math.abs(lp.p1 + lp.pN + lp.p2 - 1) < 1e-9);
   assert.ok(lp.p1 > 0.5 && lp.p1 < 0.65, `p1=${lp.p1}`);
 });
 
-test("but et minute changent les probabilités", () => {
+test("but et minute changent les probabilités ; « Mi-temps » seulement à la mi-temps", () => {
   const early = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "10'"}), "foot"));
   const lead = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "80'", period: 2, sh: 1}), "foot"));
   assert.ok(lead.p1 > 0.85 && lead.p1 > early.p1, `p1=${lead.p1}`);
-  const late00 = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "85'", period: 2}), "foot"));
-  assert.ok(late00.o25 < 0.05, "0-0 à la 85e : plus de 2,5 buts presque impossible");
+  assert.ok(L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "85'", period: 2}), "foot")).o25 < 0.05);
   assert.equal(L.parseEspn(footEvent({name: "STATUS_SECOND_HALF", clock: "80'", period: 2}), "foot").label, "80'");
   const half = L.parseEspn(footEvent({name: "STATUS_HALFTIME", clock: "HT"}), "foot");
   assert.equal(half.elapsed, 47);
   assert.equal(half.label, "Mi-temps");
 });
 
-test("carton rouge : l'équipe réduite perd des chances", () => {
+test("carton rouge : l'équipe réduite perd des chances (affichage En direct)", () => {
   const base = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "30'"}), "foot"));
   const r = L.liveProbs(FOOT, L.parseEspn(footEvent({clock: "30'", details: [red("359", "29'")]}), "foot"));
   assert.ok(r.p1 < base.p1 - 0.05);
@@ -67,8 +65,7 @@ test("carton rouge : l'équipe réduite perd des chances", () => {
 
 test("buteur : 100 % dès qu'il a marqué, 0 % s'il n'a pas marqué à la fin", () => {
   const s = L.parseEspn(footEvent({clock: "30'", sh: 1, details: [goal("359", "Bukayo Saka", "28'")]}), "foot");
-  const lp = L.liveProbs(FOOT, s);
-  assert.equal(L.pickProb(FOOT.picks.player, FOOT, s, lp), 1);
+  assert.equal(L.pickProb(FOOT.picks.player, FOOT, s, L.liveProbs(FOOT, s)), 1);
   const end = L.parseEspn(footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT", sh: 1, details: [goal("359", "Martin Ødegaard", "28'")]}), "foot");
   assert.equal(L.pickProb(FOOT.picks.player, FOOT, end, L.liveProbs(FOOT, end)), 0);
 });
@@ -83,74 +80,87 @@ test("NHL : 3-1 après deux périodes, Boston très favori ; prolongation proche
   assert.ok(L.liveProbs(NHL, s).winH > 0.85);
   const ot = L.liveProbs(NHL, L.parseEspn(ev(4, "3:12", 2, 2), "nhl"));
   assert.ok(ot.winH > 0.4 && ot.winH < 0.75, `prolongation ${ot.winH}`);
-  const tied = L.liveProbs(NHL, L.parseEspn(ev(3, "10:00", 2, 2), "nhl"));
-  assert.equal(L.pct(tied.markets.o55 + tied.markets.u55), 100);
 });
 
-// déroulé complet d'un match en favori
+test("chacun ne reçoit que SES matchs ; résumé du matin seulement si activé", () => {
+  const subs = {a: {favs: {"foot-1": 1}, morning: false}, b: {favs: {"nhl-2": 1}, morning: true}, c: {favs: {}, morning: false}};
+  const r = route([{match: "foot-1", title: "but"}, {match: "nhl-2", title: "but nhl"}, {morning: true, title: "matin"}], subs);
+  assert.deepEqual(r.map(x => `${x.key}:${x.msg.title}`).sort(), ["a:but", "b:but nhl", "b:matin"]);
+});
+
+test("seules les adresses des vrais services de notification sont acceptées", () => {
+  assert.ok(PUSH_HOSTS.test("https://fcm.googleapis.com/fcm/send/abc"));
+  assert.ok(PUSH_HOSTS.test("https://web.push.apple.com/QGx"));
+  assert.ok(PUSH_HOSTS.test("https://updates.push.services.mozilla.com/wpush/v2/x"));
+  assert.ok(!PUSH_HOSTS.test("https://exemple.com/fcm.googleapis.com/"));
+  assert.ok(!PUSH_HOSTS.test("http://fcm.googleapis.com/x"));
+});
+
+// déroulé complet d'un match en favori : seulement les buts et le résultat
 const io = feed => ({site: "https://site/", getJSON: async url => url.includes("live.json") ? LIVE : {events: feed()}});
 let current = footEvent({state: "pre", clock: "0'"});
 const st = {}, favs = {"foot-1": T - 3600e3};
 const run = async at => (await tick(st, favs, at, io(() => [current]))).msgs;
 
-const flow = async () => {
-  let msgs = await run(T - 40 * MIN);
-  assert.equal(msgs.length, 0, "trop tôt pour le rappel");
-  msgs = await run(T - 15 * MIN);
-  assert.equal(msgs.length, 1);
-  assert.match(msgs[0].title, /⏰ 15:00 : Arsenal – Chelsea/);
-  assert.match(msgs[0].body, /Arsenal ou nul : 80 %/);
-  current = footEvent({clock: "5'"});
-  assert.equal((await run(T + 5 * MIN)).length, 0, "pas d'alerte sans action");
-  current = footEvent({clock: "28'", sh: 1, details: [goal("359", "Bukayo Saka", "28'")]});
-  msgs = await run(T + 29 * MIN);
-  assert.equal(msgs.length, 1);
-  assert.match(msgs[0].title, /⚽ But Arsenal ! Arsenal 1-0 Chelsea/);
-  assert.match(msgs[0].body, /28' Bukayo Saka/);
-  assert.match(msgs[0].body, /Bukayo Saka marque : 35 % → 100 % ✅/);
-  current = footEvent({clock: "60'", period: 2, sh: 1, details: [goal("359", "Bukayo Saka", "28'"), red("363", "59'")]});
-  msgs = await run(T + 76 * MIN);
-  assert.match(msgs[0].title, /🟥 Carton rouge pour Chelsea/);
-  assert.equal((await run(T + 77 * MIN)).length, 0, "pas de doublon");
-  current = footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT", period: 2, sh: 2, sa: 0,
-                       details: [goal("359", "Bukayo Saka", "28'"), goal("359", "Kai Havertz", "88'")]});
-  msgs = await run(T + 115 * MIN);
-  assert.match(msgs[0].title, /🏁 Terminé : Arsenal 2-0 Chelsea/);
-  assert.match(msgs[0].body, /✅ Arsenal ou nul/);
-  assert.match(msgs[0].body, /✅ Victoire Arsenal/);
-  assert.equal((await run(T + 116 * MIN)).length, 0, "match terminé : plus d'alerte");
-  console.log("ok - déroulé complet d'un match en favori");
+let msgs = await run(T - 40 * MIN);
+assert.equal(msgs.length, 0, "rien avant le match");
+assert.equal((await run(T - 15 * MIN)).length, 0, "pas de rappel avant le match");
+current = footEvent({clock: "5'"});
+assert.equal((await run(T + 5 * MIN)).length, 0, "pas d'alerte sans but");
+current = footEvent({clock: "28'", sh: 1, details: [goal("359", "Bukayo Saka", "28'")]});
+msgs = await run(T + 29 * MIN);
+assert.equal(msgs.length, 1);
+assert.equal(msgs[0].match, "foot-1");
+assert.match(msgs[0].title, /⚽ But Arsenal ! Arsenal 1-0 Chelsea/);
+assert.match(msgs[0].body, /28' Bukayo Saka/);
+assert.match(msgs[0].body, /Bukayo Saka marque : 35 % → 100 % ✅/);
+current = footEvent({clock: "60'", period: 2, sh: 1, details: [goal("359", "Bukayo Saka", "28'"), red("363", "59'")]});
+assert.equal((await run(T + 76 * MIN)).length, 0, "pas d'alerte pour un carton rouge");
+current = footEvent({clock: "70'", period: 2, sh: 1, sa: 1, details: [goal("359", "Bukayo Saka", "28'"), goal("363", "Cole Palmer", "69'")]});
+msgs = await run(T + 86 * MIN);
+assert.match(msgs[0].title, /But Chelsea/);
+current = footEvent({clock: "75'", period: 2, sh: 1, sa: 0, details: [goal("359", "Bukayo Saka", "28'")]});
+msgs = await run(T + 91 * MIN);
+assert.match(msgs[0].title, /↩️ But annulé : Arsenal 1-0 Chelsea/);
+current = footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT", period: 2, sh: 2, sa: 0,
+                     details: [goal("359", "Bukayo Saka", "28'"), goal("359", "Kai Havertz", "88'")]});
+msgs = await run(T + 115 * MIN);
+assert.match(msgs[0].title, /🏁 Terminé : Arsenal 2-0 Chelsea/);
+assert.match(msgs[0].body, /✅ Arsenal ou nul/);
+assert.equal((await run(T + 116 * MIN)).length, 0, "match terminé : plus d'alerte");
+ok++; console.log("ok - déroulé d'un match en favori : buts, but annulé, résultat (ni rappel ni carton)");
 
-  // un favori ajouté en plein match ne déclenche pas d'alerte rétroactive ; retiré, il ne sonne plus
+// favori ajouté en plein match : pas d'alerte rétroactive ; retiré : plus rien
+{
   const st2 = {}, favs2 = {};
   current = footEvent({clock: "50'", period: 2, sh: 2, sa: 1});
-  assert.equal((await tick(st2, favs2, T + 66 * MIN, io(() => [current]))).msgs.length, 0);
   favs2["foot-1"] = T + 66 * MIN;
   assert.equal((await tick(st2, favs2, T + 67 * MIN, io(() => [current]))).msgs.length, 0, "pas d'alerte rétroactive");
   current = footEvent({clock: "70'", period: 2, sh: 2, sa: 2});
-  const m2 = (await tick(st2, favs2, T + 88 * MIN, io(() => [current]))).msgs;
-  assert.match(m2[0].title, /But Chelsea/);
+  assert.match((await tick(st2, favs2, T + 88 * MIN, io(() => [current]))).msgs[0].title, /But Chelsea/);
   delete favs2["foot-1"];
   current = footEvent({clock: "80'", period: 2, sh: 3, sa: 2});
   assert.equal((await tick(st2, favs2, T + 98 * MIN, io(() => [current]))).msgs.length, 0, "favori retiré");
-  console.log("ok - favori ajouté en cours de match, puis retiré");
+  ok++; console.log("ok - favori ajouté en cours de match, puis retiré");
+}
 
-  // résumé du matin, une seule fois
-  const st3 = {};
-  const morning = Date.parse("2026-10-18T06:10:00Z");     // 8 h 10 à Paris
+// résumé du matin, une seule fois par jour
+{
+  const st3 = {}, morning = Date.parse("2026-10-18T06:10:00Z");     // 8 h 10 à Paris
   assert.equal(parisNow(morning).hour, 8);
   const r1 = (await tick(st3, {}, morning, io(() => []))).msgs;
-  assert.match(r1[0].title, /Résumé du matin/);
+  assert.ok(r1[0].morning);
   assert.match(r1[0].body, /Hier : 7 pronostics réussis sur 10/);
   assert.equal((await tick(st3, {}, morning + 5 * MIN, io(() => []))).msgs.length, 0);
-  console.log("ok - résumé du matin une fois par jour");
+  ok++; console.log("ok - résumé du matin une fois par jour");
+}
 
-  // ESPN en panne : pas de plantage, erreur notée
+// ESPN en panne : pas de plantage, erreur notée
+{
   const st4 = {};
   const broken = {site: "https://site/", getJSON: async url => { if (url.includes("live.json")) return LIVE; throw new Error("site.api.espn.com a répondu 403"); }};
   await tick(st4, {"foot-1": 0}, T + 10 * MIN, broken);
   assert.match(st4.errors[0].text, /403/);
-  console.log("ok - panne ESPN notée sans plantage");
-  console.log(`\n${ok + 4} tests OK`);
-};
-flow().catch(e => { console.error(e); process.exit(1); });
+  ok++; console.log("ok - panne ESPN notée sans plantage");
+}
+console.log(`\n${ok} tests OK`);

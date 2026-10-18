@@ -12,6 +12,18 @@ self.addEventListener("push", e => {
   }));
 });
 
+// le navigateur renouvelle parfois l'abonnement : on prévient le robot pour que ce téléphone garde ses favoris
+const ROBOT = "https://analyse-sport-alertes.barrierecedric-pro.workers.dev";
+self.addEventListener("pushsubscriptionchange", e => {
+  e.waitUntil((async () => {
+    const old = e.oldSubscription, key = old && old.options && old.options.applicationServerKey;
+    const sub = e.newSubscription || (key && await self.registration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: key}));
+    if (!sub) return;
+    await fetch(ROBOT + "/abonnement", {method: "POST", headers: {"content-type": "text/plain"},
+      body: JSON.stringify({sub: sub.toJSON(), old: old ? old.endpoint : sub.endpoint})});
+  })());
+});
+
 self.addEventListener("notificationclick", e => {
   e.notification.close();
   const url = (e.notification.data || {}).url || self.registration.scope;

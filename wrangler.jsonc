@@ -1,5 +1,5 @@
 // Robot d'alertes (Cloudflare Workers, offre gratuite). Code : worker/. Mis en ligne par Cloudflare à chaque push.
-// Le code d'alerte n'est PAS ici (le dépôt est public) : il est enregistré dans Cloudflare comme secret NTFY_TOPIC.
+// Site ouvert : aucun code ni secret. Les clés de notification (VAPID) sont créées et gardées par le robot lui-même.
 {
   "name": "analyse-sport-alertes",
   "main": "worker/index.js",
@@ -7,8 +7,8 @@
   "workers_dev": true,
   "preview_urls": false,
   "triggers": { "crons": ["* * * * *"] },
-  "durable_objects": { "bindings": [{ "name": "STATE", "class_name": "Etat" }] },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Etat"] }],
+  "durable_objects": { "bindings": [{ "name": "STATE", "class_name": "Etat" }, { "name": "SENDER", "class_name": "Envoi" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Etat"] }, { "tag": "v2", "new_sqlite_classes": ["Envoi"] }],
   "vars": { "SITE": "https://ryo-stats.github.io/analyse-sport/" },
   "keep_vars": true,
   "observability": { "enabled": true }

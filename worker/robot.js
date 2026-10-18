@@ -1,16 +1,18 @@
 // Logique du robot d'alertes, sans dépendance à Cloudflare (testable avec Node : node worker/test.mjs).
 //
-// Chaque minute : relit les analyses (live.json, toutes les 10 min), puis pour chaque match en favori :
-//   - rappel 15 min avant le coup d'envoi, avec les pronostics ;
-//   - but, but annulé, carton rouge : score + pronostics recalculés ;
-//   - pronostic qui bascule (±20 points, ou passage au-dessus de 95 % / sous 5 %) ;
+// Site ouvert à tous : chaque téléphone a SES favoris (15 au plus) et ne reçoit que les alertes de SES matchs.
+// Chaque minute : relit les analyses (live.json, toutes les 10 min), puis pour chaque match en favori d'au moins
+// une personne :
+//   - but (et but annulé par la vidéo) : score, buteur, pronostics recalculés ;
 //   - fin du match : chaque pronostic gagné ou perdu.
-// Plus un résumé chaque matin vers 8 h (heure de Paris).
+// Plus un résumé vers 8 h (heure de Paris), seulement pour ceux qui l'ont activé.
 import * as L from "../docs/live.js";
 
 const MIN = 60e3, HOUR = 3600e3;
 export const ESPN = "https://site.api.espn.com/apis/site/v2/sports/";
-const stars = n => "★".repeat(n) + "☆".repeat(5 - n);
+export const MAX_FAVS = 15;
+// adresses d'abonnement acceptées : les vrais services de notification des navigateurs (Google, Apple, Mozilla, Microsoft)
+export const PUSH_HOSTS = /^https:\/\/(fcm\.googleapis\.com|android\.googleapis\.com|web\.push\.apple\.com|updates\.push\.services\.mozilla\.com|[\w.-]+\.notify\.windows\.com)\//;
 
 export function feedUrl(m){
   return m.sport === "foot" ? `${ESPN}soccer/${m.code}/scoreboard?dates=${m.edate}`
@@ -44,18 +46,6 @@ export function parisNow(now){
   return {date: `${parts.year}-${parts.month}-${parts.day}`, hour: Number(parts.hour)};
 }
 
-function reminder(list){
-  const one = list.length === 1;
-  const body = list.map(w => {
-    const m = w.m;
-    const picks = followedPicks(m).map(([, p]) => `• ${p.label} : ${p.prob} % ${stars(p.stars)}`).join("\n");
-    return (one ? "" : `${m.time} ${m.home} – ${m.away}\n`) + picks;
-  }).join("\n\n");
-  const m = list[0].m;
-  return {title: one ? `⏰ ${m.time} : ${m.home} – ${m.away}` : `⏰ ${list.length} matchs favoris commencent bientôt`,
-          body, priority: 3};
-}
-
 function morning(sum){
   const y = sum.yesterday || {};
   const lines = [y.n ? `Hier : ${y.ok} pronostic${y.ok > 1 ? "s" : ""} réussi${y.ok > 1 ? "s" : ""} sur ${y.n}.` : "Hier : aucun pronostic vérifié.",
@@ -64,75 +54,49 @@ function morning(sum){
     lines.push("Les plus sûrs :");
     for (const t of sum.top) lines.push(`• ${t.label} (${t.match}, ${t.time}) : ${t.prob} %`);
   }
-  lines.push("Touchez ☆ à côté d'un match sur le site pour recevoir ses alertes.");
-  return {title: "☀️ Résumé du matin", body: lines.join("\n"), priority: 2};
+  return {title: "☀️ Résumé du matin", body: lines.join("\n"), priority: 2, morning: true};
 }
 
-// Compare le nouvel état d'un match au précédent et renvoie les alertes à envoyer.
+// Compare le nouvel état d'un match au précédent et renvoie les alertes à envoyer (buts et fin du match).
 export function update(w, s){
   const m = w.m, out = [];
   if (s.cancelled){
-    if (!w.done) out.push({title: `⏸️ Reporté : ${m.home} – ${m.away}`, body: "Plus d'alerte pour ce match.", priority: 3});
+    if (!w.done) out.push({match: m.id, title: `⏸️ Reporté : ${m.home} – ${m.away}`, body: "Plus d'alerte pour ce match.", priority: 3});
     w.done = true;
     return out;
   }
   if (s.state === "pre") return out;
   const prev = w.last;
-  w.last = {sh: s.sh, sa: s.sa, red: {...s.red}, state: s.state, goals: s.goals.length};
+  w.last = {sh: s.sh, sa: s.sa, state: s.state, goals: s.goals.length};
   const lp = L.liveProbs(m, s);
   const picks = followedPicks(m).map(([k, pk]) => ({k, pk, p: L.pickProb(pk, m, s, lp)}));
   const before = x => w.lastP[x.k] ?? x.pk.p;
   const commit = () => picks.forEach(x => { if (x.p != null) w.lastP[x.k] = x.p; });
-  if (!prev){                 // favori ajouté en cours de match : point de départ, pas d'alerte rétroactive
+  if (!prev){                 // suivi commencé en cours de match : point de départ, pas d'alerte rétroactive
     commit();
     if (s.state === "post") w.done = true;
     return out;
   }
   const score = `${m.home} ${s.sh}-${s.sa} ${m.away}`;
-  const line = x => {
-    if (x.p == null) return `• ${x.pk.label}`;
-    const mark = x.p >= 0.9999 ? " ✅" : "";               // acquis (buteur qui a marqué) ; la fin du match a son propre message
-    return `• ${x.pk.label} : ${L.pct(before(x))} % → ${L.pct(x.p)} %${mark}`;
-  };
   if (s.state === "post"){
     w.done = true;
-    out.push({title: `🏁 Terminé : ${score}`, priority: 3,
+    out.push({match: m.id, title: `🏁 Terminé : ${score}`, priority: 3,
               body: picks.map(x => x.p == null ? `• ${x.pk.label} : résultat dans le Bilan` : `${x.p >= 0.5 ? "✅" : "❌"} ${x.pk.label}`).join("\n")});
     commit();
     return out;
   }
-  const when = s.label ? ` (${s.label})` : "";
-  const events = [];
-  let priority = 3;
+  const line = x => x.p == null ? `• ${x.pk.label}`
+    : `• ${x.pk.label} : ${L.pct(before(x))} % → ${L.pct(x.p)} %${x.p >= 0.9999 ? " ✅" : ""}`;
   const total = s.sh + s.sa, prevTotal = prev.sh + prev.sa;
   if (total > prevTotal){
     const team = s.sh > prev.sh && s.sa > prev.sa ? "" : s.sh > prev.sh ? ` ${m.home}` : ` ${m.away}`;
-    events.push(`${m.sport === "nhl" ? "🏒" : "⚽"} But${team} ! ${score}`);
     const who = s.goals.slice(prev.goals || 0).map(g => `${g.clock} ${g.name}${g.own ? " (contre son camp)" : g.pen ? " (penalty)" : ""}`.trim()).filter(Boolean);
-    events.push(who.length ? who.join(", ") : s.label);
-    priority = 4;
-  } else if (total < prevTotal){
-    events.push(`↩️ But annulé : ${score}${when}`);
-  }
-  for (const [side, team] of [["h", m.home], ["a", m.away]]){
-    if ((s.red[side] || 0) > ((prev.red || {})[side] || 0)) events.push(`🟥 Carton rouge pour ${team}${events.length ? "" : when}`);
-  }
-  if (events.length){
-    if (!events[0].includes(score)) events.push(score);
-    out.push({title: events[0], body: [...events.slice(1), ...picks.map(line)].filter(Boolean).join("\n"), priority});
+    out.push({match: m.id, title: `${m.sport === "nhl" ? "🏒" : "⚽"} But${team} ! ${score}`, priority: 4,
+              body: [who.length ? who.join(", ") : s.label, ...picks.map(line)].filter(Boolean).join("\n")});
     commit();
-    return out;
-  }
-  // pas d'action marquante : un pronostic a-t-il beaucoup bougé avec le temps qui passe ?
-  const moved = picks.filter(x => {
-    if (x.p == null) return false;
-    const b = before(x);
-    return Math.abs(x.p - b) >= 0.2 || (x.p >= 0.95 && b < 0.95) || (x.p <= 0.05 && b > 0.05);
-  });
-  if (moved.length){
-    const up = moved[0].p > before(moved[0]);
-    out.push({title: `${up ? "📈" : "📉"} ${m.home} – ${m.away} : pronostic qui ${up ? "se confirme" : "s'éloigne"}`,
-              body: [`${s.sh}-${s.sa}${when}`, ...moved.map(line)].join("\n"), priority: 3});
+  } else if (total < prevTotal){
+    out.push({match: m.id, title: `↩️ But annulé : ${score}`, priority: 3,
+              body: [s.label, ...picks.map(line)].filter(Boolean).join("\n")});
     commit();
   }
   return out;
@@ -142,8 +106,9 @@ function note(st, now, text){
   st.errors = [{t: new Date(now).toISOString(), text}, ...(st.errors || [])].slice(0, 15);
 }
 
-// Un passage du robot. st : état conservé d'une minute à l'autre ; favs : {id du match: date d'ajout}.
-// io.getJSON(url) lit une adresse ; io.site est l'adresse du site. Renvoie {msgs, expired}.
+// Un passage du robot. st : état conservé d'une minute à l'autre ; favs : {id du match: date d'ajout}, réunion
+// des favoris de tous les téléphones. io.getJSON(url) lit une adresse ; io.site est l'adresse du site.
+// Renvoie {msgs, expired} : alertes (avec .match ou .morning) et favoris périmés à retirer partout.
 export async function tick(st, favs, now, io){
   st.watch ||= {};
   const msgs = [];
@@ -159,26 +124,19 @@ export async function tick(st, favs, now, io){
   const matches = (st.data || {}).matches || [];
   const byId = Object.fromEntries(matches.map(m => [m.id, m]));
 
-  // favoris -> matchs suivis, et rappel 15 minutes avant
+  // matchs en favori d'au moins une personne -> matchs suivis (dès 15 min avant le coup d'envoi)
   for (const id of Object.keys(st.watch)) if (!favs[id]) delete st.watch[id];
-  const soon = [];
   for (const id of Object.keys(favs)){
     const m = byId[id] || (st.watch[id] || {}).m;
     if (!m) continue;
     const k = Date.parse(m.kickoff);
-    let w = st.watch[id];
+    const w = st.watch[id];
     if (!w){
       if (k - now > 16 * MIN || now - k > 5 * HOUR) continue;
-      w = st.watch[id] = {m, last: null, lastP: {}, done: false, reminded: false};
       // suivi commencé avant le coup d'envoi : on part de 0-0 pour ne rater aucun but
-      if (now < k) w.last = {sh: 0, sa: 0, red: {h: 0, a: 0}, state: "pre", goals: 0};
+      st.watch[id] = {m, lastP: {}, done: false, last: now < k ? {sh: 0, sa: 0, state: "pre", goals: 0} : null};
     } else if (byId[id] && now < k) w.m = byId[id];          // analyses plus récentes avant le match
-    if (!w.reminded){
-      w.reminded = true;
-      if (k - now >= 2 * MIN) soon.push(w);
-    }
   }
-  if (soon.length) msgs.push(reminder(soon.sort((a, b) => Date.parse(a.m.kickoff) - Date.parse(b.m.kickoff))));
 
   // matchs en cours : un appel ESPN par championnat
   const feeds = {};
@@ -203,11 +161,24 @@ export async function tick(st, favs, now, io){
     msgs.push(morning(sum));
   }
 
-  // favoris périmés : 36 h après le match (ou après l'ajout si le match n'est plus dans les analyses)
+  // favoris périmés, pour libérer la place (15 au plus) : 8 h après le coup d'envoi (match fini, alertes envoyées),
+  // ou 24 h après l'ajout si le match n'est plus dans les analyses
   const expired = Object.keys(favs).filter(id => {
     const m = byId[id] || (st.watch[id] || {}).m;
-    return now - (m ? Date.parse(m.kickoff) : favs[id]) > 36 * HOUR;
+    return m ? now - Date.parse(m.kickoff) > 8 * HOUR : now - favs[id] > 24 * HOUR;
   });
   for (const id of expired) delete st.watch[id];
-  return {msgs: msgs.slice(0, 10), expired};
+  return {msgs, expired};
+}
+
+// À qui envoyer quoi : une alerte de match va aux seuls téléphones qui ont ce match en favori,
+// le résumé du matin aux seuls téléphones qui l'ont activé. subs : {clé: {favs, morning}}.
+export function route(msgs, subs){
+  const out = [];
+  for (const m of msgs){
+    for (const [key, s] of Object.entries(subs)){
+      if (m.match ? (s.favs || {})[m.match] : m.morning ? s.morning : false) out.push({key, msg: m});
+    }
+  }
+  return out;
 }
