@@ -345,7 +345,7 @@ function storeLive(id, e, sport){
 
 // ---- favoris : étoile à côté de l'heure. Gardés sur l'appareil, et chez le robot d'alertes s'il est configuré
 // (le robot n'envoie des alertes que pour ces matchs, et les favoris sont alors les mêmes sur tous les appareils).
-const ROBOT = "";           // adresse du robot Cloudflare (https://analyse-sport-alertes.<compte>.workers.dev)
+const ROBOT = "https://analyse-sport-alertes.barrierecedric-pro.workers.dev";   // robot d'alertes Cloudflare (worker/)
 let FAVS = new Set(), ACODE = "";
 try { FAVS = new Set(JSON.parse(localStorage.getItem("favs") || "[]")); ACODE = localStorage.getItem("acode") || ""; } catch (e) {}
 const saveFavs = () => { try { localStorage.setItem("favs", JSON.stringify([...FAVS])); } catch (e) {} };
