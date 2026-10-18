@@ -199,6 +199,15 @@ td.r,th.r{text-align:right}
 .pl .pk{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .pl .pv{min-width:0}
 .pl.main .pv{font-weight:700}
+.psubs{margin-bottom:12px}
+@media (min-width:860px){.psubs{flex-direction:row;position:static}.psubs button{border-radius:999px}}
+.combo{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:12px}
+.chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.ctitle{font-family:var(--display);font-size:1.25rem;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
+.chead .pp{font-size:1.35rem}
+.cleg{list-style:none;margin:0;padding:0}
+.cleg li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.cleg li:first-child{border-top:0}
 @media (max-width:640px){
   .tabs button{padding:7px 12px;font-size:.9rem}
   .pl{grid-template-columns:minmax(0,1fr) auto}
@@ -480,19 +489,62 @@ function pronoMatch(m){
     <div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Le plus sûr" ? " main" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span>${conf(p)}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score</span><span class="pv">${esc(String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b></span></div>` : ""}</div></div>`;
 }
+let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo
+try { PSUB = localStorage.getItem("psub") || "foot"; } catch (e) {}
+const notStarted = m => ["pre", "FUT", "PRE"].includes(m.state);
+const starsOf = p => 1 + [0.5, 0.6, 0.7, 0.8].filter(s => p >= s).length;
+const asSel = (pk, m) => ({...pk, id: m.id, sport: m.sport, league: m.league, time: m.time, kickoff: m.kickoff, home: m.home, away: m.away,
+                           logo_h: m.logo_h, logo_a: m.logo_a, logo_h_dark: m.logo_h_dark, logo_a_dark: m.logo_a_dark});
+// sélection du jour d'un sport : les plus sûrs des matchs pas encore commencés, 2 au plus par match
+function selectionOf(list, n = 10){
+  return list.filter(notStarted).flatMap(m => ["main", "player"].map(k => (m.picks || {})[k]).filter(Boolean).map(pk => asSel(pk, m)))
+    .sort((a, b) => b.p - a.p).slice(0, n);
+}
+// un seul pronostic par match dans un combiné (deux paris du même match ne sont pas indépendants)
+function legsOf(list){
+  return list.filter(notStarted).map(m => {
+    const best = ["main", "player"].map(k => (m.picks || {})[k]).filter(Boolean).sort((a, b) => b.p - a.p)[0];
+    return best ? asSel(best, m) : null;
+  }).filter(Boolean).sort((a, b) => b.p - a.p);
+}
+function comboCard(title, legs){
+  const p = legs.reduce((x, l) => x * l.p, 1);
+  const pk = {stars: starsOf(p), prob: Math.round(p * 100)};
+  const first = [...legs].sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff))[0].time;   // l'heure seule trierait mal les matchs NHL après minuit
+  return `<section class="combo"><div class="chead"><div><h3 class="ctitle">${esc(title)}</h3><span class="smeta">${legs.length} sélections · premier match à ${esc(first)}</span></div>${conf(pk)}</div>
+    <ol class="cleg">${legs.map(l => `<li><div class="sbody"><div class="spick">${esc(l.label)}</div>
+      <div class="smatch">${logo(l.logo_h, l.logo_h_dark, "lg sm")}<span>${esc(l.home)} – ${esc(l.away)}</span>${logo(l.logo_a, l.logo_a_dark, "lg sm")}</div>
+      <div class="smeta">${esc(l.time)} · ${esc(l.sport === "nhl" ? "NHL" : l.league)}</div></div><b class="pp num">${l.prob} %</b></li>`).join("")}</ol></section>`;
+}
+function comboView(){
+  const foot = legsOf(DATA.foot || []), nhl = legsOf(DATA.nhl || []);
+  const all = [...foot, ...nhl].sort((a, b) => b.p - a.p);
+  const cards = [];
+  for (const n of [2, 3, 4]) if (all.length >= n) cards.push(comboCard(`Combiné ${n} matchs`, all.slice(0, n)));
+  // combinés d'un seul sport, seulement s'ils diffèrent du combiné 3 matchs mixte
+  const trio = all.slice(0, 3).map(l => l.id).join();
+  if (foot.length >= 3 && foot.slice(0, 3).map(l => l.id).join() !== trio) cards.push(comboCard("Combiné 100 % foot", foot.slice(0, 3)));
+  if (nhl.length >= 3 && nhl.slice(0, 3).map(l => l.id).join() !== trio) cards.push(comboCard("Combiné 100 % NHL", nhl.slice(0, 3)));
+  const intro = `<p class="warnline">Les combinés assemblent les pronostics les plus sûrs de matchs différents. Tous doivent être bons : la probabilité du combiné est le produit des probabilités, donc elle baisse vite à chaque match ajouté. Par exemple, 3 pronostics à 80 % donnent environ 51 %.</p>`;
+  return intro + (cards.length ? cards.join("") : `<div class="empty">Pas assez de matchs à venir aujourd'hui pour proposer un combiné.</div>`);
+}
 function pronoView(){
-  const sel = DATA.selection || [];
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
   if (!foot.length && !nhl.length) return `<div class="empty">Pas de match aujourd'hui.</div>`;
+  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null]];
+  const nav = `<nav class="leagues psubs" aria-label="Type de pronostics">${subs.map(([k, l, n]) => `<button type="button" data-psub="${k}" aria-pressed="${k === PSUB}"><span>${l}</span>${n != null ? `<span class="n num">${n}</span>` : ""}</button>`).join("")}</nav>`;
+  if (PSUB === "combo") return nav + comboView();
+  const isNhl = PSUB === "nhl", list = isNhl ? nhl : foot;
+  if (!list.length) return nav + `<div class="empty">Pas de match ${isNhl ? "NHL" : "de foot"} aujourd'hui.</div>`;
   const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
-  const leagues = [...new Set(foot.map(m => m.league))].sort((a, b) => rank(a) - rank(b));
-  const block = (title, lg, list) => `<section class="grp"><div class="band">${lg ? `<img class="bl" src="${esc(lg)}" alt="" width="20" height="20" loading="lazy" onerror="this.remove()">` : ""}<span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(pronoMatch).join("")}</section>`;
-  const groups = leagues.map(l => { const f = foot.find(m => m.league === l) || {};
-      return block(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, foot.filter(m => m.league === l)); }).join("")
-    + (nhl.length ? block("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, nhl) : "");
-  return `<p class="warnline">Pronostics les plus probables selon les analyses du site. « Sûr » ne veut pas dire certain : un pronostic à 75 % échoue en moyenne 1 fois sur 4.</p>
-    <section class="selbox"><h2>Sélection du jour</h2><p class="src">Les pronostics les plus sûrs parmi les matchs pas encore commencés.</p>
-    ${sel.length ? `<ol class="sellist">${sel.map(selItem).join("")}</ol>` : `<div class="empty">Tous les matchs du jour ont commencé. La sélection reviendra avec les matchs de demain.</div>`}</section>
+  const block = (title, lg, ms) => `<section class="grp"><div class="band">${lg ? `<img class="bl" src="${esc(lg)}" alt="" width="20" height="20" loading="lazy" onerror="this.remove()">` : ""}<span>${title}</span><span class="cnt">${plural(ms.length, "match")}</span></div>${ms.map(pronoMatch).join("")}</section>`;
+  const groups = isNhl ? block("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, nhl)
+    : [...new Set(foot.map(m => m.league))].sort((a, b) => rank(a) - rank(b)).map(l => { const f = foot.find(m => m.league === l) || {};
+        return block(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, foot.filter(m => m.league === l)); }).join("");
+  const sel = selectionOf(list);
+  return `${nav}<p class="warnline">Pronostics les plus probables selon les analyses du site. « Sûr » ne veut pas dire certain : un pronostic à 75 % échoue en moyenne 1 fois sur 4.</p>
+    <section class="selbox"><h2>Sélection du jour ${isNhl ? "NHL" : "foot"}</h2><p class="src">Les pronostics les plus sûrs parmi les matchs pas encore commencés.</p>
+    ${sel.length ? `<ol class="sellist">${sel.map(selItem).join("")}</ol>` : `<div class="empty">Tous les matchs ont commencé. La sélection reviendra avec les prochains matchs.</div>`}</section>
     <h2 class="sech">Tous les matchs</h2>${groups}`;
 }
 function picksBlock(b){
@@ -532,6 +584,9 @@ function render(){
   const view = document.getElementById("view");
   view.innerHTML = TAB === "foot" ? footView() : TAB === "nhl" ? nhlView() : TAB === "pronos" ? pronoView() : bilanView();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));
+  view.querySelectorAll("[data-psub]").forEach(b => b.addEventListener("click", () => {
+    PSUB = b.dataset.psub; try { localStorage.setItem("psub", PSUB); } catch (e) {} render();
+  }));
   view.querySelectorAll(".mrow").forEach(b => b.addEventListener("click", () => {
     const id = b.dataset.id;
     OPEN.has(id) ? OPEN.delete(id) : OPEN.add(id);
