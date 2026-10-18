@@ -39,28 +39,14 @@ header{display:grid;gap:.3rem;margin-bottom:1rem}
 .tabs{overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{flex:none;white-space:nowrap}
-.tabs button,.chips button{font:600 .95rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer}
-.tabs button[aria-selected="true"],.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button{font:600 .95rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 button:focus-visible{outline:2px solid var(--home);outline-offset:2px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
-.chips button{font-size:.85rem;padding:5px 12px}
 .notes{background:var(--soft);border-radius:6px;padding:10px 14px;margin-bottom:12px;font-size:.9rem}
 .notes ul{margin:4px 0 0;padding-left:1.1rem}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:6px;padding:24px;text-align:center;color:var(--muted)}
-.list{display:grid;gap:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;display:grid;gap:12px;min-width:0}
-.meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.84rem;color:var(--muted);align-items:center}
-.meta b{color:var(--ink)}
-.pill{font:700 .7rem var(--body);text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:999px;background:var(--away);color:#fff}
-.pill.post{background:var(--ink);color:var(--bg)}
-.teams{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:start}
-.team{display:grid;gap:2px;min-width:0}
-.team.away{text-align:right}
-.name{font-family:var(--display);font-size:1.4rem;font-weight:700;line-height:1.05}
 .sub{font-size:.8rem;color:var(--muted)}
-.vs{font-family:var(--display);color:var(--muted);padding-top:3px}
 .form{display:inline-flex;gap:3px}
-.team.away .form{justify-content:flex-end}
 .form i{font-style:normal;font:700 .66rem var(--body);width:16px;height:16px;display:inline-grid;place-items:center;border-radius:3px;color:#fff}
 .form .V{background:var(--home)}.form .N{background:var(--draw)}.form .D{background:var(--away)}
 .bar{display:flex;height:32px;border-radius:4px;overflow:hidden;font-family:var(--display);font-weight:700}
@@ -245,7 +231,6 @@ td.r,th.r{text-align:right}
 @media (max-width:640px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .cols,.goalies{grid-template-columns:1fr}
-  .name{font-size:1.2rem}
   .tlines{grid-template-columns:1fr}
   .mdetail{padding:12px 10px}
   .row{grid-template-columns:minmax(0,1fr) 44px 36px 44px}
@@ -280,11 +265,6 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 let DATA = null, TAB = "foot", LEAGUE = "Tous";
 try { TAB = localStorage.getItem("tab") || "foot"; } catch (e) {}
 
-function stateLabel(m){
-  if (["in","LIVE","CRIT"].includes(m.state)) return `<span class="pill">En cours ${esc(m.score || "")}</span>`;
-  if (["post","OFF","FINAL"].includes(m.state)) return `<span class="pill post">Terminé ${esc(m.score || "")}</span>`;
-  return "";
-}
 function form(f){ return f ? `<span class="form" aria-label="Forme récente">${[...f].map(c=>`<i class="${c}">${c}</i>`).join("")}</span>` : ""; }
 function bar(m, h, d, a, lh, la, ld){
   const seg = (cls, v) => v > 0 ? `<div class="${cls}" style="width:${v}%">${v >= 9 ? v + "%" : ""}</div>` : "";

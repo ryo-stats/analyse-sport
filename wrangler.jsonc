@@ -1,10 +1,11 @@
 // Robot d'alertes (Cloudflare Workers, offre gratuite). Code : worker/. Mis en ligne par Cloudflare à chaque push.
-// Le canal ntfy n'est PAS ici (le dépôt est public) : il est enregistré dans Cloudflare comme secret NTFY_TOPIC.
+// Le code d'alerte n'est PAS ici (le dépôt est public) : il est enregistré dans Cloudflare comme secret NTFY_TOPIC.
 {
   "name": "analyse-sport-alertes",
   "main": "worker/index.js",
   "compatibility_date": "2025-09-01",
   "workers_dev": true,
+  "preview_urls": false,
   "triggers": { "crons": ["* * * * *"] },
   "durable_objects": { "bindings": [{ "name": "STATE", "class_name": "Etat" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Etat"] }],
