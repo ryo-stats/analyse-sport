@@ -52,14 +52,30 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Le Bilan n'a de sens qu'après 200 à 300 matchs.**
 - **GitHub met en pause les automatisations planifiées** d'un dépôt resté 60 jours sans activité. Les mises à jour quotidiennes comptent normalement comme de l'activité. Si ça s'arrête, relance-le depuis l'onglet Actions.
 
+## Alertes en direct (robot Cloudflare + app ntfy)
+
+- **Étoile ☆ à côté de l'heure** : met un match en favori. Seuls les favoris déclenchent des alertes.
+- **Le robot** (`worker/`, offre gratuite Cloudflare Workers) se réveille chaque minute et lit les scores ESPN. Il envoie sur l'app ntfy :
+  - un rappel 15 min avant le match ;
+  - les buts et les cartons rouges ;
+  - un pronostic qui bascule ;
+  - le résultat final ;
+  - un résumé chaque matin.
+- **Délai** : 1 à 2 minutes, téléphone verrouillé et PC éteint.
+- **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
+- **Le canal ntfy** (« code d'alerte ») n'est jamais dans le dépôt. Il est enregistré dans Cloudflare comme secret `NTFY_TOPIC`.
+- **État du robot** : adresse du robot suivie de `/etat`.
+
 ## Fichiers
 
 | Fichier | Rôle |
 |---|---|
-| `app.py` | Récupère les données, calcule, écrit `docs/data.json` et `docs/history.json` |
-| `docs/index.html` | Le site (onglets Foot, NHL, Bilan) |
+| `app.py` | Récupère les données, calcule, écrit `docs/data.json`, `docs/live.json` et `docs/history.json` |
+| `docs/index.html` | Le site (onglets Foot, NHL, Pronostics, Bilan) |
+| `docs/live.js` | Calcul des pronostics en direct (site et robot) |
+| `worker/`, `wrangler.jsonc` | Robot d'alertes Cloudflare. Tests : `node worker/test.mjs` |
 | `docs/manifest.webmanifest`, `docs/icon.svg` | Installation sur l'écran d'accueil |
-| `.github/workflows/update.yml` | Lance `app.py` à 10 h et 18 h 30 (heure d'été de Paris) |
+| `.github/workflows/update.yml` | Lance `app.py` aux 7 passages de `horaires.py` |
 | `tests/test_app.py` | Vérifie les calculs avant chaque mise à jour |
 
 Pour tester sur ton ordinateur : `pip install -r requirements.txt`, puis `python -m unittest discover -s tests`, puis `python app.py`.
