@@ -52,10 +52,11 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Le Bilan n'a de sens qu'après 200 à 300 matchs.**
 - **GitHub met en pause les automatisations planifiées** d'un dépôt resté 60 jours sans activité. Les mises à jour quotidiennes comptent normalement comme de l'activité. Si ça s'arrête, relance-le depuis l'onglet Actions.
 
-## Alertes en direct (robot Cloudflare + app ntfy)
+## Alertes en direct (robot Cloudflare + notifications du site)
 
-- **Étoile ☆ à côté de l'heure** : met un match en favori. Seuls les favoris déclenchent des alertes.
-- **Le robot** (`worker/`, offre gratuite Cloudflare Workers) se réveille chaque minute et lit les scores ESPN. Il envoie sur l'app ntfy :
+- **Étoile ☆ à côté de l'heure** : met un match en favori. Seuls les favoris déclenchent des alertes. Ils sont regroupés dans l'onglet ★ Favoris.
+- **Notifications sans appli** (Web Push, `docs/sw.js`) : onglet ★ Favoris, code d'alerte, puis **Activer les notifications**. Ça marche sur Android et PC avec Chrome ; sur iPhone, il faut d'abord ajouter le site à l'écran d'accueil (iOS 16.4+) puis l'ouvrir depuis l'icône.
+- **Le robot** (`worker/`, offre gratuite Cloudflare Workers) se réveille chaque minute et lit les scores ESPN. Il crée lui-même ses clés VAPID ; le chiffrement est vérifié sur l'exemple de la RFC 8291. Il envoie :
   - un rappel 15 min avant le match ;
   - les buts et les cartons rouges ;
   - un pronostic qui bascule ;
@@ -63,7 +64,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
   - un résumé chaque matin.
 - **Délai** : 1 à 2 minutes, téléphone verrouillé et PC éteint.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). Ces chiffres n'entrent pas dans le Bilan.
-- **Le canal ntfy** (« code d'alerte ») n'est jamais dans le dépôt. Il est enregistré dans Cloudflare comme secret `NTFY_TOPIC`.
+- **Le code d'alerte** n'est jamais dans le dépôt. Il est enregistré dans Cloudflare comme secret `NTFY_TOPIC` (le nom vient d'une première version passée par ntfy). Il protège l'ajout de favoris et l'inscription des appareils.
 - **État du robot** : adresse du robot suivie de `/etat`.
 
 ## Fichiers
