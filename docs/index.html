@@ -509,10 +509,10 @@ function footDetail(m){
       <div class="stat"><div class="v">${m.over25}%</div><div class="k">Plus de 2,5 buts</div></div>
       <div class="stat"><div class="v">${m.btts}%</div><div class="k">Les deux marquent</div></div>
     </div>
+    <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Autres scores fréquents : ${m.scores.slice(1).map((s,i)=>`${esc(s)} (${m.scorep[i+1]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>
     <div><h3>Joueurs par équipe</h3>${topScorer(m)}
     <div class="cols">${squad(m.squad_h, m.home, "h", "p_dec", "Décisif", footSub)}${squad(m.squad_a, m.away, "a", "p_dec", "Décisif", footSub)}</div></div>
-    ${m.ctx.length ? `<ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>` : ""}
-    <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Autres scores fréquents : ${m.scores.slice(1).map((s,i)=>`${esc(s)} (${m.scorep[i+1]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>`;
+    ${m.ctx.length ? `<ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>` : ""}`;
 }
 
 function nhlDetail(m){
@@ -526,10 +526,10 @@ function nhlDetail(m){
       <div class="stat"><div class="v">${m.pD}%</div><div class="k">Prolongation</div></div>
     </div>
     <div class="goalies">${g(m.goalie_h, m.home)}${g(m.goalie_a, m.away)}</div>
+    <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Scores les plus fréquents : ${m.scores.map((s,i)=>`${esc(s)} (${m.scorep[i]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>
     <div><h3>Joueurs par équipe</h3>${topScorer(m)}
     <div class="cols">${squad(m.squad_h, m.home, "h", "p_point", "Point", nhlSub)}${squad(m.squad_a, m.away, "a", "p_point", "Point", nhlSub)}</div></div>
-    <ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>
-    <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Scores les plus fréquents : ${m.scores.map((s,i)=>`${esc(s)} (${m.scorep[i]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>`;
+    <ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`;
 }
 
 function footView(){
