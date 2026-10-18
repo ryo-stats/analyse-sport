@@ -373,6 +373,10 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .vp{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
 .vp:first-child{border-top:0}
 .vk{font-weight:800;text-align:center}
+.tag.lu{text-transform:none}
+.tag.lu.ok{color:var(--ok);border-color:var(--ok)}
+.tag.lu.ko{color:var(--ko);border-color:var(--ko)}
+.row.off{opacity:.6}
 .vtally{font:800 .66rem var(--body);white-space:nowrap;margin-top:1px}
 .vtally.good{color:var(--ok)}
 .vtally.bad{color:var(--ko)}
@@ -479,11 +483,13 @@ function bar(m, h, d, a, lh, la, ld){
 }
 const plural = (n, w) => `${n} ${w}${n > 1 ? "s" : ""}`;
 // Un bloc par équipe : chance de marquer (barre) et chance d'être décisif, joueur par joueur.
+// composition officielle (publiée environ 1 h avant le match)
+const LINEUP_TAG = {start: ' <span class="tag lu ok">titulaire</span>', bench: ' <span class="tag lu">remplaçant</span>', out: ' <span class="tag lu ko">absent</span>'};
 function squad(list, team, side, decKey, decLabel, sub){
   const color = side === "h" ? "var(--home)" : "var(--away)";
   const body = (!list || !list.length) ? `<p class="src">Pas de données joueurs pour cette équipe.</p>` :
     `<div class="rows"><div class="row head"><span>Joueur</span><span>Marque</span><span></span><span>${esc(decLabel)}</span></div>
-    ${list.map(p=>`<div class="row"><span class="who">${esc(p.name)}${p.new?' <span class="tag">nouveau</span>':''}<br><small>${esc(sub(p))}</small></span>
+    ${list.map(p=>`<div class="row${p.lineup && p.lineup !== "start" ? " off" : ""}"><span class="who">${esc(p.name)}${p.new?' <span class="tag">nouveau</span>':''}${LINEUP_TAG[p.lineup] || ""}<br><small>${esc(sub(p))}</small></span>
     <span class="track"><span class="fill" style="width:${Math.min(100,p.p_goal*2)}%;background:${color}"></span></span>
     <span class="p num">${p.p_goal}%</span><span class="p dec num">${p[decKey]}%</span></div>`).join("")}</div>`;
   return `<div class="squad"><h4 style="border-color:${color}">${esc(team)}</h4>${body}</div>`;
@@ -798,7 +804,7 @@ function pronoMatch(m){
   const started = !["pre", "FUT", "PRE"].includes(m.state);
   return `<div class="pm">
     <div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}${started || isOver(m) ? `<span class="tagst">${isOver(m) ? "Terminé" : "Commencé"}</span>${tallyHtml(picksTally(m))}` : ""}</div>
-    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+    ${bookLine(m)}<div class="plines">${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div></div>`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo

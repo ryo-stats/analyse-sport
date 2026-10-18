@@ -383,6 +383,36 @@ class AppTest(unittest.TestCase):
         self.assertEqual(groups["exact"], "fun")
         self.assertEqual(groups[m["main"]["market"]], "safe")
 
+    def test_official_lineup(self):
+        # Lyon–Nice : Nuamah remplaçant, Openda absent → le pronostic buteur va à un titulaire
+        def roster(names_start, names_bench):
+            return [dict(starter=True, athlete=dict(displayName=n)) for n in names_start] + \
+                   [dict(starter=False, athlete=dict(displayName=n)) for n in names_bench]
+        start = ["Rémy Descamps", "Zachary Athekame", "Ainsley Maitland", "Moussa Niakhate", "Abner", "Mathys Bidstrup",
+                 "Tanner Tessmann", "Noah Nartey", "Boudache", "Pavel Sulc", "Duranville"]
+        old = app.get_json
+        app.get_json = lambda url, params=None: dict(rosters=[dict(homeAway="home", roster=roster(start, ["Ernest Nuamah", "Corentin Tolisso"])),
+                                                             dict(homeAway="away", roster=roster(["x"] * 3, []))])
+        try:
+            lu = app.espn_lineup("fra.1", "401876434")
+        finally:
+            app.get_json = old
+        self.assertEqual(set(lu), {"h"})                       # l'équipe sans 11 titulaires connus est ignorée
+        rows = [dict(name="Ernest Nuamah", p_goal=32, p_dec=42), dict(name="Loïs Openda", p_goal=19, p_dec=31),
+                dict(name="Pavel Šulc", p_goal=12, p_dec=25)]
+        missing = app.apply_lineup(rows, lu["h"])
+        got = {r["name"]: (r["lineup"], r["p_goal"]) for r in rows}
+        self.assertEqual(got["Pavel Šulc"], ("start", 12))
+        self.assertEqual(got["Loïs Openda"], ("out", 0))
+        self.assertEqual(got["Ernest Nuamah"][0], "bench")
+        self.assertLess(got["Ernest Nuamah"][1], 12)
+        self.assertEqual(missing, ["Ernest Nuamah (remplaçant)", "Loïs Openda (absent)"])
+        for r in rows:
+            r["team"] = "Lyon"
+        pk = app.foot_picks("Lyon", "Nice", 0.5, 0.26, 0.24, 0.5, 0.5, {"h": rows, "a": []}, ["1-1"], [12])
+        self.assertEqual(pk["player"]["player"], "Pavel Šulc")
+        self.assertEqual(pk["player"]["lineup"], "start")
+
     def test_resolve_fun_markets(self):
         history = {"foot-1": dict(sport="foot", score="2-0", result=0, first="h", scorers=[]),
                    "foot-2": dict(sport="foot", score="0-0", result=1, scorers=[]),

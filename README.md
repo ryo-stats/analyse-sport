@@ -46,7 +46,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Les cotes viennent d'un seul bookmaker** (celui affiché par ESPN), donc elles sont un peu moins précises qu'une moyenne de plusieurs.
 - **Les blessés ne sont pas vérifiés automatiquement.**
   - NHL : seuls les joueurs alignés au match précédent sont retenus.
-  - Foot : les blessés ne sont pas filtrés (ESPN ne les publie pas), vérifie les compositions avant un match.
+  - Foot : les blessés ne sont pas filtrés tant que les compositions ne sont pas sorties. Dès qu'ESPN publie la composition officielle (environ 1 h avant le match), elle est prise en compte au passage suivant : un remplaçant voit ses chances réduites (il joue en moyenne 25 minutes), un joueur absent tombe à 0 %, et le pronostic buteur va à un titulaire. Les passages de 12 h 20, 14 h 20, 16 h 20, 17 h 50 et 20 h 20 couvrent la plupart des coups d'envoi ; pour un match à 13 h 30 ou 18 h 30, la compo peut sortir après le dernier passage, vérifie-la alors toi-même.
 - **En Ligue des champions**, les stats des joueurs viennent du championnat national du club. Pour les clubs dont ESPN ne suit pas le championnat (Azerbaïdjan, Tchéquie…), seuls les matchs européens comptent : le site le signale et les chiffres sont très incertains.
 - **Les gardiens NHL sont une projection** : le gardien le plus utilisé, ou son remplaçant si l'équipe a joué la veille. Ils ne sont pas confirmés.
 - **Le Bilan n'a de sens qu'après 200 à 300 matchs.**

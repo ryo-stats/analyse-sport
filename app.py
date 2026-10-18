@@ -59,6 +59,9 @@ ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/{sport}/{league
 ESPN_STANDINGS = "https://site.api.espn.com/apis/v2/sports/soccer/{league}/standings"
 ESPN_LEADERS = "https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league}/statistics"
 ESPN_ROSTER = "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/teams/{team}/roster"
+ESPN_SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/summary"
+LINEUP_BEFORE = dt.timedelta(hours=2)   # les compositions sortent environ 1 h avant le coup d'envoi
+BENCH_SHARE = 0.3                       # un remplaçant qui entre joue en moyenne ~25 minutes
 ESPN_PLAYER_STATS = ("https://sports.core.api.espn.com/v2/sports/soccer/leagues/{league}/seasons/{season}"
                      "/types/1/athletes/{athlete}/statistics")
 SQUAD_SIZE = 6        # joueurs affichés par équipe
@@ -467,7 +470,46 @@ def espn_squad(league, team_id):
     return squad
 
 
-def squad_rows(squad, lam, side, team):
+def espn_lineup(league, event_id):
+    """Composition officielle (titulaires, remplaçants) de chaque équipe, ou None si pas encore publiée."""
+    data = get_json(ESPN_SUMMARY.format(league=league), {"event": event_id})
+    out = {}
+    for r in (data or {}).get("rosters") or []:
+        side = {"home": "h", "away": "a"}.get(r.get("homeAway"))
+        players = r.get("roster") or []
+        start = {norm((x.get("athlete") or {}).get("displayName", "")) for x in players if x.get("starter")}
+        bench = {norm((x.get("athlete") or {}).get("displayName", "")) for x in players if not x.get("starter")}
+        if side and len(start) >= 11:
+            out[side] = (start - {""}, bench - {""})
+    return out or None
+
+
+def apply_lineup(rows, lineup):
+    """Titulaire : inchangé. Remplaçant : chances réduites (il joue peu). Hors du groupe : 0 %.
+    Renvoie les noms des joueurs importants (≥ 15 % de marquer) qui ne commencent pas le match."""
+    if not lineup:
+        return []
+    start, bench = lineup
+
+    def found(name, group):
+        n = norm(name)
+        last = n.split()[-1] if n else ""
+        return n in group or (len(last) > 3 and any(g.split()[-1] == last for g in group if g))
+    missing = []
+    for r in rows:
+        if found(r["name"], start):
+            r["lineup"] = "start"
+            continue
+        r["lineup"] = "bench" if found(r["name"], bench) else "out"
+        if r.get("p_goal", 0) >= 15:
+            missing.append(f"{r['name']} ({'remplaçant' if r['lineup'] == 'bench' else 'absent'})")
+        for k in ("p_goal", "p_dec"):
+            if k in r:
+                r[k] = pct(1 - (1 - r[k] / 100) ** BENCH_SHARE) if r["lineup"] == "bench" else 0
+    return missing
+
+
+def squad_rows(squad, lam, side, team, lineup=None, missing=None):
     """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ."""
     players = squad["players"]
     team_games = max(p["apps"] for p in players)
@@ -482,6 +524,9 @@ def squad_rows(squad, lam, side, team):
                          goals=p["goals"], assists=p["assists"], apps=p["apps"],
                          p_goal=pct(1 - math.exp(-lam * share_goal)),
                          p_dec=pct(1 - math.exp(-lam * share_dec))))
+    gone = apply_lineup(rows, lineup)
+    if missing is not None:
+        missing += gone
     rows.sort(key=lambda r: (-r["p_goal"], -r["p_dec"]))
     return rows[:SQUAD_SIZE]
 
@@ -532,11 +577,14 @@ def foot_league(today, history, league, code):
     for e in todays:
         _, H, A = competitors(e)
         squads = {s: espn_squad(code, str(c["team"]["id"])) for s, c in (("h", H), ("a", A))}
+        state = ((e.get("status") or {}).get("type") or {}).get("state", "pre")
+        soon = parse_time(e["date"]) - dt.datetime.now(dt.timezone.utc) <= LINEUP_BEFORE
+        lineup = espn_lineup(code, e["id"]) if state == "in" or (state == "pre" and soon) else None
         if not all(squads.values()) and not leaders:
             leaders = espn_leaders(code)          # repli : top 50 des buteurs et passeurs du championnat
             if not leaders:
                 note(f"{league} : joueurs indisponibles aujourd'hui.")
-        rows.append(foot_match(e, league, table, league_gpg or 1.4, leaders, history, squads))
+        rows.append(foot_match(e, league, table, league_gpg or 1.4, leaders, history, squads, lineup))
     return rows
 
 
@@ -583,7 +631,7 @@ def foot_players(squad, team_goals, lam):
     return rows
 
 
-def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
+def foot_match(e, league, table, league_gpg, leaders, history, squads=None, lineup=None):
     comp, H, A = competitors(e)
     kickoff = parse_time(e["date"])
     hid, aid = str(H["team"]["id"]), str(A["team"]["id"])
@@ -617,11 +665,11 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
     over25 = 1 - sum(g[i][j] for i in range(3) for j in range(3) if i + j <= 2)
     btts = (1 - math.exp(-lh)) * (1 - math.exp(-la))
 
-    squads = squads or {}
-    team_rows, stats_from, thin = {}, set(), []
+    squads, lineup = squads or {}, lineup or {}
+    team_rows, stats_from, thin, missing = {}, set(), [], []
     for side, tid, st, lam, name in (("h", hid, sh, lh, home), ("a", aid, sa, la, away)):
         if squads.get(side):
-            team_rows[side] = squad_rows(squads[side], lam, side, name)
+            team_rows[side] = squad_rows(squads[side], lam, side, name, lineup.get(side), missing)
             stats_from.add(squads[side]["league"])
             if max(p["apps"] for p in squads[side]["players"]) < 3:
                 thin.append(name)
@@ -629,6 +677,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
             rows = foot_players(leaders.get(tid, []), max((st or {}).get("gf", 0), 1), lam)
             for r in rows:
                 r.update(side=side, team=name)
+            missing += apply_lineup(rows, lineup.get(side))
             team_rows[side] = sorted(rows, key=lambda r: -r["p_goal"])[:SQUAD_SIZE]
 
     # cotes du bookmaker : lues avant le match, archivées pour rester affichées après le coup d'envoi
@@ -650,6 +699,9 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None):
                        f"{st['ga']} encaissé{'s' if st['ga'] > 1 else ''} en {plural(st['gp'], 'match', 'matchs')}.")
     if not team_rows["h"] and not team_rows["a"]:
         ctx.append("Statistiques des joueurs indisponibles pour ce match.")
+    if lineup:
+        ctx.append("Compositions officielles prises en compte" + (f" : {', '.join(missing)} ne commence{'nt' if len(missing) > 1 else ''} pas le match."
+                                                                 if missing else " : les joueurs clés sont titulaires."))
     for name in thin:
         ctx.append(f"{name} : ESPN ne connaît que 1 ou 2 matchs de ses joueurs, chiffres des joueurs très incertains.")
     if league == "Ligue des champions" and stats_from - {"uefa.champions"}:
@@ -761,7 +813,7 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
     if players:
         best = max(players, key=lambda r: r["p_goal"])
         picks["player"] = make_pick("scorer", f"{best['name']} marque", best["p_goal"] / 100,
-                                    player=best["name"], team=best["team"])
+                                    player=best["name"], team=best["team"], **({"lineup": best["lineup"]} if best.get("lineup") else {}))
     return picks
 
 
