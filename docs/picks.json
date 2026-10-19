@@ -1228,7 +1228,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020135|point|Kirill Kaprizov": {
   "match": "nhl-2026020135",
@@ -1251,7 +1251,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020135|goal|Kirill Kaprizov": {
   "match": "nhl-2026020135",
@@ -1274,7 +1274,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020136|win_a|": {
   "match": "nhl-2026020136",
@@ -1298,7 +1298,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020136|point|Sebastian Aho": {
   "match": "nhl-2026020136",
@@ -1321,7 +1321,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020136|goal|Andrei Svechnikov": {
   "match": "nhl-2026020136",
@@ -1344,7 +1344,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882841|scorer|Luka Sucic": {
   "match": "foot-401882841",
@@ -1385,7 +1385,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020136|o55|": {
   "match": "nhl-2026020136",
@@ -1408,7 +1408,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874762|1N|": {
   "match": "foot-401874762",
@@ -1419,7 +1419,7 @@
   "away": "Cagliari",
   "market": "1N",
   "label": "Monza ou nul",
-  "p": 0.6918,
+  "p": 0.6856,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -1442,7 +1442,7 @@
   "away": "Cagliari",
   "market": "1",
   "label": "Victoire Monza",
-  "p": 0.3935,
+  "p": 0.3864,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -1515,7 +1515,7 @@
   "away": "Cagliari",
   "market": "o15",
   "label": "Plus de 1,5 buts",
-  "p": 0.62,
+  "p": 0.6185,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -1538,7 +1538,7 @@
   "away": "Cagliari",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1389,
+  "p": 0.1377,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -1975,6 +1975,422 @@
   "group": "fun",
   "kinds": [
    "score"
+  ],
+  "result": null
+ },
+ "nhl-2026020137|o55|": {
+  "match": "nhl-2026020137",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "New York Rangers",
+  "away": "Anaheim Ducks",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020137|win_h|": {
+  "match": "nhl-2026020137",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "New York Rangers",
+  "away": "Anaheim Ducks",
+  "market": "win_h",
+  "label": "Victoire New York Rangers",
+  "p": 0.5635,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020137|point|Mika Zibanejad": {
+  "match": "nhl-2026020137",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "New York Rangers",
+  "away": "Anaheim Ducks",
+  "market": "point",
+  "label": "Mika Zibanejad : au moins 1 point",
+  "p": 0.62,
+  "stars": 3,
+  "player": "Mika Zibanejad",
+  "pid_player": 8476459,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020137|goal|Mika Zibanejad": {
+  "match": "nhl-2026020137",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "New York Rangers",
+  "away": "Anaheim Ducks",
+  "market": "goal",
+  "label": "Mika Zibanejad marque",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Mika Zibanejad",
+  "pid_player": 8476459,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020137|o65|": {
+  "match": "nhl-2026020137",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "New York Rangers",
+  "away": "Anaheim Ducks",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.4905,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020138|win_a|": {
+  "match": "nhl-2026020138",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Philadelphia Flyers",
+  "away": "Colorado Avalanche",
+  "market": "win_a",
+  "label": "Victoire Colorado Avalanche",
+  "p": 0.6636,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020138|point|Nathan MacKinnon": {
+  "match": "nhl-2026020138",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Philadelphia Flyers",
+  "away": "Colorado Avalanche",
+  "market": "point",
+  "label": "Nathan MacKinnon : au moins 1 point",
+  "p": 0.75,
+  "stars": 4,
+  "player": "Nathan MacKinnon",
+  "pid_player": 8477492,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020138|goal|Nathan MacKinnon": {
+  "match": "nhl-2026020138",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Philadelphia Flyers",
+  "away": "Colorado Avalanche",
+  "market": "goal",
+  "label": "Nathan MacKinnon marque",
+  "p": 0.43,
+  "stars": 1,
+  "player": "Nathan MacKinnon",
+  "pid_player": 8477492,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020138|o55|": {
+  "match": "nhl-2026020138",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Philadelphia Flyers",
+  "away": "Colorado Avalanche",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6006,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020139|o55|": {
+  "match": "nhl-2026020139",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Toronto Maple Leafs",
+  "away": "San Jose Sharks",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020139|win_h|": {
+  "match": "nhl-2026020139",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Toronto Maple Leafs",
+  "away": "San Jose Sharks",
+  "market": "win_h",
+  "label": "Victoire Toronto Maple Leafs",
+  "p": 0.5635,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020139|point|William Nylander": {
+  "match": "nhl-2026020139",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Toronto Maple Leafs",
+  "away": "San Jose Sharks",
+  "market": "point",
+  "label": "William Nylander : au moins 1 point",
+  "p": 0.68,
+  "stars": 3,
+  "player": "William Nylander",
+  "pid_player": 8477939,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020139|goal|William Nylander": {
+  "match": "nhl-2026020139",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Toronto Maple Leafs",
+  "away": "San Jose Sharks",
+  "market": "goal",
+  "label": "William Nylander marque",
+  "p": 0.35,
+  "stars": 1,
+  "player": "William Nylander",
+  "pid_player": 8477939,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020139|o65|": {
+  "match": "nhl-2026020139",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-19",
+  "home": "Toronto Maple Leafs",
+  "away": "San Jose Sharks",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.4905,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020140|win_h|": {
+  "match": "nhl-2026020140",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Utah Mammoth",
+  "away": "Pittsburgh Penguins",
+  "market": "win_h",
+  "label": "Victoire Utah Mammoth",
+  "p": 0.6225,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020140|point|Clayton Keller": {
+  "match": "nhl-2026020140",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Utah Mammoth",
+  "away": "Pittsburgh Penguins",
+  "market": "point",
+  "label": "Clayton Keller : au moins 1 point",
+  "p": 0.64,
+  "stars": 3,
+  "player": "Clayton Keller",
+  "pid_player": 8479343,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020140|goal|Dylan Guenther": {
+  "match": "nhl-2026020140",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Utah Mammoth",
+  "away": "Pittsburgh Penguins",
+  "market": "goal",
+  "label": "Dylan Guenther marque",
+  "p": 0.37,
+  "stars": 1,
+  "player": "Dylan Guenther",
+  "pid_player": 8482699,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020140|o55|": {
+  "match": "nhl-2026020140",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Utah Mammoth",
+  "away": "Pittsburgh Penguins",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6007,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
   ],
   "result": null
  }
