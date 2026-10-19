@@ -156,7 +156,7 @@ MONEYPUCK = {2026: MP_HEAD + "WSH,2026,WSH,WSH,Team Level,all,4,14.0,9.0,14400\n
              2025: MP_HEAD + "WSH,2025,WSH,WSH,Team Level,all,82,260,230,295200\nSEA,2025,SEA,SEA,Team Level,all,82,235,250,295200\n"}
 
 
-def fake_get_text(url):
+def fake_get_text(url, headers=None):
     if url == app.CLUBELO_FIXTURES:
         return CLUBELO_FIX
     if url.startswith("http://api.clubelo.com/"):
@@ -450,8 +450,27 @@ class AppTest(unittest.TestCase):
 
     def test_second_opinion(self):
         # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
-        self.assertEqual(self.data["second"]["foot"], dict(ok=1, missing=[]))
-        self.assertEqual(self.data["second"]["nhl"], dict(ok=1, missing=[]))
+        self.assertEqual((self.data["second"]["foot"]["ok"], self.data["second"]["foot"]["missing"]), (1, []))
+        self.assertEqual((self.data["second"]["nhl"]["ok"], self.data["second"]["nhl"]["missing"]), (1, []))
+        # MoneyPuck : San Jose s'écrit « SJS » dans certains fichiers, « S.J » dans d'autres
+        old = app.get_text
+        try:
+            for code in ("SJS", "S.J"):
+                csv_ = MP_HEAD + f"{code},2026,{code},{code},Team Level,all,6,15.0,20.0,21600\nTOR,2026,TOR,TOR,Team Level,all,6,19.0,14.0,21600\n"
+                app.get_text = lambda url, headers=None, c=csv_: c if "/2026/" in url else MP_HEAD
+                app.SECOND.clear()
+                self.assertIsNotNone(app.nhl_second("TOR", "SJS", 20262027), code)
+            # ClubElo : réponse HTML (blocage) en http, CSV en https → la ligne https est retenue
+            calls = []
+            def fake(url, headers=None):
+                calls.append(url)
+                return "<html>blocked</html>" if url.startswith("http://") else CLUBELO_DAY
+            app.get_text = fake
+            self.assertEqual(len(app.clubelo_csv("http://api.clubelo.com/2026-10-19", "Club")), 5)
+            self.assertEqual([u[:5] for u in calls], ["http:", "https"])
+        finally:
+            app.get_text = old
+            app.SECOND.clear()
         foot, nhl = self.data["foot"][0], self.data["nhl"][0]
         self.assertEqual((foot["second"]["src"], foot["second"]["agree"]), ("ClubElo", True))
         self.assertEqual((foot["second"]["pH"], foot["second"]["pD"], foot["second"]["pA"]), (33, 27, 40))

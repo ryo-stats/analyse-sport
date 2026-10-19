@@ -124,15 +124,22 @@ def get_json(url, params=None):
     return None
 
 
-def get_text(url):
-    """GET d'un fichier texte (CSV), 3 tentatives. Renvoie le texte ou None."""
+FETCH_LOG = {}        # résultat des lectures de fichiers texte (diagnostic publié dans data.json › second)
+BROWSER_HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+                   "Accept": "text/csv,text/plain,*/*"}
+
+
+def get_text(url, headers=None):
+    """GET d'un fichier texte (CSV), 3 tentatives. Renvoie le texte ou None ; le résultat est noté dans FETCH_LOG."""
     for attempt in range(3):
         try:
-            r = requests.get(url, headers=HEADERS, timeout=30)
+            r = requests.get(url, headers=headers or HEADERS, timeout=30)
         except requests.RequestException as exc:
             print(f"Réseau : {exc.__class__.__name__} sur {url}", file=sys.stderr)
+            FETCH_LOG[url] = exc.__class__.__name__
             time.sleep(3 * (attempt + 1))
             continue
+        FETCH_LOG[url] = f"HTTP {r.status_code}, {len(r.text)} car., début : {r.text[:60]!r}"
         if r.status_code == 200:
             return r.text
         if r.status_code in (429, 500, 502, 503, 504):
@@ -857,11 +864,20 @@ def gd_probs(row):
     return (h / tot, d / tot, a / tot) if tot > 0.5 else None
 
 
+def clubelo_csv(url, needed):
+    """Lecture d'un CSV ClubElo : http puis https, en-tête de navigateur. [] si aucune ligne n'a la colonne attendue."""
+    for u in (url, url.replace("http://", "https://")):
+        rows = read_csv(get_text(u, BROWSER_HEADERS))
+        if rows and needed in rows[0]:
+            return rows
+    return []
+
+
 def elo_second(code, day, home_names, away_names):
     """Deuxième avis foot : probabilités publiées par ClubElo si le match est dans sa liste, sinon calcul
     à partir du classement Elo du jour. None si les équipes ne sont pas trouvées."""
     if "fixtures" not in SECOND:
-        SECOND["fixtures"] = read_csv(get_text(CLUBELO_FIXTURES))
+        SECOND["fixtures"] = clubelo_csv(CLUBELO_FIXTURES, "Home")
     fx = [r for r in SECOND["fixtures"] if (r.get("Date") or "")[:10] == day.isoformat()]
     if fx:
         homes = [r.get("Home", "") for r in fx]
@@ -873,7 +889,7 @@ def elo_second(code, day, home_names, away_names):
                     return dict(src="ClubElo", p=p)
     key = "elo-" + day.isoformat()
     if key not in SECOND:
-        SECOND[key] = read_csv(get_text(CLUBELO_DAY.format(date=day.isoformat())))
+        SECOND[key] = clubelo_csv(CLUBELO_DAY.format(date=day.isoformat()), "Club")
     rows = SECOND[key]
     country = ELO_COUNTRY.get(code)
     pool = [r for r in rows if not country or r.get("Country") == country]
@@ -925,7 +941,8 @@ def nhl_second(H, A, season):
     avg = sum(x[0] for x in teams) / len(teams)
 
     def rate(abbr):
-        k = MP_ABBR.get(abbr, abbr)
+        # MoneyPuck écrit « SJS » ou « S.J » selon les fichiers : on essaie le code NHL tel quel, puis sa variante
+        k = next((x for x in (abbr, MP_ABBR.get(abbr, abbr)) if x in cur or x in prev), abbr)
         base = prev.get(k, (avg, avg, 0))
         c = cur.get(k)
         if not c and k not in prev:
@@ -1721,6 +1738,7 @@ def main(now=None):
     nhl_day = (now - dt.timedelta(hours=7)).date()
     history = load_json(HIST_FILE, {})
     SECOND.clear()
+    FETCH_LOG.clear()
     SECOND_STATS.update(foot=[0, []], nhl=[0, []])
     load_squad_cache(today)
     foot_rows = foot(today, history)
@@ -1737,8 +1755,11 @@ def main(now=None):
     stats["picks"] = picks_bilan(store, history)
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
-                notes=NOTES[-12:], second=dict(foot=dict(ok=SECOND_STATS["foot"][0], missing=sorted(set(SECOND_STATS["foot"][1]))),
-                                               nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])))))
+                notes=NOTES[-12:], second=dict(
+                    foot=dict(ok=SECOND_STATS["foot"][0], missing=sorted(set(SECOND_STATS["foot"][1])),
+                              fetch={u: v for u, v in FETCH_LOG.items() if "clubelo" in u}),
+                    nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])),
+                             fetch={u: v for u, v in FETCH_LOG.items() if "moneypuck" in u})))
     save_json(HIST_FILE, history)
     save_json(PICKS_FILE, store)
     save_json(DATA_FILE, data)
