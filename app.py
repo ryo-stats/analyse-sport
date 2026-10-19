@@ -74,7 +74,6 @@ DEC_PRIOR = {"F": 0.35, "M": 0.25, "D": 0.08}
 POSTES = {"F": "Attaquant", "M": "Milieu", "D": "Défenseur"}
 NHL_API = "https://api-web.nhle.com/v1"
 # deuxième avis, indépendant des cotes : ClubElo (foot) et buts attendus MoneyPuck (NHL)
-CLUBELO_FIXTURES = "http://api.clubelo.com/Fixtures"
 CLUBELO_DAY = "http://api.clubelo.com/{date}"
 MONEYPUCK_TEAMS = "https://moneypuck.com/moneypuck/playerData/seasonSummary/{season}/regular/teams.csv"
 ELO_COUNTRY = {"fra.1": "FRA", "eng.1": "ENG", "esp.1": "ESP", "ita.1": "ITA", "ger.1": "GER"}
@@ -129,11 +128,11 @@ BROWSER_HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53
                    "Accept": "text/csv,text/plain,*/*"}
 
 
-def get_text(url, headers=None):
-    """GET d'un fichier texte (CSV), 3 tentatives. Renvoie le texte ou None ; le résultat est noté dans FETCH_LOG."""
-    for attempt in range(3):
+def get_text(url, headers=None, tries=3, timeout=30):
+    """GET d'un fichier texte (CSV). Renvoie le texte ou None ; le résultat est noté dans FETCH_LOG."""
+    for attempt in range(tries):
         try:
-            r = requests.get(url, headers=headers or HEADERS, timeout=30)
+            r = requests.get(url, headers=headers or HEADERS, timeout=timeout)
         except requests.RequestException as exc:
             print(f"Réseau : {exc.__class__.__name__} sur {url}", file=sys.stderr)
             FETCH_LOG[url] = exc.__class__.__name__
@@ -842,55 +841,24 @@ def elo_wdl(dr):
     return h, d, max(0.01, 1 - h - d)
 
 
-def gd_probs(row):
-    """Probabilités ClubElo d'un match (colonnes « GD… » : écart de buts domicile - extérieur)."""
-    h = d = a = 0.0
-    for k, v in row.items():
-        m = re.fullmatch(r"GD\s*([<>=])\s*(-?\d+)", (k or "").strip())
-        if not m:
-            continue
-        try:
-            x = float(v)
-        except (TypeError, ValueError):
-            continue
-        op, n = m.group(1), int(m.group(2))
-        if op == "<" or (op == "=" and n < 0):
-            a += x
-        elif op == ">" or (op == "=" and n > 0):
-            h += x
-        else:
-            d += x
-    tot = h + d + a
-    return (h / tot, d / tot, a / tot) if tot > 0.5 else None
-
-
 def clubelo_csv(url, needed):
-    """Lecture d'un CSV ClubElo : http puis https, en-tête de navigateur. [] si aucune ligne n'a la colonne attendue."""
-    for u in (url, url.replace("http://", "https://")):
-        rows = read_csv(get_text(u, BROWSER_HEADERS))
-        if rows and needed in rows[0]:
-            return rows
-    return []
+    """Lecture d'un CSV ClubElo : une seule tentative courte (le 19/10, l'API répondait 502 en http, ne
+    répondait pas en https et sa liste de matchs était désactivée : inutile d'allonger chaque calcul).
+    [] si aucune ligne n'a la colonne attendue."""
+    rows = read_csv(get_text(url, BROWSER_HEADERS, tries=1, timeout=10))
+    return rows if rows and needed in rows[0] else []
 
 
 def elo_second(code, day, home_names, away_names):
-    """Deuxième avis foot : probabilités publiées par ClubElo si le match est dans sa liste, sinon calcul
-    à partir du classement Elo du jour. None si les équipes ne sont pas trouvées."""
-    if "fixtures" not in SECOND:
-        SECOND["fixtures"] = clubelo_csv(CLUBELO_FIXTURES, "Home")
-    fx = [r for r in SECOND["fixtures"] if (r.get("Date") or "")[:10] == day.isoformat()]
-    if fx:
-        homes = [r.get("Home", "") for r in fx]
-        h = best_club(home_names, homes)
-        for r in fx:
-            if h and r.get("Home") == h and best_club(away_names, [r.get("Away", "")]):
-                p = gd_probs(r)
-                if p:
-                    return dict(src="ClubElo", p=p)
+    """Deuxième avis foot : probabilités calculées à partir du classement Elo ClubElo du jour.
+    None si ClubElo ne répond pas ou si les équipes ne sont pas trouvées."""
     key = "elo-" + day.isoformat()
     if key not in SECOND:
         SECOND[key] = clubelo_csv(CLUBELO_DAY.format(date=day.isoformat()), "Club")
     rows = SECOND[key]
+    if not rows:                     # ClubElo indisponible : rien à comparer, pas d'équipe « introuvable »
+        SECOND_STATS["foot_down"] = True
+        return None
     country = ELO_COUNTRY.get(code)
     pool = [r for r in rows if not country or r.get("Country") == country]
     clubs = {r.get("Club", ""): r for r in pool}
@@ -1739,6 +1707,7 @@ def main(now=None):
     history = load_json(HIST_FILE, {})
     SECOND.clear()
     FETCH_LOG.clear()
+    SECOND_STATS.clear()
     SECOND_STATS.update(foot=[0, []], nhl=[0, []])
     load_squad_cache(today)
     foot_rows = foot(today, history)
@@ -1757,6 +1726,7 @@ def main(now=None):
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
                 notes=NOTES[-12:], second=dict(
                     foot=dict(ok=SECOND_STATS["foot"][0], missing=sorted(set(SECOND_STATS["foot"][1])),
+                              status="ClubElo indisponible" if SECOND_STATS.get("foot_down") else "ok",
                               fetch={u: v for u, v in FETCH_LOG.items() if "clubelo" in u}),
                     nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])),
                              fetch={u: v for u, v in FETCH_LOG.items() if "moneypuck" in u})))

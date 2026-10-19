@@ -143,10 +143,6 @@ def fake_get_json(url, params=None):
 
 
 # deuxième avis simulé : ClubElo (probabilités du match Liverpool – Man City, classement Elo) et MoneyPuck
-GD_COLS = ["GD<-5", "GD=-5", "GD=-4", "GD=-3", "GD=-2", "GD=-1", "GD=0", "GD=1", "GD=2", "GD=3", "GD=4", "GD=5", "GD>5"]
-CLUBELO_FIX = ",".join(["Date", "Country", "Home", "Away"] + GD_COLS) + "\n" + \
-    ",".join(["2026-10-11", "ENG", "Liverpool", "Man City", "0", "0", "0", "0.03", "0.12", "0.25", "0.27",
-              "0.2", "0.1", "0.03", "0", "0", "0"]) + "\n"
 CLUBELO_DAY = "Rank,Club,Country,Level,Elo,From,To\n1,Man City,ENG,1,2010,2026-10-05,2026-10-12\n" \
               "3,Liverpool,ENG,1,1960,2026-10-05,2026-10-12\n9,Paris SG,FRA,1,1900,2026-10-05,2026-10-12\n" \
               "40,Paris FC,FRA,1,1610,2026-10-05,2026-10-12\n25,Forest,ENG,1,1750,2026-10-05,2026-10-12\n"
@@ -156,9 +152,7 @@ MONEYPUCK = {2026: MP_HEAD + "WSH,2026,WSH,WSH,Team Level,all,4,14.0,9.0,14400\n
              2025: MP_HEAD + "WSH,2025,WSH,WSH,Team Level,all,82,260,230,295200\nSEA,2025,SEA,SEA,Team Level,all,82,235,250,295200\n"}
 
 
-def fake_get_text(url, headers=None):
-    if url == app.CLUBELO_FIXTURES:
-        return CLUBELO_FIX
+def fake_get_text(url, headers=None, tries=3, timeout=30):
     if url.startswith("http://api.clubelo.com/"):
         return CLUBELO_DAY
     if "moneypuck.com" in url:
@@ -457,23 +451,27 @@ class AppTest(unittest.TestCase):
         try:
             for code in ("SJS", "S.J"):
                 csv_ = MP_HEAD + f"{code},2026,{code},{code},Team Level,all,6,15.0,20.0,21600\nTOR,2026,TOR,TOR,Team Level,all,6,19.0,14.0,21600\n"
-                app.get_text = lambda url, headers=None, c=csv_: c if "/2026/" in url else MP_HEAD
+                app.get_text = lambda url, headers=None, tries=3, timeout=30, c=csv_: c if "/2026/" in url else MP_HEAD
                 app.SECOND.clear()
                 self.assertIsNotNone(app.nhl_second("TOR", "SJS", 20262027), code)
-            # ClubElo : réponse HTML (blocage) en http, CSV en https → la ligne https est retenue
+            # ClubElo en panne (502, comme le 19/10) : une seule tentative courte, pas d'équipe « introuvable »
             calls = []
-            def fake(url, headers=None):
-                calls.append(url)
-                return "<html>blocked</html>" if url.startswith("http://") else CLUBELO_DAY
+            def fake(url, headers=None, tries=3, timeout=30):
+                calls.append((url, tries, timeout))
+                return None
             app.get_text = fake
-            self.assertEqual(len(app.clubelo_csv("http://api.clubelo.com/2026-10-19", "Club")), 5)
-            self.assertEqual([u[:5] for u in calls], ["http:", "https"])
+            app.SECOND.clear(); app.SECOND_STATS.update(foot=[0, []])
+            self.assertIsNone(app.elo_second("eng.1", dt.date(2026, 10, 19), ["Spurs"], ["Coventry"]))
+            self.assertEqual(calls, [("http://api.clubelo.com/2026-10-19", 1, 10)])
+            self.assertEqual(app.SECOND_STATS["foot"][1], [])
+            self.assertTrue(app.SECOND_STATS.get("foot_down"))
         finally:
             app.get_text = old
             app.SECOND.clear()
         foot, nhl = self.data["foot"][0], self.data["nhl"][0]
-        self.assertEqual((foot["second"]["src"], foot["second"]["agree"]), ("ClubElo", True))
-        self.assertEqual((foot["second"]["pH"], foot["second"]["pD"], foot["second"]["pA"]), (33, 27, 40))
+        self.assertTrue(foot["second"]["src"].startswith("Classement Elo ClubElo (Liverpool 1960, Man City 2010)"))
+        self.assertTrue(foot["second"]["agree"])
+        self.assertEqual(self.data["second"]["foot"]["status"], "ok")
         self.assertIn("main", foot["picks"])
         self.assertTrue(nhl["second"]["agree"] and nhl["second"]["winH"] > 50, nhl["second"])
         # noms : alias et pas de confusion Paris FC / Paris SG
