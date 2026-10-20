@@ -1999,7 +1999,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020137|win_h|": {
   "match": "nhl-2026020137",
@@ -2022,7 +2022,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020137|point|Mika Zibanejad": {
   "match": "nhl-2026020137",
@@ -2045,7 +2045,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020137|goal|Mika Zibanejad": {
   "match": "nhl-2026020137",
@@ -2068,7 +2068,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020138|win_a|": {
   "match": "nhl-2026020138",
@@ -2092,7 +2092,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020138|point|Nathan MacKinnon": {
   "match": "nhl-2026020138",
@@ -2115,7 +2115,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020138|goal|Nathan MacKinnon": {
   "match": "nhl-2026020138",
@@ -2138,7 +2138,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020138|o55|": {
   "match": "nhl-2026020138",
@@ -2161,7 +2161,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020139|o55|": {
   "match": "nhl-2026020139",
@@ -2184,7 +2184,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020139|win_h|": {
   "match": "nhl-2026020139",
@@ -2207,7 +2207,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020139|point|William Nylander": {
   "match": "nhl-2026020139",
@@ -2230,7 +2230,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020139|goal|William Nylander": {
   "match": "nhl-2026020139",
@@ -2253,7 +2253,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020139|o65|": {
   "match": "nhl-2026020139",
@@ -2276,7 +2276,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020140|win_h|": {
   "match": "nhl-2026020140",
@@ -2300,7 +2300,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020140|point|Clayton Keller": {
   "match": "nhl-2026020140",
@@ -2323,7 +2323,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020140|goal|Dylan Guenther": {
   "match": "nhl-2026020140",
@@ -2346,7 +2346,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020140|o55|": {
   "match": "nhl-2026020140",
@@ -2369,7 +2369,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020137|reg_h|": {
   "match": "nhl-2026020137",
@@ -2392,7 +2392,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915403|1N|": {
   "match": "foot-401915403",
@@ -2403,7 +2403,7 @@
   "away": "Slavia Prague",
   "market": "1N",
   "label": "Fenerbahce ou nul",
-  "p": 0.8082,
+  "p": 0.8195,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -2426,8 +2426,8 @@
   "away": "Slavia Prague",
   "market": "1",
   "label": "Victoire Fenerbahce",
-  "p": 0.5902,
-  "stars": 2,
+  "p": 0.609,
+  "stars": 3,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -2449,7 +2449,7 @@
   "away": "Slavia Prague",
   "market": "scorer",
   "label": "Vedat Muriqi marque",
-  "p": 0.41,
+  "p": 0.43,
   "stars": 1,
   "player": "Vedat Muriqi",
   "pid_player": "240209",
@@ -2472,7 +2472,7 @@
   "away": "Slavia Prague",
   "market": "dec",
   "label": "Vedat Muriqi buteur ou passeur",
-  "p": 0.47,
+  "p": 0.49,
   "stars": 1,
   "player": "Vedat Muriqi",
   "pid_player": "240209",
@@ -2499,7 +2499,7 @@
   "away": "Slavia Prague",
   "market": "fg_h",
   "label": "Premier but : Fenerbahce",
-  "p": 0.6231,
+  "p": 0.6357,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -2521,12 +2521,12 @@
   "home": "Fenerbahce",
   "away": "Slavia Prague",
   "market": "exact",
-  "label": "Score exact 1-0",
-  "p": 0.1023,
+  "label": "Score exact 2-0",
+  "p": 0.0999,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "1-0",
+  "value": "2-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -2545,7 +2545,7 @@
   "away": "Dortmund",
   "market": "N2",
   "label": "Nul ou Dortmund",
-  "p": 0.8937,
+  "p": 0.8939,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -2568,7 +2568,7 @@
   "away": "Dortmund",
   "market": "2",
   "label": "Victoire Dortmund",
-  "p": 0.7342,
+  "p": 0.7278,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -2591,7 +2591,7 @@
   "away": "Dortmund",
   "market": "scorer",
   "label": "Serhou Guirassy marque",
-  "p": 0.42,
+  "p": 0.41,
   "stars": 1,
   "player": "Serhou Guirassy",
   "pid_player": "186381",
@@ -2614,7 +2614,7 @@
   "away": "Dortmund",
   "market": "dec",
   "label": "Serhou Guirassy buteur ou passeur",
-  "p": 0.63,
+  "p": 0.61,
   "stars": 3,
   "player": "Serhou Guirassy",
   "pid_player": "186381",
@@ -2641,7 +2641,7 @@
   "away": "Dortmund",
   "market": "o25",
   "label": "Plus de 2,5 buts",
-  "p": 0.6522,
+  "p": 0.6182,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -2664,7 +2664,7 @@
   "away": "Dortmund",
   "market": "exact",
   "label": "Score exact 0-2",
-  "p": 0.1093,
+  "p": 0.1178,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -2687,7 +2687,7 @@
   "away": "S Bratislava",
   "market": "1N",
   "label": "AS Roma ou nul",
-  "p": 0.9403,
+  "p": 0.9497,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -2710,7 +2710,7 @@
   "away": "S Bratislava",
   "market": "1",
   "label": "Victoire AS Roma",
-  "p": 0.8279,
+  "p": 0.8435,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -2774,29 +2774,6 @@
   ],
   "result": null
  },
- "foot-401915402|h2|": {
-  "match": "foot-401915402",
-  "sport": "foot",
-  "league": "Ligue des champions",
-  "date": "2026-10-20",
-  "home": "AS Roma",
-  "away": "S Bratislava",
-  "market": "h2",
-  "label": "AS Roma gagne avec 2 buts d'écart ou plus",
-  "p": 0.6438,
-  "stars": 3,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401915402|exact|": {
   "match": "foot-401915402",
   "sport": "foot",
@@ -2806,7 +2783,7 @@
   "away": "S Bratislava",
   "market": "exact",
   "label": "Score exact 3-0",
-  "p": 0.1084,
+  "p": 0.1184,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -2829,7 +2806,7 @@
   "away": "PSV",
   "market": "1N",
   "label": "FC Porto ou nul",
-  "p": 0.8179,
+  "p": 0.8255,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -2852,7 +2829,7 @@
   "away": "PSV",
   "market": "1",
   "label": "Victoire FC Porto",
-  "p": 0.6145,
+  "p": 0.6169,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -2875,7 +2852,7 @@
   "away": "PSV",
   "market": "scorer",
   "label": "Gabri Veiga marque",
-  "p": 0.29,
+  "p": 0.28,
   "stars": 1,
   "player": "Gabri Veiga",
   "pid_player": "307381",
@@ -2898,7 +2875,7 @@
   "away": "PSV",
   "market": "dec",
   "label": "Gabri Veiga buteur ou passeur",
-  "p": 0.47,
+  "p": 0.46,
   "stars": 1,
   "player": "Gabri Veiga",
   "pid_player": "307381",
@@ -2925,7 +2902,7 @@
   "away": "PSV",
   "market": "fg_h",
   "label": "Premier but : FC Porto",
-  "p": 0.6377,
+  "p": 0.6414,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -2947,12 +2924,12 @@
   "home": "FC Porto",
   "away": "PSV",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0991,
+  "label": "Score exact 2-0",
+  "p": 0.102,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "2-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -2971,7 +2948,7 @@
   "away": "Villarreal",
   "market": "1N",
   "label": "Liverpool ou nul",
-  "p": 0.8266,
+  "p": 0.8407,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -2994,7 +2971,7 @@
   "away": "Villarreal",
   "market": "1",
   "label": "Victoire Liverpool",
-  "p": 0.6192,
+  "p": 0.6373,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -3067,7 +3044,7 @@
   "away": "Villarreal",
   "market": "fg_h",
   "label": "Premier but : Liverpool",
-  "p": 0.6428,
+  "p": 0.6561,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -3090,7 +3067,7 @@
   "away": "Villarreal",
   "market": "exact",
   "label": "Score exact 2-0",
-  "p": 0.1017,
+  "p": 0.1076,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -3113,7 +3090,7 @@
   "away": "AEK Athens",
   "market": "1N",
   "label": "Man City ou nul",
-  "p": 0.9524,
+  "p": 0.95,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -3136,7 +3113,7 @@
   "away": "AEK Athens",
   "market": "1",
   "label": "Victoire Man City",
-  "p": 0.8571,
+  "p": 0.855,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -3159,8 +3136,8 @@
   "away": "AEK Athens",
   "market": "scorer",
   "label": "Erling Haaland marque",
-  "p": 0.69,
-  "stars": 3,
+  "p": 0.7,
+  "stars": 4,
   "player": "Erling Haaland",
   "pid_player": "253989",
   "value": null,
@@ -3182,7 +3159,7 @@
   "away": "AEK Athens",
   "market": "dec",
   "label": "Erling Haaland buteur ou passeur",
-  "p": 0.73,
+  "p": 0.74,
   "stars": 4,
   "player": "Erling Haaland",
   "pid_player": "253989",
@@ -3209,7 +3186,7 @@
   "away": "AEK Athens",
   "market": "cs_h",
   "label": "AEK Athens ne marque pas",
-  "p": 0.4926,
+  "p": 0.4681,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -3232,7 +3209,7 @@
   "away": "AEK Athens",
   "market": "exact",
   "label": "Score exact 3-0",
-  "p": 0.1091,
+  "p": 0.1031,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -3255,8 +3232,8 @@
   "away": "Bodo/Glimt",
   "market": "1N",
   "label": "Napoli ou nul",
-  "p": 0.8054,
-  "stars": 5,
+  "p": 0.774,
+  "stars": 4,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -3278,7 +3255,7 @@
   "away": "Bodo/Glimt",
   "market": "1",
   "label": "Victoire Napoli",
-  "p": 0.5936,
+  "p": 0.5366,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -3301,7 +3278,7 @@
   "away": "Bodo/Glimt",
   "market": "scorer",
   "label": "Kevin De Bruyne marque",
-  "p": 0.32,
+  "p": 0.28,
   "stars": 1,
   "player": "Kevin De Bruyne",
   "pid_player": "134947",
@@ -3324,7 +3301,7 @@
   "away": "Bodo/Glimt",
   "market": "dec",
   "label": "Kevin De Bruyne buteur ou passeur",
-  "p": 0.44,
+  "p": 0.4,
   "stars": 1,
   "player": "Kevin De Bruyne",
   "pid_player": "134947",
@@ -3351,8 +3328,8 @@
   "away": "Bodo/Glimt",
   "market": "fg_h",
   "label": "Premier but : Napoli",
-  "p": 0.6242,
-  "stars": 3,
+  "p": 0.5862,
+  "stars": 2,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -3373,41 +3350,18 @@
   "home": "Napoli",
   "away": "Bodo/Glimt",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0994,
+  "label": "Score exact 1-0",
+  "p": 0.1087,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
   "group": "fun",
   "kinds": [
    "score"
-  ],
-  "result": null
- },
- "foot-401915399|o25|": {
-  "match": "foot-401915399",
-  "sport": "foot",
-  "league": "Ligue des champions",
-  "date": "2026-10-20",
-  "home": "PSG",
-  "away": "Barcelona",
-  "market": "o25",
-  "label": "Plus de 2,5 buts",
-  "p": 0.7055,
-  "stars": 4,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "group": "safe",
-  "kinds": [
-   "main"
   ],
   "result": null
  },
@@ -3420,7 +3374,7 @@
   "away": "Barcelona",
   "market": "1",
   "label": "Victoire PSG",
-  "p": 0.3911,
+  "p": 0.3891,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -3443,7 +3397,7 @@
   "away": "Barcelona",
   "market": "scorer",
   "label": "Ferran Torres marque",
-  "p": 0.35,
+  "p": 0.34,
   "stars": 1,
   "player": "Ferran Torres",
   "pid_player": "265869",
@@ -3466,7 +3420,7 @@
   "away": "Barcelona",
   "market": "dec",
   "label": "Ferran Torres buteur ou passeur",
-  "p": 0.44,
+  "p": 0.43,
   "stars": 1,
   "player": "Ferran Torres",
   "pid_player": "265869",
@@ -3484,29 +3438,6 @@
   ],
   "result": null
  },
- "foot-401915399|fg_h|": {
-  "match": "foot-401915399",
-  "sport": "foot",
-  "league": "Ligue des champions",
-  "date": "2026-10-20",
-  "home": "PSG",
-  "away": "Barcelona",
-  "market": "fg_h",
-  "label": "Premier but : PSG",
-  "p": 0.487,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401915399|exact|": {
   "match": "foot-401915399",
   "sport": "foot",
@@ -3516,7 +3447,7 @@
   "away": "Barcelona",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.079,
+  "p": 0.0806,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -3669,6 +3600,1207 @@
   "group": "fun",
   "kinds": [
    "score"
+  ],
+  "result": null
+ },
+ "foot-401915402|cs_h|": {
+  "match": "foot-401915402",
+  "sport": "foot",
+  "league": "Ligue des champions",
+  "date": "2026-10-20",
+  "home": "AS Roma",
+  "away": "S Bratislava",
+  "market": "cs_h",
+  "label": "S Bratislava ne marque pas",
+  "p": 0.5283,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401915399|btts_y|": {
+  "match": "foot-401915399",
+  "sport": "foot",
+  "league": "Ligue des champions",
+  "date": "2026-10-20",
+  "home": "PSG",
+  "away": "Barcelona",
+  "market": "btts_y",
+  "label": "Les deux équipes marquent",
+  "p": 0.6871,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401915399|1N|": {
+  "match": "foot-401915399",
+  "sport": "foot",
+  "league": "Ligue des champions",
+  "date": "2026-10-20",
+  "home": "PSG",
+  "away": "Barcelona",
+  "market": "1N",
+  "label": "PSG ou nul",
+  "p": 0.6109,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020141|win_h|": {
+  "match": "nhl-2026020141",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Montréal Canadiens",
+  "away": "San Jose Sharks",
+  "market": "win_h",
+  "label": "Victoire Montréal Canadiens",
+  "p": 0.6447,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020141|point|Nick Suzuki": {
+  "match": "nhl-2026020141",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Montréal Canadiens",
+  "away": "San Jose Sharks",
+  "market": "point",
+  "label": "Nick Suzuki : au moins 1 point",
+  "p": 0.68,
+  "stars": 3,
+  "player": "Nick Suzuki",
+  "pid_player": 8480018,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020141|goal|Cole Caufield": {
+  "match": "nhl-2026020141",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Montréal Canadiens",
+  "away": "San Jose Sharks",
+  "market": "goal",
+  "label": "Cole Caufield marque",
+  "p": 0.43,
+  "stars": 1,
+  "player": "Cole Caufield",
+  "pid_player": 8481540,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020141|o55|": {
+  "match": "nhl-2026020141",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Montréal Canadiens",
+  "away": "San Jose Sharks",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6007,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020142|o55|": {
+  "match": "nhl-2026020142",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New Jersey Devils",
+  "away": "Colorado Avalanche",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020142|win_a|": {
+  "match": "nhl-2026020142",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New Jersey Devils",
+  "away": "Colorado Avalanche",
+  "market": "win_a",
+  "label": "Victoire Colorado Avalanche",
+  "p": 0.5108,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020142|point|Nathan MacKinnon": {
+  "match": "nhl-2026020142",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New Jersey Devils",
+  "away": "Colorado Avalanche",
+  "market": "point",
+  "label": "Nathan MacKinnon : au moins 1 point",
+  "p": 0.69,
+  "stars": 3,
+  "player": "Nathan MacKinnon",
+  "pid_player": 8477492,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020142|goal|Nathan MacKinnon": {
+  "match": "nhl-2026020142",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New Jersey Devils",
+  "away": "Colorado Avalanche",
+  "market": "goal",
+  "label": "Nathan MacKinnon marque",
+  "p": 0.38,
+  "stars": 1,
+  "player": "Nathan MacKinnon",
+  "pid_player": 8477492,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020142|o65|": {
+  "match": "nhl-2026020142",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New Jersey Devils",
+  "away": "Colorado Avalanche",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.4911,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020143|win_h|": {
+  "match": "nhl-2026020143",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New York Islanders",
+  "away": "Anaheim Ducks",
+  "market": "win_h",
+  "label": "Victoire New York Islanders",
+  "p": 0.583,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020143|point|Bo Horvat": {
+  "match": "nhl-2026020143",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New York Islanders",
+  "away": "Anaheim Ducks",
+  "market": "point",
+  "label": "Bo Horvat : au moins 1 point",
+  "p": 0.54,
+  "stars": 2,
+  "player": "Bo Horvat",
+  "pid_player": 8477500,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020143|goal|Bo Horvat": {
+  "match": "nhl-2026020143",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New York Islanders",
+  "away": "Anaheim Ducks",
+  "market": "goal",
+  "label": "Bo Horvat marque",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Bo Horvat",
+  "pid_player": 8477500,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020143|reg_h|": {
+  "match": "nhl-2026020143",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "New York Islanders",
+  "away": "Anaheim Ducks",
+  "market": "reg_h",
+  "label": "New York Islanders gagne dans le temps réglementaire",
+  "p": 0.4907,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020144|win_h|": {
+  "match": "nhl-2026020144",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Washington Capitals",
+  "away": "Los Angeles Kings",
+  "market": "win_h",
+  "label": "Victoire Washington Capitals",
+  "p": 0.583,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020144|point|Tom Wilson": {
+  "match": "nhl-2026020144",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Washington Capitals",
+  "away": "Los Angeles Kings",
+  "market": "point",
+  "label": "Tom Wilson : au moins 1 point",
+  "p": 0.49,
+  "stars": 1,
+  "player": "Tom Wilson",
+  "pid_player": 8476880,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020144|goal|Tom Wilson": {
+  "match": "nhl-2026020144",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Washington Capitals",
+  "away": "Los Angeles Kings",
+  "market": "goal",
+  "label": "Tom Wilson marque",
+  "p": 0.26,
+  "stars": 1,
+  "player": "Tom Wilson",
+  "pid_player": 8476880,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020144|reg_h|": {
+  "match": "nhl-2026020144",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Washington Capitals",
+  "away": "Los Angeles Kings",
+  "market": "reg_h",
+  "label": "Washington Capitals gagne dans le temps réglementaire",
+  "p": 0.4907,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020145|o55|": {
+  "match": "nhl-2026020145",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Columbus Blue Jackets",
+  "away": "Toronto Maple Leafs",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020145|win_h|": {
+  "match": "nhl-2026020145",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Columbus Blue Jackets",
+  "away": "Toronto Maple Leafs",
+  "market": "win_h",
+  "label": "Victoire Columbus Blue Jackets",
+  "p": 0.5934,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020145|point|Zach Werenski": {
+  "match": "nhl-2026020145",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Columbus Blue Jackets",
+  "away": "Toronto Maple Leafs",
+  "market": "point",
+  "label": "Zach Werenski : au moins 1 point",
+  "p": 0.66,
+  "stars": 3,
+  "player": "Zach Werenski",
+  "pid_player": 8478460,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020145|goal|Adam Fantilli": {
+  "match": "nhl-2026020145",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Columbus Blue Jackets",
+  "away": "Toronto Maple Leafs",
+  "market": "goal",
+  "label": "Adam Fantilli marque",
+  "p": 0.26,
+  "stars": 1,
+  "player": "Adam Fantilli",
+  "pid_player": 8484166,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020145|reg_h|": {
+  "match": "nhl-2026020145",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-20",
+  "home": "Columbus Blue Jackets",
+  "away": "Toronto Maple Leafs",
+  "market": "reg_h",
+  "label": "Columbus Blue Jackets gagne dans le temps réglementaire",
+  "p": 0.5101,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020146|win_h|": {
+  "match": "nhl-2026020146",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "St. Louis Blues",
+  "away": "Winnipeg Jets",
+  "market": "win_h",
+  "label": "Victoire St. Louis Blues",
+  "p": 0.5721,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020146|point|Robert Thomas": {
+  "match": "nhl-2026020146",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "St. Louis Blues",
+  "away": "Winnipeg Jets",
+  "market": "point",
+  "label": "Robert Thomas : au moins 1 point",
+  "p": 0.56,
+  "stars": 2,
+  "player": "Robert Thomas",
+  "pid_player": 8480023,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020146|goal|Robert Thomas": {
+  "match": "nhl-2026020146",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "St. Louis Blues",
+  "away": "Winnipeg Jets",
+  "market": "goal",
+  "label": "Robert Thomas marque",
+  "p": 0.26,
+  "stars": 1,
+  "player": "Robert Thomas",
+  "pid_player": 8480023,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020146|reg_h|": {
+  "match": "nhl-2026020146",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "St. Louis Blues",
+  "away": "Winnipeg Jets",
+  "market": "reg_h",
+  "label": "St. Louis Blues gagne dans le temps réglementaire",
+  "p": 0.48,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020147|win_h|": {
+  "match": "nhl-2026020147",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Dallas Stars",
+  "away": "Boston Bruins",
+  "market": "win_h",
+  "label": "Victoire Dallas Stars",
+  "p": 0.6038,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020147|point|Jason Robertson": {
+  "match": "nhl-2026020147",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Dallas Stars",
+  "away": "Boston Bruins",
+  "market": "point",
+  "label": "Jason Robertson : au moins 1 point",
+  "p": 0.59,
+  "stars": 2,
+  "player": "Jason Robertson",
+  "pid_player": 8480027,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020147|goal|Jason Robertson": {
+  "match": "nhl-2026020147",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Dallas Stars",
+  "away": "Boston Bruins",
+  "market": "goal",
+  "label": "Jason Robertson marque",
+  "p": 0.34,
+  "stars": 1,
+  "player": "Jason Robertson",
+  "pid_player": 8480027,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020147|reg_h|": {
+  "match": "nhl-2026020147",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Dallas Stars",
+  "away": "Boston Bruins",
+  "market": "reg_h",
+  "label": "Dallas Stars gagne dans le temps réglementaire",
+  "p": 0.5114,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020148|o55|": {
+  "match": "nhl-2026020148",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Edmonton Oilers",
+  "away": "Minnesota Wild",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020148|win_h|": {
+  "match": "nhl-2026020148",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Edmonton Oilers",
+  "away": "Minnesota Wild",
+  "market": "win_h",
+  "label": "Victoire Edmonton Oilers",
+  "p": 0.5427,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020148|point|Connor McDavid": {
+  "match": "nhl-2026020148",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Edmonton Oilers",
+  "away": "Minnesota Wild",
+  "market": "point",
+  "label": "Connor McDavid : au moins 1 point",
+  "p": 0.76,
+  "stars": 4,
+  "player": "Connor McDavid",
+  "pid_player": 8478402,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020148|goal|Connor McDavid": {
+  "match": "nhl-2026020148",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Edmonton Oilers",
+  "away": "Minnesota Wild",
+  "market": "goal",
+  "label": "Connor McDavid marque",
+  "p": 0.38,
+  "stars": 1,
+  "player": "Connor McDavid",
+  "pid_player": 8478402,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020148|o65|": {
+  "match": "nhl-2026020148",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Edmonton Oilers",
+  "away": "Minnesota Wild",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.4909,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020149|o55|": {
+  "match": "nhl-2026020149",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Seattle Kraken",
+  "away": "Detroit Red Wings",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020149|win_h|": {
+  "match": "nhl-2026020149",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Seattle Kraken",
+  "away": "Detroit Red Wings",
+  "market": "win_h",
+  "label": "Victoire Seattle Kraken",
+  "p": 0.5108,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020149|point|Jared McCann": {
+  "match": "nhl-2026020149",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Seattle Kraken",
+  "away": "Detroit Red Wings",
+  "market": "point",
+  "label": "Jared McCann : au moins 1 point",
+  "p": 0.53,
+  "stars": 2,
+  "player": "Jared McCann",
+  "pid_player": 8477955,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020149|goal|Jared McCann": {
+  "match": "nhl-2026020149",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Seattle Kraken",
+  "away": "Detroit Red Wings",
+  "market": "goal",
+  "label": "Jared McCann marque",
+  "p": 0.29,
+  "stars": 1,
+  "player": "Jared McCann",
+  "pid_player": 8477955,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020149|o65|": {
+  "match": "nhl-2026020149",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Seattle Kraken",
+  "away": "Detroit Red Wings",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.4911,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020150|win_a|": {
+  "match": "nhl-2026020150",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vancouver Canucks",
+  "away": "Carolina Hurricanes",
+  "market": "win_a",
+  "label": "Victoire Carolina Hurricanes",
+  "p": 0.7136,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020150|point|Sebastian Aho": {
+  "match": "nhl-2026020150",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vancouver Canucks",
+  "away": "Carolina Hurricanes",
+  "market": "point",
+  "label": "Sebastian Aho : au moins 1 point",
+  "p": 0.63,
+  "stars": 3,
+  "player": "Sebastian Aho",
+  "pid_player": 8478427,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020150|goal|Andrei Svechnikov": {
+  "match": "nhl-2026020150",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vancouver Canucks",
+  "away": "Carolina Hurricanes",
+  "market": "goal",
+  "label": "Andrei Svechnikov marque",
+  "p": 0.32,
+  "stars": 1,
+  "player": "Andrei Svechnikov",
+  "pid_player": 8480830,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020150|reg_a|": {
+  "match": "nhl-2026020150",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vancouver Canucks",
+  "away": "Carolina Hurricanes",
+  "market": "reg_a",
+  "label": "Carolina Hurricanes gagne dans le temps réglementaire",
+  "p": 0.6385,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020151|o55|": {
+  "match": "nhl-2026020151",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vegas Golden Knights",
+  "away": "Tampa Bay Lightning",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020151|win_h|": {
+  "match": "nhl-2026020151",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vegas Golden Knights",
+  "away": "Tampa Bay Lightning",
+  "market": "win_h",
+  "label": "Victoire Vegas Golden Knights",
+  "p": 0.5108,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020151|point|Jack Eichel": {
+  "match": "nhl-2026020151",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vegas Golden Knights",
+  "away": "Tampa Bay Lightning",
+  "market": "point",
+  "label": "Jack Eichel : au moins 1 point",
+  "p": 0.65,
+  "stars": 3,
+  "player": "Jack Eichel",
+  "pid_player": 8478403,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020151|goal|Mark Stone": {
+  "match": "nhl-2026020151",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vegas Golden Knights",
+  "away": "Tampa Bay Lightning",
+  "market": "goal",
+  "label": "Mark Stone marque",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Mark Stone",
+  "pid_player": 8475913,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020151|o65|": {
+  "match": "nhl-2026020151",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-21",
+  "home": "Vegas Golden Knights",
+  "away": "Tampa Bay Lightning",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.4911,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
   ],
   "result": null
  }
