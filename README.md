@@ -10,7 +10,7 @@ Site installable sur téléphone, mis à jour automatiquement deux fois par jour
 Un onglet **Bilan** compare chaque pronostic au résultat réel. Quand un match est fini, sa ligne affiche le nombre de pronostics validés (par exemple « 3/5 ✓ »), et l'onglet Pronostics met ✓ ou ✗ devant chacun.
 
 **100 % gratuit, aucune clé d'API.** Sources :
-- l'API publique d'ESPN pour le foot (Ligue 1, Premier League, LaLiga, Serie A, Bundesliga, Ligue des champions), les effectifs et stats des joueurs, et les cotes NHL ;
+- l'API publique d'ESPN pour le foot (Ligue 1, Premier League, LaLiga, Serie A, Bundesliga, Ligue des champions, Europa League), les effectifs et stats des joueurs, et les cotes NHL ;
 - l'API officielle de la NHL pour le reste.
 
 Le calcul et l'hébergement passent par GitHub, gratuitement.
@@ -47,7 +47,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Les blessés ne sont pas vérifiés automatiquement.**
   - NHL : seuls les joueurs alignés au match précédent sont retenus.
   - Foot : les blessés ne sont pas filtrés tant que les compositions ne sont pas sorties. Dès qu'ESPN publie la composition officielle (environ 1 h avant le match), elle est prise en compte au passage suivant : un remplaçant voit ses chances réduites (il joue en moyenne 25 minutes), un joueur absent tombe à 0 %, et le pronostic buteur va à un titulaire. Les passages de 12 h 20, 14 h 20, 16 h 20, 17 h 50 et 20 h 20 couvrent la plupart des coups d'envoi ; pour un match à 13 h 30 ou 18 h 30, la compo peut sortir après le dernier passage, vérifie-la alors toi-même.
-- **En Ligue des champions**, les stats des joueurs viennent du championnat national du club. Pour les clubs dont ESPN ne suit pas le championnat (Azerbaïdjan, Tchéquie…), seuls les matchs européens comptent : le site le signale et les chiffres sont très incertains.
+- **En coupe d'Europe (Ligue des champions, Europa League)**, les stats des joueurs viennent du championnat national du club. Pour les clubs dont ESPN ne suit pas le championnat (Azerbaïdjan, Tchéquie…), seuls les matchs européens comptent : le site le signale et les chiffres sont très incertains.
 - **Les gardiens NHL sont une projection** : le gardien le plus utilisé, ou son remplaçant si l'équipe a joué la veille. Ils ne sont pas confirmés.
 - **Le Bilan n'a de sens qu'après 200 à 300 matchs.**
 - **GitHub met en pause les automatisations planifiées** d'un dépôt resté 60 jours sans activité. Les mises à jour quotidiennes comptent normalement comme de l'activité. Si ça s'arrête, relance-le depuis l'onglet Actions.
@@ -94,7 +94,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 
 - **Filtre** : Tous, ⚽ Foot ou 🏒 NHL.
 - **Deux cases** : le dernier jour, et le total depuis l'ouverture du site.
-- **Jour par jour** : on touche un jour pour voir ses matchs, rangés par sport (Foot, puis NHL), puis par championnat (Ligue 1, Premier League, LaLiga, Serie A, Bundesliga, Ligue des champions). Chaque match affiche son score final, le compte des pronostics réussis et chaque pronostic ✓ ou ✗.
+- **Jour par jour** : on touche un jour pour voir ses matchs, rangés par sport (Foot, puis NHL), puis par championnat (Ligue 1, Premier League, LaLiga, Serie A, Bundesliga, Ligue des champions, Europa League). Chaque match affiche son score final, le compte des pronostics réussis et chaque pronostic ✓ ou ✗.
 - **Pronostics vérifiés par championnat** : rangés en catégories Foot et NHL ; on touche un championnat pour voir ses pronostics. Le détail couvre les 30 derniers jours, le score toute la période.
 - **Fun et score exact** : comptés sur une ligne à part, pour ne pas fausser le taux des pronostics sûrs. Dans les listes, ils sont marqués 🎲.
 - **Niveau de confiance** : un tableau compare le taux de réussite annoncé et le taux réel, par nombre d'étoiles.
@@ -111,7 +111,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
   - le sous-onglet **Pronostics › Fun** les regroupe, en direct et avant le match.
   - **Paris fun = vrais paris à cote** : cote juste d'au moins ~2,4 (18 à 42 % de chances). Sur ces marchés, la marge des bookmakers est forte (15 à 20 % en mi-temps/fin de match, contre 6 à 8 % sur le résultat simple), donc avec une cote juste de 2,4 ou plus la cote réelle reste en général au-dessus de 2. Foot : victoire + les deux équipes marquent, victoire + plus de 2,5 buts, victoire sans encaisser, victoire d'un seul but, 2 ou 3 buts d'écart, mi-temps/fin de match (45 % des buts en première période), les deux équipes marquent + plus de 2,5 buts, plus de 3,5 buts, nul, buteur + victoire de son équipe, joueur qui marque 2 buts ou plus. NHL : victoire + plus de 5,5 / 6,5 buts, puck line (2 ou 3 buts d'écart ; 25 % des victoires d'un but deviennent +2 grâce au but dans la cage vide), victoire d'un seul but prolongation comprise, prolongation, victoire dans le temps réglementaire, plus de 6,5 buts. Jusqu'à 3 par match (familles différentes), toujours dans le sens de l'analyse ; vérifiés après le match (score à la mi-temps tiré des minutes des buts ESPN).
 - **Enjeu** dans la lecture du match :
-  - foot : choc au sommet, Europe, maintien, adversaires directs, début de saison ; en Ligue des champions, top 8, barrages ou élimination ;
+  - foot : choc au sommet, Europe, maintien, adversaires directs, début de saison ; en Ligue des champions et en Europa League, top 8, barrages ou élimination ;
   - NHL : match de division, places en séries.
 
 ## Fichiers

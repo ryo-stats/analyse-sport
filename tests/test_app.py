@@ -578,6 +578,14 @@ class AppTest(unittest.TestCase):
                                    htft_h=True, htft_a=False, scw=True, sc2=True, nhl_h2=True, nhl_h3=True, nhl_wh_o55=True,
                                    nhl_wh_o65=True, nhl_a2=False))
 
+    def test_europa_league(self):
+        # Europa League : même format que la Ligue des champions (phase de ligue à 36)
+        self.assertEqual(app.LEAGUE_CODE["Europa League"], "uefa.europa")
+        st = lambda rank: dict(rank=rank, gp=3, pts=6, gf=5, ga=3)
+        txt = app.foot_stakes("Europa League", "Lyon", "Porto", st(5), st(20), {})
+        self.assertIn("Lyon (5e) : top 8", txt)
+        self.assertIn("Porto (20e) : place de barrage", txt)
+
     def test_official_lineup(self):
         # Lyon–Nice : Nuamah remplaçant, Openda absent → le pronostic buteur va à un titulaire
         def roster(names_start, names_bench):

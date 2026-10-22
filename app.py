@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyse sportive automatique : foot (5 grands championnats et Ligue des champions) et NHL.
+"""Analyse sportive automatique : foot (5 grands championnats, Ligue des champions, Europa League) et NHL.
 
 Sources gratuites, sans clé :
   - API publique d'ESPN : matchs, résultats, classements, effectifs et stats des joueurs, cotes (foot et NHL) ;
@@ -49,11 +49,14 @@ LEAGUES = [
     ("Serie A", "ita.1"),
     ("Bundesliga", "ger.1"),
     ("Ligue des champions", "uefa.champions"),
+    ("Europa League", "uefa.europa"),
 ]
+# coupes d'Europe : phase de ligue à 36, statistiques des joueurs prises dans leur championnat national
+EUROPE = {"uefa.champions": "Ligue des champions", "uefa.europa": "Europa League"}
 # bandeau de chaque championnat sur le site : pays et logo ESPN
 LEAGUE_INFO = {
     "fra.1": ("France", 9), "eng.1": ("Angleterre", 23), "esp.1": ("Espagne", 15),
-    "ita.1": ("Italie", 12), "ger.1": ("Allemagne", 10), "uefa.champions": ("Europe", 2),
+    "ita.1": ("Italie", 12), "ger.1": ("Allemagne", 10), "uefa.champions": ("Europe", 2), "uefa.europa": ("Europe", 2310),
 }
 LEAGUE_CODE = dict(LEAGUES)
 LEAGUE_LOGO = "https://a.espncdn.com/i/leaguelogos/soccer/500/{}.png"
@@ -352,8 +355,8 @@ def foot_stakes(league, home, away, sh, sa, table):
     gp = min(sh["gp"], sa["gp"])
     def nth(r):
         return "1er" if r == 1 else f"{r}e"
-    if league == "Ligue des champions":
-        # phase de ligue à 36 : 1-8 qualifiés pour les 8es, 9-24 barrages, 25-36 éliminés
+    if league in EUROPE.values():
+        # phase de ligue à 36 (Ligue des champions et Europa League) : 1-8 en 8es, 9-24 barrages, 25-36 éliminés
         def zone(r):
             return "top 8, qualification directe pour les 8es" if r <= 8 else "place de barrage" if r <= 24 else "zone d'élimination"
         out = f"{home} ({nth(sh['rank'])}) : {zone(sh['rank'])}. {away} ({nth(sa['rank'])}) : {zone(sa['rank'])}."
@@ -468,7 +471,7 @@ def stat_values(doc):
 def espn_squad(league, team_id):
     """Effectif complet d'une équipe avec, pour chaque joueur de champ, matchs, minutes, buts et passes.
 
-    Pour la Ligue des champions, les stats viennent du championnat national du club (plus de matchs,
+    Pour les coupes d'Europe, les stats viennent du championnat national du club (plus de matchs,
     donc plus fiables) : on le déduit du championnat principal des joueurs de l'effectif.
     Renvoie None si ESPN ne répond pas.
     """
@@ -481,10 +484,10 @@ def espn_squad(league, team_id):
         return None
     season = ((roster.get("season") or {}).get("year")) or dt.date.today().year
     domestic = league
-    if league == "uefa.champions":
+    if league in EUROPE:
         refs = [((a.get("defaultLeague") or {}).get("$ref") or "").split("/leagues/")[-1].split("?")[0].split("/")[0]
                 for a in athletes]
-        counts = Counter(r for r in refs if r and r != "uefa.champions")
+        counts = Counter(r for r in refs if r and r not in EUROPE)
         if counts:
             top = [lg for lg, _ in counts.most_common() if lg.endswith(".1")]
             domestic = top[0] if top else counts.most_common(1)[0][0]
@@ -750,8 +753,8 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
                                                                  if missing else " : les joueurs clés sont titulaires."))
     for name in thin:
         ctx.append(f"{name} : ESPN ne connaît que 1 ou 2 matchs de ses joueurs, chiffres des joueurs très incertains.")
-    if league == "Ligue des champions" and stats_from - {"uefa.champions"}:
-        ctx.append("Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions).")
+    if league in EUROPE.values() and stats_from - set(EUROPE):
+        ctx.append(f"Joueurs : statistiques de la saison en championnat national (plus de matchs que la {league}).")
 
     picks = foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la)
     if state == "pre":

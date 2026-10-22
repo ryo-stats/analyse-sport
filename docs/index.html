@@ -467,7 +467,7 @@ a.tile.tlink .k{color:var(--home)}
   <section class="explain" id="explain">
     <h2>Comment lire ces chiffres</h2>
     <p><strong>Barre de couleur :</strong> chances de victoire tirées des cotes du bookmaker affiché par ESPN, marge retirée. C'est l'estimation publique la plus fiable ; elle intègre déjà forme, absents connus et avantage du terrain. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
-    <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En Ligue des champions, ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
+    <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En coupe d'Europe (Ligue des champions, Europa League), ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
     <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités viennent des cotes : elles disent ce qui est le plus probable, pas où le bookmaker se trompe.</p>
     <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est. Elle devrait se stabiliser vers 0,58 en foot et 0,48 en NHL (niveau des bookmakers). À juger après 200 matchs.</p>
   </section>
@@ -525,7 +525,7 @@ const nhlSub = p => `${p.pos} · ${p.cur}`;
 // ---- liste des matchs : une ligne par match, l'analyse se déplie au clic
 const OPEN = new Set();
 const LIVE = ["in", "LIVE", "CRIT"], DONE = ["post", "OFF", "FINAL"];
-const FOOT_ORDER = ["Ligue 1", "Premier League", "LaLiga", "Serie A", "Bundesliga", "Ligue des champions"];
+const FOOT_ORDER = ["Ligue 1", "Premier League", "LaLiga", "Serie A", "Bundesliga", "Ligue des champions", "Europa League"];
 const NHL_LOGO = "https://assets.nhle.com/logos/nhl/svg/NHL_light.svg";
 function darkMode(){
   const t = document.documentElement.dataset.theme;
@@ -761,7 +761,7 @@ function nhlDetail(m){
 
 function footView(){
   const all = DATA.foot || [];
-  if (!all.length) return `<div class="empty">Aucun match aujourd'hui dans les cinq grands championnats ni en Ligue des champions.</div>`;
+  if (!all.length) return `<div class="empty">Aucun match aujourd'hui dans les cinq grands championnats ni en coupe d'Europe.</div>`;
   const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
   const leagues = [...new Set(all.map(m => m.league))].sort((a, b) => rank(a) - rank(b));
   if (LEAGUE !== "Tous" && !leagues.includes(LEAGUE)) LEAGUE = "Tous";
