@@ -6418,7 +6418,7 @@
   "away": "Nashville Predators",
   "market": "win_h",
   "label": "Victoire Boston Bruins",
-  "p": 0.5635,
+  "p": 0.583,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -6491,7 +6491,7 @@
   "away": "Nashville Predators",
   "market": "h2",
   "label": "Boston Bruins gagne par 2 buts d'écart ou plus",
-  "p": 0.3626,
+  "p": 0.3806,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -6867,102 +6867,6 @@
   ],
   "result": null
  },
- "nhl-2026020158|win_h|": {
-  "match": "nhl-2026020158",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-22",
-  "home": "Pittsburgh Penguins",
-  "away": "Florida Panthers",
-  "market": "win_h",
-  "label": "Victoire Pittsburgh Penguins",
-  "p": 0.5108,
-  "stars": 2,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "nhl-2026020158|point|Sidney Crosby": {
-  "match": "nhl-2026020158",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-22",
-  "home": "Pittsburgh Penguins",
-  "away": "Florida Panthers",
-  "market": "point",
-  "label": "Sidney Crosby : au moins 1 point",
-  "p": 0.55,
-  "stars": 2,
-  "player": "Sidney Crosby",
-  "pid_player": 8471675,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "nhl-2026020158|goal|Sidney Crosby": {
-  "match": "nhl-2026020158",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-22",
-  "home": "Pittsburgh Penguins",
-  "away": "Florida Panthers",
-  "market": "goal",
-  "label": "Sidney Crosby marque",
-  "p": 0.27,
-  "stars": 1,
-  "player": "Sidney Crosby",
-  "pid_player": 8471675,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "scorer"
-  ],
-  "result": null
- },
- "nhl-2026020158|h2|": {
-  "match": "nhl-2026020158",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-22",
-  "home": "Pittsburgh Penguins",
-  "away": "Florida Panthers",
-  "market": "h2",
-  "label": "Pittsburgh Penguins gagne par 2 buts d'écart ou plus",
-  "p": 0.3161,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "nhl-2026020159|u55|": {
   "match": "nhl-2026020159",
   "sport": "nhl",
@@ -7310,7 +7214,7 @@
   "away": "Carolina Hurricanes",
   "market": "win_a",
   "label": "Victoire Carolina Hurricanes",
-  "p": 0.5174,
+  "p": 0.5514,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -7334,7 +7238,7 @@
   "away": "Carolina Hurricanes",
   "market": "point",
   "label": "Sebastian Aho : au moins 1 point",
-  "p": 0.56,
+  "p": 0.57,
   "stars": 2,
   "player": "Sebastian Aho",
   "pid_player": 8478427,
@@ -7358,7 +7262,7 @@
   "away": "Carolina Hurricanes",
   "market": "goal",
   "label": "Andrei Svechnikov marque",
-  "p": 0.27,
+  "p": 0.28,
   "stars": 1,
   "player": "Andrei Svechnikov",
   "pid_player": 8480830,
@@ -7382,7 +7286,7 @@
   "away": "Carolina Hurricanes",
   "market": "a2",
   "label": "Carolina Hurricanes gagne par 2 buts d'écart ou plus",
-  "p": 0.3217,
+  "p": 0.3517,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -8917,7 +8821,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915552|1|": {
   "match": "foot-401915552",
@@ -8941,7 +8845,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915552|scorer|Marcus Tavernier": {
   "match": "foot-401915552",
@@ -8965,7 +8869,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915552|dec|Marcus Tavernier": {
   "match": "foot-401915552",
@@ -8993,7 +8897,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915552|htft_h|": {
   "match": "foot-401915552",
@@ -9017,7 +8921,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915552|exact|": {
   "match": "foot-401915552",
@@ -9041,7 +8945,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915553|1N|": {
   "match": "foot-401915553",
@@ -9065,7 +8969,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915553|1|": {
   "match": "foot-401915553",
@@ -9089,7 +8993,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915553|scorer|Dusan Vlahovic": {
   "match": "foot-401915553",
@@ -9113,7 +9017,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915553|dec|Dusan Vlahovic": {
   "match": "foot-401915553",
@@ -9165,7 +9069,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915555|1N|": {
   "match": "foot-401915555",
@@ -9189,7 +9093,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915555|1|": {
   "match": "foot-401915555",
@@ -9213,7 +9117,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915555|scorer|Benjamin Nygren": {
   "match": "foot-401915555",
@@ -9237,7 +9141,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915555|dec|Benjamin Nygren": {
   "match": "foot-401915555",
@@ -9289,7 +9193,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915555|exact|": {
   "match": "foot-401915555",
@@ -9313,7 +9217,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915542|N2|": {
   "match": "foot-401915542",
@@ -9337,7 +9241,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915542|2|": {
   "match": "foot-401915542",
@@ -9361,7 +9265,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915542|scorer|Tawfik Bentayeb": {
   "match": "foot-401915542",
@@ -9385,7 +9289,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915542|dec|Tawfik Bentayeb": {
   "match": "foot-401915542",
@@ -9437,7 +9341,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915540|N2|": {
   "match": "foot-401915540",
@@ -9461,7 +9365,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915540|2|": {
   "match": "foot-401915540",
@@ -9485,7 +9389,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915540|scorer|Luka Sucic": {
   "match": "foot-401915540",
@@ -9509,7 +9413,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915540|dec|Luka Sucic": {
   "match": "foot-401915540",
@@ -9537,7 +9441,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915540|wa_btts|": {
   "match": "foot-401915540",
@@ -9561,7 +9465,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915540|exact|": {
   "match": "foot-401915540",
@@ -9585,7 +9489,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915541|N2|": {
   "match": "foot-401915541",
@@ -9609,7 +9513,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915541|2|": {
   "match": "foot-401915541",
@@ -9633,7 +9537,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915541|scorer|Haris Tabakovic": {
   "match": "foot-401915541",
@@ -9657,7 +9561,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915541|dec|Haris Tabakovic": {
   "match": "foot-401915541",
@@ -9709,7 +9613,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915541|exact|": {
   "match": "foot-401915541",
@@ -9733,7 +9637,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915554|1N|": {
   "match": "foot-401915554",
@@ -9757,7 +9661,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915554|1|": {
   "match": "foot-401915554",
@@ -9781,7 +9685,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915554|scorer|Jota Silva": {
   "match": "foot-401915554",
@@ -9805,7 +9709,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915554|dec|Jota Silva": {
   "match": "foot-401915554",
@@ -9857,7 +9761,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915554|exact|": {
   "match": "foot-401915554",
@@ -9881,7 +9785,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915544|N2|": {
   "match": "foot-401915544",
@@ -9905,7 +9809,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915544|2|": {
   "match": "foot-401915544",
@@ -9929,7 +9833,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915544|scorer|Vangelis Pavlidis": {
   "match": "foot-401915544",
@@ -9953,7 +9857,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915544|dec|Vangelis Pavlidis": {
   "match": "foot-401915544",
@@ -9981,7 +9885,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915544|exact|": {
   "match": "foot-401915544",
@@ -10005,7 +9909,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915543|1N|": {
   "match": "foot-401915543",
@@ -10029,7 +9933,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915543|1|": {
   "match": "foot-401915543",
@@ -10053,7 +9957,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915543|scorer|Adam Daghim": {
   "match": "foot-401915543",
@@ -10077,7 +9981,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915543|dec|Adam Daghim": {
   "match": "foot-401915543",
@@ -10105,7 +10009,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915543|o35|": {
   "match": "foot-401915543",
@@ -10129,7 +10033,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915543|exact|": {
   "match": "foot-401915543",
@@ -10153,7 +10057,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915539|1N|": {
   "match": "foot-401915539",
@@ -10177,7 +10081,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915539|1|": {
   "match": "foot-401915539",
@@ -10201,7 +10105,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915539|scorer|Denis Visinský": {
   "match": "foot-401915539",
@@ -10225,7 +10129,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915539|dec|Denis Visinský": {
   "match": "foot-401915539",
@@ -10277,7 +10181,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915539|exact|": {
   "match": "foot-401915539",
@@ -10301,7 +10205,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915553|htft_h|": {
   "match": "foot-401915553",
@@ -10325,7 +10229,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915542|htft_a|": {
   "match": "foot-401915542",
@@ -10349,7 +10253,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401915544|wa_nil|": {
   "match": "foot-401915544",
@@ -10373,7 +10277,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020162|wa_o55|": {
   "match": "nhl-2026020162",
@@ -10385,6 +10289,102 @@
   "market": "wa_o55",
   "label": "Minnesota Wild gagne et plus de 5,5 buts",
   "p": 0.4011,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020158|win_a|": {
+  "match": "nhl-2026020158",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-22",
+  "home": "Pittsburgh Penguins",
+  "away": "Florida Panthers",
+  "market": "win_a",
+  "label": "Victoire Florida Panthers",
+  "p": 0.5043,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020158|point|Matthew Tkachuk": {
+  "match": "nhl-2026020158",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-22",
+  "home": "Pittsburgh Penguins",
+  "away": "Florida Panthers",
+  "market": "point",
+  "label": "Matthew Tkachuk : au moins 1 point",
+  "p": 0.62,
+  "stars": 3,
+  "player": "Matthew Tkachuk",
+  "pid_player": 8479314,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020158|goal|Sam Reinhart": {
+  "match": "nhl-2026020158",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-22",
+  "home": "Pittsburgh Penguins",
+  "away": "Florida Panthers",
+  "market": "goal",
+  "label": "Sam Reinhart marque",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Sam Reinhart",
+  "pid_player": 8477933,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020158|a2|": {
+  "match": "nhl-2026020158",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-22",
+  "home": "Pittsburgh Penguins",
+  "away": "Florida Panthers",
+  "market": "a2",
+  "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
+  "p": 0.3106,
   "stars": 1,
   "player": null,
   "pid_player": null,
