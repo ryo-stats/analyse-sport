@@ -7,6 +7,9 @@ on:
     # chaque lancement de 75 à 5 min avant un coup d'envoi (compositions officielles)
     - cron: "20,50 5-22 * * *"
   workflow_dispatch:         # bouton « Run workflow » pour lancer à la main (toujours exécuté)
+  push:                      # changement du calcul : nouvelles analyses tout de suite (les commits du robot
+    branches: [main]         # ne touchent que docs/ et cache/ : pas de boucle)
+    paths: [app.py, horaires.py, requirements.txt, .github/workflows/update.yml]
 
 permissions:
   contents: write
