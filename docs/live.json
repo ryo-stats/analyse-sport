@@ -1,90 +1,354 @@
 {
- "generated": "2026-10-22T00:51+02:00",
+ "generated": "2026-10-22T07:52+02:00",
  "date": "2026-10-22",
  "matches": [
   {
-   "id": "nhl-2026020152",
+   "id": "nhl-2026020154",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-10-21T23:30:00+00:00",
-   "time": "01:30",
-   "home": "Buffalo Sabres",
-   "away": "Philadelphia Flyers",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "time": "01:00",
+   "home": "Boston Bruins",
+   "away": "Nashville Predators",
    "state": "FUT",
-   "xgH": 3.61,
-   "xgA": 2.69,
-   "pH": 52,
+   "xgH": 2.88,
+   "xgA": 2.42,
+   "pH": 46,
    "pD": 22,
-   "pA": 26,
-   "winH": 64,
-   "espn_id": "401892550",
-   "edate": "20261021",
+   "pA": 32,
+   "winH": 58,
+   "espn_id": "401892552",
+   "edate": "20261022",
    "picks": {
     "main": {
      "market": "win_h",
-     "label": "Victoire Buffalo Sabres",
-     "p": 0.6447,
-     "prob": 64,
-     "fair": 1.55,
-     "stars": 3
+     "label": "Victoire Boston Bruins",
+     "p": 0.583,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
-     "label": "Victoire Buffalo Sabres",
-     "p": 0.6447,
-     "prob": 64,
-     "fair": 1.55,
-     "stars": 3
+     "label": "Victoire Boston Bruins",
+     "p": 0.583,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2
     },
     "fun": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.6007,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "market": "h2",
+     "label": "Boston Bruins gagne par 2 buts d'écart ou plus",
+     "p": 0.362,
+     "prob": 36,
+     "fair": 2.76,
+     "stars": 1
     },
     "player": {
      "market": "point",
-     "label": "Tage Thompson : au moins 1 point",
-     "p": 0.61,
-     "prob": 61,
-     "fair": 1.64,
+     "label": "David Pastrnak : au moins 1 point",
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
      "stars": 3,
-     "player": "Tage Thompson",
-     "pid": 8479420,
-     "team": "Buffalo Sabres"
+     "player": "David Pastrnak",
+     "pid": 8477956,
+     "team": "Boston Bruins"
     },
     "scorer": {
      "market": "goal",
-     "label": "Tage Thompson marque",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "label": "Morgan Geekie marque",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
-     "player": "Tage Thompson",
-     "pid": 8479420,
-     "team": "Buffalo Sabres"
+     "player": "Morgan Geekie",
+     "pid": 8479987,
+     "team": "Boston Bruins"
     }
    }
   },
   {
-   "id": "nhl-2026020153",
+   "id": "nhl-2026020155",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-10-21T23:30:00+00:00",
-   "time": "01:30",
-   "home": "Ottawa Senators",
-   "away": "Florida Panthers",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "time": "01:00",
+   "home": "Toronto Maple Leafs",
+   "away": "New York Rangers",
    "state": "FUT",
-   "xgH": 2.65,
-   "xgA": 2.65,
+   "xgH": 3.14,
+   "xgA": 3.16,
    "pH": 39,
    "pD": 22,
    "pA": 39,
    "winH": 50,
-   "espn_id": "401892551",
-   "edate": "20261021",
+   "espn_id": "401892553",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6012,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire New York Rangers",
+     "p": 0.5043,
+     "prob": 50,
+     "fair": 1.98,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "New York Rangers gagne par 2 buts d'écart ou plus",
+     "p": 0.3106,
+     "prob": 31,
+     "fair": 3.22,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Mika Zibanejad : au moins 1 point",
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 3,
+     "player": "Mika Zibanejad",
+     "pid": 8476459,
+     "team": "New York Rangers"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Mika Zibanejad marque",
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
+     "stars": 1,
+     "player": "Mika Zibanejad",
+     "pid": 8476459,
+     "team": "New York Rangers"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020156",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "time": "01:00",
+   "home": "Ottawa Senators",
+   "away": "San Jose Sharks",
+   "state": "FUT",
+   "xgH": 3.31,
+   "xgA": 2.99,
+   "pH": 44,
+   "pD": 22,
+   "pA": 34,
+   "winH": 55,
+   "espn_id": "401892554",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6012,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Ottawa Senators",
+     "p": 0.5514,
+     "prob": 55,
+     "fair": 1.81,
+     "stars": 2
+    },
+    "fun": {
+     "market": "h2",
+     "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
+     "p": 0.3517,
+     "prob": 35,
+     "fair": 2.84,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Tim Stützle : au moins 1 point",
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
+     "stars": 3,
+     "player": "Tim Stützle",
+     "pid": 8482116,
+     "team": "Ottawa Senators"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Tim Stützle marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
+     "stars": 1,
+     "player": "Tim Stützle",
+     "pid": 8482116,
+     "team": "Ottawa Senators"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020157",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "time": "01:00",
+   "home": "New Jersey Devils",
+   "away": "Anaheim Ducks",
+   "state": "FUT",
+   "xgH": 3.58,
+   "xgA": 2.72,
+   "pH": 51,
+   "pD": 22,
+   "pA": 27,
+   "winH": 64,
+   "espn_id": "401892555",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire New Jersey Devils",
+     "p": 0.6369,
+     "prob": 64,
+     "fair": 1.57,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire New Jersey Devils",
+     "p": 0.6369,
+     "prob": 64,
+     "fair": 1.57,
+     "stars": 3
+    },
+    "fun": {
+     "market": "wh_o55",
+     "label": "New Jersey Devils gagne et plus de 5,5 buts",
+     "p": 0.3956,
+     "prob": 40,
+     "fair": 2.53,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Jack Hughes : au moins 1 point",
+     "p": 0.73,
+     "prob": 73,
+     "fair": 1.37,
+     "stars": 4,
+     "player": "Jack Hughes",
+     "pid": 8481559,
+     "team": "New Jersey Devils"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Jack Hughes marque",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
+     "stars": 1,
+     "player": "Jack Hughes",
+     "pid": 8481559,
+     "team": "New Jersey Devils"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020158",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "time": "01:00",
+   "home": "Pittsburgh Penguins",
+   "away": "Florida Panthers",
+   "state": "FUT",
+   "xgH": 3.18,
+   "xgA": 3.12,
+   "pH": 40,
+   "pD": 22,
+   "pA": 38,
+   "winH": 51,
+   "espn_id": "401892556",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6012,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Pittsburgh Penguins",
+     "p": 0.5108,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2
+    },
+    "fun": {
+     "market": "h2",
+     "label": "Pittsburgh Penguins gagne par 2 buts d'écart ou plus",
+     "p": 0.3161,
+     "prob": 32,
+     "fair": 3.16,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Sidney Crosby : au moins 1 point",
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
+     "stars": 2,
+     "player": "Sidney Crosby",
+     "pid": 8471675,
+     "team": "Pittsburgh Penguins"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Sidney Crosby marque",
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
+     "stars": 1,
+     "player": "Sidney Crosby",
+     "pid": 8471675,
+     "team": "Pittsburgh Penguins"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020159",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-22T23:30:00+00:00",
+   "time": "01:30",
+   "home": "New York Islanders",
+   "away": "Los Angeles Kings",
+   "state": "FUT",
+   "xgH": 2.68,
+   "xgA": 2.62,
+   "pH": 40,
+   "pD": 22,
+   "pA": 38,
+   "winH": 51,
+   "espn_id": "401892557",
+   "edate": "20261022",
    "picks": {
     "main": {
      "market": "u55",
@@ -96,33 +360,437 @@
     },
     "winner": {
      "market": "win_h",
-     "label": "Victoire Ottawa Senators",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
+     "label": "Victoire New York Islanders",
+     "p": 0.5108,
+     "prob": 51,
+     "fair": 1.96,
      "stars": 2
+    },
+    "fun": {
+     "market": "wh_by1",
+     "label": "New York Islanders gagne d'un seul but (prolongation comprise)",
+     "p": 0.2114,
+     "prob": 21,
+     "fair": 4.73,
+     "stars": 1
     },
     "player": {
      "market": "point",
-     "label": "Tim Stützle : au moins 1 point",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "label": "Bo Horvat : au moins 1 point",
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
-     "player": "Tim Stützle",
-     "pid": 8482116,
-     "team": "Ottawa Senators"
+     "player": "Bo Horvat",
+     "pid": 8477500,
+     "team": "New York Islanders"
     },
     "scorer": {
      "market": "goal",
-     "label": "Tim Stützle marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "label": "Bo Horvat marque",
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
-     "player": "Tim Stützle",
-     "pid": 8482116,
-     "team": "Ottawa Senators"
+     "player": "Bo Horvat",
+     "pid": 8477500,
+     "team": "New York Islanders"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020160",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-23T00:00:00+00:00",
+   "time": "02:00",
+   "home": "St. Louis Blues",
+   "away": "Vegas Golden Knights",
+   "state": "FUT",
+   "xgH": 3.08,
+   "xgA": 3.22,
+   "pH": 37,
+   "pD": 22,
+   "pA": 41,
+   "winH": 48,
+   "espn_id": "401892558",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6012,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Vegas Golden Knights",
+     "p": 0.5217,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
+     "p": 0.3255,
+     "prob": 33,
+     "fair": 3.07,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Jack Eichel : au moins 1 point",
+     "p": 0.65,
+     "prob": 65,
+     "fair": 1.54,
+     "stars": 3,
+     "player": "Jack Eichel",
+     "pid": 8478403,
+     "team": "Vegas Golden Knights"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Mark Stone marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
+     "stars": 1,
+     "player": "Mark Stone",
+     "pid": 8475913,
+     "team": "Vegas Golden Knights"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020161",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-23T00:00:00+00:00",
+   "time": "02:00",
+   "home": "Dallas Stars",
+   "away": "Winnipeg Jets",
+   "state": "FUT",
+   "xgH": 3.06,
+   "xgA": 2.24,
+   "pH": 52,
+   "pD": 22,
+   "pA": 26,
+   "winH": 64,
+   "espn_id": "401892559",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire Dallas Stars",
+     "p": 0.6447,
+     "prob": 64,
+     "fair": 1.55,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Dallas Stars",
+     "p": 0.6447,
+     "prob": 64,
+     "fair": 1.55,
+     "stars": 3
+    },
+    "fun": {
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.3272,
+     "prob": 33,
+     "fair": 3.06,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Mikko Rantanen : au moins 1 point",
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
+     "stars": 3,
+     "player": "Mikko Rantanen",
+     "pid": 8478420,
+     "team": "Dallas Stars"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Jason Robertson marque",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Jason Robertson",
+     "pid": 8480027,
+     "team": "Dallas Stars"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020162",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-23T01:00:00+00:00",
+   "time": "03:00",
+   "home": "Calgary Flames",
+   "away": "Minnesota Wild",
+   "state": "FUT",
+   "xgH": 2.24,
+   "xgA": 3.06,
+   "pH": 26,
+   "pD": 22,
+   "pA": 52,
+   "winH": 36,
+   "espn_id": "401892560",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "win_a",
+     "label": "Victoire Minnesota Wild",
+     "p": 0.6447,
+     "prob": 64,
+     "fair": 1.55,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Minnesota Wild",
+     "p": 0.6447,
+     "prob": 64,
+     "fair": 1.55,
+     "stars": 3
+    },
+    "fun": {
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.3272,
+     "prob": 33,
+     "fair": 3.06,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Kirill Kaprizov : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Kirill Kaprizov marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1,
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020163",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-23T01:00:00+00:00",
+   "time": "03:00",
+   "home": "Edmonton Oilers",
+   "away": "Carolina Hurricanes",
+   "state": "FUT",
+   "xgH": 3.1,
+   "xgA": 3.2,
+   "pH": 37,
+   "pD": 22,
+   "pA": 41,
+   "winH": 48,
+   "espn_id": "401892561",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6012,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Carolina Hurricanes",
+     "p": 0.5174,
+     "prob": 52,
+     "fair": 1.93,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Carolina Hurricanes gagne par 2 buts d'écart ou plus",
+     "p": 0.3217,
+     "prob": 32,
+     "fair": 3.11,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Sebastian Aho : au moins 1 point",
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "player": "Sebastian Aho",
+     "pid": 8478427,
+     "team": "Carolina Hurricanes"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Andrei Svechnikov marque",
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
+     "stars": 1,
+     "player": "Andrei Svechnikov",
+     "pid": 8480830,
+     "team": "Carolina Hurricanes"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020164",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-23T02:00:00+00:00",
+   "time": "04:00",
+   "home": "Seattle Kraken",
+   "away": "Utah Mammoth",
+   "state": "FUT",
+   "xgH": 2.86,
+   "xgA": 3.44,
+   "pH": 31,
+   "pD": 22,
+   "pA": 47,
+   "winH": 41,
+   "espn_id": "401892562",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6012,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Utah Mammoth",
+     "p": 0.5934,
+     "prob": 59,
+     "fair": 1.69,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
+     "p": 0.3905,
+     "prob": 39,
+     "fair": 2.56,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Clayton Keller : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Clayton Keller",
+     "pid": 8479343,
+     "team": "Utah Mammoth"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Dylan Guenther marque",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Dylan Guenther",
+     "pid": 8482699,
+     "team": "Utah Mammoth"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020165",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-10-23T02:00:00+00:00",
+   "time": "04:00",
+   "home": "Vancouver Canucks",
+   "away": "Detroit Red Wings",
+   "state": "FUT",
+   "xgH": 2.83,
+   "xgA": 3.47,
+   "pH": 30,
+   "pD": 22,
+   "pA": 48,
+   "winH": 40,
+   "espn_id": "401892563",
+   "edate": "20261022",
+   "picks": {
+    "main": {
+     "market": "win_a",
+     "label": "Victoire Detroit Red Wings",
+     "p": 0.6038,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Detroit Red Wings",
+     "p": 0.6038,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Detroit Red Wings gagne par 2 buts d'écart ou plus",
+     "p": 0.4004,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Alex DeBrincat : au moins 1 point",
+     "p": 0.67,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3,
+     "player": "Alex DeBrincat",
+     "pid": 8479337,
+     "team": "Detroit Red Wings"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Alex DeBrincat marque",
+     "p": 0.41,
+     "prob": 41,
+     "fair": 2.44,
+     "stars": 1,
+     "player": "Alex DeBrincat",
+     "pid": 8479337,
+     "team": "Detroit Red Wings"
     }
    }
   }
@@ -130,29 +798,29 @@
  "summary": {
   "date": "2026-10-22",
   "yesterday": {
-   "n": 81,
-   "ok": 45
+   "n": 89,
+   "ok": 48
   },
   "foot": 0,
-  "nhl": 2,
+  "nhl": 12,
   "top": [
    {
-    "label": "Victoire Buffalo Sabres",
-    "prob": 64,
-    "time": "01:30",
-    "match": "Buffalo Sabres – Philadelphia Flyers"
+    "label": "Jack Hughes : au moins 1 point",
+    "prob": 73,
+    "time": "01:00",
+    "match": "New Jersey Devils – Anaheim Ducks"
    },
    {
-    "label": "Tage Thompson : au moins 1 point",
-    "prob": 61,
-    "time": "01:30",
-    "match": "Buffalo Sabres – Philadelphia Flyers"
+    "label": "Alex DeBrincat : au moins 1 point",
+    "prob": 67,
+    "time": "04:00",
+    "match": "Vancouver Canucks – Detroit Red Wings"
    },
    {
-    "label": "Moins de 5,5 buts",
-    "prob": 56,
-    "time": "01:30",
-    "match": "Ottawa Senators – Florida Panthers"
+    "label": "Jack Eichel : au moins 1 point",
+    "prob": 65,
+    "time": "02:00",
+    "match": "St. Louis Blues – Vegas Golden Knights"
    }
   ]
  }
