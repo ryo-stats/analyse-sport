@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T18:14+02:00",
+ "generated": "2026-10-22T19:50+02:00",
  "date": "2026-10-22",
  "nhl_date": "2026-10-22",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-2",
    "home": "Ararat-Armenia",
    "away": "AZ Alkmaar",
    "form_h": "NDVND",
@@ -254,7 +254,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.1137,
+     "p": 0.1138,
      "prob": 11,
      "fair": 8.79,
      "stars": 1,
@@ -263,7 +263,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "AZ Alkmaar gagne sans encaisser de but",
-     "p": 0.381,
+     "p": 0.3812,
      "prob": 38,
      "fair": 2.62,
      "stars": 1
@@ -272,17 +272,17 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3751,
-      "prob": 38,
+      "p": 0.3749,
+      "prob": 37,
       "fair": 2.67,
       "stars": 1
      },
      {
       "market": "wa_btts",
       "label": "AZ Alkmaar gagne et les deux équipes marquent",
-      "p": 0.3083,
+      "p": 0.3082,
       "prob": 31,
-      "fair": 3.24,
+      "fair": 3.25,
       "stars": 1
      }
     ],
@@ -335,8 +335,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-2",
    "home": "Dinamo Zagreb",
    "away": "NEC",
    "form_h": "NNDNV",
@@ -476,6 +476,21 @@
      "lineup": "start"
     },
     {
+     "name": "Bryan Linssen",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "NEC",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 9,
+     "p_dec": 11,
+     "pid": "122954",
+     "stats_league": "ned.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
      "name": "Perr Schuurs",
      "pos": "Défenseur",
      "side": "a",
@@ -486,21 +501,6 @@
      "p_goal": 8,
      "p_dec": 15,
      "pid": "233894",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Bryan Linssen",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "NEC",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "p_goal": 8,
-     "p_dec": 11,
-     "pid": "122954",
      "stats_league": "ned.1",
      "season": 2026,
      "lineup": "start"
@@ -589,7 +589,7 @@
     "fun": {
      "market": "wh_o25",
      "label": "Dinamo Zagreb gagne et plus de 2,5 buts",
-     "p": 0.4143,
+     "p": 0.4144,
      "prob": 41,
      "fair": 2.41,
      "stars": 1
@@ -606,7 +606,7 @@
      {
       "market": "h2",
       "label": "Dinamo Zagreb gagne avec 2 buts d'écart ou plus",
-      "p": 0.3848,
+      "p": 0.3849,
       "prob": 38,
       "fair": 2.6,
       "stars": 1
@@ -661,8 +661,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-1",
    "home": "Ferencvaros",
    "away": "Torreense",
    "form_h": "NVVVN",
@@ -890,7 +890,7 @@
     "main": {
      "market": "1N",
      "label": "Ferencvaros ou nul",
-     "p": 0.8722,
+     "p": 0.8723,
      "prob": 87,
      "fair": 1.15,
      "stars": 5
@@ -908,14 +908,14 @@
      "label": "Score exact 2-0",
      "p": 0.122,
      "prob": 12,
-     "fair": 8.19,
+     "fair": 8.2,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Ferencvaros gagne sans encaisser de but",
-     "p": 0.3984,
+     "p": 0.3982,
      "prob": 40,
      "fair": 2.51,
      "stars": 1
@@ -935,7 +935,7 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3339,
+      "p": 0.3343,
       "prob": 33,
       "fair": 2.99,
       "stars": 1
@@ -990,8 +990,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-2",
    "home": "Juventus",
    "away": "Rennes",
    "form_h": "NVNVV",
@@ -1218,7 +1218,7 @@
     "main": {
      "market": "1N",
      "label": "Juventus ou nul",
-     "p": 0.8631,
+     "p": 0.863,
      "prob": 86,
      "fair": 1.16,
      "stars": 5
@@ -1236,14 +1236,14 @@
      "label": "Score exact 2-0",
      "p": 0.121,
      "prob": 12,
-     "fair": 8.27,
+     "fair": 8.26,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "h2",
      "label": "Juventus gagne avec 2 buts d'écart ou plus",
-     "p": 0.4173,
+     "p": 0.4172,
      "prob": 42,
      "fair": 2.4,
      "stars": 1
@@ -1260,7 +1260,7 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3204,
+      "p": 0.3202,
       "prob": 32,
       "fair": 3.12,
       "stars": 1
@@ -1279,7 +1279,7 @@
      "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "1 but et 1 passe en 7 matchs · titulaire · Juventus favori (66 %) · 2,1 buts attendus pour Juventus"
+     "why": "1 but et 1 passe en 7 matchs · titulaire · Juventus favori (66 %) · 2,0 buts attendus pour Juventus"
     },
     "decisive": {
      "market": "dec",
@@ -1299,7 +1299,7 @@
      "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "1 but et 1 passe en 7 matchs · titulaire · Juventus favori (66 %) · 2,1 buts attendus pour Juventus"
+     "why": "1 but et 1 passe en 7 matchs · titulaire · Juventus favori (66 %) · 2,0 buts attendus pour Juventus"
     }
    },
    "second": null,
@@ -1315,8 +1315,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-1",
    "home": "Lech Poznan",
    "away": "Sunderland",
    "form_h": "NDNVV",
@@ -1569,7 +1569,7 @@
     "fun": {
      "market": "htft_a",
      "label": "Sunderland mène à la mi-temps et gagne le match",
-     "p": 0.3106,
+     "p": 0.3107,
      "prob": 31,
      "fair": 3.22,
      "stars": 1
@@ -1578,7 +1578,7 @@
      {
       "market": "wa_nil",
       "label": "Sunderland gagne sans encaisser de but",
-      "p": 0.2958,
+      "p": 0.2959,
       "prob": 30,
       "fair": 3.38,
       "stars": 1
@@ -1641,8 +1641,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-2",
    "home": "OFI Crete",
    "away": "Leverkusen",
    "form_h": "NDDNV",
@@ -1885,16 +1885,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.0979,
+     "p": 0.098,
      "prob": 10,
-     "fair": 10.22,
+     "fair": 10.21,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Leverkusen gagne sans encaisser de but",
-     "p": 0.4026,
+     "p": 0.4028,
      "prob": 40,
      "fair": 2.48,
      "stars": 1
@@ -1903,7 +1903,7 @@
      {
       "market": "wa_btts",
       "label": "Leverkusen gagne et les deux équipes marquent",
-      "p": 0.3898,
+      "p": 0.3896,
       "prob": 39,
       "fair": 2.57,
       "stars": 1
@@ -1911,7 +1911,7 @@
      {
       "market": "a3",
       "label": "Leverkusen gagne avec 3 buts d'écart ou plus",
-      "p": 0.3893,
+      "p": 0.3892,
       "prob": 39,
       "fair": 2.57,
       "stars": 1
@@ -1966,8 +1966,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Sturm Graz",
    "away": "Marseille",
    "form_h": "NDVDN",
@@ -2030,21 +2030,6 @@
      "lineup": "start"
     },
     {
-     "name": "Jürgen Heil",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Sturm Graz",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "p_goal": 6,
-     "p_dec": 10,
-     "pid": "274948",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
      "name": "Luca Weinhandl",
      "pos": "Milieu",
      "side": "h",
@@ -2085,6 +2070,21 @@
      "p_goal": 1,
      "p_dec": 21,
      "pid": "364541",
+     "stats_league": "aut.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jacob Peter Hödl",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Sturm Graz",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 1,
+     "p_dec": 4,
+     "pid": "388521",
      "stats_league": "aut.1",
      "season": 2026,
      "lineup": "start"
@@ -2291,8 +2291,8 @@
    "league": "Europa League",
    "kickoff": "2026-10-22T16:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Union SG",
    "away": "Hapoel Be'er",
    "form_h": "NNVVV",
@@ -2536,7 +2536,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1092,
+     "p": 0.1091,
      "prob": 11,
      "fair": 9.16,
      "stars": 1,
@@ -2545,7 +2545,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3644,
+     "p": 0.3645,
      "prob": 36,
      "fair": 2.74,
      "stars": 1
@@ -2554,7 +2554,7 @@
      {
       "market": "wh_nil",
       "label": "Union SG gagne sans encaisser de but",
-      "p": 0.3582,
+      "p": 0.3581,
       "prob": 36,
       "fair": 2.79,
       "stars": 1
@@ -2562,7 +2562,7 @@
      {
       "market": "wh_btts",
       "label": "Union SG gagne et les deux équipes marquent",
-      "p": 0.301,
+      "p": 0.3011,
       "prob": 30,
       "fair": 3.32,
       "stars": 1
@@ -2632,11 +2632,11 @@
    "odds": {
     "h": 1.87,
     "d": 3.85,
-    "a": 3.9,
+    "a": 4.0,
     "by": "DraftKings"
    },
-   "xgH": 1.63,
-   "xgA": 1.05,
+   "xgH": 1.61,
+   "xgA": 1.02,
    "scores": [
     "1-1",
     "1-0",
@@ -2644,11 +2644,11 @@
    ],
    "scorep": [
     12,
-    11,
+    12,
     10
    ],
-   "over25": 50,
-   "btts": 52,
+   "over25": 49,
+   "btts": 51,
    "squad_h": [
     {
      "name": "Marcus Tavernier",
@@ -2659,7 +2659,7 @@
      "assists": 0,
      "apps": 7,
      "p_goal": 37,
-     "p_dec": 45,
+     "p_dec": 44,
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026
@@ -2745,7 +2745,7 @@
      "assists": 3,
      "apps": 7,
      "p_goal": 20,
-     "p_dec": 35,
+     "p_dec": 34,
      "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026
@@ -2759,7 +2759,7 @@
      "assists": 1,
      "apps": 7,
      "p_goal": 17,
-     "p_dec": 25,
+     "p_dec": 24,
      "pid": "288896",
      "stats_league": "ita.1",
      "season": 2026
@@ -2786,7 +2786,7 @@
      "goals": 2,
      "assists": 0,
      "apps": 5,
-     "p_goal": 11,
+     "p_goal": 10,
      "p_dec": 13,
      "pid": "359754",
      "stats_league": "ita.1",
@@ -2832,51 +2832,51 @@
     "main": {
      "market": "1N",
      "label": "Bournemouth ou nul",
-     "p": 0.756,
+     "p": 0.7607,
      "prob": 76,
-     "fair": 1.32,
+     "fair": 1.31,
      "stars": 4
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bournemouth",
-     "p": 0.5089,
+     "p": 0.512,
      "prob": 51,
-     "fair": 1.96,
+     "fair": 1.95,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1124,
-     "prob": 11,
-     "fair": 8.9,
+     "p": 0.1161,
+     "prob": 12,
+     "fair": 8.61,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Bournemouth mène à la mi-temps et gagne le match",
-     "p": 0.3126,
+     "p": 0.3143,
      "prob": 31,
-     "fair": 3.2,
+     "fair": 3.18,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o25",
       "label": "Bournemouth gagne et plus de 2,5 buts",
-      "p": 0.3052,
-      "prob": 31,
-      "fair": 3.28,
+      "p": 0.3024,
+      "prob": 30,
+      "fair": 3.31,
       "stars": 1
      },
      {
       "market": "wh_nil",
       "label": "Bournemouth gagne sans encaisser de but",
-      "p": 0.2823,
-      "prob": 28,
-      "fair": 3.54,
+      "p": 0.2891,
+      "prob": 29,
+      "fair": 3.46,
       "stars": 1
      }
     ],
@@ -2897,9 +2897,9 @@
     "decisive": {
      "market": "dec",
      "label": "Marcus Tavernier buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Marcus Tavernier",
      "team": "Bournemouth",
@@ -2935,30 +2935,30 @@
    "form_a": "NDVNV",
    "rank_h": 4,
    "rank_a": 15,
-   "pH": 43,
-   "pD": 25,
-   "pA": 32,
+   "pH": 39,
+   "pD": 26,
+   "pA": 35,
    "source": "Cotes DraftKings",
    "odds": {
-    "h": 2.2,
-    "d": 3.8,
-    "a": 3.0,
+    "h": 2.45,
+    "d": 3.65,
+    "a": 2.7,
     "by": "DraftKings"
    },
-   "xgH": 1.53,
-   "xgA": 1.27,
+   "xgH": 1.37,
+   "xgA": 1.29,
    "scores": [
     "1-1",
     "1-0",
-    "2-1"
+    "0-1"
    ],
    "scorep": [
     12,
-    9,
+    10,
     9
    ],
-   "over25": 53,
-   "btts": 56,
+   "over25": 50,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Dusan Vlahovic",
@@ -2968,8 +2968,8 @@
      "goals": 6,
      "assists": 0,
      "apps": 6,
-     "p_goal": 38,
-     "p_dec": 40,
+     "p_goal": 35,
+     "p_dec": 37,
      "pid": "235677",
      "stats_league": "tur.1",
      "season": 2026
@@ -2982,8 +2982,8 @@
      "goals": 2,
      "assists": 1,
      "apps": 8,
-     "p_goal": 20,
-     "p_dec": 29,
+     "p_goal": 18,
+     "p_dec": 26,
      "pid": "217476",
      "stats_league": "tur.1",
      "season": 2026
@@ -2996,8 +2996,8 @@
      "goals": 2,
      "assists": 2,
      "apps": 7,
-     "p_goal": 15,
-     "p_dec": 31,
+     "p_goal": 14,
+     "p_dec": 28,
      "pid": "272700",
      "stats_league": "tur.1",
      "season": 2026
@@ -3010,8 +3010,8 @@
      "goals": 1,
      "assists": 1,
      "apps": 7,
-     "p_goal": 15,
-     "p_dec": 24,
+     "p_goal": 13,
+     "p_dec": 22,
      "pid": "174980",
      "stats_league": "tur.1",
      "season": 2026
@@ -3024,8 +3024,8 @@
      "goals": 1,
      "assists": 1,
      "apps": 8,
-     "p_goal": 10,
-     "p_dec": 18,
+     "p_goal": 9,
+     "p_dec": 16,
      "pid": "384290",
      "stats_league": "tur.1",
      "season": 2026
@@ -3038,8 +3038,8 @@
      "goals": 1,
      "assists": 0,
      "apps": 7,
-     "p_goal": 8,
-     "p_dec": 9,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "216420",
      "stats_league": "tur.1",
      "season": 2026
@@ -3054,7 +3054,7 @@
      "goals": 1,
      "assists": 0,
      "apps": 7,
-     "p_goal": 16,
+     "p_goal": 17,
      "p_dec": 21,
      "pid": "252747",
      "stats_league": "eng.1",
@@ -3142,74 +3142,77 @@
     "main": {
      "market": "1N",
      "label": "Besiktas ou nul",
-     "p": 0.6829,
-     "prob": 68,
-     "fair": 1.46,
+     "p": 0.6481,
+     "prob": 65,
+     "fair": 1.54,
      "stars": 3
     },
     "winner": {
      "market": "1",
      "label": "Victoire Besiktas",
-     "p": 0.4325,
-     "prob": 43,
-     "fair": 2.31,
+     "p": 0.3878,
+     "prob": 39,
+     "fair": 2.58,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.0928,
-     "prob": 9,
-     "fair": 10.78,
+     "p": 0.0959,
+     "prob": 10,
+     "fair": 10.43,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3085,
-     "prob": 31,
-     "fair": 3.24,
+     "market": "htft_h",
+     "label": "Besiktas mène à la mi-temps et gagne le match",
+     "p": 0.2283,
+     "prob": 23,
+     "fair": 4.38,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o25",
       "label": "Besiktas gagne et plus de 2,5 buts",
-      "p": 0.2688,
-      "prob": 27,
-      "fair": 3.72,
+      "p": 0.2264,
+      "prob": 23,
+      "fair": 4.42,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Besiktas mène à la mi-temps et gagne le match",
-      "p": 0.2601,
-      "prob": 26,
-      "fair": 3.84,
-      "stars": 1
+      "market": "scw",
+      "label": "Dusan Vlahovic marque et Besiktas gagne",
+      "p": 0.212,
+      "prob": 21,
+      "fair": 4.72,
+      "stars": 1,
+      "player": "Dusan Vlahovic",
+      "team": "Besiktas",
+      "side": "h"
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Dusan Vlahovic marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Dusan Vlahovic",
      "team": "Besiktas",
      "pid": "235677",
      "stats_league": "tur.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 6 matchs · Besiktas annoncé gagnant (43 %) · 1,5 buts attendus pour Besiktas"
+     "why": "6 buts et 0 passe en 6 matchs · Besiktas annoncé gagnant (39 %) · 1,4 but attendu pour Besiktas"
     },
     "decisive": {
      "market": "dec",
      "label": "Dusan Vlahovic buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Dusan Vlahovic",
      "team": "Besiktas",
@@ -3221,7 +3224,7 @@
      "pid": "235677",
      "stats_league": "tur.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 6 matchs · Besiktas annoncé gagnant (43 %) · 1,5 buts attendus pour Besiktas"
+     "why": "6 buts et 0 passe en 6 matchs · Besiktas annoncé gagnant (39 %) · 1,4 but attendu pour Besiktas"
     }
    },
    "second": null,
@@ -3555,18 +3558,18 @@
    "form_a": "NVVDV",
    "rank_h": 17,
    "rank_a": 28,
-   "pH": 31,
-   "pD": 26,
-   "pA": 42,
+   "pH": 32,
+   "pD": 27,
+   "pA": 41,
    "source": "Cotes DraftKings",
    "odds": {
-    "h": 3.05,
-    "d": 3.6,
-    "a": 2.25,
+    "h": 3.0,
+    "d": 3.55,
+    "a": 2.35,
     "by": "DraftKings"
    },
-   "xgH": 1.16,
-   "xgA": 1.39,
+   "xgH": 1.14,
+   "xgA": 1.33,
    "scores": [
     "1-1",
     "0-1",
@@ -3575,10 +3578,10 @@
    "scorep": [
     13,
     11,
-    9
+    10
    ],
-   "over25": 47,
-   "btts": 52,
+   "over25": 45,
+   "btts": 50,
    "squad_h": [
     {
      "name": "Kajetan Szmyt",
@@ -3603,22 +3606,8 @@
      "assists": 0,
      "apps": 1,
      "p_goal": 11,
-     "p_dec": 16,
-     "pid": "235672",
-     "stats_league": "uefa.europa",
-     "season": 2026
-    },
-    {
-     "name": "Rodrigo Conceição",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Jagiellonia ",
-     "goals": 1,
-     "assists": 0,
-     "apps": 2,
-     "p_goal": 11,
      "p_dec": 15,
-     "pid": "323813",
+     "pid": "235672",
      "stats_league": "uefa.europa",
      "season": 2026
     },
@@ -3633,6 +3622,20 @@
      "p_goal": 11,
      "p_dec": 15,
      "pid": "345447",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Rodrigo Conceição",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Jagiellonia ",
+     "goals": 1,
+     "assists": 0,
+     "apps": 2,
+     "p_goal": 11,
+     "p_dec": 14,
+     "pid": "323813",
      "stats_league": "uefa.europa",
      "season": 2026
     },
@@ -3674,8 +3677,8 @@
      "goals": 3,
      "assists": 1,
      "apps": 6,
-     "p_goal": 27,
-     "p_dec": 35,
+     "p_goal": 26,
+     "p_dec": 34,
      "pid": "382432",
      "stats_league": "bel.1",
      "season": 2026
@@ -3688,8 +3691,8 @@
      "goals": 2,
      "assists": 0,
      "apps": 5,
-     "p_goal": 20,
-     "p_dec": 23,
+     "p_goal": 19,
+     "p_dec": 22,
      "pid": "319271",
      "stats_league": "bel.1",
      "season": 2026
@@ -3703,7 +3706,7 @@
      "assists": 0,
      "apps": 8,
      "p_goal": 17,
-     "p_dec": 23,
+     "p_dec": 22,
      "pid": "288490",
      "stats_league": "bel.1",
      "season": 2026
@@ -3716,8 +3719,8 @@
      "goals": 2,
      "assists": 0,
      "apps": 3,
-     "p_goal": 16,
-     "p_dec": 16,
+     "p_goal": 15,
+     "p_dec": 15,
      "pid": "277376",
      "stats_league": "bel.1",
      "season": 2026
@@ -3745,7 +3748,7 @@
      "assists": 1,
      "apps": 8,
      "p_goal": 7,
-     "p_dec": 18,
+     "p_dec": 17,
      "pid": "285974",
      "stats_league": "bel.1",
      "season": 2026
@@ -3763,74 +3766,74 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Anderlecht",
-     "p": 0.6878,
-     "prob": 69,
-     "fair": 1.45,
+     "p": 0.6797,
+     "prob": 68,
+     "fair": 1.47,
      "stars": 3
     },
     "winner": {
      "market": "2",
      "label": "Victoire Anderlecht",
-     "p": 0.4232,
-     "prob": 42,
-     "fair": 2.36,
+     "p": 0.4089,
+     "prob": 41,
+     "fair": 2.45,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1086,
+     "p": 0.1125,
      "prob": 11,
-     "fair": 9.21,
+     "fair": 8.89,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.2538,
-     "prob": 25,
-     "fair": 3.94,
+     "market": "htft_a",
+     "label": "Anderlecht mène à la mi-temps et gagne le match",
+     "p": 0.2404,
+     "prob": 24,
+     "fair": 4.16,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_a",
-      "label": "Anderlecht mène à la mi-temps et gagne le match",
-      "p": 0.251,
-      "prob": 25,
-      "fair": 3.98,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.2355,
+      "prob": 24,
+      "fair": 4.25,
       "stars": 1
      },
      {
-      "market": "wa_o25",
-      "label": "Anderlecht gagne et plus de 2,5 buts",
-      "p": 0.239,
-      "prob": 24,
-      "fair": 4.18,
+      "market": "wa_nil",
+      "label": "Anderlecht gagne sans encaisser de but",
+      "p": 0.2347,
+      "prob": 23,
+      "fair": 4.26,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Tawfik Bentayeb marque",
-     "p": 0.27,
-     "prob": 27,
-     "fair": 3.7,
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
      "player": "Tawfik Bentayeb",
      "team": "Anderlecht",
      "pid": "382432",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · Anderlecht annoncé gagnant (42 %) · 1,4 but attendu pour Anderlecht"
+     "why": "3 buts et 1 passe en 6 matchs · Anderlecht annoncé gagnant (41 %) · 1,3 but attendu pour Anderlecht"
     },
     "decisive": {
      "market": "dec",
      "label": "Tawfik Bentayeb buteur ou passeur",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Tawfik Bentayeb",
      "team": "Anderlecht",
@@ -3842,7 +3845,7 @@
      "pid": "382432",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · Anderlecht annoncé gagnant (42 %) · 1,4 but attendu pour Anderlecht"
+     "why": "3 buts et 1 passe en 6 matchs · Anderlecht annoncé gagnant (41 %) · 1,3 but attendu pour Anderlecht"
     }
    },
    "second": null,
@@ -3873,11 +3876,11 @@
    "odds": {
     "h": 6.5,
     "d": 5.25,
-    "a": 1.43,
+    "a": 1.41,
     "by": "DraftKings"
    },
-   "xgH": 1.0,
-   "xgA": 2.32,
+   "xgH": 1.01,
+   "xgA": 2.35,
    "scores": [
     "1-2",
     "0-2",
@@ -3999,8 +4002,8 @@
      "goals": 2,
      "assists": 2,
      "apps": 9,
-     "p_goal": 26,
-     "p_dec": 43,
+     "p_goal": 27,
+     "p_dec": 44,
      "pid": "229018",
      "stats_league": "esp.1",
      "season": 2026
@@ -4013,7 +4016,7 @@
      "goals": 2,
      "assists": 1,
      "apps": 8,
-     "p_goal": 24,
+     "p_goal": 25,
      "p_dec": 35,
      "pid": "283941",
      "stats_league": "esp.1",
@@ -4027,7 +4030,7 @@
      "goals": 2,
      "assists": 0,
      "apps": 7,
-     "p_goal": 23,
+     "p_goal": 24,
      "p_dec": 27,
      "pid": "341367",
      "stats_league": "esp.1",
@@ -4056,7 +4059,7 @@
      "assists": 3,
      "apps": 6,
      "p_goal": 14,
-     "p_dec": 37,
+     "p_dec": 38,
      "pid": "406379",
      "stats_league": "esp.1",
      "season": 2026
@@ -4073,7 +4076,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Real Sociedad",
-     "p": 0.8523,
+     "p": 0.8541,
      "prob": 85,
      "fair": 1.17,
      "stars": 5
@@ -4081,33 +4084,33 @@
     "winner": {
      "market": "2",
      "label": "Victoire Real Sociedad",
-     "p": 0.6693,
+     "p": 0.6735,
      "prob": 67,
-     "fair": 1.49,
+     "fair": 1.48,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0972,
+     "p": 0.0968,
      "prob": 10,
-     "fair": 10.28,
+     "fair": 10.33,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
      "market": "wa_btts",
      "label": "Real Sociedad gagne et les deux équipes marquent",
-     "p": 0.3379,
+     "p": 0.3429,
      "prob": 34,
-     "fair": 2.96,
+     "fair": 2.92,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_nil",
       "label": "Real Sociedad gagne sans encaisser de but",
-      "p": 0.3315,
+      "p": 0.3306,
       "prob": 33,
       "fair": 3.02,
       "stars": 1
@@ -4115,9 +4118,9 @@
      {
       "market": "a3",
       "label": "Real Sociedad gagne avec 3 buts d'écart ou plus",
-      "p": 0.2445,
-      "prob": 24,
-      "fair": 4.09,
+      "p": 0.2497,
+      "prob": 25,
+      "fair": 4.01,
       "stars": 1
      }
     ],
@@ -4133,7 +4136,7 @@
      "pid": "306263",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Real Sociedad favori (67 %) · 2,3 buts attendus pour Real Sociedad"
+     "why": "3 buts et 0 passe en 8 matchs · Real Sociedad favori (67 %) · 2,4 buts attendus pour Real Sociedad"
     },
     "decisive": {
      "market": "dec",
@@ -4152,7 +4155,7 @@
      "pid": "306263",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Real Sociedad favori (67 %) · 2,3 buts attendus pour Real Sociedad"
+     "why": "3 buts et 0 passe en 8 matchs · Real Sociedad favori (67 %) · 2,4 buts attendus pour Real Sociedad"
     }
    },
    "second": null,
@@ -4729,28 +4732,28 @@
    "rank_a": 3,
    "pH": 11,
    "pD": 17,
-   "pA": 72,
+   "pA": 73,
    "source": "Cotes DraftKings",
    "odds": {
-    "h": 8.5,
+    "h": 9.0,
     "d": 5.75,
-    "a": 1.32,
+    "a": 1.3,
     "by": "DraftKings"
    },
-   "xgH": 0.85,
-   "xgA": 2.43,
+   "xgH": 0.8,
+   "xgA": 2.4,
    "scores": [
     "0-2",
-    "1-2",
-    "0-1"
+    "0-1",
+    "0-3"
    ],
    "scorep": [
-    11,
-    9,
+    12,
+    10,
     9
    ],
-   "over25": 64,
-   "btts": 52,
+   "over25": 62,
+   "btts": 50,
    "squad_h": [
     {
      "name": "Jaden Montnor",
@@ -4760,8 +4763,8 @@
      "goals": 1,
      "assists": 0,
      "apps": 2,
-     "p_goal": 17,
-     "p_dec": 22,
+     "p_goal": 16,
+     "p_dec": 21,
      "pid": "366131",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -4774,8 +4777,8 @@
      "goals": 1,
      "assists": 0,
      "apps": 2,
-     "p_goal": 15,
-     "p_dec": 20,
+     "p_goal": 14,
+     "p_dec": 18,
      "pid": "162424",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -4788,8 +4791,8 @@
      "goals": 0,
      "assists": 0,
      "apps": 2,
-     "p_goal": 10,
-     "p_dec": 15,
+     "p_goal": 9,
+     "p_dec": 14,
      "pid": "181007",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -4803,7 +4806,7 @@
      "assists": 0,
      "apps": 2,
      "p_goal": 8,
-     "p_dec": 11,
+     "p_dec": 10,
      "pid": "188962",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -4817,7 +4820,7 @@
      "assists": 0,
      "apps": 2,
      "p_goal": 8,
-     "p_dec": 11,
+     "p_dec": 10,
      "pid": "274954",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -4831,7 +4834,7 @@
      "assists": 1,
      "apps": 2,
      "p_goal": 4,
-     "p_dec": 19,
+     "p_dec": 18,
      "pid": "199675",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -4846,7 +4849,7 @@
      "goals": 8,
      "assists": 3,
      "apps": 8,
-     "p_goal": 53,
+     "p_goal": 52,
      "p_dec": 65,
      "pid": "220819",
      "stats_league": "por.1",
@@ -4860,7 +4863,7 @@
      "goals": 5,
      "assists": 3,
      "apps": 8,
-     "p_goal": 41,
+     "p_goal": 40,
      "p_dec": 56,
      "pid": "339191",
      "stats_league": "por.1",
@@ -4888,7 +4891,7 @@
      "goals": 1,
      "assists": 2,
      "apps": 8,
-     "p_goal": 14,
+     "p_goal": 13,
      "p_dec": 29,
      "pid": "313415",
      "stats_league": "por.1",
@@ -4929,73 +4932,73 @@
     "Omonia : ESPN ne connaît que 1 ou 2 matchs de ses joueurs, chiffres des joueurs très incertains.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
-   "reading": "Benfica est nettement favori (72 %).",
+   "reading": "Benfica est nettement favori (73 %).",
    "stakes": "Omonia (6e) : top 8, qualification directe pour les 8es. Benfica (3e) : top 8, qualification directe pour les 8es. Classement encore très provisoire.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Benfica",
-     "p": 0.8877,
+     "p": 0.8944,
      "prob": 89,
-     "fair": 1.13,
+     "fair": 1.12,
      "stars": 5
     },
     "winner": {
      "market": "2",
      "label": "Victoire Benfica",
-     "p": 0.7217,
-     "prob": 72,
-     "fair": 1.39,
+     "p": 0.7292,
+     "prob": 73,
+     "fair": 1.37,
      "stars": 4
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.1108,
-     "prob": 11,
-     "fair": 9.03,
+     "p": 0.1174,
+     "prob": 12,
+     "fair": 8.52,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.4162,
-     "prob": 42,
-     "fair": 2.4,
+     "market": "wa_nil",
+     "label": "Benfica gagne sans encaisser de but",
+     "p": 0.4092,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_nil",
-      "label": "Benfica gagne sans encaisser de but",
-      "p": 0.3889,
-      "prob": 39,
-      "fair": 2.57,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.3982,
+      "prob": 40,
+      "fair": 2.51,
       "stars": 1
      },
      {
       "market": "wa_btts",
       "label": "Benfica gagne et les deux équipes marquent",
-      "p": 0.3329,
-      "prob": 33,
-      "fair": 3.0,
+      "p": 0.3201,
+      "prob": 32,
+      "fair": 3.12,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Vangelis Pavlidis marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Vangelis Pavlidis",
      "team": "Benfica",
      "pid": "220819",
      "stats_league": "por.1",
      "season": 2026,
-     "why": "8 buts et 3 passes en 8 matchs · Benfica favori (72 %) · 2,4 buts attendus pour Benfica"
+     "why": "8 buts et 3 passes en 8 matchs · Benfica favori (73 %) · 2,4 buts attendus pour Benfica"
     },
     "decisive": {
      "market": "dec",
@@ -5014,7 +5017,7 @@
      "pid": "220819",
      "stats_league": "por.1",
      "season": 2026,
-     "why": "8 buts et 3 passes en 8 matchs · Benfica favori (72 %) · 2,4 buts attendus pour Benfica"
+     "why": "8 buts et 3 passes en 8 matchs · Benfica favori (73 %) · 2,4 buts attendus pour Benfica"
     }
    },
    "second": null,
@@ -5038,18 +5041,18 @@
    "form_a": "NVDVV",
    "rank_h": 30,
    "rank_a": 8,
-   "pH": 48,
+   "pH": 51,
    "pD": 23,
-   "pA": 29,
+   "pA": 26,
    "source": "Cotes DraftKings",
    "odds": {
-    "h": 2.0,
+    "h": 1.87,
     "d": 4.1,
-    "a": 3.25,
+    "a": 3.65,
     "by": "DraftKings"
    },
-   "xgH": 1.77,
-   "xgA": 1.35,
+   "xgH": 1.8,
+   "xgA": 1.22,
    "scores": [
     "1-1",
     "2-1",
@@ -5057,11 +5060,11 @@
    ],
    "scorep": [
     11,
-    9,
-    8
+    10,
+    9
    ],
-   "over25": 60,
-   "btts": 61,
+   "over25": 58,
+   "btts": 59,
    "squad_h": [
     {
      "name": "Adam Daghim",
@@ -5072,7 +5075,7 @@
      "assists": 2,
      "apps": 6,
      "p_goal": 29,
-     "p_dec": 46,
+     "p_dec": 47,
      "pid": "338854",
      "stats_league": "ger.1",
      "season": 2026
@@ -5100,7 +5103,7 @@
      "assists": 2,
      "apps": 6,
      "p_goal": 22,
-     "p_dec": 42,
+     "p_dec": 43,
      "pid": "336355",
      "stats_league": "ger.1",
      "season": 2026
@@ -5128,7 +5131,7 @@
      "assists": 0,
      "apps": 6,
      "p_goal": 15,
-     "p_dec": 25,
+     "p_dec": 26,
      "pid": "362590",
      "stats_league": "ger.1",
      "season": 2026
@@ -5157,8 +5160,8 @@
      "goals": 3,
      "assists": 1,
      "apps": 5,
-     "p_goal": 24,
-     "p_dec": 32,
+     "p_goal": 22,
+     "p_dec": 29,
      "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026
@@ -5171,8 +5174,8 @@
      "goals": 2,
      "assists": 3,
      "apps": 7,
-     "p_goal": 14,
-     "p_dec": 32,
+     "p_goal": 13,
+     "p_dec": 29,
      "pid": "370758",
      "stats_league": "fra.1",
      "season": 2026
@@ -5185,8 +5188,8 @@
      "goals": 1,
      "assists": 1,
      "apps": 5,
-     "p_goal": 13,
-     "p_dec": 22,
+     "p_goal": 12,
+     "p_dec": 20,
      "pid": "276265",
      "stats_league": "fra.1",
      "season": 2026
@@ -5199,8 +5202,8 @@
      "goals": 1,
      "assists": 2,
      "apps": 7,
-     "p_goal": 10,
-     "p_dec": 27,
+     "p_goal": 9,
+     "p_dec": 24,
      "pid": "192060",
      "stats_league": "fra.1",
      "season": 2026
@@ -5213,23 +5216,23 @@
      "goals": 1,
      "assists": 3,
      "apps": 7,
-     "p_goal": 9,
-     "p_dec": 30,
+     "p_goal": 8,
+     "p_dec": 28,
      "pid": "305545",
      "stats_league": "fra.1",
      "season": 2026
     },
     {
-     "name": "Felix Bacher",
-     "pos": "Défenseur",
+     "name": "Noah Nartey",
+     "pos": "Milieu",
      "side": "a",
      "team": "Lyon",
      "goals": 1,
      "assists": 0,
-     "apps": 7,
-     "p_goal": 8,
+     "apps": 6,
+     "p_goal": 7,
      "p_dec": 10,
-     "pid": "320945",
+     "pid": "365562",
      "stats_league": "fra.1",
      "season": 2026
     }
@@ -5239,57 +5242,57 @@
     "Lyon : 8e, 6 points, 5 buts marqués et 3 encaissés en 2 matchs.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
-   "reading": "Hoffenheim est favori sans écraser le match (48 %).",
+   "reading": "Hoffenheim est favori sans écraser le match (51 %).",
    "stakes": "Hoffenheim (30e) : zone d'élimination. Lyon (8e) : top 8, qualification directe pour les 8es. Classement encore très provisoire.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Hoffenheim ou nul",
-     "p": 0.7074,
-     "prob": 71,
-     "fair": 1.41,
+     "p": 0.7398,
+     "prob": 74,
+     "fair": 1.35,
      "stars": 4
     },
     "winner": {
      "market": "1",
      "label": "Victoire Hoffenheim",
-     "p": 0.4755,
-     "prob": 48,
-     "fair": 2.1,
-     "stars": 1
+     "p": 0.5081,
+     "prob": 51,
+     "fair": 1.97,
+     "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0935,
-     "prob": 9,
-     "fair": 10.7,
+     "p": 0.0963,
+     "prob": 10,
+     "fair": 10.38,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3802,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.3568,
+     "prob": 36,
+     "fair": 2.8,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o25",
       "label": "Hoffenheim gagne et plus de 2,5 buts",
-      "p": 0.328,
-      "prob": 33,
-      "fair": 3.05,
+      "p": 0.3415,
+      "prob": 34,
+      "fair": 2.93,
       "stars": 1
      },
      {
       "market": "htft_h",
       "label": "Hoffenheim mène à la mi-temps et gagne le match",
-      "p": 0.2939,
-      "prob": 29,
-      "fair": 3.4,
+      "p": 0.3164,
+      "prob": 32,
+      "fair": 3.16,
       "stars": 1
      }
     ],
@@ -5305,14 +5308,14 @@
      "pid": "338854",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 6 matchs · Hoffenheim favori (48 %) · 1,8 buts attendus pour Hoffenheim"
+     "why": "2 buts et 2 passes en 6 matchs · Hoffenheim favori (51 %) · 1,8 buts attendus pour Hoffenheim"
     },
     "decisive": {
      "market": "dec",
      "label": "Adam Daghim buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
      "stars": 1,
      "player": "Adam Daghim",
      "team": "Hoffenheim",
@@ -5324,7 +5327,7 @@
      "pid": "338854",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 6 matchs · Hoffenheim favori (48 %) · 1,8 buts attendus pour Hoffenheim"
+     "why": "2 buts et 2 passes en 6 matchs · Hoffenheim favori (51 %) · 1,8 buts attendus pour Hoffenheim"
     }
    },
    "second": null,
@@ -5348,30 +5351,30 @@
    "form_a": "NDDNV",
    "rank_h": 32,
    "rank_a": 25,
-   "pH": 56,
-   "pD": 24,
-   "pA": 21,
+   "pH": 55,
+   "pD": 25,
+   "pA": 20,
    "source": "Cotes DraftKings",
    "odds": {
-    "h": 1.71,
-    "d": 4.0,
-    "a": 4.6,
+    "h": 1.74,
+    "d": 3.9,
+    "a": 4.7,
     "by": "DraftKings"
    },
-   "xgH": 1.72,
-   "xgA": 0.95,
+   "xgH": 1.64,
+   "xgA": 0.89,
    "scores": [
     "1-0",
     "1-1",
     "2-0"
    ],
    "scorep": [
+    13,
     12,
-    11,
-    10
+    11
    ],
-   "over25": 50,
-   "btts": 50,
+   "over25": 47,
+   "btts": 48,
    "squad_h": [
     {
      "name": "Denis Visinský",
@@ -5381,8 +5384,8 @@
      "goals": 1,
      "assists": 0,
      "apps": 2,
-     "p_goal": 21,
-     "p_dec": 27,
+     "p_goal": 20,
+     "p_dec": 26,
      "pid": "310027",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5395,23 +5398,9 @@
      "goals": 0,
      "assists": 0,
      "apps": 2,
-     "p_goal": 12,
-     "p_dec": 32,
-     "pid": "394701",
-     "stats_league": "uefa.europa",
-     "season": 2026
-    },
-    {
-     "name": "Alexandr Sojka",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Viktoria Plzen",
-     "goals": 0,
-     "assists": 0,
-     "apps": 2,
      "p_goal": 11,
-     "p_dec": 30,
-     "pid": "387865",
+     "p_dec": 31,
+     "pid": "394701",
      "stats_league": "uefa.europa",
      "season": 2026
     },
@@ -5444,6 +5433,20 @@
      "season": 2026
     },
     {
+     "name": "Alexandr Sojka",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Viktoria Plzen",
+     "goals": 0,
+     "assists": 0,
+     "apps": 2,
+     "p_goal": 10,
+     "p_dec": 29,
+     "pid": "387865",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
      "name": "Salim Lawal",
      "pos": "Attaquant",
      "side": "h",
@@ -5452,7 +5455,7 @@
      "assists": 0,
      "apps": 2,
      "p_goal": 10,
-     "p_dec": 16,
+     "p_dec": 15,
      "pid": "362666",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5467,8 +5470,8 @@
      "goals": 1,
      "assists": 0,
      "apps": 2,
-     "p_goal": 24,
-     "p_dec": 31,
+     "p_goal": 23,
+     "p_dec": 30,
      "pid": "287830",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5482,7 +5485,7 @@
      "assists": 0,
      "apps": 2,
      "p_goal": 15,
-     "p_dec": 23,
+     "p_dec": 22,
      "pid": "333970",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5496,7 +5499,7 @@
      "assists": 0,
      "apps": 2,
      "p_goal": 10,
-     "p_dec": 16,
+     "p_dec": 15,
      "pid": "286180",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5523,8 +5526,8 @@
      "goals": 0,
      "assists": 0,
      "apps": 2,
-     "p_goal": 7,
-     "p_dec": 19,
+     "p_goal": 6,
+     "p_dec": 18,
      "pid": "351573",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5538,7 +5541,7 @@
      "assists": 0,
      "apps": 2,
      "p_goal": 4,
-     "p_dec": 13,
+     "p_dec": 12,
      "pid": "385531",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -5550,80 +5553,80 @@
     "Viktoria Plzen : ESPN ne connaît que 1 ou 2 matchs de ses joueurs, chiffres des joueurs très incertains.",
     "Levski Sofia : ESPN ne connaît que 1 ou 2 matchs de ses joueurs, chiffres des joueurs très incertains."
    ],
-   "reading": "Viktoria Plzen est favori sans écraser le match (56 %).",
+   "reading": "Viktoria Plzen est favori sans écraser le match (55 %).",
    "stakes": "Viktoria Plzen (32e) : zone d'élimination. Levski Sofia (25e) : zone d'élimination. Classement encore très provisoire.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Viktoria Plzen ou nul",
-     "p": 0.7931,
-     "prob": 79,
+     "p": 0.7961,
+     "prob": 80,
      "fair": 1.26,
      "stars": 4
     },
     "winner": {
      "market": "1",
      "label": "Victoire Viktoria Plzen",
-     "p": 0.5552,
-     "prob": 56,
-     "fair": 1.8,
+     "p": 0.5504,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1192,
-     "prob": 12,
-     "fair": 8.39,
+     "p": 0.1302,
+     "prob": 13,
+     "fair": 7.68,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Viktoria Plzen mène à la mi-temps et gagne le match",
-     "p": 0.3465,
-     "prob": 35,
-     "fair": 2.89,
+     "p": 0.3409,
+     "prob": 34,
+     "fair": 2.93,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o25",
-      "label": "Viktoria Plzen gagne et plus de 2,5 buts",
-      "p": 0.3335,
+      "market": "wh_nil",
+      "label": "Viktoria Plzen gagne sans encaisser de but",
+      "p": 0.3303,
       "prob": 33,
-      "fair": 3.0,
+      "fair": 3.03,
       "stars": 1
      },
      {
-      "market": "wh_nil",
-      "label": "Viktoria Plzen gagne sans encaisser de but",
-      "p": 0.3177,
-      "prob": 32,
-      "fair": 3.15,
+      "market": "wh_o25",
+      "label": "Viktoria Plzen gagne et plus de 2,5 buts",
+      "p": 0.3134,
+      "prob": 31,
+      "fair": 3.19,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Denis Visinský marque",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
+     "p": 0.2,
+     "prob": 20,
+     "fair": 5.0,
      "stars": 1,
      "player": "Denis Visinský",
      "team": "Viktoria Plzen",
      "pid": "310027",
      "stats_league": "uefa.europa",
      "season": 2026,
-     "why": "1 but et 0 passe en 2 matchs · Viktoria Plzen favori (56 %) · 1,7 buts attendus pour Viktoria Plzen"
+     "why": "1 but et 0 passe en 2 matchs · Viktoria Plzen favori (55 %) · 1,6 buts attendus pour Viktoria Plzen"
     },
     "decisive": {
      "market": "dec",
      "label": "Denis Visinský buteur ou passeur",
-     "p": 0.27,
-     "prob": 27,
-     "fair": 3.7,
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
      "player": "Denis Visinský",
      "team": "Viktoria Plzen",
@@ -5635,7 +5638,7 @@
      "pid": "310027",
      "stats_league": "uefa.europa",
      "season": 2026,
-     "why": "1 but et 0 passe en 2 matchs · Viktoria Plzen favori (56 %) · 1,7 buts attendus pour Viktoria Plzen"
+     "why": "1 but et 0 passe en 2 matchs · Viktoria Plzen favori (55 %) · 1,6 buts attendus pour Viktoria Plzen"
     }
    },
    "second": null,
@@ -8114,20 +8117,20 @@
    "away": "Vegas Golden Knights",
    "rec_h": "4-4-1 · 7e Central · 1 victoire de suite",
    "rec_a": "8-3-0 · 1e Pacific · 1 défaite de suite",
-   "winH": 47,
-   "winA": 53,
-   "pH": 36,
+   "winH": 46,
+   "winA": 54,
+   "pH": 35,
    "pD": 22,
-   "pA": 42,
+   "pA": 43,
    "source": "Cotes DraftKings (vainqueur final)",
    "odds": {
-    "h": 2.05,
-    "a": 1.8,
+    "h": 2.1,
+    "a": 1.77,
     "by": "DraftKings",
     "total": 6.5
    },
-   "xgH": 3.05,
-   "xgA": 3.25,
+   "xgH": 3.02,
+   "xgA": 3.28,
    "total": 6.3,
    "scores": [
     "2-3",
@@ -8163,9 +8166,9 @@
      "assists": 4,
      "gp": 9,
      "pid": 8480023,
-     "p_goal": 28,
+     "p_goal": 27,
      "p_point": 58,
-     "p_assist": 42
+     "p_assist": 41
     },
     {
      "name": "Dylan Holloway",
@@ -8179,7 +8182,7 @@
      "gp": 9,
      "pid": 8482077,
      "p_goal": 26,
-     "p_point": 55,
+     "p_point": 54,
      "p_assist": 38
     },
     {
@@ -8195,7 +8198,7 @@
      "pid": 8483516,
      "p_goal": 26,
      "p_point": 50,
-     "p_assist": 32
+     "p_assist": 31
     },
     {
      "name": "Mason McTavish",
@@ -8209,8 +8212,8 @@
      "gp": 9,
      "pid": 8482745,
      "p_goal": 23,
-     "p_point": 45,
-     "p_assist": 26
+     "p_point": 44,
+     "p_assist": 25
     },
     {
      "name": "Pavel Buchnevich",
@@ -8224,7 +8227,7 @@
      "gp": 8,
      "pid": 8477402,
      "p_goal": 20,
-     "p_point": 45,
+     "p_point": 44,
      "p_assist": 30
     },
     {
@@ -8238,9 +8241,9 @@
      "assists": 2,
      "gp": 9,
      "pid": 8482089,
-     "p_goal": 20,
+     "p_goal": 19,
      "p_point": 41,
-     "p_assist": 26
+     "p_assist": 25
     }
    ],
    "squad_a": [
@@ -8257,7 +8260,7 @@
      "pid": 8475913,
      "p_goal": 34,
      "p_point": 64,
-     "p_assist": 45
+     "p_assist": 46
     },
     {
      "name": "Jack Eichel",
@@ -8286,7 +8289,7 @@
      "gp": 11,
      "pid": 8476881,
      "p_goal": 23,
-     "p_point": 46,
+     "p_point": 47,
      "p_assist": 30
     },
     {
@@ -8316,7 +8319,7 @@
      "gp": 11,
      "pid": 8477964,
      "p_goal": 20,
-     "p_point": 48,
+     "p_point": 49,
      "p_assist": 35
     },
     {
@@ -8347,9 +8350,9 @@
      "assists": 4,
      "gp": 9,
      "pid": 8480023,
-     "p_goal": 28,
+     "p_goal": 27,
      "p_point": 58,
-     "p_assist": 42
+     "p_assist": 41
     },
     {
      "name": "Dylan Holloway",
@@ -8363,7 +8366,7 @@
      "gp": 9,
      "pid": 8482077,
      "p_goal": 26,
-     "p_point": 55,
+     "p_point": 54,
      "p_assist": 38
     },
     {
@@ -8379,7 +8382,7 @@
      "pid": 8483516,
      "p_goal": 26,
      "p_point": 50,
-     "p_assist": 32
+     "p_assist": 31
     }
    ],
    "best_a": [
@@ -8411,7 +8414,7 @@
      "pid": 8475913,
      "p_goal": 34,
      "p_point": 64,
-     "p_assist": 45
+     "p_assist": 46
     },
     {
      "name": "Mitch Marner",
@@ -8450,34 +8453,34 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.5325,
-     "prob": 53,
-     "fair": 1.88,
+     "p": 0.5427,
+     "prob": 54,
+     "fair": 1.84,
      "stars": 2
     },
     "fun": {
      "market": "a2",
      "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-     "p": 0.3348,
-     "prob": 33,
-     "fair": 2.99,
+     "p": 0.3439,
+     "prob": 34,
+     "fair": 2.91,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o55",
       "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
-      "p": 0.323,
-      "prob": 32,
-      "fair": 3.1,
+      "p": 0.3302,
+      "prob": 33,
+      "fair": 3.03,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Vegas Golden Knights gagne et plus de 6,5 buts",
-      "p": 0.2633,
-      "prob": 26,
-      "fair": 3.8,
+      "p": 0.2689,
+      "prob": 27,
+      "fair": 3.72,
       "stars": 1
      }
     ],
@@ -8948,20 +8951,20 @@
     "h": 2.7,
     "a": 1.49,
     "by": "DraftKings",
-    "total": 5.5
+    "total": 6.5
    },
-   "xgH": 2.24,
-   "xgA": 3.06,
-   "total": 5.3,
+   "xgH": 2.69,
+   "xgA": 3.61,
+   "total": 6.3,
    "scores": [
     "2-3",
-    "1-3",
-    "1-2"
+    "2-4",
+    "3-4"
    ],
    "scorep": [
-    6,
     5,
-    5
+    5,
+    4
    ],
    "goalie_h": {
     "name": "Dustin Wolf",
@@ -8987,9 +8990,9 @@
      "assists": 2,
      "gp": 8,
      "pid": 8480028,
-     "p_goal": 20,
-     "p_point": 36,
-     "p_assist": 20
+     "p_goal": 23,
+     "p_point": 42,
+     "p_assist": 23
     },
     {
      "name": "Matt Coronato",
@@ -9002,9 +9005,9 @@
      "assists": 3,
      "gp": 8,
      "pid": 8482679,
-     "p_goal": 17,
-     "p_point": 38,
-     "p_assist": 25
+     "p_goal": 20,
+     "p_point": 43,
+     "p_assist": 29
     },
     {
      "name": "Joel Farabee",
@@ -9017,9 +9020,9 @@
      "assists": 5,
      "gp": 8,
      "pid": 8480797,
-     "p_goal": 16,
-     "p_point": 33,
-     "p_assist": 20
+     "p_goal": 19,
+     "p_point": 39,
+     "p_assist": 23
     },
     {
      "name": "Mikael Backlund",
@@ -9032,9 +9035,9 @@
      "assists": 1,
      "gp": 8,
      "pid": 8474150,
-     "p_goal": 15,
-     "p_point": 34,
-     "p_assist": 22
+     "p_goal": 18,
+     "p_point": 40,
+     "p_assist": 26
     },
     {
      "name": "Yegor Sharangovich",
@@ -9047,9 +9050,9 @@
      "assists": 2,
      "gp": 8,
      "pid": 8481068,
-     "p_goal": 15,
-     "p_point": 29,
-     "p_assist": 16
+     "p_goal": 18,
+     "p_point": 33,
+     "p_assist": 18
     },
     {
      "name": "Ryan Strome",
@@ -9062,9 +9065,9 @@
      "assists": 2,
      "gp": 8,
      "pid": 8476458,
-     "p_goal": 14,
-     "p_point": 34,
-     "p_assist": 22
+     "p_goal": 17,
+     "p_point": 40,
+     "p_assist": 26
     }
    ],
    "squad_a": [
@@ -9079,9 +9082,9 @@
      "assists": 6,
      "gp": 10,
      "pid": 8478864,
-     "p_goal": 40,
-     "p_point": 63,
-     "p_assist": 38
+     "p_goal": 45,
+     "p_point": 69,
+     "p_assist": 43
     },
     {
      "name": "Matt Boldy",
@@ -9094,9 +9097,9 @@
      "assists": 4,
      "gp": 10,
      "pid": 8481557,
-     "p_goal": 35,
-     "p_point": 59,
-     "p_assist": 36
+     "p_goal": 40,
+     "p_point": 65,
+     "p_assist": 41
     },
     {
      "name": "Ryan Hartman",
@@ -9109,9 +9112,9 @@
      "assists": 1,
      "gp": 10,
      "pid": 8477451,
-     "p_goal": 21,
-     "p_point": 37,
-     "p_assist": 20
+     "p_goal": 24,
+     "p_point": 42,
+     "p_assist": 23
     },
     {
      "name": "Joel Eriksson Ek",
@@ -9124,9 +9127,9 @@
      "assists": 5,
      "gp": 10,
      "pid": 8478493,
-     "p_goal": 19,
-     "p_point": 46,
-     "p_assist": 32
+     "p_goal": 23,
+     "p_point": 51,
+     "p_assist": 37
     },
     {
      "name": "Danila Yurov",
@@ -9139,9 +9142,9 @@
      "assists": 1,
      "gp": 10,
      "pid": 8483525,
-     "p_goal": 15,
-     "p_point": 30,
-     "p_assist": 17
+     "p_goal": 18,
+     "p_point": 34,
+     "p_assist": 19
     },
     {
      "name": "Maxim Shabanov",
@@ -9154,9 +9157,9 @@
      "assists": 4,
      "gp": 10,
      "pid": 8485702,
-     "p_goal": 12,
-     "p_point": 34,
-     "p_assist": 22
+     "p_goal": 14,
+     "p_point": 38,
+     "p_assist": 26
     }
    ],
    "best_h": [
@@ -9171,9 +9174,9 @@
      "assists": 3,
      "gp": 8,
      "pid": 8482679,
-     "p_goal": 17,
-     "p_point": 38,
-     "p_assist": 25
+     "p_goal": 20,
+     "p_point": 43,
+     "p_assist": 29
     },
     {
      "name": "Morgan Frost",
@@ -9186,9 +9189,9 @@
      "assists": 2,
      "gp": 8,
      "pid": 8480028,
-     "p_goal": 20,
-     "p_point": 36,
-     "p_assist": 20
+     "p_goal": 23,
+     "p_point": 42,
+     "p_assist": 23
     },
     {
      "name": "Mikael Backlund",
@@ -9201,9 +9204,9 @@
      "assists": 1,
      "gp": 8,
      "pid": 8474150,
-     "p_goal": 15,
-     "p_point": 34,
-     "p_assist": 22
+     "p_goal": 18,
+     "p_point": 40,
+     "p_assist": 26
     }
    ],
    "best_a": [
@@ -9218,9 +9221,9 @@
      "assists": 6,
      "gp": 10,
      "pid": 8478864,
-     "p_goal": 40,
-     "p_point": 63,
-     "p_assist": 38
+     "p_goal": 45,
+     "p_point": 69,
+     "p_assist": 43
     },
     {
      "name": "Matt Boldy",
@@ -9233,9 +9236,9 @@
      "assists": 4,
      "gp": 10,
      "pid": 8481557,
-     "p_goal": 35,
-     "p_point": 59,
-     "p_assist": 36
+     "p_goal": 40,
+     "p_point": 65,
+     "p_assist": 41
     },
     {
      "name": "Quinn Hughes",
@@ -9248,9 +9251,9 @@
      "assists": 11,
      "gp": 10,
      "pid": 8480800,
-     "p_goal": 10,
-     "p_point": 59,
-     "p_assist": 53
+     "p_goal": 12,
+     "p_point": 65,
+     "p_assist": 59
     }
    ],
    "ctx": [
@@ -9280,37 +9283,37 @@
      "stars": 3
     },
     "fun": {
-     "market": "o65",
-     "label": "Plus de 6,5 buts",
-     "p": 0.3272,
-     "prob": 33,
-     "fair": 3.06,
+     "market": "wa_o55",
+     "label": "Minnesota Wild gagne et plus de 5,5 buts",
+     "p": 0.4011,
+     "prob": 40,
+     "fair": 2.49,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_o55",
-      "label": "Minnesota Wild gagne et plus de 5,5 buts",
-      "p": 0.2945,
-      "prob": 29,
-      "fair": 3.4,
+      "market": "wa_o65",
+      "label": "Minnesota Wild gagne et plus de 6,5 buts",
+      "p": 0.3232,
+      "prob": 32,
+      "fair": 3.09,
       "stars": 1
      },
      {
       "market": "a3",
       "label": "Minnesota Wild gagne par 3 buts d'écart ou plus",
-      "p": 0.2408,
-      "prob": 24,
-      "fair": 4.15,
+      "p": 0.2705,
+      "prob": 27,
+      "fair": 3.7,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "Kirill Kaprizov : au moins 1 point",
-     "p": 0.63,
-     "prob": 63,
-     "fair": 1.59,
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
      "stars": 3,
      "player": "Kirill Kaprizov",
      "pid": 8478864,
@@ -9319,9 +9322,9 @@
     "scorer": {
      "market": "goal",
      "label": "Kirill Kaprizov marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
      "stars": 1,
      "player": "Kirill Kaprizov",
      "pid": 8478864,
@@ -10578,30 +10581,10 @@
  "selection": [
   {
    "market": "N2",
-   "label": "Nul ou Leverkusen",
-   "p": 0.9201,
-   "prob": 92,
-   "fair": 1.09,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401915559",
-   "sport": "foot",
-   "league": "Europa League",
-   "time": "18:45",
-   "kickoff": "2026-10-22T16:45:00+00:00",
-   "home": "OFI Crete",
-   "away": "Leverkusen",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "N2",
    "label": "Nul ou Benfica",
-   "p": 0.8877,
+   "p": 0.8944,
    "prob": 89,
-   "fair": 1.13,
+   "fair": 1.12,
    "stars": 5,
    "kind": "main",
    "id": "foot-401915544",
@@ -10617,82 +10600,22 @@
    "logo_a_dark": null
   },
   {
-   "market": "1N",
-   "label": "Ferencvaros ou nul",
-   "p": 0.8722,
-   "prob": 87,
-   "fair": 1.15,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401915558",
-   "sport": "foot",
-   "league": "Europa League",
-   "time": "18:45",
-   "kickoff": "2026-10-22T16:45:00+00:00",
-   "home": "Ferencvaros",
-   "away": "Torreense",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/622.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/21615.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
    "market": "N2",
-   "label": "Nul ou AZ Alkmaar",
-   "p": 0.8721,
-   "prob": 87,
-   "fair": 1.15,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401915548",
-   "sport": "foot",
-   "league": "Europa League",
-   "time": "18:45",
-   "kickoff": "2026-10-22T16:45:00+00:00",
-   "home": "Ararat-Armenia",
-   "away": "AZ Alkmaar",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/20024.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "1N",
-   "label": "Juventus ou nul",
-   "p": 0.8631,
-   "prob": 86,
-   "fair": 1.16,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401915547",
-   "sport": "foot",
-   "league": "Europa League",
-   "time": "18:45",
-   "kickoff": "2026-10-22T16:45:00+00:00",
-   "home": "Juventus",
-   "away": "Rennes",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "1N",
-   "label": "Union SG ou nul",
-   "p": 0.8535,
+   "label": "Nul ou Real Sociedad",
+   "p": 0.8541,
    "prob": 85,
    "fair": 1.17,
    "stars": 5,
    "kind": "main",
-   "id": "foot-401915545",
+   "id": "foot-401915540",
    "sport": "foot",
    "league": "Europa League",
-   "time": "18:45",
-   "kickoff": "2026-10-22T16:45:00+00:00",
-   "home": "Union SG",
-   "away": "Hapoel Be'er",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/5807.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/13083.png",
+   "time": "21:00",
+   "kickoff": "2026-10-22T19:00:00+00:00",
+   "home": "Lillestrom",
+   "away": "Real Sociedad",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/987.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
    "logo_h_dark": null,
    "logo_a_dark": null
   },
@@ -10718,26 +10641,6 @@
   },
   {
    "market": "N2",
-   "label": "Nul ou Real Sociedad",
-   "p": 0.8523,
-   "prob": 85,
-   "fair": 1.17,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401915540",
-   "sport": "foot",
-   "league": "Europa League",
-   "time": "21:00",
-   "kickoff": "2026-10-22T19:00:00+00:00",
-   "home": "Lillestrom",
-   "away": "Real Sociedad",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/987.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "N2",
    "label": "Nul ou RB Salzburg",
    "p": 0.834,
    "prob": 83,
@@ -10758,23 +10661,132 @@
   },
   {
    "market": "1N",
-   "label": "Dinamo Zagreb ou nul",
-   "p": 0.8338,
-   "prob": 83,
-   "fair": 1.2,
-   "stars": 5,
+   "label": "Viktoria Plzen ou nul",
+   "p": 0.7961,
+   "prob": 80,
+   "fair": 1.26,
+   "stars": 4,
    "kind": "main",
-   "id": "foot-401915556",
+   "id": "foot-401915539",
    "sport": "foot",
    "league": "Europa League",
-   "time": "18:45",
-   "kickoff": "2026-10-22T16:45:00+00:00",
-   "home": "Dinamo Zagreb",
-   "away": "NEC",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/597.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+   "time": "21:00",
+   "kickoff": "2026-10-22T19:00:00+00:00",
+   "home": "Viktoria Plzen",
+   "away": "Levski Sofia",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/11706.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/490.png",
    "logo_h_dark": null,
    "logo_a_dark": null
+  },
+  {
+   "market": "1N",
+   "label": "Bournemouth ou nul",
+   "p": 0.7607,
+   "prob": 76,
+   "fair": 1.31,
+   "stars": 4,
+   "kind": "main",
+   "id": "foot-401915552",
+   "sport": "foot",
+   "league": "Europa League",
+   "time": "21:00",
+   "kickoff": "2026-10-22T19:00:00+00:00",
+   "home": "Bournemouth",
+   "away": "Milan",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
+  },
+  {
+   "market": "point",
+   "label": "Jack Hughes : au moins 1 point",
+   "p": 0.74,
+   "prob": 74,
+   "fair": 1.35,
+   "stars": 4,
+   "player": "Jack Hughes",
+   "pid": 8481559,
+   "team": "New Jersey Devils",
+   "kind": "player",
+   "id": "nhl-2026020157",
+   "sport": "nhl",
+   "league": "NHL",
+   "time": "01:00",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "home": "New Jersey Devils",
+   "away": "Anaheim Ducks",
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg"
+  },
+  {
+   "market": "1N",
+   "label": "Hoffenheim ou nul",
+   "p": 0.7398,
+   "prob": 74,
+   "fair": 1.35,
+   "stars": 4,
+   "kind": "main",
+   "id": "foot-401915543",
+   "sport": "foot",
+   "league": "Europa League",
+   "time": "21:00",
+   "kickoff": "2026-10-22T19:00:00+00:00",
+   "home": "Hoffenheim",
+   "away": "Lyon",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
+  },
+  {
+   "market": "point",
+   "label": "Kirill Kaprizov : au moins 1 point",
+   "p": 0.69,
+   "prob": 69,
+   "fair": 1.45,
+   "stars": 3,
+   "player": "Kirill Kaprizov",
+   "pid": 8478864,
+   "team": "Minnesota Wild",
+   "kind": "player",
+   "id": "nhl-2026020162",
+   "sport": "nhl",
+   "league": "NHL",
+   "time": "03:00",
+   "kickoff": "2026-10-23T01:00:00+00:00",
+   "home": "Calgary Flames",
+   "away": "Minnesota Wild",
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg"
+  },
+  {
+   "market": "point",
+   "label": "David Pastrnak : au moins 1 point",
+   "p": 0.68,
+   "prob": 68,
+   "fair": 1.47,
+   "stars": 3,
+   "player": "David Pastrnak",
+   "pid": 8477956,
+   "team": "Boston Bruins",
+   "kind": "player",
+   "id": "nhl-2026020154",
+   "sport": "nhl",
+   "league": "NHL",
+   "time": "01:00",
+   "kickoff": "2026-10-22T23:00:00+00:00",
+   "home": "Boston Bruins",
+   "away": "Nashville Predators",
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/BOS_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/NSH_dark.svg"
   }
  ],
  "bilan": {
