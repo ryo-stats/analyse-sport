@@ -135,19 +135,31 @@ test("NHL : 3-1 après deux périodes, Boston très favori ; prolongation proche
   assert.ok(ot.winH > 0.4 && ot.winH < 0.75, `prolongation ${ot.winH}`);
 });
 
-test("paris fun : entre 35 et 66 %, un par famille, supériorité numérique mise en avant", () => {
-  const pre = L.funPicks(FOOT, L.parseEspn(footEvent({state: "pre", clock: "0'"}), "foot"));
-  assert.ok(pre.length >= 2 && pre.every(x => x.p >= 0.35 && x.p <= 0.66), JSON.stringify(pre));
+test("paris fun : cote juste d'au moins ~2,4 (18 à 42 %), combinés et écarts, supériorité numérique en avant", () => {
+  const PRE = L.parseEspn(footEvent({state: "pre", clock: "0'"}), "foot");
+  const pre = L.funPicks(FOOT, PRE, {fun: true, anchors: ["1N", "1"]});
+  assert.ok(pre.length >= 2 && pre.every(x => x.p >= 0.18 && x.p <= 0.42 && 1 / x.p >= 2.38), JSON.stringify(pre));
   assert.equal(new Set(pre.map(x => x.fam)).size, pre.length);
+  assert.ok(pre.every(x => !["res", "dc", "under", "cs"].includes(x.fam)), JSON.stringify(pre));   // pas de pari simple
+  assert.ok(pre.every(x => !/Chelsea gagne|Nul ou Chelsea/.test(x.label)), JSON.stringify(pre));   // dans le sens de l'analyse
+  assert.ok(pre.some(x => /^Arsenal gagne/.test(x.label)), JSON.stringify(pre));
   // Chelsea réduit à 10 à la 30e, 0-0 : un pari côté Arsenal passe en tête, avec la mention
-  const red10 = L.funPicks(FOOT, L.parseEspn(footEvent({clock: "30'", details: [red("363", "29'")]}), "foot"));
+  const red10 = L.funPicks(FOOT, L.parseEspn(footEvent({clock: "30'", details: [red("363", "29'")]}), "foot"), {fun: true});
   assert.equal(red10[0].why, "🟥 Supériorité numérique");
-  assert.ok(red10.filter(x => x.why).every(x => /Arsenal|Chelsea ne marque plus/.test(x.label)), JSON.stringify(red10));
-  assert.equal(L.funPicks(FOOT, L.parseEspn(footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT"}), "foot")).length, 0);
+  assert.equal(L.funPicks(FOOT, L.parseEspn(footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT"}), "foot"), {fun: true}).length, 0);
   assert.equal(L.fair(0.5), "2,00");
-  // NHL : les paris restent dans la fourchette
-  const nhl = L.funPicks(NHL, {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []});
-  assert.ok(nhl.length >= 1 && nhl.every(x => x.p >= 0.35 && x.p <= 0.66), JSON.stringify(nhl));
+  // NHL : puck line, victoire + buts, dans la fourchette
+  const nhl = L.funPicks(NHL, {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []}, {fun: true, anchors: ["win_h"]});
+  assert.ok(nhl.length >= 1 && nhl.every(x => x.p >= 0.18 && x.p <= 0.42 && /Boston/.test(x.label)), JSON.stringify(nhl));
+  // vérification en fin de match des nouveaux marchés (Arsenal 2-1 Chelsea, Saka 2 buts dont un avant la pause)
+  const end = L.parseEspn(footEvent({state: "post", name: "STATUS_FULL_TIME", clock: "FT", period: 2, sh: 2, sa: 1,
+    details: [goal("359", "Bukayo Saka", "30'"), goal("363", "Cole Palmer", "55'"), goal("359", "Bukayo Saka", "88'")]}), "foot");
+  const ok = (market, extra = {}) => L.settle({market, ...extra}, FOOT, end);
+  assert.deepEqual([ok("wh_btts"), ok("wh_o25"), ok("wh_nil"), ok("wh_by1"), ok("wa_btts"), ok("btts_o25"), ok("h3"), ok("htft_h")],
+                   [true, true, false, true, false, true, false, true]);
+  assert.equal(ok("sc2", {player: "Bukayo Saka"}), true);
+  assert.equal(ok("scw", {player: "Bukayo Saka", side: "h"}), true);
+  assert.equal(ok("scw", {player: "Cole Palmer", side: "a"}), false);
 });
 
 test("chacun ne reçoit que SES matchs ; résumé du matin seulement si activé", () => {

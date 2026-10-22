@@ -59,7 +59,7 @@ function finalBody(m, s){
     .filter(Boolean).join("\n");
 }
 
-// Pronostics du moment (mêmes calculs que le site) : un « safe » (75 à 90 %) et un « fun » (35 à 66 %),
+// Pronostics du moment (mêmes calculs que le site) : un « safe » (75 à 90 %) et un « fun » (cote juste ≥ ~2,4),
 // d'après le score, la minute, les cartons et (foot) les tirs ; le Fun ne contredit ni le Safe ni l'équipe favorite.
 export function momentIdeas(m, s){
   const {safe, fun} = L.momentPicks(m, s);

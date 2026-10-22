@@ -407,10 +407,25 @@ class AppTest(unittest.TestCase):
         self.assertRegex(m["score"]["value"], r"^\d+-\d+$")
         fun = m.get("fun")
         self.assertIsNotNone(fun)
-        self.assertTrue(0.35 <= fun["p"] <= 0.66)
+        # vrai pari fun : cote juste d'au moins ~2,4 (cote réelle ≥ 2 malgré la marge du bookmaker)
+        for f in [fun] + m.get("fun_alt", []):
+            self.assertTrue(app.FUN_LO <= f["p"] <= app.FUN_HI and f["fair"] >= 2.38, f)
+            self.assertNotIn(f["market"], ("1", "2", "1N", "N2", "u25", "btts_y", "cs_h", "cs_a"))
         self.assertNotIn(fun["label"], (m["main"]["label"], m["winner"]["label"]))
         g = app.nhl_picks("A", "B", 0.55, 3.2, 2.9, {}, q=0.5)
-        self.assertTrue(0.35 <= g["fun"]["p"] <= 0.66)
+        self.assertTrue(app.FUN_LO <= g["fun"]["p"] <= app.FUN_HI)
+        # gros favori : il reste des paris fun (3 buts d'écart, victoire + plus de 6,5 buts)
+        p_h, p_d, p_a, lh, la = app.nhl_split(0.68, 6.5)
+        big = app.nhl_picks("Colorado", "Philadelphia", 0.68, lh, la, {}, q=0.6)
+        self.assertTrue(big.get("fun") and all("Colorado" in f["label"] for f in [big["fun"]] + big.get("fun_alt", [])), big.get("fun"))
+        # foot : buteur + victoire de son équipe, mi-temps/fin de match calculés
+        lh, la = app.foot_lambdas(0.77, 0.09)
+        funs = app.fun_picks("foot", "Real Madrid", "Sevilla", lh, la, 0.5, anchors=("1N", "1"),
+                             scorer=dict(name="Kylian Mbappé", team="Real Madrid", side="h", p=0.6))
+        self.assertTrue(1 <= len(funs) <= 3 and len({f["market"] for f in funs}) == len(funs))
+        self.assertTrue(all("Sevilla gagne" not in f["label"] for f in funs))
+        allc = app.fun_picks("foot", "Lyon", "Nice", *app.foot_lambdas(0.52, 0.24), 0.5, anchors=("1N", "1"))
+        self.assertTrue(any(f["market"] in ("htft_h", "wh_o25", "wh_btts", "wh_nil", "o35") for f in allc), allc)
         store = app.load_json(app.PICKS_FILE, {})
         groups = {v["market"]: app.pick_group(v) for v in store.values() if v["match"] == "foot-401"}
         self.assertEqual(groups["exact"], "fun")
@@ -546,6 +561,22 @@ class AppTest(unittest.TestCase):
             self.assertIsNone(app.decisive_result(dict(dec, date=dt.date.today().isoformat()), dict(scorers=[])))
         finally:
             app.get_json = old
+
+    def test_resolve_fun_markets_v2(self):
+        # Lyon 2-1 Nice, mi-temps 1-0, Lacazette 2 buts : vérification des nouveaux paris fun
+        hist = {"foot-9": dict(sport="foot", score="2-1", result=0, scorers=["A. Lacazette", "T. Moffi", "A. Lacazette"], ht=[1, 0]),
+                "nhl-9": dict(sport="nhl", score="5-2", result=0)}
+        mk = lambda market, sport="foot", **kw: dict(match=f"{sport}-9", sport=sport, market=market, result=None, date="2026-10-20", **kw)
+        store = {k: mk(k) for k in ("wh_btts", "wh_o25", "wh_nil", "wh_by1", "wa_btts", "btts_o25", "h3", "htft_h", "htft_a")}
+        store["scw"] = mk("scw", player="A. Lacazette", side="h")
+        store["sc2"] = mk("sc2", player="A. Lacazette")
+        for k in ("h2", "h3", "wh_o55", "wh_o65", "a2"):
+            store["nhl_" + k] = mk(k, "nhl")
+        app.resolve_picks(store, hist)
+        got = {k: v["result"] for k, v in store.items()}
+        self.assertEqual(got, dict(wh_btts=True, wh_o25=True, wh_nil=False, wh_by1=True, wa_btts=False, btts_o25=True, h3=False,
+                                   htft_h=True, htft_a=False, scw=True, sc2=True, nhl_h2=True, nhl_h3=True, nhl_wh_o55=True,
+                                   nhl_wh_o65=True, nhl_a2=False))
 
     def test_official_lineup(self):
         # Lyon–Nice : Nuamah remplaçant, Openda absent → le pronostic buteur va à un titulaire

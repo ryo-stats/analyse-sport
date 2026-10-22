@@ -653,6 +653,13 @@ def resolve_foot(e, history):
         if goals:                  # qui a ouvert le score : pour « Premier but : X »
             tid = str((goals[0].get("team") or {}).get("id", ""))
             history[key]["first"] = "h" if tid == str(h["team"]["id"]) else "a" if tid == str(a["team"]["id"]) else None
+        ht = [0, 0]
+        for d in goals:
+            m = re.match(r"(\d+)", ((d.get("clock") or {}).get("displayValue") or ""))
+            if m and int(m.group(1)) <= 45:          # « 45'+2' » compte encore pour la première période
+                tid = str((d.get("team") or {}).get("id", ""))
+                ht[0 if tid == str(h["team"]["id"]) else 1] += 1
+        history[key]["ht"] = ht
         history[key]["scorers"] = [((d.get("athletesInvolved") or [{}])[0] or {}).get("displayName", "")
                                    for d in comp.get("details") or []
                                    if d.get("scoringPlay") and not d.get("ownGoal")]
@@ -972,7 +979,15 @@ def make_pick(market, label, p, **extra):
                 stars=1 + sum(int(p >= s) for s in STAR_STEPS), **extra)
 
 
-FUN_LO, FUN_HI = 0.35, 0.66          # pari « fun » : plus risqué que le plus sûr, mais plausible
+# Paris « fun » : les vrais paris à cote, ceux que les bookmakers mettent en avant (mi-temps/fin de match,
+# résultat + buts, buteur + victoire, écart de buts, puck line NHL…). Sur ces marchés, la marge du bookmaker
+# est forte (15 à 20 % en mi-temps/fin de match, contre 6 à 8 % sur le résultat simple) : pour une cote réelle
+# d'au moins 2, la cote juste doit dépasser ~2,4, soit une probabilité de 42 % au plus. En dessous de 18 %
+# (cote juste > 5,5), le pari n'est plus « plausible ».
+FUN_LO, FUN_HI = 0.18, 0.42
+FUN_MAX = 3            # paris fun proposés par match (familles différentes)
+HALF1 = 0.45           # part des buts marqués en première période (football)
+ENG_SHIFT = 0.25       # NHL : part des victoires d'un but qui deviennent +2 grâce au but dans la cage vide
 
 
 def market_fn(sport, market, q=0.5):
@@ -984,14 +999,36 @@ def market_fn(sport, market, q=0.5):
     if line:
         k = int(line.group(2))
         return (lambda h, a: h + a + ot * (h == a) > k) if line.group(1) == "o" else (lambda h, a: h + a + ot * (h == a) <= k)
+    combo = re.fullmatch(r"w([ha])_(btts|nil|by1|o(\d)5)", market or "")
+    if combo:                                   # victoire + autre condition (paris fun)
+        side, cond, k = combo.group(1), combo.group(2), combo.group(3)
+
+        def f(h, a):
+            mine, other = (h, a) if side == "h" else (a, h)
+            win = 1 if mine > other else (q if side == "h" else 1 - q) if (sport == "nhl" and h == a) else 0
+            if cond == "btts":
+                return win * (other > 0)
+            if cond == "nil":
+                return win * (other == 0)
+            if cond == "by1":                   # NHL : une prolongation se gagne toujours d'un but
+                return float(mine - other == 1) + (win if sport == "nhl" and h == a else 0)
+            return win * (h + a + ot * (h == a) > int(k))
+        return f
+    if market in ("htft_h", "htft_a"):          # implique la victoire de cette équipe (sert à la cohérence)
+        return (lambda h, a: h > a) if market == "htft_h" else (lambda h, a: a > h)
+    if market == "btts_o25":
+        return lambda h, a: h > 0 and a > 0 and h + a > 2
     if sport == "nhl":
         return {"win_h": lambda h, a: 1 if h > a else (q if h == a else 0),
                 "win_a": lambda h, a: 1 if a > h else (1 - q if h == a else 0),
+                "h2": lambda h, a: h - a >= 2, "a2": lambda h, a: a - h >= 2,
+                "h3": lambda h, a: h - a >= 3, "a3": lambda h, a: a - h >= 3,
                 "reg_h": lambda h, a: h > a, "reg_a": lambda h, a: a > h, "ot": lambda h, a: h == a}.get(market)
     return {"1": lambda h, a: h > a, "2": lambda h, a: a > h, "X": lambda h, a: h == a,
             "1N": lambda h, a: h >= a, "N2": lambda h, a: a >= h, "12": lambda h, a: h != a,
             "btts_y": lambda h, a: h > 0 and a > 0, "btts_n": lambda h, a: h == 0 or a == 0,
             "h2": lambda h, a: h - a >= 2, "a2": lambda h, a: a - h >= 2,
+            "h3": lambda h, a: h - a >= 3, "a3": lambda h, a: a - h >= 3,
             "cs_h": lambda h, a: a == 0, "cs_a": lambda h, a: h == 0,
             # premier but : avec deux lois de Poisson, chaque but est de l'équipe à domicile avec la probabilité h / (h + a)
             "fg_h": lambda h, a: h / (h + a) if h + a else 0, "fg_a": lambda h, a: a / (h + a) if h + a else 0}.get(market)
@@ -1004,10 +1041,11 @@ def coherent(P, anchors, f):
     return all(P(lambda h, a, g=g: g(h, a) * f(h, a)) >= P(g) * pf - 1e-9 for g in anchors)
 
 
-def fun_pick(sport, home, away, lh, la, q, exclude=(), anchors=()):
-    """Pari « fun » d'avant-match : un pari entre 35 et 66 %, le plus probable de ceux qui vont dans le sens
-    de l'analyse (cohérent avec le Safe et le Vainqueur : anchors = leurs marchés), jamais le même pari
-    qu'eux. Même logique que funPicks dans docs/live.js."""
+def fun_picks(sport, home, away, lh, la, q, exclude=(), anchors=(), scorer=None):
+    """Paris « fun » d'avant-match : cote juste d'au moins ~2,4 (probabilité 18 à 42 %), une famille de pari
+    chacun, les plus probables d'abord, tous dans le sens de l'analyse (cohérents avec le Safe et le Vainqueur :
+    anchors = leurs marchés), jamais le même pari qu'eux. scorer = buteur proposé {name, team, side, p}.
+    Même logique que funPicks dans docs/live.js (qui recalcule pendant le match)."""
     n = 11
     ph = [poisson.pmf(i, lh) for i in range(n)]
     pa = [poisson.pmf(j, la) for j in range(n)]
@@ -1015,35 +1053,73 @@ def fun_pick(sport, home, away, lh, la, q, exclude=(), anchors=()):
 
     def P(f):
         return sum(ph[i] * pa[j] * f(i, j) for i in range(n) for j in range(n)) / z
-    c = []
+    names = {"h": home, "a": away}
+    c = []                                  # (famille, marché, libellé, probabilité ou None = calcul sur la grille, f, extra)
     if sport == "foot":
-        c += [("res", "1", f"Victoire {home}"), ("res", "2", f"Victoire {away}"), ("res", "X", "Match nul"),
-              ("dc", "1N", f"{home} ou nul"), ("dc", "N2", f"Nul ou {away}")]
-        c += [("ou", f"o{k}5", f"Plus de {k},5 buts") for k in (0, 1, 2)]
-        c += [("under", f"u{k}5", f"Moins de {k},5 buts") for k in (1, 2, 3)]
-        c += [("btts", "btts_y", "Les deux équipes marquent"),
-              ("margin", "h2", f"{home} gagne avec 2 buts d'écart ou plus"),
-              ("margin", "a2", f"{away} gagne avec 2 buts d'écart ou plus"),
-              ("cs", "cs_h", f"{away} ne marque pas"), ("cs", "cs_a", f"{home} ne marque pas"),
-              ("next", "fg_h", f"Premier but : {home}"), ("next", "fg_a", f"Premier but : {away}")]
+        for s in ("h", "a"):
+            N = names[s]
+            c += [("win_btts", f"w{s}_btts", f"{N} gagne et les deux équipes marquent", None),
+                  ("win_o25", f"w{s}_o25", f"{N} gagne et plus de 2,5 buts", None),
+                  ("win_nil", f"w{s}_nil", f"{N} gagne sans encaisser de but", None),
+                  ("by1", f"w{s}_by1", f"{N} gagne d'un seul but", None),
+                  ("margin", f"{s}2", f"{N} gagne avec 2 buts d'écart ou plus", None),
+                  ("margin3", f"{s}3", f"{N} gagne avec 3 buts d'écart ou plus", None)]
+            # mi-temps / fin de match : deux mi-temps indépendantes (45 % des buts avant la pause)
+            h1 = [poisson.pmf(i, lh * HALF1) for i in range(8)]
+            a1 = [poisson.pmf(j, la * HALF1) for j in range(8)]
+            h2 = [poisson.pmf(i, lh * (1 - HALF1)) for i in range(8)]
+            a2 = [poisson.pmf(j, la * (1 - HALF1)) for j in range(8)]
+            lead = (lambda i, j: i > j) if s == "h" else (lambda i, j: j > i)
+            p_htft = sum(h1[i] * a1[j] * h2[k] * a2[l] for i in range(8) for j in range(8) if lead(i, j)
+                         for k in range(8) for l in range(8) if lead(i + k, j + l))
+            c.append(("htft", f"htft_{s}", f"{N} mène à la mi-temps et gagne le match", p_htft))
+        c += [("btts_o25", "btts_o25", "Les deux équipes marquent et plus de 2,5 buts", None),
+              ("ou", "o35", "Plus de 3,5 buts", None), ("draw", "X", "Match nul", None)]
+        if scorer and scorer.get("p"):
+            s, lam = scorer["side"], (lh if scorer["side"] == "h" else la)
+            lp = -math.log(max(1e-9, 1 - scorer["p"]))           # buts attendus du joueur
+            share = min(0.95, lp / lam) if lam else 0
+            mine = (lambda i, j: i) if s == "h" else (lambda i, j: j)
+            win = (lambda i, j: i > j) if s == "h" else (lambda i, j: j > i)
+            p_sw = P(lambda i, j: win(i, j) * (1 - (1 - share) ** mine(i, j)))
+            extra = dict(player=scorer["name"], team=scorer.get("team"), side=s)
+            c.append(("player_win", "scw", f"{scorer['name']} marque et {scorer.get('team') or names[s]} gagne", p_sw, extra))
+            c.append(("player2", "sc2", f"{scorer['name']} marque au moins 2 buts", 1 - math.exp(-lp) * (1 + lp), extra))
     else:
-        c += [("res", "win_h", f"Victoire {home}"), ("res", "win_a", f"Victoire {away}"),
-              ("reg", "reg_h", f"{home} gagne dans le temps réglementaire"),
-              ("reg", "reg_a", f"{away} gagne dans le temps réglementaire"),
-              ("ot", "ot", "Il y aura prolongation")]
-        c += [("ou", f"o{k}5", f"Plus de {k},5 buts") for k in (4, 5, 6)]
-        c += [("under", f"u{k}5", f"Moins de {k},5 buts") for k in (5, 6, 7)]
+        for s in ("h", "a"):
+            N = names[s]
+            diff = (lambda i, j: i - j) if s == "h" else (lambda i, j: j - i)
+            p_pl = P(lambda i, j: diff(i, j) >= 2) + ENG_SHIFT * P(lambda i, j: diff(i, j) == 1)
+            p_pl3 = P(lambda i, j: diff(i, j) >= 3) + 0.4 * ENG_SHIFT * P(lambda i, j: diff(i, j) == 2)
+            c += [("win_o55", f"w{s}_o55", f"{N} gagne et plus de 5,5 buts", None),
+                  ("win_o65", f"w{s}_o65", f"{N} gagne et plus de 6,5 buts", None),
+                  ("puckline", f"{s}2", f"{N} gagne par 2 buts d'écart ou plus", p_pl),
+                  ("puckline3", f"{s}3", f"{N} gagne par 3 buts d'écart ou plus", p_pl3),
+                  ("by1", f"w{s}_by1", f"{N} gagne d'un seul but (prolongation comprise)",
+                   (1 - ENG_SHIFT) * P(lambda i, j: diff(i, j) == 1) + P(lambda i, j: (i == j) * (q if s == "h" else 1 - q))),
+                  ("reg", f"reg_{s}", f"{N} gagne dans le temps réglementaire", None)]
+        c += [("ot", "ot", "Il y aura prolongation", None), ("ou", "o65", "Plus de 6,5 buts", None)]
     anchor_fns = [g for g in (market_fn(sport, mk, q) for mk in anchors) if g]
-    scored = []
-    for fam, market, label in c:
+    out = []
+    for fam, market, label, prob, *rest in c:
         f = market_fn(sport, market, q)
-        prob = P(f)
+        if market == "sc2":                          # 2 buts du joueur : il faut que son équipe en marque 2
+            f = (lambda h, a: h >= 2) if rest[0]["side"] == "h" else (lambda h, a: a >= 2)
+        elif market == "scw":
+            f = market_fn(sport, "1" if rest[0]["side"] == "h" else "2", q)
+        prob = P(f) if prob is None else prob
         if FUN_LO <= prob <= FUN_HI and label not in exclude and market not in anchors and coherent(P, anchor_fns, f):
-            scored.append((prob, market, label))
-    if not scored:
-        return None
-    prob, market, label = max(scored)
-    return make_pick(market, label, prob)
+            out.append((prob, fam, market, label, rest[0] if rest else {}))
+    best = {}
+    for prob, fam, market, label, extra in sorted(out, key=lambda x: -x[0]):
+        best.setdefault(fam, make_pick(market, label, prob, **extra))
+    return sorted(best.values(), key=lambda x: -x["p"])[:FUN_MAX]
+
+
+def fun_pick(sport, home, away, lh, la, q, exclude=(), anchors=(), scorer=None):
+    """Le pari fun principal (le plus probable des paris fun cohérents), ou None."""
+    got = fun_picks(sport, home, away, lh, la, q, exclude, anchors, scorer)
+    return got[0] if got else None
 
 
 def side_rows(team_rows, side, keys):
@@ -1075,15 +1151,17 @@ def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, score
                  winner=team[0] if p_h >= p_a else team[1],
                  score=make_pick("exact", f"Score exact {scores[0]}", scorep[0] / 100, value=scores[0]))
     anchors = (picks["main"]["market"], picks["winner"]["market"])
+    fav_h = p_h >= p_a
+    best = pick_scorer(side_rows(team_rows, "h" if fav_h else "a", ("h", "a")))
     if lh is not None:
-        fun = fun_pick("foot", home, away, lh, la, 0.5, {picks["main"]["label"], picks["winner"]["label"]}, anchors)
-        if fun:
-            picks["fun"] = fun
+        sc = dict(name=best["name"], team=best.get("team"), side=best.get("side", "h" if fav_h else "a"),
+                  p=best["p_goal"] / 100) if best and best.get("p_goal") else None
+        funs = fun_picks("foot", home, away, lh, la, 0.5, {picks["main"]["label"], picks["winner"]["label"]}, anchors, sc)
+        if funs:
+            picks["fun"], picks["fun_alt"] = funs[0], funs[1:]
         best_score = coherent_score(lh, la, [market_fn("foot", mk) for mk in anchors])
         if best_score:
             picks["score"] = make_pick("exact", f"Score exact {best_score[0]}", best_score[1], value=best_score[0])
-    fav_h = p_h >= p_a
-    best = pick_scorer(side_rows(team_rows, "h" if fav_h else "a", ("h", "a")))
     if best:
         extra = {k: best[k] for k in ("lineup", "pid", "stats_league", "season") if best.get(k)}
         extra["why"] = scorer_why(best, (home, p_h, lh) if best.get("side", "h" if fav_h else "a") == "h" else (away, p_a, la))
@@ -1132,10 +1210,10 @@ def nhl_picks(hname, aname, win_h, lh, la, team_rows, q=0.5):
     team = [make_pick("win_h", f"Victoire {hname}", win_h), make_pick("win_a", f"Victoire {aname}", 1 - win_h),
             make_pick("o55", "Plus de 5,5 buts", over55), make_pick("u55", "Moins de 5,5 buts", 1 - over55)]
     picks = dict(main=max(team, key=lambda c: c["p"]), winner=team[0] if win_h >= 0.5 else team[1])
-    fun = fun_pick("nhl", hname, aname, lh, la, q, {picks["main"]["label"], picks["winner"]["label"]},
-                   (picks["main"]["market"], picks["winner"]["market"]))
-    if fun:
-        picks["fun"] = fun
+    funs = fun_picks("nhl", hname, aname, lh, la, q, {picks["main"]["label"], picks["winner"]["label"]},
+                     (picks["main"]["market"], picks["winner"]["market"]))
+    if funs:
+        picks["fun"], picks["fun_alt"] = funs[0], funs[1:]
     players = side_rows(team_rows, "h" if win_h >= 0.5 else "a", ("best_h", "best_a"))
     if players:
         best = max(players, key=lambda r: r["p_point"])
@@ -1171,6 +1249,7 @@ def record_picks(rows, store):
                               home=m["home"], away=m["away"], market=pk["market"], label=pk["label"], p=pk["p"],
                               stars=pk["stars"], player=pk.get("player"), pid_player=pk.get("pid"), value=pk.get("value"),
                               stats_league=pk.get("stats_league"), season=pk.get("season"), base=pk.get("base"),
+                              side=pk.get("side"),
                               group="fun" if set(kinds) <= FUN_KINDS else "safe", kinds=kinds, result=old.get("result"))
         # un ancien pronostic que les nouvelles cotes ont remplacé n'est plus « affiché » : on le retire
         shown = {f"{m['id']}|{pk['market']}|{pk.get('player', '')}" for pk in (m.get("picks") or {}).values()
@@ -1205,17 +1284,38 @@ def resolve_picks(store, history):
         elif pk["sport"] == "foot":
             ok = {"1": gh > ga, "2": ga > gh, "X": gh == ga, "1N": gh >= ga, "N2": ga >= gh, "12": gh != ga,
                   "btts_y": gh > 0 and ga > 0, "btts_n": gh == 0 or ga == 0,
-                  "h2": gh - ga >= 2, "a2": ga - gh >= 2, "cs_h": ga == 0, "cs_a": gh == 0}.get(mk)
+                  "h2": gh - ga >= 2, "a2": ga - gh >= 2, "h3": gh - ga >= 3, "a3": ga - gh >= 3,
+                  "cs_h": ga == 0, "cs_a": gh == 0}.get(mk)
             if mk in ("fg_h", "fg_a"):                   # 0-0 : personne n'a marqué, pari perdu
                 ok = False if gh + ga == 0 else (h["first"] == mk[-1] if h.get("first") else None)
             if mk == "scorer" and h.get("scorers") is not None:
                 ok = norm(pk["player"]) in {norm(s) for s in h["scorers"]}
             if mk == "dec":
                 ok = decisive_result(pk, h)
+            combo = re.fullmatch(r"w([ha])_(btts|nil|by1|o(\d)5)", mk or "")
+            if combo:
+                mine, other = (gh, ga) if combo.group(1) == "h" else (ga, gh)
+                cond = combo.group(2)
+                ok = mine > other and (other > 0 if cond == "btts" else other == 0 if cond == "nil"
+                                       else mine - other == 1 if cond == "by1" else gh + ga > int(combo.group(3)))
+            if mk == "btts_o25":
+                ok = gh > 0 and ga > 0 and gh + ga > 2
+            if mk in ("htft_h", "htft_a") and h.get("ht"):
+                hh, ha = h["ht"]
+                ok = (hh > ha and gh > ga) if mk == "htft_h" else (ha > hh and ga > gh)
+            if mk in ("scw", "sc2") and h.get("scorers") is not None:
+                n_goals = sum(norm(s) == norm(pk["player"]) for s in h["scorers"])
+                won = (gh > ga) if pk.get("side") == "h" else (ga > gh) if pk.get("side") == "a" else None
+                ok = (n_goals >= 2) if mk == "sc2" else (None if won is None else n_goals >= 1 and won)
         else:
             ot = "prol" in h["score"] or "tirs" in h["score"]
             ok = {"win_h": h["result"] == 0, "win_a": h["result"] == 1, "ot": ot,
-                  "reg_h": h["result"] == 0 and not ot, "reg_a": h["result"] == 1 and not ot}.get(mk)
+                  "reg_h": h["result"] == 0 and not ot, "reg_a": h["result"] == 1 and not ot,
+                  "h2": gh - ga >= 2, "a2": ga - gh >= 2, "h3": gh - ga >= 3, "a3": ga - gh >= 3}.get(mk)
+            combo = re.fullmatch(r"w([ha])_(by1|o(\d)5)", mk or "")
+            if combo:
+                won = h["result"] == (0 if combo.group(1) == "h" else 1)
+                ok = won and (abs(gh - ga) == 1 if combo.group(2) == "by1" else gh + ga > int(combo.group(3)))
             if mk in ("point", "goal") and pk.get("pid_player"):
                 gid = pk["match"].split("-", 1)[1]
                 if gid not in boxes:

@@ -923,7 +923,7 @@ function liveCard(m){
 }
 // le premier pari qui n'est pas déjà le « plus sûr » d'avant-match (pour ne jamais proposer deux fois le même)
 const otherThan = (list, m) => list.find(x => x.label !== ((m.picks || {}).main || {}).label) || null;
-// pendant le match : le pari « safe » (75 à 90 %, pas encore acquis) et le pari « fun » (35 à 66 %) du moment,
+// pendant le match : le pari « safe » (75 à 90 %, pas encore acquis) et le pari « fun » (cote juste ≥ ~2,4) du moment,
 // qui va dans le même sens (docs/live.js, momentPicks)
 function liveIdeas(m, s){
   const {safe, fun} = LIVEM.momentPicks(m, s);
@@ -964,16 +964,16 @@ function funList(){
   const all = [...(DATA.foot || []), ...(DATA.nhl || [])];
   const red = s => s.red && s.red.h !== s.red.a ? 1 : 0;
   const live = all.map(m => { const L = LIVEDATA[m.id]; return L && L.ev && L.state === "in" ? {m, s: LIVEM.parseEspn(L.ev, m.sport)} : null; })
-                  .filter(Boolean).map(x => ({...x, picks: LIVEM.funPicks(x.m, x.s, {anchors: LIVEM.storyAnchors(x.m, x.s), dedupe: false})})).filter(x => x.picks.length)
+                  .filter(Boolean).map(x => ({...x, picks: LIVEM.funPicks(x.m, x.s, {fun: true, anchors: LIVEM.storyAnchors(x.m, x.s), dedupe: false})})).filter(x => x.picks.length)
                   .sort((a, b) => red(b.s) - red(a.s) || Date.parse(a.m.kickoff) - Date.parse(b.m.kickoff));   // cartons rouges d'abord
   const next = all.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); })
-                  .map(m => ({m, s: PRE_STATE, picks: [(m.picks || {}).fun || LIVEM.momentPicks(m, PRE_STATE).fun].filter(Boolean)})).filter(x => x.picks.length)
+                  .map(m => ({m, s: PRE_STATE, picks: [(m.picks || {}).fun || LIVEM.momentPicks(m, PRE_STATE).fun, ...((m.picks || {}).fun_alt || [])].filter(Boolean)})).filter(x => x.picks.length)
                   .sort((a, b) => b.picks[0].p - a.picks[0].p).slice(0, 12);
   const blk = (title, list) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(x => funCard(x.m, x.s, x.picks)).join("")}</section>` : "";
   return (live.length ? blk("En direct", live) : `<div class="empty">Aucun match en cours : les paris fun en direct apparaîtront au coup d'envoi.</div>`) + blk("Avant le match", next);
 }
 function funView(){
-  return `<p class="warnline">🎲 <b>Paris fun</b> : plus risqués (entre 35 et 66 %), donc mieux payés, mais <b>beaucoup vont perdre</b>, c'est normal. En direct, ils suivent le score, la minute et les cartons rouges (🟥 l'équipe à 11 contre 10 passe devant). « @ » = cote juste : si ton bookmaker propose plus, le pari est mathématiquement intéressant. Pour le plaisir, petites mises.</p><div id="funbox">${funList()}</div>`;
+  return `<p class="warnline">🎲 <b>Paris fun</b> : de vrais paris à cote, <b>cote juste d'au moins 2,4</b> (18 à 42 % de chances) : victoire + les deux équipes marquent, victoire sans encaisser, mi-temps/fin de match, buteur + victoire, écart de buts, puck line NHL… Ces marchés ont une forte marge chez les bookmakers (15 à 20 %) : avec une cote juste de 2,4 ou plus, ta cote réelle reste en général au-dessus de 2. Ils vont toujours dans le sens de l'analyse. <b>La plupart vont perdre</b>, c'est normal : petites mises. En direct, ils suivent le score, la minute, les tirs et les cartons. « @ » = cote juste : si ton bookmaker propose plus, le pari est mathématiquement intéressant.</p><div id="funbox">${funList()}</div>`;
 }
 function liveList(){
   if (!LIVEM) return `<div class="empty">Chargement…</div>`;
@@ -1512,7 +1512,7 @@ function openReset(){
 // ---- bouton « + » sur les pronostics du site
 const BETREF = {};
 const MK_BOOK = {"1": "h", "2": "a", win_h: "h", win_a: "a"};
-const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|h2|a2|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|dec|point|goal)$/;
+const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|btts_o25|[ha][23]|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|dec|scw|sc2|htft_[ha]|w[ha]_(btts|nil|by1|o\d5)|point|goal)$/;
 function addBtn(m, pk){
   if (!m || !pk || !pk.label || !pk.p) return "";
   // les cotes du bookmaker sont celles d'avant-match : pendant le match, seule la cote juste a un sens
