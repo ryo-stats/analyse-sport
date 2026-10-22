@@ -1334,7 +1334,7 @@ function homeView(){
   const nLive = all.filter(m => (LIVEDATA[m.id] || {}).state === "in").length;
   const sel = selectionOf(all, 3);
   const empty = !BK.moves.length && !BK.bets.length;
-  const start = empty ? `<section class="card2"><h2>Commence ta bankroll</h2><p class="src">1. Fais un <b>dépôt</b> : le montant que tu consacres aux paris. 2. Ajoute tes paris avec le bouton <b>+</b> à côté d'un pronostic, ou « Nouveau pari ». 3. Le site calcule ton bénéfice et ta courbe. Tout reste sur ce téléphone.</p></section>` : "";
+  const start = empty ? `<section class="card2"><h2>Commence ta bankroll</h2><p class="src">1. Fais un <b>dépôt</b> : le montant que tu consacres aux paris. 2. Ajoute tes paris avec le bouton <b>+</b> à côté d'un pronostic, ou « Nouveau pari ». 3. Le site calcule ton bénéfice et ta courbe.</p></section>` : "";
   const tile = (go, v, k, extra = "") => `<button type="button" class="tile tlink" data-go="${go}"${extra} style="text-align:left;font:inherit;color:inherit"><div class="v">${v}</div><div class="k">${k}</div></button>`;
   return `${bkHero()}${start}${empty ? "" : bkChartCard()}
     <div class="hgrid">
