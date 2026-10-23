@@ -309,6 +309,15 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .dlg .seg button{font:700 .95rem var(--body);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:11px;cursor:pointer}
 .dlg .seg button[aria-pressed="true"]{background:var(--home);color:var(--bg);border-color:var(--home)}
 .dlg .hint2{font-size:.82rem;color:var(--muted);margin:0}
+.dlg .hint2.adv{color:var(--ink);font-size:.9rem;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+.dlg .hint2.adv.bad{border-color:#d9822b}
+/* Paris conseillés (Bankroll) : montant à droite de chaque pronostic */
+.card2 .sel{grid-template-columns:26px minmax(0,1fr) auto auto}
+.card2 .sel .smatch span{white-space:normal}
+.stk{display:grid;justify-items:end;line-height:1.2}
+.stk b{font-size:1rem}
+.stk small{font-size:.72rem;color:var(--muted)}
+.cadv{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;margin-top:10px;padding:10px 12px;border:1px dashed var(--line);border-radius:12px;font-size:.88rem}
 .dlg p:empty{display:none}
 .dlg .acts{display:flex;gap:8px;justify-content:flex-end}
 .dlg .acts button{font:700 1rem var(--body);border-radius:12px;padding:12px 16px;cursor:pointer;border:1px solid var(--line);background:none;color:var(--ink)}
@@ -1464,6 +1473,70 @@ function myBets(){
     ${chips}${sum}${list.length ? body : empty}
     ${list.length > shown.length ? `<button type="button" class="sbtn alt more" data-bkmore="1">Voir ${Math.min(30, list.length - shown.length)} paris de plus</button>` : ""}</section>`;
 }
+// ---- mise conseillée : une part de la bankroll ACTUELLE (dépôts − retraits + gains − pertes) selon la probabilité
+// de l'analyse, pas selon la cote. Paliers alignés sur les étoiles du site, entre « prudent » (2 % max) et
+// « équilibré » (5 % max) ; au total, jamais plus de 10 % de la bankroll en jeu. La cote sert seulement de garde-fou :
+// en dessous de la cote juste (1 ÷ probabilité), le pari perd de l'argent sur la durée → 0.
+const STAKE_STEPS = [[0.80, 3], [0.70, 2], [0.60, 1.5], [0.55, 1]];     // [probabilité minimum, % de la bankroll]
+const DAY_CAP = 10;                                                       // % de la bankroll en jeu au plus
+const stakePct = p => (STAKE_STEPS.find(([min]) => p >= min) || [0, 0])[1];
+const roundStake = x => x >= 5 ? Math.floor(x * 2) / 2 : Math.floor(x * 10) / 10;   // 0,50 près (0,10 sous 5)
+const fairMin = p => Math.round(100 / Math.max(p, 0.01)) / 100;           // cote minimum à exiger
+const pctTxt = x => String(x).replace(".", ",");
+// preset : montant déjà calculé par la carte « Paris conseillés » (plafond réparti sur plusieurs paris)
+function stakeAdvice(p, odds, preset = null){
+  const s = bkStats(), bank = s.bank, pct = stakePct(p), min = fairMin(p);
+  if (!(bank > 0)) return {amt: 0, msg: "Fais un dépôt (onglet Bankroll) pour voir la mise conseillée."};
+  if (odds > 1 && odds < min - 0.001)
+    return {amt: 0, bad: true, msg: `⚠️ Cote trop basse : il faut au moins <b>@${odd(min)}</b> pour un pronostic à ${pctr(p)} %. Le site conseille de <b>ne pas jouer</b> (0 ${BK.currency}).`};
+  if (!pct) return {amt: 0, msg: `Pronostic à ${pctr(p)} % : trop risqué pour une mise conseillée. Si tu joues quand même, reste sous 0,5 % de ta bankroll (${money(roundStake(bank * 0.005))}).`};
+  const room = Math.max(0, bank * DAY_CAP / 100 - s.inPlay), full = roundStake(bank * pct / 100);
+  if (room < 0.1) return {amt: 0, msg: `Tu as déjà <b>${money(s.inPlay)}</b> en jeu (${DAY_CAP} % de ta bankroll ou plus) : le site conseille d'attendre les résultats.`};
+  const amt = preset != null ? preset : roundStake(Math.min(full, room));
+  return {amt, pct, msg: `Mise conseillée : <b>${money(amt)}</b>, soit ${pctTxt(Math.round(amt / bank * 1000) / 10)} % de ta bankroll (${money(bank)}) pour un pronostic à ${pctr(p)} %${amt < full - 0.001 ? `, réduite pour ne pas dépasser ${DAY_CAP} % en jeu au total` : ""}.`};
+}
+function adviceCard(){
+  if (!DATA) return "";
+  const s = bkStats(), head = `<h2>Paris conseillés</h2>`;
+  const rule = `<p class="src">Mise = part de ta bankroll actuelle selon la probabilité de l'analyse : <b>1 %</b> (55 à 60 %), <b>1,5 %</b> (60 à 70 %), <b>2 %</b> (70 à 80 %), <b>3 %</b> (80 % et plus). Au total, jamais plus de ${DAY_CAP} % en jeu. Joue seulement si ton bookmaker paie au moins la <b>cote minimum</b> : en dessous, le pari perd de l'argent sur la durée.</p>`;
+  if (!(s.bank > 0)) return `<section class="card2">${head}<p class="src">Fais un <b>dépôt</b> : le site te proposera ici les pronostics les plus sûrs du jour et combien miser sur chacun.</p></section>`;
+  const pre = m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); };
+  const played = new Set(BK.bets.filter(b => b.status === "open" && b.matchId).map(b => b.matchId));
+  // un pronostic par match (deux paris du même match ne sont pas indépendants), les plus sûrs d'abord
+  const cands = [...(DATA.foot || []), ...(DATA.nhl || [])].filter(m => pre(m) && !played.has(m.id)).map(m => {
+    const pk = ["main", "player"].map(k => (m.picks || {})[k]).filter(Boolean).sort((a, b) => b.p - a.p)[0];
+    return pk && stakePct(pk.p) ? {m, pk} : null;
+  }).filter(Boolean).sort((a, b) => b.pk.p - a.pk.p).slice(0, 5);
+  const room = Math.max(0, s.bank * DAY_CAP / 100 - s.inPlay);
+  if (!cands.length) return `<section class="card2">${head}<p class="src">Aucun pronostic à 55 % ou plus parmi les matchs pas encore commencés${played.size ? " (hors matchs déjà joués)" : ""}. Reviens avec les prochains matchs.</p>${rule}</section>`;
+  if (room < 0.1) return `<section class="card2">${head}<p class="src">Tu as déjà <b>${money(s.inPlay)}</b> en jeu, soit ${DAY_CAP} % ou plus de ta bankroll : attends les résultats avant de miser à nouveau.</p>${rule}</section>`;
+  const raw = cands.map(c => s.bank * stakePct(c.pk.p) / 100), total = raw.reduce((a, b) => a + b, 0);
+  const k = total > room ? room / total : 1;                                 // on réduit tout si on dépasse le plafond
+  const rows = cands.map((c, i) => {
+    const amt = roundStake(raw[i] * k), btn = addBtn(c.m, c.pk);
+    const ref = BETREF[`${c.m.id}|${c.pk.label}`]; if (ref) ref.stake = amt;
+    return `<li class="sel"><span class="rank num">${i + 1}</span>
+      <div class="sbody"><div class="spick">${esc(c.pk.label)}</div>
+        <div class="smatch">${logo(c.m.logo_h, c.m.logo_h_dark, "lg sm")}<span>${esc(c.m.home)} – ${esc(c.m.away)}</span>${logo(c.m.logo_a, c.m.logo_a_dark, "lg sm")}</div>
+        <div class="smeta">${esc(c.m.time)} · ${esc(c.m.sport === "nhl" ? "NHL" : c.m.league)} · ${pctr(c.pk.p)} % · cote minimum <b class="num">@${odd(fairMin(c.pk.p))}</b></div></div>
+      <div class="stk num"><b>${money(amt)}</b><small>${pctTxt(Math.round(amt / s.bank * 1000) / 10)} %</small></div>${btn}</li>`;
+  }).join("");
+  // combiné des deux plus sûrs : une autre façon de jouer les paris 1 et 2 (pas en plus)
+  let combo = "";
+  if (cands.length >= 2){
+    const legs = cands.slice(0, 2), p = legs[0].pk.p * legs[1].pk.p, pct = stakePct(p);
+    if (pct){
+      const amt = roundStake(Math.min(s.bank * pct / 100, room)), key = `combo|${legs.map(l => l.m.id).join("|")}`;
+      BETREF[key] = {label: `Combiné : ${legs.map(l => l.pk.label).join(" + ")}`, match: legs.map(l => `${l.m.home} – ${l.m.away}`).join(" / "),
+                     matchId: null, sport: null, market: null, player: null, value: null, p, odds: 1 / p, stake: amt, auto: false,
+                     oddsSrc: "juste du combiné (1 ÷ probabilité) : les bookmakers paient souvent un peu moins"};
+      combo = `<div class="cadv"><div><b>Ou en combiné</b> (à la place des paris 1 et 2) : ${pctr(p)} % de réussite, cote minimum <b class="num">@${odd(fairMin(p))}</b></div>
+        <div class="stk num"><b>${money(amt)}</b><small>${pctTxt(pct)} %</small></div><button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter le combiné à ma bankroll">+</button></div>`;
+    }
+  }
+  return `<section class="card2">${head}<p class="src">Les pronostics les plus sûrs des matchs pas encore commencés, avec la mise conseillée pour ta bankroll de <b>${money(s.bank)}</b>${s.inPlay ? ` (${money(s.inPlay)} déjà en jeu)` : ""}. Touche <b>+</b> pour l'ajouter à tes paris.</p>
+    <ol class="sellist">${rows}</ol>${combo}${rule}</section>`;
+}
 function bankrollView(){
   const s = bkStats();
   const moves = [...BK.moves].sort((a, b) => b.t - a.t);
@@ -1472,6 +1545,7 @@ function bankrollView(){
       <div class="tile"><div class="v">${s.roi >= 0 ? "+" : ""}${s.roi.toFixed(1).replace(".", ",")} %</div><div class="k">rendement (ROI) : bénéfice ÷ total misé</div></div>
       <div class="tile"><div class="v">${s.won}/${s.won + s.lost}</div><div class="k">paris gagnés (${Math.round(s.hit)} %)</div></div>
     </div>
+    ${adviceCard()}
     ${myBets()}
     ${BK.moves.length || BK.bets.length ? bkChartCard() : ""}
     <section class="card2"><h2>Dépôts et retraits</h2>
@@ -1525,11 +1599,15 @@ function openMoveForm(){
 // pari prérempli depuis un pronostic du site (ref) ou pari libre (sans ref)
 function openBetForm(ref = null){
   const o = ref ? Number(ref.odds).toFixed(2).replace(".", ",") : "";
+  // mise conseillée préremplie (pronostic du site) : celle de la carte « Paris conseillés », sinon le palier de l'analyse
+  const adv0 = ref && ref.p ? stakeAdvice(ref.p, Math.round(ref.odds * 100) / 100, ref.stake) : null;
+  const st0 = adv0 && !adv0.bad ? adv0.amt : 0;     // cote trop basse : pas de mise préremplie
   openDlg(`<h2 id="dlgtitle">${ref ? "Ajouter à ma bankroll" : "Nouveau pari"}</h2>
     <label>Pari<input name="label" maxlength="90" value="${esc(ref ? ref.label : "")}" placeholder="ex. Victoire PSG"></label>
     <label>Match (facultatif)<input name="match" maxlength="90" value="${esc(ref ? ref.match : "")}" placeholder="ex. PSG – Lens"></label>
     <div class="two"><label>Cote<input name="odds" inputmode="decimal" autocomplete="off" value="${esc(o)}" placeholder="ex. 1,85"></label>
-      <label>Mise (${BK.currency})<input name="stake" inputmode="decimal" autocomplete="off" placeholder="ex. 10"></label></div>
+      <label>Mise (${BK.currency})<input name="stake" inputmode="decimal" autocomplete="off" placeholder="ex. 10" value="${st0 > 0 ? String(st0).replace(".", ",") : ""}"></label></div>
+    ${ref && ref.p ? `<p class="hint2 adv" aria-live="polite"></p>` : ""}
     ${ref ? `<p class="hint2">Cote ${ref.oddsSrc}. Mets celle de ton bookmaker si elle est différente. Le résultat sera ${ref.auto ? "mis à jour tout seul après le match" : "à valider toi-même (✓ Gagné / ✗ Perdu)"}.</p>` : `<label>Date<input name="day" type="date" value="${today()}"></label><p class="hint2">Tu valideras le résultat toi-même (✓ Gagné / ✗ Perdu) dans l'onglet Bankroll.</p>`}
     <p class="gain"></p>`, fd => {
     const label = String(fd.get("label") || "").trim(), odds = numIn(fd.get("odds")), stake = numIn(fd.get("stake"));
@@ -1544,6 +1622,13 @@ function openBetForm(ref = null){
                   ...(ref ? {src: "site", matchId: ref.matchId, sport: ref.sport, market: ref.market, player: ref.player || null, value: ref.value || null, p: ref.p, auto: !!(ref.auto && same)} : {src: "manuel"})});
     toast(stake > s.bank && s.dep > 0 ? "Pari ajouté. Attention : la mise dépasse ta bankroll." : "Pari ajouté à ta bankroll.");
   });
+  // conseil recalculé quand on change la cote (ex. celle de son bookmaker)
+  const box = DLG().querySelector(".adv");
+  if (box){
+    const f = DLG().querySelector("form");
+    const upd = () => { const a = stakeAdvice(ref.p, numIn(f.elements.odds.value), ref.stake); box.innerHTML = a.msg; box.classList.toggle("bad", !!a.bad); };
+    f.elements.odds.addEventListener("input", upd); upd();
+  }
 }
 function openReset(){
   openDlg(`<h2 id="dlgtitle">Tout effacer ?</h2><p class="src">Tous tes paris, dépôts et retraits seront supprimés de ce téléphone. Impossible de revenir en arrière.</p>
