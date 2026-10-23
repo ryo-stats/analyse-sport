@@ -80,7 +80,12 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 
 ## Présentation et bankroll
 
-- **Menu** : sur la gauche sur ordinateur, barre en bas sur téléphone. Il donne accès à Accueil, Matchs (Foot / NHL), Pronostics, Favoris, Bankroll et Bilan.
+- **Menu** (version épurée, 4 onglets) : sur la gauche sur ordinateur, barre en bas sur téléphone.
+  - **Aujourd'hui** : le pari du jour (réussite, cote minimum, mise conseillée, bouton « Ajouter »), les 4 plus sûrs suivants (un clic ouvre la fiche du match), le direct et le nombre de matchs analysés. « Tout voir » ouvre tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun).
+  - **Matchs** : Foot / NHL, filtre Tous / ★ Suivis ; chaque ligne montre la barre des chances et le pronostic sûr. La fiche dépliée a trois onglets : Pronos, Analyse, Joueurs.
+  - **Mes paris** : bankroll, « Que jouer aujourd'hui ? » (pari simple, plusieurs, combiné), mes paris, courbe, dépôts, réglages.
+  - **Bilan** : inchangé.
+  - En haut : bouton lune / soleil (mode nuit / jour) et cloche 🔔 (notifications et matchs suivis). Réglage Apparence Auto / Jour / Nuit dans Mes paris (Auto suit le téléphone), gardé sur le téléphone.
 - **Accueil** : bénéfice net total, bankroll actuelle, dépôts, retraits, courbe d'évolution (Auj. / 7j / 30j / 90j / 1a / Tout), puis les pronostics les plus sûrs du jour.
 - **Bankroll**, gardée uniquement sur le téléphone (localStorage, sans sauvegarde) :
   - dépôts et retraits ;

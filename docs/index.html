@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Analyse du jour</title>
 <meta name="theme-color" content="#0d6b4d">
+<script>/* thème choisi (Auto / Jour / Nuit), appliqué avant l'affichage pour éviter un flash de couleurs */
+try { const t = localStorage.getItem("theme"); if (t === "jour") document.documentElement.dataset.theme = "light"; else if (t === "nuit") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -15,16 +17,19 @@
 <style>
 /* Feuille de match : en-tête, onglets Foot / NHL / Bilan, puis une fiche par match. */
 :root{
-  --bg:#f2f5f3; --surface:#fff; --ink:#15211c; --muted:#5b6a63; --line:#d8e0db; --soft:#e7eee9;
+  --bg:#f3f5f4; --surface:#fff; --ink:#15211c; --muted:#5b6a63; --line:#dde4e0; --soft:#e3eae6;
   --home:#0d6b4d; --away:#b8461a; --draw:#aab4af; --warn:#9a6a00; --ok:#0d6b4d; --ko:#b8461a;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --hero:#0d6b4d; --hero-sub:#e3f0e9; --hero-kick:#d3e8dd; --hero-btn:#fff; --hero-btn-ink:#0d6b4d;
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --hero:#1b4d3b; --hero-sub:#cfe6da; --hero-kick:#a9d9c3; --hero-btn:#43b98d; --hero-btn-ink:#0b1310;
   --bg:#0f1512; --surface:#17201b; --ink:#e6eee9; --muted:#95a49c; --line:#2a3630; --soft:#1e2a24;
   --home:#43b98d; --away:#ef8a52; --draw:#56635c; --warn:#e0b240; --ok:#43b98d; --ko:#ef8a52; color-scheme:dark}}
 :root[data-theme="dark"]{
+  --hero:#1b4d3b; --hero-sub:#cfe6da; --hero-kick:#a9d9c3; --hero-btn:#43b98d; --hero-btn-ink:#0b1310;
   --bg:#0f1512; --surface:#17201b; --ink:#e6eee9; --muted:#95a49c; --line:#2a3630; --soft:#1e2a24;
   --home:#43b98d; --away:#ef8a52; --draw:#56635c; --warn:#e0b240; --ok:#43b98d; --ko:#ef8a52; color-scheme:dark}
 *{box-sizing:border-box}
@@ -186,9 +191,10 @@ td.r,th.r{text-align:right}
 .psubs{margin-bottom:12px;flex-wrap:wrap;overflow:visible}
 @media (min-width:860px){.psubs{flex-direction:row;position:static}.psubs button{border-radius:999px}}
 /* second niveau de Paris foot / NHL : Matchs · Buteur · Décisif (segments, plus discrets que la barre du dessus) */
-.pviews{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;margin:-4px 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
-.pviews button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border:0;border-radius:9px;background:none;color:var(--muted);font:700 .9rem var(--body);cursor:pointer}
-.pviews button[aria-pressed="true"]{background:var(--home);color:#fff}
+/* boutons à segments (Foot / NHL, Pronos / Analyse / Joueurs…) : piste grise, choix actif en carte claire */
+.pviews{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;margin:0 0 14px;background:var(--soft);border-radius:14px}
+.pviews button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:42px;border:0;border-radius:11px;background:none;color:var(--muted);font:700 .95rem var(--body);cursor:pointer}
+.pviews button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.14)}
 .pviews .n{font-size:.75rem;opacity:.8}
 .combo{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:12px}
 .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
@@ -201,8 +207,54 @@ td.r,th.r{text-align:right}
 .app{min-height:100vh}
 .side{display:none}
 .wrap{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-.bottom{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:repeat(6,1fr);background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-.bottom button{all:unset;display:grid;justify-items:center;gap:2px;padding:8px 0 7px;font:600 .66rem var(--body);color:var(--muted);cursor:pointer;-webkit-tap-highlight-color:transparent}
+/* ---- Aujourd'hui : pari du jour, plus sûrs, direct */
+.homecol{max-width:680px}
+.dayhero{display:grid;gap:12px;background:var(--hero);color:#fff;border-radius:22px;padding:20px;margin-bottom:16px}
+.dayhero .dk{font:700 .75rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--hero-kick)}
+.dayhero .dp{font:700 clamp(1.8rem,7.5vw,2.25rem)/1.05 var(--display);margin-top:-6px}
+.dayhero .dm{font-size:.95rem;color:var(--hero-sub);margin-top:-6px}
+.dtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.dtiles div{display:grid;gap:2px;background:rgba(255,255,255,.12);border-radius:12px;padding:10px;min-width:0}
+.dtiles b{font:700 1.45rem/1.1 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dtiles small{font-size:.75rem;color:var(--hero-sub)}
+.dtiles b small.cur{font:600 .8rem var(--body);color:#fff}
+.dbtn{border:0;border-radius:14px;min-height:48px;background:var(--hero-btn);color:var(--hero-btn-ink);font:700 1rem var(--body);cursor:pointer}
+.dbtn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.safelist{list-style:none;margin:4px 0 0;padding:0}
+.srow{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);cursor:pointer}
+.safelist li:first-child .srow{border-top:0}
+.srow:focus-visible{outline:2px solid var(--home);outline-offset:2px}
+.srow .sb{flex:1;min-width:0;display:grid;gap:1px}
+.srow .sb b{font-weight:600;font-size:1rem}
+.srow .sb small{font-size:.82rem;color:var(--muted)}
+.srow .sp{display:grid;justify-items:end;gap:5px;flex:none}
+.srow .sp b{font:700 1.25rem var(--display)}
+.mini{display:block;width:52px;height:5px;border-radius:3px;background:var(--soft);overflow:hidden}
+.mini span{display:block;height:5px;background:var(--home)}
+.lstrip{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px dashed var(--line);font-size:.92rem;color:var(--muted);margin-bottom:12px}
+button.lstrip{cursor:pointer}
+button.lstrip:focus-visible{outline:2px solid var(--home)}
+.lstrip b{color:var(--ink)}
+.lstrip.on{border-style:solid;border-color:var(--away)}
+.gdot{width:8px;height:8px;border-radius:50%;background:var(--draw);flex:none}
+/* ---- Matchs : barre des chances et pronostic sûr sur chaque ligne, fiche à onglets */
+.mbar3{display:flex;gap:2px;height:5px;border-radius:3px;overflow:hidden;margin-top:1px}
+.mbar3 .h{background:var(--home)}.mbar3 .d{background:var(--draw)}.mbar3 .a{background:var(--away)}
+.msafe{font-size:.85rem;font-weight:700;color:var(--home);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msafe.off{color:var(--muted);font-weight:600}
+.pviews.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pviews button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.14)}.pviews.dtabs{margin:0 0 12px}
+.mfil{margin-bottom:12px}
+.dbody{display:grid;gap:12px}
+header.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.ttl{display:grid;gap:.3rem;min-width:0}
+.hacts{display:flex;gap:8px;flex:none}
+.hbtn{width:44px;height:44px;border-radius:22px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.hbtn svg{width:20px;height:20px}
+.hbtn[aria-current="page"]{color:var(--home);border-color:var(--home)}
+.back{all:unset;display:inline-flex;align-items:center;gap:4px;min-height:40px;margin:-6px 0 6px;font-weight:700;color:var(--home);cursor:pointer}
+.bottom{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.bottom button{all:unset;display:grid;justify-items:center;gap:3px;padding:9px 0 8px;font:600 .74rem var(--body);color:var(--muted);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .bottom button svg{width:23px;height:23px}
 .bottom button[aria-current="page"]{color:var(--home)}
 .bottom button:focus-visible{outline:2px solid var(--home);outline-offset:-3px}
@@ -475,11 +527,9 @@ a.tile.tlink .k{color:var(--home)}
   <aside class="side" aria-label="Menu">
     <div class="brand">Analyse<span>du jour</span></div>
     <nav class="sidenav">
-      <button type="button" class="navi" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></button>
+      <button type="button" class="navi" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="12" cy="15" r="2"/></svg><span>Aujourd'hui</span></button>
       <button type="button" class="navi" data-tab="matchs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.8 2.8-1.4 4.6H9.6l-1.4-4.6z"/></svg><span>Matchs</span></button>
-      <button type="button" class="navi" data-tab="pronos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h9M4 18h6"/><path d="M15 16l2.5 2.5L22 14"/></svg><span>Pronostics</span></button>
-      <button type="button" class="navi" data-tab="favs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Favoris</span></button>
-      <button type="button" class="navi" data-tab="bankroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 14.5h2"/></svg><span>Bankroll</span></button>
+      <button type="button" class="navi" data-tab="bankroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 14.5h2"/></svg><span>Mes paris</span></button>
       <button type="button" class="navi" data-tab="bilan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-6M3 20h18"/></svg><span>Bilan</span></button>
     </nav>
     <div class="sidespacer"></div>
@@ -487,9 +537,13 @@ a.tile.tlink .k{color:var(--home)}
     <button type="button" class="sbtn alt" data-bk="move">⇄ Dépôt ou retrait</button>
   </aside>
 <div class="wrap">
-  <header>
-    <span class="kicker" id="stamp">Chargement…</span>
-    <h1 id="title">Analyse du jour</h1>
+  <header class="pagehead">
+    <div class="ttl"><span class="kicker" id="stamp">Chargement…</span>
+    <h1 id="title">Analyse du jour</h1></div>
+    <div class="hacts">
+      <button type="button" class="hbtn" id="themebtn" aria-label="Passer en mode nuit"></button>
+      <button type="button" class="hbtn" data-tab="favs" aria-label="Notifications et matchs suivis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+    </div>
   </header>
   <div id="pbanner"></div>
   <div id="notes"></div>
@@ -508,11 +562,9 @@ a.tile.tlink .k{color:var(--home)}
   </footer>
 </div>
   <nav class="bottom" aria-label="Menu">
-    <button type="button" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></button>
+    <button type="button" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="12" cy="15" r="2"/></svg><span>Aujourd'hui</span></button>
     <button type="button" data-tab="matchs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.8 2.8-1.4 4.6H9.6l-1.4-4.6z"/></svg><span>Matchs</span></button>
-    <button type="button" data-tab="pronos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h9M4 18h6"/><path d="M15 16l2.5 2.5L22 14"/></svg><span>Pronos</span></button>
-    <button type="button" data-tab="favs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span>Favoris</span></button>
-    <button type="button" data-tab="bankroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 14.5h2"/></svg><span>Bankroll</span></button>
+    <button type="button" data-tab="bankroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 14.5h2"/></svg><span>Mes paris</span></button>
     <button type="button" data-tab="bilan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-6M3 20h18"/></svg><span>Bilan</span></button>
   </nav>
 </div>
@@ -521,8 +573,28 @@ a.tile.tlink .k{color:var(--home)}
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let DATA = null, TAB = "home", LEAGUE = "Tous";
 try { TAB = localStorage.getItem("tab") || "home"; if (TAB === "foot" || TAB === "nhl"){ localStorage.setItem("msport", TAB); TAB = "matchs"; } } catch (e) {}
-const TABS = {home: "Accueil", matchs: "Matchs du jour", pronos: "Pronostics", favs: "Mes favoris", bankroll: "Ma bankroll", bilan: "Bilan"};
+// 4 onglets dans le menu (Aujourd'hui, Matchs, Mes paris, Bilan) ; « Tous les pronostics » s'ouvre depuis Aujourd'hui
+// et « Notifications et suivis » depuis la cloche en haut
+const TABS = {home: "Aujourd'hui", matchs: "Matchs", pronos: "Tous les pronostics", favs: "Notifications et suivis", bankroll: "Mes paris", bilan: "Bilan"};
+const NAV_OF = {pronos: "home", favs: "home"};
 if (!TABS[TAB]) TAB = "home";
+// ---- thème : Auto (suit le téléphone), Jour ou Nuit, gardé sur ce téléphone
+let THEME = "auto";
+try { THEME = localStorage.getItem("theme") || "auto"; } catch (e) {}
+const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function applyTheme(){
+  const r = document.documentElement;
+  if (THEME === "jour") r.dataset.theme = "light"; else if (THEME === "nuit") r.dataset.theme = "dark"; else delete r.dataset.theme;
+  const dark = darkMode(), b = document.getElementById("themebtn");
+  if (b){ b.innerHTML = dark ? SUN : MOON; b.setAttribute("aria-label", dark ? "Passer en mode jour" : "Passer en mode nuit"); }
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = dark ? "#0f1512" : "#0d6b4d";
+}
+function setTheme(t){ THEME = t; try { localStorage.setItem("theme", t); } catch (e) {} applyTheme(); render(); }
+document.getElementById("themebtn").addEventListener("click", () => setTheme(darkMode() ? "jour" : "nuit"));
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (THEME === "auto"){ applyTheme(); render(); } });
+applyTheme();
 
 function form(f){ return f ? `<span class="form" aria-label="Forme récente">${[...f].map(c=>`<i class="${c}">${c}</i>`).join("")}</span>` : ""; }
 function bar(m, h, d, a, lh, la, ld){
@@ -626,7 +698,7 @@ async function toggleFav(id){
   on ? FAVS.add(id) : FAVS.delete(id);
   saveFavs(); render();
   if (!PUSH_ON){
-    if (on) toast("★ Ajouté ! Pour être prévenu des buts, active les notifications dans l'onglet ★ Favoris.");
+    if (on) toast("★ Suivi ! Pour être prévenu des buts, active les notifications avec la cloche 🔔 en haut de l'écran.");
     return;
   }
   try {
@@ -745,9 +817,39 @@ function matchRow(m, detail){
   return `<div class="match${open ? " open" : ""}"><div class="mline">${favBtn(m)}
     <button type="button" class="mrow" data-id="${esc(m.id)}" aria-expanded="${open}" aria-label="${esc(m.home)} contre ${esc(m.away)}, ${esc(m.time)}. Voir l'analyse">
       <span class="mtime num">${statusHtml(m)}</span>
-      <span class="mteams"><span class="mt">${logo(m.logo_h, m.logo_h_dark)}<span class="tn">${esc(m.home)}</span></span><span class="mt">${logo(m.logo_a, m.logo_a_dark)}<span class="tn">${esc(m.away)}</span></span></span>
+      <span class="mteams"><span class="mt">${logo(m.logo_h, m.logo_h_dark)}<span class="tn">${esc(m.home)}</span></span><span class="mt">${logo(m.logo_a, m.logo_a_dark)}<span class="tn">${esc(m.away)}</span></span>${rowBar(m)}${rowSafe(m)}</span>
       ${scoreHtml(m)}<span class="chev" aria-hidden="true"></span></button></div>
     ${open ? `<div class="mdetail">${detail(m)}</div>` : ""}</div>`;
+}
+// sur la ligne du match : barre des chances (domicile / nul / extérieur) et le pronostic sûr en clair
+function rowBar(m){
+  const [h, d, a] = m.sport === "nhl" ? [m.winH, 0, m.winA] : [m.pH, m.pD, m.pA];
+  if (h == null || a == null) return "";
+  return `<span class="mbar3" aria-hidden="true"><span class="h" style="width:${h}%"></span>${d ? `<span class="d" style="width:${d}%"></span>` : ""}<span class="a" style="width:${a}%"></span></span>`;
+}
+function rowSafe(m){
+  const pk = (m.picks || {}).main;
+  if (!pk) return (m.picks || {}).held ? `<span class="msafe off">Avis partagés : pas de Safe</span>` : "";
+  return `<span class="msafe">${mark(resultOf(m, pk))}Sûr : ${esc(pk.label)} · ${pk.prob} %</span>`;
+}
+// fiche dépliée d'un match : trois onglets, Pronos (par défaut), Analyse, Joueurs
+const DTAB = {};
+function matchDetail(m){
+  const t = DTAB[m.id] || "pronos";
+  const tabs = `<div class="pviews dtabs" role="tablist" aria-label="Fiche du match">${[["pronos", "Pronos"], ["analyse", "Analyse"], ["joueurs", "Joueurs"]].map(([k, l]) =>
+    `<button type="button" role="tab" data-dtab="${esc(m.id)}|${k}" aria-selected="${k === t}">${l}</button>`).join("")}</div>`;
+  const body = t === "analyse" ? (m.sport === "nhl" ? nhlAnalyse(m) : footAnalyse(m)) : t === "joueurs" ? playersTab(m) : pronoBody(m);
+  return tabs + `<div class="dbody">${body}</div>`;
+}
+function playersTab(m){
+  const lines = ["buteur", "decisif"].map(k => {
+    const p = playerPick(m, k);
+    return p ? `<div class="pl"><span class="pk">${PV_KEY[k][m.sport]}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}${p.why ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>` : "";
+  }).join("");
+  const sq = m.sport === "nhl"
+    ? `${squad(m.squad_h, m.home, "h", "p_point", "Point", nhlSub)}${squad(m.squad_a, m.away, "a", "p_point", "Point", nhlSub)}`
+    : `${squad(m.squad_h, m.home, "h", "p_dec", "Décisif", footSub)}${squad(m.squad_a, m.away, "a", "p_dec", "Décisif", footSub)}`;
+  return `${lines ? `<div class="plines">${lines}</div>` : ""}<div><h3>Joueurs par équipe</h3>${topScorer(m)}<div class="cols">${sq}</div></div>`;
 }
 function group(title, logoSrc, list, detail){
   return `<section class="grp"><div class="band">${logoSrc ? `<img class="bl" src="${esc(logoSrc)}" alt="" width="20" height="20" loading="lazy" onerror="this.remove()">` : ""}<span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>
@@ -757,9 +859,9 @@ function teamLine(name, rank, f){
   return `<div class="tline"><b>${esc(name)}</b>${rank ? `<span class="sub">${rank}e du classement</span>` : ""}${form(f)}</div>`;
 }
 
-function footDetail(m){
-  return `${liveBlock(m)}${secondBox(m)}<div class="tlines">${teamLine(m.home, m.rank_h, m.form_h)}${teamLine(m.away, m.rank_a, m.form_a)}</div>
-    ${bar(m, m.pH, m.pD, m.pA, "Victoire " + m.home, "Victoire " + m.away, "Nul")}${bookLine(m)}
+function footAnalyse(m){
+  return `${secondBox(m)}<div class="tlines">${teamLine(m.home, m.rank_h, m.form_h)}${teamLine(m.away, m.rank_a, m.form_a)}</div>
+    ${bar(m, m.pH, m.pD, m.pA, "Victoire " + m.home, "Victoire " + m.away, "Nul")}
     <div class="stats num">
       <div class="stat"><div class="v">${esc(m.scores[0])}</div><div class="k">Score le plus probable · ${m.scorep[0]}%</div></div>
       <div class="stat"><div class="v">${m.xgH.toFixed(1)} – ${m.xgA.toFixed(1)}</div><div class="k">Buts attendus</div></div>
@@ -767,15 +869,13 @@ function footDetail(m){
       <div class="stat"><div class="v">${m.btts}%</div><div class="k">Les deux marquent</div></div>
     </div>
     <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Autres scores fréquents : ${m.scores.slice(1).map((s,i)=>`${esc(s)} (${m.scorep[i+1]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>
-    <div><h3>Joueurs par équipe</h3>${topScorer(m)}
-    <div class="cols">${squad(m.squad_h, m.home, "h", "p_dec", "Décisif", footSub)}${squad(m.squad_a, m.away, "a", "p_dec", "Décisif", footSub)}</div></div>
     ${m.ctx.length ? `<ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>` : ""}`;
 }
 
-function nhlDetail(m){
+function nhlAnalyse(m){
   const g = (x, team) => x ? `<div class="goalie"><small>Gardien probable · ${esc(team)}</small><b>${esc(x.name)}</b><small>${esc(x.sv)} · ${x.starts} départ${x.starts>1?"s":""}${x.note ? " · " + esc(x.note) : ""}</small></div>` : `<div class="goalie"><small>${esc(team)}</small>Gardien inconnu</div>`;
-  return `${liveBlock(m)}${secondBox(m)}<div class="tlines"><div class="tline"><b>${esc(m.home)}</b><span class="sub">${esc(m.rec_h)}</span></div><div class="tline"><b>${esc(m.away)}</b><span class="sub">${esc(m.rec_a)}</span></div></div>
-    ${bar(m, m.pH, m.pD, m.pA, m.home + " après 60 min", m.away + " après 60 min", "Égalité")}${bookLine(m)}
+  return `${secondBox(m)}<div class="tlines"><div class="tline"><b>${esc(m.home)}</b><span class="sub">${esc(m.rec_h)}</span></div><div class="tline"><b>${esc(m.away)}</b><span class="sub">${esc(m.rec_a)}</span></div></div>
+    ${bar(m, m.pH, m.pD, m.pA, m.home + " après 60 min", m.away + " après 60 min", "Égalité")}
     <div class="stats num">
       <div class="stat"><div class="v">${m.winH}%</div><div class="k">${esc(m.home)} au final</div></div>
       <div class="stat"><div class="v">${m.winA}%</div><div class="k">${esc(m.away)} au final</div></div>
@@ -784,14 +884,14 @@ function nhlDetail(m){
     </div>
     <div class="goalies">${g(m.goalie_h, m.home)}${g(m.goalie_a, m.away)}</div>
     <p class="reading"><b>Lecture :</b> ${esc(m.reading)}${m.stakes ? ` <b>Enjeu :</b> ${esc(m.stakes)}` : ""} <span class="src">Scores les plus fréquents : ${m.scores.map((s,i)=>`${esc(s)} (${m.scorep[i]} %)`).join(", ")}. Source : ${esc(m.source)}.</span></p>
-    <div><h3>Joueurs par équipe</h3>${topScorer(m)}
-    <div class="cols">${squad(m.squad_h, m.home, "h", "p_point", "Point", nhlSub)}${squad(m.squad_a, m.away, "a", "p_point", "Point", nhlSub)}</div></div>
     <ul class="ctx">${m.ctx.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`;
 }
 
+const FAVS_EMPTY = `<div class="empty">Aucun match suivi ici.<br>Touche l'étoile ☆ à côté d'un match pour le suivre et recevoir ses buts.</div>`;
+const byFilter = list => MFILTER === "favs" ? list.filter(m => FAVS.has(m.id)) : list;
 function footView(){
-  const all = DATA.foot || [];
-  if (!all.length) return `<div class="empty">Aucun match aujourd'hui dans les cinq grands championnats ni en coupe d'Europe.</div>`;
+  const all = byFilter(DATA.foot || []);
+  if (!all.length) return MFILTER === "favs" ? FAVS_EMPTY : `<div class="empty">Aucun match aujourd'hui dans les cinq grands championnats ni en coupe d'Europe.</div>`;
   const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
   const leagues = [...new Set(all.map(m => m.league))].sort((a, b) => rank(a) - rank(b));
   if (LEAGUE !== "Tous" && !leagues.includes(LEAGUE)) LEAGUE = "Tous";
@@ -800,9 +900,9 @@ function footView(){
   const nav = `<nav class="leagues" aria-label="Championnats">${btn("Tous", "", all.length)}${leagues.map(l => btn(l, first(l).league_logo, all.filter(m => m.league === l).length)).join("")}</nav>`;
   const groups = leagues.filter(l => LEAGUE === "Tous" || l === LEAGUE).map(l => {
     const f = first(l);
-    return group(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, all.filter(m => m.league === l), footDetail);
+    return group(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, all.filter(m => m.league === l), matchDetail);
   }).join("");
-  return `<div class="layout">${nav}<div class="groups">${groups}<p class="hint">Touchez un match pour voir son analyse complète.</p></div></div>`;
+  return `<div class="layout">${leagues.length > 1 ? nav : ""}<div class="groups">${groups}<p class="hint">Touche un match pour ses pronostics, son analyse et ses joueurs.</p></div></div>`;
 }
 // Récapitulatif en bas de l'onglet NHL : 3 joueurs par équipe, triés par chance de faire au moins 1 point.
 function nhlRecap(all){
@@ -820,9 +920,9 @@ function nhlRecap(all){
     <div class="tablewrap"><table><tbody>${body}</tbody></table></div></section>`;
 }
 function nhlView(){
-  const all = DATA.nhl || [];
-  if (!all.length) return `<div class="empty">Pas de match NHL aujourd'hui.</div>`;
-  return `${group("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, all, nhlDetail)}<p class="hint">Touchez un match pour voir son analyse complète.</p>${nhlRecap(all)}`;
+  const all = byFilter(DATA.nhl || []);
+  if (!all.length) return MFILTER === "favs" ? FAVS_EMPTY : `<div class="empty">Pas de match NHL aujourd'hui.</div>`;
+  return `${group("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, all, matchDetail)}<p class="hint">Touche un match pour ses pronostics, son analyse et ses joueurs.</p>`;
 }
 // ---- onglet Pronostics : le plus sûr de chaque match, sélection du jour, étoiles + pourcentage
 const starStr = n => "★".repeat(n) + "☆".repeat(5 - n);
@@ -933,7 +1033,7 @@ function comboView(){
 }
 // ---- sous-onglet En direct : pronostics recalculés pendant les matchs (calcul dans docs/live.js)
 let LIVEM = null;
-import("./live.js").then(mod => { LIVEM = mod; if ((TAB === "pronos" && (PSUB === "live" || PSUB === "fun")) || TAB === "favs") render(); }).catch(() => {});
+import("./live.js").then(mod => { LIVEM = mod; if (DATA) render(); }).catch(() => {});
 const pctr = p => Math.round(p * 100);
 function liveCard(m){
   const L = LIVEDATA[m.id];
@@ -1091,7 +1191,7 @@ async function setMorning(on){
 function pushBanner(){
   let off = false;
   try { off = localStorage.getItem("pbanner") === "off"; } catch (e) {}
-  if (PUSH_ON || off || TAB === "favs" || !DATA) return "";
+  if (PUSH_ON || off || TAB !== "home" || !DATA) return "";
   return `<div class="pbanner"><span>🔔 <b>Reçois les buts de tes matchs</b> sur ton téléphone, gratuit et sans appli.</span>
     <button type="button" class="pgo" data-gofavs>Comment faire ?</button><button type="button" class="px" data-closebanner aria-label="Fermer">×</button></div>`;
 }
@@ -1115,7 +1215,7 @@ function pushGuide(){
       "Ouvre le site dans <b>Safari</b>.",
       "Touche le bouton <b>Partager</b> <span class=\"dim\">(le carré avec une flèche vers le haut)</span>.",
       "Choisis <b>« Sur l'écran d'accueil »</b>, puis <b>Ajouter</b>.",
-      "Ouvre l'icône <b>« Analyse »</b> sur ton écran d'accueil, va dans <b>★ Favoris</b> et touche <b>« Activer les notifications »</b>, puis <b>Autoriser</b>."],
+      "Ouvre l'icône <b>« Analyse »</b> sur ton écran d'accueil, touche la cloche <b>🔔</b> en haut, puis <b>« Activer les notifications »</b>, puis <b>Autoriser</b>."],
       "Apple n'envoie les notifications d'un site qu'une fois ajouté à l'écran d'accueil (iOS 16.4 ou plus récent). Remets tes étoiles ☆ dans l'appli : celles de Safari n'y passent pas."),
     android: card("android", "🤖", "Android", [
       "Ouvre le site dans <b>Chrome</b> <span class=\"dim\">(ou Samsung Internet, Edge, Firefox)</span>.",
@@ -1143,12 +1243,12 @@ function pushGuide(){
     <div class="pguide">${order.map(k => cards[k]).join("")}</div>`;
 }
 function liveView(){
-  return `<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers. Touche ☆ pour suivre un match (onglet ★ Favoris).</p><div id="livebox">${liveList()}</div>`;
+  return `<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers. Touche ☆ pour suivre un match (cloche 🔔 en haut pour les notifications).</p><div id="livebox">${liveList()}</div>`;
 }
 // ---- onglet Favoris : les matchs étoilés de CE téléphone, les seuls qui envoient des notifications
 function favList(){
   const all = [...(DATA.foot || []), ...(DATA.nhl || [])].filter(m => FAVS.has(m.id)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
-  if (!all.length) return `<div class="empty">Pas encore de favori.<br>Va dans <b>Foot</b> ou <b>NHL</b> et touche l'étoile ☆ à côté de l'heure d'un match.</div>`;
+  if (!all.length) return `<div class="empty">Pas encore de match suivi.<br>Va dans <b>Matchs</b> et touche l'étoile ☆ à côté d'un match.</div>`;
   const live = [], next = [], done = [];
   for (const m of all){
     const L = LIVEDATA[m.id];
@@ -1182,8 +1282,9 @@ function playerView(sport, kind){
   return `<p class="warnline">${PV_INTRO[sport + "|" + kind]}</p>`
     + (list.length ? blk("À venir", next) + blk("Commencés ou terminés", rest) : `<div class="empty">Pas de joueur proposé aujourd'hui.</div>`);
 }
+const BACK_HOME = `<button type="button" class="back" data-go="home"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Aujourd'hui</button>`;
 function favView(){
-  return `${pushGuide()}<h2 class="sech">Mes matchs <span class="cnt num">${FAVS.size}/${MAX_FAVS}</span></h2><div id="favbox">${favList()}</div>`;
+  return `${BACK_HOME}${pushGuide()}<h2 class="sech">Mes matchs <span class="cnt num">${FAVS.size}/${MAX_FAVS}</span></h2><div id="favbox">${favList()}</div>`;
 }
 function pronoView(){
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
@@ -1386,34 +1487,53 @@ function bkChartCard(){
     <div class="ranges" role="group" aria-label="Période">${RANGES.map(([k, l]) => `<button type="button" data-range="${k}" aria-pressed="${k === RANGE}">${l}</button>`).join("")}</div></div>
     ${bkChart()}</section>`;
 }
-// ---- Accueil : bankroll + l'essentiel du jour
+// ---- Aujourd'hui : le pari du jour, les plus sûrs, le direct (une seule décision à prendre)
 function homeView(){
-  const foot = DATA.foot || [], nhl = DATA.nhl || [], all = [...foot, ...nhl];
+  const all = [...(DATA.foot || []), ...(DATA.nhl || [])];
+  const pre = m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); };
   const nLive = all.filter(m => (LIVEDATA[m.id] || {}).state === "in").length;
-  const sel = selectionOf(all, 3);
-  const empty = !BK.moves.length && !BK.bets.length;
-  const start = empty ? `<section class="card2"><h2>Commence ta bankroll</h2><p class="src">1. Fais un <b>dépôt</b> : le montant que tu consacres aux paris. 2. Ajoute tes paris avec le bouton <b>+</b> à côté d'un pronostic, ou « Nouveau pari ». 3. Le site calcule ton bénéfice et ta courbe.</p></section>` : "";
-  const tile = (go, v, k, extra = "") => `<button type="button" class="tile tlink" data-go="${go}"${extra} style="text-align:left;font:inherit;color:inherit"><div class="v">${v}</div><div class="k">${k}</div></button>`;
-  return `${bkHero()}${start}${empty ? "" : bkChartCard()}
-    <div class="hgrid">
-      <section class="card2"><div class="chead2"><h2>Les plus sûrs du jour</h2><button type="button" class="pgo" data-go="pronos">Tout voir</button></div>
-        ${sel.length ? `<ol class="sellist">${sel.map(selItem).join("")}</ol>` : `<p class="src">Tous les matchs du jour ont commencé.</p>`}</section>
-      <section class="card2"><h2>Aujourd'hui</h2>
-        <div class="tiles num" style="margin:10px 0 0">
-          ${tile("matchs", foot.length + nhl.length, `matchs analysés (${foot.length} foot, ${nhl.length} NHL) ›`)}
-          ${tile("pronos", nLive, "en direct ›", ' data-psubgo="live"')}
-          ${tile("favs", FAVS.size, "en favori ★ ›")}
-        </div></section>
-    </div>`;
+  const cands = bestCands(), bank = bkStats().bank, lg = m => m.sport === "nhl" ? "NHL" : m.league;
+  let hero;
+  if (cands.length){
+    const {m, pk} = cands[0], a = stakeAdvice(pk.p, 0), key = `${m.id}|${pk.label}`;
+    addBtn(m, pk);                                   // prépare la fenêtre d'ajout (cote, résultat automatique)
+    if (BETREF[key] && a.amt) BETREF[key].stake = a.amt;
+    const amtTxt = x => `${x.toLocaleString("fr-CH", {minimumFractionDigits: 2, maximumFractionDigits: 2})}<small class="cur"> ${BK.currency === "EUR" ? "€" : "CHF"}</small>`;
+    const [sv, sk] = !(bank > 0) ? ["—", "fais un dépôt"] : a.amt ? [amtTxt(a.amt), "à miser"] : ["—", "pas de mise conseillée"];
+    hero = `<section class="dayhero" aria-label="Le pari du jour"><span class="dk">Le pari du jour</span>
+      <span class="dp">${esc(pk.label)}</span>
+      <span class="dm">${esc(m.home)} – ${esc(m.away)} · ${esc(m.time)} · ${esc(lg(m))}</span>
+      <div class="dtiles num"><div><b>${pctr(pk.p)} %</b><small>de réussite</small></div><div><b>@${odd(fairMin(pk.p))}</b><small>cote minimum</small></div><div><b>${sv}</b><small>${sk}</small></div></div>
+      <button type="button" class="dbtn" data-addbet="${esc(key)}">Ajouter à mes paris</button></section>`;
+  } else {
+    hero = `<section class="dayhero" aria-label="Le pari du jour"><span class="dk">Le pari du jour</span>
+      <span class="dp">Rien à jouer pour l'instant</span><span class="dm">Tous les matchs du jour ont commencé ou sont déjà dans tes paris. Le prochain pari du jour arrive avec les analyses du matin.</span>
+      <button type="button" class="dbtn" data-tab="matchs">Voir les matchs</button></section>`;
+  }
+  const rows = cands.slice(1, 5).map(({m, pk}) => `<li><button type="button" class="srow" data-openm="${esc(m.id)}">
+      <span class="sb"><b>${esc(pk.label)}</b><small>${esc(m.home)} – ${esc(m.away)} · ${esc(m.time)} · ${esc(lg(m))}</small></span>
+      <span class="sp num"><b>${pctr(pk.p)} %</b><span class="mini"><span style="width:${pctr(pk.p)}%"></span></span></span></button></li>`).join("");
+  const next = all.filter(pre).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff))[0];
+  const strip = nLive ? `<button type="button" class="lstrip on" data-go="pronos" data-psubgo="live"><i class="dot"></i><span><b>${plural(nLive, "match")} en cours</b> · voir le direct</span></button>`
+    : `<div class="lstrip"><span class="gdot"></span><span>Aucun match en cours${next ? ` · prochain coup d'envoi à ${esc(next.time)}` : ""}</span></div>`;
+  return `<div class="homecol">${hero}
+    ${rows ? `<section class="card2"><div class="chead2"><h2>Les plus sûrs du jour</h2><button type="button" class="pgo" data-go="pronos">Tout voir</button></div><ul class="safelist">${rows}</ul></section>` : ""}
+    ${strip}
+    <button type="button" class="lstrip" data-tab="matchs"><span class="gdot"></span><span><b>${plural(all.length, "match")} analysé${all.length > 1 ? "s" : ""} aujourd'hui</b> · ${(DATA.foot || []).length} foot, ${(DATA.nhl || []).length} NHL</span></button></div>`;
 }
 // ---- Matchs : Foot et NHL dans le même onglet
 let MSPORT = "foot";
 try { MSPORT = localStorage.getItem("msport") || "foot"; } catch (e) {}
+let MFILTER = "all";     // Tous | Suivis (matchs étoilés : ceux qui envoient les notifications)
+try { MFILTER = localStorage.getItem("mfilter") || "all"; } catch (e) {}
 function matchsView(){
   const nF = (DATA.foot || []).length, nN = (DATA.nhl || []).length;
-  const nav = `<nav class="leagues psubs" aria-label="Sport">${[["foot", "⚽ Foot", nF], ["nhl", "🏒 NHL", nN]].map(([k, l, n]) =>
-    `<button type="button" data-msport="${k}" aria-pressed="${k === MSPORT}"><span>${l}</span><span class="n num">${n}</span></button>`).join("")}</nav>`;
-  return nav + (MSPORT === "nhl" ? nhlView() : footView());
+  const nav = `<div class="pviews two" role="group" aria-label="Sport">${[["foot", "Foot", nF], ["nhl", "NHL", nN]].map(([k, l, n]) =>
+    `<button type="button" data-msport="${k}" aria-pressed="${k === MSPORT}">${l}<span class="n num">${n}</span></button>`).join("")}</div>`;
+  const nFav = (DATA[MSPORT] || []).filter(m => FAVS.has(m.id)).length;
+  const chips = `<nav class="leagues mfil" aria-label="Filtre">${[["all", "Tous", null], ["favs", "★ Suivis", nFav]].map(([k, l, n]) =>
+    `<button type="button" data-mfilter="${k}" aria-pressed="${k === MFILTER}"><span>${l}</span>${n != null ? `<span class="n num">${n}</span>` : ""}</button>`).join("")}</nav>`;
+  return nav + chips + (MSPORT === "nhl" ? nhlView() : footView());
 }
 // ---- page Bankroll : paris en cours, terminés, mouvements, réglages
 function betRow(b){
@@ -1519,19 +1639,24 @@ function advRow(c, amt, bank, rank){
       <div class="smeta">${esc(c.m.time)} · ${esc(c.m.sport === "nhl" ? "NHL" : c.m.league)} · ${pctr(c.pk.p)} % · cote minimum <b class="num">@${odd(fairMin(c.pk.p))}</b></div></div>
     <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, bank)} %</small></div>${btn}</li>`;
 }
+// pronostics jouables du jour : un par match (le plus sûr entre le Safe et le pari joueur ; deux paris du même match
+// ne sont pas indépendants), matchs pas encore commencés et pas déjà dans mes paris, du plus sûr au moins sûr
+function bestCands(){
+  const pre = m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); };
+  const played = new Set(BK.bets.filter(b => b.status === "open" && b.matchId).map(b => b.matchId));
+  return [...(DATA.foot || []), ...(DATA.nhl || [])].filter(m => pre(m) && !played.has(m.id)).map(m => {
+    const pk = ["main", "player"].map(k => (m.picks || {})[k]).filter(Boolean).sort((a, b) => b.p - a.p)[0];
+    return pk ? {m, pk} : null;
+  }).filter(Boolean).sort((a, b) => b.pk.p - a.pk.p);
+}
 function adviceCard(){
   if (!DATA) return "";
-  const s = bkStats(), P = prof(), head = `<h2>Paris conseillés</h2>`;
+  const s = bkStats(), P = prof(), head = `<h2>Que jouer aujourd'hui ?</h2>`;
   const profLine = `<p class="profl">Profil <b>${P.name}</b> · <button type="button" class="linkbtn" data-goset="1">changer</button></p>`;
   const rule = `<p class="src">Profil ${P.name} : mise = ${P.steps.slice().reverse().map(([min, pct], i, a) => `<b>${pctTxt(pct)} %</b> (${Math.round(min * 100)}${i < a.length - 1 ? ` à ${Math.round(a[i + 1][0] * 100)} %` : " % et plus"})`).join(", ")} de ta bankroll actuelle selon la probabilité de l'analyse ; au total, jamais plus de ${P.cap} % en jeu. Joue seulement si ton bookmaker paie au moins la <b>cote minimum</b> : en dessous, le pari perd de l'argent sur la durée.</p>`;
   if (!(s.bank > 0)) return `<section class="card2">${head}<p class="src">Fais un <b>dépôt</b> : le site te proposera ici un pari simple, plusieurs paris ou un combiné, et combien miser.</p></section>`;
-  const pre = m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); };
   const played = new Set(BK.bets.filter(b => b.status === "open" && b.matchId).map(b => b.matchId));
-  // un pronostic par match (deux paris du même match ne sont pas indépendants), les plus sûrs d'abord
-  const cands = [...(DATA.foot || []), ...(DATA.nhl || [])].filter(m => pre(m) && !played.has(m.id)).map(m => {
-    const pk = ["main", "player"].map(k => (m.picks || {})[k]).filter(Boolean).sort((a, b) => b.p - a.p)[0];
-    return pk && stakePct(pk.p) ? {m, pk} : null;
-  }).filter(Boolean).sort((a, b) => b.pk.p - a.pk.p).slice(0, 5);
+  const cands = bestCands().filter(c => stakePct(c.pk.p)).slice(0, 5);
   const room = Math.max(0, s.bank * P.cap / 100 - s.inPlay);
   const mode = ADVMODES.some(([k]) => k === ADVMODE) ? ADVMODE : "simple";
   const tabs = `<nav class="pviews advm" aria-label="Façon de jouer">${ADVMODES.map(([k, l]) => `<button type="button" data-advmode="${k}" aria-pressed="${k === mode}">${l}</button>`).join("")}</nav>`;
@@ -1570,18 +1695,21 @@ function bankrollView(){
   const s = bkStats();
   const moves = [...BK.moves].sort((a, b) => b.t - a.t);
   return `${bkHero()}
-    <div class="tiles num">
-      <div class="tile"><div class="v">${s.roi >= 0 ? "+" : ""}${s.roi.toFixed(1).replace(".", ",")} %</div><div class="k">rendement (ROI) : bénéfice ÷ total misé</div></div>
-      <div class="tile"><div class="v">${s.won}/${s.won + s.lost}</div><div class="k">paris gagnés (${Math.round(s.hit)} %)</div></div>
-    </div>
     ${adviceCard()}
     ${myBets()}
+    ${BK.bets.length ? `<div class="tiles num">
+      <div class="tile"><div class="v">${s.roi >= 0 ? "+" : ""}${s.roi.toFixed(1).replace(".", ",")} %</div><div class="k">rendement (ROI) : bénéfice ÷ total misé</div></div>
+      <div class="tile"><div class="v">${s.won}/${s.won + s.lost}</div><div class="k">paris gagnés (${Math.round(s.hit)} %)</div></div>
+    </div>` : ""}
     ${BK.moves.length || BK.bets.length ? bkChartCard() : ""}
     <section class="card2"><h2>Dépôts et retraits</h2>
       ${moves.length ? `<ul class="bets">${moves.map(m => `<li class="bet"><div><b>${m.type === "dep" ? "Dépôt" : "Retrait"}</b><small>${new Date(m.t).toLocaleDateString("fr-FR", {day: "numeric", month: "long", year: "numeric"})}${m.note ? " · " + esc(m.note) : ""}</small></div>
           <div class="amt num ${m.type === "dep" ? "pos" : "neg"}">${m.type === "dep" ? "+" : "−"}${money(m.amount)}</div><div class="bact"><button type="button" data-mvdel="${m.id}" aria-label="Supprimer">🗑</button></div></li>`).join("")}</ul>`
         : `<p class="src">Aucun mouvement. Commence par un dépôt.</p>`}</section>
     <section class="card2" id="bkset"><h2>Réglages</h2>
+      <h3 class="seth">Apparence</h3>
+      <div class="pviews" role="group" aria-label="Apparence">${[["auto", "Auto"], ["jour", "Jour"], ["nuit", "Nuit"]].map(([k, l]) => `<button type="button" data-themeset="${k}" aria-pressed="${k === THEME}">${l}</button>`).join("")}</div>
+      <p class="src">Auto suit le réglage de ton téléphone. Le bouton lune / soleil en haut de l'écran passe aussi de l'un à l'autre.</p>
       <h3 class="seth">Profil de mise</h3>
       <div class="pviews" role="group" aria-label="Profil de mise">${Object.entries(PROFILES).map(([k, P]) => `<button type="button" data-profile="${k}" aria-pressed="${P === prof()}">${P.name}</button>`).join("")}</div>
       <p class="src">${prof().name} : jusqu'à <b>${pctTxt(prof().steps[0][1])} %</b> de ta bankroll par pari et <b>${prof().cap} %</b> en jeu au total ; ${prof().note}.</p>
@@ -1709,9 +1837,20 @@ function bkAutoSettle(){
 }
 // clics de la bankroll, de l'accueil et du menu (un seul écouteur pour toute la page)
 document.addEventListener("click", ev => {
-  const el = ev.target.closest("[data-bk],[data-addbet],[data-bkset],[data-bkdel],[data-mvdel],[data-cur],[data-range],[data-msport],[data-go],[data-tab],[data-bkf],[data-bkmore]");
+  const el = ev.target.closest("[data-bk],[data-addbet],[data-bkset],[data-bkdel],[data-mvdel],[data-cur],[data-range],[data-msport],[data-go],[data-tab],[data-bkf],[data-bkmore],[data-openm],[data-mfilter]");
   if (!el) return;
   const ds = el.dataset;
+  if (ds.openm){      // depuis Aujourd'hui : ouvre la fiche du match dans l'onglet Matchs
+    const m = [...(DATA.foot || []), ...(DATA.nhl || [])].find(x => x.id === ds.openm);
+    if (!m) return;
+    MSPORT = m.sport; LEAGUE = "Tous"; MFILTER = "all"; OPEN.add(m.id); DTAB[m.id] = "pronos";
+    try { localStorage.setItem("msport", MSPORT); localStorage.setItem("mfilter", MFILTER); } catch (e) {}
+    TAB = "matchs"; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
+    const row = document.querySelector(`.mrow[data-id="${CSS.escape(m.id)}"]`);
+    if (row) row.scrollIntoView({block: "start", behavior: "smooth"});
+    return;
+  }
+  if (ds.mfilter){ MFILTER = ds.mfilter; try { localStorage.setItem("mfilter", MFILTER); } catch (e) {} render(); return; }
   if (ds.tab) return goTab(ds.tab);
   if (ds.go){ if (ds.psubgo){ PSUB = ds.psubgo; try { localStorage.setItem("psub", PSUB); } catch (e) {} } return goTab(ds.go); }
   if (ds.bk === "move") return openMoveForm();
@@ -1729,15 +1868,16 @@ document.addEventListener("click", ev => {
 });
 
 function render(){
-  document.querySelectorAll("[data-tab]").forEach(b => b.dataset.tab === TAB ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current"));
+  const navCur = NAV_OF[TAB] || TAB;
+  document.querySelectorAll("[data-tab]").forEach(b => b.dataset.tab === TAB || (b.dataset.tab === navCur && !b.classList.contains("hbtn")) ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current"));
   document.getElementById("title").textContent = TABS[TAB];
   document.title = TAB === "home" ? "Analyse du jour" : `${TABS[TAB]} · Analyse du jour`;
   document.getElementById("notes").hidden = TAB !== "matchs";
-  document.getElementById("explain").hidden = !["matchs", "pronos", "bilan"].includes(TAB);
+  document.getElementById("explain").hidden = !["pronos", "bilan"].includes(TAB);
   if (!DATA) return;
   document.getElementById("pbanner").innerHTML = pushBanner();
   const view = document.getElementById("view");
-  view.innerHTML = ({home: homeView, matchs: matchsView, pronos: pronoView, favs: favView, bankroll: bankrollView, bilan: bilanView}[TAB] || homeView)();
+  view.innerHTML = (TAB === "pronos" ? BACK_HOME : "") + ({home: homeView, matchs: matchsView, pronos: pronoView, favs: favView, bankroll: bankrollView, bilan: bilanView}[TAB] || homeView)();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));
   view.querySelectorAll("[data-bsport]").forEach(b => b.addEventListener("click", () => {
     BSPORT = b.dataset.bsport; try { localStorage.setItem("bsport", BSPORT); } catch (e) {} render();
@@ -1754,6 +1894,11 @@ function render(){
   view.querySelectorAll("[data-goset]").forEach(b => b.addEventListener("click", () => {
     const el = document.getElementById("bkset"); if (el) el.scrollIntoView({behavior: "smooth", block: "start"});
   }));
+  view.querySelectorAll("[data-dtab]").forEach(b => b.addEventListener("click", () => {
+    const [id, t] = b.dataset.dtab.split("|"); DTAB[id] = t; render();
+    const tab = document.querySelector(`[data-dtab="${CSS.escape(id + "|" + t)}"]`); if (tab) tab.focus({preventScroll: true});
+  }));
+  view.querySelectorAll("[data-themeset]").forEach(b => b.addEventListener("click", () => setTheme(b.dataset.themeset)));
   view.querySelectorAll("[data-pview]").forEach(b => b.addEventListener("click", () => {
     PVIEW = b.dataset.pview; try { localStorage.setItem("pview", PVIEW); } catch (e) {} render();
   }));
