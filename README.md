@@ -84,7 +84,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
   - **Aujourd'hui** : le pari du jour (réussite, cote minimum, mise conseillée, bouton « Ajouter »), les 4 plus sûrs suivants (un clic ouvre la fiche du match), le direct et le nombre de matchs analysés. « Tout voir » ouvre tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun).
   - **Matchs** : Foot / NHL, filtre Tous / ★ Suivis ; chaque ligne montre la barre des chances et le pronostic sûr. La fiche dépliée a trois onglets : Pronos, Analyse, Joueurs.
   - **Mes paris** : bankroll, « Que jouer aujourd'hui ? » (pari simple, plusieurs, combiné), mes paris, courbe, dépôts, réglages.
-  - **Bilan** : inchangé.
+  - **Bilan** : filtre Tous / Foot / NHL, total depuis l'ouverture comparé à l'attendu, puis un **calendrier du mois** : chaque jour joué affiche son % de pronostics validés, en vert s'il dépasse l'attendu, en orange sinon (flèches pour les mois précédents). Toucher un jour ouvre son détail : score du jour, répartition Foot / NHL / Fun, 3 matchs avec chaque pronostic ✓ / ✗, puis « Voir les N matchs du jour ». En dessous : par championnat, par niveau de confiance, favoris foot et NHL.
   - En haut : bouton lune / soleil (mode nuit / jour) et cloche 🔔 (notifications et matchs suivis). Réglage Apparence Auto / Jour / Nuit dans Mes paris (Auto suit le téléphone), gardé sur le téléphone.
 - **Accueil** : bénéfice net total, bankroll actuelle, dépôts, retraits, courbe d'évolution (Auj. / 7j / 30j / 90j / 1a / Tout), puis les pronostics les plus sûrs du jour.
 - **Bankroll**, gardée uniquement sur le téléphone (localStorage, sans sauvegarde) :
