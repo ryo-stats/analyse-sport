@@ -326,6 +326,17 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .pcard h2{font-size:1.3rem;margin:0}
 .pcard .src{margin:0}
 .pcard.on{border-color:var(--home)}
+.pguide{display:grid;gap:14px;margin-bottom:18px}
+.pdev{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px}
+.pdev.me{border-color:var(--home);box-shadow:0 0 0 1px var(--home) inset}
+.pdev h3{display:flex;align-items:center;gap:12px;margin:0 0 12px;font:800 1.3rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pdi{font-size:1.5rem;line-height:1}
+.pdme{margin-left:auto;font:700 .7rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--home);border:1px solid var(--home);border-radius:999px;padding:3px 8px;white-space:nowrap}
+.pdev ol{margin:0;padding-left:1.5em;display:grid;gap:10px;font-size:1.02rem;line-height:1.45}
+.pdev li::marker{color:var(--muted);font-weight:600}
+.pdev b{color:var(--ink)}
+.pdev .dim{color:var(--muted)}
+.pdev .note{margin:14px 0 0;color:var(--muted);font-size:.9rem;line-height:1.45}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:st}
 .steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:center;font-size:1rem;line-height:1.35;counter-increment:st}
 .si{width:44px;height:44px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:1.35rem;position:relative}
@@ -1015,7 +1026,7 @@ async function syncRobot(){
 const keyBytes = k => Uint8Array.from(atob(k.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((k.length + 3) % 4)), c => c.charCodeAt(0));
 const say = t => { const el = document.getElementById("amsg"); if (el) el.textContent = t; };
 async function enablePush(){
-  if (!PUSH_OK || !SWREG){ say(IOS && !STANDALONE ? "Sur iPhone, suis d'abord les étapes 1 à 3 juste au-dessus." : "Ton navigateur ne sait pas faire les notifications. Prends Chrome (Android, PC) ou Safari (iPhone)."); return; }
+  if (!PUSH_OK || !SWREG){ say(IOS && !STANDALONE ? "Sur iPhone, suis d'abord les étapes de la carte « iPhone et iPad » ci-dessous." : "Ton navigateur ne sait pas faire les notifications. Prends Chrome (Android, PC) ou Safari (iPhone)."); return; }
   say("Ton téléphone va te demander la permission…");
   const perm = await Notification.requestPermission();      // en premier : l'iPhone exige que ce soit juste après le toucher
   if (perm !== "granted"){ render(); say("Tu as dit non. Pas grave : regarde « J'ai appuyé sur Bloquer » juste en dessous."); return; }
@@ -1064,34 +1075,44 @@ function pushGuide(){
       <label class="switch"><input type="checkbox" id="amorning"${MORNING ? " checked" : ""}> <span>☀️ Résumé du matin vers 8 h (bilan d'hier et pronostics les plus sûrs)</span></label>
       <div class="arow"><button type="button" id="atest">Envoyer un test</button><button type="button" id="aoff">Couper les notifications</button></div></section>`;
   }
-  const step = (icon, txt) => `<li><span class="si" aria-hidden="true">${icon}</span><span>${txt}</span></li>`;
   const denied = PUSH_OK && Notification.permission === "denied";
-  let steps, button = true;
-  if (IOS && !STANDALONE){
-    button = false;
-    steps = step("📤", "En bas de l'écran, touche le bouton <b>Partager</b> (le carré avec une flèche vers le haut).") +
-            step("➕", "Descends un peu et touche <b>« Sur l'écran d'accueil »</b>, puis <b>« Ajouter »</b>.") +
-            step("🟩", "Va sur ton écran d'accueil et ouvre la nouvelle icône verte <b>« Analyse »</b>.") +
-            step("🔔", "Dans l'appli, viens ici (<b>★ Favoris</b>) et touche le gros bouton <b>« Activer les notifications »</b>, puis <b>« Autoriser »</b>.") +
-            step("⭐", "Remets tes étoiles ☆ dans l'appli : celles de Safari n'y passent pas.");
-  } else if (!PUSH_OK){
-    button = false;
-    steps = step("🌐", "Ton navigateur ne sait pas faire les notifications. Ouvre le site avec <b>Chrome</b> (Android, PC) ou <b>Safari</b> (iPhone).");
-  } else {
-    steps = step("👉", "Touche le gros bouton vert <b>« Activer les notifications »</b> juste en dessous.") +
-            step("✅", "Ton téléphone te demande la permission : touche <b>« Autoriser »</b>.") +
-            step("⭐", "Va dans <b>Foot</b> ou <b>NHL</b> et touche l'étoile ☆ à côté de l'heure des matchs que tu aimes.") +
-            step("📳", "C'est tout ! Quand il y a un but dans un de ces matchs, ton téléphone sonne.");
-  }
+  const ANDROID = /Android/i.test(navigator.userAgent);
+  const me = IOS ? "ios" : ANDROID ? "android" : "pc";
+  // un appareil = une carte : titre, étapes numérotées, note ; celle de cet appareil d'abord, encadrée
+  const card = (id, icon, title, steps, note) => `<section class="pdev${id === me ? " me" : ""}">
+      <h3><span class="pdi" aria-hidden="true">${icon}</span>${title}${id === me ? `<span class="pdme">Ton appareil</span>` : ""}</h3>
+      <ol>${steps.map(x => `<li>${x}</li>`).join("")}</ol>${note ? `<p class="note">${note}</p>` : ""}</section>`;
+  const cards = {
+    ios: card("ios", "📱", "iPhone et iPad", [
+      "Ouvre le site dans <b>Safari</b>.",
+      "Touche le bouton <b>Partager</b> <span class=\"dim\">(le carré avec une flèche vers le haut)</span>.",
+      "Choisis <b>« Sur l'écran d'accueil »</b>, puis <b>Ajouter</b>.",
+      "Ouvre l'icône <b>« Analyse »</b> sur ton écran d'accueil, va dans <b>★ Favoris</b> et touche <b>« Activer les notifications »</b>, puis <b>Autoriser</b>."],
+      "Apple n'envoie les notifications d'un site qu'une fois ajouté à l'écran d'accueil (iOS 16.4 ou plus récent). Remets tes étoiles ☆ dans l'appli : celles de Safari n'y passent pas."),
+    android: card("android", "🤖", "Android", [
+      "Ouvre le site dans <b>Chrome</b> <span class=\"dim\">(ou Samsung Internet, Edge, Firefox)</span>.",
+      "Touche <b>« Activer les notifications »</b>, puis <b>Autoriser</b>.",
+      "Mets une étoile <b>☆</b> à côté de l'heure des matchs que tu veux suivre."],
+      "Pour l'avoir comme une appli : menu <b>⋮</b> › <b>« Installer l'application »</b> (ou « Ajouter à l'écran d'accueil »)."),
+    pc: card("pc", "💻", "Ordinateur", [
+      "Ouvre le site dans <b>Chrome</b>, <b>Edge</b>, <b>Firefox</b> ou <b>Safari</b>.",
+      "Clique sur <b>« Activer les notifications »</b>, puis <b>Autoriser</b>.",
+      "Mets une étoile <b>☆</b> à côté de l'heure des matchs que tu veux suivre."],
+      "Les notifications arrivent tant que le navigateur est ouvert, même réduit."),
+  };
+  const order = [me, ...["ios", "android", "pc"].filter(x => x !== me)];
+  // bouton seulement là où il marche tout de suite (pas dans Safari sur iPhone, pas sans notifications)
+  const button = PUSH_OK && !(IOS && !STANDALONE);
   const help = denied ? `<details class="phelp" open><summary>J'ai appuyé sur « Bloquer »</summary>
       <p class="src"><b>Android :</b> touche le cadenas 🔒 à côté de l'adresse du site › <b>Autorisations</b> › <b>Notifications</b> › <b>Autoriser</b>. Puis reviens ici et touche le bouton.<br>
       <b>iPhone :</b> <b>Réglages</b> › <b>Notifications</b> › <b>Analyse</b> › active <b>Autoriser les notifications</b>.</p></details>` : "";
   const install = INSTALL && !STANDALONE ? `<button type="button" class="bigbtn alt" id="ainstall">📲 Mettre le site sur l'écran d'accueil</button>` : "";
+  const nopush = !PUSH_OK && !(IOS && !STANDALONE) ? `<p class="src">Ce navigateur ne sait pas faire les notifications : suis les étapes de ton appareil ci-dessous.</p>` : "";
   return `<section class="pcard"><h2>🔔 Sois prévenu des buts</h2>
     <p class="src">Gratuit, sans appli et sans compte. Tu ne reçois que <b>tes</b> matchs en favori (★) : les buts et le résultat final.</p>
-    <ol class="steps">${steps}</ol>
-    ${button ? `<button type="button" class="bigbtn" id="apush">Activer les notifications</button>` : ""}${install}
-    <p class="src" id="amsg" role="status"></p>${help}</section>`;
+    ${button ? `<button type="button" class="bigbtn" id="apush">Activer les notifications</button>` : ""}${install}${nopush}
+    <p class="src" id="amsg" role="status"></p>${help}</section>
+    <div class="pguide">${order.map(k => cards[k]).join("")}</div>`;
 }
 function liveView(){
   return `<p class="warnline">Pourcentages recalculés pendant le match à partir du score, de la minute et des cartons rouges, toutes les 30 secondes. Ils ne voient pas la physionomie du match (domination, tirs) : moins fins que les cotes en direct des bookmakers. Touche ☆ pour suivre un match (onglet ★ Favoris).</p><div id="livebox">${liveList()}</div>`;
