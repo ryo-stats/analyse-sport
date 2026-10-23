@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T00:51+02:00",
+ "generated": "2026-10-23T04:10+02:00",
  "date": "2026-10-23",
  "matches": [
   {
@@ -182,8 +182,8 @@
    "home": "Torino",
    "away": "Monza",
    "state": "pre",
-   "xgH": 1.33,
-   "xgA": 1.0,
+   "xgH": 1.28,
+   "xgA": 0.95,
    "pH": 44,
    "pD": 28,
    "pA": 28,
@@ -192,42 +192,42 @@
     "main": {
      "market": "1N",
      "label": "Torino ou nul",
-     "p": 0.7188,
+     "p": 0.7242,
      "prob": 72,
-     "fair": 1.39,
+     "fair": 1.38,
      "stars": 4
     },
     "winner": {
      "market": "1",
      "label": "Victoire Torino",
-     "p": 0.4418,
+     "p": 0.4399,
      "prob": 44,
-     "fair": 2.26,
+     "fair": 2.27,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1297,
-     "prob": 13,
-     "fair": 7.71,
+     "p": 0.1381,
+     "prob": 14,
+     "fair": 7.24,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Torino gagne sans encaisser de but",
-     "p": 0.2706,
-     "prob": 27,
-     "fair": 3.69,
+     "p": 0.2795,
+     "prob": 28,
+     "fair": 3.58,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Ché Adams marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
      "player": "Ché Adams",
      "team": "Torino",
@@ -239,9 +239,9 @@
     "decisive": {
      "market": "dec",
      "label": "Ché Adams buteur ou passeur",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
      "stars": 1,
      "player": "Ché Adams",
      "team": "Torino",
@@ -435,9 +435,9 @@
    "time": "01:00",
    "home": "Boston Bruins",
    "away": "Nashville Predators",
-   "state": "PRE",
-   "xgH": 3.41,
-   "xgA": 2.89,
+   "state": "FINAL",
+   "xgH": 3.35,
+   "xgA": 2.85,
    "pH": 46,
    "pD": 22,
    "pA": 32,
@@ -448,10 +448,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
@@ -464,9 +464,9 @@
     "fun": {
      "market": "h2",
      "label": "Boston Bruins gagne par 2 buts d'écart ou plus",
-     "p": 0.3806,
+     "p": 0.379,
      "prob": 38,
-     "fair": 2.63,
+     "fair": 2.64,
      "stars": 1
     },
     "player": {
@@ -478,18 +478,20 @@
      "stars": 3,
      "player": "David Pastrnak",
      "pid": 8477956,
-     "team": "Boston Bruins"
+     "team": "Boston Bruins",
+     "why": "6 buts et 10 passes en 11 matchs · Boston Bruins favori (58 %) · 3,4 buts attendus pour Boston Bruins"
     },
     "scorer": {
      "market": "goal",
      "label": "Morgan Geekie marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Morgan Geekie",
      "pid": 8479987,
-     "team": "Boston Bruins"
+     "team": "Boston Bruins",
+     "why": "1 but et 7 passes en 11 matchs · Boston Bruins favori (58 %) · 3,4 buts attendus pour Boston Bruins"
     }
    }
   },
@@ -501,9 +503,9 @@
    "time": "01:00",
    "home": "Toronto Maple Leafs",
    "away": "New York Rangers",
-   "state": "PRE",
-   "xgH": 3.14,
-   "xgA": 3.16,
+   "state": "FINAL",
+   "xgH": 3.09,
+   "xgA": 3.11,
    "pH": 39,
    "pD": 22,
    "pA": 39,
@@ -514,10 +516,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -530,21 +532,22 @@
     "fun": {
      "market": "a2",
      "label": "New York Rangers gagne par 2 buts d'écart ou plus",
-     "p": 0.3106,
+     "p": 0.3091,
      "prob": 31,
-     "fair": 3.22,
+     "fair": 3.24,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Mika Zibanejad : au moins 1 point",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
+     "p": 0.59,
+     "prob": 59,
+     "fair": 1.69,
+     "stars": 2,
      "player": "Mika Zibanejad",
      "pid": 8476459,
-     "team": "New York Rangers"
+     "team": "New York Rangers",
+     "why": "2 buts et 7 passes en 11 matchs · New York Rangers favori (50 %) · 3,1 buts attendus pour New York Rangers"
     },
     "scorer": {
      "market": "goal",
@@ -555,7 +558,8 @@
      "stars": 1,
      "player": "Mika Zibanejad",
      "pid": 8476459,
-     "team": "New York Rangers"
+     "team": "New York Rangers",
+     "why": "2 buts et 7 passes en 11 matchs · New York Rangers favori (50 %) · 3,1 buts attendus pour New York Rangers"
     }
    }
   },
@@ -567,9 +571,9 @@
    "time": "01:00",
    "home": "Ottawa Senators",
    "away": "San Jose Sharks",
-   "state": "PRE",
-   "xgH": 3.31,
-   "xgA": 2.99,
+   "state": "FINAL",
+   "xgH": 3.26,
+   "xgA": 2.94,
    "pH": 44,
    "pD": 22,
    "pA": 34,
@@ -580,10 +584,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
@@ -596,9 +600,9 @@
     "fun": {
      "market": "h2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3517,
+     "p": 0.3501,
      "prob": 35,
-     "fair": 2.84,
+     "fair": 2.86,
      "stars": 1
     },
     "player": {
@@ -610,18 +614,20 @@
      "stars": 3,
      "player": "Tim Stützle",
      "pid": 8482116,
-     "team": "Ottawa Senators"
+     "team": "Ottawa Senators",
+     "why": "6 buts et 8 passes en 10 matchs · Ottawa Senators favori (55 %) · 3,3 buts attendus pour Ottawa Senators"
     },
     "scorer": {
      "market": "goal",
      "label": "Tim Stützle marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Tim Stützle",
      "pid": 8482116,
-     "team": "Ottawa Senators"
+     "team": "Ottawa Senators",
+     "why": "6 buts et 8 passes en 10 matchs · Ottawa Senators favori (55 %) · 3,3 buts attendus pour Ottawa Senators"
     }
    }
   },
@@ -633,9 +639,9 @@
    "time": "01:00",
    "home": "New Jersey Devils",
    "away": "Anaheim Ducks",
-   "state": "PRE",
-   "xgH": 3.65,
-   "xgA": 2.65,
+   "state": "OFF",
+   "xgH": 3.6,
+   "xgA": 2.6,
    "pH": 53,
    "pD": 22,
    "pA": 25,
@@ -662,9 +668,9 @@
     "fun": {
      "market": "wh_o55",
      "label": "New Jersey Devils gagne et plus de 5,5 buts",
-     "p": 0.4099,
-     "prob": 41,
-     "fair": 2.44,
+     "p": 0.3999,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1
     },
     "player": {
@@ -676,7 +682,8 @@
      "stars": 4,
      "player": "Jack Hughes",
      "pid": 8481559,
-     "team": "New Jersey Devils"
+     "team": "New Jersey Devils",
+     "why": "3 buts et 8 passes en 10 matchs · New Jersey Devils favori (66 %) · 3,6 buts attendus pour New Jersey Devils"
     },
     "scorer": {
      "market": "goal",
@@ -687,7 +694,8 @@
      "stars": 1,
      "player": "Jack Hughes",
      "pid": 8481559,
-     "team": "New Jersey Devils"
+     "team": "New Jersey Devils",
+     "why": "3 buts et 8 passes en 10 matchs · New Jersey Devils favori (66 %) · 3,6 buts attendus pour New Jersey Devils"
     }
    }
   },
@@ -699,9 +707,9 @@
    "time": "01:00",
    "home": "Pittsburgh Penguins",
    "away": "Florida Panthers",
-   "state": "PRE",
-   "xgH": 3.14,
-   "xgA": 3.16,
+   "state": "OFF",
+   "xgH": 3.09,
+   "xgA": 3.11,
    "pH": 39,
    "pD": 22,
    "pA": 39,
@@ -712,10 +720,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -728,21 +736,22 @@
     "fun": {
      "market": "a2",
      "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
-     "p": 0.3106,
+     "p": 0.3091,
      "prob": 31,
-     "fair": 3.22,
+     "fair": 3.24,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Matthew Tkachuk : au moins 1 point",
-     "p": 0.62,
-     "prob": 62,
-     "fair": 1.61,
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3,
      "player": "Matthew Tkachuk",
      "pid": 8479314,
-     "team": "Florida Panthers"
+     "team": "Florida Panthers",
+     "why": "3 buts et 12 passes en 11 matchs · Florida Panthers favori (50 %) · 3,1 buts attendus pour Florida Panthers"
     },
     "scorer": {
      "market": "goal",
@@ -753,7 +762,8 @@
      "stars": 1,
      "player": "Sam Reinhart",
      "pid": 8477933,
-     "team": "Florida Panthers"
+     "team": "Florida Panthers",
+     "why": "5 buts et 3 passes en 11 matchs · Florida Panthers favori (50 %) · 3,1 buts attendus pour Florida Panthers"
     }
    }
   },
@@ -765,9 +775,9 @@
    "time": "01:30",
    "home": "New York Islanders",
    "away": "Los Angeles Kings",
-   "state": "FUT",
-   "xgH": 2.62,
-   "xgA": 2.68,
+   "state": "CRIT",
+   "xgH": 3.07,
+   "xgA": 3.13,
    "pH": 38,
    "pD": 22,
    "pA": 40,
@@ -776,11 +786,11 @@
    "edate": "20261022",
    "picks": {
     "main": {
-     "market": "u55",
-     "label": "Moins de 5,5 buts",
-     "p": 0.5635,
-     "prob": 56,
-     "fair": 1.77,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
      "stars": 2
     },
     "winner": {
@@ -792,34 +802,36 @@
      "stars": 2
     },
     "fun": {
-     "market": "wa_by1",
-     "label": "Los Angeles Kings gagne d'un seul but (prolongation comprise)",
-     "p": 0.2114,
-     "prob": 21,
-     "fair": 4.73,
+     "market": "a2",
+     "label": "Los Angeles Kings gagne par 2 buts d'écart ou plus",
+     "p": 0.3146,
+     "prob": 31,
+     "fair": 3.18,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Adrian Kempe : au moins 1 point",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2,
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
+     "stars": 3,
      "player": "Adrian Kempe",
      "pid": 8477960,
-     "team": "Los Angeles Kings"
+     "team": "Los Angeles Kings",
+     "why": "3 buts et 3 passes en 7 matchs · Los Angeles Kings favori (51 %) · 3,1 buts attendus pour Los Angeles Kings"
     },
     "scorer": {
      "market": "goal",
      "label": "Adrian Kempe marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
      "player": "Adrian Kempe",
      "pid": 8477960,
-     "team": "Los Angeles Kings"
+     "team": "Los Angeles Kings",
+     "why": "3 buts et 3 passes en 7 matchs · Los Angeles Kings favori (51 %) · 3,1 buts attendus pour Los Angeles Kings"
     }
    }
   },
@@ -831,9 +843,9 @@
    "time": "02:00",
    "home": "St. Louis Blues",
    "away": "Vegas Golden Knights",
-   "state": "FUT",
-   "xgH": 3.05,
-   "xgA": 3.25,
+   "state": "LIVE",
+   "xgH": 3.0,
+   "xgA": 3.2,
    "pH": 36,
    "pD": 22,
    "pA": 42,
@@ -844,10 +856,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -860,32 +872,34 @@
     "fun": {
      "market": "a2",
      "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-     "p": 0.3348,
+     "p": 0.3334,
      "prob": 33,
-     "fair": 2.99,
+     "fair": 3.0,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Jack Eichel : au moins 1 point",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.65,
+     "prob": 65,
+     "fair": 1.54,
      "stars": 3,
      "player": "Jack Eichel",
      "pid": 8478403,
-     "team": "Vegas Golden Knights"
+     "team": "Vegas Golden Knights",
+     "why": "5 buts et 13 passes en 11 matchs · Vegas Golden Knights favori (53 %) · 3,2 buts attendus pour Vegas Golden Knights"
     },
     "scorer": {
      "market": "goal",
      "label": "Mark Stone marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
      "player": "Mark Stone",
      "pid": 8475913,
-     "team": "Vegas Golden Knights"
+     "team": "Vegas Golden Knights",
+     "why": "8 buts et 7 passes en 11 matchs · Vegas Golden Knights favori (53 %) · 3,2 buts attendus pour Vegas Golden Knights"
     }
    }
   },
@@ -897,9 +911,9 @@
    "time": "02:00",
    "home": "Dallas Stars",
    "away": "Winnipeg Jets",
-   "state": "FUT",
-   "xgH": 3.06,
-   "xgA": 2.24,
+   "state": "LIVE",
+   "xgH": 3.55,
+   "xgA": 2.65,
    "pH": 52,
    "pD": 22,
    "pA": 26,
@@ -924,34 +938,36 @@
      "stars": 3
     },
     "fun": {
-     "market": "o65",
-     "label": "Plus de 6,5 buts",
-     "p": 0.3272,
-     "prob": 33,
-     "fair": 3.06,
+     "market": "wh_o55",
+     "label": "Dallas Stars gagne et plus de 5,5 buts",
+     "p": 0.3912,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1
     },
     "player": {
      "market": "point",
-     "label": "Mikko Rantanen : au moins 1 point",
-     "p": 0.62,
-     "prob": 62,
-     "fair": 1.61,
+     "label": "Jason Robertson : au moins 1 point",
+     "p": 0.67,
+     "prob": 67,
+     "fair": 1.49,
      "stars": 3,
-     "player": "Mikko Rantanen",
-     "pid": 8478420,
-     "team": "Dallas Stars"
+     "player": "Jason Robertson",
+     "pid": 8480027,
+     "team": "Dallas Stars",
+     "why": "3 buts et 6 passes en 9 matchs · Dallas Stars favori (64 %) · 3,6 buts attendus pour Dallas Stars"
     },
     "scorer": {
      "market": "goal",
      "label": "Jason Robertson marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1,
      "player": "Jason Robertson",
      "pid": 8480027,
-     "team": "Dallas Stars"
+     "team": "Dallas Stars",
+     "why": "3 buts et 6 passes en 9 matchs · Dallas Stars favori (64 %) · 3,6 buts attendus pour Dallas Stars"
     }
    }
   },
@@ -963,9 +979,9 @@
    "time": "03:00",
    "home": "Calgary Flames",
    "away": "Minnesota Wild",
-   "state": "FUT",
-   "xgH": 2.69,
-   "xgA": 3.61,
+   "state": "LIVE",
+   "xgH": 2.65,
+   "xgA": 3.55,
    "pH": 26,
    "pD": 22,
    "pA": 52,
@@ -992,32 +1008,34 @@
     "fun": {
      "market": "wa_o55",
      "label": "Minnesota Wild gagne et plus de 5,5 buts",
-     "p": 0.4011,
-     "prob": 40,
-     "fair": 2.49,
+     "p": 0.3912,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Kirill Kaprizov : au moins 1 point",
-     "p": 0.69,
-     "prob": 69,
-     "fair": 1.45,
+     "p": 0.68,
+     "prob": 68,
+     "fair": 1.47,
      "stars": 3,
      "player": "Kirill Kaprizov",
      "pid": 8478864,
-     "team": "Minnesota Wild"
+     "team": "Minnesota Wild",
+     "why": "11 buts et 6 passes en 10 matchs · Minnesota Wild favori (64 %) · 3,6 buts attendus pour Minnesota Wild"
     },
     "scorer": {
      "market": "goal",
      "label": "Kirill Kaprizov marque",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Kirill Kaprizov",
      "pid": 8478864,
-     "team": "Minnesota Wild"
+     "team": "Minnesota Wild",
+     "why": "11 buts et 6 passes en 10 matchs · Minnesota Wild favori (64 %) · 3,6 buts attendus pour Minnesota Wild"
     }
    }
   },
@@ -1029,9 +1047,9 @@
    "time": "03:00",
    "home": "Edmonton Oilers",
    "away": "Carolina Hurricanes",
-   "state": "FUT",
-   "xgH": 2.99,
-   "xgA": 3.31,
+   "state": "LIVE",
+   "xgH": 2.94,
+   "xgA": 3.26,
    "pH": 34,
    "pD": 22,
    "pA": 44,
@@ -1042,10 +1060,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -1058,9 +1076,9 @@
     "fun": {
      "market": "a2",
      "label": "Carolina Hurricanes gagne par 2 buts d'écart ou plus",
-     "p": 0.3517,
+     "p": 0.3501,
      "prob": 35,
-     "fair": 2.84,
+     "fair": 2.86,
      "stars": 1
     },
     "player": {
@@ -1072,7 +1090,8 @@
      "stars": 2,
      "player": "Sebastian Aho",
      "pid": 8478427,
-     "team": "Carolina Hurricanes"
+     "team": "Carolina Hurricanes",
+     "why": "6 buts et 8 passes en 11 matchs · Carolina Hurricanes favori (55 %) · 3,3 buts attendus pour Carolina Hurricanes"
     },
     "scorer": {
      "market": "goal",
@@ -1083,7 +1102,8 @@
      "stars": 1,
      "player": "Andrei Svechnikov",
      "pid": 8480830,
-     "team": "Carolina Hurricanes"
+     "team": "Carolina Hurricanes",
+     "why": "6 buts et 5 passes en 11 matchs · Carolina Hurricanes favori (55 %) · 3,3 buts attendus pour Carolina Hurricanes"
     }
    }
   },
@@ -1095,9 +1115,9 @@
    "time": "04:00",
    "home": "Seattle Kraken",
    "away": "Utah Mammoth",
-   "state": "FUT",
-   "xgH": 2.83,
-   "xgA": 3.47,
+   "state": "LIVE",
+   "xgH": 2.78,
+   "xgA": 3.42,
    "pH": 30,
    "pD": 22,
    "pA": 48,
@@ -1124,9 +1144,9 @@
     "fun": {
      "market": "a2",
      "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
-     "p": 0.4004,
+     "p": 0.3988,
      "prob": 40,
-     "fair": 2.5,
+     "fair": 2.51,
      "stars": 1
     },
     "player": {
@@ -1138,18 +1158,20 @@
      "stars": 3,
      "player": "Clayton Keller",
      "pid": 8479343,
-     "team": "Utah Mammoth"
+     "team": "Utah Mammoth",
+     "why": "4 buts et 9 passes en 10 matchs · Utah Mammoth favori (60 %) · 3,4 buts attendus pour Utah Mammoth"
     },
     "scorer": {
      "market": "goal",
      "label": "Dylan Guenther marque",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Dylan Guenther",
      "pid": 8482699,
-     "team": "Utah Mammoth"
+     "team": "Utah Mammoth",
+     "why": "4 buts et 5 passes en 10 matchs · Utah Mammoth favori (60 %) · 3,4 buts attendus pour Utah Mammoth"
     }
    }
   },
@@ -1161,9 +1183,9 @@
    "time": "04:00",
    "home": "Vancouver Canucks",
    "away": "Detroit Red Wings",
-   "state": "FUT",
-   "xgH": 2.83,
-   "xgA": 3.47,
+   "state": "LIVE",
+   "xgH": 2.78,
+   "xgA": 3.42,
    "pH": 30,
    "pD": 22,
    "pA": 48,
@@ -1190,9 +1212,9 @@
     "fun": {
      "market": "a2",
      "label": "Detroit Red Wings gagne par 2 buts d'écart ou plus",
-     "p": 0.4004,
+     "p": 0.3988,
      "prob": 40,
-     "fair": 2.5,
+     "fair": 2.51,
      "stars": 1
     },
     "player": {
@@ -1204,7 +1226,8 @@
      "stars": 3,
      "player": "Alex DeBrincat",
      "pid": 8479337,
-     "team": "Detroit Red Wings"
+     "team": "Detroit Red Wings",
+     "why": "6 buts et 5 passes en 9 matchs · Detroit Red Wings favori (60 %) · 3,4 buts attendus pour Detroit Red Wings"
     },
     "scorer": {
      "market": "goal",
@@ -1215,7 +1238,8 @@
      "stars": 1,
      "player": "Alex DeBrincat",
      "pid": 8479337,
-     "team": "Detroit Red Wings"
+     "team": "Detroit Red Wings",
+     "why": "6 buts et 5 passes en 9 matchs · Detroit Red Wings favori (60 %) · 3,4 buts attendus pour Detroit Red Wings"
     }
    }
   }
@@ -1242,10 +1266,10 @@
     "match": "Alavés – Málaga"
    },
    {
-    "label": "Jack Hughes : au moins 1 point",
-    "prob": 74,
-    "time": "01:00",
-    "match": "New Jersey Devils – Anaheim Ducks"
+    "label": "Torino ou nul",
+    "prob": 72,
+    "time": "20:45",
+    "match": "Torino – Monza"
    }
   ]
  }
