@@ -10569,7 +10569,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876428|1|": {
   "match": "foot-401876428",
@@ -10593,7 +10593,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876428|scorer|Kamory Doumbia": {
   "match": "foot-401876428",
@@ -10617,7 +10617,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876428|dec|Kamory Doumbia": {
   "match": "foot-401876428",
@@ -10669,7 +10669,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874957|1N|": {
   "match": "foot-401874957",
@@ -10693,7 +10693,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874957|1|": {
   "match": "foot-401874957",
@@ -10717,7 +10717,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874957|scorer|Ché Adams": {
   "match": "foot-401874957",
@@ -10741,7 +10741,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874957|dec|Ché Adams": {
   "match": "foot-401874957",
@@ -10793,7 +10793,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874957|exact|": {
   "match": "foot-401874957",
@@ -10817,7 +10817,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879253|N2|": {
   "match": "foot-401879253",
@@ -10841,7 +10841,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879253|2|": {
   "match": "foot-401879253",
@@ -10865,7 +10865,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879253|scorer|Dan Ndoye": {
   "match": "foot-401879253",
@@ -10889,7 +10889,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879253|dec|Dan Ndoye": {
   "match": "foot-401879253",
@@ -10941,7 +10941,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882836|1N|": {
   "match": "foot-401882836",
@@ -10965,7 +10965,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882836|1|": {
   "match": "foot-401882836",
@@ -10989,7 +10989,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882836|scorer|Lucas Boyé": {
   "match": "foot-401882836",
@@ -11013,7 +11013,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882836|dec|Lucas Boyé": {
   "match": "foot-401882836",
@@ -11065,7 +11065,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882836|exact|": {
   "match": "foot-401882836",
@@ -11089,7 +11089,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020166|win_a|": {
   "match": "nhl-2026020166",
@@ -11221,7 +11221,7 @@
   "away": "Tampa Bay Lightning",
   "market": "win_h",
   "label": "Victoire Colorado Avalanche",
-  "p": 0.5325,
+  "p": 0.5261,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -11269,7 +11269,7 @@
   "away": "Tampa Bay Lightning",
   "market": "goal",
   "label": "Nathan MacKinnon marque",
-  "p": 0.39,
+  "p": 0.38,
   "stars": 1,
   "player": "Nathan MacKinnon",
   "pid_player": 8477492,
@@ -11293,7 +11293,7 @@
   "away": "Tampa Bay Lightning",
   "market": "h2",
   "label": "Colorado Avalanche gagne par 2 buts d'écart ou plus",
-  "p": 0.3348,
+  "p": 0.3293,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -11330,7 +11330,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876428|wh_nil|": {
   "match": "foot-401876428",
@@ -11353,6 +11353,2818 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": false
+ },
+ "foot-401879256|N2|": {
+  "match": "foot-401879256",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Aston Villa",
+  "away": "Man City",
+  "market": "N2",
+  "label": "Nul ou Man City",
+  "p": 0.805,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401879256|2|": {
+  "match": "foot-401879256",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Aston Villa",
+  "away": "Man City",
+  "market": "2",
+  "label": "Victoire Man City",
+  "p": 0.5879,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401879256|scorer|Erling Haaland": {
+  "match": "foot-401879256",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Aston Villa",
+  "away": "Man City",
+  "market": "scorer",
+  "label": "Erling Haaland marque",
+  "p": 0.5,
+  "stars": 2,
+  "player": "Erling Haaland",
+  "pid_player": "253989",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401879256|dec|Erling Haaland": {
+  "match": "foot-401879256",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Aston Villa",
+  "away": "Man City",
+  "market": "dec",
+  "label": "Erling Haaland buteur ou passeur",
+  "p": 0.54,
+  "stars": 2,
+  "player": "Erling Haaland",
+  "pid_player": "253989",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": [
+   7,
+   8,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401879256|wa_o25|": {
+  "match": "foot-401879256",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Aston Villa",
+  "away": "Man City",
+  "market": "wa_o25",
+  "label": "Man City gagne et plus de 2,5 buts",
+  "p": 0.3919,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401879256|exact|": {
+  "match": "foot-401879256",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Aston Villa",
+  "away": "Man City",
+  "market": "exact",
+  "label": "Score exact 1-2",
+  "p": 0.0995,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-2",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401882830|1N|": {
+  "match": "foot-401882830",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Rayo",
+  "away": "Elche",
+  "market": "1N",
+  "label": "Rayo ou nul",
+  "p": 0.7878,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401882830|1|": {
+  "match": "foot-401882830",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Rayo",
+  "away": "Elche",
+  "market": "1",
+  "label": "Victoire Rayo",
+  "p": 0.5398,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401882830|scorer|Sergio Camello": {
+  "match": "foot-401882830",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Rayo",
+  "away": "Elche",
+  "market": "scorer",
+  "label": "Sergio Camello marque",
+  "p": 0.49,
+  "stars": 1,
+  "player": "Sergio Camello",
+  "pid_player": "276652",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401882830|dec|Sergio Camello": {
+  "match": "foot-401882830",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Rayo",
+  "away": "Elche",
+  "market": "dec",
+  "label": "Sergio Camello buteur ou passeur",
+  "p": 0.56,
+  "stars": 2,
+  "player": "Sergio Camello",
+  "pid_player": "276652",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": [
+   9,
+   7,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401882830|scw|Sergio Camello": {
+  "match": "foot-401882830",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Rayo",
+  "away": "Elche",
+  "market": "scw",
+  "label": "Sergio Camello marque et Rayo gagne",
+  "p": 0.3623,
+  "stars": 1,
+  "player": "Sergio Camello",
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": "h",
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882830|exact|": {
+  "match": "foot-401882830",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Rayo",
+  "away": "Elche",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1284,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401874958|u25|": {
+  "match": "foot-401874958",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Cagliari",
+  "away": "Bologna",
+  "market": "u25",
+  "label": "Moins de 2,5 buts",
+  "p": 0.6809,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874958|2|": {
+  "match": "foot-401874958",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Cagliari",
+  "away": "Bologna",
+  "market": "2",
+  "label": "Victoire Bologna",
+  "p": 0.3643,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874958|scorer|Federico Bernardeschi": {
+  "match": "foot-401874958",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Cagliari",
+  "away": "Bologna",
+  "market": "scorer",
+  "label": "Federico Bernardeschi marque",
+  "p": 0.16,
+  "stars": 1,
+  "player": "Federico Bernardeschi",
+  "pid_player": "180956",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874958|dec|Federico Bernardeschi": {
+  "match": "foot-401874958",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Cagliari",
+  "away": "Bologna",
+  "market": "dec",
+  "label": "Federico Bernardeschi buteur ou passeur",
+  "p": 0.2,
+  "stars": 1,
+  "player": "Federico Bernardeschi",
+  "pid_player": "180956",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   7,
+   1,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874958|wa_nil|": {
+  "match": "foot-401874958",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Cagliari",
+  "away": "Bologna",
+  "market": "wa_nil",
+  "label": "Bologna gagne sans encaisser de but",
+  "p": 0.2471,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874958|exact|": {
+  "match": "foot-401874958",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Cagliari",
+  "away": "Bologna",
+  "market": "exact",
+  "label": "Score exact 0-1",
+  "p": 0.1414,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "0-1",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401874961|1N|": {
+  "match": "foot-401874961",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Como",
+  "away": "Sassuolo",
+  "market": "1N",
+  "label": "Como ou nul",
+  "p": 0.8395,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874961|1|": {
+  "match": "foot-401874961",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Como",
+  "away": "Sassuolo",
+  "market": "1",
+  "label": "Victoire Como",
+  "p": 0.6344,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874961|scorer|Anastasios Douvikas": {
+  "match": "foot-401874961",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Como",
+  "away": "Sassuolo",
+  "market": "scorer",
+  "label": "Anastasios Douvikas marque",
+  "p": 0.36,
+  "stars": 1,
+  "player": "Anastasios Douvikas",
+  "pid_player": "262071",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874961|dec|Anastasios Douvikas": {
+  "match": "foot-401874961",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Como",
+  "away": "Sassuolo",
+  "market": "dec",
+  "label": "Anastasios Douvikas buteur ou passeur",
+  "p": 0.41,
+  "stars": 1,
+  "player": "Anastasios Douvikas",
+  "pid_player": "262071",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   7,
+   3,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874961|htft_h|": {
+  "match": "foot-401874961",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Como",
+  "away": "Sassuolo",
+  "market": "htft_h",
+  "label": "Como mène à la mi-temps et gagne le match",
+  "p": 0.4128,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874961|exact|": {
+  "match": "foot-401874961",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Como",
+  "away": "Sassuolo",
+  "market": "exact",
+  "label": "Score exact 2-0",
+  "p": 0.1081,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401884758|1N|": {
+  "match": "foot-401884758",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Augsburg",
+  "away": "Union Berlin",
+  "market": "1N",
+  "label": "Augsburg ou nul",
+  "p": 0.7461,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884758|1|": {
+  "match": "foot-401884758",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Augsburg",
+  "away": "Union Berlin",
+  "market": "1",
+  "label": "Victoire Augsburg",
+  "p": 0.5054,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401884758|scorer|Michael Gregoritsch": {
+  "match": "foot-401884758",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Augsburg",
+  "away": "Union Berlin",
+  "market": "scorer",
+  "label": "Michael Gregoritsch marque",
+  "p": 0.31,
+  "stars": 1,
+  "player": "Michael Gregoritsch",
+  "pid_player": "146804",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884758|dec|Michael Gregoritsch": {
+  "match": "foot-401884758",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Augsburg",
+  "away": "Union Berlin",
+  "market": "dec",
+  "label": "Michael Gregoritsch buteur ou passeur",
+  "p": 0.35,
+  "stars": 1,
+  "player": "Michael Gregoritsch",
+  "pid_player": "146804",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   6,
+   4,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401884758|wh_o25|": {
+  "match": "foot-401884758",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Augsburg",
+  "away": "Union Berlin",
+  "market": "wh_o25",
+  "label": "Augsburg gagne et plus de 2,5 buts",
+  "p": 0.3192,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884758|exact|": {
+  "match": "foot-401884758",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Augsburg",
+  "away": "Union Berlin",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1009,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401884756|1N|": {
+  "match": "foot-401884756",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Cologne",
+  "away": "Schalke",
+  "market": "1N",
+  "label": "Cologne ou nul",
+  "p": 0.7101,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884756|1|": {
+  "match": "foot-401884756",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Cologne",
+  "away": "Schalke",
+  "market": "1",
+  "label": "Victoire Cologne",
+  "p": 0.4525,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401884756|scorer|Thijs Dallinga": {
+  "match": "foot-401884756",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Cologne",
+  "away": "Schalke",
+  "market": "scorer",
+  "label": "Thijs Dallinga marque",
+  "p": 0.21,
+  "stars": 1,
+  "player": "Thijs Dallinga",
+  "pid_player": "266280",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884756|dec|Thijs Dallinga": {
+  "match": "foot-401884756",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Cologne",
+  "away": "Schalke",
+  "market": "dec",
+  "label": "Thijs Dallinga buteur ou passeur",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Thijs Dallinga",
+  "pid_player": "266280",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   3,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401884756|htft_h|": {
+  "match": "foot-401884756",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Cologne",
+  "away": "Schalke",
+  "market": "htft_h",
+  "label": "Cologne mène à la mi-temps et gagne le match",
+  "p": 0.272,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884756|exact|": {
+  "match": "foot-401884756",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Cologne",
+  "away": "Schalke",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1077,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401884757|1N|": {
+  "match": "foot-401884757",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Mainz",
+  "away": "Bremen",
+  "market": "1N",
+  "label": "Mainz ou nul",
+  "p": 0.7791,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884757|1|": {
+  "match": "foot-401884757",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Mainz",
+  "away": "Bremen",
+  "market": "1",
+  "label": "Victoire Mainz",
+  "p": 0.5412,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401884757|scorer|Phillip Tietz": {
+  "match": "foot-401884757",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Mainz",
+  "away": "Bremen",
+  "market": "scorer",
+  "label": "Phillip Tietz marque",
+  "p": 0.41,
+  "stars": 1,
+  "player": "Phillip Tietz",
+  "pid_player": "234376",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884757|dec|Phillip Tietz": {
+  "match": "foot-401884757",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Mainz",
+  "away": "Bremen",
+  "market": "dec",
+  "label": "Phillip Tietz buteur ou passeur",
+  "p": 0.46,
+  "stars": 1,
+  "player": "Phillip Tietz",
+  "pid_player": "234376",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   6,
+   5,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401884757|htft_h|": {
+  "match": "foot-401884757",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Mainz",
+  "away": "Bremen",
+  "market": "htft_h",
+  "label": "Mainz mène à la mi-temps et gagne le match",
+  "p": 0.3371,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884757|exact|": {
+  "match": "foot-401884757",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Mainz",
+  "away": "Bremen",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1119,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401884762|1N|": {
+  "match": "foot-401884762",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "RB Leipzig",
+  "away": "Elversberg",
+  "market": "1N",
+  "label": "RB Leipzig ou nul",
+  "p": 0.8458,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884762|1|": {
+  "match": "foot-401884762",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "RB Leipzig",
+  "away": "Elversberg",
+  "market": "1",
+  "label": "Victoire RB Leipzig",
+  "p": 0.657,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401884762|scorer|Christopher Nkunku": {
+  "match": "foot-401884762",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "RB Leipzig",
+  "away": "Elversberg",
+  "market": "scorer",
+  "label": "Christopher Nkunku marque",
+  "p": 0.38,
+  "stars": 1,
+  "player": "Christopher Nkunku",
+  "pid_player": "222176",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884762|dec|Christopher Nkunku": {
+  "match": "foot-401884762",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "RB Leipzig",
+  "away": "Elversberg",
+  "market": "dec",
+  "label": "Christopher Nkunku buteur ou passeur",
+  "p": 0.47,
+  "stars": 1,
+  "player": "Christopher Nkunku",
+  "pid_player": "222176",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   6,
+   4,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401884762|o35|": {
+  "match": "foot-401884762",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "RB Leipzig",
+  "away": "Elversberg",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.4093,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884762|exact|": {
+  "match": "foot-401884762",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "RB Leipzig",
+  "away": "Elversberg",
+  "market": "exact",
+  "label": "Score exact 2-0",
+  "p": 0.0982,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401884755|1N|": {
+  "match": "foot-401884755",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Paderborn",
+  "away": "Hamburg",
+  "market": "1N",
+  "label": "Paderborn ou nul",
+  "p": 0.7558,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884755|1|": {
+  "match": "foot-401884755",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Paderborn",
+  "away": "Hamburg",
+  "market": "1",
+  "label": "Victoire Paderborn",
+  "p": 0.5215,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401884755|scorer|Stefano Marino": {
+  "match": "foot-401884755",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Paderborn",
+  "away": "Hamburg",
+  "market": "scorer",
+  "label": "Stefano Marino marque",
+  "p": 0.35,
+  "stars": 1,
+  "player": "Stefano Marino",
+  "pid_player": "332543",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884755|dec|Stefano Marino": {
+  "match": "foot-401884755",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Paderborn",
+  "away": "Hamburg",
+  "market": "dec",
+  "label": "Stefano Marino buteur ou passeur",
+  "p": 0.41,
+  "stars": 1,
+  "player": "Stefano Marino",
+  "pid_player": "332543",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   6,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401884755|wh_o25|": {
+  "match": "foot-401884755",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Paderborn",
+  "away": "Hamburg",
+  "market": "wh_o25",
+  "label": "Paderborn gagne et plus de 2,5 buts",
+  "p": 0.339,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884755|exact|": {
+  "match": "foot-401884755",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Paderborn",
+  "away": "Hamburg",
+  "market": "exact",
+  "label": "Score exact 2-1",
+  "p": 0.0973,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-1",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401878768|1N|": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "1N",
+  "label": "Arsenal ou nul",
+  "p": 0.8728,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401878768|1|": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "1",
+  "label": "Victoire Arsenal",
+  "p": 0.651,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401878768|scorer|Bukayo Saka": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "scorer",
+  "label": "Bukayo Saka marque",
+  "p": 0.36,
+  "stars": 1,
+  "player": "Bukayo Saka",
+  "pid_player": "280555",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401878768|dec|Bukayo Saka": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "dec",
+  "label": "Bukayo Saka buteur ou passeur",
+  "p": 0.41,
+  "stars": 1,
+  "player": "Bukayo Saka",
+  "pid_player": "280555",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": [
+   7,
+   3,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401878768|htft_h|": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "htft_h",
+  "label": "Arsenal mène à la mi-temps et gagne le match",
+  "p": 0.4162,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401878768|exact|": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1579,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401879255|N2|": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "N2",
+  "label": "Nul ou Fulham",
+  "p": 0.6982,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401879255|2|": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "2",
+  "label": "Victoire Fulham",
+  "p": 0.4226,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401879255|scorer|Josh King": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "scorer",
+  "label": "Josh King marque",
+  "p": 0.22,
+  "stars": 1,
+  "player": "Josh King",
+  "pid_player": "409541",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401879255|dec|Josh King": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "dec",
+  "label": "Josh King buteur ou passeur",
+  "p": 0.3,
+  "stars": 1,
+  "player": "Josh King",
+  "pid_player": "409541",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": [
+   7,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401879255|wa_nil|": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "wa_nil",
+  "label": "Fulham gagne sans encaisser de but",
+  "p": 0.2523,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401879255|exact|": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "exact",
+  "label": "Score exact 0-1",
+  "p": 0.122,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "0-1",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401882831|1N|": {
+  "match": "foot-401882831",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Racing",
+  "away": "Espanyol",
+  "market": "1N",
+  "label": "Racing ou nul",
+  "p": 0.6591,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401882831|1|": {
+  "match": "foot-401882831",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Racing",
+  "away": "Espanyol",
+  "market": "1",
+  "label": "Victoire Racing",
+  "p": 0.3977,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401882831|scorer|Yassir Zabiri": {
+  "match": "foot-401882831",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Racing",
+  "away": "Espanyol",
+  "market": "scorer",
+  "label": "Yassir Zabiri marque",
+  "p": 0.43,
+  "stars": 1,
+  "player": "Yassir Zabiri",
+  "pid_player": "390389",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401882831|dec|Yassir Zabiri": {
+  "match": "foot-401882831",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Racing",
+  "away": "Espanyol",
+  "market": "dec",
+  "label": "Yassir Zabiri buteur ou passeur",
+  "p": 0.46,
+  "stars": 1,
+  "player": "Yassir Zabiri",
+  "pid_player": "390389",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": [
+   9,
+   7,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401882831|o35|": {
+  "match": "foot-401882831",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Racing",
+  "away": "Espanyol",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.2709,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882831|exact|": {
+  "match": "foot-401882831",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Racing",
+  "away": "Espanyol",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.0991,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401874948|N2|": {
+  "match": "foot-401874948",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Napoli",
+  "away": "AS Roma",
+  "market": "N2",
+  "label": "Nul ou AS Roma",
+  "p": 0.6507,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874948|2|": {
+  "match": "foot-401874948",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Napoli",
+  "away": "AS Roma",
+  "market": "2",
+  "label": "Victoire AS Roma",
+  "p": 0.3702,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874948|scorer|Donyell Malen": {
+  "match": "foot-401874948",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Napoli",
+  "away": "AS Roma",
+  "market": "scorer",
+  "label": "Donyell Malen marque",
+  "p": 0.3,
+  "stars": 1,
+  "player": "Donyell Malen",
+  "pid_player": "259481",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874948|dec|Donyell Malen": {
+  "match": "foot-401874948",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Napoli",
+  "away": "AS Roma",
+  "market": "dec",
+  "label": "Donyell Malen buteur ou passeur",
+  "p": 0.32,
+  "stars": 1,
+  "player": "Donyell Malen",
+  "pid_player": "259481",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   6,
+   6,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874948|wa_nil|": {
+  "match": "foot-401874948",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Napoli",
+  "away": "AS Roma",
+  "market": "wa_nil",
+  "label": "AS Roma gagne sans encaisser de but",
+  "p": 0.2205,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874948|exact|": {
+  "match": "foot-401874948",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Napoli",
+  "away": "AS Roma",
+  "market": "exact",
+  "label": "Score exact 0-1",
+  "p": 0.1145,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "0-1",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401878767|1N|": {
+  "match": "foot-401878767",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Chelsea",
+  "away": "Spurs",
+  "market": "1N",
+  "label": "Chelsea ou nul",
+  "p": 0.7632,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401878767|1|": {
+  "match": "foot-401878767",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Chelsea",
+  "away": "Spurs",
+  "market": "1",
+  "label": "Victoire Chelsea",
+  "p": 0.5263,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401878767|scorer|João Pedro": {
+  "match": "foot-401878767",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Chelsea",
+  "away": "Spurs",
+  "market": "scorer",
+  "label": "João Pedro marque",
+  "p": 0.36,
+  "stars": 1,
+  "player": "João Pedro",
+  "pid_player": "284960",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401878767|dec|João Pedro": {
+  "match": "foot-401878767",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Chelsea",
+  "away": "Spurs",
+  "market": "dec",
+  "label": "João Pedro buteur ou passeur",
+  "p": 0.51,
+  "stars": 2,
+  "player": "João Pedro",
+  "pid_player": "284960",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": [
+   6,
+   5,
+   3
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401878767|wh_o25|": {
+  "match": "foot-401878767",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Chelsea",
+  "away": "Spurs",
+  "market": "wh_o25",
+  "label": "Chelsea gagne et plus de 2,5 buts",
+  "p": 0.3334,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401878767|exact|": {
+  "match": "foot-401878767",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Chelsea",
+  "away": "Spurs",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1032,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401882827|N2|": {
+  "match": "foot-401882827",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Valencia",
+  "away": "Villarreal",
+  "market": "N2",
+  "label": "Nul ou Villarreal",
+  "p": 0.6965,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401882827|2|": {
+  "match": "foot-401882827",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Valencia",
+  "away": "Villarreal",
+  "market": "2",
+  "label": "Victoire Villarreal",
+  "p": 0.4346,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401882827|scorer|Pape Gueye": {
+  "match": "foot-401882827",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Valencia",
+  "away": "Villarreal",
+  "market": "scorer",
+  "label": "Pape Gueye marque",
+  "p": 0.22,
+  "stars": 1,
+  "player": "Pape Gueye",
+  "pid_player": "255889",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401882827|dec|Pape Gueye": {
+  "match": "foot-401882827",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Valencia",
+  "away": "Villarreal",
+  "market": "dec",
+  "label": "Pape Gueye buteur ou passeur",
+  "p": 0.28,
+  "stars": 1,
+  "player": "Pape Gueye",
+  "pid_player": "255889",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": [
+   9,
+   3,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401882827|o35|": {
+  "match": "foot-401882827",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Valencia",
+  "away": "Villarreal",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.26,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882827|exact|": {
+  "match": "foot-401882827",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Valencia",
+  "away": "Villarreal",
+  "market": "exact",
+  "label": "Score exact 0-1",
+  "p": 0.1083,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "0-1",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401884763|1N|": {
+  "match": "foot-401884763",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Dortmund",
+  "away": "Frankfurt",
+  "market": "1N",
+  "label": "Dortmund ou nul",
+  "p": 0.8246,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884763|1|": {
+  "match": "foot-401884763",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Dortmund",
+  "away": "Frankfurt",
+  "market": "1",
+  "label": "Victoire Dortmund",
+  "p": 0.6286,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401884763|scorer|Serhou Guirassy": {
+  "match": "foot-401884763",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Dortmund",
+  "away": "Frankfurt",
+  "market": "scorer",
+  "label": "Serhou Guirassy marque",
+  "p": 0.38,
+  "stars": 1,
+  "player": "Serhou Guirassy",
+  "pid_player": "186381",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884763|dec|Serhou Guirassy": {
+  "match": "foot-401884763",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Dortmund",
+  "away": "Frankfurt",
+  "market": "dec",
+  "label": "Serhou Guirassy buteur ou passeur",
+  "p": 0.58,
+  "stars": 2,
+  "player": "Serhou Guirassy",
+  "pid_player": "186381",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   6,
+   2,
+   2
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401884763|o35|": {
+  "match": "foot-401884763",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Dortmund",
+  "away": "Frankfurt",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.4173,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884763|exact|": {
+  "match": "foot-401884763",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-10-24",
+  "home": "Dortmund",
+  "away": "Frankfurt",
+  "market": "exact",
+  "label": "Score exact 2-1",
+  "p": 0.0983,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-1",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401876427|1N|": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "1N",
+  "label": "Lens ou nul",
+  "p": 0.6523,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401876427|1|": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "1",
+  "label": "Victoire Lens",
+  "p": 0.3903,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401876427|scorer|Florian Thauvin": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "scorer",
+  "label": "Florian Thauvin marque",
+  "p": 0.26,
+  "stars": 1,
+  "player": "Florian Thauvin",
+  "pid_player": "156898",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401876427|dec|Florian Thauvin": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "dec",
+  "label": "Florian Thauvin buteur ou passeur",
+  "p": 0.53,
+  "stars": 2,
+  "player": "Florian Thauvin",
+  "pid_player": "156898",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": [
+   7,
+   3,
+   6
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876427|htft_h|": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "htft_h",
+  "label": "Lens mène à la mi-temps et gagne le match",
+  "p": 0.2296,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401876427|exact|": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.0982,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401874955|1N|": {
+  "match": "foot-401874955",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Lazio",
+  "away": "Parma",
+  "market": "1N",
+  "label": "Lazio ou nul",
+  "p": 0.8769,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874955|1|": {
+  "match": "foot-401874955",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Lazio",
+  "away": "Parma",
+  "market": "1",
+  "label": "Victoire Lazio",
+  "p": 0.667,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874955|scorer|Davide Frattesi": {
+  "match": "foot-401874955",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Lazio",
+  "away": "Parma",
+  "market": "scorer",
+  "label": "Davide Frattesi marque",
+  "p": 0.26,
+  "stars": 1,
+  "player": "Davide Frattesi",
+  "pid_player": "250850",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874955|dec|Davide Frattesi": {
+  "match": "foot-401874955",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Lazio",
+  "away": "Parma",
+  "market": "dec",
+  "label": "Davide Frattesi buteur ou passeur",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Davide Frattesi",
+  "pid_player": "250850",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   7,
+   3,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874955|h2|": {
+  "match": "foot-401874955",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Lazio",
+  "away": "Parma",
+  "market": "h2",
+  "label": "Lazio gagne avec 2 buts d'écart ou plus",
+  "p": 0.4069,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874955|exact|": {
+  "match": "foot-401874955",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-24",
+  "home": "Lazio",
+  "away": "Parma",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.146,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401882834|1N|": {
+  "match": "foot-401882834",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Atlético",
+  "away": "Deportivo",
+  "market": "1N",
+  "label": "Atlético ou nul",
+  "p": 0.9049,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401882834|1|": {
+  "match": "foot-401882834",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Atlético",
+  "away": "Deportivo",
+  "market": "1",
+  "label": "Victoire Atlético",
+  "p": 0.7395,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401882834|scorer|Álex Baena": {
+  "match": "foot-401882834",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Atlético",
+  "away": "Deportivo",
+  "market": "scorer",
+  "label": "Álex Baena marque",
+  "p": 0.37,
+  "stars": 1,
+  "player": "Álex Baena",
+  "pid_player": "297373",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401882834|dec|Álex Baena": {
+  "match": "foot-401882834",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Atlético",
+  "away": "Deportivo",
+  "market": "dec",
+  "label": "Álex Baena buteur ou passeur",
+  "p": 0.51,
+  "stars": 2,
+  "player": "Álex Baena",
+  "pid_player": "297373",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": [
+   9,
+   5,
+   2
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401882834|o35|": {
+  "match": "foot-401882834",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Atlético",
+  "away": "Deportivo",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3629,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882834|exact|": {
+  "match": "foot-401882834",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-24",
+  "home": "Atlético",
+  "away": "Deportivo",
+  "market": "exact",
+  "label": "Score exact 2-0",
+  "p": 0.1301,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
   ],
   "result": null
  }
