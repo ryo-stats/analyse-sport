@@ -314,6 +314,11 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 /* Paris conseillés (Bankroll) : montant à droite de chaque pronostic */
 .card2 .sel{grid-template-columns:26px minmax(0,1fr) auto auto}
 .card2 .sel .smatch span{white-space:normal}
+.card2 .pviews{margin:8px 0 12px}
+.profl{margin:2px 0 0;font-size:.85rem;color:var(--muted)}
+.linkbtn{all:unset;cursor:pointer;color:var(--home);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.seth{margin:12px 0 6px;font:700 .78rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.card2 .cleg{margin:0 0 4px}
 .stk{display:grid;justify-items:end;line-height:1.2}
 .stk b{font-size:1rem}
 .stk small{font-size:.72rem;color:var(--muted)}
@@ -1474,32 +1479,52 @@ function myBets(){
     ${list.length > shown.length ? `<button type="button" class="sbtn alt more" data-bkmore="1">Voir ${Math.min(30, list.length - shown.length)} paris de plus</button>` : ""}</section>`;
 }
 // ---- mise conseillée : une part de la bankroll ACTUELLE (dépôts − retraits + gains − pertes) selon la probabilité
-// de l'analyse, pas selon la cote. Paliers alignés sur les étoiles du site, entre « prudent » (2 % max) et
-// « équilibré » (5 % max) ; au total, jamais plus de 10 % de la bankroll en jeu. La cote sert seulement de garde-fou :
+// de l'analyse, pas selon la cote. Trois profils (réglage de la bankroll). La cote sert seulement de garde-fou :
 // en dessous de la cote juste (1 ÷ probabilité), le pari perd de l'argent sur la durée → 0.
-const STAKE_STEPS = [[0.80, 3], [0.70, 2], [0.60, 1.5], [0.55, 1]];     // [probabilité minimum, % de la bankroll]
-const DAY_CAP = 10;                                                       // % de la bankroll en jeu au plus
-const stakePct = p => (STAKE_STEPS.find(([min]) => p >= min) || [0, 0])[1];
+const PROFILES = {      // steps : [probabilité minimum, % de la bankroll] ; cap : % de la bankroll en jeu au plus
+  prudent:  {name: "Prudent",  steps: [[0.80, 3], [0.70, 2], [0.60, 1.5], [0.55, 1]], cap: 10,
+             note: "les mauvais jours coûtent peu"},
+  normal:   {name: "Normal",   steps: [[0.80, 5], [0.70, 4], [0.60, 3], [0.55, 2]],   cap: 15,
+             note: "un mauvais jour peut coûter environ 10 % de la bankroll"},
+  offensif: {name: "Offensif", steps: [[0.80, 8], [0.70, 6], [0.60, 4], [0.55, 3]],   cap: 25,
+             note: "un mauvais jour peut coûter environ un quart de la bankroll"}};
+const prof = () => PROFILES[BK.profile] || PROFILES.prudent;
+const stakePct = p => (prof().steps.find(([min]) => p >= min) || [0, 0])[1];
 const roundStake = x => x >= 5 ? Math.floor(x * 2) / 2 : Math.floor(x * 10) / 10;   // 0,50 près (0,10 sous 5)
 const fairMin = p => Math.round(100 / Math.max(p, 0.01)) / 100;           // cote minimum à exiger
 const pctTxt = x => String(x).replace(".", ",");
-// preset : montant déjà calculé par la carte « Paris conseillés » (plafond réparti sur plusieurs paris)
+const shareOf = (amt, bank) => pctTxt(Math.round(amt / bank * 1000) / 10);
+// preset : montant déjà calculé par la carte « Paris conseillés » (ex. plafond réparti sur plusieurs paris)
 function stakeAdvice(p, odds, preset = null){
-  const s = bkStats(), bank = s.bank, pct = stakePct(p), min = fairMin(p);
+  const s = bkStats(), bank = s.bank, pct = stakePct(p), min = fairMin(p), cap = prof().cap;
   if (!(bank > 0)) return {amt: 0, msg: "Fais un dépôt (onglet Bankroll) pour voir la mise conseillée."};
   if (odds > 1 && odds < min - 0.001)
     return {amt: 0, bad: true, msg: `⚠️ Cote trop basse : il faut au moins <b>@${odd(min)}</b> pour un pronostic à ${pctr(p)} %. Le site conseille de <b>ne pas jouer</b> (0 ${BK.currency}).`};
   if (!pct) return {amt: 0, msg: `Pronostic à ${pctr(p)} % : trop risqué pour une mise conseillée. Si tu joues quand même, reste sous 0,5 % de ta bankroll (${money(roundStake(bank * 0.005))}).`};
-  const room = Math.max(0, bank * DAY_CAP / 100 - s.inPlay), full = roundStake(bank * pct / 100);
-  if (room < 0.1) return {amt: 0, msg: `Tu as déjà <b>${money(s.inPlay)}</b> en jeu (${DAY_CAP} % de ta bankroll ou plus) : le site conseille d'attendre les résultats.`};
+  const room = Math.max(0, bank * cap / 100 - s.inPlay), full = roundStake(bank * pct / 100);
+  if (room < 0.1) return {amt: 0, msg: `Tu as déjà <b>${money(s.inPlay)}</b> en jeu (${cap} % de ta bankroll ou plus) : le site conseille d'attendre les résultats.`};
   const amt = preset != null ? preset : roundStake(Math.min(full, room));
-  return {amt, pct, msg: `Mise conseillée : <b>${money(amt)}</b>, soit ${pctTxt(Math.round(amt / bank * 1000) / 10)} % de ta bankroll (${money(bank)}) pour un pronostic à ${pctr(p)} %${amt < full - 0.001 ? `, réduite pour ne pas dépasser ${DAY_CAP} % en jeu au total` : ""}.`};
+  return {amt, pct, msg: `Mise conseillée (profil ${prof().name}) : <b>${money(amt)}</b>, soit ${shareOf(amt, bank)} % de ta bankroll (${money(bank)}) pour un pronostic à ${pctr(p)} %${amt < full - 0.001 ? `, réduite pour ne pas dépasser ${cap} % en jeu au total` : ""}.`};
+}
+// trois façons de jouer, bien séparées : un seul pari, plusieurs paris (mises partagées), ou un combiné
+let ADVMODE = "simple";
+try { ADVMODE = localStorage.getItem("advmode") || "simple"; } catch (e) {}
+const ADVMODES = [["simple", "Pari simple"], ["multi", "Plusieurs paris"], ["combo", "Combiné"]];
+function advRow(c, amt, bank, rank){
+  const btn = addBtn(c.m, c.pk), ref = BETREF[`${c.m.id}|${c.pk.label}`];
+  if (ref) ref.stake = amt;
+  return `<li class="sel">${rank ? `<span class="rank num">${rank}</span>` : `<span class="rank">🎯</span>`}
+    <div class="sbody"><div class="spick">${esc(c.pk.label)}</div>
+      <div class="smatch">${logo(c.m.logo_h, c.m.logo_h_dark, "lg sm")}<span>${esc(c.m.home)} – ${esc(c.m.away)}</span>${logo(c.m.logo_a, c.m.logo_a_dark, "lg sm")}</div>
+      <div class="smeta">${esc(c.m.time)} · ${esc(c.m.sport === "nhl" ? "NHL" : c.m.league)} · ${pctr(c.pk.p)} % · cote minimum <b class="num">@${odd(fairMin(c.pk.p))}</b></div></div>
+    <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, bank)} %</small></div>${btn}</li>`;
 }
 function adviceCard(){
   if (!DATA) return "";
-  const s = bkStats(), head = `<h2>Paris conseillés</h2>`;
-  const rule = `<p class="src">Mise = part de ta bankroll actuelle selon la probabilité de l'analyse : <b>1 %</b> (55 à 60 %), <b>1,5 %</b> (60 à 70 %), <b>2 %</b> (70 à 80 %), <b>3 %</b> (80 % et plus). Au total, jamais plus de ${DAY_CAP} % en jeu. Joue seulement si ton bookmaker paie au moins la <b>cote minimum</b> : en dessous, le pari perd de l'argent sur la durée.</p>`;
-  if (!(s.bank > 0)) return `<section class="card2">${head}<p class="src">Fais un <b>dépôt</b> : le site te proposera ici les pronostics les plus sûrs du jour et combien miser sur chacun.</p></section>`;
+  const s = bkStats(), P = prof(), head = `<h2>Paris conseillés</h2>`;
+  const profLine = `<p class="profl">Profil <b>${P.name}</b> · <button type="button" class="linkbtn" data-goset="1">changer</button></p>`;
+  const rule = `<p class="src">Profil ${P.name} : mise = ${P.steps.slice().reverse().map(([min, pct], i, a) => `<b>${pctTxt(pct)} %</b> (${Math.round(min * 100)}${i < a.length - 1 ? ` à ${Math.round(a[i + 1][0] * 100)} %` : " % et plus"})`).join(", ")} de ta bankroll actuelle selon la probabilité de l'analyse ; au total, jamais plus de ${P.cap} % en jeu. Joue seulement si ton bookmaker paie au moins la <b>cote minimum</b> : en dessous, le pari perd de l'argent sur la durée.</p>`;
+  if (!(s.bank > 0)) return `<section class="card2">${head}<p class="src">Fais un <b>dépôt</b> : le site te proposera ici un pari simple, plusieurs paris ou un combiné, et combien miser.</p></section>`;
   const pre = m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); };
   const played = new Set(BK.bets.filter(b => b.status === "open" && b.matchId).map(b => b.matchId));
   // un pronostic par match (deux paris du même match ne sont pas indépendants), les plus sûrs d'abord
@@ -1507,35 +1532,39 @@ function adviceCard(){
     const pk = ["main", "player"].map(k => (m.picks || {})[k]).filter(Boolean).sort((a, b) => b.p - a.p)[0];
     return pk && stakePct(pk.p) ? {m, pk} : null;
   }).filter(Boolean).sort((a, b) => b.pk.p - a.pk.p).slice(0, 5);
-  const room = Math.max(0, s.bank * DAY_CAP / 100 - s.inPlay);
-  if (!cands.length) return `<section class="card2">${head}<p class="src">Aucun pronostic à 55 % ou plus parmi les matchs pas encore commencés${played.size ? " (hors matchs déjà joués)" : ""}. Reviens avec les prochains matchs.</p>${rule}</section>`;
-  if (room < 0.1) return `<section class="card2">${head}<p class="src">Tu as déjà <b>${money(s.inPlay)}</b> en jeu, soit ${DAY_CAP} % ou plus de ta bankroll : attends les résultats avant de miser à nouveau.</p>${rule}</section>`;
-  const raw = cands.map(c => s.bank * stakePct(c.pk.p) / 100), total = raw.reduce((a, b) => a + b, 0);
-  const k = total > room ? room / total : 1;                                 // on réduit tout si on dépasse le plafond
-  const rows = cands.map((c, i) => {
-    const amt = roundStake(raw[i] * k), btn = addBtn(c.m, c.pk);
-    const ref = BETREF[`${c.m.id}|${c.pk.label}`]; if (ref) ref.stake = amt;
-    return `<li class="sel"><span class="rank num">${i + 1}</span>
-      <div class="sbody"><div class="spick">${esc(c.pk.label)}</div>
-        <div class="smatch">${logo(c.m.logo_h, c.m.logo_h_dark, "lg sm")}<span>${esc(c.m.home)} – ${esc(c.m.away)}</span>${logo(c.m.logo_a, c.m.logo_a_dark, "lg sm")}</div>
-        <div class="smeta">${esc(c.m.time)} · ${esc(c.m.sport === "nhl" ? "NHL" : c.m.league)} · ${pctr(c.pk.p)} % · cote minimum <b class="num">@${odd(fairMin(c.pk.p))}</b></div></div>
-      <div class="stk num"><b>${money(amt)}</b><small>${pctTxt(Math.round(amt / s.bank * 1000) / 10)} %</small></div>${btn}</li>`;
-  }).join("");
-  // combiné des deux plus sûrs : une autre façon de jouer les paris 1 et 2 (pas en plus)
-  let combo = "";
-  if (cands.length >= 2){
-    const legs = cands.slice(0, 2), p = legs[0].pk.p * legs[1].pk.p, pct = stakePct(p);
-    if (pct){
-      const amt = roundStake(Math.min(s.bank * pct / 100, room)), key = `combo|${legs.map(l => l.m.id).join("|")}`;
-      BETREF[key] = {label: `Combiné : ${legs.map(l => l.pk.label).join(" + ")}`, match: legs.map(l => `${l.m.home} – ${l.m.away}`).join(" / "),
-                     matchId: null, sport: null, market: null, player: null, value: null, p, odds: 1 / p, stake: amt, auto: false,
-                     oddsSrc: "juste du combiné (1 ÷ probabilité) : les bookmakers paient souvent un peu moins"};
-      combo = `<div class="cadv"><div><b>Ou en combiné</b> (à la place des paris 1 et 2) : ${pctr(p)} % de réussite, cote minimum <b class="num">@${odd(fairMin(p))}</b></div>
-        <div class="stk num"><b>${money(amt)}</b><small>${pctTxt(pct)} %</small></div><button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter le combiné à ma bankroll">+</button></div>`;
-    }
+  const room = Math.max(0, s.bank * P.cap / 100 - s.inPlay);
+  const mode = ADVMODES.some(([k]) => k === ADVMODE) ? ADVMODE : "simple";
+  const tabs = `<nav class="pviews advm" aria-label="Façon de jouer">${ADVMODES.map(([k, l]) => `<button type="button" data-advmode="${k}" aria-pressed="${k === mode}">${l}</button>`).join("")}</nav>`;
+  const wrap = body => `<section class="card2" id="advice">${head}${profLine}${tabs}${body}${rule}</section>`;
+  if (!cands.length) return wrap(`<p class="src">Aucun pronostic à 55 % ou plus parmi les matchs pas encore commencés${played.size ? " (hors matchs déjà joués)" : ""}. Reviens avec les prochains matchs.</p>`);
+  if (room < 0.1) return wrap(`<p class="src">Tu as déjà <b>${money(s.inPlay)}</b> en jeu, soit ${P.cap} % ou plus de ta bankroll : attends les résultats avant de miser à nouveau.</p>`);
+  const inPlay = s.inPlay ? ` (${money(s.inPlay)} déjà en jeu)` : "";
+  if (mode === "simple"){
+    const c = cands[0], amt = roundStake(Math.min(s.bank * stakePct(c.pk.p) / 100, room));
+    return wrap(`<p class="src"><b>Un seul pari aujourd'hui</b> : le plus sûr des matchs pas encore commencés, avec sa mise complète pour ta bankroll de <b>${money(s.bank)}</b>${inPlay}. Touche <b>+</b> pour l'ajouter à tes paris.</p>
+      <ol class="sellist">${advRow(c, amt, s.bank, 0)}</ol>`);
   }
-  return `<section class="card2">${head}<p class="src">Les pronostics les plus sûrs des matchs pas encore commencés, avec la mise conseillée pour ta bankroll de <b>${money(s.bank)}</b>${s.inPlay ? ` (${money(s.inPlay)} déjà en jeu)` : ""}. Touche <b>+</b> pour l'ajouter à tes paris.</p>
-    <ol class="sellist">${rows}</ol>${combo}${rule}</section>`;
+  if (mode === "multi"){
+    const raw = cands.map(c => s.bank * stakePct(c.pk.p) / 100), total = raw.reduce((a, b) => a + b, 0);
+    const k = total > room ? room / total : 1;                               // on réduit tout si on dépasse le plafond
+    const amts = raw.map(x => roundStake(x * k)), sum = amts.reduce((a, b) => a + b, 0);
+    return wrap(`<p class="src"><b>Si tu joues les ${cands.length} paris</b> : les mises sont partagées pour ne pas dépasser ${P.cap} % de ta bankroll en jeu, soit <b>${money(sum)}</b> au total${inPlay}.${k < 1 ? " Chaque mise est donc plus petite que pour un pari simple." : ""}</p>
+      <ol class="sellist">${cands.map((c, i) => advRow(c, amts[i], s.bank, i + 1)).join("")}</ol>`);
+  }
+  // combiné des deux plus sûrs (un seul pari, plus risqué : les deux doivent passer)
+  if (cands.length < 2) return wrap(`<p class="src">Un seul match proposé aujourd'hui : pas de combiné possible. Regarde « Pari simple ».</p>`);
+  const legs = cands.slice(0, 2), p = legs[0].pk.p * legs[1].pk.p, pct = stakePct(p);
+  if (!pct) return wrap(`<p class="src">Le combiné des deux plus sûrs n'aurait que ${pctr(p)} % de réussite : trop risqué pour une mise conseillée. Préfère « Pari simple ».</p>`);
+  const amt = roundStake(Math.min(s.bank * pct / 100, room)), key = `combo|${legs.map(l => l.m.id).join("|")}`;
+  BETREF[key] = {label: `Combiné : ${legs.map(l => l.pk.label).join(" + ")}`, match: legs.map(l => `${l.m.home} – ${l.m.away}`).join(" / "),
+                 matchId: null, sport: null, market: null, player: null, value: null, p, odds: 1 / p, stake: amt, auto: false,
+                 oddsSrc: "juste du combiné (1 ÷ probabilité) : les bookmakers paient souvent un peu moins"};
+  return wrap(`<p class="src"><b>Un combiné de 2 matchs</b> : un seul pari, les deux pronostics doivent passer. ${pctr(p)} % de réussite.</p>
+    <ol class="cleg">${legs.map(l => `<li><div class="sbody"><div class="spick">${esc(l.pk.label)}</div>
+      <div class="smatch">${logo(l.m.logo_h, l.m.logo_h_dark, "lg sm")}<span>${esc(l.m.home)} – ${esc(l.m.away)}</span>${logo(l.m.logo_a, l.m.logo_a_dark, "lg sm")}</div>
+      <div class="smeta">${esc(l.m.time)} · ${esc(l.m.sport === "nhl" ? "NHL" : l.m.league)}</div></div><b class="pp num">${pctr(l.pk.p)} %</b></li>`).join("")}</ol>
+    <div class="cadv"><div>Mise sur le combiné · cote minimum <b class="num">@${odd(fairMin(p))}</b></div>
+      <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, s.bank)} %</small></div><button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter le combiné à ma bankroll">+</button></div>`);
 }
 function bankrollView(){
   const s = bkStats();
@@ -1552,7 +1581,11 @@ function bankrollView(){
       ${moves.length ? `<ul class="bets">${moves.map(m => `<li class="bet"><div><b>${m.type === "dep" ? "Dépôt" : "Retrait"}</b><small>${new Date(m.t).toLocaleDateString("fr-FR", {day: "numeric", month: "long", year: "numeric"})}${m.note ? " · " + esc(m.note) : ""}</small></div>
           <div class="amt num ${m.type === "dep" ? "pos" : "neg"}">${m.type === "dep" ? "+" : "−"}${money(m.amount)}</div><div class="bact"><button type="button" data-mvdel="${m.id}" aria-label="Supprimer">🗑</button></div></li>`).join("")}</ul>`
         : `<p class="src">Aucun mouvement. Commence par un dépôt.</p>`}</section>
-    <section class="card2"><h2>Réglages</h2>
+    <section class="card2" id="bkset"><h2>Réglages</h2>
+      <h3 class="seth">Profil de mise</h3>
+      <div class="pviews" role="group" aria-label="Profil de mise">${Object.entries(PROFILES).map(([k, P]) => `<button type="button" data-profile="${k}" aria-pressed="${P === prof()}">${P.name}</button>`).join("")}</div>
+      <p class="src">${prof().name} : jusqu'à <b>${pctTxt(prof().steps[0][1])} %</b> de ta bankroll par pari et <b>${prof().cap} %</b> en jeu au total ; ${prof().note}.</p>
+      <h3 class="seth">Monnaie</h3>
       <div class="btnrow" role="group" aria-label="Monnaie">${["CHF", "EUR"].map(c => `<button type="button" class="sbtn${c === BK.currency ? "" : " alt"}" data-cur="${c}" aria-pressed="${c === BK.currency}">${c}</button>`).join("")}<button type="button" class="sbtn alt" data-bk="reset">Tout effacer</button></div>
       <p class="src" style="margin-top:10px">Ta bankroll est gardée <b>uniquement sur ce téléphone</b>, dans ce navigateur. Si tu vides les données du navigateur ou changes d'appareil, elle est perdue. Sur iPhone, l'appli de l'écran d'accueil et Safari ont chacune la leur.</p></section>`;
 }
@@ -1711,6 +1744,15 @@ function render(){
   }));
   view.querySelectorAll("[data-psub]").forEach(b => b.addEventListener("click", () => {
     PSUB = b.dataset.psub; try { localStorage.setItem("psub", PSUB); } catch (e) {} render();
+  }));
+  view.querySelectorAll("[data-advmode]").forEach(b => b.addEventListener("click", () => {
+    ADVMODE = b.dataset.advmode; try { localStorage.setItem("advmode", ADVMODE); } catch (e) {} render();
+  }));
+  view.querySelectorAll("[data-profile]").forEach(b => b.addEventListener("click", () => {
+    BK.profile = b.dataset.profile; bkSave(); render(); toast(`Profil ${prof().name} : mises recalculées.`);
+  }));
+  view.querySelectorAll("[data-goset]").forEach(b => b.addEventListener("click", () => {
+    const el = document.getElementById("bkset"); if (el) el.scrollIntoView({behavior: "smooth", block: "start"});
   }));
   view.querySelectorAll("[data-pview]").forEach(b => b.addEventListener("click", () => {
     PVIEW = b.dataset.pview; try { localStorage.setItem("pview", PVIEW); } catch (e) {} render();

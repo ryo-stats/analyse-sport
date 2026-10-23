@@ -84,7 +84,10 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Accueil** : bénéfice net total, bankroll actuelle, dépôts, retraits, courbe d'évolution (Auj. / 7j / 30j / 90j / 1a / Tout), puis les pronostics les plus sûrs du jour.
 - **Bankroll**, gardée uniquement sur le téléphone (localStorage, sans sauvegarde) :
   - dépôts et retraits ;
-  - **Paris conseillés** : les 5 pronostics les plus sûrs (55 % et plus, un par match, matchs pas encore commencés et pas déjà joués) et le combiné des deux premiers, avec la mise conseillée. La mise est une part de la bankroll actuelle (dépôts − retraits + gains − pertes) qui dépend de la probabilité de l'analyse, pas de la cote : 1 % (55-60 %), 1,5 % (60-70 %), 2 % (70-80 %), 3 % (80 % et plus). Au total, au plus 10 % de la bankroll en jeu (les mises sont réduites au prorata). Chaque pari affiche sa **cote minimum** (cote juste) ; dans la fenêtre d'ajout, une cote plus basse donne « ne pas jouer, 0 ». La mise conseillée est préremplie pour tous les **+** du site ;
+  - **Paris conseillés**, trois façons de jouer bien séparées : **Pari simple** (le plus sûr du jour, mise complète), **Plusieurs paris** (les 5 plus sûrs, mises partagées sous le plafond) et **Combiné** (les deux plus sûrs). Pronostics à 55 % et plus, un par match, matchs pas encore commencés et pas déjà joués. La mise est une part de la bankroll actuelle (dépôts − retraits + gains − pertes) qui dépend de la probabilité de l'analyse, pas de la cote, selon le **profil de mise** choisi dans Réglages :
+    - Prudent : 1 / 1,5 / 2 / 3 % (55-60, 60-70, 70-80, 80 % et plus), 10 % en jeu au plus ;
+    - Normal : 2 / 3 / 4 / 5 %, 15 % en jeu au plus ;
+    - Offensif : 3 / 4 / 6 / 8 %, 25 % en jeu au plus. Chaque pari affiche sa **cote minimum** (cote juste) ; dans la fenêtre d'ajout, une cote plus basse donne « ne pas jouer, 0 ». La mise conseillée est préremplie pour tous les **+** du site ;
   - paris ajoutés avec le bouton **+** à côté d'un pronostic (cote du bookmaker, ou cote juste) ou avec « Nouveau pari » ;
   - résultat automatique pour les pronostics du site, sinon ✓ Gagné / ✗ Perdu / ↺ Remboursé à cocher ;
   - **Mes paris** : tous les paris par jour, filtres Tous / En cours / Gagnés / Perdus / Remboursés, avec mise, bénéfice et ROI du filtre ; pour un pari en cours, le score et la minute en direct ;
