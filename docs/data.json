@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T19:17+02:00",
+ "generated": "2026-10-23T22:31+02:00",
  "date": "2026-10-23",
  "nhl_date": "2026-10-23",
  "foot": [
@@ -9,13 +9,13 @@
    "league": "Bundesliga",
    "kickoff": "2026-10-23T18:30:00+00:00",
    "time": "20:30",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "2-3",
    "home": "Stuttgart",
    "away": "Gladbach",
-   "form_h": "NDVVD",
+   "form_h": "NNDVV",
    "form_a": "NDDDD",
-   "rank_h": 13,
+   "rank_h": 14,
    "rank_a": 18,
    "pH": 72,
    "pD": 16,
@@ -30,9 +30,9 @@
    "xgH": 2.59,
    "xgA": 1.0,
    "scores": [
-    "2-0",
     "2-1",
-    "3-0"
+    "2-0",
+    "3-1"
    ],
    "scorep": [
     9,
@@ -214,11 +214,11 @@
     }
    ],
    "ctx": [
-    "Stuttgart : 13e, 6 points, 8 buts marqués et 10 encaissés en 6 matchs.",
-    "Gladbach : 18e, 0 point, 8 buts marqués et 20 encaissés en 6 matchs."
+    "Stuttgart : 14e, 6 points, 10 buts marqués et 13 encaissés en 7 matchs.",
+    "Gladbach : 18e, 3 points, 11 buts marqués et 22 encaissés en 7 matchs."
    ],
    "reading": "Stuttgart est nettement favori (72 %).",
-   "stakes": "Stuttgart (13e) lutte pour le maintien, 1 point d'avance sur la zone rouge. Gladbach (18e) est en zone de relégation : match vital.",
+   "stakes": "Stuttgart (14e) lutte pour le maintien, 1 point d'avance sur la zone rouge. Gladbach (18e) est en zone de relégation : match vital. Adversaires directs au classement : 3 points d'écart.",
    "picks": {
     "main": {
      "market": "1N",
@@ -238,26 +238,26 @@
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.0926,
+     "label": "Score exact 2-1",
+     "p": 0.0925,
      "prob": 9,
-     "fair": 10.8,
+     "fair": 10.81,
      "stars": 1,
-     "value": "2-0"
+     "value": "2-1"
     },
     "fun": {
      "market": "wh_btts",
      "label": "Stuttgart gagne et les deux équipes marquent",
-     "p": 0.3751,
+     "p": 0.3753,
      "prob": 38,
-     "fair": 2.67,
+     "fair": 2.66,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_nil",
       "label": "Stuttgart gagne sans encaisser de but",
-      "p": 0.3405,
+      "p": 0.3403,
       "prob": 34,
       "fair": 2.94,
       "stars": 1
@@ -318,8 +318,8 @@
    "league": "Ligue 1",
    "kickoff": "2026-10-23T18:45:00+00:00",
    "time": "20:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-2",
    "home": "Brest",
    "away": "Nice",
    "form_h": "NVDDV",
@@ -363,7 +363,8 @@
      "p_dec": 35,
      "pid": "330412",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ludovic Ajorque",
@@ -377,7 +378,8 @@
      "p_dec": 31,
      "pid": "192015",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pathé Mboup",
@@ -391,7 +393,8 @@
      "p_dec": 30,
      "pid": "365783",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mama Baldé",
@@ -405,7 +408,8 @@
      "p_dec": 23,
      "pid": "259960",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lucas Tousart",
@@ -419,7 +423,8 @@
      "p_dec": 12,
      "pid": "215574",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kenny Lala",
@@ -433,7 +438,8 @@
      "p_dec": 10,
      "pid": "164187",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -449,7 +455,8 @@
      "p_dec": 30,
      "pid": "311118",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mohamed Amoura",
@@ -463,7 +470,8 @@
      "p_dec": 21,
      "pid": "315384",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jonathan Clauss",
@@ -477,21 +485,8 @@
      "p_dec": 21,
      "pid": "232089",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Xavier Junior Mandza Tsiendi",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Nice",
-     "goals": 0,
-     "assists": 0,
-     "apps": 7,
-     "p_goal": 6,
-     "p_dec": 17,
-     "pid": "3117261",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Gauthier Hein",
@@ -505,7 +500,8 @@
      "p_dec": 22,
      "pid": "239905",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Youssouf Ndayishimiye",
@@ -519,12 +515,29 @@
      "p_dec": 16,
      "pid": "255192",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Axel Witsel",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Nice",
+     "goals": 0,
+     "assists": 0,
+     "apps": 6,
+     "p_goal": 5,
+     "p_dec": 13,
+     "pid": "164895",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Brest : 10e, 9 points, 13 buts marqués et 10 encaissés en 7 matchs.",
-    "Nice : 13e, 8 points, 6 buts marqués et 9 encaissés en 7 matchs."
+    "Nice : 13e, 8 points, 6 buts marqués et 9 encaissés en 7 matchs.",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Nice (13e) lutte pour le maintien, 2 points d'avance sur la zone rouge. Adversaires directs au classement : 1 point d'écart.",
@@ -589,10 +602,11 @@
      "stars": 1,
      "player": "Kamory Doumbia",
      "team": "Brest",
+     "lineup": "start",
      "pid": "330412",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 7 matchs · Brest annoncé gagnant (41 %) · 1,3 but attendu pour Brest"
+     "why": "4 buts et 1 passe en 7 matchs · titulaire · Brest annoncé gagnant (41 %) · 1,3 but attendu pour Brest"
     },
     "decisive": {
      "market": "dec",
@@ -608,10 +622,11 @@
       4,
       1
      ],
+     "lineup": "start",
      "pid": "330412",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 7 matchs · Brest annoncé gagnant (41 %) · 1,3 but attendu pour Brest"
+     "why": "4 buts et 1 passe en 7 matchs · titulaire · Brest annoncé gagnant (41 %) · 1,3 but attendu pour Brest"
     }
    },
    "second": null,
@@ -627,8 +642,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-23T18:45:00+00:00",
    "time": "20:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "3-1",
    "home": "Torino",
    "away": "Monza",
    "form_h": "NVNDV",
@@ -672,7 +687,8 @@
      "p_dec": 27,
      "pid": "213725",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giovanni Simeone",
@@ -686,21 +702,8 @@
      "p_dec": 27,
      "pid": "189974",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Sandro Kulenovic",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Torino",
-     "goals": 2,
-     "assists": 0,
-     "apps": 5,
-     "p_goal": 15,
-     "p_dec": 16,
-     "pid": "245538",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Rolando Mandragora",
@@ -714,21 +717,8 @@
      "p_dec": 21,
      "pid": "210392",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Daniel Bragança",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "p_goal": 9,
-     "p_dec": 13,
-     "pid": "290592",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pietro Comuzzo",
@@ -742,7 +732,38 @@
      "p_dec": 10,
      "pid": "367168",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Sandro Kulenovic",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Torino",
+     "goals": 2,
+     "assists": 0,
+     "apps": 5,
+     "p_goal": 5,
+     "p_dec": 5,
+     "pid": "245538",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Alessio Cacciamani",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torino",
+     "goals": 0,
+     "assists": 1,
+     "apps": 7,
+     "p_goal": 4,
+     "p_dec": 18,
+     "pid": "403148",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -758,7 +779,8 @@
      "p_dec": 34,
      "pid": "384482",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jay Robinson",
@@ -772,21 +794,8 @@
      "p_dec": 14,
      "pid": "355359",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Andrea Colpani",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Monza",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "p_goal": 6,
-     "p_dec": 8,
-     "pid": "272892",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ricardo Mangas",
@@ -800,40 +809,59 @@
      "p_dec": 14,
      "pid": "259871",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Eddy Kouadio",
+     "name": "Saba Goglichidze",
      "pos": "Défenseur",
-     "side": "a",
-     "team": "Monza",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "p_goal": 5,
-     "p_dec": 7,
-     "pid": "390673",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Exequiel Zeballos",
-     "pos": "Attaquant",
      "side": "a",
      "team": "Monza",
      "goals": 1,
      "assists": 0,
      "apps": 2,
      "p_goal": 5,
-     "p_dec": 6,
-     "pid": "297051",
+     "p_dec": 5,
+     "pid": "363886",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Dany Mota",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Monza",
+     "goals": 0,
+     "assists": 2,
+     "apps": 5,
+     "p_goal": 3,
+     "p_dec": 12,
+     "pid": "235453",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Ebenezer Akinsanmiro",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Monza",
+     "goals": 0,
+     "assists": 1,
+     "apps": 6,
+     "p_goal": 2,
+     "p_dec": 10,
+     "pid": "362776",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Torino : 10e, 10 points, 10 buts marqués et 9 encaissés en 7 matchs.",
-    "Monza : 14e, 7 points, 13 buts marqués et 15 encaissés en 7 matchs."
+    "Monza : 14e, 7 points, 13 buts marqués et 15 encaissés en 7 matchs.",
+    "Compositions officielles prises en compte : Sandro Kulenovic (remplaçant) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Match de milieu de tableau : enjeu modéré au classement. Adversaires directs au classement : 3 points d'écart.",
@@ -851,7 +879,7 @@
      "label": "Victoire Torino",
      "p": 0.4494,
      "prob": 45,
-     "fair": 2.22,
+     "fair": 2.23,
      "stars": 1
     },
     "score": {
@@ -898,10 +926,11 @@
      "stars": 1,
      "player": "Ché Adams",
      "team": "Torino",
+     "lineup": "start",
      "pid": "213725",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 5 matchs · Torino annoncé gagnant (45 %) · 1,3 but attendu pour Torino"
+     "why": "3 buts et 0 passe en 5 matchs · titulaire · Torino annoncé gagnant (45 %) · 1,3 but attendu pour Torino"
     },
     "decisive": {
      "market": "dec",
@@ -917,10 +946,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "213725",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 5 matchs · Torino annoncé gagnant (45 %) · 1,3 but attendu pour Torino"
+     "why": "3 buts et 0 passe en 5 matchs · titulaire · Torino annoncé gagnant (45 %) · 1,3 but attendu pour Torino"
     }
    },
    "second": null,
@@ -936,8 +966,8 @@
    "league": "Premier League",
    "kickoff": "2026-10-23T19:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-1",
    "home": "Ipswich",
    "away": "Nottm Forest",
    "form_h": "NVDDV",
@@ -981,7 +1011,8 @@
      "p_dec": 25,
      "pid": "322654",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Leif Davis",
@@ -995,49 +1026,8 @@
      "p_dec": 18,
      "pid": "283086",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Zian Flemming",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Ipswich",
-     "goals": 2,
-     "assists": 0,
-     "apps": 5,
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "261598",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Daizen Maeda",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Ipswich",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "p_goal": 11,
-     "p_dec": 15,
-     "pid": "286347",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Jack Clarke",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Ipswich",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "p_goal": 8,
-     "p_dec": 15,
-     "pid": "269343",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Dara O'Shea",
@@ -1051,7 +1041,53 @@
      "p_dec": 9,
      "pid": "243440",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Fatawu Issahaku",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Ipswich",
+     "goals": 0,
+     "assists": 1,
+     "apps": 6,
+     "p_goal": 6,
+     "p_dec": 14,
+     "pid": "318680",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Abdoul Ouattara",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Ipswich",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "p_goal": 6,
+     "p_dec": 12,
+     "pid": "336794",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Zian Flemming",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Ipswich",
+     "goals": 2,
+     "assists": 0,
+     "apps": 5,
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "261598",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -1067,7 +1103,8 @@
      "p_dec": 34,
      "pid": "275842",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Liam Delap",
@@ -1081,21 +1118,8 @@
      "p_dec": 26,
      "pid": "307114",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Igor Jesus",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Nottm Forest",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "p_goal": 16,
-     "p_dec": 19,
-     "pid": "287869",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Morgan Gibbs-White",
@@ -1109,7 +1133,8 @@
      "p_dec": 38,
      "pid": "243396",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "James McAtee",
@@ -1123,7 +1148,8 @@
      "p_dec": 17,
      "pid": "298518",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Xaver Schlager",
@@ -1137,12 +1163,29 @@
      "p_dec": 16,
      "pid": "238886",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Murillo",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Nottm Forest",
+     "goals": 0,
+     "assists": 1,
+     "apps": 7,
+     "p_goal": 2,
+     "p_dec": 15,
+     "pid": "338894",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Ipswich : 10e, 9 points, 11 buts marqués et 15 encaissés en 7 matchs.",
-    "Nottm Forest : 19e, 5 points, 5 buts marqués et 9 encaissés en 7 matchs."
+    "Nottm Forest : 19e, 5 points, 5 buts marqués et 9 encaissés en 7 matchs.",
+    "Compositions officielles prises en compte : Igor Jesus (absent) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Nottm Forest (19e) est en zone de relégation : match vital.",
@@ -1207,10 +1250,11 @@
      "stars": 1,
      "player": "Dan Ndoye",
      "team": "Nottm Forest",
+     "lineup": "start",
      "pid": "275842",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · Nottm Forest annoncé gagnant (42 %) · 1,3 but attendu pour Nottm Forest"
+     "why": "2 buts et 0 passe en 7 matchs · titulaire · Nottm Forest annoncé gagnant (42 %) · 1,3 but attendu pour Nottm Forest"
     },
     "decisive": {
      "market": "dec",
@@ -1226,10 +1270,11 @@
       2,
       0
      ],
+     "lineup": "start",
      "pid": "275842",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · Nottm Forest annoncé gagnant (42 %) · 1,3 but attendu pour Nottm Forest"
+     "why": "2 buts et 0 passe en 7 matchs · titulaire · Nottm Forest annoncé gagnant (42 %) · 1,3 but attendu pour Nottm Forest"
     }
    },
    "second": null,
@@ -1245,8 +1290,8 @@
    "league": "LaLiga",
    "kickoff": "2026-10-23T19:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-1",
    "home": "Alavés",
    "away": "Málaga",
    "form_h": "DDNDD",
@@ -1290,7 +1335,8 @@
      "p_dec": 42,
      "pid": "207236",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mariano Díaz",
@@ -1304,7 +1350,8 @@
      "p_dec": 47,
      "pid": "198832",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pablo Ibáñez",
@@ -1318,7 +1365,8 @@
      "p_dec": 19,
      "pid": "106326",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Abde Rebbach",
@@ -1332,7 +1380,8 @@
      "p_dec": 18,
      "pid": "345991",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ville Koski",
@@ -1346,7 +1395,8 @@
      "p_dec": 11,
      "pid": "149306",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nahuel Tenaglia",
@@ -1360,7 +1410,8 @@
      "p_dec": 11,
      "pid": "262491",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1376,21 +1427,8 @@
      "p_dec": 16,
      "pid": "373542",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Chupete",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Málaga",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "p_goal": 12,
-     "p_dec": 16,
-     "pid": "388602",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "David Larrubia",
@@ -1404,7 +1442,8 @@
      "p_dec": 12,
      "pid": "297828",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Carlos Dotor",
@@ -1418,40 +1457,59 @@
      "p_dec": 11,
      "pid": "324098",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Pablo Martínez",
-     "pos": "Milieu",
+     "name": "Chupete",
+     "pos": "Attaquant",
      "side": "a",
      "team": "Málaga",
      "goals": 1,
-     "assists": 2,
-     "apps": 7,
-     "p_goal": 6,
-     "p_dec": 18,
-     "pid": "271151",
+     "assists": 0,
+     "apps": 9,
+     "p_goal": 4,
+     "p_dec": 5,
+     "pid": "388602",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
-     "name": "Joaquín Muñoz",
-     "pos": "Attaquant",
+     "name": "Daniel Lorenzo",
+     "pos": "Milieu",
      "side": "a",
      "team": "Málaga",
      "goals": 0,
      "assists": 0,
-     "apps": 9,
-     "p_goal": 5,
-     "p_dec": 8,
-     "pid": "180444",
+     "apps": 8,
+     "p_goal": 2,
+     "p_dec": 6,
+     "pid": "331533",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rafa Garrido",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Málaga",
+     "goals": 0,
+     "assists": 1,
+     "apps": 9,
+     "p_goal": 1,
+     "p_dec": 7,
+     "pid": "376166",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Alavés : 7e, 11 points, 13 buts marqués et 10 encaissés en 9 matchs.",
-    "Málaga : 20e, 4 points, 6 buts marqués et 18 encaissés en 9 matchs."
+    "Málaga : 20e, 4 points, 6 buts marqués et 18 encaissés en 9 matchs.",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Alavés est favori sans écraser le match (59 %).",
    "stakes": "Alavés (7e) est dans la course à l'Europe. Málaga (20e) est en zone de relégation : match vital.",
@@ -1475,9 +1533,9 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1649,
+     "p": 0.1648,
      "prob": 16,
-     "fair": 6.06,
+     "fair": 6.07,
      "stars": 1,
      "value": "1-0"
     },
@@ -1501,7 +1559,7 @@
      {
       "market": "h2",
       "label": "Alavés gagne avec 2 buts d'écart ou plus",
-      "p": 0.3207,
+      "p": 0.3208,
       "prob": 32,
       "fair": 3.12,
       "stars": 1
@@ -1516,10 +1574,11 @@
      "stars": 1,
      "player": "Lucas Boyé",
      "team": "Alavés",
+     "lineup": "start",
      "pid": "207236",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Alavés favori (59 %) · 1,6 buts attendus pour Alavés"
+     "why": "5 buts et 0 passe en 8 matchs · titulaire · Alavés favori (59 %) · 1,6 buts attendus pour Alavés"
     },
     "decisive": {
      "market": "dec",
@@ -1535,10 +1594,11 @@
       5,
       0
      ],
+     "lineup": "start",
      "pid": "207236",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Alavés favori (59 %) · 1,6 buts attendus pour Alavés"
+     "why": "5 buts et 0 passe en 8 matchs · titulaire · Alavés favori (59 %) · 1,6 buts attendus pour Alavés"
     }
    },
    "second": null,
@@ -1567,11 +1627,11 @@
    "pH": 30,
    "pD": 22,
    "pA": 48,
-   "source": "Cotes DraftKings (vainqueur final)",
+   "source": "Cotes Draft Kings (vainqueur final)",
    "odds": {
     "h": 2.42,
     "a": 1.59,
-    "by": "DraftKings",
+    "by": "Draft Kings",
     "total": 6.5
    },
    "xgH": 2.83,
@@ -1981,11 +2041,11 @@
    "pH": 42,
    "pD": 22,
    "pA": 36,
-   "source": "Cotes DraftKings (vainqueur final)",
+   "source": "Cotes Draft Kings (vainqueur final)",
    "odds": {
     "h": 1.8,
     "a": 2.05,
-    "by": "DraftKings",
+    "by": "Draft Kings",
     "total": 6.5
    },
    "xgH": 3.25,
@@ -2381,66 +2441,6 @@
  ],
  "selection": [
   {
-   "market": "1N",
-   "label": "Stuttgart ou nul",
-   "p": 0.8765,
-   "prob": 88,
-   "fair": 1.14,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401884761",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "time": "20:30",
-   "kickoff": "2026-10-23T18:30:00+00:00",
-   "home": "Stuttgart",
-   "away": "Gladbach",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "1N",
-   "label": "Alavés ou nul",
-   "p": 0.8416,
-   "prob": 84,
-   "fair": 1.19,
-   "stars": 5,
-   "kind": "main",
-   "id": "foot-401882836",
-   "sport": "foot",
-   "league": "LaLiga",
-   "time": "21:00",
-   "kickoff": "2026-10-23T19:00:00+00:00",
-   "home": "Alavés",
-   "away": "Málaga",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "1N",
-   "label": "Torino ou nul",
-   "p": 0.7329,
-   "prob": 73,
-   "fair": 1.36,
-   "stars": 4,
-   "kind": "main",
-   "id": "foot-401874957",
-   "sport": "foot",
-   "league": "Serie A",
-   "time": "20:45",
-   "kickoff": "2026-10-23T18:45:00+00:00",
-   "home": "Torino",
-   "away": "Monza",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
    "market": "point",
    "label": "Nathan MacKinnon : au moins 1 point",
    "p": 0.7,
@@ -2463,46 +2463,6 @@
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
    "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg"
-  },
-  {
-   "market": "N2",
-   "label": "Nul ou Nottm Forest",
-   "p": 0.6982,
-   "prob": 70,
-   "fair": 1.43,
-   "stars": 3,
-   "kind": "main",
-   "id": "foot-401879253",
-   "sport": "foot",
-   "league": "Premier League",
-   "time": "21:00",
-   "kickoff": "2026-10-23T19:00:00+00:00",
-   "home": "Ipswich",
-   "away": "Nottm Forest",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "1N",
-   "label": "Brest ou nul",
-   "p": 0.6822,
-   "prob": 68,
-   "fair": 1.47,
-   "stars": 3,
-   "kind": "main",
-   "id": "foot-401876428",
-   "sport": "foot",
-   "league": "Ligue 1",
-   "time": "20:45",
-   "kickoff": "2026-10-23T18:45:00+00:00",
-   "home": "Brest",
-   "away": "Nice",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
   },
   {
    "market": "point",
@@ -2567,40 +2527,14 @@
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
    "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg"
-  },
-  {
-   "market": "scorer",
-   "label": "Lucas Boyé marque",
-   "p": 0.38,
-   "prob": 38,
-   "fair": 2.63,
-   "stars": 1,
-   "player": "Lucas Boyé",
-   "team": "Alavés",
-   "pid": "207236",
-   "stats_league": "esp.1",
-   "season": 2026,
-   "why": "5 buts et 0 passe en 8 matchs · Alavés favori (59 %) · 1,6 buts attendus pour Alavés",
-   "kind": "player",
-   "id": "foot-401882836",
-   "sport": "foot",
-   "league": "LaLiga",
-   "time": "21:00",
-   "kickoff": "2026-10-23T19:00:00+00:00",
-   "home": "Alavés",
-   "away": "Málaga",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
   }
  ],
  "bilan": {
   "foot": {
-   "n": 117,
-   "fav_rate": 65,
+   "n": 118,
+   "fav_rate": 64,
    "fav_expected": 55,
-   "brier": 0.513,
+   "brier": 0.52,
    "brier_naive": 0.667,
    "bins": [
     {
@@ -2629,9 +2563,9 @@
     },
     {
      "range": "70-80 %",
-     "n": 13,
+     "n": 14,
      "announced": 76,
-     "actual": 85
+     "actual": 79
     },
     {
      "range": "80-90 %",
@@ -2800,6 +2734,17 @@
     "fav": "Detroit Red Wings",
     "favp": 60,
     "ok": true
+   },
+   {
+    "date": "2026-10-23",
+    "sport": "foot",
+    "league": "Bundesliga",
+    "home": "Stuttgart",
+    "away": "Gladbach",
+    "score": "2-3",
+    "fav": "Stuttgart",
+    "favp": 72,
+    "ok": false
    },
    {
     "date": "2026-10-22",
@@ -3097,35 +3042,24 @@
     "fav": "Dallas Stars",
     "favp": 60,
     "ok": true
-   },
-   {
-    "date": "2026-10-21",
-    "sport": "nhl",
-    "league": "NHL",
-    "home": "Edmonton Oilers",
-    "away": "Minnesota Wild",
-    "score": "4-3 (prol.)",
-    "fav": "Edmonton Oilers",
-    "favp": 55,
-    "ok": true
    }
   ],
   "picks": {
-   "n": 330,
+   "n": 334,
    "rate": 57,
    "expected": 54,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 330,
-     "ok": 189,
+     "n": 334,
+     "ok": 191,
      "rate": 57,
      "expected": 54
     },
     "foot": {
-     "n": 210,
-     "ok": 123,
-     "rate": 59,
+     "n": 214,
+     "ok": 125,
+     "rate": 58,
      "expected": 54
     },
     "nhl": {
@@ -3137,15 +3071,15 @@
    },
    "fun": {
     "all": {
-     "n": 111,
+     "n": 113,
      "ok": 34,
-     "rate": 31,
+     "rate": 30,
      "expected": 34
     },
     "foot": {
-     "n": 82,
+     "n": 84,
      "ok": 22,
-     "rate": 27,
+     "rate": 26,
      "expected": 29
     },
     "nhl": {
@@ -3159,14 +3093,16 @@
     {
      "date": "2026-10-23",
      "all": {
-      "n": 20,
-      "ok": 9,
-      "rate": 45,
+      "n": 24,
+      "ok": 11,
+      "rate": 46,
       "expected": 54
      },
      "foot": {
-      "n": 0,
-      "ok": 0
+      "n": 4,
+      "ok": 2,
+      "rate": 50,
+      "expected": 57
      },
      "nhl": {
       "n": 20,
@@ -3176,14 +3112,16 @@
      },
      "fun": {
       "all": {
-       "n": 6,
+       "n": 8,
        "ok": 1,
-       "rate": 17,
-       "expected": 37
+       "rate": 12,
+       "expected": 34
       },
       "foot": {
-       "n": 0,
-       "ok": 0
+       "n": 2,
+       "ok": 0,
+       "rate": 0,
+       "expected": 23
       },
       "nhl": {
        "n": 6,
@@ -3449,10 +3387,10 @@
     {
      "sport": "foot",
      "league": "Bundesliga",
-     "n": 6,
-     "ok": 5,
-     "rate": 83,
-     "expected": 54
+     "n": 10,
+     "ok": 7,
+     "rate": 70,
+     "expected": 55
     },
     {
      "sport": "nhl",
@@ -3466,9 +3404,9 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 131,
+     "n": 133,
      "announced": 34,
-     "actual": 34
+     "actual": 35
     },
     {
      "stars": 2,
@@ -3484,15 +3422,15 @@
     },
     {
      "stars": 4,
-     "n": 36,
+     "n": 37,
      "announced": 75,
-     "actual": 81
+     "actual": 78
     },
     {
      "stars": 5,
-     "n": 29,
+     "n": 30,
      "announced": 87,
-     "actual": 86
+     "actual": 83
     }
    ],
    "details": [
@@ -3546,6 +3484,84 @@
      "prob": 40,
      "stars": 1,
      "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884761",
+     "score": "2-3",
+     "match": "Stuttgart – Gladbach",
+     "label": "Stuttgart ou nul",
+     "prob": 88,
+     "stars": 5,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884761",
+     "score": "2-3",
+     "match": "Stuttgart – Gladbach",
+     "label": "Victoire Stuttgart",
+     "prob": 72,
+     "stars": 4,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884761",
+     "score": "2-3",
+     "match": "Stuttgart – Gladbach",
+     "label": "Ermedin Demirovic marque",
+     "prob": 30,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884761",
+     "score": "2-3",
+     "match": "Stuttgart – Gladbach",
+     "label": "Ermedin Demirovic buteur ou passeur",
+     "prob": 37,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884761",
+     "score": "2-3",
+     "match": "Stuttgart – Gladbach",
+     "label": "Stuttgart gagne et les deux équipes marquent",
+     "prob": 38,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884761",
+     "score": "2-3",
+     "match": "Stuttgart – Gladbach",
+     "label": "Score exact 2-0",
+     "prob": 9,
+     "stars": 1,
+     "ok": false,
      "fun": true
     },
     {
@@ -9260,6 +9276,42 @@
     },
     {
      "date": "2026-10-23",
+     "sport": "foot",
+     "match": "Stuttgart – Gladbach",
+     "label": "Stuttgart ou nul",
+     "prob": 88,
+     "stars": 5,
+     "ok": false
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "match": "Stuttgart – Gladbach",
+     "label": "Victoire Stuttgart",
+     "prob": 72,
+     "stars": 4,
+     "ok": false
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "match": "Stuttgart – Gladbach",
+     "label": "Ermedin Demirovic marque",
+     "prob": 30,
+     "stars": 1,
+     "ok": true
+    },
+    {
+     "date": "2026-10-23",
+     "sport": "foot",
+     "match": "Stuttgart – Gladbach",
+     "label": "Ermedin Demirovic buteur ou passeur",
+     "prob": 37,
+     "stars": 1,
+     "ok": true
+    },
+    {
+     "date": "2026-10-23",
      "sport": "nhl",
      "match": "St. Louis Blues – Vegas Golden Knights",
      "label": "Plus de 5,5 buts",
@@ -9554,42 +9606,6 @@
      "prob": 50,
      "stars": 2,
      "ok": false
-    },
-    {
-     "date": "2026-10-22",
-     "sport": "nhl",
-     "match": "Pittsburgh Penguins – Florida Panthers",
-     "label": "Matthew Tkachuk : au moins 1 point",
-     "prob": 62,
-     "stars": 3,
-     "ok": false
-    },
-    {
-     "date": "2026-10-22",
-     "sport": "nhl",
-     "match": "Pittsburgh Penguins – Florida Panthers",
-     "label": "Sam Reinhart marque",
-     "prob": 33,
-     "stars": 1,
-     "ok": false
-    },
-    {
-     "date": "2026-10-22",
-     "sport": "nhl",
-     "match": "Ottawa Senators – San Jose Sharks",
-     "label": "Plus de 5,5 buts",
-     "prob": 60,
-     "stars": 3,
-     "ok": true
-    },
-    {
-     "date": "2026-10-22",
-     "sport": "nhl",
-     "match": "Ottawa Senators – San Jose Sharks",
-     "label": "Victoire Ottawa Senators",
-     "prob": 55,
-     "stars": 2,
-     "ok": false
     }
    ]
   }
@@ -9599,10 +9615,8 @@
   "foot": {
    "ok": 0,
    "missing": [],
-   "status": "ClubElo indisponible",
-   "fetch": {
-    "http://api.clubelo.com/2026-10-23": "HTTP 502, 0 car., début : ''"
-   }
+   "status": "ok",
+   "fetch": {}
   },
   "nhl": {
    "ok": 2,
