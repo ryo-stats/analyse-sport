@@ -1217,14 +1217,17 @@ def nhl_picks(hname, aname, win_h, lh, la, team_rows, q=0.5):
                      (picks["main"]["market"], picks["winner"]["market"]))
     if funs:
         picks["fun"], picks["fun_alt"] = funs[0], funs[1:]
-    players = side_rows(team_rows, "h" if win_h >= 0.5 else "a", ("best_h", "best_a"))
+    home_wins = win_h >= 0.5
+    players = side_rows(team_rows, "h" if home_wins else "a", ("best_h", "best_a"))
     if players:
+        side = (hname if home_wins else aname, win_h if home_wins else 1 - win_h, lh if home_wins else la)
+        why = lambda r: scorer_why({**r, "apps": r.get("gp")}, side)     # même texte « Pourquoi lui » que le foot
         best = max(players, key=lambda r: r["p_point"])
         picks["player"] = make_pick("point", f"{best['name']} : au moins 1 point", best["p_point"] / 100,
-                                    player=best["name"], pid=best.get("pid"), team=best["team"])
+                                    player=best["name"], pid=best.get("pid"), team=best["team"], why=why(best))
         scorer = max(players, key=lambda r: r["p_goal"])
         picks["scorer"] = make_pick("goal", f"{scorer['name']} marque", scorer["p_goal"] / 100,
-                                    player=scorer["name"], pid=scorer.get("pid"), team=scorer["team"])
+                                    player=scorer["name"], pid=scorer.get("pid"), team=scorer["team"], why=why(scorer))
     return picks
 
 

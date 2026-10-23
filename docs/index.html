@@ -185,6 +185,11 @@ td.r,th.r{text-align:right}
 .pl.main .pv{font-weight:700}
 .psubs{margin-bottom:12px;flex-wrap:wrap;overflow:visible}
 @media (min-width:860px){.psubs{flex-direction:row;position:static}.psubs button{border-radius:999px}}
+/* second niveau de Paris foot / NHL : Matchs · Buteur · Décisif (segments, plus discrets que la barre du dessus) */
+.pviews{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;margin:-4px 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.pviews button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border:0;border-radius:9px;background:none;color:var(--muted);font:700 .9rem var(--body);cursor:pointer}
+.pviews button[aria-pressed="true"]{background:var(--home);color:#fff}
+.pviews .n{font-size:.75rem;opacity:.8}
 .combo{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:12px}
 .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
 .ctitle{font-family:var(--display);font-size:1.25rem;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
@@ -859,13 +864,22 @@ function pronoBody(m){
   const pk = m.picks || {};
   const funPk = pk.fun || (LIVEM ? LIVEM.momentPicks(m, PRE_STATE).fun : null);
   const fun = funPk ? {...funPk, prob: funPk.prob ?? pctr(funPk.p), stars: funPk.stars ?? starsOf(funPk.p)} : null;
-  const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner],
-                 [m.sport === "nhl" ? "Joueur à suivre" : "Buteur", pk.player], ["Buteur ou passeur", pk.decisive], ["Buteur", m.sport === "nhl" ? pk.scorer : null]];
+  // les paris joueurs (Buteur, Décisif) ont leurs propres sous-onglets : la fiche du match reste épurée
+  const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner]];
   return `${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}`;
 }
-let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo
+let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo | live | fun
 try { PSUB = localStorage.getItem("psub") || "foot"; } catch (e) {}
+let PVIEW = "matchs";    // dans Paris foot / Paris NHL : matchs | buteur | decisif
+try { PVIEW = localStorage.getItem("pview") || "matchs"; } catch (e) {}
+if (PSUB === "scorers"){ PSUB = "foot"; PVIEW = "buteur"; }     // ancien sous-onglet « Buteurs ⚽ »
+const PVIEWS = ["matchs", "buteur", "decisif"];
+if (!PVIEWS.includes(PVIEW)) PVIEW = "matchs";
+// pari joueur d'un match : foot Buteur = « marque », Décisif = « buteur ou passeur » ;
+// NHL Buteur = « marque », Décisif = « au moins 1 point » (un point = un but ou une passe décisive)
+const playerPick = (m, kind) => { const pk = m.picks || {}, nhl = m.sport === "nhl";
+  return kind === "buteur" ? (nhl ? pk.scorer : pk.player) : kind === "decisif" ? (nhl ? pk.player : pk.decisive) : null; };
 const notStarted = m => ["pre", "FUT", "PRE"].includes(m.state);
 const starsOf = p => 1 + [0.5, 0.6, 0.7, 0.8].filter(s => p >= s).length;
 const asSel = (pk, m) => ({...pk, id: m.id, sport: m.sport, league: m.league, time: m.time, kickoff: m.kickoff, home: m.home, away: m.away,
@@ -1131,23 +1145,28 @@ function favList(){
   const blk = (title, list, row) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(row).join("")}</section>` : "";
   return blk("En cours", live, liveCard) + blk("À venir", next, pronoMatch) + blk("Terminés", done, liveCard);
 }
-// ---- sous-onglet Buteurs du jour : un joueur par match de foot (équipe annoncée gagnante, titulaire si la
-// composition est connue), « marque » et « buteur ou passeur », triés du plus probable au moins probable
-function scorerCard(m){
-  const pk = m.picks || {}, p = pk.player, d = pk.decisive;
-  const line = (k, x) => x ? `<div class="pl"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, x))}${esc(x.label)}</span>${conf(x)}${notStarted(m) ? addBtn(m, x) : ""}</div>` : "";
+// ---- sous-onglets Buteur / Décisif de Paris foot et Paris NHL : un joueur par match, dans l'équipe que l'analyse
+// donne gagnante (titulaire si la composition est connue), triés du plus probable au moins probable
+const PV_KEY = {buteur: {foot: "Buteur", nhl: "Buteur"}, decisif: {foot: "Buteur ou passeur", nhl: "Au moins 1 point"}};
+const PV_INTRO = {
+  "foot|buteur": "⚽ Un joueur par match : le plus susceptible de <b>marquer</b> selon l'analyse (sa réussite cette saison et les buts attendus de son équipe), dans l'équipe donnée gagnante, parmi les titulaires dès que la composition officielle est publiée (environ 1 h avant).",
+  "foot|decisif": "🎯 Le même joueur, mais il suffit qu'il <b>marque ou fasse une passe décisive</b>. Plus sûr que Buteur, moins bien payé.",
+  "nhl|buteur": "🏒 Un joueur par match : le plus susceptible de <b>marquer</b> selon ses buts cette saison et les buts attendus de son équipe, dans l'équipe donnée gagnante.",
+  "nhl|decisif": "🎯 <b>Au moins 1 point</b> : le joueur marque ou fait une passe décisive. Celui qui en a le plus de chances dans l'équipe donnée gagnante. Plus sûr que Buteur, moins bien payé."};
+function playerCard(m, kind){
+  const p = playerPick(m, kind);
   return `<div class="pm"><div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}</div>
-    <div class="smeta">${esc(p.team || "")}${p.lineup ? LINEUP_TAG[p.lineup] : ""} · ${esc(m.league)}</div>${p.why ? `<p class="src">Pourquoi lui : ${esc(p.why)}.</p>` : ""}
-    <div class="plines">${line("Buteur", p)}${line("Buteur ou passeur", d)}</div></div>`;
+    <div class="plines"><div class="pl main"><span class="pk">${PV_KEY[kind][m.sport]}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div></div>
+    <div class="smeta">${esc(p.team || "")}${p.why ? ` · ${esc(p.why)}` : ""}</div></div>`;
 }
-function scorersView(){
-  const list = (DATA.foot || []).filter(m => (m.picks || {}).player);
-  const key = m => ((m.picks.decisive || m.picks.player).p);
-  const next = list.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); }).sort((a, b) => key(b) - key(a));
-  const rest = list.filter(m => !next.includes(m)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
-  const blk = (title, ms) => ms.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(ms.length, "match")}</span></div>${ms.map(scorerCard).join("")}</section>` : "";
-  return `<p class="warnline">⚽ Un joueur par match : le plus susceptible de marquer selon l'analyse du match (sa réussite cette saison et les buts attendus de son équipe), dans l'équipe que l'analyse donne gagnante, parmi les titulaires dès que la composition officielle est publiée (environ 1 h avant). <b>Buteur ou passeur</b> est plus sûr que <b>Buteur</b> (une passe décisive suffit), mais moins bien payé.</p>`
-    + (list.length ? blk("À venir", next) + blk("Commencés ou terminés", rest) : `<div class="empty">Pas de buteur proposé aujourd'hui.</div>`);
+function playerView(sport, kind){
+  const list = (DATA[sport] || []).filter(m => playerPick(m, kind));
+  const pre = m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); };
+  const next = list.filter(pre).sort((a, b) => playerPick(b, kind).p - playerPick(a, kind).p);
+  const rest = list.filter(m => !pre(m)).sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
+  const blk = (title, ms) => ms.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(ms.length, "match")}</span></div>${ms.map(m => playerCard(m, kind)).join("")}</section>` : "";
+  return `<p class="warnline">${PV_INTRO[sport + "|" + kind]}</p>`
+    + (list.length ? blk("À venir", next) + blk("Commencés ou terminés", rest) : `<div class="empty">Pas de joueur proposé aujourd'hui.</div>`);
 }
 function favView(){
   return `${pushGuide()}<h2 class="sech">Mes matchs <span class="cnt num">${FAVS.size}/${MAX_FAVS}</span></h2><div id="favbox">${favList()}</div>`;
@@ -1156,21 +1175,25 @@ function pronoView(){
   const foot = DATA.foot || [], nhl = DATA.nhl || [];
   if (!foot.length && !nhl.length) return `<div class="empty">Pas de match aujourd'hui.</div>`;
   const nLive = [...foot, ...nhl].filter(m => (LIVEDATA[m.id] || {}).state === "in").length;
-  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null], ["scorers", "Buteurs ⚽", foot.filter(m => (m.picks || {}).player).length || null], ["live", "En direct", nLive || null], ["fun", "Fun 🎲", null]];
+  const subs = [["foot", "Paris foot", foot.length], ["nhl", "Paris NHL", nhl.length], ["combo", "Combinés", null], ["live", "En direct", nLive || null], ["fun", "Fun 🎲", null]];
   const nav = `<nav class="leagues psubs" aria-label="Type de pronostics">${subs.map(([k, l, n]) => `<button type="button" data-psub="${k}" aria-pressed="${k === PSUB}"><span>${k === "live" ? '<i class="dot"></i>' : ""}${l}</span>${n != null ? `<span class="n num">${n}</span>` : ""}</button>`).join("")}</nav>`;
   if (PSUB === "combo") return nav + comboView();
   if (PSUB === "live") return nav + liveView();
   if (PSUB === "fun") return nav + funView();
-  if (PSUB === "scorers") return nav + scorersView();
   const isNhl = PSUB === "nhl", list = isNhl ? nhl : foot;
   if (!list.length) return nav + `<div class="empty">Pas de match ${isNhl ? "NHL" : "de foot"} aujourd'hui.</div>`;
+  // second niveau : Matchs · Buteur · Décisif
+  const pviews = [["matchs", "Matchs", list.length], ["buteur", "Buteur", list.filter(m => playerPick(m, "buteur")).length],
+                  ["decisif", "Décisif", list.filter(m => playerPick(m, "decisif")).length]];
+  const nav2 = `<nav class="pviews" aria-label="Type de paris">${pviews.map(([k, l, n]) => `<button type="button" data-pview="${k}" aria-pressed="${k === PVIEW}">${l}<span class="n num">${n}</span></button>`).join("")}</nav>`;
+  if (PVIEW !== "matchs") return nav + nav2 + playerView(isNhl ? "nhl" : "foot", PVIEW);
   const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
   const block = (title, lg, ms) => `<section class="grp"><div class="band">${lg ? `<img class="bl" src="${esc(lg)}" alt="" width="20" height="20" loading="lazy" onerror="this.remove()">` : ""}<span>${title}</span><span class="cnt">${plural(ms.length, "match")}</span></div>${ms.map(m => matchRow(m, pronoBody)).join("")}</section>`;
   const groups = isNhl ? block("<b>États-Unis / Canada :</b> NHL", NHL_LOGO, nhl)
     : [...new Set(foot.map(m => m.league))].sort((a, b) => rank(a) - rank(b)).map(l => { const f = foot.find(m => m.league === l) || {};
         return block(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, foot.filter(m => m.league === l)); }).join("");
   const sel = selectionOf(list);
-  return `${nav}<p class="warnline">Pronostics les plus probables selon les analyses du site. « Sûr » ne veut pas dire certain : un pronostic à 75 % échoue en moyenne 1 fois sur 4.</p>
+  return `${nav}${nav2}<p class="warnline">Pronostics les plus probables selon les analyses du site. « Sûr » ne veut pas dire certain : un pronostic à 75 % échoue en moyenne 1 fois sur 4.</p>
     <section class="selbox"><h2>Sélection du jour ${isNhl ? "NHL" : "foot"}</h2><p class="src">Les pronostics les plus sûrs parmi les matchs pas encore commencés.</p>
     ${sel.length ? `<ol class="sellist">${sel.map(selItem).join("")}</ol>` : `<div class="empty">Tous les matchs ont commencé. La sélection reviendra avec les prochains matchs.</div>`}</section>
     <h2 class="sech">Tous les matchs</h2>${groups}<p class="hint">Touchez un match pour voir ses pronostics.</p>`;
@@ -1603,6 +1626,9 @@ function render(){
   }));
   view.querySelectorAll("[data-psub]").forEach(b => b.addEventListener("click", () => {
     PSUB = b.dataset.psub; try { localStorage.setItem("psub", PSUB); } catch (e) {} render();
+  }));
+  view.querySelectorAll("[data-pview]").forEach(b => b.addEventListener("click", () => {
+    PVIEW = b.dataset.pview; try { localStorage.setItem("pview", PVIEW); } catch (e) {} render();
   }));
   const on = document.getElementById("apush"), off = document.getElementById("aoff"), tst = document.getElementById("atest"),
         morn = document.getElementById("amorning"), inst = document.getElementById("ainstall");
