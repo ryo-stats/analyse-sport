@@ -12930,7 +12930,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878767|1N|": {
   "match": "foot-401878767",
@@ -12954,7 +12954,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878767|1|": {
   "match": "foot-401878767",
@@ -12978,7 +12978,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878767|scorer|João Pedro": {
   "match": "foot-401878767",
@@ -13002,7 +13002,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878767|dec|João Pedro": {
   "match": "foot-401878767",
@@ -13054,7 +13054,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882827|N2|": {
   "match": "foot-401882827",
@@ -13078,7 +13078,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882827|2|": {
   "match": "foot-401882827",
@@ -13102,7 +13102,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882827|scorer|Pape Gueye": {
   "match": "foot-401882827",
@@ -13126,7 +13126,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882827|dec|Pape Gueye": {
   "match": "foot-401882827",
@@ -13178,7 +13178,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884763|1N|": {
   "match": "foot-401884763",
@@ -13202,7 +13202,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884763|1|": {
   "match": "foot-401884763",
@@ -13226,7 +13226,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884763|scorer|Serhou Guirassy": {
   "match": "foot-401884763",
@@ -13250,7 +13250,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884763|dec|Serhou Guirassy": {
   "match": "foot-401884763",
@@ -13302,7 +13302,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884763|exact|": {
   "match": "foot-401884763",
@@ -13326,7 +13326,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876427|exact|": {
   "match": "foot-401876427",
@@ -13718,7 +13718,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874948|1|": {
   "match": "foot-401874948",
@@ -13742,7 +13742,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874948|scorer|Kevin De Bruyne": {
   "match": "foot-401874948",
@@ -13766,7 +13766,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874948|dec|Kevin De Bruyne": {
   "match": "foot-401874948",
@@ -13818,7 +13818,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878767|htft_h|": {
   "match": "foot-401878767",
@@ -13842,7 +13842,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882827|htft_a|": {
   "match": "foot-401882827",
@@ -13866,7 +13866,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020168|u55|": {
   "match": "nhl-2026020168",
@@ -13997,7 +13997,7 @@
   "away": "Los Angeles Kings",
   "market": "win_h",
   "label": "Victoire New Jersey Devils",
-  "p": 0.6309,
+  "p": 0.6225,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -14070,7 +14070,7 @@
   "away": "Los Angeles Kings",
   "market": "h2",
   "label": "New Jersey Devils gagne par 2 buts d'écart ou plus",
-  "p": 0.4072,
+  "p": 0.399,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -15024,16 +15024,16 @@
   ],
   "result": null
  },
- "nhl-2026020179|o55|": {
+ "nhl-2026020179|win_a|": {
   "match": "nhl-2026020179",
   "sport": "nhl",
   "league": "NHL",
   "date": "2026-10-25",
   "home": "Seattle Kraken",
   "away": "Minnesota Wild",
-  "market": "o55",
-  "label": "Plus de 5,5 buts",
-  "p": 0.6012,
+  "market": "win_a",
+  "label": "Victoire Minnesota Wild",
+  "p": 0.6092,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -15044,30 +15044,7 @@
   "side": null,
   "group": "safe",
   "kinds": [
-   "main"
-  ],
-  "result": null
- },
- "nhl-2026020179|win_a|": {
-  "match": "nhl-2026020179",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-25",
-  "home": "Seattle Kraken",
-  "away": "Minnesota Wild",
-  "market": "win_a",
-  "label": "Victoire Minnesota Wild",
-  "p": 0.583,
-  "stars": 2,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
+   "main",
    "winner"
   ],
   "result": null
@@ -15105,7 +15082,7 @@
   "away": "Minnesota Wild",
   "market": "goal",
   "label": "Kirill Kaprizov marque",
-  "p": 0.43,
+  "p": 0.44,
   "stars": 1,
   "player": "Kirill Kaprizov",
   "pid_player": 8478864,
@@ -15129,7 +15106,7 @@
   "away": "Minnesota Wild",
   "market": "a2",
   "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
-  "p": 0.3806,
+  "p": 0.4057,
   "stars": 1,
   "player": null,
   "pid_player": null,
