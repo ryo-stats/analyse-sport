@@ -11378,7 +11378,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879256|2|": {
   "match": "foot-401879256",
@@ -11402,7 +11402,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879256|scorer|Erling Haaland": {
   "match": "foot-401879256",
@@ -11426,7 +11426,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879256|dec|Erling Haaland": {
   "match": "foot-401879256",
@@ -11454,7 +11454,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879256|wa_o25|": {
   "match": "foot-401879256",
@@ -11478,7 +11478,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879256|exact|": {
   "match": "foot-401879256",
@@ -11502,7 +11502,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882830|1N|": {
   "match": "foot-401882830",
@@ -12649,7 +12649,7 @@
   "away": "Everton",
   "market": "1N",
   "label": "Arsenal ou nul",
-  "p": 0.8733,
+  "p": 0.8881,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -12673,7 +12673,7 @@
   "away": "Everton",
   "market": "1",
   "label": "Victoire Arsenal",
-  "p": 0.6622,
+  "p": 0.6978,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -12688,58 +12688,6 @@
   ],
   "result": null
  },
- "foot-401878768|scorer|Bukayo Saka": {
-  "match": "foot-401878768",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-10-24",
-  "home": "Arsenal",
-  "away": "Everton",
-  "market": "scorer",
-  "label": "Bukayo Saka marque",
-  "p": 0.37,
-  "stars": 1,
-  "player": "Bukayo Saka",
-  "pid_player": "280555",
-  "value": null,
-  "stats_league": "eng.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401878768|dec|Bukayo Saka": {
-  "match": "foot-401878768",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-10-24",
-  "home": "Arsenal",
-  "away": "Everton",
-  "market": "dec",
-  "label": "Bukayo Saka buteur ou passeur",
-  "p": 0.43,
-  "stars": 1,
-  "player": "Bukayo Saka",
-  "pid_player": "280555",
-  "value": null,
-  "stats_league": "eng.1",
-  "season": 2026,
-  "base": [
-   7,
-   3,
-   0
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
  "foot-401878768|exact|": {
   "match": "foot-401878768",
   "sport": "foot",
@@ -12748,12 +12696,12 @@
   "home": "Arsenal",
   "away": "Everton",
   "market": "exact",
-  "label": "Score exact 1-0",
-  "p": 0.1442,
+  "label": "Score exact 2-0",
+  "p": 0.1353,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "1-0",
+  "value": "2-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -12773,8 +12721,8 @@
   "away": "Fulham",
   "market": "N2",
   "label": "Nul ou Fulham",
-  "p": 0.6982,
-  "stars": 3,
+  "p": 0.7032,
+  "stars": 4,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -12797,7 +12745,7 @@
   "away": "Fulham",
   "market": "2",
   "label": "Victoire Fulham",
-  "p": 0.4226,
+  "p": 0.4318,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -12812,82 +12760,6 @@
   ],
   "result": null
  },
- "foot-401879255|scorer|Josh King": {
-  "match": "foot-401879255",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-10-24",
-  "home": "Coventry",
-  "away": "Fulham",
-  "market": "scorer",
-  "label": "Josh King marque",
-  "p": 0.22,
-  "stars": 1,
-  "player": "Josh King",
-  "pid_player": "409541",
-  "value": null,
-  "stats_league": "eng.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401879255|dec|Josh King": {
-  "match": "foot-401879255",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-10-24",
-  "home": "Coventry",
-  "away": "Fulham",
-  "market": "dec",
-  "label": "Josh King buteur ou passeur",
-  "p": 0.3,
-  "stars": 1,
-  "player": "Josh King",
-  "pid_player": "409541",
-  "value": null,
-  "stats_league": "eng.1",
-  "season": 2026,
-  "base": [
-   7,
-   2,
-   0
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401879255|wa_nil|": {
-  "match": "foot-401879255",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-10-24",
-  "home": "Coventry",
-  "away": "Fulham",
-  "market": "wa_nil",
-  "label": "Fulham gagne sans encaisser de but",
-  "p": 0.2523,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401879255|exact|": {
   "match": "foot-401879255",
   "sport": "foot",
@@ -12897,7 +12769,7 @@
   "away": "Fulham",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.122,
+  "p": 0.1195,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -13456,130 +13328,6 @@
   ],
   "result": null
  },
- "foot-401876427|1N|": {
-  "match": "foot-401876427",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-24",
-  "home": "Lens",
-  "away": "Paris FC",
-  "market": "1N",
-  "label": "Lens ou nul",
-  "p": 0.6313,
-  "stars": 3,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
- "foot-401876427|1|": {
-  "match": "foot-401876427",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-24",
-  "home": "Lens",
-  "away": "Paris FC",
-  "market": "1",
-  "label": "Victoire Lens",
-  "p": 0.3687,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "foot-401876427|scorer|Florian Thauvin": {
-  "match": "foot-401876427",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-24",
-  "home": "Lens",
-  "away": "Paris FC",
-  "market": "scorer",
-  "label": "Florian Thauvin marque",
-  "p": 0.25,
-  "stars": 1,
-  "player": "Florian Thauvin",
-  "pid_player": "156898",
-  "value": null,
-  "stats_league": "fra.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401876427|dec|Florian Thauvin": {
-  "match": "foot-401876427",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-24",
-  "home": "Lens",
-  "away": "Paris FC",
-  "market": "dec",
-  "label": "Florian Thauvin buteur ou passeur",
-  "p": 0.52,
-  "stars": 2,
-  "player": "Florian Thauvin",
-  "pid_player": "156898",
-  "value": null,
-  "stats_league": "fra.1",
-  "season": 2026,
-  "base": [
-   7,
-   3,
-   6
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401876427|htft_h|": {
-  "match": "foot-401876427",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-24",
-  "home": "Lens",
-  "away": "Paris FC",
-  "market": "htft_h",
-  "label": "Lens mène à la mi-temps et gagne le match",
-  "p": 0.2152,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876427|exact|": {
   "match": "foot-401876427",
   "sport": "foot",
@@ -13588,12 +13336,12 @@
   "home": "Lens",
   "away": "Paris FC",
   "market": "exact",
-  "label": "Score exact 1-0",
-  "p": 0.0953,
+  "label": "Score exact 0-1",
+  "p": 0.1004,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "1-0",
+  "value": "0-1",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -13910,30 +13658,6 @@
   "market": "wh_btts",
   "label": "RB Leipzig gagne et les deux équipes marquent",
   "p": 0.3409,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
- "foot-401878768|h2|": {
-  "match": "foot-401878768",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-10-24",
-  "home": "Arsenal",
-  "away": "Everton",
-  "market": "h2",
-  "label": "Arsenal gagne avec 2 buts d'écart ou plus",
-  "p": 0.4027,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -14297,8 +14021,8 @@
   "away": "Los Angeles Kings",
   "market": "win_h",
   "label": "Victoire New Jersey Devils",
-  "p": 0.5996,
-  "stars": 2,
+  "p": 0.6309,
+  "stars": 3,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -14322,7 +14046,7 @@
   "away": "Los Angeles Kings",
   "market": "point",
   "label": "Jack Hughes : au moins 1 point",
-  "p": 0.66,
+  "p": 0.67,
   "stars": 3,
   "player": "Jack Hughes",
   "pid_player": 8481559,
@@ -14370,7 +14094,7 @@
   "away": "Los Angeles Kings",
   "market": "h2",
   "label": "New Jersey Devils gagne par 2 buts d'écart ou plus",
-  "p": 0.3773,
+  "p": 0.4072,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -14482,30 +14206,6 @@
   ],
   "result": null
  },
- "nhl-2026020171|u55|": {
-  "match": "nhl-2026020171",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-24",
-  "home": "Ottawa Senators",
-  "away": "New York Rangers",
-  "market": "u55",
-  "label": "Moins de 5,5 buts",
-  "p": 0.5635,
-  "stars": 2,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
  "nhl-2026020171|win_h|": {
   "match": "nhl-2026020171",
   "sport": "nhl",
@@ -14539,8 +14239,8 @@
   "away": "New York Rangers",
   "market": "point",
   "label": "Tim Stützle : au moins 1 point",
-  "p": 0.55,
-  "stars": 2,
+  "p": 0.61,
+  "stars": 3,
   "player": "Tim Stützle",
   "pid_player": 8482116,
   "value": null,
@@ -14563,7 +14263,7 @@
   "away": "New York Rangers",
   "market": "goal",
   "label": "Tim Stützle marque",
-  "p": 0.28,
+  "p": 0.32,
   "stars": 1,
   "player": "Tim Stützle",
   "pid_player": 8482116,
@@ -14575,30 +14275,6 @@
   "group": "safe",
   "kinds": [
    "scorer"
-  ],
-  "result": null
- },
- "nhl-2026020171|wh_by1|": {
-  "match": "nhl-2026020171",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-24",
-  "home": "Ottawa Senators",
-  "away": "New York Rangers",
-  "market": "wh_by1",
-  "label": "Ottawa Senators gagne d'un seul but (prolongation comprise)",
-  "p": 0.2156,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
   ],
   "result": null
  },
@@ -15502,6 +15178,330 @@
   "market": "a2",
   "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
   "p": 0.3806,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401878768|scorer|Martin Ødegaard": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "scorer",
+  "label": "Martin Ødegaard marque",
+  "p": 0.25,
+  "stars": 1,
+  "player": "Martin Ødegaard",
+  "pid_player": "203669",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401878768|dec|Martin Ødegaard": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "dec",
+  "label": "Martin Ødegaard buteur ou passeur",
+  "p": 0.34,
+  "stars": 1,
+  "player": "Martin Ødegaard",
+  "pid_player": "203669",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": [
+   7,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401878768|o35|": {
+  "match": "foot-401878768",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Arsenal",
+  "away": "Everton",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3024,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401879255|scorer|Gonzalo García": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "scorer",
+  "label": "Gonzalo García marque",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Gonzalo García",
+  "pid_player": "87297",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401879255|dec|Gonzalo García": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "dec",
+  "label": "Gonzalo García buteur ou passeur",
+  "p": 0.3,
+  "stars": 1,
+  "player": "Gonzalo García",
+  "pid_player": "87297",
+  "value": null,
+  "stats_league": "eng.1",
+  "season": 2026,
+  "base": [
+   7,
+   1,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401879255|htft_a|": {
+  "match": "foot-401879255",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-10-24",
+  "home": "Coventry",
+  "away": "Fulham",
+  "market": "htft_a",
+  "label": "Fulham mène à la mi-temps et gagne le match",
+  "p": 0.2553,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401876427|N2|": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "N2",
+  "label": "Nul ou Paris FC",
+  "p": 0.6371,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401876427|2|": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "2",
+  "label": "Victoire Paris FC",
+  "p": 0.3699,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401876427|scorer|Lassine Sinayoko": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "scorer",
+  "label": "Lassine Sinayoko marque",
+  "p": 0.39,
+  "stars": 1,
+  "player": "Lassine Sinayoko",
+  "pid_player": "271137",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401876427|dec|Lassine Sinayoko": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "dec",
+  "label": "Lassine Sinayoko buteur ou passeur",
+  "p": 0.53,
+  "stars": 2,
+  "player": "Lassine Sinayoko",
+  "pid_player": "271137",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": [
+   7,
+   6,
+   3
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876427|scw|Lassine Sinayoko": {
+  "match": "foot-401876427",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-24",
+  "home": "Lens",
+  "away": "Paris FC",
+  "market": "scw",
+  "label": "Lassine Sinayoko marque et Paris FC gagne",
+  "p": 0.2289,
+  "stars": 1,
+  "player": "Lassine Sinayoko",
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": "a",
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020171|o55|": {
+  "match": "nhl-2026020171",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-24",
+  "home": "Ottawa Senators",
+  "away": "New York Rangers",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6012,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020171|h2|": {
+  "match": "nhl-2026020171",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-24",
+  "home": "Ottawa Senators",
+  "away": "New York Rangers",
+  "market": "h2",
+  "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
+  "p": 0.3348,
   "stars": 1,
   "player": null,
   "pid_player": null,
