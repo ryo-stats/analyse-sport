@@ -1,1628 +1,1877 @@
 {
- "generated": "2026-10-24T23:59+02:00",
- "date": "2026-10-24",
+ "generated": "2026-10-25T02:23+02:00",
+ "date": "2026-10-25",
  "matches": [
   {
-   "id": "foot-401879256",
-   "sport": "foot",
-   "league": "Premier League",
-   "code": "eng.1",
-   "kickoff": "2026-10-24T11:30:00+00:00",
-   "time": "13:30",
-   "home": "Aston Villa",
-   "away": "Man City",
-   "state": "post",
-   "xgH": 1.01,
-   "xgA": 1.93,
-   "pH": 19,
-   "pD": 22,
-   "pA": 59,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Man City",
-     "p": 0.8082,
-     "prob": 81,
-     "fair": 1.24,
-     "stars": 5
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Man City",
-     "p": 0.5902,
-     "prob": 59,
-     "fair": 1.69,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1023,
-     "prob": 10,
-     "fair": 9.77,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_o25",
-     "label": "Man City gagne et plus de 2,5 buts",
-     "p": 0.3889,
-     "prob": 39,
-     "fair": 2.57,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Erling Haaland marque",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
-     "stars": 2,
-     "player": "Erling Haaland",
-     "team": "Man City",
-     "pid": "253989",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "8 buts et 0 passe en 7 matchs · Man City favori (59 %) · 1,9 buts attendus pour Man City"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Erling Haaland buteur ou passeur",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2,
-     "player": "Erling Haaland",
-     "team": "Man City",
-     "base": [
-      7,
-      8,
-      0
-     ],
-     "pid": "253989",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "8 buts et 0 passe en 7 matchs · Man City favori (59 %) · 1,9 buts attendus pour Man City"
-    }
-   }
-  },
-  {
-   "id": "foot-401882830",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-10-24T12:00:00+00:00",
-   "time": "14:00",
-   "home": "Rayo",
-   "away": "Elche",
-   "state": "post",
-   "xgH": 1.63,
-   "xgA": 0.9,
-   "pH": 55,
-   "pD": 25,
-   "pA": 21,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Rayo ou nul",
-     "p": 0.7933,
-     "prob": 79,
-     "fair": 1.26,
-     "stars": 4
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Rayo",
-     "p": 0.5463,
-     "prob": 55,
-     "fair": 1.83,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1301,
-     "prob": 13,
-     "fair": 7.68,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "scw",
-     "label": "Sergio Camello marque et Rayo gagne",
-     "p": 0.3654,
-     "prob": 37,
-     "fair": 2.74,
-     "stars": 1,
-     "player": "Sergio Camello",
-     "team": "Rayo",
-     "side": "h"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Sergio Camello marque",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
-     "player": "Sergio Camello",
-     "team": "Rayo",
-     "pid": "276652",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "7 buts et 1 passe en 9 matchs · Rayo favori (55 %) · 1,6 buts attendus pour Rayo"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Sergio Camello buteur ou passeur",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
-     "stars": 2,
-     "player": "Sergio Camello",
-     "team": "Rayo",
-     "base": [
-      9,
-      7,
-      1
-     ],
-     "pid": "276652",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "7 buts et 1 passe en 9 matchs · Rayo favori (55 %) · 1,6 buts attendus pour Rayo"
-    }
-   }
-  },
-  {
-   "id": "foot-401874958",
+   "id": "foot-401875036",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-10-24T13:00:00+00:00",
-   "time": "15:00",
-   "home": "Cagliari",
-   "away": "Bologna",
-   "state": "post",
-   "xgH": 0.89,
-   "xgA": 1.0,
-   "pH": 31,
-   "pD": 32,
-   "pA": 37,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "u25",
-     "label": "Moins de 2,5 buts",
-     "p": 0.705,
-     "prob": 71,
-     "fair": 1.42,
-     "stars": 4
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Bologna",
-     "p": 0.3691,
-     "prob": 37,
-     "fair": 2.71,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1503,
-     "prob": 15,
-     "fair": 6.65,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Bologna gagne sans encaisser de but",
-     "p": 0.2583,
-     "prob": 26,
-     "fair": 3.87,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Federico Bernardeschi marque",
-     "p": 0.15,
-     "prob": 15,
-     "fair": 6.67,
-     "stars": 1,
-     "player": "Federico Bernardeschi",
-     "team": "Bologna",
-     "pid": "180956",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "1 but et 0 passe en 7 matchs · Bologna annoncé gagnant (37 %) · 1,0 but attendu pour Bologna"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Federico Bernardeschi buteur ou passeur",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
-     "stars": 1,
-     "player": "Federico Bernardeschi",
-     "team": "Bologna",
-     "base": [
-      7,
-      1,
-      0
-     ],
-     "pid": "180956",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "1 but et 0 passe en 7 matchs · Bologna annoncé gagnant (37 %) · 1,0 but attendu pour Bologna"
-    }
-   }
-  },
-  {
-   "id": "foot-401874961",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-24T13:00:00+00:00",
-   "time": "15:00",
-   "home": "Como",
-   "away": "Sassuolo",
-   "state": "post",
-   "xgH": 2.1,
-   "xgA": 0.95,
-   "pH": 64,
-   "pD": 20,
-   "pA": 16,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Como ou nul",
-     "p": 0.8395,
-     "prob": 84,
-     "fair": 1.19,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Como",
-     "p": 0.6389,
-     "prob": 64,
-     "fair": 1.57,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1045,
-     "prob": 10,
-     "fair": 9.57,
-     "stars": 1,
-     "value": "2-0"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Como mène à la mi-temps et gagne le match",
-     "p": 0.4179,
-     "prob": 42,
-     "fair": 2.39,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Anastasios Douvikas marque",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
-     "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
-     "pid": "262071",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Como favori (64 %) · 2,1 buts attendus pour Como"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Anastasios Douvikas buteur ou passeur",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
-     "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
-     "base": [
-      7,
-      3,
-      0
-     ],
-     "pid": "262071",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Como favori (64 %) · 2,1 buts attendus pour Como"
-    }
-   }
-  },
-  {
-   "id": "foot-401884758",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-10-24T13:30:00+00:00",
-   "time": "15:30",
-   "home": "Augsburg",
-   "away": "Union Berlin",
-   "state": "post",
-   "xgH": 1.73,
-   "xgA": 1.12,
-   "pH": 52,
-   "pD": 24,
-   "pA": 25,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Augsburg ou nul",
-     "p": 0.7528,
-     "prob": 75,
-     "fair": 1.33,
-     "stars": 4
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Augsburg",
-     "p": 0.5151,
-     "prob": 52,
-     "fair": 1.94,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.0999,
-     "prob": 10,
-     "fair": 10.01,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_o25",
-     "label": "Augsburg gagne et plus de 2,5 buts",
-     "p": 0.3289,
-     "prob": 33,
-     "fair": 3.04,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Michael Gregoritsch marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
-     "stars": 1,
-     "player": "Michael Gregoritsch",
-     "team": "Augsburg",
-     "pid": "146804",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "4 buts et 0 passe en 6 matchs · Augsburg favori (52 %) · 1,7 buts attendus pour Augsburg"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Michael Gregoritsch buteur ou passeur",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
-     "stars": 1,
-     "player": "Michael Gregoritsch",
-     "team": "Augsburg",
-     "base": [
-      6,
-      4,
-      0
-     ],
-     "pid": "146804",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "4 buts et 0 passe en 6 matchs · Augsburg favori (52 %) · 1,7 buts attendus pour Augsburg"
-    }
-   }
-  },
-  {
-   "id": "foot-401884756",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-10-24T13:30:00+00:00",
-   "time": "15:30",
-   "home": "Cologne",
-   "away": "Schalke",
-   "state": "post",
-   "xgH": 1.42,
-   "xgA": 1.06,
-   "pH": 45,
-   "pD": 27,
-   "pA": 28,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Cologne ou nul",
-     "p": 0.7185,
-     "prob": 72,
-     "fair": 1.39,
-     "stars": 4
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Cologne",
-     "p": 0.4531,
-     "prob": 45,
-     "fair": 2.21,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1183,
-     "prob": 12,
-     "fair": 8.45,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Cologne mène à la mi-temps et gagne le match",
-     "p": 0.2707,
-     "prob": 27,
-     "fair": 3.69,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Thijs Dallinga marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
-     "stars": 1,
-     "player": "Thijs Dallinga",
-     "team": "Cologne",
-     "pid": "266280",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 3 matchs · Cologne favori (45 %) · 1,4 but attendu pour Cologne"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Thijs Dallinga buteur ou passeur",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
-     "stars": 1,
-     "player": "Thijs Dallinga",
-     "team": "Cologne",
-     "base": [
-      3,
-      2,
-      0
-     ],
-     "pid": "266280",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 3 matchs · Cologne favori (45 %) · 1,4 but attendu pour Cologne"
-    }
-   }
-  },
-  {
-   "id": "foot-401884757",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-10-24T13:30:00+00:00",
-   "time": "15:30",
-   "home": "Mainz",
-   "away": "Bremen",
-   "state": "post",
-   "xgH": 1.77,
-   "xgA": 1.06,
-   "pH": 54,
-   "pD": 23,
-   "pA": 23,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Mainz ou nul",
-     "p": 0.7742,
-     "prob": 77,
-     "fair": 1.29,
-     "stars": 4
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Mainz",
-     "p": 0.5399,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1051,
-     "prob": 11,
-     "fair": 9.51,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_o25",
-     "label": "Mainz gagne et plus de 2,5 buts",
-     "p": 0.342,
-     "prob": 34,
-     "fair": 2.92,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Phillip Tietz marque",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
-     "stars": 1,
-     "player": "Phillip Tietz",
-     "team": "Mainz",
-     "pid": "234376",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 6 matchs · Mainz favori (54 %) · 1,8 buts attendus pour Mainz"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Phillip Tietz buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
-     "stars": 1,
-     "player": "Phillip Tietz",
-     "team": "Mainz",
-     "base": [
-      6,
-      5,
-      0
-     ],
-     "pid": "234376",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 6 matchs · Mainz favori (54 %) · 1,8 buts attendus pour Mainz"
-    }
-   }
-  },
-  {
-   "id": "foot-401884762",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-10-24T13:30:00+00:00",
-   "time": "15:30",
-   "home": "RB Leipzig",
-   "away": "Elversberg",
-   "state": "post",
-   "xgH": 2.32,
-   "xgA": 1.03,
-   "pH": 66,
-   "pD": 18,
-   "pA": 15,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "RB Leipzig ou nul",
-     "p": 0.8464,
-     "prob": 85,
-     "fair": 1.18,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire RB Leipzig",
-     "p": 0.6621,
-     "prob": 66,
-     "fair": 1.51,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0972,
-     "prob": 10,
-     "fair": 10.29,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "wh_btts",
-     "label": "RB Leipzig gagne et les deux équipes marquent",
-     "p": 0.341,
-     "prob": 34,
-     "fair": 2.93,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Christopher Nkunku marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1,
-     "player": "Christopher Nkunku",
-     "team": "RB Leipzig",
-     "pid": "222176",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 6 matchs · RB Leipzig favori (66 %) · 2,3 buts attendus pour RB Leipzig"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Christopher Nkunku buteur ou passeur",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
-     "player": "Christopher Nkunku",
-     "team": "RB Leipzig",
-     "base": [
-      6,
-      4,
-      1
-     ],
-     "pid": "222176",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 6 matchs · RB Leipzig favori (66 %) · 2,3 buts attendus pour RB Leipzig"
-    }
-   }
-  },
-  {
-   "id": "foot-401884755",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-10-24T13:30:00+00:00",
-   "time": "15:30",
-   "home": "Paderborn",
-   "away": "Hamburg",
-   "state": "post",
-   "xgH": 1.77,
-   "xgA": 1.14,
-   "pH": 52,
-   "pD": 23,
-   "pA": 24,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Paderborn ou nul",
-     "p": 0.7557,
-     "prob": 76,
-     "fair": 1.32,
-     "stars": 4
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Paderborn",
-     "p": 0.5215,
-     "prob": 52,
-     "fair": 1.92,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0973,
-     "prob": 10,
-     "fair": 10.28,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "wh_o25",
-     "label": "Paderborn gagne et plus de 2,5 buts",
-     "p": 0.3388,
-     "prob": 34,
-     "fair": 2.95,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Stefano Marino marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
-     "stars": 1,
-     "player": "Stefano Marino",
-     "team": "Paderborn",
-     "pid": "332543",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 6 matchs · Paderborn favori (52 %) · 1,8 buts attendus pour Paderborn"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Stefano Marino buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Stefano Marino",
-     "team": "Paderborn",
-     "base": [
-      6,
-      2,
-      0
-     ],
-     "pid": "332543",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 6 matchs · Paderborn favori (52 %) · 1,8 buts attendus pour Paderborn"
-    }
-   }
-  },
-  {
-   "id": "foot-401878768",
-   "sport": "foot",
-   "league": "Premier League",
-   "code": "eng.1",
-   "kickoff": "2026-10-24T14:00:00+00:00",
-   "time": "16:00",
-   "home": "Arsenal",
-   "away": "Everton",
-   "state": "post",
-   "xgH": 2.08,
-   "xgA": 0.69,
-   "pH": 70,
-   "pD": 19,
-   "pA": 11,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Arsenal ou nul",
-     "p": 0.8881,
-     "prob": 89,
-     "fair": 1.13,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Arsenal",
-     "p": 0.6978,
-     "prob": 70,
-     "fair": 1.43,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1353,
-     "prob": 14,
-     "fair": 7.39,
-     "stars": 1,
-     "value": "2-0"
-    },
-    "fun": {
-     "market": "scw",
-     "label": "Bukayo Saka marque et Arsenal gagne",
-     "p": 0.3465,
-     "prob": 35,
-     "fair": 2.89,
-     "stars": 1,
-     "player": "Bukayo Saka",
-     "team": "Arsenal",
-     "side": "h"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Bukayo Saka marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Bukayo Saka",
-     "team": "Arsenal",
-     "pid": "280555",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal favori (70 %) · 2,1 buts attendus pour Arsenal"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Bukayo Saka buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
-     "stars": 1,
-     "player": "Bukayo Saka",
-     "team": "Arsenal",
-     "base": [
-      7,
-      3,
-      0
-     ],
-     "pid": "280555",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal favori (70 %) · 2,1 buts attendus pour Arsenal"
-    }
-   }
-  },
-  {
-   "id": "foot-401879255",
-   "sport": "foot",
-   "league": "Premier League",
-   "code": "eng.1",
-   "kickoff": "2026-10-24T14:00:00+00:00",
-   "time": "16:00",
-   "home": "Coventry",
-   "away": "Fulham",
-   "state": "post",
-   "xgH": 1.07,
-   "xgA": 1.35,
-   "pH": 30,
-   "pD": 27,
-   "pA": 43,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Fulham",
-     "p": 0.7032,
-     "prob": 70,
-     "fair": 1.42,
-     "stars": 4
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Fulham",
-     "p": 0.4318,
-     "prob": 43,
-     "fair": 2.32,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1195,
-     "prob": 12,
-     "fair": 8.37,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "htft_a",
-     "label": "Fulham mène à la mi-temps et gagne le match",
-     "p": 0.2553,
-     "prob": 26,
-     "fair": 3.92,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Gonzalo García marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
-     "stars": 1,
-     "player": "Gonzalo García",
-     "team": "Fulham",
-     "pid": "87297",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "1 but et 0 passe en 7 matchs · Fulham annoncé gagnant (43 %) · 1,4 but attendu pour Fulham"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Gonzalo García buteur ou passeur",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
-     "stars": 1,
-     "player": "Gonzalo García",
-     "team": "Fulham",
-     "base": [
-      7,
-      1,
-      0
-     ],
-     "pid": "87297",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "1 but et 0 passe en 7 matchs · Fulham annoncé gagnant (43 %) · 1,4 but attendu pour Fulham"
-    }
-   }
-  },
-  {
-   "id": "foot-401882831",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-10-24T14:15:00+00:00",
-   "time": "16:15",
-   "home": "Racing",
-   "away": "Espanyol",
-   "state": "post",
-   "xgH": 1.41,
-   "xgA": 1.21,
-   "pH": 42,
-   "pD": 26,
-   "pA": 32,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Racing ou nul",
-     "p": 0.6765,
-     "prob": 68,
-     "fair": 1.48,
-     "stars": 3
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Racing",
-     "p": 0.415,
-     "prob": 42,
-     "fair": 2.41,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1028,
-     "prob": 10,
-     "fair": 9.73,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "scw",
-     "label": "Yassir Zabiri marque et Racing gagne",
-     "p": 0.2738,
-     "prob": 27,
-     "fair": 3.65,
-     "stars": 1,
-     "player": "Yassir Zabiri",
-     "team": "Racing",
-     "side": "h"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Yassir Zabiri marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
-     "stars": 1,
-     "player": "Yassir Zabiri",
-     "team": "Racing",
-     "pid": "390389",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "7 buts et 0 passe en 9 matchs · Racing annoncé gagnant (42 %) · 1,4 but attendu pour Racing"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Yassir Zabiri buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
-     "stars": 1,
-     "player": "Yassir Zabiri",
-     "team": "Racing",
-     "base": [
-      9,
-      7,
-      0
-     ],
-     "pid": "390389",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "7 buts et 0 passe en 9 matchs · Racing annoncé gagnant (42 %) · 1,4 but attendu pour Racing"
-    }
-   }
-  },
-  {
-   "id": "foot-401874948",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-24T16:00:00+00:00",
-   "time": "18:00",
-   "home": "Napoli",
-   "away": "AS Roma",
-   "state": "post",
-   "xgH": 1.12,
-   "xgA": 1.12,
-   "pH": 36,
-   "pD": 29,
-   "pA": 36,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Napoli ou nul",
-     "p": 0.6445,
-     "prob": 64,
-     "fair": 1.55,
-     "stars": 3
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Napoli",
-     "p": 0.3556,
-     "prob": 36,
-     "fair": 2.81,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1198,
-     "prob": 12,
-     "fair": 8.35,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Napoli gagne sans encaisser de but",
-     "p": 0.2203,
-     "prob": 22,
-     "fair": 4.54,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Kevin De Bruyne marque",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
-     "stars": 1,
-     "player": "Kevin De Bruyne",
-     "team": "Napoli",
-     "pid": "134947",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 7 matchs · Napoli annoncé gagnant (36 %) · 1,1 but attendu pour Napoli"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Kevin De Bruyne buteur ou passeur",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
-     "stars": 1,
-     "player": "Kevin De Bruyne",
-     "team": "Napoli",
-     "base": [
-      7,
-      3,
-      1
-     ],
-     "pid": "134947",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 7 matchs · Napoli annoncé gagnant (36 %) · 1,1 but attendu pour Napoli"
-    }
-   }
-  },
-  {
-   "id": "foot-401878767",
-   "sport": "foot",
-   "league": "Premier League",
-   "code": "eng.1",
-   "kickoff": "2026-10-24T16:30:00+00:00",
-   "time": "18:30",
-   "home": "Chelsea",
-   "away": "Spurs",
-   "state": "post",
-   "xgH": 1.57,
-   "xgA": 1.06,
-   "pH": 49,
-   "pD": 25,
-   "pA": 26,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Chelsea ou nul",
-     "p": 0.744,
-     "prob": 74,
-     "fair": 1.34,
-     "stars": 4
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Chelsea",
-     "p": 0.4915,
-     "prob": 49,
-     "fair": 2.03,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1138,
-     "prob": 11,
-     "fair": 8.79,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Chelsea mène à la mi-temps et gagne le match",
-     "p": 0.2994,
-     "prob": 30,
-     "fair": 3.34,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "João Pedro marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
-     "stars": 1,
-     "player": "João Pedro",
-     "team": "Chelsea",
-     "pid": "284960",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "5 buts et 3 passes en 6 matchs · Chelsea favori (49 %) · 1,6 buts attendus pour Chelsea"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "João Pedro buteur ou passeur",
-     "p": 0.48,
-     "prob": 48,
-     "fair": 2.08,
-     "stars": 1,
-     "player": "João Pedro",
-     "team": "Chelsea",
-     "base": [
-      6,
-      5,
-      3
-     ],
-     "pid": "284960",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "5 buts et 3 passes en 6 matchs · Chelsea favori (49 %) · 1,6 buts attendus pour Chelsea"
-    }
-   }
-  },
-  {
-   "id": "foot-401882827",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-10-24T16:30:00+00:00",
-   "time": "18:30",
-   "home": "Valencia",
-   "away": "Villarreal",
-   "state": "post",
-   "xgH": 1.07,
-   "xgA": 1.45,
-   "pH": 28,
-   "pD": 26,
-   "pA": 46,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Villarreal",
-     "p": 0.7213,
-     "prob": 72,
-     "fair": 1.39,
-     "stars": 4
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Villarreal",
-     "p": 0.4579,
-     "prob": 46,
-     "fair": 2.18,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1172,
-     "prob": 12,
-     "fair": 8.53,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "htft_a",
-     "label": "Villarreal mène à la mi-temps et gagne le match",
-     "p": 0.2743,
-     "prob": 27,
-     "fair": 3.65,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Pape Gueye marque",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
-     "stars": 1,
-     "player": "Pape Gueye",
-     "team": "Villarreal",
-     "pid": "255889",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 9 matchs · Villarreal favori (46 %) · 1,4 but attendu pour Villarreal"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Pape Gueye buteur ou passeur",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
-     "stars": 1,
-     "player": "Pape Gueye",
-     "team": "Villarreal",
-     "base": [
-      9,
-      3,
-      0
-     ],
-     "pid": "255889",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 9 matchs · Villarreal favori (46 %) · 1,4 but attendu pour Villarreal"
-    }
-   }
-  },
-  {
-   "id": "foot-401884763",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-10-24T16:30:00+00:00",
-   "time": "18:30",
-   "home": "Dortmund",
-   "away": "Frankfurt",
-   "state": "post",
-   "xgH": 2.21,
-   "xgA": 1.08,
-   "pH": 63,
-   "pD": 20,
-   "pA": 18,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Dortmund ou nul",
-     "p": 0.8246,
-     "prob": 82,
-     "fair": 1.21,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Dortmund",
-     "p": 0.6286,
-     "prob": 63,
-     "fair": 1.59,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0983,
-     "prob": 10,
-     "fair": 10.18,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.417,
-     "prob": 42,
-     "fair": 2.4,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Serhou Guirassy marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
-     "stars": 1,
-     "player": "Serhou Guirassy",
-     "team": "Dortmund",
-     "pid": "186381",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 2 passes en 6 matchs · Dortmund favori (63 %) · 2,2 buts attendus pour Dortmund"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Serhou Guirassy buteur ou passeur",
-     "p": 0.58,
-     "prob": 58,
-     "fair": 1.72,
-     "stars": 2,
-     "player": "Serhou Guirassy",
-     "team": "Dortmund",
-     "base": [
-      6,
-      2,
-      2
-     ],
-     "pid": "186381",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 2 passes en 6 matchs · Dortmund favori (63 %) · 2,2 buts attendus pour Dortmund"
-    }
-   }
-  },
-  {
-   "id": "foot-401876427",
-   "sport": "foot",
-   "league": "Ligue 1",
-   "code": "fra.1",
-   "kickoff": "2026-10-24T18:45:00+00:00",
-   "time": "20:45",
-   "home": "Lens",
-   "away": "Paris FC",
-   "state": "post",
-   "xgH": 1.27,
-   "xgA": 1.19,
-   "pH": 38,
-   "pD": 27,
-   "pA": 35,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Lens ou nul",
-     "p": 0.6535,
-     "prob": 65,
-     "fair": 1.53,
-     "stars": 3
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Lens",
-     "p": 0.3812,
-     "prob": 38,
-     "fair": 2.62,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1081,
-     "prob": 11,
-     "fair": 9.25,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Lens mène à la mi-temps et gagne le match",
-     "p": 0.2219,
-     "prob": 22,
-     "fair": 4.51,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Florian Thauvin marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
-     "stars": 1,
-     "player": "Florian Thauvin",
-     "team": "Lens",
-     "pid": "156898",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "3 buts et 6 passes en 7 matchs · Lens annoncé gagnant (38 %) · 1,3 but attendu pour Lens"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Florian Thauvin buteur ou passeur",
-     "p": 0.51,
-     "prob": 51,
-     "fair": 1.96,
-     "stars": 2,
-     "player": "Florian Thauvin",
-     "team": "Lens",
-     "base": [
-      7,
-      3,
-      6
-     ],
-     "pid": "156898",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "3 buts et 6 passes en 7 matchs · Lens annoncé gagnant (38 %) · 1,3 but attendu pour Lens"
-    }
-   }
-  },
-  {
-   "id": "foot-401874955",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-24T18:45:00+00:00",
-   "time": "20:45",
-   "home": "Lazio",
-   "away": "Parma",
-   "state": "post",
-   "xgH": 1.77,
-   "xgA": 0.65,
-   "pH": 64,
-   "pD": 23,
+   "kickoff": "2026-10-25T11:30:00+00:00",
+   "time": "12:30",
+   "home": "Inter Milan",
+   "away": "Fiorentina",
+   "state": "pre",
+   "xgH": 2.39,
+   "xgA": 0.94,
+   "pH": 69,
+   "pD": 17,
    "pA": 13,
-   "edate": "20261024",
+   "edate": "20261025",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Lazio ou nul",
-     "p": 0.8682,
+     "label": "Inter Milan ou nul",
+     "p": 0.8689,
      "prob": 87,
      "fair": 1.15,
      "stars": 5
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Lazio",
-     "p": 0.6431,
-     "prob": 64,
-     "fair": 1.55,
+     "label": "Victoire Inter Milan",
+     "p": 0.694,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-0",
+     "p": 0.1023,
+     "prob": 10,
+     "fair": 9.77,
+     "stars": 1,
+     "value": "2-0"
+    },
+    "fun": {
+     "market": "wh_nil",
+     "label": "Inter Milan gagne sans encaisser de but",
+     "p": 0.3547,
+     "prob": 35,
+     "fair": 2.82,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Marcus Thuram marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 2 passes en 6 matchs · Inter Milan favori (69 %) · 2,4 buts attendus pour Inter Milan"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Marcus Thuram buteur ou passeur",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "base": [
+      6,
+      4,
+      2
+     ],
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 2 passes en 6 matchs · Inter Milan favori (69 %) · 2,4 buts attendus pour Inter Milan"
+    }
+   }
+  },
+  {
+   "id": "foot-401882835",
+   "sport": "foot",
+   "league": "LaLiga",
+   "code": "esp.1",
+   "kickoff": "2026-10-25T13:00:00+00:00",
+   "time": "14:00",
+   "home": "Athletic",
+   "away": "Getafe",
+   "state": "pre",
+   "xgH": 1.68,
+   "xgA": 0.73,
+   "pH": 60,
+   "pD": 24,
+   "pA": 16,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Athletic ou nul",
+     "p": 0.8407,
+     "prob": 84,
+     "fair": 1.19,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Athletic",
+     "p": 0.6018,
+     "prob": 60,
+     "fair": 1.66,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1576,
-     "prob": 16,
-     "fair": 6.34,
+     "p": 0.1514,
+     "prob": 15,
+     "fair": 6.6,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Lazio mène à la mi-temps et gagne le match",
+     "market": "wh_nil",
+     "label": "Athletic gagne sans encaisser de but",
+     "p": 0.3929,
+     "prob": 39,
+     "fair": 2.55,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Álex Berenguer marque",
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
+     "stars": 1,
+     "player": "Álex Berenguer",
+     "team": "Athletic",
+     "pid": "209579",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "2 buts et 1 passe en 9 matchs · Athletic favori (60 %) · 1,7 buts attendus pour Athletic"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Álex Berenguer buteur ou passeur",
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
+     "stars": 1,
+     "player": "Álex Berenguer",
+     "team": "Athletic",
+     "base": [
+      9,
+      2,
+      1
+     ],
+     "pid": "209579",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "2 buts et 1 passe en 9 matchs · Athletic favori (60 %) · 1,7 buts attendus pour Athletic"
+    }
+   }
+  },
+  {
+   "id": "foot-401876425",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "Monaco",
+   "away": "Lille",
+   "state": "pre",
+   "xgH": 1.39,
+   "xgA": 0.92,
+   "pH": 48,
+   "pD": 27,
+   "pA": 25,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Monaco ou nul",
+     "p": 0.7516,
+     "prob": 75,
+     "fair": 1.33,
+     "stars": 4
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Monaco",
+     "p": 0.4783,
+     "prob": 48,
+     "fair": 2.09,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.1384,
+     "prob": 14,
+     "fair": 7.23,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "wh_nil",
+     "label": "Monaco gagne sans encaisser de but",
+     "p": 0.2998,
+     "prob": 30,
+     "fair": 3.34,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Paris Brunner marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "Paris Brunner",
+     "team": "Monaco",
+     "pid": "365789",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 5 matchs · Monaco favori (48 %) · 1,4 but attendu pour Monaco"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Paris Brunner buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Paris Brunner",
+     "team": "Monaco",
+     "base": [
+      5,
+      4,
+      0
+     ],
+     "pid": "365789",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 5 matchs · Monaco favori (48 %) · 1,4 but attendu pour Monaco"
+    }
+   }
+  },
+  {
+   "id": "foot-401879254",
+   "sport": "foot",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "C Palace",
+   "away": "Newcastle",
+   "state": "pre",
+   "xgH": 1.22,
+   "xgA": 1.39,
+   "pH": 33,
+   "pD": 26,
+   "pA": 41,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Newcastle",
+     "p": 0.6698,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Newcastle",
+     "p": 0.4075,
+     "prob": 41,
+     "fair": 2.45,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1021,
+     "prob": 10,
+     "fair": 9.79,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.2658,
+     "prob": 27,
+     "fair": 3.76,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Yoane Wissa marque",
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
+     "stars": 1,
+     "player": "Yoane Wissa",
+     "team": "Newcastle",
+     "pid": "224077",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "1 but et 1 passe en 7 matchs · Newcastle annoncé gagnant (41 %) · 1,4 but attendu pour Newcastle"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Yoane Wissa buteur ou passeur",
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
+     "stars": 1,
+     "player": "Yoane Wissa",
+     "team": "Newcastle",
+     "base": [
+      7,
+      1,
+      1
+     ],
+     "pid": "224077",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "1 but et 1 passe en 7 matchs · Newcastle annoncé gagnant (41 %) · 1,4 but attendu pour Newcastle"
+    }
+   }
+  },
+  {
+   "id": "foot-401878766",
+   "sport": "foot",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "Hull",
+   "away": "Brentford",
+   "state": "pre",
+   "xgH": 0.94,
+   "xgA": 1.76,
+   "pH": 20,
+   "pD": 23,
+   "pA": 57,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Brentford",
+     "p": 0.8005,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 5
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Brentford",
+     "p": 0.5669,
+     "prob": 57,
+     "fair": 1.76,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.118,
+     "prob": 12,
+     "fair": 8.48,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "htft_a",
+     "label": "Brentford mène à la mi-temps et gagne le match",
+     "p": 0.3559,
+     "prob": 36,
+     "fair": 2.81,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Keane Lewis-Potter marque",
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
+     "stars": 1,
+     "player": "Keane Lewis-Potter",
+     "team": "Brentford",
+     "pid": "284490",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "2 buts et 1 passe en 7 matchs · Brentford favori (57 %) · 1,8 buts attendus pour Brentford"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Keane Lewis-Potter buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Keane Lewis-Potter",
+     "team": "Brentford",
+     "base": [
+      7,
+      2,
+      1
+     ],
+     "pid": "284490",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "2 buts et 1 passe en 7 matchs · Brentford favori (57 %) · 1,8 buts attendus pour Brentford"
+    }
+   }
+  },
+  {
+   "id": "foot-401878765",
+   "sport": "foot",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "Liverpool",
+   "away": "Brighton",
+   "state": "pre",
+   "xgH": 1.61,
+   "xgA": 1.26,
+   "pH": 46,
+   "pD": 25,
+   "pA": 30,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Liverpool ou nul",
+     "p": 0.701,
+     "prob": 70,
+     "fair": 1.43,
+     "stars": 4
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Liverpool",
+     "p": 0.4556,
+     "prob": 46,
+     "fair": 2.19,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0926,
+     "prob": 9,
+     "fair": 10.8,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3221,
+     "prob": 32,
+     "fair": 3.11,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Alexander Isak marque",
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
+     "stars": 1,
+     "player": "Alexander Isak",
+     "team": "Liverpool",
+     "pid": "235662",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 6 matchs · Liverpool favori (46 %) · 1,6 buts attendus pour Liverpool"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Alexander Isak buteur ou passeur",
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
+     "player": "Alexander Isak",
+     "team": "Liverpool",
+     "base": [
+      6,
+      5,
+      0
+     ],
+     "pid": "235662",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 6 matchs · Liverpool favori (46 %) · 1,6 buts attendus pour Liverpool"
+    }
+   }
+  },
+  {
+   "id": "foot-401879252",
+   "sport": "foot",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "Man United",
+   "away": "Bournemouth",
+   "state": "pre",
+   "xgH": 1.44,
+   "xgA": 1.17,
+   "pH": 43,
+   "pD": 26,
+   "pA": 31,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Man United ou nul",
+     "p": 0.6931,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Man United",
+     "p": 0.4324,
+     "prob": 43,
+     "fair": 2.31,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.106,
+     "prob": 11,
+     "fair": 9.43,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.2656,
+     "prob": 27,
+     "fair": 3.77,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Bryan Mbeumo marque",
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
+     "stars": 1,
+     "player": "Bryan Mbeumo",
+     "team": "Man United",
+     "pid": "271170",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 7 matchs · Man United annoncé gagnant (43 %) · 1,4 but attendu pour Man United"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Bryan Mbeumo buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
+     "stars": 1,
+     "player": "Bryan Mbeumo",
+     "team": "Man United",
+     "base": [
+      7,
+      4,
+      0
+     ],
+     "pid": "271170",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 7 matchs · Man United annoncé gagnant (43 %) · 1,4 but attendu pour Man United"
+    }
+   }
+  },
+  {
+   "id": "foot-401874972",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "Atalanta",
+   "away": "Frosinone",
+   "state": "pre",
+   "xgH": 1.8,
+   "xgA": 1.2,
+   "pH": 51,
+   "pD": 23,
+   "pA": 25,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Atalanta ou nul",
+     "p": 0.7462,
+     "prob": 75,
+     "fair": 1.34,
+     "stars": 4
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Atalanta",
+     "p": 0.5146,
+     "prob": 51,
+     "fair": 1.94,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0968,
+     "prob": 10,
+     "fair": 10.33,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3515,
+     "prob": 35,
+     "fair": 2.84,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Nikola Krstovic marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1,
+     "player": "Nikola Krstovic",
+     "team": "Atalanta",
+     "pid": "258158",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 1 passe en 7 matchs · Atalanta favori (51 %) · 1,8 buts attendus pour Atalanta"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Nikola Krstovic buteur ou passeur",
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
+     "player": "Nikola Krstovic",
+     "team": "Atalanta",
+     "base": [
+      7,
+      4,
+      1
+     ],
+     "pid": "258158",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 1 passe en 7 matchs · Atalanta favori (51 %) · 1,8 buts attendus pour Atalanta"
+    }
+   }
+  },
+  {
+   "id": "foot-401874952",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-25T14:00:00+00:00",
+   "time": "15:00",
+   "home": "Genoa",
+   "away": "Venezia",
+   "state": "pre",
+   "xgH": 1.22,
+   "xgA": 0.89,
+   "pH": 44,
+   "pD": 29,
+   "pA": 27,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Genoa ou nul",
+     "p": 0.7325,
+     "prob": 73,
+     "fair": 1.37,
+     "stars": 4
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Genoa",
+     "p": 0.4395,
+     "prob": 44,
+     "fair": 2.28,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.1484,
+     "prob": 15,
+     "fair": 6.74,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "wh_nil",
+     "label": "Genoa gagne sans encaisser de but",
+     "p": 0.291,
+     "prob": 29,
+     "fair": 3.44,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Milutin Osmajic marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
+     "stars": 1,
+     "player": "Milutin Osmajic",
+     "team": "Genoa",
+     "pid": "275444",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 6 matchs · Genoa annoncé gagnant (44 %) · 1,2 but attendu pour Genoa"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Milutin Osmajic buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
+     "stars": 1,
+     "player": "Milutin Osmajic",
+     "team": "Genoa",
+     "base": [
+      6,
+      3,
+      1
+     ],
+     "pid": "275444",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 6 matchs · Genoa annoncé gagnant (44 %) · 1,2 but attendu pour Genoa"
+    }
+   }
+  },
+  {
+   "id": "foot-401884760",
+   "sport": "foot",
+   "league": "Bundesliga",
+   "code": "ger.1",
+   "kickoff": "2026-10-25T14:30:00+00:00",
+   "time": "15:30",
+   "home": "Hoffenheim",
+   "away": "Leverkusen",
+   "state": "pre",
+   "xgH": 1.43,
+   "xgA": 1.57,
+   "pH": 35,
+   "pD": 24,
+   "pA": 41,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Leverkusen",
+     "p": 0.6522,
+     "prob": 65,
+     "fair": 1.53,
+     "stars": 3
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Leverkusen",
      "p": 0.4096,
      "prob": 41,
      "fair": 2.44,
      "stars": 1
     },
-    "player": {
-     "market": "scorer",
-     "label": "Davide Frattesi marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
-     "stars": 1,
-     "player": "Davide Frattesi",
-     "team": "Lazio",
-     "pid": "250850",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Lazio favori (64 %) · 1,8 buts attendus pour Lazio"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Davide Frattesi buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
-     "stars": 1,
-     "player": "Davide Frattesi",
-     "team": "Lazio",
-     "base": [
-      7,
-      3,
-      0
-     ],
-     "pid": "250850",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Lazio favori (64 %) · 1,8 buts attendus pour Lazio"
-    }
-   }
-  },
-  {
-   "id": "foot-401882834",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-10-24T19:00:00+00:00",
-   "time": "21:00",
-   "home": "Atlético",
-   "away": "Deportivo",
-   "state": "post",
-   "xgH": 2.43,
-   "xgA": 0.75,
-   "pH": 74,
-   "pD": 16,
-   "pA": 10,
-   "edate": "20261024",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Atlético ou nul",
-     "p": 0.9043,
-     "prob": 90,
-     "fair": 1.11,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Atlético",
-     "p": 0.7447,
-     "prob": 74,
-     "fair": 1.34,
-     "stars": 4
-    },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1226,
-     "prob": 12,
-     "fair": 8.16,
+     "label": "Score exact 1-2",
+     "p": 0.0878,
+     "prob": 9,
+     "fair": 11.39,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-2"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3939,
+     "p": 0.3518,
+     "prob": 35,
+     "fair": 2.84,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Patrik Schick marque",
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1,
+     "player": "Patrik Schick",
+     "team": "Leverkusen",
+     "pid": "212330",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "6 buts et 2 passes en 6 matchs · Leverkusen annoncé gagnant (41 %) · 1,6 buts attendus pour Leverkusen"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Patrik Schick buteur ou passeur",
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
+     "player": "Patrik Schick",
+     "team": "Leverkusen",
+     "base": [
+      6,
+      6,
+      2
+     ],
+     "pid": "212330",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "6 buts et 2 passes en 6 matchs · Leverkusen annoncé gagnant (41 %) · 1,6 buts attendus pour Leverkusen"
+    }
+   }
+  },
+  {
+   "id": "foot-401882833",
+   "sport": "foot",
+   "league": "LaLiga",
+   "code": "esp.1",
+   "kickoff": "2026-10-25T15:15:00+00:00",
+   "time": "16:15",
+   "home": "Celta Vigo",
+   "away": "Betis",
+   "state": "pre",
+   "xgH": 1.09,
+   "xgA": 1.35,
+   "pH": 30,
+   "pD": 27,
+   "pA": 43,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Betis",
+     "p": 0.6991,
+     "prob": 70,
+     "fair": 1.43,
+     "stars": 3
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Betis",
+     "p": 0.4279,
+     "prob": 43,
+     "fair": 2.34,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1181,
+     "prob": 12,
+     "fair": 8.46,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "htft_a",
+     "label": "Betis mène à la mi-temps et gagne le match",
+     "p": 0.2528,
+     "prob": 25,
+     "fair": 3.96,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Abde Ezzalzouli marque",
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
+     "stars": 1,
+     "player": "Abde Ezzalzouli",
+     "team": "Betis",
+     "pid": "300912",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "3 buts et 0 passe en 6 matchs · Betis annoncé gagnant (43 %) · 1,4 but attendu pour Betis"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Abde Ezzalzouli buteur ou passeur",
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
+     "stars": 1,
+     "player": "Abde Ezzalzouli",
+     "team": "Betis",
+     "base": [
+      6,
+      3,
+      0
+     ],
+     "pid": "300912",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "3 buts et 0 passe en 6 matchs · Betis annoncé gagnant (43 %) · 1,4 but attendu pour Betis"
+    }
+   }
+  },
+  {
+   "id": "foot-401876429",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-10-25T16:15:00+00:00",
+   "time": "17:15",
+   "home": "Auxerre",
+   "away": "Le Mans",
+   "state": "pre",
+   "xgH": 1.48,
+   "xgA": 1.07,
+   "pH": 46,
+   "pD": 26,
+   "pA": 28,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Auxerre ou nul",
+     "p": 0.7244,
+     "prob": 72,
+     "fair": 1.38,
+     "stars": 4
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Auxerre",
+     "p": 0.4639,
+     "prob": 46,
+     "fair": 2.16,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.1152,
+     "prob": 12,
+     "fair": 8.68,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "htft_h",
+     "label": "Auxerre mène à la mi-temps et gagne le match",
+     "p": 0.2789,
+     "prob": 28,
+     "fair": 3.59,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Cameron Archer marque",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Cameron Archer",
+     "team": "Auxerre",
+     "pid": "293347",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 5 matchs · Auxerre favori (46 %) · 1,5 but attendu pour Auxerre"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Cameron Archer buteur ou passeur",
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1,
+     "player": "Cameron Archer",
+     "team": "Auxerre",
+     "base": [
+      5,
+      4,
+      0
+     ],
+     "pid": "293347",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 5 matchs · Auxerre favori (46 %) · 1,5 but attendu pour Auxerre"
+    }
+   }
+  },
+  {
+   "id": "foot-401876430",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-10-25T16:15:00+00:00",
+   "time": "17:15",
+   "home": "Angers",
+   "away": "Lorient",
+   "state": "pre",
+   "xgH": 1.05,
+   "xgA": 1.19,
+   "pH": 32,
+   "pD": 29,
+   "pA": 39,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Lorient",
+     "p": 0.6795,
+     "prob": 68,
+     "fair": 1.47,
+     "stars": 3
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Lorient",
+     "p": 0.3925,
+     "prob": 39,
+     "fair": 2.55,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1267,
+     "prob": 13,
+     "fair": 7.89,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "wa_nil",
+     "label": "Lorient gagne sans encaisser de but",
+     "p": 0.244,
+     "prob": 24,
+     "fair": 4.1,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Mamadou Koné marque",
+     "p": 0.14,
+     "prob": 14,
+     "fair": 7.14,
+     "stars": 1,
+     "player": "Mamadou Koné",
+     "team": "Lorient",
+     "pid": "416429",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "1 but et 0 passe en 7 matchs · Lorient annoncé gagnant (39 %) · 1,2 but attendu pour Lorient"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Mamadou Koné buteur ou passeur",
+     "p": 0.18,
+     "prob": 18,
+     "fair": 5.56,
+     "stars": 1,
+     "player": "Mamadou Koné",
+     "team": "Lorient",
+     "base": [
+      7,
+      1,
+      0
+     ],
+     "pid": "416429",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "1 but et 0 passe en 7 matchs · Lorient annoncé gagnant (39 %) · 1,2 but attendu pour Lorient"
+    }
+   }
+  },
+  {
+   "id": "foot-401876426",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-10-25T16:15:00+00:00",
+   "time": "17:15",
+   "home": "Marseille",
+   "away": "Le Havre AC",
+   "state": "pre",
+   "xgH": 2.11,
+   "xgA": 1.06,
+   "pH": 61,
+   "pD": 20,
+   "pA": 18,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Marseille ou nul",
+     "p": 0.8179,
+     "prob": 82,
+     "fair": 1.22,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Marseille",
+     "p": 0.6145,
+     "prob": 61,
+     "fair": 1.63,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0991,
+     "prob": 10,
+     "fair": 10.09,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "htft_h",
+     "label": "Marseille mène à la mi-temps et gagne le match",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Amine Gouiri marque",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Amine Gouiri",
+     "team": "Marseille",
+     "pid": "259743",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "5 buts et 1 passe en 7 matchs · Marseille favori (61 %) · 2,1 buts attendus pour Marseille"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Amine Gouiri buteur ou passeur",
+     "p": 0.57,
+     "prob": 57,
+     "fair": 1.75,
+     "stars": 2,
+     "player": "Amine Gouiri",
+     "team": "Marseille",
+     "base": [
+      7,
+      5,
+      1
+     ],
+     "pid": "259743",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "5 buts et 1 passe en 7 matchs · Marseille favori (61 %) · 2,1 buts attendus pour Marseille"
+    }
+   }
+  },
+  {
+   "id": "foot-401876424",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-10-25T16:15:00+00:00",
+   "time": "17:15",
+   "home": "Rennes",
+   "away": "Strasbourg",
+   "state": "pre",
+   "xgH": 1.91,
+   "xgA": 1.24,
+   "pH": 53,
+   "pD": 22,
+   "pA": 25,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Rennes ou nul",
+     "p": 0.7545,
+     "prob": 75,
+     "fair": 1.33,
+     "stars": 4
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Rennes",
+     "p": 0.5319,
+     "prob": 53,
+     "fair": 1.88,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.097,
+     "prob": 10,
+     "fair": 10.31,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3858,
+     "prob": 39,
+     "fair": 2.59,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Esteban Lepaul marque",
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "player": "Esteban Lepaul",
+     "team": "Rennes",
+     "pid": "323850",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "7 buts et 0 passe en 7 matchs · Rennes favori (53 %) · 1,9 buts attendus pour Rennes"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Esteban Lepaul buteur ou passeur",
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "player": "Esteban Lepaul",
+     "team": "Rennes",
+     "base": [
+      7,
+      7,
+      0
+     ],
+     "pid": "323850",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "7 buts et 0 passe en 7 matchs · Rennes favori (53 %) · 1,9 buts attendus pour Rennes"
+    }
+   }
+  },
+  {
+   "id": "foot-401876423",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-10-25T16:15:00+00:00",
+   "time": "17:15",
+   "home": "Toulouse",
+   "away": "Troyes",
+   "state": "pre",
+   "xgH": 1.92,
+   "xgA": 0.96,
+   "pH": 60,
+   "pD": 22,
+   "pA": 18,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Toulouse ou nul",
+     "p": 0.8169,
+     "prob": 82,
+     "fair": 1.22,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Toulouse",
+     "p": 0.5985,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.1084,
+     "prob": 11,
+     "fair": 9.23,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "wh_o25",
+     "label": "Toulouse gagne et plus de 2,5 buts",
+     "p": 0.3862,
+     "prob": 39,
+     "fair": 2.59,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Casper Tengstedt marque",
+     "p": 0.43,
+     "prob": 43,
+     "fair": 2.33,
+     "stars": 1,
+     "player": "Casper Tengstedt",
+     "team": "Toulouse",
+     "pid": "306664",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "5 buts et 1 passe en 5 matchs · Toulouse favori (60 %) · 1,9 buts attendus pour Toulouse"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Casper Tengstedt buteur ou passeur",
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2,
+     "player": "Casper Tengstedt",
+     "team": "Toulouse",
+     "base": [
+      5,
+      5,
+      1
+     ],
+     "pid": "306664",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "5 buts et 1 passe en 5 matchs · Toulouse favori (60 %) · 1,9 buts attendus pour Toulouse"
+    }
+   }
+  },
+  {
+   "id": "foot-401878764",
+   "sport": "foot",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-10-25T16:30:00+00:00",
+   "time": "17:30",
+   "home": "Sunderland",
+   "away": "Leeds",
+   "state": "pre",
+   "xgH": 1.0,
+   "xgA": 1.12,
+   "pH": 32,
+   "pD": 30,
+   "pA": 38,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Leeds",
+     "p": 0.6776,
+     "prob": 68,
+     "fair": 1.48,
+     "stars": 3
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Leeds",
+     "p": 0.3804,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.134,
+     "prob": 13,
+     "fair": 7.46,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "wa_nil",
+     "label": "Leeds gagne sans encaisser de but",
+     "p": 0.2467,
+     "prob": 25,
+     "fair": 4.05,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Dominic Calvert-Lewin marque",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
+     "stars": 1,
+     "player": "Dominic Calvert-Lewin",
+     "team": "Leeds",
+     "pid": "197717",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 7 matchs · Leeds annoncé gagnant (38 %) · 1,1 but attendu pour Leeds"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Dominic Calvert-Lewin buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Dominic Calvert-Lewin",
+     "team": "Leeds",
+     "base": [
+      7,
+      3,
+      1
+     ],
+     "pid": "197717",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 7 matchs · Leeds annoncé gagnant (38 %) · 1,1 but attendu pour Leeds"
+    }
+   }
+  },
+  {
+   "id": "foot-401884759",
+   "sport": "foot",
+   "league": "Bundesliga",
+   "code": "ger.1",
+   "kickoff": "2026-10-25T16:30:00+00:00",
+   "time": "17:30",
+   "home": "Freiburg",
+   "away": "Bayern",
+   "state": "pre",
+   "xgH": 1.17,
+   "xgA": 2.51,
+   "pH": 16,
+   "pD": 18,
+   "pA": 66,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Bayern",
+     "p": 0.8399,
+     "prob": 84,
+     "fair": 1.19,
+     "stars": 5
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Bayern",
+     "p": 0.6647,
+     "prob": 66,
+     "fair": 1.5,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-2",
+     "p": 0.0929,
+     "prob": 9,
+     "fair": 10.76,
+     "stars": 1,
+     "value": "1-2"
+    },
+    "fun": {
+     "market": "wa_btts",
+     "label": "Bayern gagne et les deux équipes marquent",
+     "p": 0.3803,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Harry Kane marque",
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1,
+     "player": "Harry Kane",
+     "team": "Bayern",
+     "pid": "142200",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "4 buts et 5 passes en 6 matchs · Bayern favori (66 %) · 2,5 buts attendus pour Bayern"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Harry Kane buteur ou passeur",
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
+     "stars": 3,
+     "player": "Harry Kane",
+     "team": "Bayern",
+     "base": [
+      6,
+      4,
+      5
+     ],
+     "pid": "142200",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "4 buts et 5 passes en 6 matchs · Bayern favori (66 %) · 2,5 buts attendus pour Bayern"
+    }
+   }
+  },
+  {
+   "id": "foot-401874772",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-25T17:00:00+00:00",
+   "time": "18:00",
+   "home": "Lecce",
+   "away": "Juventus",
+   "state": "pre",
+   "xgH": 0.7,
+   "xgA": 1.79,
+   "pH": 14,
+   "pD": 22,
+   "pA": 63,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Juventus",
+     "p": 0.8582,
+     "prob": 86,
+     "fair": 1.17,
+     "stars": 5
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Juventus",
+     "p": 0.6335,
+     "prob": 63,
+     "fair": 1.58,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1481,
+     "prob": 15,
+     "fair": 6.75,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "wa_nil",
+     "label": "Juventus gagne sans encaisser de but",
+     "p": 0.4121,
+     "prob": 41,
+     "fair": 2.43,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Randal Kolo Muani marque",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
+     "stars": 1,
+     "player": "Randal Kolo Muani",
+     "team": "Juventus",
+     "pid": "252971",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "1 but et 1 passe en 7 matchs · Juventus favori (63 %) · 1,8 buts attendus pour Juventus"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Randal Kolo Muani buteur ou passeur",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1,
+     "player": "Randal Kolo Muani",
+     "team": "Juventus",
+     "base": [
+      7,
+      1,
+      1
+     ],
+     "pid": "252971",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "1 but et 1 passe en 7 matchs · Juventus favori (63 %) · 1,8 buts attendus pour Juventus"
+    }
+   }
+  },
+  {
+   "id": "foot-401882829",
+   "sport": "foot",
+   "league": "LaLiga",
+   "code": "esp.1",
+   "kickoff": "2026-10-25T17:30:00+00:00",
+   "time": "18:30",
+   "home": "Real Sociedad",
+   "away": "Levante",
+   "state": "pre",
+   "xgH": 1.95,
+   "xgA": 1.01,
+   "pH": 59,
+   "pD": 22,
+   "pA": 19,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Real Sociedad ou nul",
+     "p": 0.8095,
+     "prob": 81,
+     "fair": 1.24,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Real Sociedad",
+     "p": 0.593,
+     "prob": 59,
+     "fair": 1.69,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.1011,
+     "prob": 10,
+     "fair": 9.89,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "wh_o25",
+     "label": "Real Sociedad gagne et plus de 2,5 buts",
+     "p": 0.3934,
      "prob": 39,
      "fair": 2.54,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Álex Baena marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "label": "Luka Sucic marque",
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
-     "player": "Álex Baena",
-     "team": "Atlético",
-     "pid": "297373",
+     "player": "Luka Sucic",
+     "team": "Real Sociedad",
+     "pid": "306263",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 9 matchs · Atlético favori (74 %) · 2,4 buts attendus pour Atlético"
+     "why": "3 buts et 0 passe en 8 matchs · Real Sociedad favori (59 %) · 2,0 buts attendus pour Real Sociedad"
     },
     "decisive": {
      "market": "dec",
-     "label": "Álex Baena buteur ou passeur",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2,
-     "player": "Álex Baena",
-     "team": "Atlético",
+     "label": "Luka Sucic buteur ou passeur",
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
+     "stars": 1,
+     "player": "Luka Sucic",
+     "team": "Real Sociedad",
      "base": [
-      9,
-      5,
-      2
+      8,
+      3,
+      0
      ],
-     "pid": "297373",
+     "pid": "306263",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 9 matchs · Atlético favori (74 %) · 2,4 buts attendus pour Atlético"
+     "why": "3 buts et 0 passe en 8 matchs · Real Sociedad favori (59 %) · 2,0 buts attendus pour Real Sociedad"
+    }
+   }
+  },
+  {
+   "id": "foot-401874779",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-25T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Udinese",
+   "away": "Milan",
+   "state": "pre",
+   "xgH": 0.88,
+   "xgA": 1.56,
+   "pH": 21,
+   "pD": 25,
+   "pA": 53,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Milan",
+     "p": 0.7887,
+     "prob": 79,
+     "fair": 1.27,
+     "stars": 4
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Milan",
+     "p": 0.534,
+     "prob": 53,
+     "fair": 1.87,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1364,
+     "prob": 14,
+     "fair": 7.33,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "wa_nil",
+     "label": "Milan gagne sans encaisser de but",
+     "p": 0.3288,
+     "prob": 33,
+     "fair": 3.04,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Adrien Rabiot marque",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
+     "stars": 1,
+     "player": "Adrien Rabiot",
+     "team": "Milan",
+     "pid": "176203",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (53 %) · 1,6 buts attendus pour Milan"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Adrien Rabiot",
+     "team": "Milan",
+     "base": [
+      7,
+      4,
+      3
+     ],
+     "pid": "176203",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (53 %) · 1,6 buts attendus pour Milan"
+    }
+   }
+  },
+  {
+   "id": "foot-401882832",
+   "sport": "foot",
+   "league": "LaLiga",
+   "code": "esp.1",
+   "kickoff": "2026-10-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Barcelona",
+   "away": "Real Madrid",
+   "state": "pre",
+   "xgH": 2.86,
+   "xgA": 1.94,
+   "pH": 57,
+   "pD": 17,
+   "pA": 25,
+   "edate": "20261025",
+   "picks": {
+    "main": {
+     "market": "o25",
+     "label": "Plus de 2,5 buts",
+     "p": 0.8582,
+     "prob": 86,
+     "fair": 1.17,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Barcelona",
+     "p": 0.5723,
+     "prob": 57,
+     "fair": 1.75,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0651,
+     "prob": 7,
+     "fair": 15.36,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "scw",
+     "label": "Raphinha marque et Barcelona gagne",
+     "p": 0.3957,
+     "prob": 40,
+     "fair": 2.53,
+     "stars": 1,
+     "player": "Raphinha",
+     "team": "Barcelona",
+     "side": "h"
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Raphinha marque",
+     "p": 0.57,
+     "prob": 57,
+     "fair": 1.75,
+     "stars": 2,
+     "player": "Raphinha",
+     "team": "Barcelona",
+     "pid": "231050",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "12 buts et 3 passes en 8 matchs · Barcelona favori (57 %) · 2,9 buts attendus pour Barcelona"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Raphinha buteur ou passeur",
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
+     "stars": 3,
+     "player": "Raphinha",
+     "team": "Barcelona",
+     "base": [
+      8,
+      12,
+      3
+     ],
+     "pid": "231050",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "12 buts et 3 passes en 8 matchs · Barcelona favori (57 %) · 2,9 buts attendus pour Barcelona"
     }
    }
   },
@@ -1702,7 +1951,7 @@
    "time": "21:30",
    "home": "New Jersey Devils",
    "away": "Los Angeles Kings",
-   "state": "FINAL",
+   "state": "OFF",
    "xgH": 3.48,
    "xgA": 2.72,
    "pH": 50,
@@ -1746,7 +1995,7 @@
      "player": "Jack Hughes",
      "pid": 8481559,
      "team": "New Jersey Devils",
-     "why": "3 buts et 8 passes en 10 matchs · New Jersey Devils favori (62 %) · 3,5 buts attendus pour New Jersey Devils"
+     "why": "3 buts et 9 passes en 11 matchs · New Jersey Devils favori (62 %) · 3,5 buts attendus pour New Jersey Devils"
     },
     "scorer": {
      "market": "goal",
@@ -1758,7 +2007,7 @@
      "player": "Jack Hughes",
      "pid": 8481559,
      "team": "New Jersey Devils",
-     "why": "3 buts et 8 passes en 10 matchs · New Jersey Devils favori (62 %) · 3,5 buts attendus pour New Jersey Devils"
+     "why": "3 buts et 9 passes en 11 matchs · New Jersey Devils favori (62 %) · 3,5 buts attendus pour New Jersey Devils"
     }
    }
   },
@@ -1770,9 +2019,9 @@
    "time": "01:00",
    "home": "Boston Bruins",
    "away": "San Jose Sharks",
-   "state": "FUT",
-   "xgH": 3.56,
-   "xgA": 2.74,
+   "state": "LIVE",
+   "xgH": 3.51,
+   "xgA": 2.69,
    "pH": 51,
    "pD": 22,
    "pA": 27,
@@ -1785,7 +2034,7 @@
      "label": "Victoire Boston Bruins",
      "p": 0.6309,
      "prob": 63,
-     "fair": 1.58,
+     "fair": 1.59,
      "stars": 3
     },
     "winner": {
@@ -1793,15 +2042,15 @@
      "label": "Victoire Boston Bruins",
      "p": 0.6309,
      "prob": 63,
-     "fair": 1.58,
+     "fair": 1.59,
      "stars": 3
     },
     "fun": {
      "market": "wh_o55",
      "label": "Boston Bruins gagne et plus de 5,5 buts",
-     "p": 0.3915,
-     "prob": 39,
-     "fair": 2.55,
+     "p": 0.3818,
+     "prob": 38,
+     "fair": 2.62,
      "stars": 1
     },
     "player": {
@@ -1814,7 +2063,7 @@
      "player": "David Pastrnak",
      "pid": 8477956,
      "team": "Boston Bruins",
-     "why": "6 buts et 10 passes en 11 matchs · Boston Bruins favori (63 %) · 3,6 buts attendus pour Boston Bruins"
+     "why": "6 buts et 10 passes en 11 matchs · Boston Bruins favori (63 %) · 3,5 buts attendus pour Boston Bruins"
     },
     "scorer": {
      "market": "goal",
@@ -1826,7 +2075,7 @@
      "player": "Morgan Geekie",
      "pid": 8479987,
      "team": "Boston Bruins",
-     "why": "1 but et 7 passes en 11 matchs · Boston Bruins favori (63 %) · 3,6 buts attendus pour Boston Bruins"
+     "why": "1 but et 7 passes en 11 matchs · Boston Bruins favori (63 %) · 3,5 buts attendus pour Boston Bruins"
     }
    }
   },
@@ -1838,9 +2087,9 @@
    "time": "01:00",
    "home": "Ottawa Senators",
    "away": "New York Rangers",
-   "state": "FUT",
-   "xgH": 3.25,
-   "xgA": 3.05,
+   "state": "LIVE",
+   "xgH": 3.2,
+   "xgA": 3.0,
    "pH": 42,
    "pD": 22,
    "pA": 36,
@@ -1851,10 +2100,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
@@ -1867,17 +2116,17 @@
     "fun": {
      "market": "h2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3348,
+     "p": 0.3334,
      "prob": 33,
-     "fair": 2.99,
+     "fair": 3.0,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Tim Stützle : au moins 1 point",
-     "p": 0.61,
-     "prob": 61,
-     "fair": 1.64,
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
      "stars": 3,
      "player": "Tim Stützle",
      "pid": 8482116,
@@ -1887,9 +2136,9 @@
     "scorer": {
      "market": "goal",
      "label": "Tim Stützle marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Tim Stützle",
      "pid": 8482116,
@@ -1906,9 +2155,9 @@
    "time": "01:00",
    "home": "Pittsburgh Penguins",
    "away": "Nashville Predators",
-   "state": "FUT",
-   "xgH": 3.25,
-   "xgA": 3.05,
+   "state": "LIVE",
+   "xgH": 3.2,
+   "xgA": 3.0,
    "pH": 42,
    "pD": 22,
    "pA": 36,
@@ -1919,10 +2168,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
@@ -1935,17 +2184,17 @@
     "fun": {
      "market": "h2",
      "label": "Pittsburgh Penguins gagne par 2 buts d'écart ou plus",
-     "p": 0.3348,
+     "p": 0.3334,
      "prob": 33,
-     "fair": 2.99,
+     "fair": 3.0,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Sidney Crosby : au moins 1 point",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2,
      "player": "Sidney Crosby",
      "pid": 8471675,
@@ -1974,9 +2223,9 @@
    "time": "01:00",
    "home": "Washington Capitals",
    "away": "Buffalo Sabres",
-   "state": "FUT",
-   "xgH": 3.22,
-   "xgA": 3.08,
+   "state": "LIVE",
+   "xgH": 3.17,
+   "xgA": 3.03,
    "pH": 41,
    "pD": 22,
    "pA": 37,
@@ -1987,10 +2236,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
@@ -2003,9 +2252,9 @@
     "fun": {
      "market": "h2",
      "label": "Washington Capitals gagne par 2 buts d'écart ou plus",
-     "p": 0.3255,
-     "prob": 33,
-     "fair": 3.07,
+     "p": 0.324,
+     "prob": 32,
+     "fair": 3.09,
      "stars": 1
     },
     "player": {
@@ -2023,9 +2272,9 @@
     "scorer": {
      "market": "goal",
      "label": "Tom Wilson marque",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
      "player": "Tom Wilson",
      "pid": 8476880,
@@ -2042,9 +2291,9 @@
    "time": "01:00",
    "home": "Columbus Blue Jackets",
    "away": "Vegas Golden Knights",
-   "state": "FUT",
-   "xgH": 2.99,
-   "xgA": 3.31,
+   "state": "LIVE",
+   "xgH": 2.94,
+   "xgA": 3.26,
    "pH": 34,
    "pD": 22,
    "pA": 44,
@@ -2055,10 +2304,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -2071,17 +2320,17 @@
     "fun": {
      "market": "a2",
      "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-     "p": 0.3517,
+     "p": 0.3501,
      "prob": 35,
-     "fair": 2.84,
+     "fair": 2.86,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Jack Eichel : au moins 1 point",
-     "p": 0.67,
-     "prob": 67,
-     "fair": 1.49,
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "player": "Jack Eichel",
      "pid": 8478403,
@@ -2091,9 +2340,9 @@
     "scorer": {
      "market": "goal",
      "label": "Mark Stone marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
      "player": "Mark Stone",
      "pid": 8475913,
@@ -2110,9 +2359,9 @@
    "time": "01:00",
    "home": "St. Louis Blues",
    "away": "Carolina Hurricanes",
-   "state": "FUT",
-   "xgH": 2.89,
-   "xgA": 3.41,
+   "state": "LIVE",
+   "xgH": 2.85,
+   "xgA": 3.35,
    "pH": 32,
    "pD": 22,
    "pA": 46,
@@ -2123,10 +2372,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -2139,9 +2388,9 @@
     "fun": {
      "market": "a2",
      "label": "Carolina Hurricanes gagne par 2 buts d'écart ou plus",
-     "p": 0.3806,
+     "p": 0.379,
      "prob": 38,
-     "fair": 2.63,
+     "fair": 2.64,
      "stars": 1
     },
     "player": {
@@ -2178,9 +2427,9 @@
    "time": "01:00",
    "home": "Edmonton Oilers",
    "away": "Toronto Maple Leafs",
-   "state": "FUT",
-   "xgH": 3.41,
-   "xgA": 2.89,
+   "state": "LIVE",
+   "xgH": 3.35,
+   "xgA": 2.85,
    "pH": 46,
    "pD": 22,
    "pA": 32,
@@ -2191,10 +2440,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
@@ -2207,17 +2456,17 @@
     "fun": {
      "market": "h2",
      "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-     "p": 0.3806,
+     "p": 0.379,
      "prob": 38,
-     "fair": 2.63,
+     "fair": 2.64,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Connor McDavid : au moins 1 point",
-     "p": 0.78,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.77,
+     "prob": 77,
+     "fair": 1.3,
      "stars": 4,
      "player": "Connor McDavid",
      "pid": 8478402,
@@ -2227,9 +2476,9 @@
     "scorer": {
      "market": "goal",
      "label": "Connor McDavid marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Connor McDavid",
      "pid": 8478402,
@@ -2247,12 +2496,12 @@
    "home": "Utah Mammoth",
    "away": "Tampa Bay Lightning",
    "state": "FUT",
-   "xgH": 3.35,
-   "xgA": 2.95,
+   "xgH": 3.37,
+   "xgA": 2.93,
    "pH": 45,
    "pD": 22,
    "pA": 33,
-   "winH": 56,
+   "winH": 57,
    "espn_id": "401892575",
    "edate": "20261024",
    "picks": {
@@ -2267,17 +2516,17 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Utah Mammoth",
-     "p": 0.5635,
-     "prob": 56,
-     "fair": 1.77,
+     "p": 0.5721,
+     "prob": 57,
+     "fair": 1.75,
      "stars": 2
     },
     "fun": {
      "market": "h2",
      "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
-     "p": 0.3626,
-     "prob": 36,
-     "fair": 2.76,
+     "p": 0.3705,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1
     },
     "player": {
@@ -2290,19 +2539,19 @@
      "player": "Clayton Keller",
      "pid": 8479343,
      "team": "Utah Mammoth",
-     "why": "4 buts et 10 passes en 11 matchs · Utah Mammoth favori (56 %) · 3,3 buts attendus pour Utah Mammoth"
+     "why": "4 buts et 10 passes en 11 matchs · Utah Mammoth favori (57 %) · 3,4 buts attendus pour Utah Mammoth"
     },
     "scorer": {
      "market": "goal",
      "label": "Dylan Guenther marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Dylan Guenther",
      "pid": 8482699,
      "team": "Utah Mammoth",
-     "why": "4 buts et 5 passes en 11 matchs · Utah Mammoth favori (56 %) · 3,3 buts attendus pour Utah Mammoth"
+     "why": "4 buts et 5 passes en 11 matchs · Utah Mammoth favori (57 %) · 3,4 buts attendus pour Utah Mammoth"
     }
    }
   },
@@ -2315,12 +2564,12 @@
    "home": "Calgary Flames",
    "away": "Detroit Red Wings",
    "state": "FUT",
-   "xgH": 2.56,
-   "xgA": 2.74,
-   "pH": 36,
+   "xgH": 2.53,
+   "xgA": 2.77,
+   "pH": 35,
    "pD": 22,
-   "pA": 42,
-   "winH": 47,
+   "pA": 43,
+   "winH": 46,
    "espn_id": "401892576",
    "edate": "20261024",
    "picks": {
@@ -2335,30 +2584,30 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Detroit Red Wings",
-     "p": 0.5325,
-     "prob": 53,
-     "fair": 1.88,
+     "p": 0.5427,
+     "prob": 54,
+     "fair": 1.84,
      "stars": 2
     },
     "fun": {
      "market": "wa_by1",
      "label": "Detroit Red Wings gagne d'un seul but (prolongation comprise)",
-     "p": 0.2156,
+     "p": 0.2174,
      "prob": 22,
-     "fair": 4.64,
+     "fair": 4.6,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Alex DeBrincat : au moins 1 point",
-     "p": 0.58,
-     "prob": 58,
-     "fair": 1.72,
+     "p": 0.59,
+     "prob": 59,
+     "fair": 1.69,
      "stars": 2,
      "player": "Alex DeBrincat",
      "pid": 8479337,
      "team": "Detroit Red Wings",
-     "why": "6 buts et 6 passes en 10 matchs · Detroit Red Wings favori (53 %) · 2,7 buts attendus pour Detroit Red Wings"
+     "why": "6 buts et 6 passes en 10 matchs · Detroit Red Wings favori (54 %) · 2,8 buts attendus pour Detroit Red Wings"
     },
     "scorer": {
      "market": "goal",
@@ -2370,7 +2619,7 @@
      "player": "Alex DeBrincat",
      "pid": 8479337,
      "team": "Detroit Red Wings",
-     "why": "6 buts et 6 passes en 10 matchs · Detroit Red Wings favori (53 %) · 2,7 buts attendus pour Detroit Red Wings"
+     "why": "6 buts et 6 passes en 10 matchs · Detroit Red Wings favori (54 %) · 2,8 buts attendus pour Detroit Red Wings"
     }
    }
   },
@@ -2444,31 +2693,31 @@
   }
  ],
  "summary": {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "yesterday": {
-   "n": 165,
-   "ok": 65
+   "n": 109,
+   "ok": 49
   },
-  "foot": 19,
+  "foot": 22,
   "nhl": 12,
   "top": [
    {
-    "label": "Connor McDavid : au moins 1 point",
-    "prob": 78,
-    "time": "01:00",
-    "match": "Edmonton Oilers – Toronto Maple Leafs"
+    "label": "Inter Milan ou nul",
+    "prob": 87,
+    "time": "12:30",
+    "match": "Inter Milan – Fiorentina"
    },
    {
-    "label": "David Pastrnak : au moins 1 point",
-    "prob": 70,
-    "time": "01:00",
-    "match": "Boston Bruins – San Jose Sharks"
+    "label": "Nul ou Juventus",
+    "prob": 86,
+    "time": "18:00",
+    "match": "Lecce – Juventus"
    },
    {
-    "label": "Jack Eichel : au moins 1 point",
-    "prob": 67,
-    "time": "01:00",
-    "match": "Columbus Blue Jackets – Vegas Golden Knights"
+    "label": "Plus de 2,5 buts",
+    "prob": 86,
+    "time": "21:00",
+    "match": "Barcelona – Real Madrid"
    }
   ]
  }
