@@ -18303,7 +18303,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874779|2|": {
   "match": "foot-401874779",
@@ -18327,7 +18327,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874779|scorer|Adrien Rabiot": {
   "match": "foot-401874779",
@@ -18351,7 +18351,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874779|dec|Adrien Rabiot": {
   "match": "foot-401874779",
@@ -18403,7 +18403,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874779|exact|": {
   "match": "foot-401874779",
@@ -18427,7 +18427,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882832|o25|": {
   "match": "foot-401882832",
@@ -18451,7 +18451,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882832|1|": {
   "match": "foot-401882832",
@@ -18475,7 +18475,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882832|scorer|Raphinha": {
   "match": "foot-401882832",
@@ -18499,7 +18499,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882832|dec|Raphinha": {
   "match": "foot-401882832",
@@ -18527,7 +18527,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882832|exact|": {
   "match": "foot-401882832",
@@ -18551,7 +18551,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401875036|o35|": {
   "match": "foot-401875036",
@@ -19097,7 +19097,7 @@
   "away": "Minnesota Wild",
   "market": "win_a",
   "label": "Victoire Minnesota Wild",
-  "p": 0.6309,
+  "p": 0.6447,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -19122,7 +19122,7 @@
   "away": "Minnesota Wild",
   "market": "point",
   "label": "Kirill Kaprizov : au moins 1 point",
-  "p": 0.68,
+  "p": 0.69,
   "stars": 3,
   "player": "Kirill Kaprizov",
   "pid_player": 8478864,
@@ -19231,7 +19231,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020184|wa_o55|": {
   "match": "nhl-2026020184",
@@ -19242,7 +19242,7 @@
   "away": "Minnesota Wild",
   "market": "wa_o55",
   "label": "Minnesota Wild gagne et plus de 5,5 buts",
-  "p": 0.3915,
+  "p": 0.4011,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -19302,6 +19302,302 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": null
+ },
+ "foot-401876422|1N|": {
+  "match": "foot-401876422",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-26",
+  "home": "PSG",
+  "away": "Lyon",
+  "market": "1N",
+  "label": "PSG ou nul",
+  "p": 0.864,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401876422|1|": {
+  "match": "foot-401876422",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-26",
+  "home": "PSG",
+  "away": "Lyon",
+  "market": "1",
+  "label": "Victoire PSG",
+  "p": 0.691,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401876422|scorer|Ferran Torres": {
+  "match": "foot-401876422",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-26",
+  "home": "PSG",
+  "away": "Lyon",
+  "market": "scorer",
+  "label": "Ferran Torres marque",
+  "p": 0.44,
+  "stars": 1,
+  "player": "Ferran Torres",
+  "pid_player": "265869",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401876422|dec|Ferran Torres": {
+  "match": "foot-401876422",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-26",
+  "home": "PSG",
+  "away": "Lyon",
+  "market": "dec",
+  "label": "Ferran Torres buteur ou passeur",
+  "p": 0.54,
+  "stars": 2,
+  "player": "Ferran Torres",
+  "pid_player": "265869",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": [
+   7,
+   4,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876422|scw|Ferran Torres": {
+  "match": "foot-401876422",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-26",
+  "home": "PSG",
+  "away": "Lyon",
+  "market": "scw",
+  "label": "Ferran Torres marque et PSG gagne",
+  "p": 0.3684,
+  "stars": 1,
+  "player": "Ferran Torres",
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": "h",
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401876422|exact|": {
+  "match": "foot-401876422",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-26",
+  "home": "PSG",
+  "away": "Lyon",
+  "market": "exact",
+  "label": "Score exact 2-0",
+  "p": 0.0959,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401882828|1N|": {
+  "match": "foot-401882828",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-26",
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "market": "1N",
+  "label": "Sevilla ou nul",
+  "p": 0.7736,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401882828|1|": {
+  "match": "foot-401882828",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-26",
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "market": "1",
+  "label": "Victoire Sevilla",
+  "p": 0.498,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401882828|scorer|Miguel Sierra": {
+  "match": "foot-401882828",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-26",
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "market": "scorer",
+  "label": "Miguel Sierra marque",
+  "p": 0.19,
+  "stars": 1,
+  "player": "Miguel Sierra",
+  "pid_player": "375514",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401882828|dec|Miguel Sierra": {
+  "match": "foot-401882828",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-26",
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "market": "dec",
+  "label": "Miguel Sierra buteur ou passeur",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Miguel Sierra",
+  "pid_player": "375514",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": [
+   8,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401882828|wh_nil|": {
+  "match": "foot-401882828",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-26",
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "market": "wh_nil",
+  "label": "Sevilla gagne sans encaisser de but",
+  "p": 0.3251,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882828|exact|": {
+  "match": "foot-401882828",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-10-26",
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "market": "exact",
+  "label": "Score exact 1-0",
+  "p": 0.1504,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
   ],
   "result": null
  }
