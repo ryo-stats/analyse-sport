@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T18:28+01:00",
+ "generated": "2026-10-26T22:56+01:00",
  "date": "2026-10-26",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "20:30",
    "home": "PSG",
    "away": "Lyon",
-   "state": "pre",
+   "state": "post",
    "xgH": 2.43,
    "xgA": 0.85,
    "pH": 72,
@@ -47,7 +47,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4162,
+     "p": 0.4163,
      "prob": 42,
      "fair": 2.4,
      "stars": 1
@@ -96,7 +96,7 @@
    "time": "21:00",
    "home": "Sevilla",
    "away": "Osasuna",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.42,
    "xgA": 0.75,
    "pH": 53,
@@ -132,43 +132,45 @@
     "fun": {
      "market": "wh_nil",
      "label": "Sevilla gagne sans encaisser de but",
-     "p": 0.3573,
+     "p": 0.3572,
      "prob": 36,
      "fair": 2.8,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Miguel Sierra marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
+     "label": "Isaac Romero marque",
+     "p": 0.16,
+     "prob": 16,
+     "fair": 6.25,
      "stars": 1,
-     "player": "Miguel Sierra",
+     "player": "Isaac Romero",
      "team": "Sevilla",
-     "pid": "375514",
+     "lineup": "start",
+     "pid": "365821",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 8 matchs · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
+     "why": "2 buts et 1 passe en 7 matchs · titulaire · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
     },
     "decisive": {
      "market": "dec",
-     "label": "Miguel Sierra buteur ou passeur",
+     "label": "Isaac Romero buteur ou passeur",
      "p": 0.23,
      "prob": 23,
      "fair": 4.35,
      "stars": 1,
-     "player": "Miguel Sierra",
+     "player": "Isaac Romero",
      "team": "Sevilla",
      "base": [
-      8,
+      7,
       2,
-      0
+      1
      ],
-     "pid": "375514",
+     "lineup": "start",
+     "pid": "365821",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 8 matchs · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
+     "why": "2 buts et 1 passe en 7 matchs · titulaire · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
     }
    }
   },
@@ -181,12 +183,12 @@
    "home": "New York Rangers",
    "away": "Los Angeles Kings",
    "state": "FUT",
-   "xgH": 2.77,
-   "xgA": 2.53,
-   "pH": 43,
+   "xgH": 2.79,
+   "xgA": 2.51,
+   "pH": 44,
    "pD": 22,
-   "pA": 35,
-   "winH": 54,
+   "pA": 34,
+   "winH": 55,
    "espn_id": "401892582",
    "edate": "20261026",
    "picks": {
@@ -201,17 +203,17 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire New York Rangers",
-     "p": 0.5427,
-     "prob": 54,
-     "fair": 1.84,
+     "p": 0.5514,
+     "prob": 55,
+     "fair": 1.81,
      "stars": 2
     },
     "fun": {
      "market": "wh_by1",
      "label": "New York Rangers gagne d'un seul but (prolongation comprise)",
-     "p": 0.2174,
+     "p": 0.2188,
      "prob": 22,
-     "fair": 4.6,
+     "fair": 4.57,
      "stars": 1
     },
     "player": {
@@ -224,7 +226,7 @@
      "player": "Adam Fox",
      "pid": 8479323,
      "team": "New York Rangers",
-     "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (54 %) · 2,8 buts attendus pour New York Rangers"
+     "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers"
     },
     "scorer": {
      "market": "goal",
@@ -236,7 +238,7 @@
      "player": "Mika Zibanejad",
      "pid": 8476459,
      "team": "New York Rangers",
-     "why": "3 buts et 8 passes en 13 matchs · New York Rangers favori (54 %) · 2,8 buts attendus pour New York Rangers"
+     "why": "3 buts et 8 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers"
     }
    }
   },
@@ -380,27 +382,27 @@
  "summary": {
   "date": "2026-10-26",
   "yesterday": {
-   "n": 165,
-   "ok": 80
+   "n": 170,
+   "ok": 83
   },
   "foot": 2,
   "nhl": 3,
   "top": [
    {
-    "label": "PSG ou nul",
-    "prob": 89,
-    "time": "20:30",
-    "match": "PSG – Lyon"
-   },
-   {
-    "label": "Sevilla ou nul",
-    "prob": 80,
-    "time": "21:00",
-    "match": "Sevilla – Osasuna"
-   },
-   {
     "label": "Connor McDavid : au moins 1 point",
     "prob": 79,
+    "time": "02:30",
+    "match": "Edmonton Oilers – Detroit Red Wings"
+   },
+   {
+    "label": "William Nylander : au moins 1 point",
+    "prob": 67,
+    "time": "01:30",
+    "match": "Calgary Flames – Toronto Maple Leafs"
+   },
+   {
+    "label": "Victoire Edmonton Oilers",
+    "prob": 62,
     "time": "02:30",
     "match": "Edmonton Oilers – Detroit Red Wings"
    }
