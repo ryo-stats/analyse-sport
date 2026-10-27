@@ -172,7 +172,8 @@ export class Etat extends DurableObject {
     const outbox = ((await this.ctx.storage.get("outbox")) || []).filter(x => now - x.t < OUTBOX_TTL);
     const deliveries = route(res.msgs, subs0);
     for (const d of deliveries) outbox.push({key: d.key, t: now, tries: 0,
-      msg: {title: d.msg.title, body: d.msg.body || "", url: this.env.SITE, tag: `${now}-${outbox.length}`,
+      msg: {title: d.msg.title, body: d.msg.body || "", url: this.env.SITE + (d.msg.match ? `#m=${d.msg.match}` : ""),   // ouvre le match
+            tag: `${now}-${outbox.length}`,
             urgency: d.msg.priority >= 4 ? "high" : "normal"}});
     for (const m of res.msgs){
       const n = deliveries.filter(d => d.msg === m).length;

@@ -83,14 +83,17 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 - **Analyse maison, cotes en garde-fou** : les probabilités affichées ne viennent pas des cotes.
   - Foot : moitié **Elo maison**, moitié **buts**. L'Elo maison est calculé à partir de tous les résultats ESPN des deux saisons passées (la plus ancienne sert de rodage) et de la saison en cours, par identifiant d'équipe ESPN (aucun nom à faire correspondre) : 1500 = club moyen, avantage du terrain 65 points, promus 80 points sous la moyenne, 20 % de retour vers la moyenne entre deux saisons, écart de buts pris en compte. Saisons terminées gardées dans `cache/elo.json`. Les buts : attaque et défense de chaque équipe d'après ses buts marqués et encaissés cette saison, les 10 derniers matchs comptant une deuxième fois, ramenés vers la moyenne du championnat tant que peu de matchs sont joués, avantage du terrain ×1,12. En coupe d'Europe, chaque club est jugé dans son championnat, corrigé du niveau de ce championnat (Angleterre 0, Espagne −15, Italie −25, Allemagne −30, France −55, autres −110 points Elo).
   - NHL : buts attendus (xG) de chaque équipe, données [MoneyPuck.com](https://moneypuck.com) (usage non commercial, source citée), ramenés vers la saison passée en début de saison, avantage de la glace, −5 % pour une équipe qui a joué la veille.
-  - Garde-fou : les cotes ESPN ne sont ni affichées ni envoyées au site. Si le marché des paris voit un autre favori, ou juge le Safe au moins 12 points moins sûr, le match affiche « ⚠️ Avis partagés » et **n'a pas de Safe** (il sort de la sélection, des combinés et du Bilan). Sinon : « ✅ Avis concordants ». Sans données pour l'analyse maison, le site retombe sur les cotes et le dit dans la source. `data.json › second.foot.elo` donne le nombre de résultats lus par championnat.
+  - Garde-fou : les cotes ESPN ne sont ni affichées ni envoyées au site. Si le marché des paris voit un autre favori, ou juge le Safe au moins 12 points moins sûr, le match affiche « ⚠️ Avis partagés » et **n'a pas de Safe** (il sort de la sélection, des combinés et du Bilan). Sinon, rien n'est affiché (accord = cas normal). Sans données pour l'analyse maison, le site retombe sur les cotes et le dit dans la source. `data.json › second.foot.elo` donne le nombre de résultats lus par championnat.
   - ClubElo n'est plus utilisé : son API répond 502 depuis le 19/10/2026.
 - **Cohérence** : tous les pronostics d'un match racontent la même histoire. Avant le match, le Fun est choisi parmi les paris qui vont dans le sens de l'analyse : quand il passe, le Safe et le Vainqueur ont au moins autant de chances de passer (calcul exact sur la grille des scores, `market_fn` / `marketTest`). Le score exact est le plus probable parmi ceux où le Safe et le Vainqueur passent, et le buteur vient de l'équipe annoncée gagnante. Pendant le match, l'histoire est celle de l'équipe qui a le plus de chances de gagner à cet instant (à égalité ou presque, le Vainqueur de l'analyse) ; le Fun du moment ne contredit ni elle ni le Safe du moment. S'il n'existe aucun pari cohérent dans la fourchette, rien n'est proposé.
 - **État du robot** : adresse du robot suivie de `/etat` (nombres seulement, aucune donnée personnelle).
 
 ## Présentation et bankroll
 
-- **Menu** (version épurée, 4 onglets) : sur la gauche sur ordinateur, barre en bas sur téléphone.
+- **Menu** (5 onglets : Aujourd'hui, Matchs, Mes paris, Pronos, Bilan) : sur la gauche sur ordinateur, barre en bas sur téléphone.
+  - **Pronos** : tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun), aussi ouverts par « Tout voir » sur Aujourd'hui.
+  - Toucher une notification de match ouvre directement la fiche de ce match (adresse `…#m=foot-123`).
+  - **Sans réseau** : le site garde sur le téléphone une copie de lui-même et des dernières analyses (`docs/sw.js`, réseau d'abord, copie si pas de réponse en 5 s) et l'indique par un bandeau « 📴 Hors ligne » ; il se recharge seul au retour du réseau.
   - **Aujourd'hui** : le pari du jour (réussite, cote minimum, mise conseillée, bouton « Ajouter »), les 4 plus sûrs suivants (un clic ouvre la fiche du match), le direct et le nombre de matchs analysés. « Tout voir » ouvre tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun).
   - **Matchs** : Foot / NHL, filtre Tous / ★ Suivis ; chaque ligne montre la barre des chances et le pronostic sûr. La fiche dépliée a trois onglets : Pronos, Analyse, Joueurs.
   - **Mes paris** : bankroll, « Que jouer aujourd'hui ? » (pari simple, plusieurs, combiné), mes paris, courbe, dépôts, réglages.
@@ -121,7 +124,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 ## Cotes, Safe, Fun et enjeu
 
 - **Cotes du bookmaker** : les cotes d'avant-match relayées par ESPN, en décimal, sont affichées sur chaque match. Elles sont archivées pour rester visibles après le coup d'envoi, car ESPN ne fournit pas de cotes en direct.
-- **Cote juste** (« @ ») : 1 ÷ la probabilité calculée, sans la marge du bookmaker. Si un bookmaker propose plus, le pari est mathématiquement intéressant.
+- **Cote minimum** (« cote mini », aussi appelée cote juste) : 1 ÷ la probabilité calculée, sans la marge du bookmaker. Si un bookmaker propose plus, le pari est mathématiquement intéressant.
 - **Safe ✅ / Fun 🎲** :
   - pour chaque match, le pari le plus sûr et un pari plus risqué (35 à 66 %), toujours différents (et différent du vainqueur annoncé) ;
   - le Fun d'avant-match et le score exact sont choisis par le calcul automatique, archivés avant le coup d'envoi et vérifiés après le match ;

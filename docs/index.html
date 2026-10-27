@@ -148,6 +148,7 @@ td.r,th.r{text-align:right}
 .warnline{font-size:.86rem;color:var(--muted);margin:0 0 12px}
 .stars{color:var(--warn);letter-spacing:1px;font-size:.92rem;white-space:nowrap}
 .conf{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;justify-self:end}
+@media (max-width:380px){.pl .conf .stars{display:none}}   /* petit téléphone : le % suffit, place pour le nom du pari */
 .pp{font-family:var(--display);font-size:1.05rem;min-width:40px;text-align:right}
 .selbox{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:18px}
 .selbox h2,.sech{font-size:1.35rem;margin:0 0 2px}
@@ -275,8 +276,8 @@ header.pagehead{display:flex;align-items:flex-end;justify-content:space-between;
 .hbtn svg{width:20px;height:20px}
 .hbtn[aria-current="page"]{color:var(--home);border-color:var(--home)}
 .back{all:unset;display:inline-flex;align-items:center;gap:4px;min-height:40px;margin:-6px 0 6px;font-weight:700;color:var(--home);cursor:pointer}
-.bottom{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-.bottom button{all:unset;display:grid;justify-items:center;gap:3px;padding:9px 0 8px;font:600 .74rem var(--body);color:var(--muted);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bottom{position:fixed;left:0;right:0;bottom:0;z-index:6;display:grid;grid-template-columns:repeat(5,1fr);background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.bottom button{all:unset;display:grid;justify-items:center;gap:3px;padding:9px 0 8px;font:600 .7rem var(--body);white-space:nowrap;color:var(--muted);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .bottom button svg{width:23px;height:23px}
 .bottom button[aria-current="page"]{color:var(--home)}
 .bottom button:focus-visible{outline:2px solid var(--home);outline-offset:-3px}
@@ -445,7 +446,8 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .lstat.done{color:var(--muted)}
 .was{color:var(--muted);font-size:.85rem}
 .pp.down{color:var(--away)}
-.odd{font-size:.78rem;color:var(--muted);min-width:44px;text-align:right}
+.odd{display:grid;justify-items:end;line-height:1.15;font-size:.8rem;color:var(--muted);min-width:46px;text-align:right}
+.odd small{font-size:.6rem;letter-spacing:.02em;white-space:nowrap}
 .sel .conf{flex-wrap:wrap;justify-content:flex-end;max-width:120px;row-gap:0}
 .sel .conf .odd{width:100%}
 .pl.fun{grid-template-columns:minmax(0,1fr) auto}
@@ -505,7 +507,6 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .minis{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--muted)}
 .minis b{color:var(--ink)}
 .agree{display:inline-block;justify-self:start;width:fit-content;margin:6px 0 2px;padding:2px 8px;border-radius:999px;font-size:.74rem;font-weight:700}
-.agree.ok{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok)}
 .agree.ko{background:color-mix(in srgb,var(--ko) 14%,transparent);color:var(--ko)}
 .pl.held .pv{color:var(--muted)}
 .second{display:grid;gap:4px;margin:0 0 12px;padding:8px 10px;border-radius:8px;background:var(--soft);font-size:.86rem}
@@ -545,6 +546,7 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
       <button type="button" class="navi" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="12" cy="15" r="2"/></svg><span>Aujourd'hui</span></button>
       <button type="button" class="navi" data-tab="matchs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.8 2.8-1.4 4.6H9.6l-1.4-4.6z"/></svg><span>Matchs</span></button>
       <button type="button" class="navi" data-tab="bankroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 14.5h2"/></svg><span>Mes paris</span></button>
+      <button type="button" class="navi" data-tab="pronos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6h11M10 12h11M10 18h11"/><path d="M3.5 6l1.3 1.3L7.2 5M3.5 12l1.3 1.3L7.2 11M3.5 18l1.3 1.3L7.2 17"/></svg><span>Pronostics</span></button>
       <button type="button" class="navi" data-tab="bilan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-6M3 20h18"/></svg><span>Bilan</span></button>
     </nav>
     <div class="sidespacer"></div>
@@ -580,6 +582,7 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
     <button type="button" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="12" cy="15" r="2"/></svg><span>Aujourd'hui</span></button>
     <button type="button" data-tab="matchs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.8 2.8-1.4 4.6H9.6l-1.4-4.6z"/></svg><span>Matchs</span></button>
     <button type="button" data-tab="bankroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 14.5h2"/></svg><span>Mes paris</span></button>
+    <button type="button" data-tab="pronos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6h11M10 12h11M10 18h11"/><path d="M3.5 6l1.3 1.3L7.2 5M3.5 12l1.3 1.3L7.2 11M3.5 18l1.3 1.3L7.2 17"/></svg><span>Pronos</span></button>
     <button type="button" data-tab="bilan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-6M3 20h18"/></svg><span>Bilan</span></button>
   </nav>
 </div>
@@ -588,10 +591,10 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let DATA = null, TAB = "home", LEAGUE = "Tous";
 try { TAB = localStorage.getItem("tab") || "home"; if (TAB === "foot" || TAB === "nhl"){ localStorage.setItem("msport", TAB); TAB = "matchs"; } } catch (e) {}
-// 4 onglets dans le menu (Aujourd'hui, Matchs, Mes paris, Bilan) ; « Tous les pronostics » s'ouvre depuis Aujourd'hui
-// et « Notifications et suivis » depuis la cloche en haut
-const TABS = {home: "Aujourd'hui", matchs: "Matchs", pronos: "Tous les pronostics", favs: "Notifications et suivis", bankroll: "Mes paris", bilan: "Bilan"};
-const NAV_OF = {pronos: "home", favs: "home"};
+// 5 onglets dans le menu (Aujourd'hui, Matchs, Mes paris, Pronostics, Bilan) ; « Notifications et suivis » s'ouvre
+// depuis la cloche en haut
+const TABS = {home: "Aujourd'hui", matchs: "Matchs", pronos: "Pronostics", favs: "Notifications et suivis", bankroll: "Mes paris", bilan: "Bilan"};
+const NAV_OF = {favs: "home"};
 if (!TABS[TAB]) TAB = "home";
 // ---- thème : Auto (suit le téléphone), Jour ou Nuit, gardé sur ce téléphone
 let THEME = "auto";
@@ -934,10 +937,11 @@ function nhlView(){
 const starStr = n => "★".repeat(n) + "☆".repeat(5 - n);
 // cote décimale à la française ; « cote juste » = 1 / probabilité (sans la marge du bookmaker)
 const odd = x => Number(x).toFixed(2).replace(".", ",");
-const fairOf = p => odd(1 / Math.max(p, 0.01));
+// cote minimum d'un pari (1 ÷ probabilité) : en dessous, le pari ne vaut pas le coup
+const minOdd = x => `<span class="odd num" title="Cote minimum : 1 ÷ probabilité. En dessous, le pari ne vaut pas le coup."><small>cote mini</small>${odd(x)}</span>`;
 function conf(pk){
   const f = pk.fair || (pk.p ? 1 / Math.max(pk.p, 0.01) : null);
-  return `<span class="conf"><span class="stars" aria-label="${pk.stars} étoile${pk.stars > 1 ? "s" : ""} sur 5">${starStr(pk.stars)}</span><b class="pp num">${pk.prob} %</b>${f ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(f)}</span>` : ""}</span>`;
+  return `<span class="conf"><span class="stars" aria-label="${pk.stars} étoile${pk.stars > 1 ? "s" : ""} sur 5">${starStr(pk.stars)}</span><b class="pp num">${pk.prob} %</b>${f ? minOdd(f) : ""}</span>`;
 }
 function selItem(c, i){
   return `<li class="sel"><span class="rank num">${i + 1}</span>
@@ -947,18 +951,15 @@ function selItem(c, i){
     ${conf(c)}${addBtn(c, c)}</li>`;
 }
 // garde-fou : l'analyse maison comparée au marché des paris (aucune cote ni chiffre du marché affiché)
+// (rien quand ils sont d'accord : c'est le cas normal, inutile de l'afficher sur chaque match)
 function agreeTag(m){
   const s = m.second;
-  if (!s) return "";
-  return s.agree ? `<span class="agree ok" title="Le marché des paris va dans le même sens que l'analyse">✅ Avis concordants</span>`
-                 : `<span class="agree ko" title="${esc(s.note || "")}">⚠️ Avis partagés</span>`;
+  return s && !s.agree ? `<span class="agree ko" title="${esc(s.note || "")}">⚠️ Avis partagés</span>` : "";
 }
 function secondBox(m){
   const s = m.second;
-  if (!s) return "";
-  return `<div class="second ${s.agree ? "ok" : "ko"}"><div class="ihead">Garde-fou</div>
-    <div>${s.agree ? "✅ Le marché des paris va dans le même sens que l'analyse."
-                   : `⚠️ Avis partagés : ${esc(s.note || "")}. Pas de Safe sur ce match.`}</div></div>`;
+  return s && !s.agree ? `<div class="second ko"><div class="ihead">Garde-fou</div>
+    <div>⚠️ Avis partagés : ${esc(s.note || "")}. Pas de Safe sur ce match.</div></div>` : "";
 }
 // pronostics d'un match : carte complète (onglet En direct) ou contenu d'une ligne dépliée (Paris foot / NHL)
 function pronoMatch(m){
@@ -974,7 +975,7 @@ function pronoBody(m){
   // les paris joueurs (Buteur, Décisif) ont leurs propres sous-onglets : la fiche du match reste épurée
   const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner]];
   return `${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
-    ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}`;
+    ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? minOdd(pk.score.fair) : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo | live | fun
 try { PSUB = localStorage.getItem("psub") || "foot"; } catch (e) {}
@@ -1050,7 +1051,7 @@ function liveCard(m){
     // ✅ / ❌ seulement quand c'est acquis : fin du match, ou buteur qui a déjà marqué
     const mark = now == null ? "" : done ? (now >= 0.5 ? " ✅" : " ❌") : now >= 0.9999 ? " ✅" : "";
     const val = now == null ? `<span class="was">résultat après le match</span>`
-      : `<span class="was num">${p.prob} % →</span><b class="pp num${now < p.p - 0.005 ? " down" : ""}">${pctr(now)} %</b>${done || now >= 0.995 ? "" : `<span class="odd num">@${fairOf(now)}</span>`}${mark}`;
+      : `<span class="was num">${p.prob} % →</span><b class="pp num${now < p.p - 0.005 ? " down" : ""}">${pctr(now)} %</b>${done || now >= 0.995 ? "" : minOdd(1 / Math.max(now, 0.01))}${mark}`;
     lines.push(`<div class="pl${kind === "main" ? " main" : ""}"><span class="pk">${k}</span><span class="pv">${esc(p.label)}</span><span class="conf">${val}</span></div>`);
   }
   const reds = s.red.h || s.red.a ? `<span>🟥 ${[s.red.h ? `${esc(m.home)} ${s.red.h}` : "", s.red.a ? `${esc(m.away)} ${s.red.a}` : ""].filter(Boolean).join(", ")}</span>` : "";
@@ -1069,7 +1070,7 @@ function liveCard(m){
 function liveIdeas(m, s){
   const {safe, fun} = LIVEM.momentPicks(m, s);
   const row = (k, x, cls) => x ? `<div class="pl ${cls}"><span class="pk">${k}</span><span class="pv">${esc(x.label)}${x.why ? `<small class="why">${esc(x.why)}</small>` : ""}</span>
-    <span class="conf"><b class="pp num">${pctr(x.p)} %</b><span class="odd num">@${fairOf(x.p)}</span></span>${addBtn(m, x)}</div>` : "";
+    <span class="conf"><b class="pp num">${pctr(x.p)} %</b>${minOdd(1 / Math.max(x.p, 0.01))}</span>${addBtn(m, x)}</div>` : "";
   const body = row("Safe ✅ direct", safe, "main") + row("Fun 🎲 direct", fun, "funl");
   return body ? `<div class="plines idea"><div class="ihead">Pronostics du moment <small>score, minute, ${m.sport === "foot" ? "tirs, cartons" : "temps restant"}</small></div>${body}</div>` : "";
 }
@@ -1091,7 +1092,7 @@ function liveBlock(m){
 const PRE_STATE = {state: "pre", sh: 0, sa: 0, period: 0, elapsed: 0, red: {h: 0, a: 0}, goals: []};
 function funLine(x, m){
   return `<div class="pl fun"><span class="pv">${esc(x.label)}${x.why ? `<small class="why">${esc(x.why)}</small>` : ""}</span>
-    <span class="conf"><b class="pp num">${pctr(x.p)} %</b><span class="odd num" title="Cote juste : 1 ÷ probabilité">@${fairOf(x.p)}</span></span>${addBtn(m, x)}</div>`;
+    <span class="conf"><b class="pp num">${pctr(x.p)} %</b>${minOdd(1 / Math.max(x.p, 0.01))}</span>${addBtn(m, x)}</div>`;
 }
 function funCard(m, s, picks){
   const live = s.state === "in";
@@ -1201,6 +1202,10 @@ function pushBanner(){
 // normal entre deux mises à jour est de 5 h (7 h 20 → 12 h 20) ; la nuit, rien n'est prévu avant 7 h 20.
 function staleBanner(){
   if (!DATA || !DATA.generated) return "";
+  if (OFFLINE){
+    const t = new Date(DATA.generated).toLocaleString("fr-FR", {weekday: "long", hour: "2-digit", minute: "2-digit"});
+    return `<div class="pbanner stale" role="status"><span>📴 <b>Hors ligne</b> : analyses de ${esc(t)}, gardées sur ce téléphone. Elles se mettront à jour dès le retour du réseau.</span></div>`;
+  }
   const gen = Date.parse(DATA.generated), age = (Date.now() - gen) / 36e5;
   if (!(age >= 6) || new Date().getHours() < 8) return "";
   const t = new Date(gen).toLocaleString("fr-FR", {weekday: "long", hour: "2-digit", minute: "2-digit"});
@@ -1549,7 +1554,7 @@ function homeView(){
     hero = `<section class="dayhero" aria-label="Le pari du jour"><span class="dk">Le pari du jour</span>
       <span class="dp">${esc(pk.label)}</span>
       <span class="dm">${esc(m.home)} – ${esc(m.away)} · ${esc(m.time)} · ${esc(lg(m))}</span>
-      <div class="dtiles num"><div><b>${pctr(pk.p)} %</b><small>de réussite</small></div><div><b>@${odd(fairMin(pk.p))}</b><small>cote minimum</small></div><div><b>${sv}</b><small>${sk}</small></div></div>
+      <div class="dtiles num"><div><b>${pctr(pk.p)} %</b><small>de réussite</small></div><div><b>${odd(fairMin(pk.p))}</b><small>cote minimum</small></div><div><b>${sv}</b><small>${sk}</small></div></div>
       <button type="button" class="dbtn" data-addbet="${esc(key)}">Ajouter à mes paris</button></section>`;
   } else {
     hero = `<section class="dayhero" aria-label="Le pari du jour"><span class="dk">Le pari du jour</span>
@@ -1665,7 +1670,7 @@ function stakeAdvice(p, odds, preset = null){
   const s = bkStats(), bank = s.bank, pct = stakePct(p), min = fairMin(p), cap = prof().cap;
   if (!(bank > 0)) return {amt: 0, msg: "Fais un dépôt (onglet Bankroll) pour voir la mise conseillée."};
   if (odds > 1 && odds < min - 0.001)
-    return {amt: 0, bad: true, msg: `⚠️ Cote trop basse : il faut au moins <b>@${odd(min)}</b> pour un pronostic à ${pctr(p)} %. Le site conseille de <b>ne pas jouer</b> (0 ${BK.currency}).`};
+    return {amt: 0, bad: true, msg: `⚠️ Cote trop basse : il faut au moins <b>${odd(min)}</b> pour un pronostic à ${pctr(p)} %. Le site conseille de <b>ne pas jouer</b> (0 ${BK.currency}).`};
   if (!pct) return {amt: 0, msg: `Pronostic à ${pctr(p)} % : trop risqué pour une mise conseillée. Si tu joues quand même, reste sous 0,5 % de ta bankroll (${money(roundStake(bank * 0.005))}).`};
   const room = Math.max(0, bank * cap / 100 - s.inPlay), full = roundStake(bank * pct / 100);
   if (room < 0.1) return {amt: 0, msg: `Tu as déjà <b>${money(s.inPlay)}</b> en jeu (${cap} % de ta bankroll ou plus) : le site conseille d'attendre les résultats.`};
@@ -1682,7 +1687,7 @@ function advRow(c, amt, bank, rank){
   return `<li class="sel">${rank ? `<span class="rank num">${rank}</span>` : `<span class="rank">🎯</span>`}
     <div class="sbody"><div class="spick">${esc(c.pk.label)}</div>
       <div class="smatch">${logo(c.m.logo_h, c.m.logo_h_dark, "lg sm")}<span>${esc(c.m.home)} – ${esc(c.m.away)}</span>${logo(c.m.logo_a, c.m.logo_a_dark, "lg sm")}</div>
-      <div class="smeta">${esc(c.m.time)} · ${esc(c.m.sport === "nhl" ? "NHL" : c.m.league)} · ${pctr(c.pk.p)} % · cote minimum <b class="num">@${odd(fairMin(c.pk.p))}</b></div></div>
+      <div class="smeta">${esc(c.m.time)} · ${esc(c.m.sport === "nhl" ? "NHL" : c.m.league)} · ${pctr(c.pk.p)} % · cote minimum <b class="num">${odd(fairMin(c.pk.p))}</b></div></div>
     <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, bank)} %</small></div>${btn}</li>`;
 }
 // pronostics jouables du jour : un par match (le plus sûr entre le Safe et le pari joueur ; deux paris du même match
@@ -1725,7 +1730,7 @@ function adviceCard(){
   // combiné safe : les 3 plus sûrs (un seul pari, tous doivent passer) ; combiné fun en dessous, sans mise conseillée
   const all = [...(DATA.foot || []), ...(DATA.nhl || [])], funs = funLegsOf(all.filter(m => !played.has(m.id))).slice(0, 2);
   const funKey = funs.length === 2 ? comboRef(funs, "fun") : null, pf = funs.reduce((x, l) => x * l.p, 1);
-  const funBox = funKey ? `<div class="cadv"><div><b>Combiné fun</b> : ${funs.map(l => esc(l.label)).join(" + ")} · ${pctr(pf)} % de réussite, cote minimum <b class="num">@${odd(fairMin(pf))}</b>. Pas de mise conseillée : 0,5 % de ta bankroll au plus (${money(roundStake(s.bank * 0.005))}).</div><button type="button" class="addbet" data-addbet="${esc(funKey)}" aria-label="Ajouter le combiné fun à ma bankroll">+</button></div>` : "";
+  const funBox = funKey ? `<div class="cadv"><div><b>Combiné fun</b> : ${funs.map(l => esc(l.label)).join(" + ")} · ${pctr(pf)} % de réussite, cote minimum <b class="num">${odd(fairMin(pf))}</b>. Pas de mise conseillée : 0,5 % de ta bankroll au plus (${money(roundStake(s.bank * 0.005))}).</div><button type="button" class="addbet" data-addbet="${esc(funKey)}" aria-label="Ajouter le combiné fun à ma bankroll">+</button></div>` : "";
   if (cands.length < 3) return wrap(`<p class="src">Moins de 3 matchs proposés aujourd'hui : pas de combiné safe. Regarde « Pari simple ».</p>${funBox}`);
   const legs = cands.slice(0, 3), p = legs.reduce((x, l) => x * l.pk.p, 1), pct = stakePct(p);
   if (!pct) return wrap(`<p class="src">Le combiné safe (les 3 plus sûrs) n'aurait que ${pctr(p)} % de réussite : trop risqué pour une mise conseillée. Préfère « Pari simple ».</p>${funBox}`);
@@ -1735,7 +1740,7 @@ function adviceCard(){
     <ol class="cleg">${legs.map(l => `<li><div class="sbody"><div class="spick">${esc(l.pk.label)}</div>
       <div class="smatch">${logo(l.m.logo_h, l.m.logo_h_dark, "lg sm")}<span>${esc(l.m.home)} – ${esc(l.m.away)}</span>${logo(l.m.logo_a, l.m.logo_a_dark, "lg sm")}</div>
       <div class="smeta">${esc(l.m.time)} · ${esc(l.m.sport === "nhl" ? "NHL" : l.m.league)}</div></div><b class="pp num">${pctr(l.pk.p)} %</b></li>`).join("")}</ol>
-    <div class="cadv"><div>Mise sur le combiné · cote minimum <b class="num">@${odd(fairMin(p))}</b></div>
+    <div class="cadv"><div>Mise sur le combiné · cote minimum <b class="num">${odd(fairMin(p))}</b></div>
       <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, s.bank)} %</small></div><button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter le combiné à ma bankroll">+</button></div>${funBox}`);
 }
 function bankrollView(){
@@ -1883,16 +1888,7 @@ document.addEventListener("click", ev => {
   const el = ev.target.closest("[data-bk],[data-addbet],[data-bkset],[data-bkdel],[data-mvdel],[data-cur],[data-range],[data-msport],[data-go],[data-tab],[data-bkf],[data-bkmore],[data-openm],[data-mfilter]");
   if (!el) return;
   const ds = el.dataset;
-  if (ds.openm){      // depuis Aujourd'hui : ouvre la fiche du match dans l'onglet Matchs
-    const m = [...(DATA.foot || []), ...(DATA.nhl || [])].find(x => x.id === ds.openm);
-    if (!m) return;
-    MSPORT = m.sport; LEAGUE = "Tous"; MFILTER = "all"; OPEN.add(m.id); DTAB[m.id] = "pronos";
-    try { localStorage.setItem("msport", MSPORT); localStorage.setItem("mfilter", MFILTER); } catch (e) {}
-    TAB = "matchs"; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
-    const row = document.querySelector(`.mrow[data-id="${CSS.escape(m.id)}"]`);
-    if (row) row.scrollIntoView({block: "start", behavior: "smooth"});
-    return;
-  }
+  if (ds.openm){ openMatch(ds.openm); return; }      // depuis Aujourd'hui : fiche du match dans l'onglet Matchs
   if (ds.mfilter){ MFILTER = ds.mfilter; try { localStorage.setItem("mfilter", MFILTER); } catch (e) {} render(); return; }
   if (ds.tab) return goTab(ds.tab);
   if (ds.go){ if (ds.psubgo){ PSUB = ds.psubgo; try { localStorage.setItem("psub", PSUB); } catch (e) {} } return goTab(ds.go); }
@@ -1920,7 +1916,7 @@ function render(){
   if (!DATA) return;
   document.getElementById("pbanner").innerHTML = staleBanner() + pushBanner();
   const view = document.getElementById("view");
-  view.innerHTML = (TAB === "pronos" ? BACK_HOME : "") + ({home: homeView, matchs: matchsView, pronos: pronoView, favs: favView, bankroll: bankrollView, bilan: bilanView}[TAB] || homeView)();
+  view.innerHTML = ({home: homeView, matchs: matchsView, pronos: pronoView, favs: favView, bankroll: bankrollView, bilan: bilanView}[TAB] || homeView)();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));
   view.querySelectorAll("[data-bsport]").forEach(b => b.addEventListener("click", () => {
     BSPORT = b.dataset.bsport; try { localStorage.setItem("bsport", BSPORT); } catch (e) {} render();
@@ -1970,6 +1966,26 @@ document.getElementById("view").addEventListener("click", ev => {
   const b = ev.target.closest("[data-fav]");
   if (b){ ev.stopPropagation(); toggleFav(b.dataset.fav); }
 });
+// ouvre la fiche d'un match dans l'onglet Matchs (depuis Aujourd'hui, ou en touchant une notification)
+function openMatch(id){
+  const m = DATA && [...(DATA.foot || []), ...(DATA.nhl || [])].find(x => x.id === id);
+  if (!m) return false;
+  MSPORT = m.sport; LEAGUE = "Tous"; MFILTER = "all"; OPEN.add(m.id); DTAB[m.id] = "pronos";
+  try { localStorage.setItem("msport", MSPORT); localStorage.setItem("mfilter", MFILTER); } catch (e) {}
+  TAB = "matchs"; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
+  const row = document.querySelector(`.mrow[data-id="${CSS.escape(m.id)}"]`);
+  if (row) row.scrollIntoView({block: "start", behavior: "smooth"});
+  return true;
+}
+// adresse « …#m=foot-123 » (notification touchée) : ouvre ce match, puis efface l'adresse
+function openFromHash(){
+  const id = (location.hash.match(/^#m=((?:foot|nhl)-\d+)$/) || [])[1];
+  if (id && openMatch(id)) history.replaceState(null, "", location.pathname + location.search);
+}
+addEventListener("hashchange", openFromHash);
+if ("serviceWorker" in navigator) navigator.serviceWorker.addEventListener("message", e => {
+  if (e.data && e.data.open){ location.hash = "m=" + e.data.open; openFromHash(); }
+});
 function goTab(tab){
   TAB = tab; try { localStorage.setItem("tab", TAB); } catch (e) {} render();
   scrollTo({top: 0, behavior: "smooth"});
@@ -1980,15 +1996,19 @@ document.getElementById("pbanner").addEventListener("click", ev => {
   if (ev.target.closest("[data-closebanner]")){ try { localStorage.setItem("pbanner", "off"); } catch (e) {} render(); }
 });
 
-fetch("data.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+// hors réseau, le service worker renvoie les dernières analyses gardées sur le téléphone (en-tête x-hors-ligne)
+let OFFLINE = false;
+fetch("data.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error(r.status); OFFLINE = !!r.headers.get("x-hors-ligne"); return r.json(); }).then(d => {
   DATA = d;
   const when = new Date(d.generated);
   document.getElementById("stamp").textContent = `Mis à jour le ${when.toLocaleDateString("fr-FR", {weekday:"long", day:"numeric", month:"long"})} à ${when.toLocaleTimeString("fr-FR", {hour:"2-digit", minute:"2-digit"})}`;
   if (d.notes && d.notes.length) document.getElementById("notes").innerHTML = `<div class="notes"><strong>À savoir aujourd'hui :</strong><ul>${d.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
   if (!PUSH_ON) pruneFavs();          // avec notifications, la liste du robot fait foi (il retire lui-même les vieux matchs)
   render();
+  openFromHash();
   pollLive();
   if (bkAutoSettle()) render();
+  if (OFFLINE) addEventListener("online", () => location.reload(), {once: true});   // réseau revenu : analyses fraîches
 }).catch(() => {
   document.getElementById("stamp").textContent = "Données indisponibles";
   document.getElementById("view").innerHTML = `<div class="empty">Les analyses n'ont pas encore été générées. Lance la mise à jour depuis l'onglet « Actions » de GitHub, puis recharge cette page.</div>`;
