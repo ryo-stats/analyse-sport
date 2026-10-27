@@ -94,21 +94,6 @@ th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;white
 th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
 td.r,th.r{text-align:right}
 .ok{color:var(--ok);font-weight:700}.ko{color:var(--ko);font-weight:700}
-.recap{margin-top:22px}
-.recap h2{font-size:1.4rem;margin-bottom:4px}
-.recap .src{margin:0 0 10px}
-.recap td{white-space:normal}
-.recap tr.grp td{background:var(--soft);font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink)}
-.recap tr.grp td.lbl{font:600 .68rem var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);vertical-align:bottom}
-.recap tr.h td:first-child{border-left:4px solid var(--home)}
-.recap tr.a td:first-child{border-left:4px solid var(--away)}
-.recap .pl{display:block;font-weight:600}
-.recap small{color:var(--muted);font-size:.78rem}
-.recap td.r b{font-family:var(--display);font-size:1.05rem}
-.recap td.season{white-space:nowrap;color:var(--muted)}
-.recap td.season b{color:var(--ink);font-size:1rem}
-.recap td.season small{display:block}
-@media (max-width:640px){.recap th,.recap td{padding:7px 6px}}
 /* ---- liste des matchs (une ligne par match, analyse dépliable) */
 .layout{display:grid;gap:12px}
 .groups{min-width:0}
@@ -339,8 +324,6 @@ header.pagehead{display:flex;align-items:flex-end;justify-content:space-between;
 .chart .grid{stroke:var(--line);stroke-dasharray:3 4}
 .chart .line{stroke:var(--home);stroke-width:2.2;fill:none;stroke-linejoin:round}
 .chart .area{fill:var(--home);opacity:.12}
-.hgrid{display:grid;gap:12px}
-@media (min-width:860px){.hgrid{grid-template-columns:1fr 1fr}}
 .bets{list-style:none;margin:0;padding:0}
 .bhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
 .bhead h2{margin:0}
@@ -465,9 +448,6 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .odd{font-size:.78rem;color:var(--muted);min-width:44px;text-align:right}
 .sel .conf{flex-wrap:wrap;justify-content:flex-end;max-width:120px;row-gap:0}
 .sel .conf .odd{width:100%}
-.book{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;font-size:.84rem;color:var(--muted);padding:6px 0 0}
-.book .bk{font:700 .66rem var(--body);text-transform:uppercase;letter-spacing:.04em;width:100%}
-.book b{color:var(--ink);font-family:var(--display);font-size:1rem}
 .pl.fun{grid-template-columns:minmax(0,1fr) auto}
 .pl .why{display:block;font-size:.74rem;color:var(--away);font-weight:600}
 .rc{margin-left:6px;color:var(--away)}
@@ -512,15 +492,12 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .pmhead .vtally{margin-left:6px;font-size:.74rem}
 .pv .vk{display:inline-block;min-width:1em}
 .funline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline;margin:10px 0 4px;padding:10px 12px;border:1px dashed var(--line);border-radius:12px;font-size:.88rem}
-.funday{margin:8px 0 0;font-size:.84rem;color:var(--muted)}
 .vk.ok{color:var(--ok)}
 .vk.ko{color:var(--ko)}
 .vb{display:grid;min-width:0}
 .vb b{font-weight:600;font-size:.92rem}
 .vb small{color:var(--muted);font-size:.78rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .vpp{color:var(--muted);font-size:.85rem}
-a.tile.tlink{color:inherit;text-decoration:none;cursor:pointer}
-a.tile.tlink .k{color:var(--home)}
 @media (prefers-reduced-motion: reduce){.vd summary::after{transition:none}}
 .pl.funl .pv{color:var(--away);font-weight:600}
 .idea{background:var(--soft);border-radius:8px;padding:8px 10px}
@@ -948,21 +925,6 @@ function footView(){
   }).join("");
   return `<div class="layout">${leagues.length > 1 ? nav : ""}<div class="groups">${groups}<p class="hint">Touche un match pour ses pronostics, son analyse et ses joueurs.</p></div></div>`;
 }
-// Récapitulatif en bas de l'onglet NHL : 3 joueurs par équipe, triés par chance de faire au moins 1 point.
-function nhlRecap(all){
-  const best = (m, side) => m["best_" + side] || [...(m["squad_" + side] || [])].sort((x, y) => y.p_point - x.p_point).slice(0, 3);
-  // saison en cours : buts et passes déjà marqués (repli sur le texte « cur » pour les anciennes données)
-  const season = p => p.goals != null ? `<b>${p.goals}</b> B · <b>${p.assists}</b> P<small>${plural(p.gp, "match")}</small>` : `<small>${esc(p.cur || "")}</small>`;
-  const line = (p, side, team) => `<tr class="${side}"><td><span class="pl">${esc(p.name)}</span><small>${esc(team)} · ${esc(p.pos)}</small></td>
-    <td class="r num season">${season(p)}</td>
-    <td class="r num">${p.p_goal}%</td><td class="r num">${p.p_assist}%</td><td class="r num"><b>${p.p_point}%</b></td></tr>`;
-  const body = all.map(m => `<tr class="grp"><td>${esc(m.time)} · ${esc(m.home)} – ${esc(m.away)}</td><td class="r lbl">Saison</td><td class="r lbl">But</td><td class="r lbl">Passe</td><td class="r lbl">Point</td></tr>
-    ${best(m, "h").map(p => line(p, "h", m.home)).join("")}${best(m, "a").map(p => line(p, "a", m.away)).join("")}`).join("");
-  return `<section class="recap">
-    <h2>Récap de la soirée : joueurs à suivre</h2>
-    <p class="src">Pour chaque équipe, les 3 joueurs les plus susceptibles de marquer ou de faire une passe décisive. « Saison » = buts (B) et passes (P) déjà réalisés cette saison. « Point » = au moins un but ou une passe dans le match.</p>
-    <div class="tablewrap"><table><tbody>${body}</tbody></table></div></section>`;
-}
 function nhlView(){
   const all = byFilter(DATA.nhl || []);
   if (!all.length) return MFILTER === "favs" ? FAVS_EMPTY : `<div class="empty">Pas de match NHL aujourd'hui.</div>`;
@@ -977,8 +939,6 @@ function conf(pk){
   const f = pk.fair || (pk.p ? 1 / Math.max(pk.p, 0.01) : null);
   return `<span class="conf"><span class="stars" aria-label="${pk.stars} étoile${pk.stars > 1 ? "s" : ""} sur 5">${starStr(pk.stars)}</span><b class="pp num">${pk.prob} %</b>${f ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(f)}</span>` : ""}</span>`;
 }
-// cotes du bookmaker : plus affichées (elles changent d'un bookmaker à l'autre) ; le site donne sa « cote minimum »
-function bookLine(m){ return ""; }
 function selItem(c, i){
   return `<li class="sel"><span class="rank num">${i + 1}</span>
     <div class="sbody"><div class="spick">${esc(c.label)}</div>
@@ -1013,7 +973,7 @@ function pronoBody(m){
   const fun = funPk ? {...funPk, prob: funPk.prob ?? pctr(funPk.p), stars: funPk.stars ?? starsOf(funPk.p)} : null;
   // les paris joueurs (Buteur, Décisif) ont leurs propres sous-onglets : la fiche du match reste épurée
   const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner]];
-  return `${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+  return `${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo | live | fun
@@ -1104,7 +1064,6 @@ function liveCard(m){
     ${probs}${done ? "" : liveIdeas(m, s)}<div class="plines">${lines.join("")}</div></div>`;
 }
 // le premier pari qui n'est pas déjà le « plus sûr » d'avant-match (pour ne jamais proposer deux fois le même)
-const otherThan = (list, m) => list.find(x => x.label !== ((m.picks || {}).main || {}).label) || null;
 // pendant le match : le pari « safe » (75 à 90 %, pas encore acquis) et le pari « fun » (cote juste ≥ ~2,4) du moment,
 // qui va dans le même sens (docs/live.js, momentPicks)
 function liveIdeas(m, s){
@@ -1889,7 +1848,6 @@ function openReset(){
 }
 // ---- bouton « + » sur les pronostics du site
 const BETREF = {};
-const MK_BOOK = {"1": "h", "2": "a", win_h: "h", win_a: "a"};
 const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|btts_o25|[ha][23]|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|dec|scw|sc2|htft_[ha]|w[ha]_(btts|nil|by1|o\d5)|point|goal)$/;
 function addBtn(m, pk){
   if (!m || !pk || !pk.label || !pk.p) return "";

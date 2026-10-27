@@ -17,7 +17,7 @@ import { DurableObject } from "cloudflare:workers";
 import { tick, route, healthReport, ESPN, MAX_FAVS, PUSH_HOSTS } from "./robot.js";
 import { newVapidKeys, sendPush } from "./webpush.js";
 
-const BATCH = 40, MAX_BATCHES = 10, MAX_SUBS = 3000, OUTBOX_TTL = 15 * 60e3;
+const BATCH = 40, MAX_BATCHES = 10, MAX_SUBS = 3000, OUTBOX_TTL = 15 * 60e3, MAX_TRIES = 3, RUN_LOCK = 4 * 60e3;
 const ID_RE = /^(foot|nhl)-\d+$/;
 const CORS = {"access-control-allow-origin": "*", "access-control-allow-methods": "GET, POST, OPTIONS",
               "access-control-allow-headers": "content-type"};
@@ -29,6 +29,21 @@ async function getJSON(url){
                               signal: AbortSignal.timeout(10000)});
   if (!r.ok) throw new Error(`${new URL(url).hostname} a répondu ${r.status}`);
   return r.json();
+}
+
+// Demande à GitHub un passage des analyses (secours quand ses lancements programmés sautent). Jeton : secret
+// GH_TOKEN du robot (Cloudflare > Workers > analyse-sport-alertes > Settings > Variables and Secrets), droit
+// « Actions : Read and write » sur le seul dépôt du site. Sans jeton, rien n'est fait.
+function dispatcher(env){
+  if (!env.GH_TOKEN) return null;
+  return async () => {
+    const r = await fetch(`https://api.github.com/repos/${env.REPO}/actions/workflows/update.yml/dispatches`, {
+      method: "POST", signal: AbortSignal.timeout(10000),
+      headers: {"authorization": `Bearer ${env.GH_TOKEN}`, "accept": "application/vnd.github+json",
+                "x-github-api-version": "2022-11-28", "user-agent": "analyse-sport-alertes", "content-type": "application/json"},
+      body: JSON.stringify({ref: "main", inputs: {porte: "horaires"}})});
+    if (r.status !== 204) throw new Error(`GitHub a répondu ${r.status}`);
+  };
 }
 
 async function keyOf(endpoint){
@@ -132,23 +147,31 @@ export class Etat extends DurableObject {
     return {ok: status === 201 || status === 200, envoi: status};
   }
 
-  // ---- passage de chaque minute
+  // ---- passage de chaque minute. Verrou : si le passage précédent traîne (ESPN lent), on ne le double pas
+  // (deux passages en même temps enverraient deux fois la même alerte de but).
   async run(){
-    const st = (await this.ctx.storage.get("st")) || {};
     const now = Date.now();
+    if (this.busy && now - this.busy < RUN_LOCK) return 0;
+    this.busy = now;
+    try { return await this.pass(now); }
+    finally { this.busy = 0; }
+  }
+
+  async pass(now){
+    const st = (await this.ctx.storage.get("st")) || {};
     const subs0 = await this.subs();
     const union = {};
     for (const s of Object.values(subs0)) for (const [id, t] of Object.entries(s.favs || {})) union[id] = Math.min(union[id] || t, t);
     let res = {msgs: [], expired: []};
     try {
-      res = await tick(st, union, now, {site: this.env.SITE, getJSON});
+      res = await tick(st, union, now, {site: this.env.SITE, getJSON, dispatch: dispatcher(this.env)});
     } catch (e){
       st.errors = [{t: new Date(now).toISOString(), text: `robot : ${e.message}`}, ...(st.errors || [])].slice(0, 15);
     }
     // alertes -> boîte d'envoi (seulement les téléphones concernés)
     const outbox = ((await this.ctx.storage.get("outbox")) || []).filter(x => now - x.t < OUTBOX_TTL);
     const deliveries = route(res.msgs, subs0);
-    for (const d of deliveries) outbox.push({key: d.key, t: now,
+    for (const d of deliveries) outbox.push({key: d.key, t: now, tries: 0,
       msg: {title: d.msg.title, body: d.msg.body || "", url: this.env.SITE, tag: `${now}-${outbox.length}`,
             urgency: d.msg.priority >= 4 ? "high" : "normal"}});
     for (const m of res.msgs){
@@ -161,18 +184,22 @@ export class Etat extends DurableObject {
     if (take.length){
       const vapid = await this.vapid(), batches = [];
       const current = await this.subs();
-      const items = take.map(x => current[x.key] ? {key: x.key, sub: current[x.key].sub, msg: x.msg} : null).filter(Boolean);
+      const items = take.map(x => current[x.key] ? {key: x.key, sub: current[x.key].sub, msg: x.msg, x} : null).filter(Boolean);
       for (let i = 0; i < items.length; i += BATCH) batches.push(items.slice(i, i + BATCH));
       const results = await Promise.allSettled(batches.map((b, i) =>
-        this.env.SENDER.get(this.env.SENDER.idFromName(`lot-${i}`)).send(b, vapid, this.env.SITE)));
+        this.env.SENDER.get(this.env.SENDER.idFromName(`lot-${i}`)).send(b.map(({key, sub, msg}) => ({key, sub, msg})), vapid, this.env.SITE)));
       let ok = 0, ko = 0;
-      for (const r of results){
-        if (r.status !== "fulfilled"){ ko++; continue; }
-        for (const x of r.value){
-          if (x.status === 201 || x.status === 200) ok++; else ko++;
+      // échec passager (service de notification saturé, coupure) : la notification repart à la minute suivante
+      const retry = item => { const n = (item && item.x.tries || 0) + 1; if (item && n < MAX_TRIES) outbox.push({...item.x, tries: n}); };
+      results.forEach((r, i) => {
+        if (r.status !== "fulfilled"){ ko += batches[i].length; batches[i].forEach(retry); return; }
+        r.value.forEach((x, j) => {
+          if (x.status === 201 || x.status === 200){ ok++; return; }
+          ko++;
           if (x.status === 404 || x.status === 410) dead.add(x.key);       // abonnement expiré : on oublie ce téléphone
-        }
-      }
+          else if (x.status === 429 || typeof x.status !== "number" || x.status >= 500) retry(batches[i][j]);
+        });
+      });
       st.sent = {t: new Date(now).toISOString(), ok, ko, attente: outbox.length};
     }
     await this.ctx.storage.put("outbox", outbox);

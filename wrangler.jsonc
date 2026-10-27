@@ -3,13 +3,15 @@
 {
   "name": "analyse-sport-alertes",
   "main": "worker/index.js",
+  // avant chaque mise en ligne : tests du robot ; s'ils échouent, l'ancienne version reste en service
+  "build": { "command": "node worker/test.mjs && node worker/test-etat.mjs" },
   "compatibility_date": "2025-09-01",
   "workers_dev": true,
   "preview_urls": false,
   "triggers": { "crons": ["* * * * *"] },
   "durable_objects": { "bindings": [{ "name": "STATE", "class_name": "Etat" }, { "name": "SENDER", "class_name": "Envoi" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Etat"] }, { "tag": "v2", "new_sqlite_classes": ["Envoi"] }],
-  "vars": { "SITE": "https://ryo-stats.github.io/analyse-sport/" },
+  "vars": { "SITE": "https://ryo-stats.github.io/analyse-sport/", "REPO": "ryo-stats/analyse-sport" },
   "keep_vars": true,
   "observability": { "enabled": true }
 }

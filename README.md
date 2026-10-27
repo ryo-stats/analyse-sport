@@ -70,6 +70,11 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
   - il crée lui-même ses clés VAPID ; le chiffrement est vérifié sur l'exemple de la RFC 8291.
 - **Envoi réparti** : chaque minute, au plus 10 lots de 40 notifications, chacun confié à un petit robot « Envoi ». Le surplus part la minute suivante. De quoi servir quelques centaines de personnes gratuitement (confiance moyenne). Au-delà, il faudrait l'offre payante de Cloudflare (5 $ par mois).
 - **Robustesse** : chaque lecture (analyses, scores ESPN) est retentée tout de suite en cas d'échec, puis ESPN est relu par une adresse de secours sans date. Un but survenu pendant une panne n'est pas perdu (le robot compare au dernier score connu). `/etat › sante` dit si ESPN et les analyses répondent. Côté site, un bandeau « Analyses en retard » apparaît si la dernière mise à jour a plus de 6 h (entre 8 h et minuit). La publication des analyses (GitHub Actions) réessaie 3 fois si l'envoi est refusé.
+- **Anti-panne** (27/10) :
+  - GitHub retarde ou saute des lancements programmés (le 26/10, rien entre 0 h 21 et 12 h 16) : le workflow est maintenant lancé toutes les 10 minutes, à des minutes creuses, et `horaires.py` rattrape tout passage sauté au lancement suivant.
+  - Secours facultatif : avec un jeton GitHub (secret `GH_TOKEN` du robot, droit « Actions : Read and write » sur ce seul dépôt), le robot demande lui-même un passage quand les analyses ont plus de 25 minutes (au plus toutes les 14 min, pas de 2 h à 6 h). `/etat › sante › relance_github` dit si ça marche.
+  - Une étape du calcul qui plante (format d'une source changé, bug) n'empêche plus la publication : le reste est publié, une ligne l'indique sur le site, et la partie en panne garde les données du passage précédent du même jour.
+  - Robot : un passage lent n'est jamais doublé (pas d'alerte de but en double) ; une notification refusée par un service saturé repart la minute suivante (3 essais) ; le résumé du matin part jusqu'à 13 h si les analyses arrivent en retard ; tests lancés par Cloudflare avant chaque mise en ligne.
 - **Libération des favoris** : un favori se libère 8 h après le coup d'envoi.
 - **Abonnements expirés** : ils sont oubliés automatiquement.
 - **Pronostics › En direct** recalcule les pourcentages dans la page à partir du score, de la minute et des cartons rouges (`docs/live.js`, partagé avec le robot). En foot, le déroulement du match compte aussi : tirs, tirs cadrés et corners (tableau des scores ESPN, toutes les 30 s) corrigent les buts attendus d'ici la fin. Le rythme d'avant-match pèse comme 2 matchs entiers, donc les tirs comptent pour environ 20 % à la mi-temps et un tiers en fin de match ; l'équipe qui a au moins 68 % des occasions est signalée « 📈 domine ». En NHL, ESPN ne donne pas les tirs du match en direct : seuls le score et le temps comptent. Ces chiffres n'entrent pas dans le Bilan.
@@ -135,7 +140,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 | `app.py` | Récupère les données, calcule, écrit `docs/data.json`, `docs/live.json` et `docs/history.json` |
 | `docs/index.html` | Le site (onglets Foot, NHL, Pronostics, Bilan) |
 | `docs/live.js` | Calcul des pronostics en direct (site et robot) |
-| `worker/`, `wrangler.jsonc` | Robot d'alertes Cloudflare. Tests : `node worker/test.mjs` |
+| `worker/`, `wrangler.jsonc` | Robot d'alertes Cloudflare. Tests : `node worker/test.mjs` et `node worker/test-etat.mjs`, lancés aussi par Cloudflare avant chaque mise en ligne (en cas d'échec, l'ancienne version reste en service) |
 | `docs/manifest.webmanifest`, `docs/icon.svg` | Installation sur l'écran d'accueil |
 | `.github/workflows/update.yml` | Lance `app.py` aux 7 passages de `horaires.py` ; un passage que GitHub lance en retard ou saute est rattrapé au lancement suivant (30 min plus tard au plus) ; en plus, recalcul toutes les 30 min de 75 à 5 min avant chaque coup d'envoi (compositions officielles, blessés de dernière minute, dernières cotes) |
 | `tests/test_app.py` | Vérifie les calculs avant chaque mise à jour |

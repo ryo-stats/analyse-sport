@@ -271,4 +271,31 @@ ok++; console.log("ok - déroulé d'un match en favori : buts, but annulé, rés
   assert.equal(healthReport(st5, T + 20 * MIN).espn, "ok");
   ok++; console.log("ok - coupure ESPN : deuxième essai et adresse de secours, but annoncé");
 }
+// secours GitHub : analyses de plus de 25 min (passage programmé sauté) → demande de passage, au plus toutes
+// les 14 min, jamais de 2 h à 6 h ; sans jeton (pas de io.dispatch), rien
+{
+  const { relaunchDue, healthReport } = await import("./robot.js");
+  const at = (h, m) => Date.parse(`2026-10-26T${String(h - 1).padStart(2, "0")}:${String(m).padStart(2, "0")}:00Z`);   // heure de Paris (UTC+1)
+  const fresh = {data: {generated: "2026-10-26T09:00+01:00", fetched: at(9, 5), matches: []}};
+  assert.equal(relaunchDue(fresh, at(9, 20)), false);
+  assert.equal(relaunchDue(fresh, at(9, 30)), true);
+  assert.equal(relaunchDue({...fresh, relaunch: at(9, 25)}, at(9, 30)), false);
+  assert.equal(relaunchDue({data: {generated: "2026-10-26T00:21+01:00"}}, at(3, 30)), false);   // nuit
+  let n = 0;
+  const st6 = {data: {...fresh.data, fetched: at(10, 0)}};
+  const io = {site: "https://site/", getJSON: async () => ({...LIVE, generated: "2026-10-26T09:00+01:00"}), dispatch: async () => { n++; }};
+  await tick(st6, {}, at(10, 0), io);
+  await tick(st6, {}, at(10, 5), io);
+  await tick(st6, {}, at(10, 15), io);
+  assert.equal(n, 2);
+  assert.match(healthReport(st6, at(10, 16)).relance_github, /^ok/);
+  const st7 = {data: {...fresh.data, fetched: at(10, 0)}};
+  await tick(st7, {}, at(10, 0), {...io, dispatch: async () => { throw new Error("GitHub a répondu 401"); }});
+  assert.match(healthReport(st7, at(10, 1)).relance_github, /en panne/);
+  assert.match(st7.errors[0].text, /401/);
+  const st8 = {data: {...fresh.data, fetched: at(10, 0)}};
+  await tick(st8, {}, at(10, 0), {site: io.site, getJSON: io.getJSON});         // sans jeton
+  assert.equal(st8.relaunch, undefined);
+  ok++; console.log("ok - secours GitHub : relance si les analyses ont plus de 25 min, jamais la nuit ni sans jeton");
+}
 console.log(`\n${ok} tests OK`);

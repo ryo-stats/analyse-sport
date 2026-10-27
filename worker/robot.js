@@ -155,12 +155,34 @@ export function healthReport(st, now){
   const h = st.health || {}, mins = t => Math.round((now - t) / MIN);
   const espn = h.espn && h.espn.fails ? `en panne (${h.espn.fails} échecs, dernier succès il y a ${h.espn.ok ? mins(h.espn.ok) + " min" : "longtemps"})` : "ok";
   const gen = st.data && Date.parse(st.data.generated), age = gen ? (now - gen) / HOUR : null;
+  const gh = h.github;
   return {espn, analyses: age == null ? "pas encore lues" : age > 3 ? `en retard (${age.toFixed(1).replace(".", ",")} h)` : "à jour",
-          live_json: h.live && h.live.fails ? `en panne (${h.live.fails} échecs)` : "ok"};
+          live_json: h.live && h.live.fails ? `en panne (${h.live.fails} échecs)` : "ok",
+          relance_github: !gh ? "pas encore utilisée (ou jeton GH_TOKEN absent)" : gh.fails ? `en panne (${gh.fails} échecs)`
+            : `ok (dernière il y a ${mins(gh.ok)} min)`};
+}
+
+// Relance des analyses (secours). GitHub retarde ou saute parfois ses lancements programmés : le 26/10, rien
+// entre 0 h 21 et 12 h 16. Si les analyses publiées ont plus de 25 minutes, le robot demande un passage, au plus
+// toutes les 14 minutes, de 6 h à 2 h (heure de Paris) ; horaires.py décide ensuite s'il faut vraiment recalculer.
+// Ne fait rien sans io.dispatch (jeton GitHub absent).
+export function relaunchDue(st, now){
+  const hour = parisNow(now).hour;
+  if (hour >= 2 && hour < 6) return false;
+  if (now - (st.relaunch || 0) < 14 * MIN) return false;
+  const gen = st.data && Date.parse(st.data.generated);
+  return !gen || now - gen > 25 * MIN;
+}
+async function relaunch(st, now, io){
+  if (!io.dispatch || !relaunchDue(st, now)) return;
+  st.relaunch = now;
+  try { await io.dispatch(); health(st, now, "github", true); }
+  catch (e){ note(st, now, `relance GitHub : ${e.message}`); health(st, now, "github", false); }
 }
 
 // Un passage du robot. st : état conservé d'une minute à l'autre ; favs : {id du match: date d'ajout}, réunion
-// des favoris de tous les téléphones. io.getJSON(url) lit une adresse ; io.site est l'adresse du site.
+// des favoris de tous les téléphones. io.getJSON(url) lit une adresse ; io.site est l'adresse du site ;
+// io.dispatch() (facultatif) demande un passage des analyses à GitHub.
 // Renvoie {msgs, expired} : alertes (avec .match ou .morning) et favoris périmés à retirer partout.
 export async function tick(st, favs, now, io){
   st.watch ||= {};
@@ -212,9 +234,9 @@ export async function tick(st, favs, now, io){
     }
   }
 
-  // résumé du matin (une fois par jour, après la mise à jour de 7 h 20)
+  // résumé du matin (une fois par jour, après la mise à jour de 7 h 20 ; jusqu'à 13 h si elle arrive en retard)
   const P = parisNow(now), sum = (st.data || {}).summary;
-  if (P.hour >= 8 && P.hour < 12 && st.morning !== P.date && sum && sum.date === P.date){
+  if (P.hour >= 8 && P.hour < 13 && st.morning !== P.date && sum && sum.date === P.date){
     st.morning = P.date;
     msgs.push(morning(sum));
   }
@@ -226,6 +248,7 @@ export async function tick(st, favs, now, io){
     return m ? now - Date.parse(m.kickoff) > 8 * HOUR : now - favs[id] > 24 * HOUR;
   });
   for (const id of expired) delete st.watch[id];
+  await relaunch(st, now, io);
   return {msgs, expired};
 }
 

@@ -304,11 +304,8 @@ class AppTest(unittest.TestCase):
         self.assertTrue(any("joué hier" in c for c in g["ctx"]))
         self.assertTrue(g["squad_h"][0]["p_goal"] >= g["squad_h"][-1]["p_goal"])
         self.assertTrue(all(p["p_point"] >= p["p_goal"] for p in g["squad_h"] + g["squad_a"]))
-        # récapitulatif : au plus 3 joueurs par équipe, triés par chance de faire au moins 1 point
-        self.assertTrue(1 <= len(g["best_h"]) <= 3 and 1 <= len(g["best_a"]) <= 3)
-        wilson = next(p for p in g["best_h"] if p["name"] == "Tom Wilson")
+        wilson = next(p for p in g["squad_h"] if p["name"] == "Tom Wilson")
         self.assertEqual((wilson["goals"], wilson["assists"], wilson["gp"]), (2, 3, 4))   # stats de la saison en cours
-        self.assertEqual([p["p_point"] for p in g["best_a"]], sorted((p["p_point"] for p in g["best_a"]), reverse=True))
 
     def test_history_and_bilan(self):
         hist = app.load_json(app.HIST_FILE, {})
@@ -393,7 +390,8 @@ class AppTest(unittest.TestCase):
         self.assertIn(g["main"]["market"], ["win_h", "win_a", "o55", "u55"])
         self.assertEqual(g["winner"]["market"], "win_h")
         self.assertIn("au moins 1 point", g["player"]["label"])
-        sel = self.data["selection"]
+        sel = app.selection(self.data["foot"] + self.data["nhl"])
+        self.assertNotIn("selection", self.data)                      # calculée sur le site, pas envoyée deux fois
         self.assertEqual([c["p"] for c in sel], sorted((c["p"] for c in sel), reverse=True))
         self.assertTrue(all(sum(c["id"] == x["id"] for x in sel) <= 2 for c in sel))
         store = app.load_json(app.PICKS_FILE, {})
@@ -589,6 +587,23 @@ class AppTest(unittest.TestCase):
         self.assertEqual(app.ELO_DIAG["eng.1"], {"2025": 74})
         self.assertTrue(any("?season=2025" in u for u, _ in calls))
 
+    def test_run_survives_a_broken_step(self):
+        # une étape qui plante (format d'une source changé, bug) : le reste est publié, avec un message,
+        # et la partie en panne garde les données du passage précédent du même jour
+        before = self.data["nhl"]
+        old_b, old_n = app.bilan, app.nhl
+        app.bilan = lambda h: 1 / 0
+        app.nhl = lambda d, h: {}["x"]
+        try:
+            d = app.main(NOW)
+        finally:
+            app.bilan, app.nhl = old_b, old_n
+        self.assertEqual(len(d["foot"]), 1)
+        self.assertEqual([m["id"] for m in d["nhl"]], [m["id"] for m in before])
+        self.assertTrue(any(n.startswith("NHL : erreur inattendue") for n in d["notes"]))
+        self.assertIn("foot", d["bilan"])                       # bilan du passage précédent
+        self.assertTrue(os.path.exists(app.LIVE_FILE))
+
     def test_second_opinion(self):
         # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
         self.assertEqual(self.data["second"]["foot"]["ok"], 1)
@@ -600,7 +615,7 @@ class AppTest(unittest.TestCase):
                 csv_ = MP_HEAD + f"{code},2026,{code},{code},Team Level,all,6,15.0,20.0,21600\nTOR,2026,TOR,TOR,Team Level,all,6,19.0,14.0,21600\n"
                 app.get_text = lambda url, headers=None, tries=3, timeout=30, c=csv_: c if "/2026/" in url else MP_HEAD
                 app.SECOND.clear()
-                self.assertIsNotNone(app.nhl_second("TOR", "SJS", 20262027), code)
+                self.assertIsNotNone(app.nhl_xg("TOR", "SJS", 20262027), code)
         finally:
             app.get_text = old
             app.SECOND.clear()
@@ -703,7 +718,7 @@ class AppTest(unittest.TestCase):
 
     def test_europa_league(self):
         # Europa League : même format que la Ligue des champions (phase de ligue à 36)
-        self.assertEqual(app.LEAGUE_CODE["Europa League"], "uefa.europa")
+        self.assertEqual(dict(app.LEAGUES)["Europa League"], "uefa.europa")
         st = lambda rank: dict(rank=rank, gp=3, pts=6, gf=5, ga=3)
         txt = app.foot_stakes("Europa League", "Lyon", "Porto", st(5), st(20), {})
         self.assertIn("Lyon (5e) : top 8", txt)

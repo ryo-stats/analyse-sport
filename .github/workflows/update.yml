@@ -2,11 +2,17 @@ name: Mise à jour des analyses
 
 on:
   schedule:
-    # toutes les 30 minutes ; horaires.py garde les 7 passages prévus (heure de Paris : 7 h 20, 12 h 20,
-    # 14 h 20, 16 h 20, 17 h 50, 20 h 20, 23 h 50, rattrapés s'ils sont lancés en retard) et, en plus,
-    # chaque lancement de 75 à 5 min avant un coup d'envoi (compositions officielles)
-    - cron: "20,50 5-22 * * *"
-  workflow_dispatch:         # bouton « Run workflow » pour lancer à la main (toujours exécuté)
+    # toutes les 10 minutes, à des minutes creuses (GitHub retarde ou saute des lancements aux heures pleines :
+    # le 26/10, rien entre 0 h 21 et 12 h 16). horaires.py garde les 7 passages prévus (heure de Paris : 7 h 20,
+    # 12 h 20, 14 h 20, 16 h 20, 17 h 50, 20 h 20, 23 h 50, rattrapés au lancement suivant s'ils sont sautés) et,
+    # en plus, un recalcul toutes les 20 min de 75 à 5 min avant un coup d'envoi (compositions officielles).
+    # Les autres lancements s'arrêtent en quelques secondes.
+    - cron: "4,14,24,34,44,54 * * * *"
+  workflow_dispatch:         # bouton « Run workflow » (toujours exécuté) ; le robot Cloudflare l'utilise en secours
+    inputs:
+      porte:
+        description: "toujours = recalcul forcé ; horaires = seulement si un passage est dû (relance du robot)"
+        default: toujours
   push:                      # changement du calcul : nouvelles analyses tout de suite (les commits du robot
     branches: [main]         # ne touchent que docs/ et cache/ : pas de boucle)
     paths: [app.py, horaires.py, requirements.txt, .github/workflows/update.yml]
@@ -27,6 +33,8 @@ jobs:
 
       - name: Faut-il lancer ?
         id: gate
+        env:
+          PASSAGE: ${{ github.event_name == 'workflow_dispatch' && inputs.porte == 'horaires' && 'schedule' || github.event_name }}
         run: python3 horaires.py
 
       - uses: actions/setup-python@v5

@@ -26,6 +26,7 @@ import os
 import re
 import sys
 import time
+import traceback
 import unicodedata
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -60,7 +61,6 @@ LEAGUE_INFO = {
     "fra.1": ("France", 9), "eng.1": ("Angleterre", 23), "esp.1": ("Espagne", 15),
     "ita.1": ("Italie", 12), "ger.1": ("Allemagne", 10), "uefa.champions": ("Europe", 2), "uefa.europa": ("Europe", 2310),
 }
-LEAGUE_CODE = dict(LEAGUES)
 LEAGUE_LOGO = "https://a.espncdn.com/i/leaguelogos/soccer/500/{}.png"
 NHL_LOGO = "https://assets.nhle.com/logos/nhl/svg/{}_{}.svg"
 ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard"
@@ -82,7 +82,7 @@ NHL_API = "https://api-web.nhle.com/v1"
 MONEYPUCK_TEAMS = "https://moneypuck.com/moneypuck/playerData/seasonSummary/{season}/regular/teams.csv"
 ELO_HFA = 65          # avantage du terrain en points Elo (ordre de grandeur des classements Elo publiés)
 ELO_DRAW = 0.28       # part de nuls entre deux équipes de même niveau
-SPLIT_GAP = 0.12      # le deuxième avis juge le Safe moins sûr d'au moins 12 points : avis partagés
+SPLIT_GAP = 0.12      # le marché des paris juge le Safe moins sûr d'au moins 12 points : avis partagés
 NHL_SHRINK = 12       # début de saison : les xG d'une équipe pèsent comme ses matchs, face à 12 matchs « moyens »
 
 NHL_TIE = 0.22        # part des matchs NHL à égalité après 60 minutes
@@ -99,6 +99,18 @@ def note(msg):
     print(msg, file=sys.stderr)
     if msg not in NOTES:
         NOTES.append(msg)
+
+
+def step(name, fn, fallback=None):
+    """Une étape du passage : en cas d'erreur inattendue (format d'une source qui change, bug), le détail part
+    dans le journal GitHub, une ligne s'affiche sur le site et le passage continue avec fallback, au lieu de
+    ne rien publier du tout."""
+    try:
+        return fn()
+    except Exception as exc:
+        traceback.print_exc()
+        note(f"{name} : erreur inattendue ({exc.__class__.__name__}), le reste du site est à jour.")
+        return fallback
 
 
 # ---------------------------------------------------------------- accès réseau
@@ -669,6 +681,7 @@ CACHE_FILE = os.path.join(ROOT, "cache", "squads.json")
 
 # ---------------------------------------------------------------- forme récente des joueurs (10 derniers matchs)
 # Feuilles de match gardées d'un passage à l'autre (un match terminé ne change plus) : {"foot": {id: {...}}, "nhl": {...}}
+CLOCK = [dt.datetime.now(dt.timezone.utc)]   # heure du passage (fixée par main, pour des calculs reproductibles)
 FORM_FILE = os.path.join(ROOT, "cache", "form.json")
 FORM = {}
 FORM_GAMES = 10
@@ -986,7 +999,7 @@ def foot_league(today, history, league, code):
             except Exception:
                 recents[s] = None
         state = ((e.get("status") or {}).get("type") or {}).get("state", "pre")
-        soon = parse_time(e["date"]) - dt.datetime.now(dt.timezone.utc) <= LINEUP_BEFORE
+        soon = parse_time(e["date"]) - CLOCK[0] <= LINEUP_BEFORE
         lineup = espn_lineup(code, e["id"]) if state == "in" or (state == "pre" and soon) else None
         if not all(squads.values()) and not leaders:
             leaders = espn_leaders(code)          # repli : top 50 des buteurs et passeurs du championnat
@@ -1257,16 +1270,16 @@ def nhl_model(H, A, season, b2b_h=False, b2b_a=False):
     """Analyse maison NHL : buts attendus de chaque équipe d'après les xG de la saison (MoneyPuck), ramenés vers
     la saison passée tant que peu de matchs sont joués ; avantage de la glace ; fatigue si l'équipe a joué la veille.
     Renvoie (buts attendus domicile, extérieur) ou None."""
-    r = nhl_second(H, A, season, lam=True)
+    r = nhl_xg(H, A, season)
     if not r:
         return None
     lh, la = r
     return lh * (B2B_FACTOR if b2b_h else 1), la * (B2B_FACTOR if b2b_a else 1)
 
 
-def nhl_second(H, A, season, lam=False):
-    """Deuxième avis NHL : buts attendus de chaque équipe (MoneyPuck), ramenés vers la saison passée (ou la
-    moyenne) tant que peu de matchs sont joués. Renvoie la chance de victoire finale de l'équipe à domicile."""
+def nhl_xg(H, A, season):
+    """Buts attendus (domicile, extérieur) d'après les xG pour et contre de chaque équipe (MoneyPuck), ramenés
+    vers la saison passée (ou la moyenne) tant que peu de matchs sont joués ; léger avantage de la glace."""
     year = int(str(season)[:4])
     cur, prev = mp_rates(year), mp_rates(year - 1)
     teams = list(cur.values()) or list(prev.values())
@@ -1289,12 +1302,7 @@ def nhl_second(H, A, season, lam=False):
     if not rh or not ra:
         SECOND_STATS["nhl"][1].extend(x for x, r in ((H, rh), (A, ra)) if not r)
         return None
-    lh = rh[0] * ra[1] / avg * 1.03          # léger avantage de la glace
-    la = ra[0] * rh[1] / avg / 1.03
-    if lam:
-        return lh, la
-    h, d, a = outcome_probs(lh, la, n=15)
-    return dict(src="Modèle xG (données MoneyPuck.com)", winH=round(float(h + d * 0.52), 4))
+    return rh[0] * ra[1] / avg * 1.03, ra[0] * rh[1] / avg / 1.03
 
 
 def concord(sport, picks, odds_p, second):
@@ -1476,12 +1484,6 @@ def fun_picks(sport, home, away, lh, la, q, exclude=(), anchors=(), scorer=None)
     for prob, fam, market, label, extra in sorted(out, key=lambda x: -x[0]):
         best.setdefault(fam, make_pick(market, label, prob, **extra))
     return sorted(best.values(), key=lambda x: -x["p"])[:FUN_MAX]
-
-
-def fun_pick(sport, home, away, lh, la, q, exclude=(), anchors=(), scorer=None):
-    """Le pari fun principal (le plus probable des paris fun cohérents), ou None."""
-    got = fun_picks(sport, home, away, lh, la, q, exclude, anchors, scorer)
-    return got[0] if got else None
 
 
 def side_rows(team_rows, side, keys):
@@ -1788,16 +1790,13 @@ def picks_bilan(store, history=None):
     # détail des pronostics vérifiés des 30 derniers jours (pour les listes dépliables du site)
     last = set(dates[:30])
     details = sorted((p for p in every if p["date"] in last), key=lambda p: (p["date"], p["home"]), reverse=True)
-    recent = [p for p in details if pick_group(p) == "safe"][:40]
     return dict(n=len(done), rate=pct(hits / len(done)), expected=pct(sum(p["p"] for p in done) / len(done)),
                 since=dates[-1], total=by_sport(done), fun=by_sport(fun_done), days=days, leagues=leagues,
                 by_stars=by_stars,
                 details=[dict(date=p["date"], sport=p["sport"], league=league_of(p), mid=p["match"],
                               score=((history or {}).get(p["match"]) or {}).get("score"),
                               match=f"{p['home']} – {p['away']}", label=p["label"], prob=pct(p["p"]),
-                              stars=p["stars"], ok=bool(p["result"]), fun=pick_group(p) == "fun") for p in details],
-                recent=[dict(date=p["date"], sport=p["sport"], match=f"{p['home']} – {p['away']}", label=p["label"],
-                             prob=pct(p["p"]), stars=p["stars"], ok=p["result"]) for p in recent])
+                              stars=p["stars"], ok=bool(p["result"]), fun=pick_group(p) == "fun") for p in details])
 
 
 def foot_visuals(league, H, A):
@@ -1923,9 +1922,12 @@ def nhl(today, history):
         day = today - dt.timedelta(days=back)
         games = (nhl_get(f"/score/{day.isoformat()}") or {}).get("games", [])
         for g in games:
-            if back == 1:
-                yesterday_teams |= {g["homeTeam"]["abbrev"], g["awayTeam"]["abbrev"]}
-            resolve_nhl(g, history)
+            try:
+                if back == 1:
+                    yesterday_teams |= {g["homeTeam"]["abbrev"], g["awayTeam"]["abbrev"]}
+                resolve_nhl(g, history)
+            except (KeyError, TypeError, ValueError) as exc:
+                print(f"NHL, résultat illisible ({exc!r})", file=sys.stderr)
     # 2. matchs du jour
     sched = nhl_get(f"/schedule/{today.isoformat()}")
     if sched is None:
@@ -1935,7 +1937,7 @@ def nhl(today, history):
     games = (day or {}).get("games", [])
     if not games:
         return []
-    standings = {s["teamAbbrev"]["default"]: s
+    standings = {(s.get("teamAbbrev") or {}).get("default"): s
                  for s in (nhl_get("/standings/now") or {}).get("standings", [])}
     espn = espn_events("hockey", "nhl", today) or []
     if not espn:
@@ -2111,7 +2113,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         winH=pct(win_h), winA=pct(win_a), pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
-        squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
+        squad_h=team_rows["h"], squad_a=team_rows["a"],
         ctx=ctx, reading=reading, stakes=nhl_stakes(hname, aname, sh, sa),
         espn_id=espn_id, picks=picks, second=agree,
         logo_h=g["homeTeam"].get("logo") or NHL_LOGO.format(H, "light"),
@@ -2151,15 +2153,6 @@ def bilan(history):
             vs_mkt=dict(n=len(both), model=round(bm("p"), 3), mkt=round(bm("p_mkt"), 3)) if both else None,
             bins=[dict(range=f"{lo}-{lo + 10} %", n=v[0], announced=pct(v[2] / v[0]), actual=pct(v[1] / v[0]))
                   for lo, v in sorted(bins.items())])
-    recent = sorted(done, key=lambda h: h["date"], reverse=True)[:40]
-    out["recent"] = []
-    for h in recent:
-        p = h["p"]
-        fav = max(range(len(p)), key=lambda i: p[i])
-        labels = [h["home"], "Nul", h["away"]] if len(p) == 3 else [h["home"], h["away"]]
-        out["recent"].append(dict(date=h["date"], sport=h["sport"], league=h["league"], home=h["home"],
-                                  away=h["away"], score=h.get("score"), fav=labels[fav], favp=pct(p[fav]),
-                                  ok=fav == h["result"]))
     return out
 
 
@@ -2208,6 +2201,7 @@ def live_feed(now, foot_rows, nhl_rows, store, today, nhl_day):
 
 def main(now=None):
     now = now or dt.datetime.now(PARIS)
+    CLOCK[0] = now
     today = now.date()
     # la soirée NHL (matchs entre 0 h et 5 h à Paris) appartient au jour américain de la veille
     nhl_day = (now - dt.timedelta(hours=7)).date()
@@ -2216,25 +2210,29 @@ def main(now=None):
     FETCH_LOG.clear()
     SECOND_STATS.clear()
     SECOND_STATS.update(foot=[0, []], nhl=[0, []])
+    prev = load_json(DATA_FILE, {})          # passage précédent : repli si une étape échoue
     load_squad_cache(today)
     load_form()
     load_elo()
-    foot_rows = foot(today, history)
-    save_elo(today)
-    save_squad_cache(today)
-    nhl_rows = nhl(nhl_day, history)
-    save_form(today)
+    same = lambda k, day: prev.get(k) or [] if prev.get("date" if k == "foot" else "nhl_date") == day.isoformat() else []
+    foot_rows = step("Foot", lambda: foot(today, history), same("foot", today))
+    step("Elo maison (sauvegarde)", lambda: save_elo(today))
+    step("Effectifs (sauvegarde)", lambda: save_squad_cache(today))
+    nhl_rows = step("NHL", lambda: nhl(nhl_day, history), same("nhl", nhl_day))
+    step("Forme (sauvegarde)", lambda: save_form(today))
     cutoff = (today - dt.timedelta(days=400)).isoformat()
     history = {k: v for k, v in history.items() if v.get("date", "") >= cutoff}
     # pronostics : archivage avant match, puis vérification une fois le résultat connu
     store = load_json(PICKS_FILE, {})
-    record_picks(foot_rows + nhl_rows, store)
-    resolve_picks(store, history)
+    step("Archivage des pronostics", lambda: record_picks(foot_rows + nhl_rows, store))
+    step("Vérification des pronostics", lambda: resolve_picks(store, history))
     store = {k: v for k, v in store.items() if v.get("date", "") >= cutoff}
-    stats = bilan(history)
-    stats["picks"] = picks_bilan(store, history)
+    stats = step("Bilan", lambda: bilan(history), None)
+    if stats is None:
+        stats = {k: v for k, v in (prev.get("bilan") or {}).items() if k != "picks"}
+    stats["picks"] = step("Bilan des pronostics", lambda: picks_bilan(store, history), (prev.get("bilan") or {}).get("picks"))
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
-                foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
+                foot=foot_rows, nhl=nhl_rows, bilan=stats,
                 notes=NOTES[-12:], form=dict(FORM_STATS), second=dict(
                     foot=dict(ok=SECOND_STATS["foot"][0], elo=dict(ELO_STATS), elo_fetch=dict(ELO_DIAG),
                               status="ok" if any(v >= ELO_MIN for v in ELO_STATS.values()) or not ELO_STATS
@@ -2244,7 +2242,9 @@ def main(now=None):
     save_json(HIST_FILE, history)
     save_json(PICKS_FILE, store)
     save_json(DATA_FILE, data)
-    save_json(LIVE_FILE, live_feed(now, foot_rows, nhl_rows, store, today, nhl_day))
+    feed = step("Alertes (live.json)", lambda: live_feed(now, foot_rows, nhl_rows, store, today, nhl_day))
+    if feed is not None:
+        save_json(LIVE_FILE, feed)
     print(f"OK : {len(foot_rows)} matchs de foot, {len(nhl_rows)} matchs NHL, "
           f"{sum(1 for h in history.values() if h.get('result') is not None)} résultats archivés.")
     return data

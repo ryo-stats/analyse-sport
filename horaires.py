@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Décide si le passage automatique en cours doit recalculer les analyses.
 
-GitHub lance le workflow toutes les 30 minutes (à :20 et :50 UTC), mais les analyses ne sont
-recalculées qu'aux heures de Paris listées dans PASSAGES : environ 30 à 40 minutes avant chaque
-vague de coups d'envoi, pour archiver les cotes les plus récentes. Raisonner en heure de Paris
-évite d'avoir à modifier les horaires au changement d'heure.
+GitHub lance le workflow toutes les 10 minutes (et le robot Cloudflare en secours), mais les analyses
+ne sont recalculées qu'aux heures de Paris listées dans PASSAGES : environ 30 à 40 minutes avant
+chaque vague de coups d'envoi. Raisonner en heure de Paris évite d'avoir à modifier les horaires au
+changement d'heure.
 
 Avant chaque coup d'envoi, recalcul supplémentaire pour suivre les compositions officielles (voir should_run).
 
@@ -47,11 +47,12 @@ REFRESH = dt.timedelta(minutes=20)
 
 
 def should_run(now, event, last=None, kickoffs=()):
-    """GitHub lance les passages avec 5 à 60 min de retard, et en saute parfois. On ne se fie donc pas au
-    créneau d'origine : on recalcule dès qu'un horaire prévu est passé depuis la dernière publication
-    (last = champ « generated » de docs/data.json). Un passage raté est rattrapé 30 minutes plus tard.
-    En plus, avant chaque coup d'envoi (de 75 à 5 min avant), on recalcule à chaque lancement (toutes les
-    30 min) pour suivre les compositions officielles, les blessés de dernière minute et les dernières cotes."""
+    """GitHub lance les passages avec du retard, et en saute parfois. On ne se fie donc pas au créneau
+    d'origine : on recalcule dès qu'un horaire prévu est passé depuis la dernière publication (last = champ
+    « generated » de docs/data.json). Un passage raté est rattrapé au lancement suivant.
+    En plus, avant chaque coup d'envoi (de 75 à 5 min avant), on recalcule toutes les 20 min pour suivre les
+    compositions officielles et les blessés de dernière minute.
+    event : « schedule » (lancement programmé ou relance du robot) ; autre chose = lancement à la main."""
     if event != "schedule":           # lancement à la main : toujours
         return True
     if last is None or last < last_passage(now):
@@ -86,7 +87,8 @@ def kickoffs(path="docs/data.json"):
 
 
 if __name__ == "__main__":
-    run = should_run(dt.datetime.now(PARIS), os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch"), published(), kickoffs())
+    event = os.environ.get("PASSAGE") or os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch")
+    run = should_run(dt.datetime.now(PARIS), event, published(), kickoffs())
     line = f"run={'true' if run else 'false'}"
     print(line)
     out = os.environ.get("GITHUB_OUTPUT")
