@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T18:09+01:00",
+ "generated": "2026-10-27T19:32+01:00",
  "date": "2026-10-27",
  "nhl_date": "2026-10-27",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-27T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-4",
    "home": "Sassuolo",
    "away": "Lazio",
    "form_h": "NDNDV",
@@ -321,7 +321,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0986,
+     "p": 0.0985,
      "prob": 10,
      "fair": 10.15,
      "stars": 1,
@@ -330,7 +330,7 @@
     "fun": {
      "market": "wa_o25",
      "label": "Lazio gagne et plus de 2,5 buts",
-     "p": 0.373,
+     "p": 0.3729,
      "prob": 37,
      "fair": 2.68,
      "stars": 1
@@ -347,7 +347,7 @@
      {
       "market": "htft_a",
       "label": "Lazio mène à la mi-temps et gagne le match",
-      "p": 0.3498,
+      "p": 0.3497,
       "prob": 35,
       "fair": 2.86,
       "stars": 1
@@ -16963,11 +16963,15 @@
  },
  "second": {
   "foot": {
-   "ok": 3,
+   "ok": 2,
    "elo": {
     "ita.1": 832
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ita.1": {
+     "2026": 80
+    }
+   },
    "status": "ok"
   },
   "nhl": {
