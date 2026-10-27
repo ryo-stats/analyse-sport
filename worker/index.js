@@ -14,7 +14,7 @@
 // Envoi réparti : chaque minute, au plus 10 lots de 40 notifications, chacun confié à un petit robot « Envoi »
 // (une instance Durable Object par lot, avec sa propre limite d'appels). Le surplus part à la minute suivante.
 import { DurableObject } from "cloudflare:workers";
-import { tick, route, ESPN, MAX_FAVS, PUSH_HOSTS } from "./robot.js";
+import { tick, route, healthReport, ESPN, MAX_FAVS, PUSH_HOSTS } from "./robot.js";
 import { newVapidKeys, sendPush } from "./webpush.js";
 
 const BATCH = 40, MAX_BATCHES = 10, MAX_SUBS = 3000, OUTBOX_TTL = 15 * 60e3;
@@ -190,7 +190,7 @@ export class Etat extends DurableObject {
   async etat(){
     const st = (await this.ctx.storage.get("st")) || {}, subs = await this.subs();
     const fav = new Set(Object.values(subs).flatMap(favList));
-    return {analyses: (st.data || {}).generated || null, telephones: Object.keys(subs).length,
+    return {sante: healthReport(st, Date.now()), analyses: (st.data || {}).generated || null, telephones: Object.keys(subs).length,
             matchs_en_favori: fav.size, en_attente: ((await this.ctx.storage.get("outbox")) || []).length,
             dernier_envoi: st.sent || null,
             suivis: Object.values(st.watch || {}).map(w => ({match: `${w.m.home} – ${w.m.away}`, coup_envoi: w.m.kickoff,

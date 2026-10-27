@@ -1242,6 +1242,15 @@ function pushBanner(){
   return `<div class="pbanner"><span>🔔 <b>Reçois les buts de tes matchs</b> sur ton téléphone, gratuit et sans appli.</span>
     <button type="button" class="pgo" data-gofavs>Comment faire ?</button><button type="button" class="px" data-closebanner aria-label="Fermer">×</button></div>`;
 }
+// analyses en retard (la mise à jour automatique n'est pas passée) : prévenir sans alarmer. Le plus long écart
+// normal entre deux mises à jour est de 5 h (7 h 20 → 12 h 20) ; la nuit, rien n'est prévu avant 7 h 20.
+function staleBanner(){
+  if (!DATA || !DATA.generated) return "";
+  const gen = Date.parse(DATA.generated), age = (Date.now() - gen) / 36e5;
+  if (!(age >= 6) || new Date().getHours() < 8) return "";
+  const t = new Date(gen).toLocaleString("fr-FR", {weekday: "long", hour: "2-digit", minute: "2-digit"});
+  return `<div class="pbanner stale" role="status"><span>⏳ <b>Analyses en retard</b> : dernière mise à jour ${esc(t)}. Elles se remettront à jour toutes seules ; les scores en direct restent suivis.</span></div>`;
+}
 // guide « comme à un enfant », adapté au téléphone
 function pushGuide(){
   if (PUSH_ON){
@@ -1954,7 +1963,7 @@ function render(){
   document.getElementById("notes").hidden = TAB !== "matchs";
   document.getElementById("explain").hidden = !["pronos", "bilan"].includes(TAB);
   if (!DATA) return;
-  document.getElementById("pbanner").innerHTML = pushBanner();
+  document.getElementById("pbanner").innerHTML = staleBanner() + pushBanner();
   const view = document.getElementById("view");
   view.innerHTML = (TAB === "pronos" ? BACK_HOME : "") + ({home: homeView, matchs: matchsView, pronos: pronoView, favs: favView, bankroll: bankrollView, bilan: bilanView}[TAB] || homeView)();
   view.querySelectorAll("[data-league]").forEach(b => b.addEventListener("click", () => { LEAGUE = b.dataset.league; render(); }));

@@ -132,6 +132,33 @@ function note(st, now, text){
   st.errors = [{t: new Date(now).toISOString(), text}, ...(st.errors || [])].slice(0, 15);
 }
 
+// Lecture tolérante : un deuxième essai tout de suite (coupure réseau, réponse lente), puis, pour ESPN, une adresse
+// de secours sans date (le tableau des scores du jour). Un but manqué pendant une panne n'est pas perdu : le robot
+// compare le score au dernier connu, donc il l'annonce dès qu'ESPN répond de nouveau.
+async function readJSON(io, urls){
+  let err;
+  for (const url of urls){
+    for (let i = 0; i < 2; i++){
+      try { return await io.getJSON(url); } catch (e){ err = e; }
+    }
+  }
+  throw err;
+}
+
+// santé du robot, visible sur /etat : depuis quand ESPN et les analyses répondent
+function health(st, now, key, ok){
+  st.health ||= {};
+  const h = st.health[key] ||= {};
+  if (ok){ h.ok = now; h.fails = 0; } else { h.fails = (h.fails || 0) + 1; h.lastFail = now; }
+}
+export function healthReport(st, now){
+  const h = st.health || {}, mins = t => Math.round((now - t) / MIN);
+  const espn = h.espn && h.espn.fails ? `en panne (${h.espn.fails} échecs, dernier succès il y a ${h.espn.ok ? mins(h.espn.ok) + " min" : "longtemps"})` : "ok";
+  const gen = st.data && Date.parse(st.data.generated), age = gen ? (now - gen) / HOUR : null;
+  return {espn, analyses: age == null ? "pas encore lues" : age > 3 ? `en retard (${age.toFixed(1).replace(".", ",")} h)` : "à jour",
+          live_json: h.live && h.live.fails ? `en panne (${h.live.fails} échecs)` : "ok"};
+}
+
 // Un passage du robot. st : état conservé d'une minute à l'autre ; favs : {id du match: date d'ajout}, réunion
 // des favoris de tous les téléphones. io.getJSON(url) lit une adresse ; io.site est l'adresse du site.
 // Renvoie {msgs, expired} : alertes (avec .match ou .morning) et favoris périmés à retirer partout.
@@ -140,11 +167,13 @@ export async function tick(st, favs, now, io){
   const msgs = [];
   if (!st.data || now - st.data.fetched > 10 * MIN){
     try {
-      const d = await io.getJSON(`${io.site}live.json?t=${Math.floor(now / MIN)}`);
+      const d = await readJSON(io, [`${io.site}live.json?t=${Math.floor(now / MIN)}`]);
       if (d && Array.isArray(d.matches)) st.data = {...d, fetched: now};
+      health(st, now, "live", true);
     } catch (e){
       note(st, now, `live.json : ${e.message}`);
-      if (st.data) st.data.fetched = now - 5 * MIN;          // nouvel essai dans 5 minutes
+      health(st, now, "live", false);
+      if (st.data) st.data.fetched = now - 5 * MIN;          // nouvel essai dans 5 minutes (on garde les anciennes analyses)
     }
   }
   const matches = (st.data || {}).matches || [];
@@ -173,7 +202,10 @@ export async function tick(st, favs, now, io){
   }
   for (const [url, list] of Object.entries(feeds)){
     let j;
-    try { j = await io.getJSON(url); } catch (e){ note(st, now, `ESPN : ${e.message}`); continue; }
+    try {
+      j = await readJSON(io, [url, url.split("?")[0]]);
+      health(st, now, "espn", true);
+    } catch (e){ note(st, now, `ESPN : ${e.message}`); health(st, now, "espn", false); continue; }
     for (const w of list){
       const e = findEvent(w.m, (j && j.events) || []);
       if (e) msgs.push(...update(w, L.parseEspn(e, w.m.sport)));

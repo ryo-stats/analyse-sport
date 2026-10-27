@@ -252,4 +252,23 @@ ok++; console.log("ok - déroulé d'un match en favori : buts, but annulé, rés
   assert.match(st4.errors[0].text, /403/);
   ok++; console.log("ok - panne ESPN notée sans plantage");
 }
+// coupure passagère : deuxième essai, puis adresse de secours sans date ; le but n'est pas perdu
+{
+  const st5 = {}, favs5 = {"foot-1": T - 30 * MIN};
+  let calls = 0, sc = 0;
+  const flaky = {site: "https://site/", getJSON: async url => {
+    if (url.includes("live.json")) return LIVE;
+    calls++;
+    if (url.includes("dates=")) throw new Error("site.api.espn.com a répondu 503");     // l'adresse datée tombe
+    return {events: [footEvent({clock: "20'", sh: sc})]};
+  }};
+  await tick(st5, favs5, T - 10 * MIN, flaky);
+  sc = 1;
+  const r = await tick(st5, favs5, T + 20 * MIN, flaky);
+  assert.match(r.msgs[0].title, /But Arsenal/);
+  assert.equal(calls, 3);                                   // 2 essais sur l'adresse datée, puis l'adresse de secours
+  const { healthReport } = await import("./robot.js");
+  assert.equal(healthReport(st5, T + 20 * MIN).espn, "ok");
+  ok++; console.log("ok - coupure ESPN : deuxième essai et adresse de secours, but annoncé");
+}
 console.log(`\n${ok} tests OK`);
