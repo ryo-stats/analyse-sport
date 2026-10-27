@@ -1368,7 +1368,8 @@ def scorer_why(r, team):
     if r.get("apps"):
         bits.append(f"{plural(r.get('goals', 0), 'but')} et {plural(r.get('assists', 0), 'passe')} en {plural(r['apps'], 'match', 'matchs')}")
     l10 = r.get("l10")
-    if l10 and l10.get("n"):
+    same = l10 and (l10.get("gp"), l10.get("g"), l10.get("a")) == (r.get("apps"), r.get("goals"), r.get("assists"))
+    if l10 and l10.get("n") and not same:        # début de saison : les 10 derniers matchs = toute la saison, rien à ajouter
         if not l10.get("gp"):
             bits.append(f"absent de ses {l10['n']} derniers matchs")
         elif r.get("sport") == "nhl" or "p_point" in r:
