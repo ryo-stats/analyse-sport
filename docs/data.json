@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T02:37+01:00",
+ "generated": "2026-10-27T02:39+01:00",
  "date": "2026-10-27",
  "nhl_date": "2026-10-26",
  "foot": [
@@ -1157,7 +1157,7 @@
    "league": "NHL",
    "kickoff": "2026-10-26T23:00:00+00:00",
    "time": "00:00",
-   "state": "LIVE",
+   "state": "CRIT",
    "score": "2-5",
    "home": "New York Rangers",
    "away": "Los Angeles Kings",
@@ -2181,8 +2181,8 @@
    "league": "NHL",
    "kickoff": "2026-10-27T01:30:00+00:00",
    "time": "02:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Edmonton Oilers",
    "away": "Detroit Red Wings",
    "rec_h": "8-2-1 · 1e Pacific · 1 défaite de suite",
@@ -2633,7 +2633,7 @@
     "fun": {
      "market": "h2",
      "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-     "p": 0.3521,
+     "p": 0.3522,
      "prob": 35,
      "fair": 2.84,
      "stars": 1
@@ -2642,7 +2642,7 @@
      {
       "market": "wh_o55",
       "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-      "p": 0.3113,
+      "p": 0.3114,
       "prob": 31,
       "fair": 3.21,
       "stars": 1
@@ -2713,30 +2713,6 @@
    "logo_a_dark": null
   },
   {
-   "market": "point",
-   "label": "Connor McDavid : au moins 1 point",
-   "p": 0.78,
-   "prob": 78,
-   "fair": 1.28,
-   "stars": 4,
-   "player": "Connor McDavid",
-   "pid": 8478402,
-   "team": "Edmonton Oilers",
-   "why": "8 buts et 25 passes en 11 matchs · forme : 31 points (8 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (56 %) · 3,2 buts attendus pour Edmonton Oilers",
-   "kind": "player",
-   "id": "nhl-2026020187",
-   "sport": "nhl",
-   "league": "NHL",
-   "time": "02:30",
-   "kickoff": "2026-10-27T01:30:00+00:00",
-   "home": "Edmonton Oilers",
-   "away": "Detroit Red Wings",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg"
-  },
-  {
    "market": "N2",
    "label": "Nul ou Lazio",
    "p": 0.7761,
@@ -2775,26 +2751,6 @@
    "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
    "logo_h_dark": null,
    "logo_a_dark": null
-  },
-  {
-   "market": "win_h",
-   "label": "Victoire Edmonton Oilers",
-   "p": 0.5583,
-   "prob": 56,
-   "fair": 1.79,
-   "stars": 2,
-   "kind": "main",
-   "id": "nhl-2026020187",
-   "sport": "nhl",
-   "league": "NHL",
-   "time": "02:30",
-   "kickoff": "2026-10-27T01:30:00+00:00",
-   "home": "Edmonton Oilers",
-   "away": "Detroit Red Wings",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg"
   },
   {
    "market": "scorer",
@@ -15008,26 +14964,15 @@
    },
    "elo_fetch": {
     "ita.1": {
-     "2024 saison": 0,
-     "2024 mois": 0,
-     "2024 clubs": 378,
-     "2025 saison": 0,
-     "2025 mois": 0,
-     "2025 clubs": 374,
-     "2026 saison": 0,
-     "2026 mois": 0,
-     "2026 clubs": 80
+     "2026": 80
     }
    },
    "status": "ok"
   },
   "nhl": {
-   "ok": 1,
+   "ok": 0,
    "missing": [],
-   "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88519 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
-   }
+   "fetch": {}
   }
  }
 }
