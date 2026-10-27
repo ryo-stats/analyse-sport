@@ -211,6 +211,7 @@ export class Etat extends DurableObject {
       for (const s of Object.values(subs)) for (const id of res.expired) delete (s.favs || {})[id];
       await this.saveSubs(subs);
     }
+    st.lastRun = new Date(now).toISOString();
     await this.ctx.storage.put("st", st);
     return res.msgs.length;
   }
@@ -218,7 +219,9 @@ export class Etat extends DurableObject {
   async etat(){
     const st = (await this.ctx.storage.get("st")) || {}, subs = await this.subs();
     const fav = new Set(Object.values(subs).flatMap(favList));
-    return {sante: healthReport(st, Date.now()), analyses: (st.data || {}).generated || null, telephones: Object.keys(subs).length,
+    return {sante: healthReport(st, Date.now()), dernier_passage: st.lastRun || null,
+            jeton_github: this.env.GH_TOKEN ? "présent" : "absent",          // jamais la valeur
+            analyses: (st.data || {}).generated || null, telephones: Object.keys(subs).length,
             matchs_en_favori: fav.size, en_attente: ((await this.ctx.storage.get("outbox")) || []).length,
             dernier_envoi: st.sent || null,
             suivis: Object.values(st.watch || {}).map(w => ({match: `${w.m.home} – ${w.m.away}`, coup_envoi: w.m.kickoff,
