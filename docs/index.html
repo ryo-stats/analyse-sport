@@ -75,6 +75,7 @@ h3{font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mu
 .top{margin:0 0 8px;font-size:.9rem}
 .top b{font-family:var(--display);font-size:1.02rem}
 .row .who{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .who small{white-space:normal}          /* poste, buts, passes et forme : sur deux lignes plutôt que coupés */
 .row small{color:var(--muted)}
 .track{height:7px;background:var(--soft);border-radius:4px;overflow:hidden}
 .fill{display:block;height:100%;border-radius:4px}
@@ -185,6 +186,8 @@ td.r,th.r{text-align:right}
 .pviews .n{font-size:.75rem;opacity:.8}
 .combo{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:12px}
 .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.chead > div:first-child{min-width:0;flex:1}
+@media (max-width:380px){.chead .stars{display:none}}   /* petit téléphone : le % suffit, le bouton + reste visible */
 .ctitle{font-family:var(--display);font-size:1.25rem;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
 .chead .pp{font-size:1.35rem}
 .cleg{list-style:none;margin:0;padding:0}
@@ -196,6 +199,11 @@ td.r,th.r{text-align:right}
 .wrap{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 /* ---- Aujourd'hui : pari du jour, plus sûrs, direct */
 .homecol{max-width:680px}
+@media (min-width:1100px){
+  .homecol{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 18px;align-items:start}
+  .homecol > .dayhero, .homecol > .lstrip{grid-column:1}
+  .homecol > .card2{grid-column:2;grid-row:1 / span 4}
+}
 .dayhero{display:grid;gap:12px;background:var(--hero);color:#fff;border-radius:22px;padding:20px;margin-bottom:16px}
 .dayhero .dk{font:700 .75rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--hero-kick)}
 .dayhero .dp{font:700 clamp(1.8rem,7.5vw,2.25rem)/1.05 var(--display);margin-top:-6px}
@@ -243,6 +251,7 @@ button.lstrip:focus-visible{outline:2px solid var(--home)}
 .up{color:var(--ok)}.down{color:var(--ko)}
 .vnote{font-size:.85rem;font-weight:700}
 .vcal{display:grid;gap:10px;max-width:520px}
+@media (min-width:1100px){.vpair{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:16px;align-items:start}.vpair .vcal{max-width:none}}
 .calnav{display:flex;align-items:center;justify-content:space-between}
 .calnav h2{font-size:1.4rem}
 .calnav button{width:40px;height:40px;border-radius:20px;border:0;background:var(--soft);color:var(--ink);display:grid;place-items:center;cursor:pointer}
@@ -421,6 +430,7 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .pcard .src{margin:0}
 .pcard.on{border-color:var(--home)}
 .pguide{display:grid;gap:14px;margin-bottom:18px}
+.pguide > *{min-width:0;overflow-wrap:anywhere}
 .pdev{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px}
 .pdev.me{border-color:var(--home);box-shadow:0 0 0 1px var(--home) inset}
 .pdev h3{display:flex;align-items:center;gap:12px;margin:0 0 12px;font:800 1.3rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
@@ -1120,7 +1130,7 @@ function funList(){
   return (live.length ? blk("En direct", live) : `<div class="empty">Aucun match en cours : les paris fun en direct apparaîtront au coup d'envoi.</div>`) + blk("Avant le match", next);
 }
 function funView(){
-  return `<p class="warnline">🎲 <b>Paris fun</b> : de vrais paris à cote, <b>cote juste d'au moins 2,4</b> (18 à 42 % de chances) : victoire + les deux équipes marquent, victoire sans encaisser, mi-temps/fin de match, buteur + victoire, écart de buts, puck line NHL… Ces marchés ont une forte marge chez les bookmakers (15 à 20 %) : avec une cote juste de 2,4 ou plus, ta cote réelle reste en général au-dessus de 2. Ils vont toujours dans le sens de l'analyse. <b>La plupart vont perdre</b>, c'est normal : petites mises. En direct, ils suivent le score, la minute, les tirs et les cartons. « @ » = cote juste : si ton bookmaker propose plus, le pari est mathématiquement intéressant.</p><div id="funbox">${funList()}</div>`;
+  return `<p class="warnline">🎲 <b>Paris fun</b> : de vrais paris à cote, <b>cote juste d'au moins 2,4</b> (18 à 42 % de chances) : victoire + les deux équipes marquent, victoire sans encaisser, mi-temps/fin de match, buteur + victoire, écart de buts, puck line NHL… Ces marchés ont une forte marge chez les bookmakers (15 à 20 %) : avec une cote juste de 2,4 ou plus, ta cote réelle reste en général au-dessus de 2. Ils vont toujours dans le sens de l'analyse. <b>La plupart vont perdre</b>, c'est normal : petites mises. En direct, ils suivent le score, la minute, les tirs et les cartons. « cote mini » : si ton bookmaker propose plus, le pari est mathématiquement intéressant.</p><div id="funbox">${funList()}</div>`;
 }
 function liveList(){
   if (!LIVEM) return `<div class="empty">Chargement…</div>`;
@@ -1424,7 +1434,7 @@ function picksBlock(b){
       ${rows.length ? `<div class="vin">${vMatches(head3, false)}</div>${ids.length > 3 ? `<details class="vmore"><summary>Voir les ${ids.length} matchs du jour</summary><div class="vin">${vTree(rows, false)}</div></details>` : ""}`
         : `<p class="src">Détail disponible sur les 30 derniers jours seulement.</p>`}</section>`;
   }
-  const tiles = `${total}${cal}${dayBox}
+  const tiles = `${total}<div class="vpair">${cal}${dayBox}</div>
     <div class="funline num"><span>🎲 <b>Fun et score exact</b>, comptés à part</span>${fun && fun.n ? `<span><b>${fun.ok}</b>/${fun.n} · ${fun.rate} % réussis (annoncé ${fun.expected} %)</span>` : `<span class="src">aucun encore vérifié</span>`}</div>`;
   const sports = [["foot", "⚽ Foot"], ["nhl", "🏒 NHL"]].filter(([k]) => S === "all" || S === k);
   const leagues = sports.map(([k, title]) => {
@@ -1447,14 +1457,15 @@ function starsTable(b){
     <div class="tablewrap"><table class="num"><thead><tr><th>Confiance</th><th class="r">Pronostics</th><th class="r">Annoncé</th><th class="r">Réussis</th></tr></thead>
     <tbody>${b.by_stars.map(r => `<tr><td><span class="stars">${starStr(r.stars)}</span></td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>`;
 }
+const dec3 = x => Number(x).toFixed(3).replace(".", ",");
 function bilanBlock(b, label, naive){
   if (!b || !b.n) return `<div class="empty">${label} : le bilan apparaîtra après les premiers résultats.</div>`;
   return `<h2 style="margin:6px 0 10px">${label}</h2>
     <div class="tiles num">
       <div class="tile"><div class="v">${b.n}</div><div class="k">matchs suivis</div></div>
       <div class="tile"><div class="v">${b.fav_rate}%</div><div class="k">favoris gagnants (annoncé : ${b.fav_expected} %)</div></div>
-      <div class="tile"><div class="v">${b.brier.toFixed(3)}</div><div class="k">note d'erreur : 0 = parfait, ${naive} = hasard</div></div>
-      ${b.vs_mkt && b.vs_mkt.n ? `<div class="tile"><div class="v">${b.vs_mkt.model.toFixed(3)} · ${b.vs_mkt.mkt.toFixed(3)}</div><div class="k">analyse maison · marché des paris, sur ${b.vs_mkt.n} matchs (plus bas = mieux)</div></div>` : ""}
+      <div class="tile"><div class="v">${dec3(b.brier)}</div><div class="k">note d'erreur : 0 = parfait, ${naive} = hasard</div></div>
+      ${b.vs_mkt && b.vs_mkt.n ? `<div class="tile"><div class="v">${dec3(b.vs_mkt.model)} · ${dec3(b.vs_mkt.mkt)}</div><div class="k">analyse maison · marché des paris, sur ${plural(b.vs_mkt.n, "match")} (plus bas = mieux)</div></div>` : ""}
     </div>
     <div class="tablewrap"><table class="num"><thead><tr><th>Favori annoncé à</th><th class="r">Matchs</th><th class="r">Annoncé</th><th class="r">Réel</th></tr></thead>
     <tbody>${b.bins.map(r=>`<tr><td>${esc(r.range)}</td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>`;
