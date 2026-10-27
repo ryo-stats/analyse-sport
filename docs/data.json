@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T20:22+01:00",
+ "generated": "2026-10-27T21:28+01:00",
  "date": "2026-10-27",
  "nhl_date": "2026-10-27",
  "foot": [
@@ -9,14 +9,14 @@
    "league": "Serie A",
    "kickoff": "2026-10-27T17:30:00+00:00",
    "time": "18:30",
-   "state": "in",
+   "state": "post",
    "score": "2-6",
    "home": "Sassuolo",
    "away": "Lazio",
-   "form_h": "NDNDV",
-   "form_a": "NVVVN",
+   "form_h": "NDDND",
+   "form_a": "NVVVV",
    "rank_h": 14,
-   "rank_a": 2,
+   "rank_a": 1,
    "pH": 22,
    "pD": 22,
    "pA": 55,
@@ -37,6 +37,26 @@
    "btts": 57,
    "squad_h": [
     {
+     "name": "Vasilije Adzic",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Sassuolo",
+     "goals": 3,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 19,
+     "p_dec": 26,
+     "pid": "344917",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
      "name": "Domenico Berardi",
      "pos": "Attaquant",
      "side": "h",
@@ -45,17 +65,16 @@
      "assists": 0,
      "apps": 7,
      "l10": {
-      "n": 8,
-      "gp": 7,
+      "n": 9,
+      "gp": 8,
       "g": 2,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 19,
+     "p_goal": 16,
+     "p_dec": 18,
      "pid": "173817",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Cas Odenthal",
@@ -66,17 +85,16 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 8,
-      "gp": 3,
+      "n": 9,
+      "gp": 4,
       "g": 2,
       "a": 0
      },
      "p_goal": 13,
-     "p_dec": 14,
+     "p_dec": 13,
      "pid": "291729",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Sebastiano Esposito",
@@ -87,17 +105,16 @@
      "assists": 0,
      "apps": 5,
      "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
+      "n": 9,
+      "gp": 6,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 10,
+     "p_goal": 11,
+     "p_dec": 13,
      "pid": "286929",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Kristian Thorstvedt",
@@ -108,83 +125,39 @@
      "assists": 0,
      "apps": 7,
      "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 1,
+      "n": 9,
+      "gp": 8,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 10,
+     "p_goal": 10,
+     "p_dec": 12,
      "pid": "284212",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Josh Doig",
-     "pos": "Défenseur",
+     "name": "Kieron Bowie",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Sassuolo",
      "goals": 1,
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 8,
-      "gp": 8,
+      "n": 9,
+      "gp": 9,
       "g": 1,
       "a": 0
      },
-     "p_goal": 7,
-     "p_dec": 9,
-     "pid": "290418",
+     "p_goal": 10,
+     "p_dec": 12,
+     "pid": "283375",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Vasilije Adzic",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Sassuolo",
-     "goals": 3,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 6,
-     "p_dec": 9,
-     "pid": "344917",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "squad_a": [
-    {
-     "name": "Davide Frattesi",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lazio",
-     "goals": 3,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 28,
-     "p_dec": 32,
-     "pid": "250850",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
     {
      "name": "Tijjani Noslin",
      "pos": "Attaquant",
@@ -194,17 +167,36 @@
      "assists": 2,
      "apps": 7,
      "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
+      "n": 9,
+      "gp": 8,
+      "g": 4,
       "a": 2
      },
-     "p_goal": 22,
-     "p_dec": 38,
+     "p_goal": 26,
+     "p_dec": 39,
      "pid": "323113",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Davide Frattesi",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Lazio",
+     "goals": 3,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 9,
+      "gp": 9,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 25,
+     "p_dec": 28,
+     "pid": "250850",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Gustav Isaksen",
@@ -215,17 +207,16 @@
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 2,
-      "a": 0
+      "n": 9,
+      "gp": 9,
+      "g": 3,
+      "a": 1
      },
-     "p_goal": 22,
-     "p_dec": 24,
+     "p_goal": 23,
+     "p_dec": 28,
      "pid": "291550",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Mattia Zaccagni",
@@ -236,17 +227,16 @@
      "assists": 3,
      "apps": 8,
      "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 3
+      "n": 9,
+      "gp": 9,
+      "g": 2,
+      "a": 5
      },
-     "p_goal": 12,
-     "p_dec": 39,
+     "p_goal": 14,
+     "p_dec": 43,
      "pid": "204669",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Kenneth Taylor",
@@ -257,50 +247,46 @@
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
+      "n": 9,
+      "gp": 9,
+      "g": 2,
+      "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 17,
+     "p_goal": 14,
+     "p_dec": 22,
      "pid": "282228",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Nuno Tavares",
-     "pos": "Défenseur",
+     "name": "Matteo Cancellieri",
+     "pos": "Attaquant",
      "side": "a",
      "team": "Lazio",
      "goals": 1,
-     "assists": 3,
-     "apps": 8,
+     "assists": 0,
+     "apps": 5,
      "l10": {
-      "n": 8,
-      "gp": 8,
+      "n": 9,
+      "gp": 6,
       "g": 1,
-      "a": 3
+      "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 35,
-     "pid": "288901",
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "308944",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Sassuolo : 14e, 8 points, 12 buts marqués et 16 encaissés en 8 matchs.",
-    "Lazio : 2e, 22 points, 16 buts marqués et 5 encaissés en 8 matchs.",
-    "Sassuolo : 12 buts marqués et 16 encaissés sur ses 8 derniers matchs de championnat.",
-    "Lazio : 16 buts marqués et 5 encaissés sur ses 8 derniers matchs de championnat.",
-    "Elo maison : Sassuolo 1458, Lazio 1595 (1500 = club moyen).",
-    "Compositions officielles prises en compte : Vasilije Adzic (remplaçant) ne commence pas le match."
+    "Sassuolo : 14e, 8 points, 14 buts marqués et 22 encaissés en 9 matchs.",
+    "Lazio : 1er, 25 points, 22 buts marqués et 7 encaissés en 9 matchs.",
+    "Sassuolo : 14 buts marqués et 22 encaissés sur ses 9 derniers matchs de championnat.",
+    "Lazio : 22 buts marqués et 7 encaissés sur ses 9 derniers matchs de championnat."
    ],
    "reading": "Lazio est favori sans écraser le match (55 %).",
-   "stakes": "Lazio (2e) défend une place qualificative pour la Ligue des champions.",
+   "stakes": "Lazio est leader (25 points).",
    "picks": {
     "main": {
      "market": "N2",
@@ -308,7 +294,8 @@
      "p": 0.7761,
      "prob": 78,
      "fair": 1.29,
-     "stars": 4
+     "stars": 4,
+     "why": "9 derniers matchs : Sassuolo 14 marqués / 22 encaissés · Lazio 22 / 7"
     },
     "winner": {
      "market": "2",
@@ -355,44 +342,39 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Davide Frattesi marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "label": "Tijjani Noslin marque",
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
-     "player": "Davide Frattesi",
+     "player": "Tijjani Noslin",
      "team": "Lazio",
-     "lineup": "start",
-     "pid": "250850",
+     "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · titulaire · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
+     "why": "2 buts et 2 passes en 7 matchs · forme : 4 buts et 2 passes sur ses 8 derniers matchs · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
     },
     "decisive": {
      "market": "dec",
-     "label": "Davide Frattesi buteur ou passeur",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "label": "Tijjani Noslin buteur ou passeur",
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1,
-     "player": "Davide Frattesi",
+     "player": "Tijjani Noslin",
      "team": "Lazio",
      "base": [
-      8,
-      3,
-      0
+      7,
+      2,
+      2
      ],
-     "lineup": "start",
-     "pid": "250850",
+     "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · titulaire · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
+     "why": "2 buts et 2 passes en 7 matchs · forme : 4 buts et 2 passes sur ses 8 derniers matchs · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -405,8 +387,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-27T19:45:00+00:00",
    "time": "20:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-1",
    "home": "AS Roma",
    "away": "Cagliari",
    "form_h": "NVVDN",
@@ -692,7 +674,6 @@
     "Cagliari : 9e, 13 points, 6 buts marqués et 9 encaissés en 8 matchs.",
     "AS Roma : 19 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat.",
     "Cagliari : 6 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Elo maison : AS Roma 1667, Cagliari 1447 (1500 = club moyen).",
     "Compositions officielles prises en compte : Leonardo Balerdi (remplaçant), Manu Koné (absent), Donyell Malen (remplaçant), Daniel Maldini (remplaçant) ne commencent pas le match."
    ],
    "reading": "AS Roma est nettement favori (73 %).",
@@ -704,7 +685,8 @@
      "p": 0.9154,
      "prob": 92,
      "fair": 1.09,
-     "stars": 5
+     "stars": 5,
+     "why": "8 derniers matchs : AS Roma 19 marqués / 6 encaissés · Cagliari 6 / 9"
     },
     "winner": {
      "market": "1",
@@ -717,7 +699,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1645,
+     "p": 0.1646,
      "prob": 16,
      "fair": 6.08,
      "stars": 1,
@@ -726,7 +708,7 @@
     "fun": {
      "market": "wh_o25",
      "label": "AS Roma gagne et plus de 2,5 buts",
-     "p": 0.3979,
+     "p": 0.398,
      "prob": 40,
      "fair": 2.51,
      "stars": 1
@@ -743,7 +725,7 @@
      {
       "market": "scw",
       "label": "Matìas Soulè marque et AS Roma gagne",
-      "p": 0.2442,
+      "p": 0.2443,
       "prob": 24,
       "fair": 4.09,
       "stars": 1,
@@ -788,10 +770,7 @@
      "why": "3 buts et 1 passe en 8 matchs · titulaire · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -804,8 +783,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-27T19:45:00+00:00",
    "time": "20:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Torino",
    "away": "Como",
    "form_h": "NVVND",
@@ -1091,7 +1070,6 @@
     "Como : 5e, 17 points, 14 buts marqués et 7 encaissés en 8 matchs.",
     "Torino : 13 buts marqués et 11 encaissés sur ses 8 derniers matchs de championnat.",
     "Como : 14 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
-    "Elo maison : Torino 1483, Como 1632 (1500 = club moyen).",
     "Compositions officielles prises en compte : Martin Baturina (remplaçant), Assane Diao (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -1102,8 +1080,9 @@
      "label": "Nul ou Como",
      "p": 0.7067,
      "prob": 71,
-     "fair": 1.41,
-     "stars": 4
+     "fair": 1.42,
+     "stars": 4,
+     "why": "8 derniers matchs : Torino 13 marqués / 11 encaissés · Como 14 / 7"
     },
     "winner": {
      "market": "2",
@@ -1118,16 +1097,16 @@
      "label": "Score exact 0-1",
      "p": 0.106,
      "prob": 11,
-     "fair": 9.43,
+     "fair": 9.44,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.2734,
+     "p": 0.2736,
      "prob": 27,
-     "fair": 3.66,
+     "fair": 3.65,
      "stars": 1
     },
     "fun_alt": [
@@ -1142,7 +1121,7 @@
      {
       "market": "wa_o25",
       "label": "Como gagne et plus de 2,5 buts",
-      "p": 0.2647,
+      "p": 0.2648,
       "prob": 26,
       "fair": 3.78,
       "stars": 1
@@ -1184,10 +1163,7 @@
      "why": "5 buts et 0 passe en 8 matchs · titulaire · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -1511,7 +1487,8 @@
      "p": 0.5196,
      "prob": 52,
      "fair": 1.92,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Philadelphia Flyers 3 victoires · Columbus Blue Jackets 4"
     },
     "winner": {
      "market": "win_a",
@@ -1519,7 +1496,8 @@
      "p": 0.5196,
      "prob": 52,
      "fair": 1.92,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Philadelphia Flyers 3 victoires · Columbus Blue Jackets 4"
     },
     "fun": {
      "market": "o65",
@@ -1896,7 +1874,8 @@
      "p": 0.7149,
      "prob": 71,
      "fair": 1.4,
-     "stars": 4
+     "stars": 4,
+     "why": "10 derniers matchs : Carolina Hurricanes 8 victoires · Boston Bruins 7"
     },
     "winner": {
      "market": "win_h",
@@ -1904,7 +1883,8 @@
      "p": 0.7149,
      "prob": 71,
      "fair": 1.4,
-     "stars": 4
+     "stars": 4,
+     "why": "10 derniers matchs : Carolina Hurricanes 8 victoires · Boston Bruins 7"
     },
     "fun": {
      "market": "wh_o65",
@@ -2281,7 +2261,8 @@
      "p": 0.5571,
      "prob": 56,
      "fair": 1.79,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Chicago Blackhawks 3 victoires · Los Angeles Kings 3"
     },
     "winner": {
      "market": "win_a",
@@ -2289,7 +2270,8 @@
      "p": 0.5571,
      "prob": 56,
      "fair": 1.79,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Chicago Blackhawks 3 victoires · Los Angeles Kings 3"
     },
     "fun": {
      "market": "o65",
@@ -2666,7 +2648,8 @@
      "p": 0.5692,
      "prob": 57,
      "fair": 1.76,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : St. Louis Blues 4 victoires · Montréal Canadiens 5"
     },
     "winner": {
      "market": "win_h",
@@ -3051,7 +3034,8 @@
      "p": 0.5901,
      "prob": 59,
      "fair": 1.69,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Nashville Predators 4 victoires · New York Islanders 5"
     },
     "winner": {
      "market": "win_h",
@@ -3436,7 +3420,8 @@
      "p": 0.5045,
      "prob": 50,
      "fair": 1.98,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Dallas Stars 7 victoires · New Jersey Devils 6"
     },
     "winner": {
      "market": "win_a",
@@ -3444,7 +3429,8 @@
      "p": 0.5045,
      "prob": 50,
      "fair": 1.98,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Dallas Stars 7 victoires · New Jersey Devils 6"
     },
     "fun": {
      "market": "a2",
@@ -3821,7 +3807,8 @@
      "p": 0.5936,
      "prob": 59,
      "fair": 1.68,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Winnipeg Jets 4 victoires · Florida Panthers 5"
     },
     "winner": {
      "market": "win_a",
@@ -4265,6 +4252,7 @@
      "prob": 61,
      "fair": 1.63,
      "stars": 3,
+     "why": "10 derniers matchs : Utah Mammoth 6 victoires · Minnesota Wild 6",
      "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
@@ -4593,7 +4581,8 @@
      "p": 0.5466,
      "prob": 55,
      "fair": 1.83,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Vegas Golden Knights 6 victoires · Ottawa Senators 6"
     },
     "winner": {
      "market": "win_h",
@@ -4601,7 +4590,8 @@
      "p": 0.5466,
      "prob": 55,
      "fair": 1.83,
-     "stars": 2
+     "stars": 2,
+     "why": "10 derniers matchs : Vegas Golden Knights 6 victoires · Ottawa Senators 6"
     },
     "fun": {
      "market": "o65",
@@ -4978,7 +4968,8 @@
      "p": 0.7065,
      "prob": 71,
      "fair": 1.42,
-     "stars": 4
+     "stars": 4,
+     "why": "10 derniers matchs : Anaheim Ducks 4 victoires · Vancouver Canucks 0"
     },
     "winner": {
      "market": "win_h",
@@ -4986,7 +4977,8 @@
      "p": 0.7065,
      "prob": 71,
      "fair": 1.42,
-     "stars": 4
+     "stars": 4,
+     "why": "10 derniers matchs : Anaheim Ducks 4 victoires · Vancouver Canucks 0"
     },
     "fun": {
      "market": "wh_o65",
@@ -5363,7 +5355,8 @@
      "p": 0.6253,
      "prob": 63,
      "fair": 1.6,
-     "stars": 3
+     "stars": 3,
+     "why": "10 derniers matchs : San Jose Sharks 4 victoires · Buffalo Sabres 4"
     },
     "winner": {
      "market": "win_a",
@@ -5436,12 +5429,16 @@
  ],
  "bilan": {
   "foot": {
-   "n": 165,
+   "n": 166,
    "fav_rate": 62,
    "fav_expected": 54,
-   "brier": 0.53,
+   "brier": 0.529,
    "brier_naive": 0.667,
-   "vs_mkt": null,
+   "vs_mkt": {
+    "n": 1,
+    "model": 0.3,
+    "mkt": 0.417
+   },
    "bins": [
     {
      "range": "30-40 %",
@@ -5457,9 +5454,9 @@
     },
     {
      "range": "50-60 %",
-     "n": 37,
+     "n": 38,
      "announced": 55,
-     "actual": 65
+     "actual": 66
     },
     {
      "range": "60-70 %",
@@ -5514,21 +5511,21 @@
    ]
   },
   "picks": {
-   "n": 611,
+   "n": 614,
    "rate": 54,
    "expected": 53,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 611,
-     "ok": 329,
+     "n": 614,
+     "ok": 331,
      "rate": 54,
      "expected": 53
     },
     "foot": {
-     "n": 412,
-     "ok": 216,
-     "rate": 52,
+     "n": 415,
+     "ok": 218,
+     "rate": 53,
      "expected": 52
     },
     "nhl": {
@@ -5540,14 +5537,14 @@
    },
    "fun": {
     "all": {
-     "n": 229,
-     "ok": 61,
+     "n": 231,
+     "ok": 62,
      "rate": 27,
      "expected": 29
     },
     "foot": {
-     "n": 178,
-     "ok": 39,
+     "n": 180,
+     "ok": 40,
      "rate": 22,
      "expected": 26
     },
@@ -5562,14 +5559,16 @@
     {
      "date": "2026-10-27",
      "all": {
-      "n": 7,
-      "ok": 4,
-      "rate": 57,
-      "expected": 56
+      "n": 10,
+      "ok": 6,
+      "rate": 60,
+      "expected": 55
      },
      "foot": {
-      "n": 0,
-      "ok": 0
+      "n": 3,
+      "ok": 2,
+      "rate": 67,
+      "expected": 54
      },
      "nhl": {
       "n": 7,
@@ -5579,14 +5578,16 @@
      },
      "fun": {
       "all": {
-       "n": 2,
-       "ok": 0,
-       "rate": 0,
-       "expected": 35
+       "n": 4,
+       "ok": 1,
+       "rate": 25,
+       "expected": 29
       },
       "foot": {
-       "n": 0,
-       "ok": 0
+       "n": 2,
+       "ok": 1,
+       "rate": 50,
+       "expected": 24
       },
       "nhl": {
        "n": 2,
@@ -5984,10 +5985,10 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 60,
-     "ok": 38,
+     "n": 63,
+     "ok": 40,
      "rate": 63,
-     "expected": 48
+     "expected": 49
     },
     {
      "sport": "foot",
@@ -6033,15 +6034,15 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 265,
+     "n": 266,
      "announced": 35,
      "actual": 31
     },
     {
      "stars": 2,
-     "n": 101,
+     "n": 102,
      "announced": 55,
-     "actual": 54
+     "actual": 55
     },
     {
      "stars": 3,
@@ -6051,9 +6052,9 @@
     },
     {
      "stars": 4,
-     "n": 63,
+     "n": 64,
      "announced": 74,
-     "actual": 79
+     "actual": 80
     },
     {
      "stars": 5,
@@ -6063,6 +6064,71 @@
     }
    ],
    "details": [
+    {
+     "date": "2026-10-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874980",
+     "score": "2-6",
+     "match": "Sassuolo – Lazio",
+     "label": "Nul ou Lazio",
+     "prob": 78,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874980",
+     "score": "2-6",
+     "match": "Sassuolo – Lazio",
+     "label": "Victoire Lazio",
+     "prob": 55,
+     "stars": 2,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874980",
+     "score": "2-6",
+     "match": "Sassuolo – Lazio",
+     "label": "Davide Frattesi marque",
+     "prob": 28,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874980",
+     "score": "2-6",
+     "match": "Sassuolo – Lazio",
+     "label": "Score exact 1-2",
+     "prob": 10,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-10-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874980",
+     "score": "2-6",
+     "match": "Sassuolo – Lazio",
+     "label": "Lazio gagne et plus de 2,5 buts",
+     "prob": 37,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
     {
      "date": "2026-10-27",
      "sport": "nhl",
@@ -16993,7 +17059,7 @@
  },
  "second": {
   "foot": {
-   "ok": 2,
+   "ok": 0,
    "elo": {
     "ita.1": 832
    },
