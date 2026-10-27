@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T03:13+01:00",
+ "generated": "2026-10-27T03:21+01:00",
  "date": "2026-10-27",
  "nhl_date": "2026-10-26",
  "foot": [
@@ -1157,7 +1157,7 @@
    "league": "NHL",
    "kickoff": "2026-10-26T23:00:00+00:00",
    "time": "00:00",
-   "state": "FINAL",
+   "state": "OFF",
    "score": "3-6",
    "home": "New York Rangers",
    "away": "Los Angeles Kings",
@@ -1185,26 +1185,26 @@
    "goalie_h": {
     "name": "Dylan Garand",
     "starts": 8,
-    "sv": "90,0 % d'arrêts",
-    "note": ""
+    "sv": "89,9 % d'arrêts",
+    "note": "le titulaire a été remplacé en cours de match la dernière fois (blessure possible)"
    },
    "goalie_a": {
     "name": "Darcy Kuemper",
-    "starts": 6,
-    "sv": "89,0 % d'arrêts",
+    "starts": 7,
+    "sv": "88,9 % d'arrêts",
     "note": ""
    },
    "squad_h": [
     {
      "name": "Alexis Lafrenière",
      "pos": "Ailier",
-     "cur": "9 buts, 6 passes en 13",
+     "cur": "9 buts, 7 passes en 14",
      "new": false,
      "side": "h",
      "team": "New York Rangers",
      "goals": 9,
-     "assists": 6,
-     "gp": 13,
+     "assists": 7,
+     "gp": 14,
      "pid": 8482109,
      "l10": {
       "n": 10,
@@ -1212,20 +1212,20 @@
       "g": 9,
       "a": 6
      },
-     "p_goal": 33,
+     "p_goal": 32,
      "p_point": 57,
      "p_assist": 36
     },
     {
      "name": "Mika Zibanejad",
      "pos": "Centre",
-     "cur": "3 buts, 8 passes en 13",
+     "cur": "3 buts, 8 passes en 14",
      "new": false,
      "side": "h",
      "team": "New York Rangers",
      "goals": 3,
      "assists": 8,
-     "gp": 13,
+     "gp": 14,
      "pid": 8476459,
      "l10": {
       "n": 10,
@@ -1240,13 +1240,13 @@
     {
      "name": "Oliver Bjorkstrand",
      "pos": "Ailier",
-     "cur": "5 buts, 2 passes en 13",
+     "cur": "5 buts, 2 passes en 14",
      "new": true,
      "side": "h",
      "team": "New York Rangers",
      "goals": 5,
      "assists": 2,
-     "gp": 13,
+     "gp": 14,
      "pid": 8477416,
      "l10": {
       "n": 10,
@@ -1254,41 +1254,20 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 27,
-     "p_point": 41,
-     "p_assist": 17
-    },
-    {
-     "name": "Will Cuylle",
-     "pos": "Ailier",
-     "cur": "4 buts, 4 passes en 13",
-     "new": false,
-     "side": "h",
-     "team": "New York Rangers",
-     "goals": 4,
-     "assists": 4,
-     "gp": 13,
-     "pid": 8482157,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 2
-     },
-     "p_goal": 24,
-     "p_point": 41,
-     "p_assist": 22
+     "p_goal": 26,
+     "p_point": 40,
+     "p_assist": 16
     },
     {
      "name": "J.T. Miller",
      "pos": "Centre",
-     "cur": "3 buts, 6 passes en 13",
+     "cur": "4 buts, 6 passes en 14",
      "new": false,
      "side": "h",
      "team": "New York Rangers",
-     "goals": 3,
+     "goals": 4,
      "assists": 6,
-     "gp": 13,
+     "gp": 14,
      "pid": 8476468,
      "l10": {
       "n": 10,
@@ -1296,43 +1275,64 @@
       "g": 3,
       "a": 6
      },
-     "p_goal": 22,
+     "p_goal": 23,
      "p_point": 55,
      "p_assist": 41
     },
     {
-     "name": "Gabe Perreault",
+     "name": "Will Cuylle",
      "pos": "Ailier",
-     "cur": "4 buts, 3 passes en 13",
+     "cur": "4 buts, 4 passes en 14",
      "new": false,
      "side": "h",
      "team": "New York Rangers",
      "goals": 4,
-     "assists": 3,
-     "gp": 13,
-     "pid": 8484210,
+     "assists": 4,
+     "gp": 14,
+     "pid": 8482157,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 2,
+      "g": 4,
       "a": 2
      },
+     "p_goal": 23,
+     "p_point": 41,
+     "p_assist": 22
+    },
+    {
+     "name": "Tye Kartye",
+     "pos": "Ailier",
+     "cur": "4 buts, 6 passes en 14",
+     "new": false,
+     "side": "h",
+     "team": "New York Rangers",
+     "goals": 4,
+     "assists": 6,
+     "gp": 14,
+     "pid": 8481789,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 4
+     },
      "p_goal": 22,
-     "p_point": 42,
-     "p_assist": 25
+     "p_point": 47,
+     "p_assist": 32
     }
    ],
    "squad_a": [
     {
      "name": "Artemi Panarin",
      "pos": "Ailier",
-     "cur": "6 buts, 3 passes en 9",
+     "cur": "7 buts, 4 passes en 10",
      "new": false,
      "side": "a",
      "team": "Los Angeles Kings",
-     "goals": 6,
-     "assists": 3,
-     "gp": 9,
+     "goals": 7,
+     "assists": 4,
+     "gp": 10,
      "pid": 8478550,
      "l10": {
       "n": 10,
@@ -1340,20 +1340,20 @@
       "g": 7,
       "a": 4
      },
-     "p_goal": 33,
-     "p_point": 60,
+     "p_goal": 34,
+     "p_point": 61,
      "p_assist": 39
     },
     {
      "name": "Adrian Kempe",
      "pos": "Ailier",
-     "cur": "3 buts, 5 passes en 9",
+     "cur": "3 buts, 5 passes en 10",
      "new": false,
      "side": "a",
      "team": "Los Angeles Kings",
      "goals": 3,
      "assists": 5,
-     "gp": 9,
+     "gp": 10,
      "pid": 8477960,
      "l10": {
       "n": 10,
@@ -1368,13 +1368,13 @@
     {
      "name": "Quinton Byfield",
      "pos": "Ailier",
-     "cur": "1 but, 1 passe en 7",
+     "cur": "1 but, 1 passe en 8",
      "new": false,
      "side": "a",
      "team": "Los Angeles Kings",
      "goals": 1,
      "assists": 1,
-     "gp": 7,
+     "gp": 8,
      "pid": 8482124,
      "l10": {
       "n": 10,
@@ -1382,20 +1382,20 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 24,
+     "p_goal": 23,
      "p_point": 44,
      "p_assist": 26
     },
     {
      "name": "Alex Laferriere",
      "pos": "Ailier",
-     "cur": "2 buts, 5 passes en 9",
+     "cur": "2 buts, 7 passes en 10",
      "new": false,
      "side": "a",
      "team": "Los Angeles Kings",
      "goals": 2,
-     "assists": 5,
-     "gp": 9,
+     "assists": 7,
+     "gp": 10,
      "pid": 8482155,
      "l10": {
       "n": 10,
@@ -1405,18 +1405,18 @@
      },
      "p_goal": 22,
      "p_point": 46,
-     "p_assist": 30
+     "p_assist": 31
     },
     {
      "name": "Scott Laughton",
      "pos": "Centre",
-     "cur": "2 buts, 1 passe en 9",
+     "cur": "2 buts, 2 passes en 10",
      "new": false,
      "side": "a",
      "team": "Los Angeles Kings",
      "goals": 2,
-     "assists": 1,
-     "gp": 9,
+     "assists": 2,
+     "gp": 10,
      "pid": 8476872,
      "l10": {
       "n": 10,
@@ -1425,19 +1425,19 @@
       "a": 2
      },
      "p_goal": 18,
-     "p_point": 33,
-     "p_assist": 17
+     "p_point": 34,
+     "p_assist": 18
     },
     {
      "name": "Trevor Moore",
      "pos": "Ailier",
-     "cur": "1 but, 1 passe en 9",
+     "cur": "1 but, 2 passes en 10",
      "new": false,
      "side": "a",
      "team": "Los Angeles Kings",
      "goals": 1,
-     "assists": 1,
-     "gp": 9,
+     "assists": 2,
+     "gp": 10,
      "pid": 8479675,
      "l10": {
       "n": 10,
@@ -1447,7 +1447,7 @@
      },
      "p_goal": 16,
      "p_point": 36,
-     "p_assist": 23
+     "p_assist": 24
     }
    ],
    "ctx": [
@@ -1512,19 +1512,19 @@
      "player": "Adam Fox",
      "pid": 8479323,
      "team": "New York Rangers",
-     "why": "0 but et 16 passes en 13 matchs · forme : 13 points (1 but) sur ses 10 derniers matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
+     "why": "1 but et 16 passes en 14 matchs · forme : 13 points (1 but) sur ses 10 derniers matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     },
     "scorer": {
      "market": "goal",
      "label": "Alexis Lafrenière marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Alexis Lafrenière",
      "pid": 8482109,
      "team": "New York Rangers",
-     "why": "9 buts et 6 passes en 13 matchs · forme : 15 points (9 buts) sur ses 10 derniers matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
+     "why": "9 buts et 7 passes en 14 matchs · forme : 15 points (9 buts) sur ses 10 derniers matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     }
    },
    "second": null,
