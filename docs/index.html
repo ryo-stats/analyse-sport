@@ -974,15 +974,8 @@ function conf(pk){
   const f = pk.fair || (pk.p ? 1 / Math.max(pk.p, 0.01) : null);
   return `<span class="conf"><span class="stars" aria-label="${pk.stars} étoile${pk.stars > 1 ? "s" : ""} sur 5">${starStr(pk.stars)}</span><b class="pp num">${pk.prob} %</b>${f ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(f)}</span>` : ""}</span>`;
 }
-// cotes du bookmaker relayées par ESPN (lues avant le match)
-function bookLine(m){
-  const o = m.odds;
-  if (!o) return "";
-  const parts = m.sport === "nhl"
-    ? [[m.home, o.h], [m.away, o.a]]
-    : [["1 · " + m.home, o.h], ["N", o.d], ["2 · " + m.away, o.a]];
-  return `<div class="book num"><span class="bk">Cotes ${esc(o.by || "bookmaker")}</span>${parts.filter(([, v]) => v).map(([k, v]) => `<span><small>${esc(k)}</small> <b>${odd(v)}</b></span>`).join("")}${m.sport === "nhl" && o.total ? `<span><small>Total</small> <b>${esc(String(o.total).replace(".", ","))}</b></span>` : ""}</div>`;
-}
+// cotes du bookmaker : plus affichées (elles changent d'un bookmaker à l'autre) ; le site donne sa « cote minimum »
+function bookLine(m){ return ""; }
 function selItem(c, i){
   return `<li class="sel"><span class="rank num">${i + 1}</span>
     <div class="sbody"><div class="spick">${esc(c.label)}</div>
@@ -1051,25 +1044,35 @@ function legsOf(list){
     return best ? asSel(best, m) : null;
   }).filter(Boolean).sort((a, b) => b.p - a.p);
 }
-function comboCard(title, legs){
+// paris fun jouables (un par match), du plus probable au moins probable
+function funLegsOf(list){
+  return list.filter(notStarted).map(m => (m.picks || {}).fun ? asSel(m.picks.fun, m) : null).filter(Boolean).sort((a, b) => b.p - a.p);
+}
+// combiné prêt à ajouter à la bankroll (cote juste du combiné, résultat à valider soi-même)
+function comboRef(legs, kind){
+  const p = legs.reduce((x, l) => x * l.p, 1), key = `combo|${kind}|${legs.map(l => l.id).join("|")}`;
+  BETREF[key] = {label: `Combiné ${kind} : ${legs.map(l => l.label).join(" + ")}`, match: legs.map(l => `${l.home} – ${l.away}`).join(" / "),
+                 matchId: null, sport: null, market: null, player: null, value: null, p, odds: 1 / p, auto: false,
+                 oddsSrc: "juste du combiné (1 ÷ probabilité de l'analyse)"};
+  return key;
+}
+function comboCard(title, legs, kind){
   const p = legs.reduce((x, l) => x * l.p, 1);
-  const pk = {stars: starsOf(p), prob: Math.round(p * 100)};
+  const pk = {stars: starsOf(p), prob: Math.round(p * 100), p};
   const first = [...legs].sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff))[0].time;   // l'heure seule trierait mal les matchs NHL après minuit
-  return `<section class="combo"><div class="chead"><div><h3 class="ctitle">${esc(title)}</h3><span class="smeta">${legs.length} sélections · premier match à ${esc(first)}</span></div>${conf(pk)}</div>
+  const key = comboRef(legs, kind);
+  return `<section class="combo"><div class="chead"><div><h3 class="ctitle">${esc(title)}</h3><span class="smeta">${legs.length} sélections · premier match à ${esc(first)}</span></div>${conf(pk)}<button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter ce combiné à ma bankroll">+</button></div>
     <ol class="cleg">${legs.map(l => `<li><div class="sbody"><div class="spick">${esc(l.label)}</div>
       <div class="smatch">${logo(l.logo_h, l.logo_h_dark, "lg sm")}<span>${esc(l.home)} – ${esc(l.away)}</span>${logo(l.logo_a, l.logo_a_dark, "lg sm")}</div>
       <div class="smeta">${esc(l.time)} · ${esc(l.sport === "nhl" ? "NHL" : l.league)}</div></div><b class="pp num">${l.prob} %</b></li>`).join("")}</ol></section>`;
 }
+// deux combinés : « safe » (les 3 pronostics les plus sûrs) et « fun » (les 2 paris fun les plus probables)
 function comboView(){
-  const foot = legsOf(DATA.foot || []), nhl = legsOf(DATA.nhl || []);
-  const all = [...foot, ...nhl].sort((a, b) => b.p - a.p);
-  const cards = [];
-  for (const n of [2, 3, 4]) if (all.length >= n) cards.push(comboCard(`Combiné ${n} matchs`, all.slice(0, n)));
-  // combinés d'un seul sport, seulement s'ils diffèrent du combiné 3 matchs mixte
-  const trio = all.slice(0, 3).map(l => l.id).join();
-  if (foot.length >= 3 && foot.slice(0, 3).map(l => l.id).join() !== trio) cards.push(comboCard("Combiné 100 % foot", foot.slice(0, 3)));
-  if (nhl.length >= 3 && nhl.slice(0, 3).map(l => l.id).join() !== trio) cards.push(comboCard("Combiné 100 % NHL", nhl.slice(0, 3)));
-  const intro = `<p class="warnline">Les combinés assemblent les pronostics les plus sûrs de matchs différents. Tous doivent être bons : la probabilité du combiné est le produit des probabilités, donc elle baisse vite à chaque match ajouté. Par exemple, 3 pronostics à 80 % donnent environ 51 %.</p>`;
+  const all = [...(DATA.foot || []), ...(DATA.nhl || [])];
+  const safe = legsOf(all), fun = funLegsOf(all), cards = [];
+  if (safe.length >= 3) cards.push(comboCard("Combiné safe · 3 matchs", safe.slice(0, 3), "safe"));
+  if (fun.length >= 2) cards.push(comboCard("Combiné fun · 2 matchs", fun.slice(0, 2), "fun"));
+  const intro = `<p class="warnline"><b>Combiné safe</b> : les 3 pronostics les plus sûrs de matchs différents. <b>Combiné fun</b> : les 2 paris fun les plus probables, pour une grosse cote. Tous les paris d'un combiné doivent passer : sa réussite est le produit des probabilités (3 × 80 % ≈ 51 %, 2 × 40 % = 16 %).</p>`;
   return intro + (cards.length ? cards.join("") : `<div class="empty">Pas assez de matchs à venir aujourd'hui pour proposer un combiné.</div>`);
 }
 // ---- sous-onglet En direct : pronostics recalculés pendant les matchs (calcul dans docs/live.js)
@@ -1751,20 +1754,21 @@ function adviceCard(){
     return wrap(`<p class="src"><b>Si tu joues les ${cands.length} paris</b> : les mises sont partagées pour ne pas dépasser ${P.cap} % de ta bankroll en jeu, soit <b>${money(sum)}</b> au total${inPlay}.${k < 1 ? " Chaque mise est donc plus petite que pour un pari simple." : ""}</p>
       <ol class="sellist">${cands.map((c, i) => advRow(c, amts[i], s.bank, i + 1)).join("")}</ol>`);
   }
-  // combiné des deux plus sûrs (un seul pari, plus risqué : les deux doivent passer)
-  if (cands.length < 2) return wrap(`<p class="src">Un seul match proposé aujourd'hui : pas de combiné possible. Regarde « Pari simple ».</p>`);
-  const legs = cands.slice(0, 2), p = legs[0].pk.p * legs[1].pk.p, pct = stakePct(p);
-  if (!pct) return wrap(`<p class="src">Le combiné des deux plus sûrs n'aurait que ${pctr(p)} % de réussite : trop risqué pour une mise conseillée. Préfère « Pari simple ».</p>`);
-  const amt = roundStake(Math.min(s.bank * pct / 100, room)), key = `combo|${legs.map(l => l.m.id).join("|")}`;
-  BETREF[key] = {label: `Combiné : ${legs.map(l => l.pk.label).join(" + ")}`, match: legs.map(l => `${l.m.home} – ${l.m.away}`).join(" / "),
-                 matchId: null, sport: null, market: null, player: null, value: null, p, odds: 1 / p, stake: amt, auto: false,
-                 oddsSrc: "juste du combiné (1 ÷ probabilité) : les bookmakers paient souvent un peu moins"};
-  return wrap(`<p class="src"><b>Un combiné de 2 matchs</b> : un seul pari, les deux pronostics doivent passer. ${pctr(p)} % de réussite.</p>
+  // combiné safe : les 3 plus sûrs (un seul pari, tous doivent passer) ; combiné fun en dessous, sans mise conseillée
+  const all = [...(DATA.foot || []), ...(DATA.nhl || [])], funs = funLegsOf(all.filter(m => !played.has(m.id))).slice(0, 2);
+  const funKey = funs.length === 2 ? comboRef(funs, "fun") : null, pf = funs.reduce((x, l) => x * l.p, 1);
+  const funBox = funKey ? `<div class="cadv"><div><b>Combiné fun</b> : ${funs.map(l => esc(l.label)).join(" + ")} · ${pctr(pf)} % de réussite, cote minimum <b class="num">@${odd(fairMin(pf))}</b>. Pas de mise conseillée : 0,5 % de ta bankroll au plus (${money(roundStake(s.bank * 0.005))}).</div><button type="button" class="addbet" data-addbet="${esc(funKey)}" aria-label="Ajouter le combiné fun à ma bankroll">+</button></div>` : "";
+  if (cands.length < 3) return wrap(`<p class="src">Moins de 3 matchs proposés aujourd'hui : pas de combiné safe. Regarde « Pari simple ».</p>${funBox}`);
+  const legs = cands.slice(0, 3), p = legs.reduce((x, l) => x * l.pk.p, 1), pct = stakePct(p);
+  if (!pct) return wrap(`<p class="src">Le combiné safe (les 3 plus sûrs) n'aurait que ${pctr(p)} % de réussite : trop risqué pour une mise conseillée. Préfère « Pari simple ».</p>${funBox}`);
+  const amt = roundStake(Math.min(s.bank * pct / 100, room)), key = comboRef(legs.map(l => asSel(l.pk, l.m)), "safe");
+  BETREF[key].stake = amt;
+  return wrap(`<p class="src"><b>Combiné safe de 3 matchs</b> : un seul pari, les trois pronostics doivent passer. ${pctr(p)} % de réussite.</p>
     <ol class="cleg">${legs.map(l => `<li><div class="sbody"><div class="spick">${esc(l.pk.label)}</div>
       <div class="smatch">${logo(l.m.logo_h, l.m.logo_h_dark, "lg sm")}<span>${esc(l.m.home)} – ${esc(l.m.away)}</span>${logo(l.m.logo_a, l.m.logo_a_dark, "lg sm")}</div>
       <div class="smeta">${esc(l.m.time)} · ${esc(l.m.sport === "nhl" ? "NHL" : l.m.league)}</div></div><b class="pp num">${pctr(l.pk.p)} %</b></li>`).join("")}</ol>
     <div class="cadv"><div>Mise sur le combiné · cote minimum <b class="num">@${odd(fairMin(p))}</b></div>
-      <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, s.bank)} %</small></div><button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter le combiné à ma bankroll">+</button></div>`);
+      <div class="stk num"><b>${money(amt)}</b><small>${shareOf(amt, s.bank)} %</small></div><button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter le combiné à ma bankroll">+</button></div>${funBox}`);
 }
 function bankrollView(){
   const s = bkStats();
@@ -1880,13 +1884,10 @@ const MK_BOOK = {"1": "h", "2": "a", win_h: "h", win_a: "a"};
 const AUTO_MK = /^([ou]\d5|1|2|X|1N|N2|12|btts_[yn]|btts_o25|[ha][23]|cs_[ha]|fg_[ha]|exact|win_[ha]|reg_[ha]|ot|scorer|dec|scw|sc2|htft_[ha]|w[ha]_(btts|nil|by1|o\d5)|point|goal)$/;
 function addBtn(m, pk){
   if (!m || !pk || !pk.label || !pk.p) return "";
-  // les cotes du bookmaker sont celles d'avant-match : pendant le match, seule la cote juste a un sens
-  const L = LIVEDATA[m.id], before = L ? L.state === "pre" : notStarted(m);
-  const book = before && m.odds && MK_BOOK[pk.market] && m.odds[MK_BOOK[pk.market]];
   const key = `${m.id}|${pk.label}`;
   BETREF[key] = {label: pk.label, match: `${m.home} – ${m.away}`, matchId: m.id, sport: m.sport, market: pk.market || null,
-                 player: pk.player || null, value: pk.value || null, p: pk.p, odds: book || 1 / Math.max(pk.p, 0.01),
-                 oddsSrc: book ? `du bookmaker avant le match (${esc(m.odds.by || "ESPN")})` : "juste (1 ÷ probabilité) : les bookmakers paient souvent un peu moins",
+                 player: pk.player || null, value: pk.value || null, p: pk.p, odds: 1 / Math.max(pk.p, 0.01),
+                 oddsSrc: "juste (1 ÷ probabilité de l'analyse)",
                  auto: AUTO_MK.test(pk.market || "")};      // résultat automatique : marchés recalculables en fin de match
   return `<button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter « ${esc(pk.label)} » à ma bankroll">+</button>`;
 }
