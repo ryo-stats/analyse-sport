@@ -1232,7 +1232,13 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         ctx.append(f"Joueurs : statistiques de la saison en championnat national (plus de matchs que la {league}).")
 
     picks = foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la)
-    why = foot_why(home, away, (recents or {}).get("h"), (recents or {}).get("a"), sh, sa)
+    # « pourquoi » figé avant le coup d'envoi (après, les derniers matchs incluraient celui-ci)
+    if state == "pre":
+        why = foot_why(home, away, (recents or {}).get("h"), (recents or {}).get("a"), sh, sa)
+        if key in history:
+            history[key]["why"] = why
+    else:
+        why = history.get(key, {}).get("why")
     if why and picks.get("main") and not picks["main"].get("why"):
         picks["main"]["why"] = why
     # garde-fou : le marché des paris (jamais affiché) ; s'il contredit nettement l'analyse, pas de Safe
@@ -2173,7 +2179,12 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
 
     picks = nhl_picks(hname, aname, win_h, lh, la, team_rows,
                       q=min(0.75, max(0.25, (win_h - p_h) / p_d)) if p_d > 0 else 0.5)
-    why = nhl_why(hname, aname, sh, sa)
+    if state in ("FUT", "PRE"):
+        why = nhl_why(hname, aname, sh, sa)
+        if key in history:
+            history[key]["why"] = why
+    else:
+        why = history.get(key, {}).get("why")
     if why and picks.get("main") and not picks["main"].get("why"):
         picks["main"]["why"] = why
     mkt = history.get(key, {}).get("p_mkt")
