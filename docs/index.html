@@ -504,6 +504,7 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .tag.lu{text-transform:none}
 .tag.lu.ok{color:var(--ok);border-color:var(--ok)}
 .tag.lu.ko{color:var(--ko);border-color:var(--ko)}
+.tag.lu.wait{color:var(--muted);border-color:var(--line)}
 .row.off{opacity:.6}
 .vtally{font:800 .66rem var(--body);white-space:nowrap;margin-top:1px}
 .vtally.good{color:var(--ok)}
@@ -588,7 +589,7 @@ a.tile.tlink .k{color:var(--home)}
   <section class="explain" id="explain">
     <h2>Comment lire ces chiffres</h2>
     <p><strong>Barre de couleur :</strong> chances de victoire tirées des cotes du bookmaker affiché par ESPN, marge retirée. C'est l'estimation publique la plus fiable ; elle intègre déjà forme, absents connus et avantage du terrain. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
-    <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En coupe d'Europe (Ligue des champions, Europa League), ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
+    <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson, et de la cote « plus / moins de buts » quand le bookmaker la donne (elle distingue un match ouvert d'un match fermé au même favori). Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En coupe d'Europe (Ligue des champions, Europa League), ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
     <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités viennent des cotes : elles disent ce qui est le plus probable, pas où le bookmaker se trompe.</p>
     <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est. Elle devrait se stabiliser vers 0,58 en foot et 0,48 en NHL (niveau des bookmakers). À juger après 200 matchs.</p>
   </section>
@@ -643,6 +644,9 @@ const plural = (n, w) => `${n} ${w}${n > 1 ? "s" : ""}`;
 // Un bloc par équipe : chance de marquer (barre) et chance d'être décisif, joueur par joueur.
 // composition officielle (publiée environ 1 h avant le match)
 const LINEUP_TAG = {start: ' <span class="tag lu ok">titulaire</span>', bench: ' <span class="tag lu">remplaçant</span>', out: ' <span class="tag lu ko">absent</span>'};
+// buteur foot proposé avant la composition officielle (publiée environ 1 h avant) : il peut être remplaçant ou absent
+const lineupTag = (m, p) => p.lineup ? (LINEUP_TAG[p.lineup] || "") : m.sport === "foot" && ["scorer", "dec"].includes(p.market) && notStarted(m)
+  ? ' <span class="tag lu wait" title="La composition officielle sort environ 1 h avant le match : vérifie qu\'il est titulaire avant de parier.">compo pas encore connue</span>' : "";
 function squad(list, team, side, decKey, decLabel, sub){
   const color = side === "h" ? "var(--home)" : "var(--away)";
   const body = (!list || !list.length) ? `<p class="src">Pas de données joueurs pour cette équipe.</p>` :
@@ -881,7 +885,7 @@ function matchDetail(m){
 function playersTab(m){
   const lines = ["buteur", "decisif"].map(k => {
     const p = playerPick(m, k);
-    return p ? `<div class="pl"><span class="pk">${PV_KEY[k][m.sport]}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}${p.why ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>` : "";
+    return p ? `<div class="pl"><span class="pk">${PV_KEY[k][m.sport]}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>` : "";
   }).join("");
   const sq = m.sport === "nhl"
     ? `${squad(m.squad_h, m.home, "h", "p_point", "Point", nhlSub)}${squad(m.squad_a, m.away, "a", "p_point", "Point", nhlSub)}`
@@ -1017,7 +1021,7 @@ function pronoBody(m){
   const fun = funPk ? {...funPk, prob: funPk.prob ?? pctr(funPk.p), stars: funPk.stars ?? starsOf(funPk.p)} : null;
   // les paris joueurs (Buteur, Décisif) ont leurs propres sous-onglets : la fiche du match reste épurée
   const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner]];
-  return `${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+  return `${bookLine(m)}${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? `<span class="odd num" title="Cote juste : 1 ÷ probabilité">@${odd(pk.score.fair)}</span>` : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo | live | fun
@@ -1307,7 +1311,7 @@ const PV_INTRO = {
 function playerCard(m, kind){
   const p = playerPick(m, kind);
   return `<div class="pm"><div class="pmhead">${favBtn(m)}<b class="num">${esc(m.time)}</b>${logo(m.logo_h, m.logo_h_dark, "lg sm")}<span class="pmteams">${esc(m.home)} – ${esc(m.away)}</span>${logo(m.logo_a, m.logo_a_dark, "lg sm")}</div>
-    <div class="plines"><div class="pl main"><span class="pk">${PV_KEY[kind][m.sport]}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${p.lineup ? LINEUP_TAG[p.lineup] : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div></div>
+    <div class="plines"><div class="pl main"><span class="pk">${PV_KEY[kind][m.sport]}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div></div>
     <div class="smeta">${esc(p.team || "")}${p.why ? ` · ${esc(p.why)}` : ""}</div></div>`;
 }
 function playerView(sport, kind){

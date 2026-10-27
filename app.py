@@ -30,7 +30,7 @@ from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
 
 import requests
-from scipy.optimize import brentq, fsolve
+from scipy.optimize import brentq, fsolve, least_squares
 from scipy.stats import poisson
 
 PARIS = ZoneInfo("Europe/Paris")
@@ -238,8 +238,36 @@ def outcome_probs(lh, la, n=11):
     return home, 1 - home - away, away
 
 
-def foot_lambdas(p_home, p_away):
-    """Buts attendus de chaque équipe qui reproduisent les probabilités des cotes."""
+def p_over(total, line):
+    """Chance que le total de buts (loi de Poisson de moyenne total) dépasse la ligne du bookmaker.
+    Ligne entière (3,0) : remboursé si pile la ligne. Quart de ligne (2,75) : moitié sur chaque ligne voisine."""
+    frac = round((line % 1) * 4) / 4
+    if frac in (0.25, 0.75):
+        return (p_over(total, line - 0.25) + p_over(total, line + 0.25)) / 2
+    if frac == 0.5:
+        return 1 - poisson.cdf(int(line), total)
+    k = int(round(line))
+    eq = poisson.pmf(k, total)
+    return (1 - poisson.cdf(k, total)) / max(1e-9, 1 - eq)
+
+
+def foot_lambdas(p_home, p_away, over=None):
+    """Buts attendus de chaque équipe qui reproduisent les probabilités des cotes.
+    over = {"line": 2.5, "p": 0.58} : ligne de buts du bookmaker (« plus de 2,5 buts », marge retirée).
+    Sans elle, le total de buts se déduit du seul 1N2, ce qui confond un match fermé et un match ouvert."""
+    if over and over.get("line") and over.get("p"):
+        base = foot_lambdas(p_home, p_away)
+        def g(v):
+            lh, la = float(v[0]), float(v[1])
+            h, _, a = outcome_probs(lh, la)
+            return [h - p_home, a - p_away, p_over(lh + la, over["line"]) - over["p"]]
+        try:
+            r = least_squares(g, base, bounds=([0.05, 0.05], [6, 6]))
+            if r.success:
+                return float(r.x[0]), float(r.x[1])
+        except ValueError:
+            pass
+        return base
     def f(v):
         h, _, a = outcome_probs(abs(v[0]), abs(v[1]))
         return [h - p_home, a - p_away]
@@ -328,8 +356,39 @@ def espn_odds(comp, three_way):
         return dict(p=[p / s for p in probs],
                     dec=[round(1 / p, 2) for p in probs],       # cotes décimales du bookmaker (marge comprise)
                     provider=((o.get("provider") or {}).get("name") or "un bookmaker"),
-                    total=o.get("overUnder"))
+                    total=o.get("overUnder"), over=total_odds(o))
     return None
+
+
+def total_odds(o):
+    """Ligne « plus / moins de X buts » et chance du « plus » (marge retirée), seulement si le bookmaker donne
+    les cotes des deux côtés : la ligne seule ne dit rien (en foot, elle vaut presque toujours 2,5)."""
+    line, t = o.get("overUnder"), o.get("total") or {}
+
+    def side(name):
+        d = t.get(name) or {}
+        for k in ("close", "current", "open"):
+            x = d.get(k) or {}
+            if x.get("odds") not in (None, ""):
+                return x.get("odds"), x.get("line")
+        return None, None
+    ov, ol = side("over")
+    un, _ = side("under")
+    if ov is None or un is None:
+        ov, un = o.get("overOdds"), o.get("underOdds")
+    if ol and line in (None, ""):
+        try:
+            line = float(str(ol).lower().lstrip("ou"))
+        except ValueError:
+            line = None
+    po, pu = implied(ov), implied(un)
+    try:
+        line = float(line)
+    except (TypeError, ValueError):
+        return None
+    if not po or not pu or not 0.5 <= line <= 9.5:
+        return None
+    return dict(line=line, p=round(po / (po + pu), 4))
 
 
 def espn_standings(league):
@@ -691,15 +750,18 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     key = f"foot-{e['id']}"
     saved = history.get(key, {}).get("p")
     odds = espn_odds(comp, three_way=True)
+    over = None
     if state != "pre" and saved and len(saved) == 3:
         # après le coup d'envoi, ESPN affiche des cotes en direct : on garde celles d'avant-match
         p_h, p_d, p_a = saved
-        lh, la = foot_lambdas(p_h, p_a)
+        over = history[key].get("over")
+        lh, la = foot_lambdas(p_h, p_a, over)
         source = history[key].get("source", "Cotes d'avant-match")
     elif odds and state == "pre":
         p_h, p_d, p_a = odds["p"]
-        lh, la = foot_lambdas(p_h, p_a)
-        source = f"Cotes {odds['provider']}"
+        over = odds.get("over")
+        lh, la = foot_lambdas(p_h, p_a, over)
+        source = f"Cotes {odds['provider']}" + (f" (vainqueur et ligne de {str(over['line']).replace('.', ',')} buts)" if over else "")
     elif sh and sa:
         lh, la = table_lambdas(sh, sa, league_gpg)
         p_h, p_d, p_a = outcome_probs(lh, la)
@@ -739,6 +801,8 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
                             source=source, result=old.get("result"), score=old.get("score"))
         if book:
             history[key]["odds"] = book
+        if over:
+            history[key]["over"] = over
 
     ctx = []
     for name, st in ((home, sh), (away, sa)):
@@ -1622,7 +1686,10 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         win_h = odds["p"][0]
         source = f"Cotes {odds['provider']} (vainqueur final)"
         try:
-            if odds.get("total"):
+            ov = odds.get("over")
+            if ov:      # total de buts qui donne au « plus » la même chance que les cotes du bookmaker
+                total = brentq(lambda t: p_over(t, ov["line"]) - ov["p"], 2.0, 12.0)
+            elif odds.get("total"):
                 total = max(4.5, float(odds["total"]) - 0.2)
         except (TypeError, ValueError):
             pass

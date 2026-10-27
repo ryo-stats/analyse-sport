@@ -213,6 +213,28 @@ class AppTest(unittest.TestCase):
         self.assertAlmostEqual(a, 0.83, delta=0.002)
         self.assertLess(lh + la, 5.5)                  # la solution à 8 buts par match est écartée
 
+    def test_goal_line_separates_open_and_closed_games(self):
+        # même favori (1N2 identique), mais le bookmaker voit un match ouvert (A) ou fermé (B)
+        open_ = app.foot_lambdas(0.50, 0.25, {"line": 2.5, "p": 0.66})
+        closed = app.foot_lambdas(0.50, 0.25, {"line": 2.5, "p": 0.40})
+        self.assertGreater(sum(open_), sum(closed) + 0.6)
+        for lh, la in (open_, closed):
+            h, _, a = app.outcome_probs(lh, la)
+            self.assertAlmostEqual(h, 0.50, delta=0.03)    # les chances de victoire restent proches des cotes
+            self.assertAlmostEqual(a, 0.25, delta=0.03)
+        self.assertAlmostEqual(app.p_over(sum(open_), 2.5), 0.66, delta=0.03)
+        # lignes entières (remboursé si pile la ligne) et quarts de ligne
+        self.assertAlmostEqual(app.p_over(3.0, 3.0), (1 - app.poisson.cdf(3, 3.0)) / (1 - app.poisson.pmf(3, 3.0)), places=6)
+        self.assertAlmostEqual(app.p_over(2.8, 2.75), (app.p_over(2.8, 2.5) + app.p_over(2.8, 3.0)) / 2, places=6)
+        # lecture des cotes ESPN : deux formats possibles, et rien si un seul côté est coté
+        self.assertEqual(app.total_odds({"overUnder": 2.5, "overOdds": -150, "underOdds": 120})["line"], 2.5)
+        t = app.total_odds({"total": {"over": {"close": {"line": "o3.5", "odds": "+140"}}, "under": {"close": {"line": "u3.5", "odds": "-170"}}}})
+        self.assertEqual(t["line"], 3.5)
+        self.assertLess(t["p"], 0.45)
+        self.assertIsNone(app.total_odds({"overUnder": 2.5}))
+        self.assertIsNone(app.total_odds({"overUnder": 2.5, "overOdds": -150}))
+        self.assertEqual(app.foot_lambdas(0.5, 0.25, None), app.foot_lambdas(0.5, 0.25))
+
     def test_champions_league_uses_domestic_stats(self):
         app.SQUADS.clear()
         squad = app.espn_squad("uefa.champions", "382")
