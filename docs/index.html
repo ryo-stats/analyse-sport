@@ -588,10 +588,10 @@ a.tile.tlink .k{color:var(--home)}
   <main id="view"><div class="empty">Chargement des analyses…</div></main>
   <section class="explain" id="explain">
     <h2>Comment lire ces chiffres</h2>
-    <p><strong>Barre de couleur :</strong> chances de victoire tirées des cotes du bookmaker affiché par ESPN, marge retirée. C'est l'estimation publique la plus fiable ; elle intègre déjà forme, absents connus et avantage du terrain. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
-    <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces probabilités avec un modèle de Poisson, et de la cote « plus / moins de buts » quand le bookmaker la donne (elle distingue un match ouvert d'un match fermé au même favori). Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En coupe d'Europe (Ligue des champions, Europa League), ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
-    <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités viennent des cotes : elles disent ce qui est le plus probable, pas où le bookmaker se trompe.</p>
-    <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est. Elle devrait se stabiliser vers 0,58 en foot et 0,48 en NHL (niveau des bookmakers). À juger après 200 matchs.</p>
+    <p><strong>Barre de couleur :</strong> chances de victoire selon l'analyse maison. Foot : moitié Elo maison (classement calculé à partir de tous les résultats des deux saisons passées et de la saison en cours), moitié buts marqués et encaissés cette saison, les 10 derniers matchs comptant double, plus l'avantage du terrain ; en coupe d'Europe, chaque club est jugé dans son championnat, corrigé du niveau de ce championnat. Hockey : buts attendus (xG) de chaque équipe (MoneyPuck.com), avantage de la glace et fatigue d'un match joué la veille. Les cotes ne sont pas affichées : elles servent seulement de garde-fou. Si le marché des paris voit un autre favori, ou juge le Safe bien moins sûr, le match passe en « avis partagés » et n'a pas de Safe. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
+    <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces buts attendus avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En coupe d'Europe (Ligue des champions, Europa League), ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
+    <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités disent ce qui est le plus probable selon les statistiques, pas où le bookmaker se trompe.</p>
+    <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est (niveau des bookmakers : environ 0,58 en foot et 0,48 en NHL). La même note est calculée pour le marché des paris sur les mêmes matchs : tu vois ainsi lequel se trompe le moins. À juger après 200 matchs.</p>
   </section>
   <footer class="legal">
     <p><b>18+</b> Analyses statistiques gratuites, sans aucune garantie : un pronostic peut toujours être faux. Les jeux d'argent sont interdits aux moins de 18 ans. Joue de manière responsable, avec un budget que tu peux te permettre de perdre.</p>
@@ -986,23 +986,19 @@ function selItem(c, i){
       <div class="smeta">${esc(c.time)} · ${esc(c.sport === "nhl" ? "NHL" : c.league)}</div></div>
     ${conf(c)}${addBtn(c, c)}</li>`;
 }
-// deuxième avis (ClubElo pour le foot, xG MoneyPuck pour la NHL) : badge et détail
-const secondSrc = s => String(s || "").replace(/^ClubElo$/, "ClubElo.com");
+// garde-fou : l'analyse maison comparée au marché des paris (aucune cote ni chiffre du marché affiché)
 function agreeTag(m){
   const s = m.second;
   if (!s) return "";
-  return s.agree ? `<span class="agree ok" title="Les cotes et ${esc(secondSrc(s.src))} vont dans le même sens">✅ Avis concordants</span>`
+  return s.agree ? `<span class="agree ok" title="Le marché des paris va dans le même sens que l'analyse">✅ Avis concordants</span>`
                  : `<span class="agree ko" title="${esc(s.note || "")}">⚠️ Avis partagés</span>`;
 }
 function secondBox(m){
   const s = m.second;
   if (!s) return "";
-  const probs = m.sport === "foot" ? `${esc(m.home)} <b>${s.pH} %</b> · nul <b>${s.pD} %</b> · ${esc(m.away)} <b>${s.pA} %</b>`
-                                   : `${esc(m.home)} <b>${s.winH} %</b> · ${esc(m.away)} <b>${100 - s.winH} %</b>`;
-  const odds = m.sport === "foot" ? `cotes : ${m.pH} / ${m.pD} / ${m.pA} %` : `cotes : ${m.winH} / ${m.winA} %`;
-  return `<div class="second ${s.agree ? "ok" : "ko"}"><div class="ihead">Deuxième avis · ${esc(secondSrc(s.src))}</div>
-    <div class="num">${probs} <span class="src">(${odds})</span></div>
-    <div>${s.agree ? "✅ Concordant avec les cotes." : `⚠️ Avis partagés : ${esc(s.note || "")}. Pas de Safe sur ce match.`}</div></div>`;
+  return `<div class="second ${s.agree ? "ok" : "ko"}"><div class="ihead">Garde-fou</div>
+    <div>${s.agree ? "✅ Le marché des paris va dans le même sens que l'analyse."
+                   : `⚠️ Avis partagés : ${esc(s.note || "")}. Pas de Safe sur ce match.`}</div></div>`;
 }
 // pronostics d'un match : carte complète (onglet En direct) ou contenu d'une ligne dépliée (Paris foot / NHL)
 function pronoMatch(m){
@@ -1483,6 +1479,7 @@ function bilanBlock(b, label, naive){
       <div class="tile"><div class="v">${b.n}</div><div class="k">matchs suivis</div></div>
       <div class="tile"><div class="v">${b.fav_rate}%</div><div class="k">favoris gagnants (annoncé : ${b.fav_expected} %)</div></div>
       <div class="tile"><div class="v">${b.brier.toFixed(3)}</div><div class="k">note d'erreur : 0 = parfait, ${naive} = hasard</div></div>
+      ${b.vs_mkt && b.vs_mkt.n ? `<div class="tile"><div class="v">${b.vs_mkt.model.toFixed(3)} · ${b.vs_mkt.mkt.toFixed(3)}</div><div class="k">analyse maison · marché des paris, sur ${b.vs_mkt.n} matchs (plus bas = mieux)</div></div>` : ""}
     </div>
     <div class="tablewrap"><table class="num"><thead><tr><th>Favori annoncé à</th><th class="r">Matchs</th><th class="r">Annoncé</th><th class="r">Réel</th></tr></thead>
     <tbody>${b.bins.map(r=>`<tr><td>${esc(r.range)}</td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>`;

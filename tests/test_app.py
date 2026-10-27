@@ -56,6 +56,9 @@ def espn_soccer_event(eid, date, state, completed, home, away, odds=None):
 
 def fake_get_json(url, params=None):
     p = params or {}
+    if "soccer/eng.1/scoreboard" in url and "-" in str(p.get("dates", "")):
+        start = int(str(p["dates"])[:4])
+        return dict(events=season_events(start, 40 if start == 2026 else None))
     if "soccer/eng.1/scoreboard" in url:
         if p.get("dates") == "20261011":
             odds = [None, dict(provider=dict(name="ESPN BET"), overUnder=2.5,
@@ -142,10 +145,22 @@ def fake_get_json(url, params=None):
     return None
 
 
-# deuxième avis simulé : ClubElo (probabilités du match Liverpool – Man City, classement Elo) et MoneyPuck
-CLUBELO_DAY = "Rank,Club,Country,Level,Elo,From,To\n1,Man City,ENG,1,2010,2026-10-05,2026-10-12\n" \
-              "3,Liverpool,ENG,1,1960,2026-10-05,2026-10-12\n9,Paris SG,FRA,1,1900,2026-10-05,2026-10-12\n" \
-              "40,Paris FC,FRA,1,1610,2026-10-05,2026-10-12\n25,Forest,ENG,1,1750,2026-10-05,2026-10-12\n"
+# Elo maison simulé : saisons de Premier League à 20 clubs, le plus fort en tête (Man City 1er, Liverpool 2e)
+ELO_TEAMS = ["382", "364", "359", "363"] + [f"9{i:02d}" for i in range(16)]
+
+
+def season_events(start, n=None):
+    out, day = [], dt.date(start, 8, 10)
+    pairs = [(h, a) for h in range(20) for a in range(20) if h != a]
+    for k, (h, a) in enumerate(pairs[:n]):
+        gh = 1 + (h < a) + (h == 0)            # le mieux classé marque plus ; City écrase tout le monde
+        ga = 1 + (a < h) + (a == 0)
+        d = day + dt.timedelta(days=k // 10 * 7 // 2)
+        out.append(espn_soccer_event(f"s{start}{k}", d.isoformat() + "T15:00Z", "post", True,
+                                     (ELO_TEAMS[h], "H", str(gh)), (ELO_TEAMS[a], "A", str(ga))))
+    return out
+
+
 MP_HEAD = "team,season,name,team,position,situation,games_played,xGoalsFor,xGoalsAgainst,iceTime\n"
 MONEYPUCK = {2026: MP_HEAD + "WSH,2026,WSH,WSH,Team Level,all,4,14.0,9.0,14400\nSEA,2026,SEA,SEA,Team Level,all,5,13.0,14.0,18000\n"
                             "WSH,2026,WSH,WSH,Team Level,5on5,4,10.0,7.0,11000\n",
@@ -153,8 +168,6 @@ MONEYPUCK = {2026: MP_HEAD + "WSH,2026,WSH,WSH,Team Level,all,4,14.0,9.0,14400\n
 
 
 def fake_get_text(url, headers=None, tries=3, timeout=30):
-    if url.startswith("http://api.clubelo.com/"):
-        return CLUBELO_DAY
     if "moneypuck.com" in url:
         return MONEYPUCK.get(int(url.split("/seasonSummary/")[1].split("/")[0]))
     return None
@@ -171,6 +184,7 @@ class AppTest(unittest.TestCase):
         app.PICKS_FILE = os.path.join(self.tmp, "picks.json")
         app.LIVE_FILE = os.path.join(self.tmp, "live.json")
         app.FORM_FILE = os.path.join(self.tmp, "form.json")
+        app.ELO_FILE = os.path.join(self.tmp, "elo.json")
         app.get_json = fake_get_json
         app.get_text = fake_get_text
         app.time.sleep = lambda s: None
@@ -181,22 +195,29 @@ class AppTest(unittest.TestCase):
         app.save_json(app.HIST_FILE, history)
         self.data = app.main(NOW)
 
-    def test_foot_probabilities_follow_odds(self):
+    def test_foot_analysis_is_in_house(self):
         m = self.data["foot"][0]
         raw = [app.implied("+230"), app.implied(275), app.implied("+105")]
         fair = [x / sum(raw) for x in raw]
-        self.assertEqual([m["pH"], m["pD"], m["pA"]], [round(x * 100) for x in fair])
+        # analyse maison (Elo + buts), pas les cotes : Liverpool à domicile, Elo 50 points sous City
+        self.assertEqual(m["source"], app.SRC_FOOT_ELO)
+        self.assertNotEqual([m["pH"], m["pD"], m["pA"]], [round(x * 100) for x in fair])
         h, d, a = app.outcome_probs(m["xgH"], m["xgA"])
-        self.assertAlmostEqual(h, fair[0], delta=0.01)
-        self.assertAlmostEqual(a, fair[2], delta=0.01)
+        self.assertAlmostEqual(h * 100, m["pH"], delta=1)
+        self.assertAlmostEqual(a * 100, m["pA"], delta=1)
+        # le marché est archivé (garde-fou invisible, comparaison du Bilan), jamais affiché
+        hist = app.load_json(app.HIST_FILE, {})["foot-401"]
+        self.assertEqual(hist["p_mkt"], [round(x, 4) for x in fair])
+        self.assertAlmostEqual(hist["lam"][0], m["xgH"], delta=0.01)
+        self.assertEqual(m["second"]["src"], "marché des paris")
+        self.assertNotIn("pH", m["second"])
         # cotes du bookmaker en décimal (+230 → 3,30 ; +275 → 3,75 ; +105 → 2,05), archivées pour après le coup d'envoi
-        self.assertEqual(m["odds"], dict(h=3.3, d=3.75, a=2.05, by="ESPN BET"))
+        self.assertNotIn("odds", m)                                  # cotes jamais envoyées au site
         self.assertEqual(app.load_json(app.HIST_FILE, {})["foot-401"]["odds"]["a"], 2.05)
         # cote juste d'un pronostic = 1 / probabilité
         pk = m["picks"]["main"]
         self.assertAlmostEqual(pk["fair"], 1 / pk["p"], delta=0.01)
-        nhl = self.data["nhl"][0]
-        self.assertEqual((nhl["odds"]["h"], nhl["odds"]["a"]), (1.46, 2.8))
+        self.assertNotIn("odds", self.data["nhl"][0])
         # Man City : effectif complet, gardien exclu, joueurs triés par chance de marquer
         city = m["squad_a"]
         self.assertEqual([p["name"] for p in city][:2], ["Erling Haaland", "Phil Foden"])
@@ -269,8 +290,11 @@ class AppTest(unittest.TestCase):
     def test_nhl_game(self):
         g = self.data["nhl"][0]
         raw = [app.implied("-218"), app.implied("+180")]
-        self.assertEqual(g["winH"], round(raw[0] / sum(raw) * 100))
-        self.assertAlmostEqual(g["xgH"] + g["xgA"], 6.3, delta=0.01)
+        self.assertEqual(g["source"], app.SRC_NHL)                 # analyse maison (xG MoneyPuck)
+        h, d, a = app.outcome_probs(g["xgH"], g["xgA"], n=15)
+        self.assertAlmostEqual(g["winH"], (h + d * 0.52) * 100, delta=1)
+        mkt = app.load_json(app.HIST_FILE, {})[g["id"]]["p_mkt"]
+        self.assertAlmostEqual(mkt[0], raw[0] / sum(raw), places=3)
         names = [p["name"] for p in g["squad_h"]]
         self.assertEqual(set(names), {"Tom Wilson", "Jakob Chychrun"})   # « Blessé Absent » n'était pas aligné
         self.assertEqual({p["team"] for p in g["squad_a"]}, {"Seattle Kraken"})
@@ -361,8 +385,8 @@ class AppTest(unittest.TestCase):
         team_markets = ["1", "2", "1N", "N2", "o25", "u25", "btts_y", "btts_n"]
         self.assertIn(pk["main"]["market"], team_markets)
         self.assertGreaterEqual(pk["main"]["p"], pk["winner"]["p"])          # le plus sûr est au moins aussi probable
-        self.assertEqual(pk["winner"]["market"], "2")                          # Man City favori
-        self.assertEqual(pk["player"]["player"], "Erling Haaland")
+        self.assertEqual(pk["winner"]["market"], "1" if m["pH"] > m["pA"] else "2")   # le favori de l'analyse
+        self.assertIn(pk["player"]["player"], ("Erling Haaland", "Alexander Isak"))   # buteur de l'un des deux favoris
         self.assertTrue(1 <= pk["main"]["stars"] <= 5)
         g = self.data["nhl"][0]["picks"]
         self.assertIn(g["main"]["market"], ["win_h", "win_a", "o55", "u55"])
@@ -504,9 +528,47 @@ class AppTest(unittest.TestCase):
         n = app.nhl_picks("Minnesota Wild", "Columbus", 0.63, 3.56, 2.74, {}, q=0.6)
         self.assertNotIn(n["fun"]["market"], (n["main"]["market"], "win_a", "reg_a"))
 
+    def test_in_house_model(self):
+        mu = 1.4
+        strong = dict(gp=10, gf=25, ga=8)
+        weak = dict(gp=10, gf=9, ga=20)
+        lh, la = app.foot_model(strong, weak, None, None, mu)
+        self.assertGreater(lh, 2 * la)                            # la meilleure équipe marque beaucoup plus
+        # avantage du terrain : deux équipes égales, celle qui reçoit marque plus
+        eh, ea = app.foot_model(dict(gp=10, gf=14, ga=14), dict(gp=10, gf=14, ga=14), None, None, mu)
+        self.assertAlmostEqual(eh / ea, app.HOME_ADV ** 2, places=6)
+        # les 10 derniers matchs comptent en plus de la saison : une équipe en feu monte
+        hot = app.foot_model(dict(gp=10, gf=14, ga=14), dict(gp=10, gf=14, ga=14), dict(n10=10, gf10=28, ga10=8), None, mu)
+        self.assertGreater(hot[0], eh)
+        self.assertLess(hot[1], ea)
+        # début de saison : 1 match à 5-0 ne fait pas un monstre (retour vers la moyenne)
+        one = app.foot_model(dict(gp=1, gf=5, ga=0), dict(gp=1, gf=0, ga=5), None, None, mu)
+        self.assertLess(one[0], 3)
+        self.assertIsNone(app.foot_model(None, weak, None, None, mu))
+        # coupe d'Europe : à statistiques égales, le club du championnat le plus relevé est favori
+        eu = app.foot_model(dict(gp=10, gf=14, ga=14), dict(gp=10, gf=14, ga=14), None, None, mu, mu, "fra.1", "eng.1")
+        self.assertLess(eu[0], eu[1] * app.HOME_ADV ** 2)
+        # score ESPN : nombre, texte ou {"value": …}
+        self.assertEqual([app.score_value(dict(score=x)) for x in (2, "3", dict(value=1.0))], [2, 3, 1])
+        # garde-fou : aucun chiffre du marché dans les notes affichées
+        picks = dict(main=app.make_pick("1N", "Lyon ou nul", 0.76))
+        out = app.concord("foot", picks, (0.52, 0.24, 0.24), dict(src="marché des paris", p=(0.36, 0.24, 0.40)))
+        self.assertFalse(out["agree"])
+        self.assertNotIn("60", out["note"])
+        self.assertEqual(set(out), {"src", "agree", "note"})
+        # Bilan : l'analyse maison et le marché notés sur les mêmes matchs
+        T = dict(home="A", away="B", league="Premier League")
+        hist = {"a": dict(T, sport="foot", date="2026-10-01", p=[0.6, 0.25, 0.15], p_mkt=[0.5, 0.3, 0.2], result=0),
+                "b": dict(T, sport="foot", date="2026-10-02", p=[0.3, 0.3, 0.4], p_mkt=[0.2, 0.3, 0.5], result=2),
+                "c": dict(T, sport="foot", date="2026-10-03", p=[0.4, 0.3, 0.3], result=1)}
+        vs = app.bilan(hist)["foot"]["vs_mkt"]
+        self.assertEqual(vs["n"], 2)
+        self.assertLess(vs["model"], vs["mkt"] + 1)
+        self.assertAlmostEqual(vs["mkt"], ((0.25 + 0.09 + 0.04) + (0.04 + 0.09 + 0.25)) / 2, places=3)
+
     def test_second_opinion(self):
         # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
-        self.assertEqual((self.data["second"]["foot"]["ok"], self.data["second"]["foot"]["missing"]), (1, []))
+        self.assertEqual(self.data["second"]["foot"]["ok"], 1)
         self.assertEqual((self.data["second"]["nhl"]["ok"], self.data["second"]["nhl"]["missing"]), (1, []))
         # MoneyPuck : San Jose s'écrit « SJS » dans certains fichiers, « S.J » dans d'autres
         old = app.get_text
@@ -516,37 +578,27 @@ class AppTest(unittest.TestCase):
                 app.get_text = lambda url, headers=None, tries=3, timeout=30, c=csv_: c if "/2026/" in url else MP_HEAD
                 app.SECOND.clear()
                 self.assertIsNotNone(app.nhl_second("TOR", "SJS", 20262027), code)
-            # ClubElo en panne (502, comme le 19/10) : une seule tentative courte, pas d'équipe « introuvable »
-            calls = []
-            def fake(url, headers=None, tries=3, timeout=30):
-                calls.append((url, tries, timeout))
-                return None
-            app.get_text = fake
-            app.SECOND.clear(); app.SECOND_STATS.update(foot=[0, []])
-            self.assertIsNone(app.elo_second("eng.1", dt.date(2026, 10, 19), ["Spurs"], ["Coventry"]))
-            self.assertEqual(calls, [("http://api.clubelo.com/2026-10-19", 1, 10)])
-            self.assertEqual(app.SECOND_STATS["foot"][1], [])
-            self.assertTrue(app.SECOND_STATS.get("foot_down"))
         finally:
             app.get_text = old
             app.SECOND.clear()
         foot, nhl = self.data["foot"][0], self.data["nhl"][0]
-        self.assertTrue(foot["second"]["src"].startswith("Classement Elo ClubElo (Liverpool 1960, Man City 2010)"))
+        self.assertEqual(foot["source"], app.SRC_FOOT_ELO)       # Elo maison calculé : il compte pour moitié
+        self.assertTrue(any(c.startswith("Elo maison : Liverpool") for c in foot["ctx"]), foot["ctx"])
+        self.assertEqual(foot["second"]["src"], "marché des paris")
         self.assertTrue(foot["second"]["agree"])
         self.assertEqual(self.data["second"]["foot"]["status"], "ok")
         self.assertIn("main", foot["picks"])
-        self.assertTrue(nhl["second"]["agree"] and nhl["second"]["winH"] > 50, nhl["second"])
-        # noms : alias et pas de confusion Paris FC / Paris SG
-        clubs = ["Man City", "Liverpool", "Paris SG", "Paris FC", "Forest"]
-        self.assertEqual(app.best_club(["Paris FC"], clubs), "Paris FC")
-        self.assertEqual(app.best_club(["PSG", "Paris Saint-Germain"], clubs), "Paris SG")
-        self.assertEqual(app.best_club(["Nottm Forest", "Nottingham Forest"], clubs), "Forest")
-        self.assertIsNone(app.best_club(["Real Madrid"], clubs))
-        # classement Elo seul (match absent de la liste ClubElo) : probabilités calculées
-        sec = app.elo_second("eng.1", dt.date(2026, 10, 12), ["Forest"], ["Man City"])
-        h, d, a = sec["p"]
-        self.assertAlmostEqual(h + d + a, 1, places=6)
-        self.assertGreater(a, h)                                  # City 260 points Elo au-dessus
+        self.assertTrue(nhl["second"]["agree"], nhl["second"])
+        self.assertEqual(set(nhl["second"]), {"src", "agree"})       # aucun chiffre du marché transmis au site
+        # Elo maison : trois saisons de résultats ESPN (rodage, puis deux saisons), City au-dessus de Liverpool
+        elo = app.house_elo("eng.1", dt.date(2026, 10, 11))
+        self.assertGreater(elo["382"][0], elo["364"][0])
+        self.assertEqual(self.data["second"]["foot"]["elo"]["eng.1"], 2 * 380 + 40)
+        sec = app.elo_probs("eng.1", "eng.1", "364", "382", dt.date(2026, 10, 11))
+        self.assertAlmostEqual(sum(sec["p"]), 1, places=6)
+        self.assertGreater(sec["p"][2], sec["p"][0])
+        # saisons terminées gardées en cache : pas relues au passage suivant
+        self.assertEqual(sorted(app.load_json(app.ELO_FILE, {})["eng.1"]), ["2024", "2025"])
         # désaccord : les cotes voient Lyon favori, le deuxième avis voit Nice → pas de Safe
         picks = dict(main=app.make_pick("1N", "Lyon ou nul", 0.76), winner=app.make_pick("1", "Victoire Lyon", 0.52))
         out = app.concord("foot", picks, (0.52, 0.25, 0.23), dict(src="ClubElo", p=(0.30, 0.27, 0.43)))

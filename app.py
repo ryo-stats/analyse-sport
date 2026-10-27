@@ -3,11 +3,13 @@
 
 Sources gratuites, sans clé :
   - API publique d'ESPN : matchs, résultats, classements, effectifs et stats des joueurs, cotes (foot et NHL) ;
-  - API officielle de la NHL : calendrier, classement, stats des joueurs, composition du dernier match.
+  - API officielle de la NHL : calendrier, classement, stats des joueurs, composition du dernier match ;
+  - MoneyPuck.com (buts attendus NHL). L'Elo des clubs de foot est calculé ici, à partir des résultats ESPN.
 
 Chaque exécution :
   1. complète les résultats des jours passés dans docs/history.json ;
-  2. récupère les matchs du jour et leurs cotes, puis convertit les cotes en probabilités (marge retirée) ;
+  2. récupère les matchs du jour et calcule l'analyse maison (Elo, buts de la saison et des 10 derniers matchs,
+     xG au hockey) ; les cotes ne servent que de garde-fou invisible (gros désaccord : pas de Safe) ;
   3. calcule buts attendus, scores probables, buteurs et joueurs décisifs ;
   4. calcule le bilan : les probabilités annoncées se vérifient-elles ?
   5. écrit docs/data.json, que le site docs/index.html affiche.
@@ -76,11 +78,9 @@ GOAL_PRIOR = {"F": 0.22, "M": 0.08, "D": 0.03}
 DEC_PRIOR = {"F": 0.35, "M": 0.25, "D": 0.08}
 POSTES = {"F": "Attaquant", "M": "Milieu", "D": "Défenseur"}
 NHL_API = "https://api-web.nhle.com/v1"
-# deuxième avis, indépendant des cotes : ClubElo (foot) et buts attendus MoneyPuck (NHL)
-CLUBELO_DAY = "http://api.clubelo.com/{date}"
+# buts attendus MoneyPuck (NHL) ; Elo maison (foot), calculé à partir des résultats ESPN
 MONEYPUCK_TEAMS = "https://moneypuck.com/moneypuck/playerData/seasonSummary/{season}/regular/teams.csv"
-ELO_COUNTRY = {"fra.1": "FRA", "eng.1": "ENG", "esp.1": "ESP", "ita.1": "ITA", "ger.1": "GER"}
-ELO_HFA = 65          # avantage du terrain en points Elo (ordre de grandeur de ClubElo)
+ELO_HFA = 65          # avantage du terrain en points Elo (ordre de grandeur des classements Elo publiés)
 ELO_DRAW = 0.28       # part de nuls entre deux équipes de même niveau
 SPLIT_GAP = 0.12      # le deuxième avis juge le Safe moins sûr d'au moins 12 points : avis partagés
 NHL_SHRINK = 12       # début de saison : les xG d'une équipe pèsent comme ses matchs, face à 12 matchs « moyens »
@@ -127,8 +127,6 @@ def get_json(url, params=None):
 
 
 FETCH_LOG = {}        # résultat des lectures de fichiers texte (diagnostic publié dans data.json › second)
-BROWSER_HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-                   "Accept": "text/csv,text/plain,*/*"}
 
 
 def get_text(url, headers=None, tries=3, timeout=30):
@@ -284,6 +282,168 @@ def foot_lambdas(p_home, p_away, over=None):
         return lh, la
     v = fsolve(f, [1.4, 1.1])
     return abs(v[0]), abs(v[1])
+
+
+# ---------------------------------------------------------------- analyse maison (sans les cotes)
+# Foot : attaque et défense de chaque équipe tirées de ses buts (saison + 10 derniers matchs, comptés deux fois),
+# ramenées vers la moyenne du championnat tant que peu de matchs sont joués, plus l'avantage du terrain.
+# Coupes d'Europe : chaque équipe est notée dans son championnat, corrigé par le niveau de ce championnat.
+SRC_FOOT = "Analyse maison : buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain"
+SRC_FOOT_ELO = "Analyse maison : Elo maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain"
+SRC_FOOT_ELO_ONLY = "Analyse maison : Elo maison (tous les résultats depuis deux saisons), avantage du terrain"
+ELO_WEIGHT = 0.5         # part du classement Elo dans le verdict 1N2 (l'autre moitié : les buts)
+SRC_NHL = "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés"
+B2B_FACTOR = 0.95        # NHL : une équipe qui a joué la veille marque environ 5 % de moins
+HOME_ADV = 1.12
+FORM_K = 6
+LEAGUE_STRENGTH = {"eng.1": 1.00, "esp.1": 0.97, "ita.1": 0.95, "ger.1": 0.94, "fra.1": 0.89}   # ordre de grandeur (UEFA)
+OTHER_STRENGTH = 0.80
+EURO_GPG = 1.45          # buts par équipe et par match en coupe d'Europe (ordre de grandeur)
+TABLES = {}
+
+
+ELO_FILE = os.path.join(ROOT, "cache", "elo.json")   # résultats des saisons terminées (ils ne changent plus)
+ELO_CACHE, ELO_RATINGS, ELO_STATS = {}, {}, {}
+ELO_SEASONS = 3          # la saison en cours et les deux précédentes (la plus ancienne sert de rodage)
+ELO_K = (30, 20)         # sensibilité : rodage, puis régime normal
+ELO_NEW = -80            # club qui arrive dans le championnat (promu) : 80 points sous la moyenne
+ELO_REGRESS = 0.2        # entre deux saisons, 20 % de retour vers la moyenne (mercato, entraîneurs)
+ELO_MIN = 150            # matchs lus au minimum pour se fier au classement
+LEAGUE_ELO = {"eng.1": 0, "esp.1": -15, "ita.1": -25, "ger.1": -30, "fra.1": -55}   # niveau des championnats
+OTHER_ELO = -110
+
+
+def season_of(day):
+    """Saison de foot européenne (année de début) : de juillet à juin."""
+    return day.year if day.month >= 7 else day.year - 1
+
+
+def league_results(code, season, current):
+    """Résultats d'une saison d'un championnat (ESPN) : [[date, id domicile, id extérieur, buts, buts], …].
+    Les saisons terminées sont gardées dans cache/elo.json ; la saison en cours est relue à chaque passage."""
+    store = ELO_CACHE.setdefault(code, {})
+    if not current and str(season) in store:
+        return store[str(season)]
+    url = ESPN_SCOREBOARD.format(sport="soccer", league=code)
+    events = (get_json(url, {"dates": f"{season}0701-{season + 1}0630", "limit": 1000}) or {}).get("events") or []
+    if events and len(events) % 100 == 0:
+        # réponse peut-être tronquée (ESPN coupe parfois à 100) : relecture mois par mois
+        events = []
+        for m in range(12):
+            y, mo = season + (m + 6) // 12, (m + 6) % 12 + 1
+            last = (dt.date(y + mo // 12, mo % 12 + 1, 1) - dt.timedelta(days=1)).day
+            events += (get_json(url, {"dates": f"{y}{mo:02d}01-{y}{mo:02d}{last}", "limit": 1000}) or {}).get("events") or []
+    rows, seen = [], set()
+    for e in events:
+        if e.get("id") in seen:
+            continue
+        seen.add(e.get("id"))
+        if not ((e.get("status") or {}).get("type") or {}).get("completed"):
+            continue
+        try:
+            _, h, a = competitors(e)
+            rows.append([e["date"][:10], str(h["team"]["id"]), str(a["team"]["id"]), score_value(h), score_value(a)])
+        except (KeyError, IndexError, TypeError, ValueError):
+            continue
+    rows.sort()
+    if rows and not current:
+        store[str(season)] = rows
+    return rows
+
+
+def house_elo(code, today):
+    """Classement Elo maison d'un championnat : {id ESPN: (points, moyenne des clubs de la saison)}, ou {} si
+    trop peu de matchs. Chaque match déplace des points du perdant au gagnant, d'autant plus que le résultat
+    surprend (avantage du terrain compris) et que l'écart de buts est large."""
+    if not code:
+        return {}
+    if code in ELO_RATINGS:
+        return ELO_RATINGS[code]
+    s0, r, n, started = season_of(today), {}, 0, False
+    for season in range(s0 - ELO_SEASONS + 1, s0 + 1):
+        rows = league_results(code, season, season == s0)
+        if not rows:
+            continue
+        if started:
+            r = {t: 1500 + (v - 1500) * (1 - ELO_REGRESS) for t, v in r.items()}
+        k = ELO_K[1] if started else ELO_K[0]
+        for _, h, a, gh, ga in rows:
+            rh = r.setdefault(h, 1500 + (ELO_NEW if started else 0))
+            ra = r.setdefault(a, 1500 + (ELO_NEW if started else 0))
+            e = 1 / (1 + 10 ** (-(rh + ELO_HFA - ra) / 400))
+            gd = abs(gh - ga)
+            mult = 1 if gd <= 1 else 1.5 if gd == 2 else (11 + gd) / 8
+            delta = k * mult * ((1 if gh > ga else 0.5 if gh == ga else 0) - e)
+            r[h], r[a] = rh + delta, ra - delta
+            n += 1
+        started = True
+        last = {x for row in rows for x in row[1:3]}
+    ELO_STATS[code] = n
+    if n < ELO_MIN:
+        ELO_RATINGS[code] = {}
+        return {}
+    mean = sum(r[t] for t in last) / len(last)
+    ELO_RATINGS[code] = {t: (v, mean) for t, v in r.items()}
+    return ELO_RATINGS[code]
+
+
+def elo_probs(code_h, code_a, hid, aid, today):
+    """Victoire, nul, défaite selon l'Elo maison, et les deux classements ; None faute de données.
+    Coupes d'Europe : chaque club est situé dans son championnat, corrigé du niveau de ce championnat."""
+    th, ta = house_elo(code_h, today), house_elo(code_a, today)
+    if hid not in th or aid not in ta:
+        return None
+    (rh, mh), (ra, ma) = th[hid], ta[aid]
+    if code_h != code_a:
+        rh, ra = rh - mh + 1500 + LEAGUE_ELO.get(code_h, OTHER_ELO), ra - ma + 1500 + LEAGUE_ELO.get(code_a, OTHER_ELO)
+    return dict(p=elo_wdl(rh - ra + ELO_HFA), h=round(rh), a=round(ra))
+
+
+def load_elo():
+    ELO_CACHE.clear()
+    ELO_CACHE.update(load_json(ELO_FILE, {}))
+    ELO_RATINGS.clear()
+    ELO_STATS.clear()
+
+
+def save_elo(today):
+    keep = {str(y) for y in range(season_of(today) - ELO_SEASONS + 1, season_of(today))}
+    save_json(ELO_FILE, {c: {y: v for y, v in d.items() if y in keep} for c, d in ELO_CACHE.items()})
+
+
+def table_of(code):
+    """Classement d'un championnat (lu une fois par passage) et sa moyenne de buts par équipe et par match."""
+    if code not in TABLES:
+        t = espn_standings(code) if code else {}
+        gp = sum(r["gp"] for r in t.values())
+        TABLES[code] = (t, (sum(r["gf"] for r in t.values()) / gp) if gp else 1.4)
+    return TABLES[code]
+
+
+def team_strength(st, rec, mu):
+    """Attaque et défense d'une équipe, 1 = moyenne de son championnat (plus haut = plus fort en attaque,
+    plus haut = plus faible en défense)."""
+    gp, gf, ga = (st or {}).get("gp", 0), (st or {}).get("gf", 0), (st or {}).get("ga", 0)
+    n, f10, a10 = (rec or {}).get("n10", 0), (rec or {}).get("gf10", 0), (rec or {}).get("ga10", 0)
+    if not gp and not n:
+        return None
+    return ((gf + f10 + mu * FORM_K) / (gp + n + FORM_K) / mu,
+            (ga + a10 + mu * FORM_K) / (gp + n + FORM_K) / mu)
+
+
+def foot_model(st_h, st_a, rec_h, rec_a, mu_h, mu_a=None, code_h=None, code_a=None):
+    """Buts attendus (domicile, extérieur) de l'analyse maison, ou None faute de données.
+    code_h / code_a : championnats nationaux des deux équipes (coupes d'Europe), sinon le même championnat."""
+    th, ta = team_strength(st_h, rec_h, mu_h), team_strength(st_a, rec_a, mu_a or mu_h)
+    if not th or not ta:
+        return None
+    if code_h or code_a:
+        s_h, s_a = LEAGUE_STRENGTH.get(code_h, OTHER_STRENGTH), LEAGUE_STRENGTH.get(code_a, OTHER_STRENGTH)
+        (ah, dh), (aa, da), mu = (th[0] * s_h, th[1] / s_h), (ta[0] * s_a, ta[1] / s_a), EURO_GPG
+    else:
+        (ah, dh), (aa, da), mu = th, ta, mu_h
+    clamp = lambda x: min(4.5, max(0.2, x))
+    return clamp(mu * ah * da * HOME_ADV), clamp(mu * aa * dh / HOME_ADV)
 
 
 def table_lambdas(sh, sa, league_gpg):
@@ -579,7 +739,29 @@ def foot_recent(league, team_id):
     out = recent_of("foot", [FORM["foot"].get(str(e["id"])) for e in done], team_id)
     if out:
         FORM_STATS["foot"] += 1
-    return out
+    # forme de l'équipe : buts marqués et encaissés sur ces 10 matchs (tableau des scores, sans feuille de match)
+    gf = ga = n = 0
+    for e in done:
+        cs = (e.get("competitions") or [{}])[0].get("competitors") or []
+        me = next((c for c in cs if str((c.get("team") or {}).get("id") or c.get("id")) == str(team_id)), None)
+        other = next((c for c in cs if c is not me), None)
+        try:
+            a, b = score_value(me), score_value(other)
+        except (TypeError, ValueError):
+            continue
+        gf, ga, n = gf + a, ga + b, n + 1
+    team = dict(n10=n, gf10=gf, ga10=ga) if n >= 3 else {}
+    if out or team:
+        return {**(out or dict(players={}, games=0, goals=0)), **team}
+    return None
+
+
+def score_value(c):
+    """Score d'une équipe dans un match ESPN (« 2 » ou {"value": 2.0})."""
+    v = (c or {}).get("score")
+    if isinstance(v, dict):
+        v = v.get("value", v.get("displayValue"))
+    return int(float(v))
 
 
 def nhl_recent(abbr):
@@ -720,7 +902,7 @@ def squad_rows(squad, lam, side, team, lineup=None, missing=None, recent=None):
     k = 8          # lissage : l'équivalent d'environ 6 matchs de buts « moyens » réparti selon le poste
     rec = (recent or {}).get("players") or {}
     # garde-fou : la forme ne sert que si les joueurs de l'effectif se retrouvent bien dans les feuilles de match
-    if recent and sum(1 for p in players if str(p.get("pid")) in rec) < 5:
+    if recent and (not recent.get("games") or sum(1 for p in players if str(p.get("pid")) in rec) < 5):
         recent, rec = None, {}
     r_games, r_goals = (recent or {}).get("games", 0), (recent or {}).get("goals", 0)
     rows = []
@@ -771,6 +953,7 @@ def foot(today, history):
 
 
 def foot_league(today, history, league, code):
+    TABLES.pop(code, None)
     # 1. résultats des jours précédents
     for back in range(1, DAYS_BACK + 1):
         for e in espn_events("soccer", code, today - dt.timedelta(days=back)) or []:
@@ -805,7 +988,25 @@ def foot_league(today, history, league, code):
             leaders = espn_leaders(code)          # repli : top 50 des buteurs et passeurs du championnat
             if not leaders:
                 note(f"{league} : joueurs indisponibles aujourd'hui.")
-        rows.append(foot_match(e, league, table, league_gpg or 1.4, leaders, history, squads, lineup, recents))
+        hid_, aid_ = str(H["team"]["id"]), str(A["team"]["id"])
+        try:
+            if code in EUROPE:      # deux championnats différents : chaque équipe notée dans le sien
+                ch, ca = ((squads.get(s) or {}).get("league") for s in ("h", "a"))
+                (th, mh), (ta, ma) = table_of(ch), table_of(ca)
+                lam = foot_model(th.get(hid_), ta.get(aid_), recents.get("h"), recents.get("a"), mh, ma, ch or "?", ca or "?")
+            else:
+                ch = ca = code
+                lam = foot_model(table.get(hid_), table.get(aid_), recents.get("h"), recents.get("a"), league_gpg or 1.4)
+        except Exception as err:
+            print(f"Analyse maison {code} {e.get('id')} : {err!r}")
+            ch = ca = lam = None
+        try:
+            elo = elo_probs(ch, ca, hid_, aid_, today) if ch and ca else None
+        except Exception as err:
+            print(f"Elo maison {code} {e.get('id')} : {err!r}")
+            elo = None
+        model = dict(lam=lam, elo=elo)
+        rows.append(foot_match(e, league, table, league_gpg or 1.4, leaders, history, squads, lineup, recents, model))
     return rows
 
 
@@ -859,7 +1060,7 @@ def foot_players(squad, team_goals, lam):
     return rows
 
 
-def foot_match(e, league, table, league_gpg, leaders, history, squads=None, lineup=None, recents=None):
+def foot_match(e, league, table, league_gpg, leaders, history, squads=None, lineup=None, recents=None, model=None):
     comp, H, A = competitors(e)
     kickoff = parse_time(e["date"])
     hid, aid = str(H["team"]["id"]), str(A["team"]["id"])
@@ -872,16 +1073,33 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     odds = espn_odds(comp, three_way=True)
     over = None
     if state != "pre" and saved and len(saved) == 3:
-        # après le coup d'envoi, ESPN affiche des cotes en direct : on garde celles d'avant-match
+        # après le coup d'envoi : on garde l'analyse d'avant-match
         p_h, p_d, p_a = saved
         over = history[key].get("over")
-        lh, la = foot_lambdas(p_h, p_a, over)
-        source = history[key].get("source", "Cotes d'avant-match")
+        lh, la = history[key].get("lam") or foot_lambdas(p_h, p_a, over)
+        source = history[key].get("source", "Analyse d'avant-match")
+    elif state == "pre" and model and (model.get("lam") or model.get("elo")):
+        # analyse maison : buts (saison + 10 derniers matchs) et Elo maison (deux saisons et demie de résultats),
+        # moitié-moitié ; le total de buts attendu reste celui des statistiques de buts
+        elo = model.get("elo")
+        SECOND_STATS["foot"][0] += bool(elo)
+        if model.get("lam"):
+            lh, la = model["lam"]
+            p_h, p_d, p_a = outcome_probs(lh, la)
+            source = SRC_FOOT
+            if elo:
+                p_h, p_d, p_a = (ELO_WEIGHT * e_ + (1 - ELO_WEIGHT) * m_ for e_, m_ in zip(elo["p"], (p_h, p_d, p_a)))
+                lh, la = foot_lambdas(p_h, p_a, dict(line=2.5, p=p_over(lh + la, 2.5)))
+                source = SRC_FOOT_ELO
+        else:
+            lh, la = foot_lambdas(elo["p"][0], elo["p"][2])
+            source = SRC_FOOT_ELO_ONLY
+        p_h, p_d, p_a = outcome_probs(lh, la)
     elif odds and state == "pre":
         p_h, p_d, p_a = odds["p"]
         over = odds.get("over")
         lh, la = foot_lambdas(p_h, p_a, over)
-        source = f"Cotes {odds['provider']}" + (f" (vainqueur et ligne de {str(over['line']).replace('.', ',')} buts)" if over else "")
+        source = "Marché des paris (l'analyse maison manque de données pour ce match)"
     elif sh and sa:
         lh, la = table_lambdas(sh, sa, league_gpg)
         p_h, p_d, p_a = outcome_probs(lh, la)
@@ -918,7 +1136,11 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         old = history.get(key, {})
         history[key] = dict(sport="foot", league=league, date=paris(kickoff).date().isoformat(),
                             home=home, away=away, p=[round(p_h, 4), round(p_d, 4), round(p_a, 4)],
-                            source=source, result=old.get("result"), score=old.get("score"))
+                            lam=[round(lh, 3), round(la, 3)], source=source, result=old.get("result"), score=old.get("score"))
+        if odds:          # marché des paris : garde-fou invisible et point de comparaison du Bilan
+            history[key]["p_mkt"] = [round(x, 4) for x in odds["p"]]
+        if (model or {}).get("elo"):
+            history[key]["elo"] = [model["elo"]["h"], model["elo"]["a"]]
         if book:
             history[key]["odds"] = book
         if over:
@@ -927,9 +1149,17 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     ctx = []
     for name, st in ((home, sh), (away, sa)):
         if st:
-            ctx.append(f"{name} : {st['rank']}e, {plural(st['pts'], 'point')}, "
+            ctx.append(f"{name} : {st['rank']}{'er' if st['rank'] == 1 else 'e'}, {plural(st['pts'], 'point')}, "
                        f"{plural(st['gf'], 'but')} marqué{'s' if st['gf'] > 1 else ''} et "
                        f"{st['ga']} encaissé{'s' if st['ga'] > 1 else ''} en {plural(st['gp'], 'match', 'matchs')}.")
+    for name, rec in ((home, (recents or {}).get("h")), (away, (recents or {}).get("a"))):
+        if rec and rec.get("n10"):
+            ctx.append(f"{name} : {plural(rec['gf10'], 'but')} marqué{'s' if rec['gf10'] > 1 else ''} et "
+                       f"{rec['ga10']} encaissé{'s' if rec['ga10'] > 1 else ''} sur ses {rec['n10']} derniers matchs de championnat.")
+    elo_pts = history.get(key, {}).get("elo")
+    if elo_pts:
+        ctx.append(f"Elo maison : {home} {elo_pts[0]}, {away} {elo_pts[1]} (1500 = club moyen"
+                   + (", corrigé du niveau de chaque championnat)." if league in EUROPE.values() else ")."))
     if not team_rows["h"] and not team_rows["a"]:
         ctx.append("Statistiques des joueurs indisponibles pour ce match.")
     if lineup:
@@ -941,14 +1171,9 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         ctx.append(f"Joueurs : statistiques de la saison en championnat national (plus de matchs que la {league}).")
 
     picks = foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la)
-    if state == "pre":
-        second = elo_second(LEAGUE_CODE.get(league), paris(kickoff).date(),
-                            [H["team"].get(k, "") for k in ("shortDisplayName", "displayName", "name")],
-                            [A["team"].get(k, "") for k in ("shortDisplayName", "displayName", "name")])
-        history[key]["second"] = second
-        SECOND_STATS["foot"][0] += bool(second)
-    else:
-        second = history.get(key, {}).get("second")
+    # garde-fou : le marché des paris (jamais affiché) ; s'il contredit nettement l'analyse, pas de Safe
+    mkt = history.get(key, {}).get("p_mkt")
+    second = dict(src="marché des paris", p=mkt) if mkt and source in (SRC_FOOT, SRC_FOOT_ELO, SRC_FOOT_ELO_ONLY) else None
     agree = concord("foot", picks, (p_h, p_d, p_a), second)
 
     fav, pf = (home, p_h) if p_h >= p_a else (away, p_a)
@@ -970,53 +1195,18 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         state=state, score=(f"{H.get('score')}-{A.get('score')}" if state != "pre" else None),
         home=home, away=away, form_h=form(H), form_a=form(A),
         rank_h=(sh or {}).get("rank"), rank_a=(sa or {}).get("rank"),
-        pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
+        pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
         xgH=round(lh, 2), xgA=round(la, 2), scores=scores, scorep=scorep,
         over25=pct(over25), btts=pct(btts), squad_h=team_rows["h"], squad_a=team_rows["a"],
         ctx=ctx, reading=reading, stakes=stakes, picks=picks, second=agree,
         **foot_visuals(league, H, A))
 
 
-# ---------------------------------------------------------------- deuxième avis (« grands analystes »)
-# Les cotes résument déjà l'avis du marché. Pour vérifier qu'elles concordent avec une analyse indépendante :
-# - foot : ClubElo (classement Elo de tous les clubs européens, mis à jour après chaque match) ;
-# - NHL : buts attendus (xG) de chaque équipe cette saison, données MoneyPuck.com.
-# En cas de désaccord, pas de Safe sur le match (règle de prudence).
+# ---------------------------------------------------------------- Elo → probabilités, xG NHL (MoneyPuck)
+# Garde-fou : l'analyse maison est comparée au marché des paris (concord) ; en cas de désaccord, pas de Safe.
 
 SECOND = {}           # sources lues une fois par passage
-SECOND_STATS = {"foot": [0, []], "nhl": [0, []]}     # matchs couverts, équipes non trouvées (diagnostic)
-ELO_ALIAS = {
-    "manchester united": "man united", "manchester city": "man city", "nottm forest": "forest",
-    "nottingham forest": "forest", "wolverhampton wanderers": "wolves", "wolverhampton": "wolves",
-    "tottenham hotspur": "tottenham", "west ham united": "west ham", "newcastle united": "newcastle",
-    "leeds united": "leeds", "brighton hove albion": "brighton", "afc bournemouth": "bournemouth",
-    "paris saint germain": "paris sg", "psg": "paris sg", "le havre": "le havre", "brest": "brest",
-    "atletico madrid": "atletico", "athletic club": "bilbao", "athletic bilbao": "bilbao", "real sociedad": "sociedad",
-    "celta vigo": "celta", "deportivo alaves": "alaves", "alaves": "alaves", "rayo vallecano": "rayo vallecano",
-    "real betis": "betis", "espanyol": "espanyol", "racing santander": "racing santander",
-    "internazionale": "inter", "inter milan": "inter", "hellas verona": "verona", "roma": "roma",
-    "bayern munich": "bayern", "borussia monchengladbach": "gladbach", "monchengladbach": "gladbach",
-    "borussia dortmund": "dortmund", "eintracht frankfurt": "frankfurt", "bayer leverkusen": "leverkusen",
-    "koln": "koeln", "cologne": "koeln", "1 koln": "koeln", "st pauli": "st pauli", "rb leipzig": "rb leipzig",
-    "hamburger": "hamburg", "werder bremen": "werder", "union berlin": "union berlin", "mainz": "mainz",
-    "sporting cp": "sporting", "psv eindhoven": "psv", "club brugge": "brugge",
-}
-
-
-def elo_key(name):
-    n = norm(name)
-    return ELO_ALIAS.get(n, n)
-
-
-def best_club(names, clubs):
-    """Club ClubElo correspondant le mieux à une équipe ESPN (plusieurs écritures possibles), ou None."""
-    keys = {elo_key(x) for x in names if x}
-    best, score = None, 0.0
-    for c in clubs:
-        s = max(similarity(k, elo_key(c)) for k in keys) if keys else 0
-        if s > score:
-            best, score = c, s
-    return best if score >= 0.8 else None
+SECOND_STATS = {"foot": [0, []], "nhl": [0, []]}     # matchs couverts par l'Elo / les xG, équipes non trouvées
 
 
 def read_csv(text):
@@ -1033,39 +1223,6 @@ def elo_wdl(dr):
     d = ELO_DRAW * math.exp(-(dr / 600) ** 2)
     h = max(0.01, min(0.98, e - d / 2))
     return h, d, max(0.01, 1 - h - d)
-
-
-def clubelo_csv(url, needed):
-    """Lecture d'un CSV ClubElo : une seule tentative courte (le 19/10, l'API répondait 502 en http, ne
-    répondait pas en https et sa liste de matchs était désactivée : inutile d'allonger chaque calcul).
-    [] si aucune ligne n'a la colonne attendue."""
-    rows = read_csv(get_text(url, BROWSER_HEADERS, tries=1, timeout=10))
-    return rows if rows and needed in rows[0] else []
-
-
-def elo_second(code, day, home_names, away_names):
-    """Deuxième avis foot : probabilités calculées à partir du classement Elo ClubElo du jour.
-    None si ClubElo ne répond pas ou si les équipes ne sont pas trouvées."""
-    key = "elo-" + day.isoformat()
-    if key not in SECOND:
-        SECOND[key] = clubelo_csv(CLUBELO_DAY.format(date=day.isoformat()), "Club")
-    rows = SECOND[key]
-    if not rows:                     # ClubElo indisponible : rien à comparer, pas d'équipe « introuvable »
-        SECOND_STATS["foot_down"] = True
-        return None
-    country = ELO_COUNTRY.get(code)
-    pool = [r for r in rows if not country or r.get("Country") == country]
-    clubs = {r.get("Club", ""): r for r in pool}
-    h, a = best_club(home_names, clubs), best_club(away_names, clubs)
-    if not h or not a or h == a:
-        SECOND_STATS["foot"][1].extend(n for n, c in ((home_names[0], h), (away_names[0], a)) if not c)
-        return None
-    try:
-        dr = float(clubs[h]["Elo"]) - float(clubs[a]["Elo"]) + ELO_HFA
-    except (KeyError, TypeError, ValueError):
-        return None
-    return dict(src=f"Classement Elo ClubElo ({h} {round(float(clubs[h]['Elo']))}, {a} {round(float(clubs[a]['Elo']))})",
-                p=elo_wdl(dr))
 
 
 MP_ABBR = {"TBL": "TB", "NJD": "NJ", "SJS": "SJ", "LAK": "LA"}
@@ -1092,7 +1249,18 @@ def mp_rates(season):
     return SECOND[key]
 
 
-def nhl_second(H, A, season):
+def nhl_model(H, A, season, b2b_h=False, b2b_a=False):
+    """Analyse maison NHL : buts attendus de chaque équipe d'après les xG de la saison (MoneyPuck), ramenés vers
+    la saison passée tant que peu de matchs sont joués ; avantage de la glace ; fatigue si l'équipe a joué la veille.
+    Renvoie (buts attendus domicile, extérieur) ou None."""
+    r = nhl_second(H, A, season, lam=True)
+    if not r:
+        return None
+    lh, la = r
+    return lh * (B2B_FACTOR if b2b_h else 1), la * (B2B_FACTOR if b2b_a else 1)
+
+
+def nhl_second(H, A, season, lam=False):
     """Deuxième avis NHL : buts attendus de chaque équipe (MoneyPuck), ramenés vers la saison passée (ou la
     moyenne) tant que peu de matchs sont joués. Renvoie la chance de victoire finale de l'équipe à domicile."""
     year = int(str(season)[:4])
@@ -1119,25 +1287,28 @@ def nhl_second(H, A, season):
         return None
     lh = rh[0] * ra[1] / avg * 1.03          # léger avantage de la glace
     la = ra[0] * rh[1] / avg / 1.03
+    if lam:
+        return lh, la
     h, d, a = outcome_probs(lh, la, n=15)
     return dict(src="Modèle xG (données MoneyPuck.com)", winH=round(float(h + d * 0.52), 4))
 
 
 def concord(sport, picks, odds_p, second):
-    """Compare les cotes au deuxième avis. Désaccord (pas le même favori, ou Safe jugé au moins 12 points
-    moins sûr) : le Safe est retiré (picks["held"]) et le match affiche « avis partagés »."""
+    """Compare l'analyse maison (odds_p) au marché des paris (second, jamais affiché). Désaccord (pas le même
+    favori, ou Safe jugé au moins 12 points moins sûr par le marché) : le Safe est retiré (picks["held"]) et le
+    match affiche « avis partagés »."""
     if not second:
         return None
     if sport == "foot":
         h2, d2, a2 = second["p"]
         h1, d1, a1 = odds_p
         prob = lambda h, d, a: {"1": h, "2": a, "X": d, "1N": h + d, "N2": d + a, "12": h + a}
-        out = dict(src=second["src"], pH=pct(h2), pD=pct(d2), pA=pct(a2))
+        out = dict(src=second["src"])
     else:
         h2, a2, h1, a1 = second["winH"], 1 - second["winH"], odds_p[0], 1 - odds_p[0]
         prob = lambda h, d, a: {"win_h": h, "win_a": a}
         d1 = d2 = 0
-        out = dict(src=second["src"], winH=pct(h2))
+        out = dict(src=second["src"])
     fav1, fav2 = ("h" if h1 >= a1 else "a"), ("h" if h2 >= a2 else "a")
     clash = bool(fav1 != fav2 and abs(h2 - a2) >= 0.05 and abs(h1 - a1) >= 0.05)
     main = picks.get("main") or {}
@@ -1145,9 +1316,9 @@ def concord(sport, picks, odds_p, second):
     gap = (p1 - p2) if p1 is not None and p2 is not None else 0
     out["agree"] = bool(not clash and gap < SPLIT_GAP)
     if clash:
-        out["note"] = f"les cotes et le deuxième avis ne désignent pas le même favori"
+        out["note"] = "l'analyse et le marché des paris ne désignent pas le même favori"
     elif gap >= SPLIT_GAP:
-        out["note"] = f"« {main['label']} » : {pct(p1)} % selon les cotes, {pct(p2)} % selon le deuxième avis"
+        out["note"] = f"« {main['label']} » : {pct(p1)} % selon l'analyse, le marché des paris est nettement moins confiant"
     if not out["agree"] and main and (p2 is not None or clash):
         picks["held"] = dict(main, note=out["note"])
         del picks["main"]
@@ -1764,7 +1935,7 @@ def nhl(today, history):
                  for s in (nhl_get("/standings/now") or {}).get("standings", [])}
     espn = espn_events("hockey", "nhl", today) or []
     if not espn:
-        note("NHL : cotes ESPN indisponibles, probabilités tirées du classement (moins fiables).")
+        note("NHL : ESPN indisponible, l'analyse tourne sans le garde-fou du marché des paris.")
     rows = []
     for g in games:
         try:
@@ -1810,18 +1981,33 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
     total = NHL_TOTAL
     started = g.get("gameState", "FUT") not in ("FUT", "PRE")
     saved = history.get(f"nhl-{g['id']}", {})
+    b2b_h, b2b_a = H in yesterday_teams, A in yesterday_teams
+    model = None
+    if not started:
+        try:
+            model = nhl_model(H, A, season, b2b_h, b2b_a)
+        except Exception:
+            model = None
+    lam = None
     if started and saved.get("p"):
-        # match commencé : on garde les probabilités d'avant-match, pas les cotes en direct
+        # match commencé : on garde l'analyse d'avant-match
         odds = None
         win_h = saved["p"][0]
-        source = saved.get("source", "Cotes d'avant-match")
+        lam = saved.get("lam")
+        source = saved.get("source", "Analyse d'avant-match")
     elif started:
         odds = None
+    SECOND_STATS["nhl"][0] += bool(model)
     if started and saved.get("p"):
         pass
+    elif model:
+        lam = model
+        h_, d_, a_ = outcome_probs(lam[0], lam[1], n=15)
+        win_h = h_ + d_ * 0.52                    # prolongation et tirs au but : presque un pile ou face
+        source = SRC_NHL
     elif odds:
         win_h = odds["p"][0]
-        source = f"Cotes {odds['provider']} (vainqueur final)"
+        source = "Marché des paris (l'analyse maison manque de données pour ce match)"
         try:
             ov = odds.get("over")
             if ov:      # total de buts qui donne au « plus » la même chance que les cotes du bookmaker
@@ -1835,10 +2021,14 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         win_h = min(0.75, max(0.25, 0.5 + (ph_ - pa_) * 0.9 + 0.04))
         source = "Modèle maison fondé sur le classement (pas de cotes disponibles)"
     win_a = 1 - win_h
-    p_h, p_d, p_a, lh, la = nhl_split(win_h, total)
+    if lam:
+        lh, la = lam
+        p_h, p_d, p_a = outcome_probs(lh, la, n=15)
+        total = lh + la
+    else:
+        p_h, p_d, p_a, lh, la = nhl_split(win_h, total)
     scores, scorep = top_scores(lh, la, n=10, exclude_draws=True)
 
-    b2b_h, b2b_a = H in yesterday_teams, A in yesterday_teams
     prof_h, prof_a = team_profile(H, season), team_profile(A, season)
 
     def ref(st, prof):
@@ -1870,7 +2060,9 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         old = history.get(key, {})
         history[key] = dict(sport="nhl", league="NHL", date=paris(start).date().isoformat(),
                             home=hname, away=aname, p=[round(win_h, 4), round(win_a, 4)],
-                            source=source, result=old.get("result"), score=old.get("score"))
+                            lam=[round(lh, 3), round(la, 3)], source=source, result=old.get("result"), score=old.get("score"))
+        if odds:          # marché des paris : garde-fou invisible et point de comparaison du Bilan
+            history[key]["p_mkt"] = [round(odds["p"][0], 4), round(1 - odds["p"][0], 4)]
         if book:
             history[key]["odds"] = book
 
@@ -1903,12 +2095,8 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
 
     picks = nhl_picks(hname, aname, win_h, lh, la, team_rows,
                       q=min(0.75, max(0.25, (win_h - p_h) / p_d)) if p_d > 0 else 0.5)
-    if state in ("FUT", "PRE"):
-        second = nhl_second(H, A, season)
-        history[key]["second"] = second
-        SECOND_STATS["nhl"][0] += bool(second)
-    else:
-        second = history.get(key, {}).get("second")
+    mkt = history.get(key, {}).get("p_mkt")
+    second = dict(src="marché des paris", winH=mkt[0]) if mkt and source == SRC_NHL else None
     agree = concord("nhl", picks, (win_h,), second)
 
     live = state in ("LIVE", "CRIT", "OFF", "FINAL")
@@ -1916,7 +2104,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         id=key, sport="nhl", league="NHL", kickoff=start.isoformat(), time=paris(start).strftime("%H:%M"),
         state=state, score=(f"{g['homeTeam'].get('score', 0)}-{g['awayTeam'].get('score', 0)}" if live else None),
         home=hname, away=aname, rec_h=record(sh), rec_a=record(sa),
-        winH=pct(win_h), winA=pct(win_a), pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source, odds=book,
+        winH=pct(win_h), winA=pct(win_a), pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
         goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
         squad_h=team_rows["h"], squad_a=team_rows["a"], best_h=team_rows["best_h"], best_a=team_rows["best_a"],
@@ -1950,9 +2138,13 @@ def bilan(history):
             b[1] += fav == r
             b[2] += p[fav]
         n = len(rows)
+        # même note d'erreur pour le marché des paris, sur les matchs où il était connu
+        both = [h for h in rows if h.get("p_mkt") and len(h["p_mkt"]) == len(h["p"])]
+        bm = lambda key: sum(sum((h[key][i] - (1 if i == h["result"] else 0)) ** 2 for i in range(len(h[key]))) for h in both) / len(both)
         out[sport] = dict(
             n=n, fav_rate=pct(hits / n), fav_expected=pct(sum(max(h["p"]) for h in rows) / n),
             brier=round(brier / n, 3), brier_naive=0.667 if sport == "foot" else 0.5,
+            vs_mkt=dict(n=len(both), model=round(bm("p"), 3), mkt=round(bm("p_mkt"), 3)) if both else None,
             bins=[dict(range=f"{lo}-{lo + 10} %", n=v[0], announced=pct(v[2] / v[0]), actual=pct(v[1] / v[0]))
                   for lo, v in sorted(bins.items())])
     recent = sorted(done, key=lambda h: h["date"], reverse=True)[:40]
@@ -2022,7 +2214,9 @@ def main(now=None):
     SECOND_STATS.update(foot=[0, []], nhl=[0, []])
     load_squad_cache(today)
     load_form()
+    load_elo()
     foot_rows = foot(today, history)
+    save_elo(today)
     save_squad_cache(today)
     nhl_rows = nhl(nhl_day, history)
     save_form(today)
@@ -2038,9 +2232,9 @@ def main(now=None):
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
                 notes=NOTES[-12:], form=dict(FORM_STATS), second=dict(
-                    foot=dict(ok=SECOND_STATS["foot"][0], missing=sorted(set(SECOND_STATS["foot"][1])),
-                              status="ClubElo indisponible" if SECOND_STATS.get("foot_down") else "ok",
-                              fetch={u: v for u, v in FETCH_LOG.items() if "clubelo" in u}),
+                    foot=dict(ok=SECOND_STATS["foot"][0], elo=dict(ELO_STATS),
+                              status="ok" if any(v >= ELO_MIN for v in ELO_STATS.values()) or not ELO_STATS
+                              else "Elo maison indisponible (résultats ESPN illisibles)"),
                     nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])),
                              fetch={u: v for u, v in FETCH_LOG.items() if "moneypuck" in u})))
     save_json(HIST_FILE, history)
