@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T19:57+01:00",
+ "generated": "2026-10-27T20:22+01:00",
  "date": "2026-10-27",
  "nhl_date": "2026-10-27",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-10-27T17:30:00+00:00",
    "time": "18:30",
    "state": "in",
-   "score": "2-5",
+   "score": "2-6",
    "home": "Sassuolo",
    "away": "Lazio",
    "form_h": "NDNDV",
@@ -433,26 +433,6 @@
    "btts": 34,
    "squad_h": [
     {
-     "name": "Donyell Malen",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "AS Roma",
-     "goals": 6,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 6,
-      "a": 1
-     },
-     "p_goal": 43,
-     "p_dec": 50,
-     "pid": "259481",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
      "name": "Matìas Soulè",
      "pos": "Attaquant",
      "side": "h",
@@ -470,27 +450,8 @@
      "p_dec": 35,
      "pid": "323974",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Manu Koné",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "AS Roma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 17,
-     "p_dec": 20,
-     "pid": "285226",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Niccolò Pisilli",
@@ -510,27 +471,29 @@
      "p_dec": 19,
      "pid": "360235",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Leonardo Balerdi",
-     "pos": "Défenseur",
+     "name": "Donyell Malen",
+     "pos": "Attaquant",
      "side": "h",
      "team": "AS Roma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
+     "goals": 6,
+     "assists": 1,
+     "apps": 7,
      "l10": {
       "n": 8,
-      "gp": 6,
-      "g": 2,
-      "a": 0
+      "gp": 7,
+      "g": 6,
+      "a": 1
      },
      "p_goal": 16,
-     "p_dec": 17,
-     "pid": "271555",
+     "p_dec": 19,
+     "pid": "259481",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Santiago Castro",
@@ -550,7 +513,50 @@
      "p_dec": 19,
      "pid": "250284",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Emanuele Lulli",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "409371",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Leonardo Balerdi",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 5,
+     "pid": "271555",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -568,31 +574,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 23,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "290545",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Paul Mendy",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Cagliari",
-     "goals": 1,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 15,
-     "pid": "418819",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Alessandro Romano",
@@ -612,7 +599,8 @@
      "p_dec": 9,
      "pid": "6729",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Michel Adopo",
@@ -632,27 +620,29 @@
      "p_dec": 14,
      "pid": "272745",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Jacopo Fazzini",
-     "pos": "Milieu",
+     "name": "Paul Mendy",
+     "pos": "Attaquant",
      "side": "a",
      "team": "Cagliari",
-     "goals": 0,
+     "goals": 1,
      "assists": 1,
-     "apps": 5,
+     "apps": 8,
      "l10": {
       "n": 8,
-      "gp": 5,
-      "g": 0,
+      "gp": 8,
+      "g": 1,
       "a": 1
      },
-     "p_goal": 1,
-     "p_dec": 7,
-     "pid": "333938",
+     "p_goal": 2,
+     "p_dec": 5,
+     "pid": "418819",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Alessandro Deiola",
@@ -672,7 +662,29 @@
      "p_dec": 4,
      "pid": "186437",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Adam Obert",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 1,
+     "p_dec": 2,
+     "pid": "322913",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -680,7 +692,8 @@
     "Cagliari : 9e, 13 points, 6 buts marqués et 9 encaissés en 8 matchs.",
     "AS Roma : 19 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat.",
     "Cagliari : 6 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Elo maison : AS Roma 1667, Cagliari 1447 (1500 = club moyen)."
+    "Elo maison : AS Roma 1667, Cagliari 1447 (1500 = club moyen).",
+    "Compositions officielles prises en compte : Leonardo Balerdi (remplaçant), Manu Koné (absent), Donyell Malen (remplaçant), Daniel Maldini (remplaçant) ne commencent pas le match."
    ],
    "reading": "AS Roma est nettement favori (73 %).",
    "stakes": "AS Roma (3e) défend une place qualificative pour la Ligue des champions.",
@@ -720,57 +733,59 @@
     },
     "fun_alt": [
      {
-      "market": "scw",
-      "label": "Donyell Malen marque et AS Roma gagne",
-      "p": 0.3851,
-      "prob": 39,
-      "fair": 2.6,
-      "stars": 1,
-      "player": "Donyell Malen",
-      "team": "AS Roma",
-      "side": "h"
-     },
-     {
       "market": "wh_by1",
       "label": "AS Roma gagne d'un seul but",
       "p": 0.2623,
       "prob": 26,
       "fair": 3.81,
       "stars": 1
+     },
+     {
+      "market": "scw",
+      "label": "Matìas Soulè marque et AS Roma gagne",
+      "p": 0.2442,
+      "prob": 24,
+      "fair": 4.09,
+      "stars": 1,
+      "player": "Matìas Soulè",
+      "team": "AS Roma",
+      "side": "h"
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Donyell Malen marque",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "label": "Matìas Soulè marque",
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
      "stars": 1,
-     "player": "Donyell Malen",
+     "player": "Matìas Soulè",
      "team": "AS Roma",
-     "pid": "259481",
+     "lineup": "start",
+     "pid": "323974",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
+     "why": "3 buts et 1 passe en 8 matchs · titulaire · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
     },
     "decisive": {
      "market": "dec",
-     "label": "Donyell Malen buteur ou passeur",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
-     "stars": 2,
-     "player": "Donyell Malen",
+     "label": "Matìas Soulè buteur ou passeur",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Matìas Soulè",
      "team": "AS Roma",
      "base": [
-      7,
-      6,
+      8,
+      3,
       1
      ],
-     "pid": "259481",
+     "lineup": "start",
+     "pid": "323974",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
+     "why": "3 buts et 1 passe en 8 matchs · titulaire · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
     }
    },
    "second": {
@@ -834,7 +849,8 @@
      "p_dec": 23,
      "pid": "213725",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giovanni Simeone",
@@ -854,47 +870,8 @@
      "p_dec": 24,
      "pid": "189974",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Sandro Kulenovic",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Torino",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 14,
-     "p_dec": 14,
-     "pid": "245538",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Rolando Mandragora",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "210392",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nikola Vlasic",
@@ -914,7 +891,8 @@
      "p_dec": 12,
      "pid": "206378",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kian Fitz-Jim",
@@ -934,7 +912,50 @@
      "p_dec": 10,
      "pid": "305589",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rafik Belghali",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 3,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 7,
+     "p_dec": 25,
+     "pid": "364590",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Daniel Bragança",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 9,
+     "pid": "290592",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -956,27 +977,8 @@
      "p_dec": 40,
      "pid": "262071",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Assane Diao",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Como",
-     "goals": 2,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 19,
-     "p_dec": 27,
-     "pid": "364742",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nico Paz",
@@ -996,27 +998,8 @@
      "p_dec": 33,
      "pid": "337970",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Martin Baturina",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Como",
-     "goals": 2,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 16,
-     "p_dec": 25,
-     "pid": "311475",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jacobo Ramón",
@@ -1036,27 +1019,71 @@
      "p_dec": 10,
      "pid": "380318",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Kaiki",
-     "pos": "Défenseur",
+     "name": "Martin Baturina",
+     "pos": "Milieu",
      "side": "a",
      "team": "Como",
-     "goals": 1,
+     "goals": 2,
      "assists": 1,
-     "apps": 6,
+     "apps": 7,
      "l10": {
       "n": 8,
-      "gp": 6,
-      "g": 1,
+      "gp": 7,
+      "g": 2,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "317233",
+     "p_goal": 5,
+     "p_dec": 8,
+     "pid": "311475",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Máximo Perrone",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Como",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 13,
+     "pid": "309241",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Lucas Da Cunha",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Como",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 6,
+     "pid": "291285",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -1064,7 +1091,8 @@
     "Como : 5e, 17 points, 14 buts marqués et 7 encaissés en 8 matchs.",
     "Torino : 13 buts marqués et 11 encaissés sur ses 8 derniers matchs de championnat.",
     "Como : 14 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
-    "Elo maison : Torino 1483, Como 1632 (1500 = club moyen)."
+    "Elo maison : Torino 1483, Como 1632 (1500 = club moyen).",
+    "Compositions officielles prises en compte : Martin Baturina (remplaçant), Assane Diao (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Como (5e) est dans la course à l'Europe.",
@@ -1129,10 +1157,11 @@
      "stars": 1,
      "player": "Anastasios Douvikas",
      "team": "Como",
+     "lineup": "start",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
+     "why": "5 buts et 0 passe en 8 matchs · titulaire · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
     },
     "decisive": {
      "market": "dec",
@@ -1148,10 +1177,11 @@
       5,
       0
      ],
+     "lineup": "start",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
+     "why": "5 buts et 0 passe en 8 matchs · titulaire · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
     }
    },
    "second": {
