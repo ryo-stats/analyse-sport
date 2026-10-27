@@ -303,7 +303,7 @@ TABLES = {}
 
 
 ELO_FILE = os.path.join(ROOT, "cache", "elo.json")   # résultats des saisons terminées (ils ne changent plus)
-ELO_CACHE, ELO_RATINGS, ELO_STATS = {}, {}, {}
+ELO_CACHE, ELO_RATINGS, ELO_STATS, ELO_DIAG = {}, {}, {}, {}
 ELO_SEASONS = 3          # la saison en cours et les deux précédentes (la plus ancienne sert de rodage)
 ELO_K = (30, 20)         # sensibilité : rodage, puis régime normal
 ELO_NEW = -80            # club qui arrive dans le championnat (promu) : 80 points sous la moyenne
@@ -318,34 +318,55 @@ def season_of(day):
     return day.year if day.month >= 7 else day.year - 1
 
 
-def league_results(code, season, current):
-    """Résultats d'une saison d'un championnat (ESPN) : [[date, id domicile, id extérieur, buts, buts], …].
-    Les saisons terminées sont gardées dans cache/elo.json ; la saison en cours est relue à chaque passage."""
-    store = ELO_CACHE.setdefault(code, {})
-    if not current and str(season) in store:
-        return store[str(season)]
-    url = ESPN_SCOREBOARD.format(sport="soccer", league=code)
-    events = (get_json(url, {"dates": f"{season}0701-{season + 1}0630", "limit": 1000}) or {}).get("events") or []
-    if events and len(events) % 100 == 0:
-        # réponse peut-être tronquée (ESPN coupe parfois à 100) : relecture mois par mois
-        events = []
-        for m in range(12):
-            y, mo = season + (m + 6) // 12, (m + 6) % 12 + 1
-            last = (dt.date(y + mo // 12, mo % 12 + 1, 1) - dt.timedelta(days=1)).day
-            events += (get_json(url, {"dates": f"{y}{mo:02d}01-{y}{mo:02d}{last}", "limit": 1000}) or {}).get("events") or []
+def result_rows(events):
+    """Matchs terminés d'une liste d'événements ESPN (tableau des scores ou calendrier d'équipe), sans doublon."""
     rows, seen = [], set()
     for e in events:
-        if e.get("id") in seen:
+        if not e.get("id") or e["id"] in seen:
             continue
-        seen.add(e.get("id"))
-        if not ((e.get("status") or {}).get("type") or {}).get("completed"):
+        st = ((e.get("status") or (e.get("competitions") or [{}])[0].get("status") or {}).get("type") or {})
+        if not (st.get("completed") or st.get("state") == "post"):
             continue
         try:
             _, h, a = competitors(e)
             rows.append([e["date"][:10], str(h["team"]["id"]), str(a["team"]["id"]), score_value(h), score_value(a)])
+            seen.add(e["id"])
         except (KeyError, IndexError, TypeError, ValueError):
             continue
-    rows.sort()
+    return sorted(rows)
+
+
+def league_results(code, season, current):
+    """Résultats d'une saison d'un championnat (ESPN) : [[date, id domicile, id extérieur, buts, buts], …].
+    Trois façons de les lire, de la moins coûteuse à la plus sûre : tableau des scores de toute la saison,
+    puis mois par mois, puis calendrier de chaque club du classement. Les saisons terminées sont gardées dans
+    cache/elo.json ; la saison en cours est relue à chaque passage. ELO_DIAG garde la trace (data.json)."""
+    store = ELO_CACHE.setdefault(code, {})
+    if not current and str(season) in store:
+        return store[str(season)]
+    url = ESPN_SCOREBOARD.format(sport="soccer", league=code)
+    diag = ELO_DIAG.setdefault(code, {})
+    events = (get_json(url, {"dates": f"{season}0701-{season + 1}0630", "limit": 1000}) or {}).get("events") or []
+    rows = result_rows(events)
+    diag[f"{season} saison"] = len(rows)
+    if not rows or len(events) % 100 == 0:      # vide, ou réponse peut-être coupée à 100
+        events = []
+        for m in range(12):
+            y, mo = season + (m + 6) // 12, (m + 6) % 12 + 1
+            if dt.date(y, mo, 1) > dt.date.today():
+                break
+            last = (dt.date(y + mo // 12, mo % 12 + 1, 1) - dt.timedelta(days=1)).day
+            events += (get_json(url, {"dates": f"{y}{mo:02d}01-{y}{mo:02d}{last}", "limit": 1000}) or {}).get("events") or []
+        rows = max(rows, result_rows(events), key=len)
+        diag[f"{season} mois"] = len(rows)
+    if len(rows) < ELO_MIN // 3:
+        teams = list(table_of(code)[0])
+        if teams:
+            events = []
+            for doc in get_many([ESPN_TEAM_SCHEDULE.format(league=code, team=t) + f"?season={season}" for t in teams]):
+                events += (doc or {}).get("events") or []
+            rows = max(rows, result_rows(events), key=len)
+            diag[f"{season} clubs"] = len(rows)
     if rows and not current:
         store[str(season)] = rows
     return rows
@@ -404,6 +425,7 @@ def load_elo():
     ELO_CACHE.update(load_json(ELO_FILE, {}))
     ELO_RATINGS.clear()
     ELO_STATS.clear()
+    ELO_DIAG.clear()
 
 
 def save_elo(today):
@@ -2232,7 +2254,7 @@ def main(now=None):
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
                 notes=NOTES[-12:], form=dict(FORM_STATS), second=dict(
-                    foot=dict(ok=SECOND_STATS["foot"][0], elo=dict(ELO_STATS),
+                    foot=dict(ok=SECOND_STATS["foot"][0], elo=dict(ELO_STATS), elo_fetch=dict(ELO_DIAG),
                               status="ok" if any(v >= ELO_MIN for v in ELO_STATS.values()) or not ELO_STATS
                               else "Elo maison indisponible (résultats ESPN illisibles)"),
                     nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])),

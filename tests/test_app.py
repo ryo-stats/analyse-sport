@@ -566,6 +566,28 @@ class AppTest(unittest.TestCase):
         self.assertLess(vs["model"], vs["mkt"] + 1)
         self.assertAlmostEqual(vs["mkt"], ((0.25 + 0.09 + 0.04) + (0.04 + 0.09 + 0.25)) / 2, places=3)
 
+    def test_elo_results_fallbacks(self):
+        # tableau des scores de la saison vide : mois par mois, puis calendrier de chaque club du classement
+        calls, old = [], app.get_json
+        evs = season_events(2025)
+        def fake(url, params=None):
+            calls.append((url, params))
+            if "/teams/" in url and "/schedule" in url:
+                tid = url.split("/teams/")[1].split("/")[0]
+                return dict(events=[e for e in evs if tid in [c["team"]["id"] for c in e["competitions"][0]["competitors"]]])
+            if "/standings" in url:
+                return old(url, params)
+            return dict(events=[])
+        try:
+            app.get_json = fake
+            app.ELO_CACHE.clear(); app.ELO_DIAG.clear(); app.TABLES.clear()
+            rows = app.league_results("eng.1", 2025, False)
+        finally:
+            app.get_json = old
+        self.assertEqual(len(rows), 2 * 38 - 2)            # 2 clubs au classement simulé : leurs matchs, sans doublon
+        self.assertEqual(set(app.ELO_DIAG["eng.1"]), {"2025 saison", "2025 mois", "2025 clubs"})
+        self.assertTrue(any("?season=2025" in u for u, _ in calls))
+
     def test_second_opinion(self):
         # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
         self.assertEqual(self.data["second"]["foot"]["ok"], 1)
