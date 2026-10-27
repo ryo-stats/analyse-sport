@@ -503,6 +503,108 @@ def espn_leaders(league):
 SQUADS = {}
 CACHE_FILE = os.path.join(ROOT, "cache", "squads.json")
 
+# ---------------------------------------------------------------- forme récente des joueurs (10 derniers matchs)
+# Feuilles de match gardées d'un passage à l'autre (un match terminé ne change plus) : {"foot": {id: {...}}, "nhl": {...}}
+FORM_FILE = os.path.join(ROOT, "cache", "form.json")
+FORM = {}
+FORM_GAMES = 10
+FORM_STATS = {"foot": 0, "nhl": 0}
+ESPN_TEAM_SCHEDULE = "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/teams/{team}/schedule"
+
+
+def load_form():
+    FORM.clear()
+    FORM.update(load_json(FORM_FILE, {}))
+    FORM.setdefault("foot", {})
+    FORM.setdefault("nhl", {})
+    FORM_STATS.update(foot=0, nhl=0)
+
+
+def save_form(today):
+    cut = (today - dt.timedelta(days=150)).isoformat()
+    for sp in ("foot", "nhl"):
+        FORM[sp] = {k: v for k, v in FORM.get(sp, {}).items() if v.get("date", "") >= cut}
+    save_json(FORM_FILE, FORM)
+
+
+def summary_players(data):
+    """Feuille d'un match de foot ESPN → {id équipe: {id joueur: [buts, passes]}} (joueurs entrés en jeu)."""
+    out = {}
+    for r in (data or {}).get("rosters") or []:
+        tid = str((r.get("team") or {}).get("id") or "")
+        players = {}
+        for x in r.get("roster") or []:
+            pid = str((x.get("athlete") or {}).get("id") or "")
+            st = {s.get("name"): s.get("value") for s in (x.get("stats") or []) if isinstance(s, dict)}
+            if not pid or not (x.get("starter") or x.get("subbedIn") or st.get("appearances")):
+                continue
+            players[pid] = [int(st.get("totalGoals") or 0), int(st.get("goalAssists") or 0)]
+        if tid and players:
+            out[tid] = players
+    return out
+
+
+def recent_of(sport, records, team):
+    """Additionne les feuilles de match d'une équipe : {joueur: [matchs joués, buts, passes]}, nombre de matchs, buts."""
+    per, games, goals = {}, 0, 0
+    for rec in records:
+        t = (rec or {}).get("teams", {}).get(str(team))
+        if not t:
+            continue
+        games += 1
+        for pid, (g, a) in t.items():
+            x = per.setdefault(str(pid), [0, 0, 0])
+            x[0] += 1
+            x[1] += g
+            x[2] += a
+            goals += g
+    return dict(players=per, games=games, goals=goals) if games >= 3 else None
+
+
+def foot_recent(league, team_id):
+    """Les 10 derniers matchs de championnat d'une équipe de foot (feuilles de match ESPN), ou None."""
+    sched = get_json(ESPN_TEAM_SCHEDULE.format(league=league, team=team_id))
+    done = []
+    for e in (sched or {}).get("events") or []:
+        st = (((e.get("competitions") or [{}])[0].get("status") or {}).get("type") or {})
+        if e.get("id") and (st.get("completed") or st.get("state") == "post"):
+            done.append(e)
+    done = sorted(done, key=lambda e: e.get("date", ""), reverse=True)[:FORM_GAMES]
+    need = [e for e in done if str(e["id"]) not in FORM["foot"]]
+    docs = get_many([ESPN_SUMMARY.format(league=league) + f"?event={e['id']}" for e in need]) if need else []
+    for e, doc in zip(need, docs):
+        teams = summary_players(doc)
+        if teams:
+            FORM["foot"][str(e["id"])] = dict(date=str(e.get("date", ""))[:10], teams=teams)
+    out = recent_of("foot", [FORM["foot"].get(str(e["id"])) for e in done], team_id)
+    if out:
+        FORM_STATS["foot"] += 1
+    return out
+
+
+def nhl_recent(abbr):
+    """Les 10 derniers matchs NHL d'une équipe (feuilles de match officielles), ou None."""
+    sched = nhl_get(f"/club-schedule-season/{abbr}/now") or {}
+    done = sorted([g for g in sched.get("games", []) if g.get("gameState") in ("OFF", "FINAL")],
+                  key=lambda g: g.get("startTimeUTC", ""), reverse=True)[:FORM_GAMES]
+    need = [g for g in done if str(g["id"]) not in FORM["nhl"]]
+    boxes = get_many([f"{NHL_API}/gamecenter/{g['id']}/boxscore" for g in need]) if need else []
+    for g, box in zip(need, boxes):
+        teams = {}
+        for side in ("homeTeam", "awayTeam"):
+            ab = ((box or {}).get(side) or {}).get("abbrev")
+            st = (((box or {}).get("playerByGameStats") or {}).get(side) or {})
+            pl = {str(x["playerId"]): [int(x.get("goals") or 0), int(x.get("assists") or 0)]
+                  for grp in ("forwards", "defense") for x in st.get(grp, []) if x.get("playerId")}
+            if ab and pl:
+                teams[ab] = pl
+        if teams:
+            FORM["nhl"][str(g["id"])] = dict(date=str(g.get("gameDate") or g.get("startTimeUTC", ""))[:10], teams=teams)
+    out = recent_of("nhl", [FORM["nhl"].get(str(g["id"])) for g in done], abbr)
+    if out:
+        FORM_STATS["nhl"] += 1
+    return out
+
 
 def load_squad_cache(today):
     """Effectifs déjà téléchargés aujourd'hui : évite ~1 000 requêtes ESPN à chaque passage."""
@@ -608,21 +710,33 @@ def apply_lineup(rows, lineup):
     return missing
 
 
-def squad_rows(squad, lam, side, team, lineup=None, missing=None):
-    """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ."""
+def squad_rows(squad, lam, side, team, lineup=None, missing=None, recent=None):
+    """Probabilité de marquer et d'être décisif (but ou passe) pour chaque joueur de champ.
+    recent : 10 derniers matchs de l'équipe (forme). Ils comptent deux fois (saison + forme), et un joueur absent
+    de ces matchs voit ses chances réduites comme un remplaçant (blessé, suspendu ou écarté)."""
     players = squad["players"]
     team_games = max(p["apps"] for p in players)
     team_goals = max(sum(p["goals"] for p in players), 1)
     k = 8          # lissage : l'équivalent d'environ 6 matchs de buts « moyens » réparti selon le poste
+    rec = (recent or {}).get("players") or {}
+    # garde-fou : la forme ne sert que si les joueurs de l'effectif se retrouvent bien dans les feuilles de match
+    if recent and sum(1 for p in players if str(p.get("pid")) in rec) < 5:
+        recent, rec = None, {}
+    r_games, r_goals = (recent or {}).get("games", 0), (recent or {}).get("goals", 0)
     rows = []
     for p in players:
         mfrac = min(1.0, p["minutes"] / (90 * team_games)) if p["minutes"] else min(1.0, p["apps"] / team_games) * 0.6
-        share_goal = (p["goals"] + k * GOAL_PRIOR[p["pos"]] * mfrac) / (team_goals + k)
-        share_dec = min(1.2, (p["goals"] + p["assists"] + k * DEC_PRIOR[p["pos"]] * mfrac) / (team_goals + k))
+        r = rec.get(str(p.get("pid")), [0, 0, 0])
+        share_goal = (p["goals"] + r[1] + k * GOAL_PRIOR[p["pos"]] * mfrac) / (team_goals + r_goals + k)
+        share_dec = min(1.2, (p["goals"] + p["assists"] + r[1] + r[2] + k * DEC_PRIOR[p["pos"]] * mfrac) / (team_goals + r_goals + k))
+        pg, pd = 1 - math.exp(-lam * share_goal), 1 - math.exp(-lam * share_dec)
+        if recent and r_games >= 5 and r[0] == 0:          # n'a joué aucun des derniers matchs
+            pg, pd = 1 - (1 - pg) ** BENCH_SHARE, 1 - (1 - pd) ** BENCH_SHARE
         rows.append(dict(name=p["name"], pos=POSTES[p["pos"]], side=side, team=team,
                          goals=p["goals"], assists=p["assists"], apps=p["apps"],
-                         p_goal=pct(1 - math.exp(-lam * share_goal)),
-                         p_dec=pct(1 - math.exp(-lam * share_dec)),
+                         l10=dict(n=r_games, gp=r[0], g=r[1], a=r[2]) if recent else None,
+                         p_goal=pct(pg),
+                         p_dec=pct(pd),
                          # pour vérifier « buteur ou passeur » après le match (statistiques ESPN du joueur)
                          pid=p.get("pid"), stats_league=squad.get("league"), season=squad.get("season")))
     gone = apply_lineup(rows, lineup)
@@ -678,6 +792,12 @@ def foot_league(today, history, league, code):
     for e in todays:
         _, H, A = competitors(e)
         squads = {s: espn_squad(code, str(c["team"]["id"])) for s, c in (("h", H), ("a", A))}
+        recents = {}
+        for s, c in (("h", H), ("a", A)):
+            try:      # forme sur le championnat national (aussi pour les coupes d'Europe)
+                recents[s] = foot_recent((squads.get(s) or {}).get("league") or code, str(c["team"]["id"]))
+            except Exception:
+                recents[s] = None
         state = ((e.get("status") or {}).get("type") or {}).get("state", "pre")
         soon = parse_time(e["date"]) - dt.datetime.now(dt.timezone.utc) <= LINEUP_BEFORE
         lineup = espn_lineup(code, e["id"]) if state == "in" or (state == "pre" and soon) else None
@@ -685,7 +805,7 @@ def foot_league(today, history, league, code):
             leaders = espn_leaders(code)          # repli : top 50 des buteurs et passeurs du championnat
             if not leaders:
                 note(f"{league} : joueurs indisponibles aujourd'hui.")
-        rows.append(foot_match(e, league, table, league_gpg or 1.4, leaders, history, squads, lineup))
+        rows.append(foot_match(e, league, table, league_gpg or 1.4, leaders, history, squads, lineup, recents))
     return rows
 
 
@@ -739,7 +859,7 @@ def foot_players(squad, team_goals, lam):
     return rows
 
 
-def foot_match(e, league, table, league_gpg, leaders, history, squads=None, lineup=None):
+def foot_match(e, league, table, league_gpg, leaders, history, squads=None, lineup=None, recents=None):
     comp, H, A = competitors(e)
     kickoff = parse_time(e["date"])
     hid, aid = str(H["team"]["id"]), str(A["team"]["id"])
@@ -780,7 +900,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     team_rows, stats_from, thin, missing = {}, set(), [], []
     for side, tid, st, lam, name in (("h", hid, sh, lh, home), ("a", aid, sa, la, away)):
         if squads.get(side):
-            team_rows[side] = squad_rows(squads[side], lam, side, name, lineup.get(side), missing)
+            team_rows[side] = squad_rows(squads[side], lam, side, name, lineup.get(side), missing, (recents or {}).get(side))
             stats_from.add(squads[side]["league"])
             if max(p["apps"] for p in squads[side]["players"]) < 3:
                 thin.append(name)
@@ -1247,6 +1367,14 @@ def scorer_why(r, team):
     bits = []
     if r.get("apps"):
         bits.append(f"{plural(r.get('goals', 0), 'but')} et {plural(r.get('assists', 0), 'passe')} en {plural(r['apps'], 'match', 'matchs')}")
+    l10 = r.get("l10")
+    if l10 and l10.get("n"):
+        if not l10.get("gp"):
+            bits.append(f"absent de ses {l10['n']} derniers matchs")
+        elif r.get("sport") == "nhl" or "p_point" in r:
+            bits.append(f"forme : {plural(l10['g'] + l10['a'], 'point')} ({plural(l10['g'], 'but')}) sur ses {plural(l10['gp'], 'dernier match', 'derniers matchs')}")
+        else:
+            bits.append(f"forme : {plural(l10['g'], 'but')} et {plural(l10['a'], 'passe')} sur ses {plural(l10['gp'], 'dernier match', 'derniers matchs')}")
     if r.get("lineup") == "start":
         bits.append("titulaire")
     bits.append(f"{name} {'favori' if p_win >= 0.45 else 'annoncé gagnant'} ({pct(p_win)} %)")
@@ -1547,6 +1675,11 @@ def team_profile(abbr, season):
     prev_by_id = {p["playerId"]: p for p in prev.get("skaters", [])}
     last = last_lineup(abbr)
     dressed = last["skaters"] if last and last["skaters"] else None
+    try:
+        recent = nhl_recent(abbr)
+    except Exception:
+        recent = None
+    rec = (recent or {}).get("players") or {}
     skaters = []
     for p in cur.get("skaters", []):
         if dressed is not None and p["playerId"] not in dressed:
@@ -1556,12 +1689,15 @@ def team_profile(abbr, season):
         g = p.get("goals", 0) + q.get("goals", 0)
         a = p.get("assists", 0) + q.get("assists", 0)
         cg, ca, cgp = p.get("goals", 0), p.get("assists", 0), p.get("gamesPlayed", 0)
+        # forme : les 10 derniers matchs de l'équipe comptent une deuxième fois
+        rgp, rg, ra = rec.get(str(p["playerId"]), [0, 0, 0])
         skaters.append(dict(
             name=f"{p['firstName']['default']} {p['lastName']['default']}",
             pos=POSITIONS.get(p.get("positionCode"), ""),
             cur=f"{plural(cg, 'but')}, {plural(ca, 'passe')} en {cgp}", goals=cg, assists=ca, gp=cgp, pid=p["playerId"],
-            gpg=(g + 0.10 * 20) / (gp + 20), ppg=(g + a + 0.35 * 20) / (gp + 20),
-            apg=(a + 0.20 * 20) / (gp + 20), new=not q))
+            gpg=(g + rg + 0.10 * 20) / (gp + rgp + 20), ppg=(g + a + rg + ra + 0.35 * 20) / (gp + rgp + 20),
+            apg=(a + ra + 0.20 * 20) / (gp + rgp + 20), new=not q,
+            l10=dict(n=recent["games"], gp=rgp, g=rg, a=ra) if recent else None))
     return dict(skaters=skaters, goalies=cur.get("goalies", []),
                 prev_goals=sum(p.get("goals", 0) for p in prev.get("skaters", [])),
                 has_prev=bool(prev.get("skaters")), last=last)
@@ -1717,6 +1853,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         for p in prof["skaters"]:
             rows.append(dict(name=p["name"], pos=p["pos"], cur=p["cur"], new=p["new"], side=side, team=name,
                              goals=p["goals"], assists=p["assists"], gp=p["gp"], pid=p["pid"],
+                             l10=p.get("l10"),
                              p_goal=pct(1 - math.exp(-p["gpg"] * k)),
                              p_point=pct(1 - math.exp(-p["ppg"] * k)),
                              p_assist=pct(1 - math.exp(-p["apg"] * k))))
@@ -1883,9 +2020,11 @@ def main(now=None):
     SECOND_STATS.clear()
     SECOND_STATS.update(foot=[0, []], nhl=[0, []])
     load_squad_cache(today)
+    load_form()
     foot_rows = foot(today, history)
     save_squad_cache(today)
     nhl_rows = nhl(nhl_day, history)
+    save_form(today)
     cutoff = (today - dt.timedelta(days=400)).isoformat()
     history = {k: v for k, v in history.items() if v.get("date", "") >= cutoff}
     # pronostics : archivage avant match, puis vérification une fois le résultat connu
@@ -1897,7 +2036,7 @@ def main(now=None):
     stats["picks"] = picks_bilan(store, history)
     data = dict(generated=now.isoformat(timespec="minutes"), date=today.isoformat(), nhl_date=nhl_day.isoformat(),
                 foot=foot_rows, nhl=nhl_rows, selection=selection(foot_rows + nhl_rows), bilan=stats,
-                notes=NOTES[-12:], second=dict(
+                notes=NOTES[-12:], form=dict(FORM_STATS), second=dict(
                     foot=dict(ok=SECOND_STATS["foot"][0], missing=sorted(set(SECOND_STATS["foot"][1])),
                               status="ClubElo indisponible" if SECOND_STATS.get("foot_down") else "ok",
                               fetch={u: v for u, v in FETCH_LOG.items() if "clubelo" in u}),

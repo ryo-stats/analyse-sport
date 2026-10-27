@@ -662,8 +662,11 @@ function topScorer(m){
   const b = all.reduce((x, y) => y.p_goal > x.p_goal ? y : x);
   return `<p class="top">Buteur le plus probable du match : <b>${esc(b.name)}</b> (${esc(b.team)}) · ${b.p_goal} %</p>`;
 }
-const footSub = p => [p.pos, `${plural(p.goals, "but")}, ${plural(p.assists, "passe")}${p.apps ? " en " + plural(p.apps, "match") : ""}`].filter(Boolean).join(" · ");
-const nhlSub = p => `${p.pos} · ${p.cur}`;
+// forme sur les 10 derniers matchs de l'équipe (buts et passes), quand le robot a pu lire les feuilles de match
+const formSub = (p, nhl) => !p.l10 || !p.l10.n ? "" : !p.l10.gp ? `absent des ${p.l10.n} derniers matchs`
+  : nhl ? `${p.l10.n} derniers : ${plural(p.l10.g + p.l10.a, "pt")} (${p.l10.g} b)` : `${p.l10.n} derniers : ${p.l10.g} b, ${p.l10.a} p`;
+const footSub = p => [p.pos, `${plural(p.goals, "but")}, ${plural(p.assists, "passe")}${p.apps ? " en " + plural(p.apps, "match") : ""}`, formSub(p, false)].filter(Boolean).join(" · ");
+const nhlSub = p => [p.pos, p.cur, formSub(p, true)].filter(Boolean).join(" · ");
 
 // ---- liste des matchs : une ligne par match, l'analyse se déplie au clic
 const OPEN = new Set();

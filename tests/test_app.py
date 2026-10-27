@@ -170,6 +170,7 @@ class AppTest(unittest.TestCase):
         app.CACHE_FILE = os.path.join(self.tmp, "squads.json")
         app.PICKS_FILE = os.path.join(self.tmp, "picks.json")
         app.LIVE_FILE = os.path.join(self.tmp, "live.json")
+        app.FORM_FILE = os.path.join(self.tmp, "form.json")
         app.get_json = fake_get_json
         app.get_text = fake_get_text
         app.time.sleep = lambda s: None
@@ -212,6 +213,30 @@ class AppTest(unittest.TestCase):
         self.assertAlmostEqual(h, 0.07, delta=0.002)
         self.assertAlmostEqual(a, 0.83, delta=0.002)
         self.assertLess(lh + la, 5.5)                  # la solution à 8 buts par match est écartée
+
+    def test_recent_form_counts_in_player_chances(self):
+        # feuille de match ESPN : seuls les joueurs entrés en jeu comptent
+        doc = {"rosters": [{"team": {"id": "7"}, "roster": [
+            {"athlete": {"id": "1"}, "starter": True, "stats": [{"name": "totalGoals", "value": 2}, {"name": "goalAssists", "value": 0}]},
+            {"athlete": {"id": "2"}, "starter": False, "subbedIn": True, "stats": [{"name": "totalGoals", "value": 0}, {"name": "goalAssists", "value": 1}]},
+            {"athlete": {"id": "3"}, "starter": False, "stats": []}]}]}
+        self.assertEqual(app.summary_players(doc), {"7": {"1": [2, 0], "2": [0, 1]}})
+        recs = [dict(teams={"7": {"1": [1, 0], "2": [0, 1], "4": [0, 0], "5": [0, 0], "6": [0, 0]}})] * 6
+        recent = app.recent_of("foot", recs, "7")
+        self.assertEqual((recent["games"], recent["goals"], recent["players"]["1"]), (6, 6, [6, 6, 0]))
+        players = [dict(name=f"J{i}", pos="F", apps=8, minutes=700, goals=g, assists=1, pid=str(i)) for i, g in
+                   ((1, 2), (2, 2), (3, 2), (4, 1), (5, 1), (6, 1))]
+        squad = dict(players=players, league="fra.1", season=2026)
+        base = {r["name"]: r for r in app.squad_rows(squad, 1.6, "h", "Lyon")}
+        form = {r["name"]: r for r in app.squad_rows(squad, 1.6, "h", "Lyon", recent=recent)}
+        self.assertGreater(form["J1"]["p_goal"], base["J1"]["p_goal"])      # en forme : plus de chances
+        self.assertLess(form["J3"]["p_goal"], base["J3"]["p_goal"] / 2)     # absent des 6 derniers matchs
+        self.assertEqual(form["J1"]["l10"], dict(n=6, gp=6, g=6, a=0))
+        self.assertIn("absent de ses 6 derniers matchs", app.scorer_why(form["J3"], ("Lyon", 0.5, 1.6)))
+        # feuilles de match qui ne correspondent pas à l'effectif : la forme est ignorée
+        odd = app.recent_of("foot", [dict(teams={"7": {"99": [1, 0]}})] * 6, "7")
+        self.assertEqual(app.squad_rows(squad, 1.6, "h", "Lyon", recent=odd)[0]["p_goal"],
+                         app.squad_rows(squad, 1.6, "h", "Lyon")[0]["p_goal"])
 
     def test_goal_line_separates_open_and_closed_games(self):
         # même favori (1N2 identique), mais le bookmaker voit un match ouvert (A) ou fermé (B)
