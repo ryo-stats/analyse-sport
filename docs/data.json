@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T02:23+01:00",
+ "generated": "2026-10-27T02:35+01:00",
  "date": "2026-10-27",
  "nhl_date": "2026-10-26",
  "foot": [
@@ -17,30 +17,24 @@
    "form_a": "NVVVN",
    "rank_h": 14,
    "rank_a": 2,
-   "pH": 30,
-   "pD": 27,
-   "pA": 44,
-   "source": "Cotes DraftKings (vainqueur et ligne de 2,5 buts)",
-   "odds": {
-    "h": 3.1,
-    "d": 3.45,
-    "a": 2.1,
-    "by": "DraftKings"
-   },
-   "xgH": 1.34,
-   "xgA": 1.66,
+   "pH": 17,
+   "pD": 20,
+   "pA": 63,
+   "source": "Analyse maison : buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 0.97,
+   "xgA": 2.06,
    "scores": [
-    "1-1",
-    "1-2",
-    "0-1"
+    "0-2",
+    "0-1",
+    "1-2"
    ],
    "scorep": [
-    11,
-    9,
-    8
+    10,
+    10,
+    10
    ],
-   "over25": 57,
-   "btts": 60,
+   "over25": 58,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Vasilije Adzic",
@@ -56,8 +50,8 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 31,
+     "p_goal": 17,
+     "p_dec": 24,
      "pid": "344917",
      "stats_league": "ita.1",
      "season": 2026
@@ -76,8 +70,8 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 22,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "173817",
      "stats_league": "ita.1",
      "season": 2026
@@ -96,8 +90,8 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 16,
+     "p_goal": 12,
+     "p_dec": 12,
      "pid": "291729",
      "stats_league": "ita.1",
      "season": 2026
@@ -116,8 +110,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 9,
+     "p_dec": 11,
      "pid": "283375",
      "stats_league": "ita.1",
      "season": 2026
@@ -136,8 +130,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 12,
+     "p_goal": 8,
+     "p_dec": 9,
      "pid": "286929",
      "stats_league": "ita.1",
      "season": 2026
@@ -156,8 +150,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 11,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "284212",
      "stats_league": "ita.1",
      "season": 2026
@@ -178,8 +172,8 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 29,
+     "p_goal": 30,
+     "p_dec": 34,
      "pid": "250850",
      "stats_league": "ita.1",
      "season": 2026
@@ -198,8 +192,8 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 20,
-     "p_dec": 34,
+     "p_goal": 24,
+     "p_dec": 41,
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026
@@ -218,9 +212,29 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 22,
+     "p_goal": 24,
+     "p_dec": 26,
      "pid": "291550",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Matteo Cancellieri",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lazio",
+     "goals": 1,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 14,
+     "p_dec": 16,
+     "pid": "308944",
      "stats_league": "ita.1",
      "season": 2026
     },
@@ -238,8 +252,8 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 11,
-     "p_dec": 35,
+     "p_goal": 13,
+     "p_dec": 42,
      "pid": "204669",
      "stats_league": "ita.1",
      "season": 2026
@@ -258,111 +272,85 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 15,
+     "p_goal": 13,
+     "p_dec": 19,
      "pid": "282228",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Matteo Cancellieri",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Lazio",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 11,
-     "p_dec": 13,
-     "pid": "308944",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
     "Sassuolo : 14e, 8 points, 12 buts marqués et 16 encaissés en 8 matchs.",
-    "Lazio : 2e, 22 points, 16 buts marqués et 5 encaissés en 8 matchs."
+    "Lazio : 2e, 22 points, 16 buts marqués et 5 encaissés en 8 matchs.",
+    "Sassuolo : 12 buts marqués et 16 encaissés sur ses 8 derniers matchs de championnat.",
+    "Lazio : 16 buts marqués et 5 encaissés sur ses 8 derniers matchs de championnat."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "reading": "Lazio est nettement favori (63 %).",
    "stakes": "Lazio (2e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Lazio",
-     "p": 0.7037,
-     "prob": 70,
-     "fair": 1.42,
-     "stars": 4
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Lazio",
-     "p": 0.4374,
-     "prob": 44,
-     "fair": 2.29,
-     "stars": 1
+     "p": 0.6268,
+     "prob": 63,
+     "fair": 1.6,
+     "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0919,
-     "prob": 9,
-     "fair": 10.88,
+     "label": "Score exact 0-2",
+     "p": 0.1029,
+     "prob": 10,
+     "fair": 9.72,
      "stars": 1,
-     "value": "1-2"
+     "value": "0-2"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3509,
-     "prob": 35,
-     "fair": 2.85,
+     "market": "htft_a",
+     "label": "Lazio mène à la mi-temps et gagne le match",
+     "p": 0.4077,
+     "prob": 41,
+     "fair": 2.45,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_o25",
-      "label": "Lazio gagne et plus de 2,5 buts",
-      "p": 0.298,
-      "prob": 30,
-      "fair": 3.36,
+      "market": "a2",
+      "label": "Lazio gagne avec 2 buts d'écart ou plus",
+      "p": 0.3885,
+      "prob": 39,
+      "fair": 2.57,
       "stars": 1
      },
      {
-      "market": "htft_a",
-      "label": "Lazio mène à la mi-temps et gagne le match",
-      "p": 0.2743,
-      "prob": 27,
-      "fair": 3.65,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.3592,
+      "prob": 36,
+      "fair": 2.78,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Davide Frattesi marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
      "player": "Davide Frattesi",
      "team": "Lazio",
      "pid": "250850",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio"
+     "why": "3 buts et 0 passe en 8 matchs · Lazio favori (63 %) · 2,1 buts attendus pour Lazio"
     },
     "decisive": {
      "market": "dec",
      "label": "Davide Frattesi buteur ou passeur",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Davide Frattesi",
      "team": "Lazio",
@@ -374,10 +362,23 @@
      "pid": "250850",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio"
+     "why": "3 buts et 0 passe en 8 matchs · Lazio favori (63 %) · 2,1 buts attendus pour Lazio"
+    },
+    "held": {
+     "market": "N2",
+     "label": "Nul ou Lazio",
+     "p": 0.8317,
+     "prob": 83,
+     "fair": 1.2,
+     "stars": 5,
+     "note": "« Nul ou Lazio » : 83 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
-   "second": null,
+   "second": {
+    "src": "marché des paris",
+    "agree": false,
+    "note": "« Nul ou Lazio » : 83 % selon l'analyse, le marché des paris est nettement moins confiant"
+   },
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -398,30 +399,24 @@
    "form_a": "NDNVV",
    "rank_h": 3,
    "rank_a": 9,
-   "pH": 70,
+   "pH": 71,
    "pD": 20,
-   "pA": 11,
-   "source": "Cotes DraftKings (vainqueur et ligne de 2,5 buts)",
-   "odds": {
-    "h": 1.32,
-    "d": 4.7,
-    "a": 8.5,
-    "by": "DraftKings"
-   },
-   "xgH": 2.23,
-   "xgA": 0.79,
+   "pA": 9,
+   "source": "Analyse maison : buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 1.95,
+   "xgA": 0.54,
    "scores": [
-    "2-0",
     "1-0",
-    "2-1"
+    "2-0",
+    "3-0"
    ],
    "scorep": [
-    12,
-    11,
+    16,
+    16,
     10
    ],
-   "over25": 58,
-   "btts": 49,
+   "over25": 46,
+   "btts": 36,
    "squad_h": [
     {
      "name": "Donyell Malen",
@@ -437,8 +432,8 @@
       "g": 6,
       "a": 1
      },
-     "p_goal": 47,
-     "p_dec": 54,
+     "p_goal": 43,
+     "p_dec": 49,
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026
@@ -457,8 +452,8 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 30,
-     "p_dec": 38,
+     "p_goal": 26,
+     "p_dec": 34,
      "pid": "323974",
      "stats_league": "ita.1",
      "season": 2026
@@ -477,8 +472,8 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 22,
+     "p_goal": 17,
+     "p_dec": 20,
      "pid": "285226",
      "stats_league": "ita.1",
      "season": 2026
@@ -497,8 +492,8 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 21,
+     "p_goal": 17,
+     "p_dec": 19,
      "pid": "360235",
      "stats_league": "ita.1",
      "season": 2026
@@ -517,8 +512,8 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 19,
+     "p_goal": 16,
+     "p_dec": 17,
      "pid": "271555",
      "stats_league": "ita.1",
      "season": 2026
@@ -537,8 +532,8 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 21,
+     "p_goal": 10,
+     "p_dec": 19,
      "pid": "250284",
      "stats_league": "ita.1",
      "season": 2026
@@ -559,8 +554,8 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 31,
-     "p_dec": 33,
+     "p_goal": 22,
+     "p_dec": 24,
      "pid": "290545",
      "stats_league": "ita.1",
      "season": 2026
@@ -579,8 +574,8 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 22,
+     "p_goal": 9,
+     "p_dec": 16,
      "pid": "418819",
      "stats_league": "ita.1",
      "season": 2026
@@ -599,8 +594,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 14,
+     "p_goal": 7,
+     "p_dec": 10,
      "pid": "6729",
      "stats_league": "ita.1",
      "season": 2026
@@ -620,7 +615,7 @@
       "a": 2
      },
      "p_goal": 2,
-     "p_dec": 21,
+     "p_dec": 15,
      "pid": "272745",
      "stats_league": "ita.1",
      "season": 2026
@@ -640,114 +635,116 @@
       "a": 0
      },
      "p_goal": 2,
-     "p_dec": 7,
+     "p_dec": 5,
      "pid": "202332",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Alessandro Deiola",
+     "name": "Jacopo Fazzini",
      "pos": "Milieu",
      "side": "a",
      "team": "Cagliari",
      "goals": 0,
-     "assists": 0,
-     "apps": 8,
+     "assists": 1,
+     "apps": 5,
      "l10": {
       "n": 8,
-      "gp": 8,
+      "gp": 5,
       "g": 0,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 2,
-     "p_dec": 6,
-     "pid": "186437",
+     "p_goal": 1,
+     "p_dec": 7,
+     "pid": "333938",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
     "AS Roma : 3e, 18 points, 19 buts marqués et 6 encaissés en 8 matchs.",
-    "Cagliari : 9e, 13 points, 6 buts marqués et 9 encaissés en 8 matchs."
+    "Cagliari : 9e, 13 points, 6 buts marqués et 9 encaissés en 8 matchs.",
+    "AS Roma : 19 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat.",
+    "Cagliari : 6 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat."
    ],
-   "reading": "AS Roma est nettement favori (70 %).",
+   "reading": "AS Roma est nettement favori (71 %).",
    "stakes": "AS Roma (3e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "AS Roma ou nul",
-     "p": 0.8917,
-     "prob": 89,
-     "fair": 1.12,
+     "p": 0.9069,
+     "prob": 91,
+     "fair": 1.1,
      "stars": 5
     },
     "winner": {
      "market": "1",
      "label": "Victoire AS Roma",
-     "p": 0.6959,
-     "prob": 70,
-     "fair": 1.44,
-     "stars": 3
+     "p": 0.7111,
+     "prob": 71,
+     "fair": 1.41,
+     "stars": 4
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.122,
-     "prob": 12,
-     "fair": 8.2,
+     "label": "Score exact 1-0",
+     "p": 0.161,
+     "prob": 16,
+     "fair": 6.21,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_nil",
-     "label": "AS Roma gagne sans encaisser de but",
-     "p": 0.4068,
-     "prob": 41,
-     "fair": 2.46,
+     "market": "wh_o25",
+     "label": "AS Roma gagne et plus de 2,5 buts",
+     "p": 0.3928,
+     "prob": 39,
+     "fair": 2.55,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "scw",
       "label": "Donyell Malen marque et AS Roma gagne",
-      "p": 0.4019,
-      "prob": 40,
-      "fair": 2.49,
+      "p": 0.3807,
+      "prob": 38,
+      "fair": 2.63,
       "stars": 1,
       "player": "Donyell Malen",
       "team": "AS Roma",
       "side": "h"
      },
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.3553,
-      "prob": 36,
-      "fair": 2.81,
+      "market": "wh_by1",
+      "label": "AS Roma gagne d'un seul but",
+      "p": 0.2628,
+      "prob": 26,
+      "fair": 3.81,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Donyell Malen marque",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.43,
+     "prob": 43,
+     "fair": 2.33,
      "stars": 1,
      "player": "Donyell Malen",
      "team": "AS Roma",
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma"
+     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (71 %) · 2,0 buts attendus pour AS Roma"
     },
     "decisive": {
      "market": "dec",
      "label": "Donyell Malen buteur ou passeur",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2,
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
      "player": "Donyell Malen",
      "team": "AS Roma",
      "base": [
@@ -758,10 +755,13 @@
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma"
+     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (71 %) · 2,0 buts attendus pour AS Roma"
     }
    },
-   "second": null,
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -782,30 +782,24 @@
    "form_a": "NVVDN",
    "rank_h": 8,
    "rank_a": 5,
-   "pH": 20,
-   "pD": 25,
-   "pA": 55,
-   "source": "Cotes DraftKings (vainqueur et ligne de 2,5 buts)",
-   "odds": {
-    "h": 4.6,
-    "d": 3.75,
-    "a": 1.69,
-    "by": "DraftKings"
-   },
-   "xgH": 1.08,
-   "xgA": 1.88,
+   "pH": 33,
+   "pD": 26,
+   "pA": 41,
+   "source": "Analyse maison : buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 1.24,
+   "xgA": 1.41,
    "scores": [
     "1-1",
-    "1-2",
-    "0-1"
+    "0-1",
+    "1-0"
    ],
    "scorep": [
+    12,
     10,
-    10,
-    10
+    9
    ],
-   "over25": 57,
-   "btts": 56,
+   "over25": 49,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Ché Adams",
@@ -821,8 +815,8 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 22,
+     "p_goal": 23,
+     "p_dec": 24,
      "pid": "213725",
      "stats_league": "ita.1",
      "season": 2026
@@ -841,8 +835,8 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 23,
+     "p_goal": 18,
+     "p_dec": 26,
      "pid": "189974",
      "stats_league": "ita.1",
      "season": 2026
@@ -861,8 +855,8 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 13,
+     "p_goal": 15,
+     "p_dec": 15,
      "pid": "245538",
      "stats_league": "ita.1",
      "season": 2026
@@ -881,29 +875,9 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 11,
+     "p_goal": 9,
+     "p_dec": 13,
      "pid": "206378",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Rafik Belghali",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 3,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 3
-     },
-     "p_goal": 7,
-     "p_dec": 23,
-     "pid": "364590",
      "stats_league": "ita.1",
      "season": 2026
     },
@@ -921,9 +895,29 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 7,
-     "p_dec": 16,
+     "p_goal": 8,
+     "p_dec": 18,
      "pid": "210392",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Kian Fitz-Jim",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 11,
+     "pid": "305589",
      "stats_league": "ita.1",
      "season": 2026
     }
@@ -943,8 +937,8 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 45,
-     "p_dec": 47,
+     "p_goal": 36,
+     "p_dec": 38,
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026
@@ -963,8 +957,8 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 33,
+     "p_goal": 18,
+     "p_dec": 26,
      "pid": "364742",
      "stats_league": "ita.1",
      "season": 2026
@@ -983,8 +977,8 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 21,
-     "p_dec": 39,
+     "p_goal": 16,
+     "p_dec": 31,
      "pid": "337970",
      "stats_league": "ita.1",
      "season": 2026
@@ -1003,29 +997,9 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 20,
-     "p_dec": 30,
+     "p_goal": 15,
+     "p_dec": 24,
      "pid": "311475",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Jacobo Ramón",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Como",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 11,
-     "p_dec": 13,
-     "pid": "380318",
      "stats_league": "ita.1",
      "season": 2026
     },
@@ -1043,91 +1017,113 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 20,
+     "p_goal": 8,
+     "p_dec": 15,
      "pid": "317233",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Jacobo Ramón",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Como",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 10,
+     "pid": "380318",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
     "Torino : 8e, 13 points, 13 buts marqués et 11 encaissés en 8 matchs.",
-    "Como : 5e, 17 points, 14 buts marqués et 7 encaissés en 8 matchs."
+    "Como : 5e, 17 points, 14 buts marqués et 7 encaissés en 8 matchs.",
+    "Torino : 13 buts marqués et 11 encaissés sur ses 8 derniers matchs de championnat.",
+    "Como : 14 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat."
    ],
-   "reading": "Como est favori sans écraser le match (55 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Como (5e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Como",
-     "p": 0.7979,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 4
+     "p": 0.669,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3
     },
     "winner": {
      "market": "2",
      "label": "Victoire Como",
-     "p": 0.5501,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2
+     "p": 0.4089,
+     "prob": 41,
+     "fair": 2.45,
+     "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0989,
+     "label": "Score exact 0-1",
+     "p": 0.0997,
      "prob": 10,
-     "fair": 10.11,
+     "fair": 10.03,
      "stars": 1,
-     "value": "1-2"
+     "value": "0-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Como gagne et plus de 2,5 buts",
-     "p": 0.3726,
-     "prob": 37,
-     "fair": 2.68,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.2745,
+     "prob": 27,
+     "fair": 3.64,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_a",
       "label": "Como mène à la mi-temps et gagne le match",
-      "p": 0.355,
-      "prob": 36,
-      "fair": 2.82,
+      "p": 0.2424,
+      "prob": 24,
+      "fair": 4.13,
       "stars": 1
      },
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.3457,
-      "prob": 35,
-      "fair": 2.89,
+      "market": "wa_o25",
+      "label": "Como gagne et plus de 2,5 buts",
+      "p": 0.2391,
+      "prob": 24,
+      "fair": 4.18,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Anastasios Douvikas marque",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
      "player": "Anastasios Douvikas",
      "team": "Como",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como"
+     "why": "5 buts et 0 passe en 8 matchs · Como annoncé gagnant (41 %) · 1,4 but attendu pour Como"
     },
     "decisive": {
      "market": "dec",
      "label": "Anastasios Douvikas buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Anastasios Douvikas",
      "team": "Como",
@@ -1139,10 +1135,13 @@
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como"
+     "why": "5 buts et 0 passe en 8 matchs · Como annoncé gagnant (41 %) · 1,4 but attendu pour Como"
     }
    },
-   "second": null,
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -1169,12 +1168,6 @@
    "pD": 22,
    "pA": 34,
    "source": "Cotes DraftKings (vainqueur final)",
-   "odds": {
-    "h": 1.74,
-    "a": 2.14,
-    "by": "DraftKings",
-    "total": 5.5
-   },
    "xgH": 3.26,
    "xgA": 2.94,
    "total": 6.2,
@@ -1663,11 +1656,7 @@
      "why": "9 buts et 6 passes en 13 matchs · forme : 15 points (9 buts) sur ses 10 derniers matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     }
    },
-   "second": {
-    "src": "Modèle xG (données MoneyPuck.com)",
-    "winH": 54,
-    "agree": true
-   },
+   "second": null,
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
@@ -1691,12 +1680,6 @@
    "pD": 22,
    "pA": 44,
    "source": "Cotes DraftKings (vainqueur final)",
-   "odds": {
-    "h": 2.14,
-    "a": 1.74,
-    "by": "DraftKings",
-    "total": 6.5
-   },
    "xgH": 2.94,
    "xgA": 3.26,
    "total": 6.2,
@@ -2185,11 +2168,7 @@
      "why": "9 buts et 10 passes en 13 matchs · forme : 18 points (8 buts) sur ses 10 derniers matchs · Toronto Maple Leafs favori (55 %) · 3,3 buts attendus pour Toronto Maple Leafs"
     }
    },
-   "second": {
-    "src": "Modèle xG (données MoneyPuck.com)",
-    "winH": 50,
-    "agree": true
-   },
+   "second": null,
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
@@ -2207,29 +2186,23 @@
    "away": "Detroit Red Wings",
    "rec_h": "8-2-1 · 1e Pacific · 1 défaite de suite",
    "rec_a": "4-4-3 · 7e Atlantic · 1 défaite de suite",
-   "winH": 62,
-   "winA": 38,
-   "pH": 49,
-   "pD": 22,
-   "pA": 29,
-   "source": "Cotes DraftKings (vainqueur final)",
-   "odds": {
-    "h": 1.56,
-    "a": 2.5,
-    "by": "DraftKings",
-    "total": 6.5
-   },
-   "xgH": 3.82,
-   "xgA": 3.06,
-   "total": 6.9,
+   "winH": 56,
+   "winA": 44,
+   "pH": 47,
+   "pD": 17,
+   "pA": 36,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.16,
+   "xgA": 2.81,
+   "total": 6.0,
    "scores": [
     "3-2",
-    "4-3",
+    "2-3",
     "4-2"
    ],
    "scorep": [
-    4,
-    4,
+    5,
+    5,
     4
    ],
    "goalie_h": {
@@ -2262,9 +2235,9 @@
       "g": 12,
       "a": 10
      },
-     "p_goal": 46,
-     "p_point": 78,
-     "p_assist": 59
+     "p_goal": 40,
+     "p_point": 71,
+     "p_assist": 52
     },
     {
      "name": "Connor McDavid",
@@ -2283,9 +2256,9 @@
       "g": 8,
       "a": 23
      },
-     "p_goal": 44,
-     "p_point": 84,
-     "p_assist": 71
+     "p_goal": 38,
+     "p_point": 78,
+     "p_assist": 64
     },
     {
      "name": "Zach Hyman",
@@ -2304,9 +2277,9 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 35,
-     "p_point": 53,
-     "p_assist": 27
+     "p_goal": 30,
+     "p_point": 46,
+     "p_assist": 23
     },
     {
      "name": "Evan Bouchard",
@@ -2325,9 +2298,9 @@
       "g": 4,
       "a": 12
      },
-     "p_goal": 26,
-     "p_point": 70,
-     "p_assist": 60
+     "p_goal": 22,
+     "p_point": 63,
+     "p_assist": 53
     },
     {
      "name": "Vasily Podkolzin",
@@ -2346,9 +2319,9 @@
       "g": 5,
       "a": 5
      },
-     "p_goal": 25,
-     "p_point": 44,
-     "p_assist": 24
+     "p_goal": 21,
+     "p_point": 38,
+     "p_assist": 21
     },
     {
      "name": "Ryan Nugent-Hopkins",
@@ -2367,9 +2340,9 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 24,
-     "p_point": 53,
-     "p_assist": 38
+     "p_goal": 20,
+     "p_point": 46,
+     "p_assist": 32
     }
    ],
    "squad_a": [
@@ -2390,9 +2363,9 @@
       "g": 6,
       "a": 6
      },
-     "p_goal": 38,
-     "p_point": 63,
-     "p_assist": 40
+     "p_goal": 35,
+     "p_point": 60,
+     "p_assist": 38
     },
     {
      "name": "Dylan Larkin",
@@ -2411,9 +2384,9 @@
       "g": 1,
       "a": 4
      },
-     "p_goal": 30,
-     "p_point": 55,
-     "p_assist": 35
+     "p_goal": 28,
+     "p_point": 52,
+     "p_assist": 32
     },
     {
      "name": "Lucas Raymond",
@@ -2432,9 +2405,9 @@
       "g": 3,
       "a": 6
      },
-     "p_goal": 25,
-     "p_point": 59,
-     "p_assist": 44
+     "p_goal": 23,
+     "p_point": 56,
+     "p_assist": 42
     },
     {
      "name": "Viktor Arvidsson",
@@ -2453,9 +2426,9 @@
       "g": 4,
       "a": 4
      },
-     "p_goal": 23,
-     "p_point": 45,
-     "p_assist": 27
+     "p_goal": 21,
+     "p_point": 42,
+     "p_assist": 25
     },
     {
      "name": "Justin Faulk",
@@ -2474,30 +2447,30 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 18,
-     "p_point": 37,
-     "p_assist": 21
+     "p_goal": 17,
+     "p_point": 34,
+     "p_assist": 20
     },
     {
-     "name": "Emmitt Finnie",
-     "pos": "Centre",
-     "cur": "4 buts, 3 passes en 11",
-     "new": false,
+     "name": "William Wallinder",
+     "pos": "Défenseur",
+     "cur": "2 buts, 1 passe en 6",
+     "new": true,
      "side": "a",
      "team": "Detroit Red Wings",
-     "goals": 4,
-     "assists": 3,
-     "gp": 11,
-     "pid": 8484471,
+     "goals": 2,
+     "assists": 1,
+     "gp": 6,
+     "pid": 8482171,
      "l10": {
       "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 3
+      "gp": 6,
+      "g": 2,
+      "a": 1
      },
-     "p_goal": 18,
-     "p_point": 36,
-     "p_assist": 21
+     "p_goal": 17,
+     "p_point": 33,
+     "p_assist": 17
     }
    ],
    "best_h": [
@@ -2518,9 +2491,9 @@
       "g": 8,
       "a": 23
      },
-     "p_goal": 44,
-     "p_point": 84,
-     "p_assist": 71
+     "p_goal": 38,
+     "p_point": 78,
+     "p_assist": 64
     },
     {
      "name": "Leon Draisaitl",
@@ -2539,9 +2512,9 @@
       "g": 12,
       "a": 10
      },
-     "p_goal": 46,
-     "p_point": 78,
-     "p_assist": 59
+     "p_goal": 40,
+     "p_point": 71,
+     "p_assist": 52
     },
     {
      "name": "Evan Bouchard",
@@ -2560,9 +2533,9 @@
       "g": 4,
       "a": 12
      },
-     "p_goal": 26,
-     "p_point": 70,
-     "p_assist": 60
+     "p_goal": 22,
+     "p_point": 63,
+     "p_assist": 53
     }
    ],
    "best_a": [
@@ -2583,9 +2556,9 @@
       "g": 6,
       "a": 6
      },
-     "p_goal": 38,
-     "p_point": 63,
-     "p_assist": 40
+     "p_goal": 35,
+     "p_point": 60,
+     "p_assist": 38
     },
     {
      "name": "Lucas Raymond",
@@ -2604,9 +2577,9 @@
       "g": 3,
       "a": 6
      },
-     "p_goal": 25,
-     "p_point": 59,
-     "p_assist": 44
+     "p_goal": 23,
+     "p_point": 56,
+     "p_assist": 42
     },
     {
      "name": "Dylan Larkin",
@@ -2625,9 +2598,9 @@
       "g": 1,
       "a": 4
      },
-     "p_goal": 30,
-     "p_point": 55,
-     "p_assist": 35
+     "p_goal": 28,
+     "p_point": 52,
+     "p_assist": 32
     }
    ],
    "ctx": [
@@ -2636,72 +2609,79 @@
     "Aucune des deux équipes n'a joué hier.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "Edmonton Oilers est favori (62 % en comptant la prolongation).",
+   "reading": "Edmonton Oilers est favori (56 % en comptant la prolongation).",
    "stakes": "Début de saison (11 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892584",
    "picks": {
     "main": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.6839,
-     "prob": 68,
-     "fair": 1.46,
-     "stars": 3
+     "market": "win_h",
+     "label": "Victoire Edmonton Oilers",
+     "p": 0.5583,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2
     },
     "winner": {
      "market": "win_h",
      "label": "Victoire Edmonton Oilers",
-     "p": 0.6164,
-     "prob": 62,
-     "fair": 1.62,
-     "stars": 3
+     "p": 0.5583,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2
     },
     "fun": {
-     "market": "wh_o65",
-     "label": "Edmonton Oilers gagne et plus de 6,5 buts",
-     "p": 0.3631,
-     "prob": 36,
-     "fair": 2.75,
+     "market": "h2",
+     "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
+     "p": 0.3521,
+     "prob": 35,
+     "fair": 2.84,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "h3",
-      "label": "Edmonton Oilers gagne par 3 buts d'écart ou plus",
-      "p": 0.2606,
-      "prob": 26,
-      "fair": 3.84,
+      "market": "wh_o55",
+      "label": "Edmonton Oilers gagne et plus de 5,5 buts",
+      "p": 0.3113,
+      "prob": 31,
+      "fair": 3.21,
+      "stars": 1
+     },
+     {
+      "market": "wh_o65",
+      "label": "Edmonton Oilers gagne et plus de 6,5 buts",
+      "p": 0.2472,
+      "prob": 25,
+      "fair": 4.05,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "Connor McDavid : au moins 1 point",
-     "p": 0.84,
-     "prob": 84,
-     "fair": 1.19,
-     "stars": 5,
+     "p": 0.78,
+     "prob": 78,
+     "fair": 1.28,
+     "stars": 4,
      "player": "Connor McDavid",
      "pid": 8478402,
      "team": "Edmonton Oilers",
-     "why": "8 buts et 25 passes en 11 matchs · forme : 31 points (8 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers"
+     "why": "8 buts et 25 passes en 11 matchs · forme : 31 points (8 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (56 %) · 3,2 buts attendus pour Edmonton Oilers"
     },
     "scorer": {
      "market": "goal",
      "label": "Leon Draisaitl marque",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
      "player": "Leon Draisaitl",
      "pid": 8477934,
      "team": "Edmonton Oilers",
-     "why": "12 buts et 11 passes en 11 matchs · forme : 22 points (12 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers"
+     "why": "12 buts et 11 passes en 11 matchs · forme : 22 points (12 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (56 %) · 3,2 buts attendus pour Edmonton Oilers"
     }
    },
    "second": {
-    "src": "Modèle xG (données MoneyPuck.com)",
-    "winH": 56,
+    "src": "marché des paris",
     "agree": true
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
@@ -2714,9 +2694,9 @@
   {
    "market": "1N",
    "label": "AS Roma ou nul",
-   "p": 0.8917,
-   "prob": 89,
-   "fair": 1.12,
+   "p": 0.9069,
+   "prob": 91,
+   "fair": 1.1,
    "stars": 5,
    "kind": "main",
    "id": "foot-401874780",
@@ -2734,14 +2714,14 @@
   {
    "market": "point",
    "label": "Connor McDavid : au moins 1 point",
-   "p": 0.84,
-   "prob": 84,
-   "fair": 1.19,
-   "stars": 5,
+   "p": 0.78,
+   "prob": 78,
+   "fair": 1.28,
+   "stars": 4,
    "player": "Connor McDavid",
    "pid": 8478402,
    "team": "Edmonton Oilers",
-   "why": "8 buts et 25 passes en 11 matchs · forme : 31 points (8 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers",
+   "why": "8 buts et 25 passes en 11 matchs · forme : 31 points (8 buts) sur ses 10 derniers matchs · Edmonton Oilers favori (56 %) · 3,2 buts attendus pour Edmonton Oilers",
    "kind": "player",
    "id": "nhl-2026020187",
    "sport": "nhl",
@@ -2758,10 +2738,10 @@
   {
    "market": "N2",
    "label": "Nul ou Como",
-   "p": 0.7979,
-   "prob": 80,
-   "fair": 1.25,
-   "stars": 4,
+   "p": 0.669,
+   "prob": 67,
+   "fair": 1.49,
+   "stars": 3,
    "kind": "main",
    "id": "foot-401874786",
    "sport": "foot",
@@ -2776,32 +2756,12 @@
    "logo_a_dark": null
   },
   {
-   "market": "N2",
-   "label": "Nul ou Lazio",
-   "p": 0.7037,
-   "prob": 70,
-   "fair": 1.42,
-   "stars": 4,
-   "kind": "main",
-   "id": "foot-401874980",
-   "sport": "foot",
-   "league": "Serie A",
-   "time": "18:30",
-   "kickoff": "2026-10-27T17:30:00+00:00",
-   "home": "Sassuolo",
-   "away": "Lazio",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
-   "logo_h_dark": null,
-   "logo_a_dark": null
-  },
-  {
-   "market": "o55",
-   "label": "Plus de 5,5 buts",
-   "p": 0.6839,
-   "prob": 68,
-   "fair": 1.46,
-   "stars": 3,
+   "market": "win_h",
+   "label": "Victoire Edmonton Oilers",
+   "p": 0.5583,
+   "prob": 56,
+   "fair": 1.79,
+   "stars": 2,
    "kind": "main",
    "id": "nhl-2026020187",
    "sport": "nhl",
@@ -2818,16 +2778,16 @@
   {
    "market": "scorer",
    "label": "Donyell Malen marque",
-   "p": 0.47,
-   "prob": 47,
-   "fair": 2.13,
+   "p": 0.43,
+   "prob": 43,
+   "fair": 2.33,
    "stars": 1,
    "player": "Donyell Malen",
    "team": "AS Roma",
    "pid": "259481",
    "stats_league": "ita.1",
    "season": 2026,
-   "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma",
+   "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (71 %) · 2,0 buts attendus pour AS Roma",
    "kind": "player",
    "id": "foot-401874780",
    "sport": "foot",
@@ -2844,16 +2804,16 @@
   {
    "market": "scorer",
    "label": "Anastasios Douvikas marque",
-   "p": 0.45,
-   "prob": 45,
-   "fair": 2.22,
+   "p": 0.36,
+   "prob": 36,
+   "fair": 2.78,
    "stars": 1,
    "player": "Anastasios Douvikas",
    "team": "Como",
    "pid": "262071",
    "stats_league": "ita.1",
    "season": 2026,
-   "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como",
+   "why": "5 buts et 0 passe en 8 matchs · Como annoncé gagnant (41 %) · 1,4 but attendu pour Como",
    "kind": "player",
    "id": "foot-401874786",
    "sport": "foot",
@@ -2870,16 +2830,16 @@
   {
    "market": "scorer",
    "label": "Davide Frattesi marque",
-   "p": 0.25,
-   "prob": 25,
-   "fair": 4.0,
+   "p": 0.3,
+   "prob": 30,
+   "fair": 3.33,
    "stars": 1,
    "player": "Davide Frattesi",
    "team": "Lazio",
    "pid": "250850",
    "stats_league": "ita.1",
    "season": 2026,
-   "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio",
+   "why": "3 buts et 0 passe en 8 matchs · Lazio favori (63 %) · 2,1 buts attendus pour Lazio",
    "kind": "player",
    "id": "foot-401874980",
    "sport": "foot",
@@ -2901,6 +2861,7 @@
    "fav_expected": 54,
    "brier": 0.53,
    "brier_naive": 0.667,
+   "vs_mkt": null,
    "bins": [
     {
      "range": "30-40 %",
@@ -2946,6 +2907,7 @@
    "fav_expected": 58,
    "brier": 0.461,
    "brier_naive": 0.5,
+   "vs_mkt": null,
    "bins": [
     {
      "range": "50-60 %",
@@ -15020,11 +14982,10 @@
  "second": {
   "foot": {
    "ok": 0,
-   "missing": [],
-   "status": "ClubElo indisponible",
-   "fetch": {
-    "http://api.clubelo.com/2026-10-27": "HTTP 502, 0 car., début : ''"
-   }
+   "elo": {
+    "ita.1": 0
+   },
+   "status": "Elo maison indisponible (résultats ESPN illisibles)"
   },
   "nhl": {
    "ok": 1,
