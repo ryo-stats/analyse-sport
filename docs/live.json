@@ -1,259 +1,434 @@
 {
- "generated": "2026-10-27T23:53+01:00",
- "date": "2026-10-27",
+ "generated": "2026-10-28T00:18+01:00",
+ "date": "2026-10-28",
  "matches": [
   {
-   "id": "foot-401874980",
+   "id": "foot-401874993",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-10-27T17:30:00+00:00",
+   "kickoff": "2026-10-28T17:30:00+00:00",
    "time": "18:30",
-   "home": "Sassuolo",
-   "away": "Lazio",
-   "state": "post",
-   "xgH": 1.13,
-   "xgA": 1.89,
-   "pH": 22,
-   "pD": 22,
-   "pA": 55,
-   "edate": "20261027",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Lazio",
-     "p": 0.7761,
-     "prob": 78,
-     "fair": 1.29,
-     "stars": 4
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Lazio",
-     "p": 0.5527,
-     "prob": 55,
-     "fair": 1.81,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0985,
-     "prob": 10,
-     "fair": 10.15,
-     "stars": 1,
-     "value": "1-2"
-    },
-    "fun": {
-     "market": "wa_o25",
-     "label": "Lazio gagne et plus de 2,5 buts",
-     "p": 0.3729,
-     "prob": 37,
-     "fair": 2.68,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Tijjani Noslin marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
-     "stars": 1,
-     "player": "Tijjani Noslin",
-     "team": "Lazio",
-     "pid": "323113",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 2 passes en 7 matchs · forme : 4 buts et 2 passes sur ses 8 derniers matchs · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1,
-     "player": "Tijjani Noslin",
-     "team": "Lazio",
-     "base": [
-      7,
-      2,
-      2
-     ],
-     "pid": "323113",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 2 passes en 7 matchs · forme : 4 buts et 2 passes sur ses 8 derniers matchs · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
-    }
-   }
-  },
-  {
-   "id": "foot-401874780",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-27T19:45:00+00:00",
-   "time": "20:45",
-   "home": "AS Roma",
-   "away": "Cagliari",
-   "state": "post",
-   "xgH": 1.98,
-   "xgA": 0.51,
-   "pH": 73,
-   "pD": 19,
-   "pA": 8,
-   "edate": "20261027",
+   "home": "Milan",
+   "away": "Bologna",
+   "state": "pre",
+   "xgH": 1.77,
+   "xgA": 0.73,
+   "pH": 62,
+   "pD": 23,
+   "pA": 15,
+   "edate": "20261028",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "AS Roma ou nul",
-     "p": 0.9154,
-     "prob": 92,
-     "fair": 1.09,
-     "stars": 5
+     "label": "Milan ou nul",
+     "p": 0.8515,
+     "prob": 85,
+     "fair": 1.17,
+     "stars": 5,
+     "why": "8 derniers matchs : Milan 16 marqués / 7 encaissés · Bologna 8 / 10"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire AS Roma",
-     "p": 0.7254,
-     "prob": 73,
-     "fair": 1.38,
-     "stars": 4
+     "label": "Victoire Milan",
+     "p": 0.6241,
+     "prob": 62,
+     "fair": 1.6,
+     "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1646,
-     "prob": 16,
-     "fair": 6.08,
+     "p": 0.1459,
+     "prob": 15,
+     "fair": 6.85,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "AS Roma gagne et plus de 2,5 buts",
-     "p": 0.398,
+     "market": "wh_nil",
+     "label": "Milan gagne sans encaisser de but",
+     "p": 0.4018,
      "prob": 40,
-     "fair": 2.51,
+     "fair": 2.49,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Donyell Malen marque",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "label": "Adrien Rabiot marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
-     "player": "Donyell Malen",
-     "team": "AS Roma",
-     "pid": "259481",
+     "player": "Adrien Rabiot",
+     "team": "Milan",
+     "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · forme : 7 buts et 1 passe sur ses 8 derniers matchs · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (62 %) · 1,8 buts attendus pour Milan"
     },
     "decisive": {
      "market": "dec",
-     "label": "Donyell Malen buteur ou passeur",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
-     "player": "Donyell Malen",
-     "team": "AS Roma",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2,
+     "player": "Adrien Rabiot",
+     "team": "Milan",
      "base": [
       7,
-      6,
-      1
+      4,
+      3
      ],
-     "pid": "259481",
+     "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · forme : 7 buts et 1 passe sur ses 8 derniers matchs · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (62 %) · 1,8 buts attendus pour Milan"
     }
    }
   },
   {
-   "id": "foot-401874786",
+   "id": "foot-401874965",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-10-27T19:45:00+00:00",
-   "time": "20:45",
-   "home": "Torino",
-   "away": "Como",
-   "state": "post",
-   "xgH": 1.15,
-   "xgA": 1.49,
-   "pH": 29,
+   "kickoff": "2026-10-28T17:30:00+00:00",
+   "time": "18:30",
+   "home": "Parma",
+   "away": "Udinese",
+   "state": "pre",
+   "xgH": 1.36,
+   "xgA": 1.21,
+   "pH": 40,
    "pD": 26,
-   "pA": 45,
-   "edate": "20261027",
+   "pA": 33,
+   "edate": "20261028",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Parma ou nul",
+     "p": 0.6683,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "8 derniers matchs : Parma 5 marqués / 15 encaissés · Udinese 9 / 18"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Parma",
+     "p": 0.4037,
+     "prob": 40,
+     "fair": 2.48,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.104,
+     "prob": 10,
+     "fair": 9.61,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.258,
+     "prob": 26,
+     "fair": 3.88,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Simone Lontani marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
+     "stars": 1,
+     "player": "Simone Lontani",
+     "team": "Parma",
+     "pid": "413818",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 8 matchs · Parma annoncé gagnant (40 %) · 1,4 but attendu pour Parma"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Simone Lontani buteur ou passeur",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Simone Lontani",
+     "team": "Parma",
+     "base": [
+      8,
+      2,
+      0
+     ],
+     "pid": "413818",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 8 matchs · Parma annoncé gagnant (40 %) · 1,4 but attendu pour Parma"
+    }
+   }
+  },
+  {
+   "id": "foot-401874773",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-28T17:30:00+00:00",
+   "time": "18:30",
+   "home": "Venezia",
+   "away": "Inter Milan",
+   "state": "pre",
+   "xgH": 0.92,
+   "xgA": 2.83,
+   "pH": 9,
+   "pD": 14,
+   "pA": 77,
+   "edate": "20261028",
    "picks": {
     "main": {
      "market": "N2",
-     "label": "Nul ou Como",
-     "p": 0.7067,
-     "prob": 71,
-     "fair": 1.42,
-     "stars": 4
+     "label": "Nul ou Inter Milan",
+     "p": 0.9052,
+     "prob": 91,
+     "fair": 1.1,
+     "stars": 5,
+     "why": "8 derniers matchs : Venezia 6 marqués / 17 encaissés · Inter Milan 23 / 10"
     },
     "winner": {
      "market": "2",
-     "label": "Victoire Como",
-     "p": 0.4497,
-     "prob": 45,
-     "fair": 2.22,
+     "label": "Victoire Inter Milan",
+     "p": 0.7663,
+     "prob": 77,
+     "fair": 1.3,
+     "stars": 4
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-2",
+     "p": 0.0938,
+     "prob": 9,
+     "fair": 10.66,
+     "stars": 1,
+     "value": "0-2"
+    },
+    "fun": {
+     "market": "wa_btts",
+     "label": "Inter Milan gagne et les deux équipes marquent",
+     "p": 0.3932,
+     "prob": 39,
+     "fair": 2.54,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Marcus Thuram marque",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
+     "stars": 1,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "5 buts et 2 passes en 7 matchs · Inter Milan favori (77 %) · 2,8 buts attendus pour Inter Milan"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Marcus Thuram buteur ou passeur",
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "base": [
+      7,
+      5,
+      2
+     ],
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "5 buts et 2 passes en 7 matchs · Inter Milan favori (77 %) · 2,8 buts attendus pour Inter Milan"
+    }
+   }
+  },
+  {
+   "id": "foot-401874988",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-28T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Genoa",
+   "away": "Juventus",
+   "state": "pre",
+   "xgH": 0.8,
+   "xgA": 1.32,
+   "pH": 23,
+   "pD": 28,
+   "pA": 49,
+   "edate": "20261028",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Juventus",
+     "p": 0.7741,
+     "prob": 77,
+     "fair": 1.29,
+     "stars": 4,
+     "why": "8 derniers matchs : Genoa 6 marqués / 13 encaissés · Juventus 11 / 8"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Juventus",
+     "p": 0.4896,
+     "prob": 49,
+     "fair": 2.04,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.106,
-     "prob": 11,
-     "fair": 9.44,
+     "p": 0.1588,
+     "prob": 16,
+     "fair": 6.3,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.2736,
-     "prob": 27,
-     "fair": 3.65,
+     "market": "wa_nil",
+     "label": "Juventus gagne sans encaisser de but",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Anastasios Douvikas marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "label": "Edon Zhegrova marque",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
-     "pid": "262071",
+     "player": "Edon Zhegrova",
+     "team": "Juventus",
+     "pid": "260300",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · forme : 5 buts et 0 passe sur ses 9 derniers matchs · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
+     "why": "2 buts et 1 passe en 6 matchs · Juventus favori (49 %) · 1,3 but attendu pour Juventus"
     },
     "decisive": {
      "market": "dec",
-     "label": "Anastasios Douvikas buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "label": "Edon Zhegrova buteur ou passeur",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
+     "player": "Edon Zhegrova",
+     "team": "Juventus",
      "base": [
-      8,
-      5,
-      0
+      6,
+      2,
+      1
      ],
-     "pid": "262071",
+     "pid": "260300",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · forme : 5 buts et 0 passe sur ses 9 derniers matchs · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
+     "why": "2 buts et 1 passe en 6 matchs · Juventus favori (49 %) · 1,3 but attendu pour Juventus"
+    }
+   }
+  },
+  {
+   "id": "foot-401874799",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-28T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Monza",
+   "away": "Napoli",
+   "state": "pre",
+   "xgH": 1.45,
+   "xgA": 2.14,
+   "pH": 26,
+   "pD": 21,
+   "pA": 53,
+   "edate": "20261028",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Napoli",
+     "p": 0.741,
+     "prob": 74,
+     "fair": 1.35,
+     "stars": 4,
+     "why": "8 derniers matchs : Monza 15 marqués / 18 encaissés · Napoli 13 / 10"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Napoli",
+     "p": 0.5335,
+     "prob": 53,
+     "fair": 1.87,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-2",
+     "p": 0.0915,
+     "prob": 9,
+     "fair": 10.93,
+     "stars": 1,
+     "value": "1-2"
+    },
+    "fun": {
+     "market": "wa_o25",
+     "label": "Napoli gagne et plus de 2,5 buts",
+     "p": 0.4117,
+     "prob": 41,
+     "fair": 2.43,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Kevin De Bruyne marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
+     "stars": 1,
+     "player": "Kevin De Bruyne",
+     "team": "Napoli",
+     "pid": "134947",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 8 matchs · Napoli favori (53 %) · 2,1 buts attendus pour Napoli"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Kevin De Bruyne buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
+     "stars": 1,
+     "player": "Kevin De Bruyne",
+     "team": "Napoli",
+     "base": [
+      8,
+      3,
+      1
+     ],
+     "pid": "134947",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 8 matchs · Napoli favori (53 %) · 2,1 buts attendus pour Napoli"
     }
    }
   },
@@ -265,7 +440,7 @@
    "time": "00:00",
    "home": "Philadelphia Flyers",
    "away": "Columbus Blue Jackets",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.81,
    "xgA": 2.96,
    "pH": 39,
@@ -296,7 +471,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4065,
+     "p": 0.4064,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -1015,31 +1190,31 @@
   }
  ],
  "summary": {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "yesterday": {
-   "n": 48,
-   "ok": 25
+   "n": 24,
+   "ok": 13
   },
-  "foot": 3,
+  "foot": 5,
   "nhl": 11,
   "top": [
    {
-    "label": "Victoire Carolina Hurricanes",
-    "prob": 71,
-    "time": "01:00",
-    "match": "Carolina Hurricanes – Boston Bruins"
+    "label": "Nul ou Inter Milan",
+    "prob": 91,
+    "time": "18:30",
+    "match": "Venezia – Inter Milan"
    },
    {
-    "label": "Victoire Anaheim Ducks",
-    "prob": 71,
-    "time": "03:00",
-    "match": "Anaheim Ducks – Vancouver Canucks"
+    "label": "Milan ou nul",
+    "prob": 85,
+    "time": "18:30",
+    "match": "Milan – Bologna"
    },
    {
-    "label": "Kirill Kaprizov : au moins 1 point",
-    "prob": 68,
-    "time": "02:00",
-    "match": "Utah Mammoth – Minnesota Wild"
+    "label": "Nul ou Juventus",
+    "prob": 77,
+    "time": "20:45",
+    "match": "Genoa – Juventus"
    }
   ]
  }

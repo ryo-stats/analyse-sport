@@ -1,1141 +1,1915 @@
 {
- "generated": "2026-10-27T23:53+01:00",
- "date": "2026-10-27",
+ "generated": "2026-10-28T00:18+01:00",
+ "date": "2026-10-28",
  "nhl_date": "2026-10-27",
  "foot": [
   {
-   "id": "foot-401874980",
+   "id": "foot-401874993",
    "sport": "foot",
    "league": "Serie A",
-   "kickoff": "2026-10-27T17:30:00+00:00",
+   "kickoff": "2026-10-28T17:30:00+00:00",
    "time": "18:30",
-   "state": "post",
-   "score": "2-6",
-   "home": "Sassuolo",
-   "away": "Lazio",
-   "form_h": "NDDND",
-   "form_a": "NVVVV",
-   "rank_h": 14,
-   "rank_a": 1,
-   "pH": 22,
-   "pD": 22,
-   "pA": 55,
-   "source": "Analyse maison : Elo maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.13,
-   "xgA": 1.89,
+   "state": "pre",
+   "score": null,
+   "home": "Milan",
+   "away": "Bologna",
+   "form_h": "NDVVN",
+   "form_a": "NDVND",
+   "rank_h": 5,
+   "rank_a": 13,
+   "pH": 62,
+   "pD": 23,
+   "pA": 15,
+   "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 1.77,
+   "xgA": 0.73,
    "scores": [
-    "1-1",
-    "1-2",
-    "0-1"
+    "1-0",
+    "2-0",
+    "1-1"
    ],
    "scorep": [
-    10,
-    10,
-    9
+    15,
+    13,
+    11
    ],
-   "over25": 58,
-   "btts": 57,
+   "over25": 46,
+   "btts": 43,
    "squad_h": [
     {
-     "name": "Vasilije Adzic",
+     "name": "Adrien Rabiot",
      "pos": "Milieu",
      "side": "h",
-     "team": "Sassuolo",
-     "goals": 3,
-     "assists": 1,
+     "team": "Milan",
+     "goals": 4,
+     "assists": 3,
      "apps": 7,
      "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 7,
+      "g": 4,
+      "a": 3
+     },
+     "p_goal": 32,
+     "p_dec": 51,
+     "pid": "176203",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Diego Moreira",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Milan",
+     "goals": 3,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
       "g": 3,
       "a": 1
      },
-     "p_goal": 19,
-     "p_dec": 26,
-     "pid": "344917",
+     "p_goal": 27,
+     "p_dec": 35,
+     "pid": "340678",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Domenico Berardi",
+     "name": "Gonçalo Ramos",
      "pos": "Attaquant",
      "side": "h",
-     "team": "Sassuolo",
+     "team": "Milan",
      "goals": 2,
-     "assists": 0,
-     "apps": 7,
+     "assists": 1,
+     "apps": 8,
      "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 8,
       "g": 2,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 18,
-     "pid": "173817",
+     "p_goal": 23,
+     "p_dec": 34,
+     "pid": "288896",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Cas Odenthal",
-     "pos": "Défenseur",
+     "name": "Christian Pulisic",
+     "pos": "Milieu",
      "side": "h",
-     "team": "Sassuolo",
+     "team": "Milan",
      "goals": 2,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 9,
-      "gp": 4,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 13,
-     "pid": "291729",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Sebastiano Esposito",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sassuolo",
-     "goals": 1,
-     "assists": 0,
+     "assists": 1,
      "apps": 5,
      "l10": {
-      "n": 9,
+      "n": 8,
+      "gp": 5,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 18,
+     "p_dec": 28,
+     "pid": "225607",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Alphadjo Cissè",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Milan",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
       "gp": 6,
       "g": 2,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 13,
-     "pid": "286929",
+     "p_goal": 18,
+     "p_dec": 20,
+     "pid": "359754",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Kristian Thorstvedt",
-     "pos": "Milieu",
+     "name": "Mario Gila",
+     "pos": "Défenseur",
      "side": "h",
-     "team": "Sassuolo",
+     "team": "Milan",
      "goals": 1,
      "assists": 0,
      "apps": 7,
      "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 12,
-     "pid": "284212",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Kieron Bowie",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sassuolo",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 8,
+      "gp": 7,
       "g": 1,
       "a": 0
      },
      "p_goal": 10,
-     "p_dec": 12,
-     "pid": "283375",
+     "p_dec": 11,
+     "pid": "324097",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "squad_a": [
     {
-     "name": "Tijjani Noslin",
+     "name": "Federico Bernardeschi",
      "pos": "Attaquant",
      "side": "a",
-     "team": "Lazio",
+     "team": "Bologna",
      "goals": 2,
-     "assists": 2,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 4,
-      "a": 2
-     },
-     "p_goal": 26,
-     "p_dec": 39,
-     "pid": "323113",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Davide Frattesi",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lazio",
-     "goals": 3,
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 3,
+      "n": 8,
+      "gp": 8,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 28,
-     "pid": "250850",
+     "p_goal": 15,
+     "p_dec": 17,
+     "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Gustav Isaksen",
+     "name": "Roberto Piccoli",
      "pos": "Attaquant",
      "side": "a",
-     "team": "Lazio",
-     "goals": 2,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 23,
-     "p_dec": 28,
-     "pid": "291550",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Mattia Zaccagni",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lazio",
-     "goals": 1,
-     "assists": 3,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 2,
-      "a": 5
-     },
-     "p_goal": 14,
-     "p_dec": 43,
-     "pid": "204669",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Kenneth Taylor",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lazio",
+     "team": "Bologna",
      "goals": 1,
      "assists": 0,
-     "apps": 8,
+     "apps": 7,
      "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 14,
-     "p_dec": 22,
-     "pid": "282228",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Matteo Cancellieri",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Lazio",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 9,
-      "gp": 6,
+      "n": 8,
+      "gp": 7,
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 13,
-     "pid": "308944",
+     "p_goal": 9,
+     "p_dec": 11,
+     "pid": "285438",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Tommaso Pobega",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 10,
+     "pid": "276654",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Riccardo Orsolini",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "234426",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Artem Dovbyk",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 7,
+     "pid": "226211",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Jay Enem",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 8,
+      "gp": 3,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 7,
+     "pid": "337058",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
-    "Sassuolo : 14e, 8 points, 14 buts marqués et 22 encaissés en 9 matchs.",
-    "Lazio : 1er, 25 points, 22 buts marqués et 7 encaissés en 9 matchs.",
-    "Sassuolo : 14 buts marqués et 22 encaissés sur ses 9 derniers matchs de championnat.",
-    "Lazio : 22 buts marqués et 7 encaissés sur ses 9 derniers matchs de championnat."
+    "Milan : 5e, 18 points, 16 buts marqués et 7 encaissés en 8 matchs.",
+    "Bologna : 13e, 8 points, 8 buts marqués et 10 encaissés en 8 matchs.",
+    "Milan : 16 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
+    "Bologna : 8 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat."
    ],
-   "reading": "Lazio est favori sans écraser le match (55 %).",
-   "stakes": "Lazio est leader (25 points).",
+   "reading": "Milan est nettement favori (62 %).",
+   "stakes": "Milan (5e) est dans la course à l'Europe.",
    "picks": {
     "main": {
-     "market": "N2",
-     "label": "Nul ou Lazio",
-     "p": 0.7761,
-     "prob": 78,
-     "fair": 1.29,
-     "stars": 4
+     "market": "1N",
+     "label": "Milan ou nul",
+     "p": 0.8515,
+     "prob": 85,
+     "fair": 1.17,
+     "stars": 5,
+     "why": "8 derniers matchs : Milan 16 marqués / 7 encaissés · Bologna 8 / 10"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Lazio",
-     "p": 0.5527,
-     "prob": 55,
-     "fair": 1.81,
-     "stars": 2
+     "market": "1",
+     "label": "Victoire Milan",
+     "p": 0.6241,
+     "prob": 62,
+     "fair": 1.6,
+     "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0985,
-     "prob": 10,
-     "fair": 10.15,
+     "label": "Score exact 1-0",
+     "p": 0.1459,
+     "prob": 15,
+     "fair": 6.85,
      "stars": 1,
-     "value": "1-2"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Lazio gagne et plus de 2,5 buts",
-     "p": 0.3729,
-     "prob": 37,
-     "fair": 2.68,
+     "market": "wh_nil",
+     "label": "Milan gagne sans encaisser de but",
+     "p": 0.4018,
+     "prob": 40,
+     "fair": 2.49,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.3575,
-      "prob": 36,
-      "fair": 2.8,
+      "market": "htft_h",
+      "label": "Milan mène à la mi-temps et gagne le match",
+      "p": 0.3962,
+      "prob": 40,
+      "fair": 2.52,
       "stars": 1
      },
      {
-      "market": "htft_a",
-      "label": "Lazio mène à la mi-temps et gagne le match",
-      "p": 0.3497,
-      "prob": 35,
-      "fair": 2.86,
+      "market": "h2",
+      "label": "Milan gagne avec 2 buts d'écart ou plus",
+      "p": 0.3621,
+      "prob": 36,
+      "fair": 2.76,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Tijjani Noslin marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "label": "Adrien Rabiot marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
-     "player": "Tijjani Noslin",
-     "team": "Lazio",
-     "pid": "323113",
+     "player": "Adrien Rabiot",
+     "team": "Milan",
+     "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 7 matchs · forme : 4 buts et 2 passes sur ses 8 derniers matchs · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (62 %) · 1,8 buts attendus pour Milan"
     },
     "decisive": {
      "market": "dec",
-     "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1,
-     "player": "Tijjani Noslin",
-     "team": "Lazio",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2,
+     "player": "Adrien Rabiot",
+     "team": "Milan",
      "base": [
       7,
-      2,
-      2
+      4,
+      3
      ],
-     "pid": "323113",
+     "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 7 matchs · forme : 4 buts et 2 passes sur ses 8 derniers matchs · Lazio favori (55 %) · 1,9 buts attendus pour Lazio"
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (62 %) · 1,8 buts attendus pour Milan"
     }
    },
-   "second": null,
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png"
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png"
   },
   {
-   "id": "foot-401874780",
+   "id": "foot-401874965",
    "sport": "foot",
    "league": "Serie A",
-   "kickoff": "2026-10-27T19:45:00+00:00",
-   "time": "20:45",
-   "state": "post",
-   "score": "4-2",
-   "home": "AS Roma",
-   "away": "Cagliari",
-   "form_h": "NNVVD",
-   "form_a": "NDDNV",
-   "rank_h": 3,
-   "rank_a": 9,
-   "pH": 73,
-   "pD": 19,
-   "pA": 8,
-   "source": "Analyse maison : Elo maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.98,
-   "xgA": 0.51,
+   "kickoff": "2026-10-28T17:30:00+00:00",
+   "time": "18:30",
+   "state": "pre",
+   "score": null,
+   "home": "Parma",
+   "away": "Udinese",
+   "form_h": "NDDVD",
+   "form_a": "NDDDD",
+   "rank_h": 19,
+   "rank_a": 17,
+   "pH": 40,
+   "pD": 26,
+   "pA": 33,
+   "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 1.36,
+   "xgA": 1.21,
    "scores": [
+    "1-1",
     "1-0",
-    "2-0",
-    "3-0"
+    "0-1"
    ],
    "scorep": [
-    16,
-    16,
-    11
+    13,
+    10,
+    9
    ],
-   "over25": 45,
-   "btts": 34,
+   "over25": 47,
+   "btts": 52,
    "squad_h": [
     {
-     "name": "Donyell Malen",
+     "name": "Simone Lontani",
      "pos": "Attaquant",
      "side": "h",
-     "team": "AS Roma",
-     "goals": 6,
-     "assists": 1,
-     "apps": 7,
+     "team": "Parma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
      "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 8,
-      "g": 7,
-      "a": 1
+      "g": 2,
+      "a": 0
      },
-     "p_goal": 43,
-     "p_dec": 49,
-     "pid": "259481",
+     "p_goal": 32,
+     "p_dec": 35,
+     "pid": "413818",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Matìas Soulè",
+     "name": "José Romero",
      "pos": "Attaquant",
      "side": "h",
-     "team": "AS Roma",
-     "goals": 3,
+     "team": "Parma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 31,
+     "p_dec": 34,
+     "pid": "301980",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Pontus Almqvist",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Parma",
+     "goals": 1,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 15,
+     "p_dec": 28,
+     "pid": "253569",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "El Bilal Toure",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Parma",
+     "goals": 0,
      "assists": 1,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 25,
-     "p_dec": 33,
-     "pid": "323974",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Niccolò Pisilli",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "AS Roma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 8,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 19,
-     "p_dec": 21,
-     "pid": "360235",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Manu Koné",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "AS Roma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 6,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 18,
-     "pid": "285226",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Leonardo Balerdi",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "AS Roma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 6,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 16,
-     "pid": "271555",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Emanuele Lulli",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "AS Roma",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 2,
+      "g": 0,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 16,
-     "pid": "409371",
+     "p_goal": 11,
+     "p_dec": 28,
+     "pid": "287430",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Mandela Keita",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Parma",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 14,
+     "pid": "316609",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Nesta Elphege",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Parma",
+     "goals": 0,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 3,
+     "p_dec": 18,
+     "pid": "361749",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "squad_a": [
     {
-     "name": "Daniel Maldini",
-     "pos": "Attaquant",
+     "name": "Jurgen Ekkelenkamp",
+     "pos": "Milieu",
      "side": "a",
-     "team": "Cagliari",
-     "goals": 4,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 5,
-      "a": 0
-     },
-     "p_goal": 21,
-     "p_dec": 23,
-     "pid": "290545",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Paul Mendy",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Cagliari",
-     "goals": 1,
+     "team": "Udinese",
+     "goals": 3,
      "assists": 1,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 1,
+      "n": 8,
+      "gp": 8,
+      "g": 3,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 14,
-     "pid": "418819",
+     "p_goal": 27,
+     "p_dec": 37,
+     "pid": "270817",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Alessandro Romano",
+     "name": "Hassane Kamara",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Udinese",
+     "goals": 2,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 18,
+     "p_dec": 26,
+     "pid": "193919",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Jesper Karlström",
      "pos": "Milieu",
      "side": "a",
-     "team": "Cagliari",
+     "team": "Udinese",
      "goals": 1,
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 8,
+      "gp": 8,
       "g": 1,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 9,
-     "pid": "6729",
+     "p_goal": 12,
+     "p_dec": 17,
+     "pid": "237055",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "M'Bala Nzola",
+     "name": "Idrissa Gueye",
      "pos": "Attaquant",
      "side": "a",
-     "team": "Cagliari",
-     "goals": 0,
+     "team": "Udinese",
+     "goals": 1,
      "assists": 0,
-     "apps": 2,
+     "apps": 4,
      "l10": {
-      "n": 9,
-      "gp": 3,
+      "n": 8,
+      "gp": 4,
       "g": 1,
       "a": 0
      },
-     "p_goal": 3,
-     "p_dec": 3,
-     "pid": "261173",
+     "p_goal": 11,
+     "p_dec": 12,
+     "pid": "377170",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Michel Adopo",
+     "name": "Jakub Piotrowski",
      "pos": "Milieu",
      "side": "a",
-     "team": "Cagliari",
-     "goals": 0,
-     "assists": 2,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 0,
-      "a": 2
-     },
-     "p_goal": 1,
-     "p_dec": 13,
-     "pid": "272745",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Jacopo Fazzini",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Cagliari",
-     "goals": 0,
-     "assists": 1,
+     "team": "Udinese",
+     "goals": 1,
+     "assists": 0,
      "apps": 5,
      "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 5,
-      "g": 0,
-      "a": 1
+      "g": 1,
+      "a": 0
      },
-     "p_goal": 1,
-     "p_dec": 6,
-     "pid": "333938",
+     "p_goal": 10,
+     "p_dec": 12,
+     "pid": "276267",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "James Abankwah",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Udinese",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 11,
+     "pid": "342837",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
-    "AS Roma : 3e, 21 points, 23 buts marqués et 8 encaissés en 9 matchs.",
-    "Cagliari : 9e, 13 points, 8 buts marqués et 13 encaissés en 9 matchs.",
-    "AS Roma : 23 buts marqués et 8 encaissés sur ses 9 derniers matchs de championnat.",
-    "Cagliari : 8 buts marqués et 13 encaissés sur ses 9 derniers matchs de championnat."
+    "Parma : 19e, 4 points, 5 buts marqués et 15 encaissés en 8 matchs.",
+    "Udinese : 17e, 4 points, 9 buts marqués et 18 encaissés en 8 matchs.",
+    "Parma : 5 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
+    "Udinese : 9 buts marqués et 18 encaissés sur ses 8 derniers matchs de championnat."
    ],
-   "reading": "AS Roma est nettement favori (73 %).",
-   "stakes": "AS Roma (3e) défend une place qualificative pour la Ligue des champions.",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "stakes": "Parma (19e) est en zone de relégation : match vital. Udinese (17e) lutte pour le maintien, 0 point d'avance sur la zone rouge. Adversaires directs au classement : même nombre de points.",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "AS Roma ou nul",
-     "p": 0.9154,
-     "prob": 92,
-     "fair": 1.09,
-     "stars": 5
+     "label": "Parma ou nul",
+     "p": 0.6683,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "8 derniers matchs : Parma 5 marqués / 15 encaissés · Udinese 9 / 18"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire AS Roma",
-     "p": 0.7254,
-     "prob": 73,
-     "fair": 1.38,
-     "stars": 4
+     "label": "Victoire Parma",
+     "p": 0.4037,
+     "prob": 40,
+     "fair": 2.48,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1646,
-     "prob": 16,
-     "fair": 6.08,
+     "p": 0.104,
+     "prob": 10,
+     "fair": 9.61,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "AS Roma gagne et plus de 2,5 buts",
-     "p": 0.398,
-     "prob": 40,
-     "fair": 2.51,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.258,
+     "prob": 26,
+     "fair": 3.88,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "htft_h",
+      "label": "Parma mène à la mi-temps et gagne le match",
+      "p": 0.2381,
+      "prob": 24,
+      "fair": 4.2,
+      "stars": 1
+     },
+     {
+      "market": "wh_o25",
+      "label": "Parma gagne et plus de 2,5 buts",
+      "p": 0.2288,
+      "prob": 23,
+      "fair": 4.37,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "scorer",
+     "label": "Simone Lontani marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
+     "stars": 1,
+     "player": "Simone Lontani",
+     "team": "Parma",
+     "pid": "413818",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 8 matchs · Parma annoncé gagnant (40 %) · 1,4 but attendu pour Parma"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Simone Lontani buteur ou passeur",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Simone Lontani",
+     "team": "Parma",
+     "base": [
+      8,
+      2,
+      0
+     ],
+     "pid": "413818",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 8 matchs · Parma annoncé gagnant (40 %) · 1,4 but attendu pour Parma"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "country": "Italie",
+   "code": "ita.1",
+   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
+  },
+  {
+   "id": "foot-401874773",
+   "sport": "foot",
+   "league": "Serie A",
+   "kickoff": "2026-10-28T17:30:00+00:00",
+   "time": "18:30",
+   "state": "pre",
+   "score": null,
+   "home": "Venezia",
+   "away": "Inter Milan",
+   "form_h": "NVDDD",
+   "form_a": "NVVDV",
+   "rank_h": 20,
+   "rank_a": 2,
+   "pH": 9,
+   "pD": 14,
+   "pA": 77,
+   "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 0.92,
+   "xgA": 2.83,
+   "scores": [
+    "0-2",
+    "0-3",
+    "1-2"
+   ],
+   "scorep": [
+    9,
+    9,
+    9
+   ],
+   "over25": 72,
+   "btts": 57,
+   "squad_h": [
+    {
+     "name": "Akor Adams",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 23,
+     "p_dec": 26,
+     "pid": "288472",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Antoine Hainaut",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 2,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 18,
+     "p_dec": 26,
+     "pid": "346916",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "John Yeboah",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 15,
+     "p_dec": 19,
+     "pid": "265926",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Richie Sagrado",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 1,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 18,
+     "pid": "345713",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Enrique Perez",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 8,
+     "pid": "276636",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Simon Sohm",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 0,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 14,
+     "pid": "275015",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Marcus Thuram",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Inter Milan",
+     "goals": 5,
+     "assists": 2,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 5,
+      "a": 2
+     },
+     "p_goal": 44,
+     "p_dec": 56,
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Lautaro Martínez",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Inter Milan",
+     "goals": 4,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 4,
+      "a": 0
+     },
+     "p_goal": 37,
+     "p_dec": 39,
+     "pid": "219713",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Hakan Çalhanoglu",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Inter Milan",
+     "goals": 3,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 28,
+     "p_dec": 30,
+     "pid": "170785",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Pio Esposito",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Inter Milan",
+     "goals": 2,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 24,
+     "p_dec": 34,
+     "pid": "362674",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Piotr Zielinski",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Inter Milan",
+     "goals": 2,
+     "assists": 2,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 21,
+     "p_dec": 38,
+     "pid": "177782",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Ange-Yoan Bonny",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Inter Milan",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 20,
+     "p_dec": 21,
+     "pid": "309185",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "ctx": [
+    "Venezia : 20e, 3 points, 6 buts marqués et 17 encaissés en 8 matchs.",
+    "Inter Milan : 2e, 22 points, 23 buts marqués et 10 encaissés en 8 matchs.",
+    "Venezia : 6 buts marqués et 17 encaissés sur ses 8 derniers matchs de championnat.",
+    "Inter Milan : 23 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat."
+   ],
+   "reading": "Inter Milan est nettement favori (77 %).",
+   "stakes": "Venezia (20e) est en zone de relégation : match vital. Inter Milan (2e) défend une place qualificative pour la Ligue des champions.",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Inter Milan",
+     "p": 0.9052,
+     "prob": 91,
+     "fair": 1.1,
+     "stars": 5,
+     "why": "8 derniers matchs : Venezia 6 marqués / 17 encaissés · Inter Milan 23 / 10"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Inter Milan",
+     "p": 0.7663,
+     "prob": 77,
+     "fair": 1.3,
+     "stars": 4
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-2",
+     "p": 0.0938,
+     "prob": 9,
+     "fair": 10.66,
+     "stars": 1,
+     "value": "0-2"
+    },
+    "fun": {
+     "market": "wa_btts",
+     "label": "Inter Milan gagne et les deux équipes marquent",
+     "p": 0.3932,
+     "prob": 39,
+     "fair": 2.54,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "scw",
-      "label": "Donyell Malen marque et AS Roma gagne",
-      "p": 0.3852,
+      "label": "Marcus Thuram marque et Inter Milan gagne",
+      "p": 0.3896,
       "prob": 39,
-      "fair": 2.6,
+      "fair": 2.57,
       "stars": 1,
-      "player": "Donyell Malen",
-      "team": "AS Roma",
-      "side": "h"
+      "player": "Marcus Thuram",
+      "team": "Inter Milan",
+      "side": "a"
      },
      {
-      "market": "wh_by1",
-      "label": "AS Roma gagne d'un seul but",
-      "p": 0.2623,
-      "prob": 26,
-      "fair": 3.81,
+      "market": "wa_nil",
+      "label": "Inter Milan gagne sans encaisser de but",
+      "p": 0.3732,
+      "prob": 37,
+      "fair": 2.68,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Donyell Malen marque",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "label": "Marcus Thuram marque",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
-     "player": "Donyell Malen",
-     "team": "AS Roma",
-     "pid": "259481",
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · forme : 7 buts et 1 passe sur ses 8 derniers matchs · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
+     "why": "5 buts et 2 passes en 7 matchs · Inter Milan favori (77 %) · 2,8 buts attendus pour Inter Milan"
     },
     "decisive": {
      "market": "dec",
-     "label": "Donyell Malen buteur ou passeur",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
-     "player": "Donyell Malen",
-     "team": "AS Roma",
+     "label": "Marcus Thuram buteur ou passeur",
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
      "base": [
       7,
-      6,
-      1
+      5,
+      2
      ],
-     "pid": "259481",
+     "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 7 matchs · forme : 7 buts et 1 passe sur ses 8 derniers matchs · AS Roma favori (73 %) · 2,0 buts attendus pour AS Roma"
+     "why": "5 buts et 2 passes en 7 matchs · Inter Milan favori (77 %) · 2,8 buts attendus pour Inter Milan"
     }
    },
-   "second": null,
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png"
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png"
   },
   {
-   "id": "foot-401874786",
+   "id": "foot-401874988",
    "sport": "foot",
    "league": "Serie A",
-   "kickoff": "2026-10-27T19:45:00+00:00",
+   "kickoff": "2026-10-28T19:45:00+00:00",
    "time": "20:45",
-   "state": "post",
-   "score": "1-3",
-   "home": "Torino",
-   "away": "Como",
-   "form_h": "NVVVN",
-   "form_a": "NVVVD",
-   "rank_h": 8,
-   "rank_a": 4,
-   "pH": 29,
-   "pD": 26,
-   "pA": 45,
-   "source": "Analyse maison : Elo maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.15,
-   "xgA": 1.49,
+   "state": "pre",
+   "score": null,
+   "home": "Genoa",
+   "away": "Juventus",
+   "form_h": "NDVDV",
+   "form_a": "NNDVN",
+   "rank_h": 16,
+   "rank_a": 7,
+   "pH": 23,
+   "pD": 28,
+   "pA": 49,
+   "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 0.8,
+   "xgA": 1.32,
    "scores": [
-    "1-1",
     "0-1",
-    "1-2"
+    "1-1",
+    "0-0"
    ],
    "scorep": [
-    12,
-    11,
-    9
+    16,
+    13,
+    12
    ],
-   "over25": 49,
-   "btts": 53,
+   "over25": 36,
+   "btts": 40,
    "squad_h": [
     {
-     "name": "Ché Adams",
+     "name": "Milutin Osmajic",
      "pos": "Attaquant",
      "side": "h",
-     "team": "Torino",
+     "team": "Genoa",
      "goals": 3,
-     "assists": 0,
-     "apps": 6,
+     "assists": 1,
+     "apps": 7,
      "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 7,
-      "g": 4,
-      "a": 0
+      "g": 3,
+      "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 25,
-     "pid": "213725",
+     "p_goal": 26,
+     "p_dec": 33,
+     "pid": "275444",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Giovanni Simeone",
+     "name": "Junior Messias",
      "pos": "Attaquant",
      "side": "h",
-     "team": "Torino",
-     "goals": 2,
-     "assists": 1,
+     "team": "Genoa",
+     "goals": 1,
+     "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 16,
-     "p_dec": 24,
-     "pid": "189974",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Sandro Kulenovic",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Torino",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 2,
+      "n": 8,
+      "gp": 8,
+      "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 14,
-     "pid": "245538",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Rolando Mandragora",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "210392",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Kian Fitz-Jim",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
+     "p_goal": 11,
      "p_dec": 13,
-     "pid": "305589",
+     "pid": "261054",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Nikola Vlasic",
+     "name": "Mikael Ellertsson",
      "pos": "Milieu",
      "side": "h",
-     "team": "Torino",
+     "team": "Genoa",
      "goals": 1,
-     "assists": 0,
+     "assists": 1,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 10,
+     "p_dec": 21,
+     "pid": "324256",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Johan Vásquez",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Genoa",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
       "g": 1,
       "a": 0
      },
      "p_goal": 8,
-     "p_dec": 12,
-     "pid": "206378",
+     "p_dec": 10,
+     "pid": "259975",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Lorenzo Colombo",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Genoa",
+     "goals": 0,
+     "assists": 2,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 3,
+     "p_dec": 19,
+     "pid": "297220",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Vitinha",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Genoa",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 4,
+     "pid": "403234",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "squad_a": [
     {
-     "name": "Anastasios Douvikas",
+     "name": "Edon Zhegrova",
      "pos": "Attaquant",
      "side": "a",
-     "team": "Como",
-     "goals": 5,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 5,
-      "a": 0
-     },
-     "p_goal": 35,
-     "p_dec": 37,
-     "pid": "262071",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Nico Paz",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Como",
-     "goals": 2,
-     "assists": 2,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 3,
-      "a": 3
-     },
-     "p_goal": 19,
-     "p_dec": 36,
-     "pid": "337970",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Martin Baturina",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Como",
-     "goals": 2,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 18,
-     "p_dec": 26,
-     "pid": "311475",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Assane Diao",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Como",
+     "team": "Juventus",
      "goals": 2,
      "assists": 1,
      "apps": 6,
      "l10": {
-      "n": 9,
+      "n": 8,
       "gp": 6,
       "g": 2,
       "a": 1
      },
-     "p_goal": 18,
+     "p_goal": 17,
      "p_dec": 25,
-     "pid": "364742",
+     "pid": "260300",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Jacobo Ramón",
+     "name": "Bremer",
      "pos": "Défenseur",
      "side": "a",
-     "team": "Como",
-     "goals": 1,
+     "team": "Juventus",
+     "goals": 2,
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 8,
+      "gp": 8,
       "g": 2,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "380318",
+     "p_goal": 17,
+     "p_dec": 18,
+     "pid": "258307",
      "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Kaiki",
-     "pos": "Défenseur",
+     "name": "Randal Kolo Muani",
+     "pos": "Attaquant",
      "side": "a",
-     "team": "Como",
+     "team": "Juventus",
      "goals": 1,
      "assists": 1,
-     "apps": 6,
+     "apps": 8,
      "l10": {
-      "n": 9,
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 15,
+     "p_dec": 26,
+     "pid": "252971",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Francisco Conceição",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Juventus",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 8,
       "gp": 7,
       "g": 1,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 15,
-     "pid": "317233",
+     "p_goal": 13,
+     "p_dec": 22,
+     "pid": "312659",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Nico González",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Juventus",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 12,
+     "p_dec": 14,
+     "pid": "76017",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Douglas Luiz",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Juventus",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 11,
+     "p_dec": 23,
+     "pid": "320074",
      "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
-    "Torino : 8e, 13 points, 14 buts marqués et 14 encaissés en 9 matchs.",
-    "Como : 4e, 20 points, 17 buts marqués et 8 encaissés en 9 matchs.",
-    "Torino : 14 buts marqués et 14 encaissés sur ses 9 derniers matchs de championnat.",
-    "Como : 17 buts marqués et 8 encaissés sur ses 9 derniers matchs de championnat."
+    "Genoa : 16e, 7 points, 6 buts marqués et 13 encaissés en 8 matchs.",
+    "Juventus : 7e, 14 points, 11 buts marqués et 8 encaissés en 8 matchs.",
+    "Genoa : 6 buts marqués et 13 encaissés sur ses 8 derniers matchs de championnat.",
+    "Juventus : 11 buts marqués et 8 encaissés sur ses 8 derniers matchs de championnat."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Como (4e) défend une place qualificative pour la Ligue des champions.",
+   "reading": "Juventus est favori sans écraser le match (49 %).",
+   "stakes": "Genoa (16e) lutte pour le maintien, 3 points d'avance sur la zone rouge. Juventus (7e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "N2",
-     "label": "Nul ou Como",
-     "p": 0.7067,
-     "prob": 71,
-     "fair": 1.42,
-     "stars": 4
+     "label": "Nul ou Juventus",
+     "p": 0.7741,
+     "prob": 77,
+     "fair": 1.29,
+     "stars": 4,
+     "why": "8 derniers matchs : Genoa 6 marqués / 13 encaissés · Juventus 11 / 8"
     },
     "winner": {
      "market": "2",
-     "label": "Victoire Como",
-     "p": 0.4497,
-     "prob": 45,
-     "fair": 2.22,
+     "label": "Victoire Juventus",
+     "p": 0.4896,
+     "prob": 49,
+     "fair": 2.04,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.106,
-     "prob": 11,
-     "fair": 9.44,
+     "p": 0.1588,
+     "prob": 16,
+     "fair": 6.3,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.2736,
-     "prob": 27,
-     "fair": 3.65,
+     "market": "wa_nil",
+     "label": "Juventus gagne sans encaisser de but",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_a",
-      "label": "Como mène à la mi-temps et gagne le match",
-      "p": 0.2703,
-      "prob": 27,
-      "fair": 3.7,
+      "label": "Juventus mène à la mi-temps et gagne le match",
+      "p": 0.2905,
+      "prob": 29,
+      "fair": 3.44,
       "stars": 1
      },
      {
-      "market": "wa_o25",
-      "label": "Como gagne et plus de 2,5 buts",
-      "p": 0.2648,
+      "market": "wa_by1",
+      "label": "Juventus gagne d'un seul but",
+      "p": 0.2584,
       "prob": 26,
-      "fair": 3.78,
+      "fair": 3.87,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Anastasios Douvikas marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "label": "Edon Zhegrova marque",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
-     "pid": "262071",
+     "player": "Edon Zhegrova",
+     "team": "Juventus",
+     "pid": "260300",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · forme : 5 buts et 0 passe sur ses 9 derniers matchs · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
+     "why": "2 buts et 1 passe en 6 matchs · Juventus favori (49 %) · 1,3 but attendu pour Juventus"
     },
     "decisive": {
      "market": "dec",
-     "label": "Anastasios Douvikas buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "label": "Edon Zhegrova buteur ou passeur",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
+     "player": "Edon Zhegrova",
+     "team": "Juventus",
      "base": [
-      8,
-      5,
-      0
+      6,
+      2,
+      1
      ],
-     "pid": "262071",
+     "pid": "260300",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · forme : 5 buts et 0 passe sur ses 9 derniers matchs · Como annoncé gagnant (45 %) · 1,5 but attendu pour Como"
+     "why": "2 buts et 1 passe en 6 matchs · Juventus favori (49 %) · 1,3 but attendu pour Juventus"
     }
    },
-   "second": null,
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png"
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png"
+  },
+  {
+   "id": "foot-401874799",
+   "sport": "foot",
+   "league": "Serie A",
+   "kickoff": "2026-10-28T19:45:00+00:00",
+   "time": "20:45",
+   "state": "pre",
+   "score": null,
+   "home": "Monza",
+   "away": "Napoli",
+   "form_h": "NVDVD",
+   "form_a": "NVDDV",
+   "rank_h": 15,
+   "rank_a": 10,
+   "pH": 26,
+   "pD": 21,
+   "pA": 53,
+   "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
+   "xgH": 1.45,
+   "xgA": 2.14,
+   "scores": [
+    "1-2",
+    "1-1",
+    "2-2"
+   ],
+   "scorep": [
+    9,
+    9,
+    7
+   ],
+   "over25": 70,
+   "btts": 68,
+   "squad_h": [
+    {
+     "name": "Gustavo Varela",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Monza",
+     "goals": 7,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 7,
+      "a": 1
+     },
+     "p_goal": 46,
+     "p_dec": 52,
+     "pid": "384482",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Jay Robinson",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Monza",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 18,
+     "p_dec": 20,
+     "pid": "355359",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Ricardo Mangas",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Monza",
+     "goals": 1,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 9,
+     "p_dec": 23,
+     "pid": "259871",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Andrea Colpani",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Monza",
+     "goals": 1,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 11,
+     "pid": "272892",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Eddy Kouadio",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Monza",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "390673",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Saba Goglichidze",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Monza",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 8,
+      "gp": 3,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "363886",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Kevin De Bruyne",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Napoli",
+     "goals": 3,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 33,
+     "p_dec": 44,
+     "pid": "134947",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Rasmus Højlund",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Napoli",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 29,
+     "p_dec": 32,
+     "pid": "309273",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Scott McTominay",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Napoli",
+     "goals": 2,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 24,
+     "p_dec": 27,
+     "pid": "255850",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Matteo Politano",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Napoli",
+     "goals": 1,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 18,
+     "p_dec": 38,
+     "pid": "188306",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Noa Lang",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Napoli",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 16,
+     "p_dec": 19,
+     "pid": "255344",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Stanislav Lobotka",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Napoli",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 15,
+     "p_dec": 21,
+     "pid": "188412",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "ctx": [
+    "Monza : 15e, 7 points, 15 buts marqués et 18 encaissés en 8 matchs.",
+    "Napoli : 10e, 11 points, 13 buts marqués et 10 encaissés en 8 matchs.",
+    "Monza : 15 buts marqués et 18 encaissés sur ses 8 derniers matchs de championnat.",
+    "Napoli : 13 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat."
+   ],
+   "reading": "Napoli est favori sans écraser le match (53 %).",
+   "stakes": "Monza (15e) lutte pour le maintien, 3 points d'avance sur la zone rouge.",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Napoli",
+     "p": 0.741,
+     "prob": 74,
+     "fair": 1.35,
+     "stars": 4,
+     "why": "8 derniers matchs : Monza 15 marqués / 18 encaissés · Napoli 13 / 10"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Napoli",
+     "p": 0.5335,
+     "prob": 53,
+     "fair": 1.87,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-2",
+     "p": 0.0915,
+     "prob": 9,
+     "fair": 10.93,
+     "stars": 1,
+     "value": "1-2"
+    },
+    "fun": {
+     "market": "wa_o25",
+     "label": "Napoli gagne et plus de 2,5 buts",
+     "p": 0.4117,
+     "prob": 41,
+     "fair": 2.43,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "htft_a",
+      "label": "Napoli mène à la mi-temps et gagne le match",
+      "p": 0.3417,
+      "prob": 34,
+      "fair": 2.93,
+      "stars": 1
+     },
+     {
+      "market": "wa_btts",
+      "label": "Napoli gagne et les deux équipes marquent",
+      "p": 0.3272,
+      "prob": 33,
+      "fair": 3.06,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "scorer",
+     "label": "Kevin De Bruyne marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
+     "stars": 1,
+     "player": "Kevin De Bruyne",
+     "team": "Napoli",
+     "pid": "134947",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 8 matchs · Napoli favori (53 %) · 2,1 buts attendus pour Napoli"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Kevin De Bruyne buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
+     "stars": 1,
+     "player": "Kevin De Bruyne",
+     "team": "Napoli",
+     "base": [
+      8,
+      3,
+      1
+     ],
+     "pid": "134947",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 8 matchs · Napoli favori (53 %) · 2,1 buts attendus pour Napoli"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "country": "Italie",
+   "code": "ita.1",
+   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png"
   }
  ],
  "nhl": [
@@ -1145,8 +1919,8 @@
    "league": "NHL",
    "kickoff": "2026-10-27T23:00:00+00:00",
    "time": "00:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Philadelphia Flyers",
    "away": "Columbus Blue Jackets",
    "rec_h": "3-7-3 · 7e Metropolitan · 1 défaite de suite",
@@ -1469,7 +2243,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4065,
+     "p": 0.4064,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -1486,7 +2260,7 @@
      {
       "market": "wa_o55",
       "label": "Columbus Blue Jackets gagne et plus de 5,5 buts",
-      "p": 0.2704,
+      "p": 0.2703,
       "prob": 27,
       "fair": 3.7,
       "stars": 1
@@ -17151,12 +17925,12 @@
  },
  "notes": [],
  "form": {
-  "foot": 6,
+  "foot": 10,
   "nhl": 22
  },
  "second": {
   "foot": {
-   "ok": 0,
+   "ok": 5,
    "elo": {
     "ita.1": 832
    },
@@ -17164,7 +17938,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 11,
+   "ok": 10,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88642 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
