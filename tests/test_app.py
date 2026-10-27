@@ -637,7 +637,16 @@ class AppTest(unittest.TestCase):
         self.assertAlmostEqual(sum(sec["p"]), 1, places=6)
         self.assertGreater(sec["p"][2], sec["p"][0])
         # saisons terminées gardées en cache : pas relues au passage suivant
-        self.assertEqual(sorted(app.load_json(app.ELO_FILE, {})["eng.1"]), ["2024", "2025"])
+        self.assertEqual(sorted(app.load_json(app.ELO_FILE, {})["eng.1"]), ["2024", "2025", "cur"])
+        # passage suivant moins de 6 h après : aucune relecture des calendriers
+        calls, old = [], app.get_json
+        app.get_json = lambda url, params=None: calls.append(url) or old(url, params)
+        try:
+            app.load_elo(); app.TABLES.clear()
+            self.assertTrue(app.house_elo("eng.1", dt.date(2026, 10, 11)))
+        finally:
+            app.get_json = old
+        self.assertFalse([u for u in calls if "/schedule" in u])
         # désaccord : les cotes voient Lyon favori, le deuxième avis voit Nice → pas de Safe
         picks = dict(main=app.make_pick("1N", "Lyon ou nul", 0.76), winner=app.make_pick("1", "Victoire Lyon", 0.52))
         out = app.concord("foot", picks, (0.52, 0.25, 0.23), dict(src="ClubElo", p=(0.30, 0.27, 0.43)))

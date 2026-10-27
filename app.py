@@ -320,6 +320,7 @@ ELO_SEASONS = 3          # la saison en cours et les deux précédentes (la plus
 ELO_K = (30, 20)         # sensibilité : rodage, puis régime normal
 ELO_NEW = -80            # club qui arrive dans le championnat (promu) : 80 points sous la moyenne
 ELO_REGRESS = 0.2        # entre deux saisons, 20 % de retour vers la moyenne (mercato, entraîneurs)
+ELO_REFRESH = 6 * 3600   # saison en cours relue au plus toutes les 6 h (secondes)
 ELO_MIN = 150            # matchs lus au minimum pour se fier au classement
 LEAGUE_ELO = {"eng.1": 0, "esp.1": -15, "ita.1": -25, "ger.1": -30, "fra.1": -55}   # niveau des championnats
 OTHER_ELO = -110
@@ -352,10 +353,14 @@ def league_results(code, season, current):
     """Résultats d'une saison d'un championnat (ESPN) : [[date, id domicile, id extérieur, buts, buts], …], lus
     dans le calendrier de chaque club du classement (le tableau des scores ESPN sur une saison ou un mois revient
     vide, essai du 27/10). Les saisons terminées sont gardées dans cache/elo.json ; la saison en cours est relue
-    à chaque passage. ELO_DIAG garde le nombre de matchs lus (data.json › second.foot.elo_fetch)."""
+    au plus toutes les 6 heures (20 appels par championnat : pas à chaque passage, pour ménager ESPN).
+    ELO_DIAG garde le nombre de matchs lus (data.json › second.foot.elo_fetch)."""
     store = ELO_CACHE.setdefault(code, {})
     if not current and str(season) in store:
         return store[str(season)]
+    cur = store.get("cur") or {}
+    if current and cur.get("s") == season and CLOCK[0].timestamp() - cur.get("t", 0) < ELO_REFRESH:
+        return cur["rows"]
     events = []
     for doc in get_many([ESPN_TEAM_SCHEDULE.format(league=code, team=t) + f"?season={season}" for t in table_of(code)[0]]):
         events += (doc or {}).get("events") or []
@@ -363,6 +368,8 @@ def league_results(code, season, current):
     ELO_DIAG.setdefault(code, {})[str(season)] = len(rows)
     if rows and not current:
         store[str(season)] = rows
+    if rows and current:
+        store["cur"] = dict(s=season, t=CLOCK[0].timestamp(), rows=rows)
     return rows
 
 
@@ -424,7 +431,7 @@ def load_elo():
 
 def save_elo(today):
     keep = {str(y) for y in range(season_of(today) - ELO_SEASONS + 1, season_of(today))}
-    save_json(ELO_FILE, {c: {y: v for y, v in d.items() if y in keep} for c, d in ELO_CACHE.items()})
+    save_json(ELO_FILE, {c: {y: v for y, v in d.items() if y in keep or y == "cur"} for c, d in ELO_CACHE.items()})
 
 
 def table_of(code):
