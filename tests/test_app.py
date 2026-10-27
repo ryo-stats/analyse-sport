@@ -604,6 +604,32 @@ class AppTest(unittest.TestCase):
         self.assertIn("foot", d["bilan"])                       # bilan du passage précédent
         self.assertTrue(os.path.exists(app.LIVE_FILE))
 
+    def test_absents_and_why(self):
+        # compo officielle : le meilleur buteur absent (10 buts sur 20) → l'équipe perd la moitié de sa part
+        squad = dict(players=[dict(name="Erling Haaland", goals=10), dict(name="Phil Foden", goals=4),
+                              dict(name="Rodri", goals=2), dict(name="Ruben Dias", goals=4)])
+        start = {app.norm(n) for n in ("Phil Foden", "Rodri", "Ruben Dias")}
+        loss, who = app.lineup_loss(squad, (start, set()))
+        self.assertAlmostEqual(loss, 0.5)
+        self.assertEqual(who, ["Erling Haaland"])
+        bench_loss, _ = app.lineup_loss(squad, (start, {app.norm("Erling Haaland")}))
+        self.assertAlmostEqual(bench_loss, 0.5 * (1 - app.BENCH_SHARE))      # remplaçant : joue un peu
+        self.assertEqual(app.lineup_loss(squad, None), (0.0, []))
+        self.assertEqual(app.lineup_loss(dict(players=[dict(name="A", goals=2)]), (set(), set())), (0.0, []))
+        self.assertEqual(min(app.ABSENT_CAP, app.ABSENT_WEIGHT * 0.9), app.ABSENT_CAP)   # plafond −25 %
+        # une ligne « pourquoi » sous le Safe : derniers matchs, sinon la saison ; jamais l'Elo
+        why = app.foot_why("Lazio", "Sassuolo", dict(n10=8, gf10=16, ga10=5), dict(n10=8, gf10=12, ga10=16), None, None)
+        self.assertEqual(why, "8 derniers matchs : Lazio 16 marqués / 5 encaissés · Sassuolo 12 / 16")
+        self.assertTrue(app.foot_why("A", "B", None, None, dict(gp=5, gf=7, ga=4), dict(gp=5, gf=13, ga=5)).startswith("Saison"))
+        self.assertIsNone(app.foot_why("A", "B", None, None, None, None))
+        self.assertIn("7 victoires", app.nhl_why("Edmonton", "Detroit", dict(l10Wins=7), dict(l10Wins=4)))
+        self.assertIn("3,5 buts par match", app.nhl_why("WSH", "SEA", dict(gamesPlayed=4, goalFor=14), dict(gamesPlayed=5, goalFor=21)))
+        for m in self.data["foot"] + self.data["nhl"]:
+            main = (m.get("picks") or {}).get("main")
+            if main:
+                self.assertTrue(main.get("why"), m["id"])
+                self.assertNotIn("Elo", main["why"])
+
     def test_second_opinion(self):
         # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
         self.assertEqual(self.data["second"]["foot"]["ok"], 1)
@@ -621,7 +647,7 @@ class AppTest(unittest.TestCase):
             app.SECOND.clear()
         foot, nhl = self.data["foot"][0], self.data["nhl"][0]
         self.assertEqual(foot["source"], app.SRC_FOOT_ELO)       # Elo maison calculé : il compte pour moitié
-        self.assertTrue(any(c.startswith("Elo maison : Liverpool") for c in foot["ctx"]), foot["ctx"])
+        self.assertFalse(any("Elo" in c for c in foot["ctx"]), foot["ctx"])          # jamais affiché
         self.assertEqual(foot["second"]["src"], "marché des paris")
         self.assertTrue(foot["second"]["agree"])
         self.assertEqual(self.data["second"]["foot"]["status"], "ok")

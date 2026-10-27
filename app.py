@@ -301,8 +301,8 @@ def foot_lambdas(p_home, p_away, over=None):
 # ramenées vers la moyenne du championnat tant que peu de matchs sont joués, plus l'avantage du terrain.
 # Coupes d'Europe : chaque équipe est notée dans son championnat, corrigé par le niveau de ce championnat.
 SRC_FOOT = "Analyse maison : buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain"
-SRC_FOOT_ELO = "Analyse maison : Elo maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain"
-SRC_FOOT_ELO_ONLY = "Analyse maison : Elo maison (tous les résultats depuis deux saisons), avantage du terrain"
+SRC_FOOT_ELO = "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain"
+SRC_FOOT_ELO_ONLY = "Analyse maison : classement maison (tous les résultats depuis deux saisons), avantage du terrain"
 ELO_WEIGHT = 0.5         # part du classement Elo dans le verdict 1N2 (l'autre moitié : les buts)
 SRC_NHL = "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés"
 B2B_FACTOR = 0.95        # NHL : une équipe qui a joué la veille marque environ 5 % de moins
@@ -891,23 +891,50 @@ def espn_lineup(league, event_id):
     return out or None
 
 
+def in_group(name, group):
+    """Le joueur figure-t-il dans une liste de noms de la feuille de match (nom complet, ou même nom de famille) ?"""
+    n = norm(name)
+    last = n.split()[-1] if n else ""
+    return n in group or (len(last) > 3 and any(g.split()[-1] == last for g in group if g))
+
+
+ABSENT_WEIGHT = 0.5   # un buteur absent est en partie remplacé : l'équipe perd la moitié de sa part des buts
+ABSENT_CAP = 0.25     # au plus −25 % d'attaque, même si plusieurs titulaires manquent
+
+
+def lineup_loss(squad, lineup):
+    """Part des buts de la saison que l'équipe perd d'après la compo officielle : joueurs absents (toute leur part)
+    et remplaçants (la part du temps qu'ils ne jouent pas). Renvoie (part perdue, noms des buteurs concernés)."""
+    if not squad or not lineup:
+        return 0.0, []
+    start, bench = lineup
+    players = squad.get("players") or []
+    goals = sum(p["goals"] for p in players)
+    if goals < 5:                      # début de saison : trop peu de buts pour juger qui compte
+        return 0.0, []
+    lost, who = 0.0, []
+    for p in players:
+        if not p["goals"] or in_group(p["name"], start):
+            continue
+        part = p["goals"] * ((1 - BENCH_SHARE) if in_group(p["name"], bench) else 1)
+        lost += part
+        if p["goals"] / goals >= 0.1:
+            who.append(p["name"])
+    return lost / goals, who
+
+
 def apply_lineup(rows, lineup):
     """Titulaire : inchangé. Remplaçant : chances réduites (il joue peu). Hors du groupe : 0 %.
     Renvoie les noms des joueurs importants (≥ 15 % de marquer) qui ne commencent pas le match."""
     if not lineup:
         return []
     start, bench = lineup
-
-    def found(name, group):
-        n = norm(name)
-        last = n.split()[-1] if n else ""
-        return n in group or (len(last) > 3 and any(g.split()[-1] == last for g in group if g))
     missing = []
     for r in rows:
-        if found(r["name"], start):
+        if in_group(r["name"], start):
             r["lineup"] = "start"
             continue
-        r["lineup"] = "bench" if found(r["name"], bench) else "out"
+        r["lineup"] = "bench" if in_group(r["name"], bench) else "out"
         if r.get("p_goal", 0) >= 15:
             missing.append(f"{r['name']} ({'remplaçant' if r['lineup'] == 'bench' else 'absent'})")
         for k in ("p_goal", "p_dec"):
@@ -1096,6 +1123,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     saved = history.get(key, {}).get("p")
     odds = espn_odds(comp, three_way=True)
     over = None
+    absents = []
     if state != "pre" and saved and len(saved) == 3:
         # après le coup d'envoi : on garde l'analyse d'avant-match
         p_h, p_d, p_a = saved
@@ -1118,6 +1146,16 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         else:
             lh, la = foot_lambdas(elo["p"][0], elo["p"][2])
             source = SRC_FOOT_ELO_ONLY
+        # compo officielle connue : un buteur important absent fait baisser l'attaque de son équipe
+        for side in ("h", "a"):
+            loss, who = lineup_loss((squads or {}).get(side), (lineup or {}).get(side))
+            cut = min(ABSENT_CAP, ABSENT_WEIGHT * loss)
+            if cut >= 0.03:
+                if side == "h":
+                    lh *= 1 - cut
+                else:
+                    la *= 1 - cut
+                absents.append((home if side == "h" else away, who, cut))
         p_h, p_d, p_a = outcome_probs(lh, la)
     elif odds and state == "pre":
         p_h, p_d, p_a = odds["p"]
@@ -1180,10 +1218,9 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         if rec and rec.get("n10"):
             ctx.append(f"{name} : {plural(rec['gf10'], 'but')} marqué{'s' if rec['gf10'] > 1 else ''} et "
                        f"{rec['ga10']} encaissé{'s' if rec['ga10'] > 1 else ''} sur ses {rec['n10']} derniers matchs de championnat.")
-    elo_pts = history.get(key, {}).get("elo")
-    if elo_pts:
-        ctx.append(f"Elo maison : {home} {elo_pts[0]}, {away} {elo_pts[1]} (1500 = club moyen"
-                   + (", corrigé du niveau de chaque championnat)." if league in EUROPE.values() else ")."))
+    for name, who, cut in absents:
+        ctx.append(f"{name} : attaque revue à la baisse (−{pct(cut)} %) d'après la compo officielle"
+                   + (f" ({', '.join(who)} ne commence{'nt' if len(who) > 1 else ''} pas)." if who else "."))
     if not team_rows["h"] and not team_rows["a"]:
         ctx.append("Statistiques des joueurs indisponibles pour ce match.")
     if lineup:
@@ -1195,6 +1232,9 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         ctx.append(f"Joueurs : statistiques de la saison en championnat national (plus de matchs que la {league}).")
 
     picks = foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh, la)
+    why = foot_why(home, away, (recents or {}).get("h"), (recents or {}).get("a"), sh, sa)
+    if why and picks.get("main") and not picks["main"].get("why"):
+        picks["main"]["why"] = why
     # garde-fou : le marché des paris (jamais affiché) ; s'il contredit nettement l'analyse, pas de Safe
     mkt = history.get(key, {}).get("p_mkt")
     second = dict(src="marché des paris", p=mkt) if mkt and source in (SRC_FOOT, SRC_FOOT_ELO, SRC_FOOT_ELO_ONLY) else None
@@ -1508,6 +1548,31 @@ def coherent_score(lh, la, anchors, n=9):
         return None
     p, i, j = max(ok)
     return f"{i}-{j}", p
+
+
+def foot_why(home, away, rec_h, rec_a, sh, sa):
+    """Une ligne qui explique le Safe : buts marqués et encaissés des deux équipes sur leurs derniers matchs
+    (repli : la saison)."""
+    if rec_h and rec_a and rec_h.get("n10") and rec_a.get("n10"):
+        n1, n2 = rec_h["n10"], rec_a["n10"]
+        head = f"{n1} derniers matchs" if n1 == n2 else "Derniers matchs"
+        a, b = (rec_h["gf10"], rec_h["ga10"]), (rec_a["gf10"], rec_a["ga10"])
+    elif sh and sa and sh.get("gp") and sa.get("gp"):
+        head, a, b = "Saison", (sh["gf"], sh["ga"]), (sa["gf"], sa["ga"])
+    else:
+        return None
+    return f"{head} : {home} {a[0]} marqués / {a[1]} encaissés · {away} {b[0]} / {b[1]}"
+
+
+def nhl_why(home, away, sh, sa):
+    """Une ligne qui explique le Safe NHL : victoires sur les 10 derniers matchs (repli : buts par match)."""
+    sh, sa = sh or {}, sa or {}
+    if sh.get("l10Wins") is not None and sa.get("l10Wins") is not None:
+        return f"10 derniers matchs : {home} {plural(sh['l10Wins'], 'victoire')} · {away} {sa['l10Wins']}"
+    if sh.get("gamesPlayed") and sa.get("gamesPlayed"):
+        f = lambda st: f"{st.get('goalFor', 0) / st['gamesPlayed']:.1f}".replace(".", ",")
+        return f"Saison : {home} {f(sh)} buts par match · {away} {f(sa)}"
+    return None
 
 
 def foot_picks(home, away, p_h, p_d, p_a, over25, btts, team_rows, scores, scorep, lh=None, la=None):
@@ -2108,6 +2173,9 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
 
     picks = nhl_picks(hname, aname, win_h, lh, la, team_rows,
                       q=min(0.75, max(0.25, (win_h - p_h) / p_d)) if p_d > 0 else 0.5)
+    why = nhl_why(hname, aname, sh, sa)
+    if why and picks.get("main") and not picks["main"].get("why"):
+        picks["main"]["why"] = why
     mkt = history.get(key, {}).get("p_mkt")
     second = dict(src="marché des paris", winH=mkt[0]) if mkt and source == SRC_NHL else None
     agree = concord("nhl", picks, (win_h,), second)
@@ -2223,7 +2291,7 @@ def main(now=None):
     load_elo()
     same = lambda k, day: prev.get(k) or [] if prev.get("date" if k == "foot" else "nhl_date") == day.isoformat() else []
     foot_rows = step("Foot", lambda: foot(today, history), same("foot", today))
-    step("Elo maison (sauvegarde)", lambda: save_elo(today))
+    step("Classement maison (sauvegarde)", lambda: save_elo(today))
     step("Effectifs (sauvegarde)", lambda: save_squad_cache(today))
     nhl_rows = step("NHL", lambda: nhl(nhl_day, history), same("nhl", nhl_day))
     step("Forme (sauvegarde)", lambda: save_form(today))
@@ -2243,7 +2311,7 @@ def main(now=None):
                 notes=NOTES[-12:], form=dict(FORM_STATS), second=dict(
                     foot=dict(ok=SECOND_STATS["foot"][0], elo=dict(ELO_STATS), elo_fetch=dict(ELO_DIAG),
                               status="ok" if any(v >= ELO_MIN for v in ELO_STATS.values()) or not ELO_STATS
-                              else "Elo maison indisponible (résultats ESPN illisibles)"),
+                              else "Classement maison indisponible (résultats ESPN illisibles)"),
                     nhl=dict(ok=SECOND_STATS["nhl"][0], missing=sorted(set(SECOND_STATS["nhl"][1])),
                              fetch={u: v for u, v in FETCH_LOG.items() if "moneypuck" in u})))
     save_json(HIST_FILE, history)

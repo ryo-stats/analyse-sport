@@ -452,11 +452,14 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
 .sel .conf .odd{width:100%}
 .pl.fun{grid-template-columns:minmax(0,1fr) auto}
 .pl .why{display:block;font-size:.74rem;color:var(--away);font-weight:600}
+.pl.main .why{color:var(--muted);font-weight:500}
 .rc{margin-left:6px;color:var(--away)}
 /* Bilan : jour par jour et par championnat, dépliables */
 .vh{font-size:1.1rem;margin:16px 0 2px}
 .vbox{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:8px}
 .vd+.vd{border-top:1px solid var(--line)}
+.techd{margin-top:22px;border-top:1px solid var(--line)}
+.techd>summary{cursor:pointer;padding:14px 0;font-weight:700;color:var(--muted);min-height:44px}
 .vd summary{display:grid;grid-template-columns:minmax(0,1fr) auto 56px 14px;gap:10px;align-items:center;padding:12px;cursor:pointer;list-style:none;min-height:48px}
 .vd summary::-webkit-details-marker{display:none}
 .vd summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-2px);justify-self:center;transition:transform .15s}
@@ -567,7 +570,7 @@ dialog{box-sizing:border-box;max-width:calc(100vw - 24px);max-height:calc(100dvh
   <main id="view"><div class="empty">Chargement des analyses…</div></main>
   <section class="explain" id="explain">
     <h2>Comment lire ces chiffres</h2>
-    <p><strong>Barre de couleur :</strong> chances de victoire selon l'analyse maison. Foot : moitié Elo maison (classement calculé à partir de tous les résultats des deux saisons passées et de la saison en cours), moitié buts marqués et encaissés cette saison, les 10 derniers matchs comptant double, plus l'avantage du terrain ; en coupe d'Europe, chaque club est jugé dans son championnat, corrigé du niveau de ce championnat. Hockey : buts attendus (xG) de chaque équipe (MoneyPuck.com), avantage de la glace et fatigue d'un match joué la veille. Les cotes ne sont pas affichées : elles servent seulement de garde-fou. Si le marché des paris voit un autre favori, ou juge le Safe bien moins sûr, le match passe en « avis partagés » et n'a pas de Safe. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
+    <p><strong>Barre de couleur :</strong> chances de victoire selon l'analyse maison. Foot : moitié classement maison (calculé à partir de tous les résultats des deux saisons passées et de la saison en cours), moitié buts marqués et encaissés cette saison, les 10 derniers matchs comptant double, plus l'avantage du terrain ; en coupe d'Europe, chaque club est jugé dans son championnat, corrigé du niveau de ce championnat. Hockey : buts attendus (xG) de chaque équipe (MoneyPuck.com), avantage de la glace et fatigue d'un match joué la veille. Les cotes ne sont pas affichées : elles servent seulement de garde-fou. Si le marché des paris voit un autre favori, ou juge le Safe bien moins sûr, le match passe en « avis partagés » et n'a pas de Safe. Au hockey, la barre montre le résultat après 60 minutes, et « au final » ajoute prolongation et tirs au but.</p>
     <p><strong>Buts attendus, scores, buteurs :</strong> calculés à partir de ces buts attendus avec un modèle de Poisson. Pour chaque équipe, les 6 joueurs les plus susceptibles de marquer sont listés. « Marque » donne la chance de marquer au moins un but, « Décisif » celle de marquer ou de faire une passe décisive, et « Point » celle de marquer au moins 1 point (but ou passe) au hockey. On part de la part des buts et des passes de l'équipe pour chaque joueur, pondérée par son temps de jeu et son poste, puis lissée car le début de saison compte peu de matchs. En coupe d'Europe (Ligue des champions, Europa League), ce sont les statistiques du championnat national du club. Confiance faible : ce sont des ordres de grandeur. Les blessés ne sont pas filtrés au foot : vérifie les compositions avant de parier sur un joueur.</p>
     <p><strong>Pronostics :</strong> pour chaque match, le site retient l'issue la plus probable parmi le vainqueur, la double chance (« X ou nul »), le nombre de buts et « les deux équipes marquent ». Il indique aussi le vainqueur probable et le joueur le plus susceptible de marquer (ou de faire un point au hockey). Étoiles : ★ moins de 50 %, ★★ 50 à 60 %, ★★★ 60 à 70 %, ★★★★ 70 à 80 %, ★★★★★ 80 % et plus. Ces probabilités disent ce qui est le plus probable selon les statistiques, pas où le bookmaker se trompe.</p>
     <p><strong>Bilan :</strong> chaque pronostic est comparé au résultat. Note d'erreur : plus c'est bas, mieux c'est (niveau des bookmakers : environ 0,58 en foot et 0,48 en NHL). La même note est calculée pour le marché des paris sur les mêmes matchs : tu vois ainsi lequel se trompe le moins. À juger après 200 matchs.</p>
@@ -974,7 +977,7 @@ function pronoBody(m){
   const fun = funPk ? {...funPk, prob: funPk.prob ?? pctr(funPk.p), stars: funPk.stars ?? starsOf(funPk.p)} : null;
   // les paris joueurs (Buteur, Décisif) ont leurs propres sous-onglets : la fiche du match reste épurée
   const lines = [["Safe ✅", pk.main], ["Fun 🎲", fun], ["Vainqueur", pk.winner]];
-  return `${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why && p.market === "scorer" ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
+  return `${agreeTag(m)}<div class="plines">${!pk.main && pk.held ? `<div class="pl main held"><span class="pk">Safe ✅</span><span class="pv">Pas de Safe : avis partagés<small class="why">${esc(pk.held.label)} · ${esc(pk.held.note || "")}</small></span></div>` : ""}${lines.filter(([, p]) => p).map(([k, p]) => `<div class="pl${k === "Safe ✅" ? " main" : k === "Fun 🎲" ? " funl" : ""}"><span class="pk">${k}</span><span class="pv">${mark(resultOf(m, p))}${esc(p.label)}${lineupTag(m, p)}${p.why && (p.market === "scorer" || k === "Safe ✅") ? `<small class="why">${esc(p.why)}</small>` : ""}</span>${conf(p)}${notStarted(m) ? addBtn(m, p) : ""}</div>`).join("")}
     ${pk.score ? `<div class="pl"><span class="pk">Score exact</span><span class="pv">${mark(resultOf(m, pk.score))}${esc(pk.score.value || String(pk.score.label).replace("Score le plus probable : ", ""))}</span><span class="conf"><b class="pp num">${pk.score.prob} %</b>${pk.score.fair ? minOdd(pk.score.fair) : ""}</span>${notStarted(m) && pk.score.market ? addBtn(m, pk.score) : ""}</div>` : ""}</div>${liveBlock(m)}`;
 }
 let PSUB = "foot";       // sous-onglet de Pronostics : foot | nhl | combo | live | fun
@@ -1375,10 +1378,11 @@ function picksBlock(b){
   const seg = `<div class="pviews" role="group" aria-label="Sport">${[["all", "Tous"], ["foot", "Foot"], ["nhl", "NHL"]].map(([k, l]) =>
     `<button type="button" data-bsport="${k}" aria-pressed="${k === S}">${l}</button>`).join("")}</div>`;
   // total depuis l'ouverture, comparé à ce que les probabilités annonçaient
-  const up = tot.n && tot.rate >= tot.expected, gap = Math.abs(tot.rate - tot.expected);
+  const up = tot.n && tot.rate >= tot.expected - 3, gap = tot.rate - tot.expected;
+  const verdict = gap > 3 ? "les pourcentages sont plutôt prudents" : gap < -3 ? "les pourcentages sont un peu trop optimistes" : "les pourcentages sont fiables";
   const total = tot.n ? `<section class="card2 vtot"><span class="vbig num ${up ? "up" : "down"}">${tot.rate} %</span>
       <div><b>pronostics validés</b><span class="src num">${tot.ok} sur ${tot.n} · attendu ${tot.expected} % · depuis le ${esc(dmy(b.since))}</span>
-      <span class="vnote ${up ? "up" : "down"}">${up ? `Mieux que prévu (+${gap} point${gap > 1 ? "s" : ""})` : `Moins bien que prévu (−${gap} point${gap > 1 ? "s" : ""})`}</span></div></section>` : "";
+      <span class="vnote ${up ? "up" : "down"}">Quand le site annonce ${tot.expected} %, ça passe ${tot.rate} % du temps : ${verdict}.</span></div></section>` : "";
   // calendrier du mois : un pourcentage par jour joué, vert au-dessus de l'attendu, orange en dessous
   const played = b.days.filter(d => d[S].n);
   const months = [...new Set(played.map(d => d.date.slice(0, 7)))].sort();
@@ -1432,7 +1436,12 @@ function picksBlock(b){
   }).join("");
   return `${seg}${tiles}
     <h3 class="vh" id="vleagues">Pronostics vérifiés par championnat</h3><p class="src">Touche un championnat pour voir ses matchs (30 derniers jours). Le score couvre toute la période ; les paris 🎲 Fun et score exact n'y comptent pas.</p><div class="vbox">${leagues}</div>
-    <h3 class="vh">Par niveau de confiance</h3>
+`;
+}
+// détail technique (replié) : réussite par niveau de confiance, puis favoris et note d'erreur par sport
+function starsTable(b){
+  if (!b || !b.by_stars) return "";
+  return `<h3 class="vh">Par niveau de confiance</h3>
     <div class="tablewrap"><table class="num"><thead><tr><th>Confiance</th><th class="r">Pronostics</th><th class="r">Annoncé</th><th class="r">Réussis</th></tr></thead>
     <tbody>${b.by_stars.map(r => `<tr><td><span class="stars">${starStr(r.stars)}</span></td><td class="r">${r.n}</td><td class="r">${r.announced} %</td><td class="r">${r.actual} %</td></tr>`).join("")}</tbody></table></div>`;
 }
@@ -1451,7 +1460,8 @@ function bilanBlock(b, label, naive){
 // Bilan : calendrier en haut ; en dessous, les chiffres de fond (par championnat, par confiance, favoris)
 function bilanView(){
   const b = DATA.bilan || {};
-  return `${picksBlock(b.picks)}${bilanBlock(b.foot, "Foot", "0,667")}${bilanBlock(b.nhl, "NHL", "0,500")}`;
+  return `${picksBlock(b.picks)}<details class="techd"><summary>Détails techniques</summary>
+    ${starsTable(b.picks)}${bilanBlock(b.foot, "Foot", "0,667")}${bilanBlock(b.nhl, "NHL", "0,500")}</details>`;
 }
 
 // ---- Bankroll : dépôts, retraits et paris, gardés UNIQUEMENT sur ce téléphone (localStorage, sans sauvegarde)
