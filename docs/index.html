@@ -139,6 +139,7 @@ td.r,th.r{text-align:right}
 @media (min-width:860px){
   .wrap{max-width:1120px}
   .layout{grid-template-columns:210px minmax(0,1fr);align-items:start;gap:16px}
+  .layout.solo{grid-template-columns:minmax(0,1fr)}          /* un seul championnat : pas de colonne de navigation */
   .leagues{flex-direction:column;overflow:visible;margin:0;padding:0;position:sticky;top:16px}
   .leagues button{border-radius:6px;justify-content:flex-start}
   .leagues .n{margin-left:auto}
@@ -231,6 +232,7 @@ button.lstrip:focus-visible{outline:2px solid var(--home)}
 .pviews.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .pviews button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.14)}.pviews.dtabs{margin:0 0 12px}
 .mfil{margin-bottom:12px}
+@media (min-width:860px){.mfil{flex-direction:row;position:static}.mfil button{border-radius:999px}}
 .dbody{display:grid;gap:12px}
 /* ---- Bilan : total, calendrier du mois, détail du jour */
 .vtot{display:flex;align-items:center;gap:16px}
@@ -929,7 +931,7 @@ function footView(){
     const f = first(l);
     return group(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, f.league_logo, all.filter(m => m.league === l), matchDetail);
   }).join("");
-  return `<div class="layout">${leagues.length > 1 ? nav : ""}<div class="groups">${groups}<p class="hint">Touche un match pour ses pronostics, son analyse et ses joueurs.</p></div></div>`;
+  return `<div class="layout${leagues.length > 1 ? "" : " solo"}">${leagues.length > 1 ? nav : ""}<div class="groups">${groups}<p class="hint">Touche un match pour ses pronostics, son analyse et ses joueurs.</p></div></div>`;
 }
 function nhlView(){
   const all = byFilter(DATA.nhl || []);
