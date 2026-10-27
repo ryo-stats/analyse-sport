@@ -902,11 +902,17 @@ ABSENT_WEIGHT = 0.5   # un buteur absent est en partie remplacé : l'équipe per
 ABSENT_CAP = 0.25     # au plus −25 % d'attaque, même si plusieurs titulaires manquent
 
 
-def lineup_loss(squad, lineup):
+def lineup_loss(squad, lineup, recent=None):
     """Part des buts de la saison que l'équipe perd d'après la compo officielle : joueurs absents (toute leur part)
-    et remplaçants (la part du temps qu'ils ne jouent pas). Renvoie (part perdue, noms des buteurs concernés)."""
+    et remplaçants (la part du temps qu'ils ne jouent pas). Renvoie (part perdue, noms des buteurs concernés).
+    recent : feuilles des derniers matchs. Un joueur qui n'y jouait déjà presque plus (blessé depuis des semaines)
+    ne compte pas : les buts récents de l'équipe tiennent déjà compte de son absence."""
     if not squad or not lineup:
         return 0.0, []
+    rec = (recent or {}).get("players") or {}
+    # même garde-fou que squad_rows : les feuilles de match ne servent que si l'effectif s'y retrouve
+    usable = rec and (recent or {}).get("games", 0) >= 3 and sum(1 for p in squad.get("players") or [] if str(p.get("pid")) in rec) >= 3
+    regular = (lambda p: (rec.get(str(p.get("pid"))) or [0])[0] * 2 >= recent["games"]) if usable else (lambda p: True)
     start, bench = lineup
     players = squad.get("players") or []
     goals = sum(p["goals"] for p in players)
@@ -914,7 +920,7 @@ def lineup_loss(squad, lineup):
         return 0.0, []
     lost, who = 0.0, []
     for p in players:
-        if not p["goals"] or in_group(p["name"], start):
+        if not p["goals"] or in_group(p["name"], start) or not regular(p):
             continue
         part = p["goals"] * ((1 - BENCH_SHARE) if in_group(p["name"], bench) else 1)
         lost += part
@@ -1148,7 +1154,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
             source = SRC_FOOT_ELO_ONLY
         # compo officielle connue : un buteur important absent fait baisser l'attaque de son équipe
         for side in ("h", "a"):
-            loss, who = lineup_loss((squads or {}).get(side), (lineup or {}).get(side))
+            loss, who = lineup_loss((squads or {}).get(side), (lineup or {}).get(side), (recents or {}).get(side))
             cut = min(ABSENT_CAP, ABSENT_WEIGHT * loss)
             if cut >= 0.03:
                 if side == "h":

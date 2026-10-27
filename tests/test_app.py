@@ -615,6 +615,12 @@ class AppTest(unittest.TestCase):
         bench_loss, _ = app.lineup_loss(squad, (start, {app.norm("Erling Haaland")}))
         self.assertAlmostEqual(bench_loss, 0.5 * (1 - app.BENCH_SHARE))      # remplaçant : joue un peu
         self.assertEqual(app.lineup_loss(squad, None), (0.0, []))
+        # blessé depuis des semaines (aucun des 6 derniers matchs) : déjà absent des buts récents, pas compté deux fois
+        squad_ids = dict(players=[dict(p, pid=i) for i, p in enumerate(squad["players"])])
+        recent = dict(games=6, players={"0": [0, 0, 0], "1": [6, 2, 1], "2": [6, 1, 0], "3": [5, 0, 0]})
+        self.assertEqual(app.lineup_loss(squad_ids, (start, set()), recent), (0.0, []))
+        recent["players"]["0"] = [5, 4, 0]                                       # il jouait : sa part compte
+        self.assertAlmostEqual(app.lineup_loss(squad_ids, (start, set()), recent)[0], 0.5)
         self.assertEqual(app.lineup_loss(dict(players=[dict(name="A", goals=2)]), (set(), set())), (0.0, []))
         self.assertEqual(min(app.ABSENT_CAP, app.ABSENT_WEIGHT * 0.9), app.ABSENT_CAP)   # plafond −25 %
         # une ligne « pourquoi » sous le Safe : derniers matchs, sinon la saison ; jamais l'Elo
