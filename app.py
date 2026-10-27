@@ -337,36 +337,18 @@ def result_rows(events):
 
 
 def league_results(code, season, current):
-    """Résultats d'une saison d'un championnat (ESPN) : [[date, id domicile, id extérieur, buts, buts], …].
-    Trois façons de les lire, de la moins coûteuse à la plus sûre : tableau des scores de toute la saison,
-    puis mois par mois, puis calendrier de chaque club du classement. Les saisons terminées sont gardées dans
-    cache/elo.json ; la saison en cours est relue à chaque passage. ELO_DIAG garde la trace (data.json)."""
+    """Résultats d'une saison d'un championnat (ESPN) : [[date, id domicile, id extérieur, buts, buts], …], lus
+    dans le calendrier de chaque club du classement (le tableau des scores ESPN sur une saison ou un mois revient
+    vide, essai du 27/10). Les saisons terminées sont gardées dans cache/elo.json ; la saison en cours est relue
+    à chaque passage. ELO_DIAG garde le nombre de matchs lus (data.json › second.foot.elo_fetch)."""
     store = ELO_CACHE.setdefault(code, {})
     if not current and str(season) in store:
         return store[str(season)]
-    url = ESPN_SCOREBOARD.format(sport="soccer", league=code)
-    diag = ELO_DIAG.setdefault(code, {})
-    events = (get_json(url, {"dates": f"{season}0701-{season + 1}0630", "limit": 1000}) or {}).get("events") or []
+    events = []
+    for doc in get_many([ESPN_TEAM_SCHEDULE.format(league=code, team=t) + f"?season={season}" for t in table_of(code)[0]]):
+        events += (doc or {}).get("events") or []
     rows = result_rows(events)
-    diag[f"{season} saison"] = len(rows)
-    if not rows or len(events) % 100 == 0:      # vide, ou réponse peut-être coupée à 100
-        events = []
-        for m in range(12):
-            y, mo = season + (m + 6) // 12, (m + 6) % 12 + 1
-            if dt.date(y, mo, 1) > dt.date.today():
-                break
-            last = (dt.date(y + mo // 12, mo % 12 + 1, 1) - dt.timedelta(days=1)).day
-            events += (get_json(url, {"dates": f"{y}{mo:02d}01-{y}{mo:02d}{last}", "limit": 1000}) or {}).get("events") or []
-        rows = max(rows, result_rows(events), key=len)
-        diag[f"{season} mois"] = len(rows)
-    if len(rows) < ELO_MIN // 3:
-        teams = list(table_of(code)[0])
-        if teams:
-            events = []
-            for doc in get_many([ESPN_TEAM_SCHEDULE.format(league=code, team=t) + f"?season={season}" for t in teams]):
-                events += (doc or {}).get("events") or []
-            rows = max(rows, result_rows(events), key=len)
-            diag[f"{season} clubs"] = len(rows)
+    ELO_DIAG.setdefault(code, {})[str(season)] = len(rows)
     if rows and not current:
         store[str(season)] = rows
     return rows

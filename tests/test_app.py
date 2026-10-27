@@ -56,9 +56,10 @@ def espn_soccer_event(eid, date, state, completed, home, away, odds=None):
 
 def fake_get_json(url, params=None):
     p = params or {}
-    if "soccer/eng.1/scoreboard" in url and "-" in str(p.get("dates", "")):
-        start = int(str(p["dates"])[:4])
-        return dict(events=season_events(start, 40 if start == 2026 else None))
+    if "soccer/eng.1/teams/" in url and "/schedule?season=" in url:     # calendrier d'un club (Elo maison)
+        start, tid = int(url.split("season=")[1]), url.split("/teams/")[1].split("/")[0]
+        return dict(events=[e for e in season_events(start, 40 if start == 2026 else None)
+                            if tid in [c["team"]["id"] for c in e["competitions"][0]["competitors"]]])
     if "soccer/eng.1/scoreboard" in url:
         if p.get("dates") == "20261011":
             odds = [None, dict(provider=dict(name="ESPN BET"), overUnder=2.5,
@@ -567,7 +568,7 @@ class AppTest(unittest.TestCase):
         self.assertAlmostEqual(vs["mkt"], ((0.25 + 0.09 + 0.04) + (0.04 + 0.09 + 0.25)) / 2, places=3)
 
     def test_elo_results_fallbacks(self):
-        # tableau des scores de la saison vide : mois par mois, puis calendrier de chaque club du classement
+        # résultats lus dans le calendrier de chaque club du classement
         calls, old = [], app.get_json
         evs = season_events(2025)
         def fake(url, params=None):
@@ -585,7 +586,7 @@ class AppTest(unittest.TestCase):
         finally:
             app.get_json = old
         self.assertEqual(len(rows), 2 * 38 - 2)            # 2 clubs au classement simulé : leurs matchs, sans doublon
-        self.assertEqual(set(app.ELO_DIAG["eng.1"]), {"2025 saison", "2025 mois", "2025 clubs"})
+        self.assertEqual(app.ELO_DIAG["eng.1"], {"2025": 74})
         self.assertTrue(any("?season=2025" in u for u, _ in calls))
 
     def test_second_opinion(self):
@@ -615,7 +616,8 @@ class AppTest(unittest.TestCase):
         # Elo maison : trois saisons de résultats ESPN (rodage, puis deux saisons), City au-dessus de Liverpool
         elo = app.house_elo("eng.1", dt.date(2026, 10, 11))
         self.assertGreater(elo["382"][0], elo["364"][0])
-        self.assertEqual(self.data["second"]["foot"]["elo"]["eng.1"], 2 * 380 + 40)
+        self.assertEqual(self.data["second"]["foot"]["elo_fetch"]["eng.1"]["2025"], 2 * 38 - 2)   # 2 clubs au classement simulé
+        self.assertGreaterEqual(self.data["second"]["foot"]["elo"]["eng.1"], app.ELO_MIN)
         sec = app.elo_probs("eng.1", "eng.1", "364", "382", dt.date(2026, 10, 11))
         self.assertAlmostEqual(sum(sec["p"]), 1, places=6)
         self.assertGreater(sec["p"][2], sec["p"][0])
