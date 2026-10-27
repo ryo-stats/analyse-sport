@@ -17615,7 +17615,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876424|exact|": {
   "match": "foot-401876424",
@@ -18379,7 +18379,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874779|wa_nil|": {
   "match": "foot-401874779",
@@ -19451,7 +19451,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882828|1|": {
   "match": "foot-401882828",
@@ -19475,7 +19475,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882828|scorer|Miguel Sierra": {
   "match": "foot-401882828",
@@ -19499,7 +19499,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882828|dec|Miguel Sierra": {
   "match": "foot-401882828",
@@ -19551,7 +19551,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882828|exact|": {
   "match": "foot-401882828",
@@ -19575,7 +19575,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020185|u55|": {
   "match": "nhl-2026020185",
@@ -19851,8 +19851,8 @@
   "away": "Detroit Red Wings",
   "market": "point",
   "label": "Connor McDavid : au moins 1 point",
-  "p": 0.79,
-  "stars": 4,
+  "p": 0.82,
+  "stars": 5,
   "player": "Connor McDavid",
   "pid_player": 8478402,
   "value": null,
@@ -19875,7 +19875,7 @@
   "away": "Detroit Red Wings",
   "market": "goal",
   "label": "Connor McDavid marque",
-  "p": 0.4,
+  "p": 0.42,
   "stars": 1,
   "player": "Connor McDavid",
   "pid_player": 8478402,
@@ -19887,30 +19887,6 @@
   "group": "safe",
   "kinds": [
    "scorer"
-  ],
-  "result": null
- },
- "nhl-2026020187|h2|": {
-  "match": "nhl-2026020187",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-10-27",
-  "home": "Edmonton Oilers",
-  "away": "Detroit Red Wings",
-  "market": "h2",
-  "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-  "p": 0.4128,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
   ],
   "result": null
  },
@@ -19937,5 +19913,497 @@
    "fun"
   ],
   "result": false
+ },
+ "foot-401874980|N2|": {
+  "match": "foot-401874980",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Sassuolo",
+  "away": "Lazio",
+  "market": "N2",
+  "label": "Nul ou Lazio",
+  "p": 0.7037,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874980|2|": {
+  "match": "foot-401874980",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Sassuolo",
+  "away": "Lazio",
+  "market": "2",
+  "label": "Victoire Lazio",
+  "p": 0.4374,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874980|scorer|Davide Frattesi": {
+  "match": "foot-401874980",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Sassuolo",
+  "away": "Lazio",
+  "market": "scorer",
+  "label": "Davide Frattesi marque",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Davide Frattesi",
+  "pid_player": "250850",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874980|dec|Davide Frattesi": {
+  "match": "foot-401874980",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Sassuolo",
+  "away": "Lazio",
+  "market": "dec",
+  "label": "Davide Frattesi buteur ou passeur",
+  "p": 0.29,
+  "stars": 1,
+  "player": "Davide Frattesi",
+  "pid_player": "250850",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   8,
+   3,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874980|o35|": {
+  "match": "foot-401874980",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Sassuolo",
+  "away": "Lazio",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3509,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874980|exact|": {
+  "match": "foot-401874980",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Sassuolo",
+  "away": "Lazio",
+  "market": "exact",
+  "label": "Score exact 1-2",
+  "p": 0.0919,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-2",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401874780|1N|": {
+  "match": "foot-401874780",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "AS Roma",
+  "away": "Cagliari",
+  "market": "1N",
+  "label": "AS Roma ou nul",
+  "p": 0.8917,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874780|1|": {
+  "match": "foot-401874780",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "AS Roma",
+  "away": "Cagliari",
+  "market": "1",
+  "label": "Victoire AS Roma",
+  "p": 0.6959,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874780|scorer|Donyell Malen": {
+  "match": "foot-401874780",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "AS Roma",
+  "away": "Cagliari",
+  "market": "scorer",
+  "label": "Donyell Malen marque",
+  "p": 0.45,
+  "stars": 1,
+  "player": "Donyell Malen",
+  "pid_player": "259481",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874780|dec|Donyell Malen": {
+  "match": "foot-401874780",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "AS Roma",
+  "away": "Cagliari",
+  "market": "dec",
+  "label": "Donyell Malen buteur ou passeur",
+  "p": 0.52,
+  "stars": 2,
+  "player": "Donyell Malen",
+  "pid_player": "259481",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   7,
+   6,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874780|wh_nil|": {
+  "match": "foot-401874780",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "AS Roma",
+  "away": "Cagliari",
+  "market": "wh_nil",
+  "label": "AS Roma gagne sans encaisser de but",
+  "p": 0.4068,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874780|exact|": {
+  "match": "foot-401874780",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "AS Roma",
+  "away": "Cagliari",
+  "market": "exact",
+  "label": "Score exact 2-0",
+  "p": 0.122,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "2-0",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "foot-401874786|N2|": {
+  "match": "foot-401874786",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Torino",
+  "away": "Como",
+  "market": "N2",
+  "label": "Nul ou Como",
+  "p": 0.7979,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874786|2|": {
+  "match": "foot-401874786",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Torino",
+  "away": "Como",
+  "market": "2",
+  "label": "Victoire Como",
+  "p": 0.5501,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874786|scorer|Anastasios Douvikas": {
+  "match": "foot-401874786",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Torino",
+  "away": "Como",
+  "market": "scorer",
+  "label": "Anastasios Douvikas marque",
+  "p": 0.42,
+  "stars": 1,
+  "player": "Anastasios Douvikas",
+  "pid_player": "262071",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874786|dec|Anastasios Douvikas": {
+  "match": "foot-401874786",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Torino",
+  "away": "Como",
+  "market": "dec",
+  "label": "Anastasios Douvikas buteur ou passeur",
+  "p": 0.46,
+  "stars": 1,
+  "player": "Anastasios Douvikas",
+  "pid_player": "262071",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   8,
+   5,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874786|wa_o25|": {
+  "match": "foot-401874786",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Torino",
+  "away": "Como",
+  "market": "wa_o25",
+  "label": "Como gagne et plus de 2,5 buts",
+  "p": 0.3726,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874786|exact|": {
+  "match": "foot-401874786",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-27",
+  "home": "Torino",
+  "away": "Como",
+  "market": "exact",
+  "label": "Score exact 1-2",
+  "p": 0.0989,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": "1-2",
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "score"
+  ],
+  "result": null
+ },
+ "nhl-2026020187|o55|": {
+  "match": "nhl-2026020187",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-27",
+  "home": "Edmonton Oilers",
+  "away": "Detroit Red Wings",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6839,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020187|wh_o65|": {
+  "match": "nhl-2026020187",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-10-27",
+  "home": "Edmonton Oilers",
+  "away": "Detroit Red Wings",
+  "market": "wh_o65",
+  "label": "Edmonton Oilers gagne et plus de 6,5 buts",
+  "p": 0.3631,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
  }
 }

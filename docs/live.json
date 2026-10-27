@@ -1,176 +1,259 @@
 {
- "generated": "2026-10-26T22:56+01:00",
- "date": "2026-10-26",
+ "generated": "2026-10-27T02:01+01:00",
+ "date": "2026-10-27",
  "matches": [
   {
-   "id": "foot-401876422",
+   "id": "foot-401874980",
    "sport": "foot",
-   "league": "Ligue 1",
-   "code": "fra.1",
-   "kickoff": "2026-10-26T19:30:00+00:00",
-   "time": "20:30",
-   "home": "PSG",
-   "away": "Lyon",
-   "state": "post",
-   "xgH": 2.43,
-   "xgA": 0.85,
-   "pH": 72,
-   "pD": 17,
-   "pA": 11,
-   "edate": "20261026",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-27T17:30:00+00:00",
+   "time": "18:30",
+   "home": "Sassuolo",
+   "away": "Lazio",
+   "state": "pre",
+   "xgH": 1.34,
+   "xgA": 1.66,
+   "pH": 30,
+   "pD": 27,
+   "pA": 44,
+   "edate": "20261027",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "PSG ou nul",
-     "p": 0.8877,
-     "prob": 89,
-     "fair": 1.13,
-     "stars": 5
+     "market": "N2",
+     "label": "Nul ou Lazio",
+     "p": 0.7037,
+     "prob": 70,
+     "fair": 1.42,
+     "stars": 4
     },
     "winner": {
-     "market": "1",
-     "label": "Victoire PSG",
-     "p": 0.7217,
-     "prob": 72,
-     "fair": 1.39,
-     "stars": 4
+     "market": "2",
+     "label": "Victoire Lazio",
+     "p": 0.4374,
+     "prob": 44,
+     "fair": 2.29,
+     "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1108,
-     "prob": 11,
-     "fair": 9.03,
+     "label": "Score exact 1-2",
+     "p": 0.0919,
+     "prob": 9,
+     "fair": 10.88,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-2"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4163,
-     "prob": 42,
-     "fair": 2.4,
+     "p": 0.3509,
+     "prob": 35,
+     "fair": 2.85,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Ferran Torres marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
-     "stars": 1,
-     "player": "Ferran Torres",
-     "team": "PSG",
-     "pid": "265869",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 7 matchs · PSG favori (72 %) · 2,4 buts attendus pour PSG"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Ferran Torres buteur ou passeur",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2,
-     "player": "Ferran Torres",
-     "team": "PSG",
-     "base": [
-      7,
-      4,
-      1
-     ],
-     "pid": "265869",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 7 matchs · PSG favori (72 %) · 2,4 buts attendus pour PSG"
-    }
-   }
-  },
-  {
-   "id": "foot-401882828",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-10-26T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Sevilla",
-   "away": "Osasuna",
-   "state": "in",
-   "xgH": 1.42,
-   "xgA": 0.75,
-   "pH": 53,
-   "pD": 27,
-   "pA": 20,
-   "edate": "20261026",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Sevilla ou nul",
-     "p": 0.8015,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Sevilla",
-     "p": 0.5293,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1617,
-     "prob": 16,
-     "fair": 6.18,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Sevilla gagne sans encaisser de but",
-     "p": 0.3572,
-     "prob": 36,
-     "fair": 2.8,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Isaac Romero marque",
-     "p": 0.16,
-     "prob": 16,
-     "fair": 6.25,
-     "stars": 1,
-     "player": "Isaac Romero",
-     "team": "Sevilla",
-     "lineup": "start",
-     "pid": "365821",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · titulaire · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Isaac Romero buteur ou passeur",
+     "label": "Davide Frattesi marque",
      "p": 0.23,
      "prob": 23,
      "fair": 4.35,
      "stars": 1,
-     "player": "Isaac Romero",
-     "team": "Sevilla",
+     "player": "Davide Frattesi",
+     "team": "Lazio",
+     "pid": "250850",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Davide Frattesi buteur ou passeur",
+     "p": 0.29,
+     "prob": 29,
+     "fair": 3.45,
+     "stars": 1,
+     "player": "Davide Frattesi",
+     "team": "Lazio",
+     "base": [
+      8,
+      3,
+      0
+     ],
+     "pid": "250850",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio"
+    }
+   }
+  },
+  {
+   "id": "foot-401874780",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "time": "20:45",
+   "home": "AS Roma",
+   "away": "Cagliari",
+   "state": "pre",
+   "xgH": 2.23,
+   "xgA": 0.79,
+   "pH": 70,
+   "pD": 20,
+   "pA": 11,
+   "edate": "20261027",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "AS Roma ou nul",
+     "p": 0.8917,
+     "prob": 89,
+     "fair": 1.12,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire AS Roma",
+     "p": 0.6959,
+     "prob": 70,
+     "fair": 1.44,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-0",
+     "p": 0.122,
+     "prob": 12,
+     "fair": 8.2,
+     "stars": 1,
+     "value": "2-0"
+    },
+    "fun": {
+     "market": "wh_nil",
+     "label": "AS Roma gagne sans encaisser de but",
+     "p": 0.4068,
+     "prob": 41,
+     "fair": 2.46,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Donyell Malen marque",
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
+     "stars": 1,
+     "player": "Donyell Malen",
+     "team": "AS Roma",
+     "pid": "259481",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Donyell Malen buteur ou passeur",
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "player": "Donyell Malen",
+     "team": "AS Roma",
      "base": [
       7,
-      2,
+      6,
       1
      ],
-     "lineup": "start",
-     "pid": "365821",
-     "stats_league": "esp.1",
+     "pid": "259481",
+     "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · titulaire · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
+     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma"
+    }
+   }
+  },
+  {
+   "id": "foot-401874786",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Torino",
+   "away": "Como",
+   "state": "pre",
+   "xgH": 1.08,
+   "xgA": 1.88,
+   "pH": 20,
+   "pD": 25,
+   "pA": 55,
+   "edate": "20261027",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Como",
+     "p": 0.7979,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 4
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Como",
+     "p": 0.5501,
+     "prob": 55,
+     "fair": 1.82,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-2",
+     "p": 0.0989,
+     "prob": 10,
+     "fair": 10.11,
+     "stars": 1,
+     "value": "1-2"
+    },
+    "fun": {
+     "market": "wa_o25",
+     "label": "Como gagne et plus de 2,5 buts",
+     "p": 0.3726,
+     "prob": 37,
+     "fair": 2.68,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Anastasios Douvikas marque",
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1,
+     "player": "Anastasios Douvikas",
+     "team": "Como",
+     "pid": "262071",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Anastasios Douvikas buteur ou passeur",
+     "p": 0.46,
+     "prob": 46,
+     "fair": 2.17,
+     "stars": 1,
+     "player": "Anastasios Douvikas",
+     "team": "Como",
+     "base": [
+      8,
+      5,
+      0
+     ],
+     "pid": "262071",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como"
     }
    }
   },
@@ -182,9 +265,9 @@
    "time": "00:00",
    "home": "New York Rangers",
    "away": "Los Angeles Kings",
-   "state": "FUT",
-   "xgH": 2.79,
-   "xgA": 2.51,
+   "state": "LIVE",
+   "xgH": 3.26,
+   "xgA": 2.94,
    "pH": 44,
    "pD": 22,
    "pA": 34,
@@ -193,11 +276,11 @@
    "edate": "20261026",
    "picks": {
     "main": {
-     "market": "u55",
-     "label": "Moins de 5,5 buts",
-     "p": 0.5635,
-     "prob": 56,
-     "fair": 1.77,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
      "stars": 2
     },
     "winner": {
@@ -209,36 +292,36 @@
      "stars": 2
     },
     "fun": {
-     "market": "wh_by1",
-     "label": "New York Rangers gagne d'un seul but (prolongation comprise)",
-     "p": 0.2188,
-     "prob": 22,
-     "fair": 4.57,
+     "market": "h2",
+     "label": "New York Rangers gagne par 2 buts d'écart ou plus",
+     "p": 0.3501,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Adam Fox : au moins 1 point",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
-     "stars": 2,
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
+     "stars": 3,
      "player": "Adam Fox",
      "pid": 8479323,
      "team": "New York Rangers",
-     "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers"
+     "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     },
     "scorer": {
      "market": "goal",
      "label": "Mika Zibanejad marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Mika Zibanejad",
      "pid": 8476459,
      "team": "New York Rangers",
-     "why": "3 buts et 8 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers"
+     "why": "3 buts et 8 passes en 13 matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     }
    }
   },
@@ -250,9 +333,9 @@
    "time": "01:30",
    "home": "Calgary Flames",
    "away": "Toronto Maple Leafs",
-   "state": "FUT",
-   "xgH": 2.99,
-   "xgA": 3.31,
+   "state": "LIVE",
+   "xgH": 2.94,
+   "xgA": 3.26,
    "pH": 34,
    "pD": 22,
    "pA": 44,
@@ -263,10 +346,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -279,17 +362,17 @@
     "fun": {
      "market": "a2",
      "label": "Toronto Maple Leafs gagne par 2 buts d'écart ou plus",
-     "p": 0.3517,
+     "p": 0.3501,
      "prob": 35,
-     "fair": 2.84,
+     "fair": 2.86,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "William Nylander : au moins 1 point",
-     "p": 0.67,
-     "prob": 67,
-     "fair": 1.49,
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "player": "William Nylander",
      "pid": 8477939,
@@ -299,9 +382,9 @@
     "scorer": {
      "market": "goal",
      "label": "William Nylander marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "William Nylander",
      "pid": 8477939,
@@ -318,9 +401,9 @@
    "time": "02:30",
    "home": "Edmonton Oilers",
    "away": "Detroit Red Wings",
-   "state": "FUT",
-   "xgH": 3.51,
-   "xgA": 2.79,
+   "state": "PRE",
+   "xgH": 3.82,
+   "xgA": 3.06,
    "pH": 49,
    "pD": 22,
    "pA": 29,
@@ -329,11 +412,11 @@
    "edate": "20261026",
    "picks": {
     "main": {
-     "market": "win_h",
-     "label": "Victoire Edmonton Oilers",
-     "p": 0.6164,
-     "prob": 62,
-     "fair": 1.62,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6839,
+     "prob": 68,
+     "fair": 1.46,
      "stars": 3
     },
     "winner": {
@@ -345,66 +428,66 @@
      "stars": 3
     },
     "fun": {
-     "market": "h2",
-     "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-     "p": 0.4128,
-     "prob": 41,
-     "fair": 2.42,
+     "market": "wh_o65",
+     "label": "Edmonton Oilers gagne et plus de 6,5 buts",
+     "p": 0.3631,
+     "prob": 36,
+     "fair": 2.75,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Connor McDavid : au moins 1 point",
-     "p": 0.79,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
+     "p": 0.82,
+     "prob": 82,
+     "fair": 1.22,
+     "stars": 5,
      "player": "Connor McDavid",
      "pid": 8478402,
      "team": "Edmonton Oilers",
-     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,5 buts attendus pour Edmonton Oilers"
+     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers"
     },
     "scorer": {
      "market": "goal",
      "label": "Connor McDavid marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Connor McDavid",
      "pid": 8478402,
      "team": "Edmonton Oilers",
-     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,5 buts attendus pour Edmonton Oilers"
+     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers"
     }
    }
   }
  ],
  "summary": {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "yesterday": {
-   "n": 170,
-   "ok": 83
+   "n": 18,
+   "ok": 11
   },
-  "foot": 2,
+  "foot": 3,
   "nhl": 3,
   "top": [
    {
+    "label": "AS Roma ou nul",
+    "prob": 89,
+    "time": "20:45",
+    "match": "AS Roma – Cagliari"
+   },
+   {
     "label": "Connor McDavid : au moins 1 point",
-    "prob": 79,
+    "prob": 82,
     "time": "02:30",
     "match": "Edmonton Oilers – Detroit Red Wings"
    },
    {
-    "label": "William Nylander : au moins 1 point",
-    "prob": 67,
-    "time": "01:30",
-    "match": "Calgary Flames – Toronto Maple Leafs"
-   },
-   {
-    "label": "Victoire Edmonton Oilers",
-    "prob": 62,
-    "time": "02:30",
-    "match": "Edmonton Oilers – Detroit Red Wings"
+    "label": "Nul ou Como",
+    "prob": 80,
+    "time": "20:45",
+    "match": "Torino – Como"
    }
   ]
  }

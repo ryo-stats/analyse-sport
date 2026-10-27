@@ -1,643 +1,937 @@
 {
- "generated": "2026-10-26T22:56+01:00",
- "date": "2026-10-26",
+ "generated": "2026-10-27T02:01+01:00",
+ "date": "2026-10-27",
  "nhl_date": "2026-10-26",
  "foot": [
   {
-   "id": "foot-401876422",
+   "id": "foot-401874980",
    "sport": "foot",
-   "league": "Ligue 1",
-   "kickoff": "2026-10-26T19:30:00+00:00",
-   "time": "20:30",
-   "state": "post",
-   "score": "2-0",
-   "home": "PSG",
-   "away": "Lyon",
-   "form_h": "NVVVV",
-   "form_a": "NDVVD",
-   "rank_h": 1,
-   "rank_a": 5,
-   "pH": 72,
-   "pD": 17,
-   "pA": 11,
-   "source": "Cotes DraftKings",
+   "league": "Serie A",
+   "kickoff": "2026-10-27T17:30:00+00:00",
+   "time": "18:30",
+   "state": "pre",
+   "score": null,
+   "home": "Sassuolo",
+   "away": "Lazio",
+   "form_h": "NDNDV",
+   "form_a": "NVVVN",
+   "rank_h": 14,
+   "rank_a": 2,
+   "pH": 30,
+   "pD": 27,
+   "pA": 44,
+   "source": "Cotes DraftKings (vainqueur et ligne de 2,5 buts)",
    "odds": {
-    "h": 1.32,
-    "d": 5.75,
-    "a": 8.5,
+    "h": 3.1,
+    "d": 3.45,
+    "a": 2.1,
     "by": "DraftKings"
    },
-   "xgH": 2.43,
-   "xgA": 0.85,
+   "xgH": 1.34,
+   "xgA": 1.66,
    "scores": [
-    "2-0",
-    "2-1",
-    "1-0"
+    "1-1",
+    "1-2",
+    "0-1"
    ],
    "scorep": [
     11,
     9,
-    9
+    8
    ],
-   "over25": 64,
-   "btts": 52,
+   "over25": 57,
+   "btts": 60,
    "squad_h": [
     {
-     "name": "Ferran Torres",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "PSG",
-     "goals": 4,
-     "assists": 1,
-     "apps": 7,
-     "p_goal": 44,
-     "p_dec": 53,
-     "pid": "265869",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Marquinhos",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "PSG",
-     "goals": 3,
-     "assists": 0,
-     "apps": 5,
-     "p_goal": 30,
-     "p_dec": 32,
-     "pid": "159047",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Khvicha Kvaratskhelia",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "PSG",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "p_goal": 20,
-     "p_dec": 33,
-     "pid": "274745",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Désiré Doué",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "PSG",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "p_goal": 20,
-     "p_dec": 33,
-     "pid": "336388",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Ousmane Dembélé",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "PSG",
-     "goals": 1,
-     "assists": 2,
-     "apps": 5,
-     "p_goal": 17,
-     "p_dec": 36,
-     "pid": "229744",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Vitinha",
+     "name": "Vasilije Adzic",
      "pos": "Milieu",
      "side": "h",
-     "team": "PSG",
-     "goals": 1,
+     "team": "Sassuolo",
+     "goals": 3,
      "assists": 1,
      "apps": 7,
-     "p_goal": 15,
-     "p_dec": 33,
-     "pid": "288897",
-     "stats_league": "fra.1",
+     "p_goal": 20,
+     "p_dec": 28,
+     "pid": "344917",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Domenico Berardi",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sassuolo",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "p_goal": 19,
+     "p_dec": 23,
+     "pid": "173817",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Kieron Bowie",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sassuolo",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 13,
+     "p_dec": 17,
+     "pid": "283375",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Cas Odenthal",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Sassuolo",
+     "goals": 2,
+     "assists": 0,
+     "apps": 3,
+     "p_goal": 13,
+     "p_dec": 14,
+     "pid": "291729",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Sebastiano Esposito",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sassuolo",
+     "goals": 1,
+     "assists": 0,
+     "apps": 5,
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "286929",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Armand Laurienté",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sassuolo",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "p_goal": 10,
+     "p_dec": 21,
+     "pid": "272719",
+     "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "squad_a": [
     {
-     "name": "Ernest Nuamah",
-     "pos": "Attaquant",
+     "name": "Davide Frattesi",
+     "pos": "Milieu",
      "side": "a",
-     "team": "Lyon",
+     "team": "Lazio",
      "goals": 3,
-     "assists": 1,
-     "apps": 5,
-     "p_goal": 16,
-     "p_dec": 22,
-     "pid": "333310",
-     "stats_league": "fra.1",
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 23,
+     "p_dec": 29,
+     "pid": "250850",
+     "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Zachary Athekame",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Lyon",
-     "goals": 2,
-     "assists": 3,
-     "apps": 7,
-     "p_goal": 9,
-     "p_dec": 21,
-     "pid": "370758",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Loïs Openda",
+     "name": "Tijjani Noslin",
      "pos": "Attaquant",
      "side": "a",
-     "team": "Lyon",
-     "goals": 1,
-     "assists": 1,
-     "apps": 5,
-     "p_goal": 9,
-     "p_dec": 15,
-     "pid": "276265",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Pavel Sulc",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lyon",
-     "goals": 1,
-     "assists": 3,
-     "apps": 7,
-     "p_goal": 6,
-     "p_dec": 20,
-     "pid": "305545",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Corentin Tolisso",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lyon",
-     "goals": 1,
+     "team": "Lazio",
+     "goals": 2,
      "assists": 2,
      "apps": 7,
-     "p_goal": 6,
-     "p_dec": 18,
-     "pid": "192060",
-     "stats_league": "fra.1",
+     "p_goal": 20,
+     "p_dec": 33,
+     "pid": "323113",
+     "stats_league": "ita.1",
      "season": 2026
     },
     {
-     "name": "Noah Nartey",
-     "pos": "Milieu",
+     "name": "Gustav Isaksen",
+     "pos": "Attaquant",
      "side": "a",
-     "team": "Lyon",
+     "team": "Lazio",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 19,
+     "p_dec": 23,
+     "pid": "291550",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Matteo Cancellieri",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lazio",
      "goals": 1,
      "assists": 0,
-     "apps": 6,
-     "p_goal": 5,
-     "p_dec": 7,
-     "pid": "365562",
-     "stats_league": "fra.1",
+     "apps": 5,
+     "p_goal": 12,
+     "p_dec": 14,
+     "pid": "308944",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Mattia Zaccagni",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Lazio",
+     "goals": 1,
+     "assists": 3,
+     "apps": 8,
+     "p_goal": 11,
+     "p_dec": 35,
+     "pid": "204669",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Kenneth Taylor",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Lazio",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 11,
+     "p_dec": 18,
+     "pid": "282228",
+     "stats_league": "ita.1",
      "season": 2026
     }
    ],
    "ctx": [
-    "PSG : 1e, 17 points, 16 buts marqués et 9 encaissés en 8 matchs.",
-    "Lyon : 5e, 14 points, 13 buts marqués et 7 encaissés en 8 matchs."
+    "Sassuolo : 14e, 8 points, 12 buts marqués et 16 encaissés en 8 matchs.",
+    "Lazio : 2e, 22 points, 16 buts marqués et 5 encaissés en 8 matchs."
    ],
-   "reading": "PSG est nettement favori (72 %).",
-   "stakes": "PSG est leader (17 points). Lyon (5e) est dans la course à l'Europe. Adversaires directs au classement : 3 points d'écart.",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "stakes": "Lazio (2e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "PSG ou nul",
-     "p": 0.8877,
-     "prob": 89,
-     "fair": 1.13,
-     "stars": 5
+     "market": "N2",
+     "label": "Nul ou Lazio",
+     "p": 0.7037,
+     "prob": 70,
+     "fair": 1.42,
+     "stars": 4
     },
     "winner": {
-     "market": "1",
-     "label": "Victoire PSG",
-     "p": 0.7217,
-     "prob": 72,
-     "fair": 1.39,
-     "stars": 4
+     "market": "2",
+     "label": "Victoire Lazio",
+     "p": 0.4374,
+     "prob": 44,
+     "fair": 2.29,
+     "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1108,
-     "prob": 11,
-     "fair": 9.03,
+     "label": "Score exact 1-2",
+     "p": 0.0919,
+     "prob": 9,
+     "fair": 10.88,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-2"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4163,
-     "prob": 42,
-     "fair": 2.4,
+     "p": 0.3509,
+     "prob": 35,
+     "fair": 2.85,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_nil",
-      "label": "PSG gagne sans encaisser de but",
-      "p": 0.3889,
-      "prob": 39,
-      "fair": 2.57,
+      "market": "wa_o25",
+      "label": "Lazio gagne et plus de 2,5 buts",
+      "p": 0.298,
+      "prob": 30,
+      "fair": 3.36,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Ferran Torres marque et PSG gagne",
-      "p": 0.3803,
-      "prob": 38,
-      "fair": 2.63,
-      "stars": 1,
-      "player": "Ferran Torres",
-      "team": "PSG",
-      "side": "h"
-     }
-    ],
-    "player": {
-     "market": "scorer",
-     "label": "Ferran Torres marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
-     "stars": 1,
-     "player": "Ferran Torres",
-     "team": "PSG",
-     "pid": "265869",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 7 matchs · PSG favori (72 %) · 2,4 buts attendus pour PSG"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Ferran Torres buteur ou passeur",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2,
-     "player": "Ferran Torres",
-     "team": "PSG",
-     "base": [
-      7,
-      4,
-      1
-     ],
-     "pid": "265869",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 7 matchs · PSG favori (72 %) · 2,4 buts attendus pour PSG"
-    }
-   },
-   "second": null,
-   "country": "France",
-   "code": "fra.1",
-   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png"
-  },
-  {
-   "id": "foot-401882828",
-   "sport": "foot",
-   "league": "LaLiga",
-   "kickoff": "2026-10-26T20:00:00+00:00",
-   "time": "21:00",
-   "state": "in",
-   "score": "2-0",
-   "home": "Sevilla",
-   "away": "Osasuna",
-   "form_h": "NNDVV",
-   "form_a": "NDNDD",
-   "rank_h": 6,
-   "rank_a": 12,
-   "pH": 53,
-   "pD": 27,
-   "pA": 20,
-   "source": "Cotes DraftKings",
-   "odds": {
-    "h": 1.8,
-    "d": 3.5,
-    "a": 4.8,
-    "by": "DraftKings"
-   },
-   "xgH": 1.42,
-   "xgA": 0.75,
-   "scores": [
-    "1-0",
-    "1-1",
-    "2-0"
-   ],
-   "scorep": [
-    16,
-    12,
-    11
-   ],
-   "over25": 37,
-   "btts": 40,
-   "squad_h": [
-    {
-     "name": "Isaac Romero",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sevilla",
-     "goals": 2,
-     "assists": 1,
-     "apps": 7,
-     "p_goal": 16,
-     "p_dec": 23,
-     "pid": "365821",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Felix Correia",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sevilla",
-     "goals": 1,
-     "assists": 1,
-     "apps": 5,
-     "p_goal": 11,
-     "p_dec": 20,
-     "pid": "288900",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Lucas Stassin",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sevilla",
-     "goals": 1,
-     "assists": 1,
-     "apps": 4,
-     "p_goal": 10,
-     "p_dec": 17,
-     "pid": "323033",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Chidera Ejuke",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sevilla",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "p_goal": 10,
-     "p_dec": 12,
-     "pid": "254270",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Youssouf Fofana",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Sevilla",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "p_goal": 9,
-     "p_dec": 19,
-     "pid": "277307",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Juan Iglesias",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Sevilla",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "p_goal": 8,
-     "p_dec": 10,
-     "pid": "279738",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    }
-   ],
-   "squad_a": [
-    {
-     "name": "Ante Budimir",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 7,
-     "assists": 0,
-     "apps": 9,
-     "p_goal": 30,
-     "p_dec": 32,
-     "pid": "207288",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Raúl García",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 1,
-     "assists": 1,
-     "apps": 9,
-     "p_goal": 8,
-     "p_dec": 14,
-     "pid": "296163",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Moi Gómez",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 0,
-     "assists": 1,
-     "apps": 6,
-     "p_goal": 4,
-     "p_dec": 9,
-     "pid": "169089",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Jonathan Dubasin",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 0,
-     "assists": 0,
-     "apps": 9,
-     "p_goal": 3,
-     "p_dec": 5,
-     "pid": "311969",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Rubén García",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 0,
-     "assists": 1,
-     "apps": 9,
-     "p_goal": 2,
-     "p_dec": 9,
-     "pid": "178328",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Jon Moncayola",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 0,
-     "assists": 0,
-     "apps": 9,
-     "p_goal": 2,
-     "p_dec": 6,
-     "pid": "286176",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    }
-   ],
-   "ctx": [
-    "Sevilla : 6e, 14 points, 14 buts marqués et 16 encaissés en 9 matchs.",
-    "Osasuna : 12e, 11 points, 10 buts marqués et 18 encaissés en 9 matchs.",
-    "Compositions officielles prises en compte : Miguel Sierra (absent) ne commence pas le match."
-   ],
-   "reading": "Sevilla est favori sans écraser le match (53 %).",
-   "stakes": "Sevilla (6e) est dans la course à l'Europe.",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Sevilla ou nul",
-     "p": 0.8015,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 5
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Sevilla",
-     "p": 0.5293,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1617,
-     "prob": 16,
-     "fair": 6.18,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Sevilla gagne sans encaisser de but",
-     "p": 0.3572,
-     "prob": 36,
-     "fair": 2.8,
-     "stars": 1
-    },
-    "fun_alt": [
-     {
-      "market": "htft_h",
-      "label": "Sevilla mène à la mi-temps et gagne le match",
-      "p": 0.3194,
-      "prob": 32,
-      "fair": 3.13,
-      "stars": 1
-     },
-     {
-      "market": "wh_by1",
-      "label": "Sevilla gagne d'un seul but",
-      "p": 0.2649,
-      "prob": 26,
-      "fair": 3.77,
+      "market": "htft_a",
+      "label": "Lazio mène à la mi-temps et gagne le match",
+      "p": 0.2743,
+      "prob": 27,
+      "fair": 3.65,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Isaac Romero marque",
-     "p": 0.16,
-     "prob": 16,
-     "fair": 6.25,
-     "stars": 1,
-     "player": "Isaac Romero",
-     "team": "Sevilla",
-     "lineup": "start",
-     "pid": "365821",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · titulaire · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Isaac Romero buteur ou passeur",
+     "label": "Davide Frattesi marque",
      "p": 0.23,
      "prob": 23,
      "fair": 4.35,
      "stars": 1,
-     "player": "Isaac Romero",
-     "team": "Sevilla",
-     "base": [
-      7,
-      2,
-      1
-     ],
-     "lineup": "start",
-     "pid": "365821",
-     "stats_league": "esp.1",
+     "player": "Davide Frattesi",
+     "team": "Lazio",
+     "pid": "250850",
+     "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · titulaire · Sevilla favori (53 %) · 1,4 but attendu pour Sevilla"
+     "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Davide Frattesi buteur ou passeur",
+     "p": 0.29,
+     "prob": 29,
+     "fair": 3.45,
+     "stars": 1,
+     "player": "Davide Frattesi",
+     "team": "Lazio",
+     "base": [
+      8,
+      3,
+      0
+     ],
+     "pid": "250850",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio"
     }
    },
    "second": null,
-   "country": "Espagne",
-   "code": "esp.1",
-   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
-   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
-   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png"
+   "country": "Italie",
+   "code": "ita.1",
+   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png"
+  },
+  {
+   "id": "foot-401874780",
+   "sport": "foot",
+   "league": "Serie A",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "time": "20:45",
+   "state": "pre",
+   "score": null,
+   "home": "AS Roma",
+   "away": "Cagliari",
+   "form_h": "NVVDN",
+   "form_a": "NDNVV",
+   "rank_h": 3,
+   "rank_a": 9,
+   "pH": 70,
+   "pD": 20,
+   "pA": 11,
+   "source": "Cotes DraftKings (vainqueur et ligne de 2,5 buts)",
+   "odds": {
+    "h": 1.32,
+    "d": 4.7,
+    "a": 8.5,
+    "by": "DraftKings"
+   },
+   "xgH": 2.23,
+   "xgA": 0.79,
+   "scores": [
+    "2-0",
+    "1-0",
+    "2-1"
+   ],
+   "scorep": [
+    12,
+    11,
+    10
+   ],
+   "over25": 58,
+   "btts": 49,
+   "squad_h": [
+    {
+     "name": "Donyell Malen",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 6,
+     "assists": 1,
+     "apps": 7,
+     "p_goal": 45,
+     "p_dec": 52,
+     "pid": "259481",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Matìas Soulè",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 3,
+     "assists": 1,
+     "apps": 8,
+     "p_goal": 29,
+     "p_dec": 39,
+     "pid": "323974",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Manu Koné",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "p_goal": 18,
+     "p_dec": 23,
+     "pid": "285226",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Niccolò Pisilli",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "p_goal": 17,
+     "p_dec": 21,
+     "pid": "360235",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Leonardo Balerdi",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "p_goal": 16,
+     "p_dec": 17,
+     "pid": "271555",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Santiago Castro",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "AS Roma",
+     "goals": 1,
+     "assists": 1,
+     "apps": 6,
+     "p_goal": 12,
+     "p_dec": 21,
+     "pid": "250284",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Daniel Maldini",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 4,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 26,
+     "p_dec": 29,
+     "pid": "290545",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Paul Mendy",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "p_goal": 13,
+     "p_dec": 22,
+     "pid": "418819",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Alessandro Romano",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 9,
+     "p_dec": 15,
+     "pid": "6729",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Michel Adopo",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 0,
+     "assists": 2,
+     "apps": 8,
+     "p_goal": 4,
+     "p_dec": 20,
+     "pid": "272745",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Alessandro Deiola",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 3,
+     "p_dec": 9,
+     "pid": "186437",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Harry Winks",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 3,
+     "p_dec": 9,
+     "pid": "202332",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "ctx": [
+    "AS Roma : 3e, 18 points, 19 buts marqués et 6 encaissés en 8 matchs.",
+    "Cagliari : 9e, 13 points, 6 buts marqués et 9 encaissés en 8 matchs."
+   ],
+   "reading": "AS Roma est nettement favori (70 %).",
+   "stakes": "AS Roma (3e) défend une place qualificative pour la Ligue des champions.",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "AS Roma ou nul",
+     "p": 0.8917,
+     "prob": 89,
+     "fair": 1.12,
+     "stars": 5
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire AS Roma",
+     "p": 0.6959,
+     "prob": 70,
+     "fair": 1.44,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-0",
+     "p": 0.122,
+     "prob": 12,
+     "fair": 8.2,
+     "stars": 1,
+     "value": "2-0"
+    },
+    "fun": {
+     "market": "wh_nil",
+     "label": "AS Roma gagne sans encaisser de but",
+     "p": 0.4068,
+     "prob": 41,
+     "fair": 2.46,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "scw",
+      "label": "Donyell Malen marque et AS Roma gagne",
+      "p": 0.3856,
+      "prob": 39,
+      "fair": 2.59,
+      "stars": 1,
+      "player": "Donyell Malen",
+      "team": "AS Roma",
+      "side": "h"
+     },
+     {
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.3553,
+      "prob": 36,
+      "fair": 2.81,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "scorer",
+     "label": "Donyell Malen marque",
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
+     "stars": 1,
+     "player": "Donyell Malen",
+     "team": "AS Roma",
+     "pid": "259481",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Donyell Malen buteur ou passeur",
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "player": "Donyell Malen",
+     "team": "AS Roma",
+     "base": [
+      7,
+      6,
+      1
+     ],
+     "pid": "259481",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma"
+    }
+   },
+   "second": null,
+   "country": "Italie",
+   "code": "ita.1",
+   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png"
+  },
+  {
+   "id": "foot-401874786",
+   "sport": "foot",
+   "league": "Serie A",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "time": "20:45",
+   "state": "pre",
+   "score": null,
+   "home": "Torino",
+   "away": "Como",
+   "form_h": "NVVND",
+   "form_a": "NVVDN",
+   "rank_h": 8,
+   "rank_a": 5,
+   "pH": 20,
+   "pD": 25,
+   "pA": 55,
+   "source": "Cotes DraftKings (vainqueur et ligne de 2,5 buts)",
+   "odds": {
+    "h": 4.6,
+    "d": 3.75,
+    "a": 1.69,
+    "by": "DraftKings"
+   },
+   "xgH": 1.08,
+   "xgA": 1.88,
+   "scores": [
+    "1-1",
+    "1-2",
+    "0-1"
+   ],
+   "scorep": [
+    10,
+    10,
+    10
+   ],
+   "over25": 57,
+   "btts": 56,
+   "squad_h": [
+    {
+     "name": "Ché Adams",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Torino",
+     "goals": 3,
+     "assists": 0,
+     "apps": 6,
+     "p_goal": 19,
+     "p_dec": 21,
+     "pid": "213725",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Giovanni Simeone",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Torino",
+     "goals": 2,
+     "assists": 1,
+     "apps": 8,
+     "p_goal": 16,
+     "p_dec": 24,
+     "pid": "189974",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Sandro Kulenovic",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Torino",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "p_goal": 11,
+     "p_dec": 12,
+     "pid": "245538",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Nikola Vlasic",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 8,
+     "p_dec": 13,
+     "pid": "206378",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Rolando Mandragora",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 1,
+     "apps": 6,
+     "p_goal": 7,
+     "p_dec": 16,
+     "pid": "210392",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Kian Fitz-Jim",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "p_goal": 7,
+     "p_dec": 11,
+     "pid": "305589",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Anastasios Douvikas",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Como",
+     "goals": 5,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 42,
+     "p_dec": 46,
+     "pid": "262071",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Assane Diao",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Como",
+     "goals": 2,
+     "assists": 1,
+     "apps": 6,
+     "p_goal": 23,
+     "p_dec": 33,
+     "pid": "364742",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Nico Paz",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Como",
+     "goals": 2,
+     "assists": 2,
+     "apps": 7,
+     "p_goal": 19,
+     "p_dec": 38,
+     "pid": "337970",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Martin Baturina",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Como",
+     "goals": 2,
+     "assists": 1,
+     "apps": 7,
+     "p_goal": 18,
+     "p_dec": 28,
+     "pid": "311475",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Jacobo Ramón",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Como",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "p_goal": 10,
+     "p_dec": 13,
+     "pid": "380318",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Kaiki",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Como",
+     "goals": 1,
+     "assists": 1,
+     "apps": 6,
+     "p_goal": 9,
+     "p_dec": 18,
+     "pid": "317233",
+     "stats_league": "ita.1",
+     "season": 2026
+    }
+   ],
+   "ctx": [
+    "Torino : 8e, 13 points, 13 buts marqués et 11 encaissés en 8 matchs.",
+    "Como : 5e, 17 points, 14 buts marqués et 7 encaissés en 8 matchs."
+   ],
+   "reading": "Como est favori sans écraser le match (55 %).",
+   "stakes": "Como (5e) est dans la course à l'Europe.",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Como",
+     "p": 0.7979,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 4
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Como",
+     "p": 0.5501,
+     "prob": 55,
+     "fair": 1.82,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-2",
+     "p": 0.0989,
+     "prob": 10,
+     "fair": 10.11,
+     "stars": 1,
+     "value": "1-2"
+    },
+    "fun": {
+     "market": "wa_o25",
+     "label": "Como gagne et plus de 2,5 buts",
+     "p": 0.3726,
+     "prob": 37,
+     "fair": 2.68,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "htft_a",
+      "label": "Como mène à la mi-temps et gagne le match",
+      "p": 0.355,
+      "prob": 36,
+      "fair": 2.82,
+      "stars": 1
+     },
+     {
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.3457,
+      "prob": 35,
+      "fair": 2.89,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "scorer",
+     "label": "Anastasios Douvikas marque",
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1,
+     "player": "Anastasios Douvikas",
+     "team": "Como",
+     "pid": "262071",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Anastasios Douvikas buteur ou passeur",
+     "p": 0.46,
+     "prob": 46,
+     "fair": 2.17,
+     "stars": 1,
+     "player": "Anastasios Douvikas",
+     "team": "Como",
+     "base": [
+      8,
+      5,
+      0
+     ],
+     "pid": "262071",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como"
+    }
+   },
+   "second": null,
+   "country": "Italie",
+   "code": "ita.1",
+   "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png"
   }
  ],
  "nhl": [
@@ -647,8 +941,8 @@
    "league": "NHL",
    "kickoff": "2026-10-26T23:00:00+00:00",
    "time": "00:00",
-   "state": "FUT",
-   "score": null,
+   "state": "LIVE",
+   "score": "2-5",
    "home": "New York Rangers",
    "away": "Los Angeles Kings",
    "rec_h": "7-5-1 · 2e Metropolitan · 2 défaites de suite",
@@ -665,18 +959,18 @@
     "by": "DraftKings",
     "total": 5.5
    },
-   "xgH": 2.79,
-   "xgA": 2.51,
-   "total": 5.3,
+   "xgH": 3.26,
+   "xgA": 2.94,
+   "total": 6.2,
    "scores": [
     "3-2",
     "2-3",
-    "2-1"
+    "4-2"
    ],
    "scorep": [
-    6,
     5,
-    5
+    5,
+    4
    ],
    "goalie_h": {
     "name": "Dylan Garand",
@@ -702,9 +996,9 @@
      "assists": 8,
      "gp": 13,
      "pid": 8476459,
-     "p_goal": 28,
-     "p_point": 55,
-     "p_assist": 38
+     "p_goal": 32,
+     "p_point": 61,
+     "p_assist": 42
     },
     {
      "name": "Alexis Lafrenière",
@@ -717,24 +1011,9 @@
      "assists": 6,
      "gp": 13,
      "pid": 8482109,
-     "p_goal": 25,
-     "p_point": 48,
-     "p_assist": 30
-    },
-    {
-     "name": "Will Cuylle",
-     "pos": "Ailier",
-     "cur": "4 buts, 4 passes en 13",
-     "new": false,
-     "side": "h",
-     "team": "New York Rangers",
-     "goals": 4,
-     "assists": 4,
-     "gp": 13,
-     "pid": 8482157,
-     "p_goal": 20,
-     "p_point": 36,
-     "p_assist": 20
+     "p_goal": 29,
+     "p_point": 54,
+     "p_assist": 34
     },
     {
      "name": "J.T. Miller",
@@ -747,9 +1026,9 @@
      "assists": 6,
      "gp": 13,
      "pid": 8476468,
-     "p_goal": 19,
-     "p_point": 48,
-     "p_assist": 35
+     "p_goal": 22,
+     "p_point": 54,
+     "p_assist": 40
     },
     {
      "name": "Gabe Perreault",
@@ -762,9 +1041,24 @@
      "assists": 3,
      "gp": 13,
      "pid": 8484210,
-     "p_goal": 19,
-     "p_point": 38,
-     "p_assist": 23
+     "p_goal": 22,
+     "p_point": 43,
+     "p_assist": 26
+    },
+    {
+     "name": "Will Cuylle",
+     "pos": "Ailier",
+     "cur": "4 buts, 4 passes en 13",
+     "new": false,
+     "side": "h",
+     "team": "New York Rangers",
+     "goals": 4,
+     "assists": 4,
+     "gp": 13,
+     "pid": 8482157,
+     "p_goal": 22,
+     "p_point": 40,
+     "p_assist": 22
     },
     {
      "name": "Oliver Bjorkstrand",
@@ -777,9 +1071,9 @@
      "assists": 2,
      "gp": 13,
      "pid": 8477416,
-     "p_goal": 18,
-     "p_point": 33,
-     "p_assist": 16
+     "p_goal": 21,
+     "p_point": 38,
+     "p_assist": 18
     }
    ],
    "squad_a": [
@@ -794,9 +1088,9 @@
      "assists": 5,
      "gp": 9,
      "pid": 8477960,
-     "p_goal": 30,
-     "p_point": 53,
-     "p_assist": 33
+     "p_goal": 34,
+     "p_point": 59,
+     "p_assist": 37
     },
     {
      "name": "Artemi Panarin",
@@ -809,9 +1103,9 @@
      "assists": 3,
      "gp": 9,
      "pid": 8478550,
-     "p_goal": 25,
-     "p_point": 52,
-     "p_assist": 35
+     "p_goal": 29,
+     "p_point": 58,
+     "p_assist": 40
     },
     {
      "name": "Alex Laferriere",
@@ -824,9 +1118,9 @@
      "assists": 5,
      "gp": 9,
      "pid": 8482155,
-     "p_goal": 19,
-     "p_point": 39,
-     "p_assist": 24
+     "p_goal": 22,
+     "p_point": 44,
+     "p_assist": 27
     },
     {
      "name": "Scott Laughton",
@@ -839,9 +1133,9 @@
      "assists": 1,
      "gp": 9,
      "pid": 8476872,
-     "p_goal": 16,
-     "p_point": 29,
-     "p_assist": 14
+     "p_goal": 18,
+     "p_point": 33,
+     "p_assist": 16
     },
     {
      "name": "Corey Perry",
@@ -854,12 +1148,12 @@
      "assists": 0,
      "gp": 8,
      "pid": 8470621,
-     "p_goal": 15,
-     "p_point": 35,
-     "p_assist": 22
+     "p_goal": 17,
+     "p_point": 39,
+     "p_assist": 26
     },
     {
-     "name": "Joel Armia",
+     "name": "Trevor Moore",
      "pos": "Ailier",
      "cur": "1 but, 1 passe en 9",
      "new": false,
@@ -868,10 +1162,10 @@
      "goals": 1,
      "assists": 1,
      "gp": 9,
-     "pid": 8476469,
-     "p_goal": 15,
-     "p_point": 28,
-     "p_assist": 15
+     "pid": 8479675,
+     "p_goal": 17,
+     "p_point": 37,
+     "p_assist": 24
     }
    ],
    "best_h": [
@@ -886,9 +1180,9 @@
      "assists": 16,
      "gp": 13,
      "pid": 8479323,
-     "p_goal": 11,
-     "p_point": 56,
-     "p_assist": 50
+     "p_goal": 13,
+     "p_point": 62,
+     "p_assist": 56
     },
     {
      "name": "Mika Zibanejad",
@@ -901,9 +1195,9 @@
      "assists": 8,
      "gp": 13,
      "pid": 8476459,
-     "p_goal": 28,
-     "p_point": 55,
-     "p_assist": 38
+     "p_goal": 32,
+     "p_point": 61,
+     "p_assist": 42
     },
     {
      "name": "Alexis Lafrenière",
@@ -916,9 +1210,9 @@
      "assists": 6,
      "gp": 13,
      "pid": 8482109,
-     "p_goal": 25,
-     "p_point": 48,
-     "p_assist": 30
+     "p_goal": 29,
+     "p_point": 54,
+     "p_assist": 34
     }
    ],
    "best_a": [
@@ -933,9 +1227,9 @@
      "assists": 5,
      "gp": 9,
      "pid": 8477960,
-     "p_goal": 30,
-     "p_point": 53,
-     "p_assist": 33
+     "p_goal": 34,
+     "p_point": 59,
+     "p_assist": 37
     },
     {
      "name": "Artemi Panarin",
@@ -948,9 +1242,9 @@
      "assists": 3,
      "gp": 9,
      "pid": 8478550,
-     "p_goal": 25,
-     "p_point": 52,
-     "p_assist": 35
+     "p_goal": 29,
+     "p_point": 58,
+     "p_assist": 40
     },
     {
      "name": "Alex Laferriere",
@@ -963,9 +1257,9 @@
      "assists": 5,
      "gp": 9,
      "pid": 8482155,
-     "p_goal": 19,
-     "p_point": 39,
-     "p_assist": 24
+     "p_goal": 22,
+     "p_point": 44,
+     "p_assist": 27
     }
    ],
    "ctx": [
@@ -979,11 +1273,11 @@
    "espn_id": "401892582",
    "picks": {
     "main": {
-     "market": "u55",
-     "label": "Moins de 5,5 buts",
-     "p": 0.5635,
-     "prob": 56,
-     "fair": 1.77,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
      "stars": 2
     },
     "winner": {
@@ -995,37 +1289,54 @@
      "stars": 2
     },
     "fun": {
-     "market": "wh_by1",
-     "label": "New York Rangers gagne d'un seul but (prolongation comprise)",
-     "p": 0.2188,
-     "prob": 22,
-     "fair": 4.57,
+     "market": "h2",
+     "label": "New York Rangers gagne par 2 buts d'écart ou plus",
+     "p": 0.3501,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1
     },
-    "fun_alt": [],
+    "fun_alt": [
+     {
+      "market": "wh_o55",
+      "label": "New York Rangers gagne et plus de 5,5 buts",
+      "p": 0.3277,
+      "prob": 33,
+      "fair": 3.05,
+      "stars": 1
+     },
+     {
+      "market": "wh_o65",
+      "label": "New York Rangers gagne et plus de 6,5 buts",
+      "p": 0.2649,
+      "prob": 26,
+      "fair": 3.78,
+      "stars": 1
+     }
+    ],
     "player": {
      "market": "point",
      "label": "Adam Fox : au moins 1 point",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
-     "stars": 2,
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
+     "stars": 3,
      "player": "Adam Fox",
      "pid": 8479323,
      "team": "New York Rangers",
-     "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers"
+     "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     },
     "scorer": {
      "market": "goal",
      "label": "Mika Zibanejad marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Mika Zibanejad",
      "pid": 8476459,
      "team": "New York Rangers",
-     "why": "3 buts et 8 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers"
+     "why": "3 buts et 8 passes en 13 matchs · New York Rangers favori (55 %) · 3,3 buts attendus pour New York Rangers"
     }
    },
    "second": {
@@ -1044,8 +1355,8 @@
    "league": "NHL",
    "kickoff": "2026-10-27T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-0",
    "home": "Calgary Flames",
    "away": "Toronto Maple Leafs",
    "rec_h": "4-6-0 · 6e Pacific · 3 victoires de suite",
@@ -1062,9 +1373,9 @@
     "by": "DraftKings",
     "total": 6.5
    },
-   "xgH": 2.99,
-   "xgA": 3.31,
-   "total": 6.3,
+   "xgH": 2.94,
+   "xgA": 3.26,
+   "total": 6.2,
    "scores": [
     "2-3",
     "3-2",
@@ -1072,7 +1383,7 @@
    ],
    "scorep": [
     5,
-    4,
+    5,
     4
    ],
    "goalie_h": {
@@ -1101,7 +1412,7 @@
      "pid": 8480028,
      "p_goal": 25,
      "p_point": 45,
-     "p_assist": 27
+     "p_assist": 26
     },
     {
      "name": "Joel Farabee",
@@ -1114,9 +1425,9 @@
      "assists": 7,
      "gp": 10,
      "pid": 8480797,
-     "p_goal": 23,
-     "p_point": 44,
-     "p_assist": 27
+     "p_goal": 22,
+     "p_point": 43,
+     "p_assist": 26
     },
     {
      "name": "Matt Coronato",
@@ -1130,7 +1441,7 @@
      "gp": 10,
      "pid": 8482679,
      "p_goal": 21,
-     "p_point": 48,
+     "p_point": 47,
      "p_assist": 33
     },
     {
@@ -1144,8 +1455,8 @@
      "assists": 2,
      "gp": 10,
      "pid": 8476458,
-     "p_goal": 20,
-     "p_point": 43,
+     "p_goal": 19,
+     "p_point": 42,
      "p_assist": 27
     },
     {
@@ -1160,23 +1471,23 @@
      "gp": 10,
      "pid": 8481068,
      "p_goal": 19,
-     "p_point": 36,
+     "p_point": 35,
      "p_assist": 20
     },
     {
-     "name": "Aydar Suniev",
+     "name": "Matvei Gridin",
      "pos": "Ailier",
-     "cur": "3 buts, 1 passe en 7",
+     "cur": "2 buts, 3 passes en 10",
      "new": false,
      "side": "h",
      "team": "Calgary Flames",
-     "goals": 3,
-     "assists": 1,
-     "gp": 7,
-     "pid": 8484234,
-     "p_goal": 17,
-     "p_point": 35,
-     "p_assist": 19
+     "goals": 2,
+     "assists": 3,
+     "gp": 10,
+     "pid": 8484860,
+     "p_goal": 16,
+     "p_point": 43,
+     "p_assist": 31
     }
    ],
    "squad_a": [
@@ -1191,9 +1502,9 @@
      "assists": 10,
      "gp": 13,
      "pid": 8477939,
-     "p_goal": 35,
-     "p_point": 67,
-     "p_assist": 49
+     "p_goal": 34,
+     "p_point": 66,
+     "p_assist": 48
     },
     {
      "name": "Auston Matthews",
@@ -1206,8 +1517,8 @@
      "assists": 10,
      "gp": 13,
      "pid": 8479318,
-     "p_goal": 35,
-     "p_point": 59,
+     "p_goal": 34,
+     "p_point": 58,
      "p_assist": 36
     },
     {
@@ -1223,7 +1534,7 @@
      "pid": 8480893,
      "p_goal": 22,
      "p_point": 48,
-     "p_assist": 32
+     "p_assist": 31
     },
     {
      "name": "Jack Roslovic",
@@ -1252,7 +1563,7 @@
      "gp": 13,
      "pid": 8484158,
      "p_goal": 17,
-     "p_point": 40,
+     "p_point": 39,
      "p_assist": 26
     },
     {
@@ -1266,9 +1577,9 @@
      "assists": 5,
      "gp": 13,
      "pid": 8486067,
-     "p_goal": 15,
-     "p_point": 38,
-     "p_assist": 25
+     "p_goal": 14,
+     "p_point": 37,
+     "p_assist": 24
     }
    ],
    "best_h": [
@@ -1284,7 +1595,7 @@
      "gp": 10,
      "pid": 8482679,
      "p_goal": 21,
-     "p_point": 48,
+     "p_point": 47,
      "p_assist": 33
     },
     {
@@ -1300,7 +1611,7 @@
      "pid": 8480028,
      "p_goal": 25,
      "p_point": 45,
-     "p_assist": 27
+     "p_assist": 26
     },
     {
      "name": "Joel Farabee",
@@ -1313,9 +1624,9 @@
      "assists": 7,
      "gp": 10,
      "pid": 8480797,
-     "p_goal": 23,
-     "p_point": 44,
-     "p_assist": 27
+     "p_goal": 22,
+     "p_point": 43,
+     "p_assist": 26
     }
    ],
    "best_a": [
@@ -1330,9 +1641,9 @@
      "assists": 10,
      "gp": 13,
      "pid": 8477939,
-     "p_goal": 35,
-     "p_point": 67,
-     "p_assist": 49
+     "p_goal": 34,
+     "p_point": 66,
+     "p_assist": 48
     },
     {
      "name": "Auston Matthews",
@@ -1345,8 +1656,8 @@
      "assists": 10,
      "gp": 13,
      "pid": 8479318,
-     "p_goal": 35,
-     "p_point": 59,
+     "p_goal": 34,
+     "p_point": 58,
      "p_assist": 36
     },
     {
@@ -1362,7 +1673,7 @@
      "pid": 8480893,
      "p_goal": 22,
      "p_point": 48,
-     "p_assist": 32
+     "p_assist": 31
     }
    ],
    "ctx": [
@@ -1378,10 +1689,10 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6012,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5859,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2
     },
     "winner": {
      "market": "win_a",
@@ -1394,35 +1705,35 @@
     "fun": {
      "market": "a2",
      "label": "Toronto Maple Leafs gagne par 2 buts d'écart ou plus",
-     "p": 0.3517,
+     "p": 0.3501,
      "prob": 35,
-     "fair": 2.84,
+     "fair": 2.86,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o55",
       "label": "Toronto Maple Leafs gagne et plus de 5,5 buts",
-      "p": 0.3362,
-      "prob": 34,
-      "fair": 2.97,
+      "p": 0.3277,
+      "prob": 33,
+      "fair": 3.05,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Toronto Maple Leafs gagne et plus de 6,5 buts",
-      "p": 0.2736,
-      "prob": 27,
-      "fair": 3.65,
+      "p": 0.2649,
+      "prob": 26,
+      "fair": 3.78,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "William Nylander : au moins 1 point",
-     "p": 0.67,
-     "prob": 67,
-     "fair": 1.49,
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "player": "William Nylander",
      "pid": 8477939,
@@ -1432,9 +1743,9 @@
     "scorer": {
      "market": "goal",
      "label": "William Nylander marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "William Nylander",
      "pid": 8477939,
@@ -1458,7 +1769,7 @@
    "league": "NHL",
    "kickoff": "2026-10-27T01:30:00+00:00",
    "time": "02:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Edmonton Oilers",
    "away": "Detroit Red Wings",
@@ -1476,17 +1787,17 @@
     "by": "DraftKings",
     "total": 6.5
    },
-   "xgH": 3.51,
-   "xgA": 2.79,
-   "total": 6.3,
+   "xgH": 3.82,
+   "xgA": 3.06,
+   "total": 6.9,
    "scores": [
     "3-2",
-    "4-2",
-    "4-3"
+    "4-3",
+    "4-2"
    ],
    "scorep": [
-    5,
-    5,
+    4,
+    4,
     4
    ],
    "goalie_h": {
@@ -1513,9 +1824,9 @@
      "assists": 25,
      "gp": 11,
      "pid": 8478402,
-     "p_goal": 40,
-     "p_point": 79,
-     "p_assist": 65
+     "p_goal": 42,
+     "p_point": 82,
+     "p_assist": 68
     },
     {
      "name": "Leon Draisaitl",
@@ -1528,9 +1839,9 @@
      "assists": 11,
      "gp": 11,
      "pid": 8477934,
-     "p_goal": 40,
-     "p_point": 73,
-     "p_assist": 55
+     "p_goal": 42,
+     "p_point": 76,
+     "p_assist": 58
     },
     {
      "name": "Zach Hyman",
@@ -1543,9 +1854,9 @@
      "assists": 0,
      "gp": 5,
      "pid": 8475786,
-     "p_goal": 33,
-     "p_point": 51,
-     "p_assist": 26
+     "p_goal": 36,
+     "p_point": 54,
+     "p_assist": 28
     },
     {
      "name": "Evan Bouchard",
@@ -1558,24 +1869,9 @@
      "assists": 14,
      "gp": 11,
      "pid": 8480803,
-     "p_goal": 23,
-     "p_point": 66,
-     "p_assist": 55
-    },
-    {
-     "name": "Vasily Podkolzin",
-     "pos": "Ailier",
-     "cur": "7 buts, 5 passes en 11",
-     "new": false,
-     "side": "h",
-     "team": "Edmonton Oilers",
-     "goals": 7,
-     "assists": 5,
-     "gp": 11,
-     "pid": 8481617,
-     "p_goal": 22,
-     "p_point": 39,
-     "p_assist": 21
+     "p_goal": 25,
+     "p_point": 69,
+     "p_assist": 58
     },
     {
      "name": "Ryan Nugent-Hopkins",
@@ -1588,9 +1884,24 @@
      "assists": 1,
      "gp": 2,
      "pid": 8476454,
-     "p_goal": 21,
-     "p_point": 49,
-     "p_assist": 35
+     "p_goal": 23,
+     "p_point": 52,
+     "p_assist": 37
+    },
+    {
+     "name": "Vasily Podkolzin",
+     "pos": "Ailier",
+     "cur": "7 buts, 5 passes en 11",
+     "new": false,
+     "side": "h",
+     "team": "Edmonton Oilers",
+     "goals": 7,
+     "assists": 5,
+     "gp": 11,
+     "pid": 8481617,
+     "p_goal": 23,
+     "p_point": 41,
+     "p_assist": 23
     }
    ],
    "squad_a": [
@@ -1605,9 +1916,9 @@
      "assists": 6,
      "gp": 11,
      "pid": 8479337,
-     "p_goal": 34,
-     "p_point": 59,
-     "p_assist": 37
+     "p_goal": 37,
+     "p_point": 62,
+     "p_assist": 40
     },
     {
      "name": "Dylan Larkin",
@@ -1620,9 +1931,9 @@
      "assists": 4,
      "gp": 9,
      "pid": 8477946,
-     "p_goal": 29,
-     "p_point": 52,
-     "p_assist": 32
+     "p_goal": 32,
+     "p_point": 56,
+     "p_assist": 34
     },
     {
      "name": "Lucas Raymond",
@@ -1635,9 +1946,9 @@
      "assists": 6,
      "gp": 11,
      "pid": 8482078,
-     "p_goal": 23,
-     "p_point": 55,
-     "p_assist": 41
+     "p_goal": 25,
+     "p_point": 58,
+     "p_assist": 44
     },
     {
      "name": "Viktor Arvidsson",
@@ -1650,9 +1961,9 @@
      "assists": 4,
      "gp": 11,
      "pid": 8478042,
-     "p_goal": 17,
-     "p_point": 37,
-     "p_assist": 22
+     "p_goal": 19,
+     "p_point": 40,
+     "p_assist": 24
     },
     {
      "name": "Justin Faulk",
@@ -1665,9 +1976,9 @@
      "assists": 3,
      "gp": 11,
      "pid": 8475753,
-     "p_goal": 17,
-     "p_point": 33,
-     "p_assist": 18
+     "p_goal": 18,
+     "p_point": 36,
+     "p_assist": 20
     },
     {
      "name": "Emmitt Finnie",
@@ -1680,9 +1991,9 @@
      "assists": 3,
      "gp": 11,
      "pid": 8484471,
-     "p_goal": 15,
-     "p_point": 31,
-     "p_assist": 19
+     "p_goal": 16,
+     "p_point": 34,
+     "p_assist": 20
     }
    ],
    "best_h": [
@@ -1697,9 +2008,9 @@
      "assists": 25,
      "gp": 11,
      "pid": 8478402,
-     "p_goal": 40,
-     "p_point": 79,
-     "p_assist": 65
+     "p_goal": 42,
+     "p_point": 82,
+     "p_assist": 68
     },
     {
      "name": "Leon Draisaitl",
@@ -1712,9 +2023,9 @@
      "assists": 11,
      "gp": 11,
      "pid": 8477934,
-     "p_goal": 40,
-     "p_point": 73,
-     "p_assist": 55
+     "p_goal": 42,
+     "p_point": 76,
+     "p_assist": 58
     },
     {
      "name": "Evan Bouchard",
@@ -1727,9 +2038,9 @@
      "assists": 14,
      "gp": 11,
      "pid": 8480803,
-     "p_goal": 23,
-     "p_point": 66,
-     "p_assist": 55
+     "p_goal": 25,
+     "p_point": 69,
+     "p_assist": 58
     }
    ],
    "best_a": [
@@ -1744,9 +2055,9 @@
      "assists": 6,
      "gp": 11,
      "pid": 8479337,
-     "p_goal": 34,
-     "p_point": 59,
-     "p_assist": 37
+     "p_goal": 37,
+     "p_point": 62,
+     "p_assist": 40
     },
     {
      "name": "Lucas Raymond",
@@ -1759,9 +2070,9 @@
      "assists": 6,
      "gp": 11,
      "pid": 8482078,
-     "p_goal": 23,
-     "p_point": 55,
-     "p_assist": 41
+     "p_goal": 25,
+     "p_point": 58,
+     "p_assist": 44
     },
     {
      "name": "Dylan Larkin",
@@ -1774,9 +2085,9 @@
      "assists": 4,
      "gp": 9,
      "pid": 8477946,
-     "p_goal": 29,
-     "p_point": 52,
-     "p_assist": 32
+     "p_goal": 32,
+     "p_point": 56,
+     "p_assist": 34
     }
    ],
    "ctx": [
@@ -1790,11 +2101,11 @@
    "espn_id": "401892584",
    "picks": {
     "main": {
-     "market": "win_h",
-     "label": "Victoire Edmonton Oilers",
-     "p": 0.6164,
-     "prob": 62,
-     "fair": 1.62,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6839,
+     "prob": 68,
+     "fair": 1.46,
      "stars": 3
     },
     "winner": {
@@ -1806,54 +2117,46 @@
      "stars": 3
     },
     "fun": {
-     "market": "h2",
-     "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-     "p": 0.4128,
-     "prob": 41,
-     "fair": 2.42,
+     "market": "wh_o65",
+     "label": "Edmonton Oilers gagne et plus de 6,5 buts",
+     "p": 0.3631,
+     "prob": 36,
+     "fair": 2.75,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o55",
-      "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-      "p": 0.3814,
-      "prob": 38,
-      "fair": 2.62,
-      "stars": 1
-     },
-     {
-      "market": "wh_o65",
-      "label": "Edmonton Oilers gagne et plus de 6,5 buts",
-      "p": 0.3084,
-      "prob": 31,
-      "fair": 3.24,
+      "market": "h3",
+      "label": "Edmonton Oilers gagne par 3 buts d'écart ou plus",
+      "p": 0.2606,
+      "prob": 26,
+      "fair": 3.84,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "Connor McDavid : au moins 1 point",
-     "p": 0.79,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
+     "p": 0.82,
+     "prob": 82,
+     "fair": 1.22,
+     "stars": 5,
      "player": "Connor McDavid",
      "pid": 8478402,
      "team": "Edmonton Oilers",
-     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,5 buts attendus pour Edmonton Oilers"
+     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers"
     },
     "scorer": {
      "market": "goal",
      "label": "Connor McDavid marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Connor McDavid",
      "pid": 8478402,
      "team": "Edmonton Oilers",
-     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,5 buts attendus pour Edmonton Oilers"
+     "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers"
     }
    },
    "second": {
@@ -1869,16 +2172,36 @@
  ],
  "selection": [
   {
+   "market": "1N",
+   "label": "AS Roma ou nul",
+   "p": 0.8917,
+   "prob": 89,
+   "fair": 1.12,
+   "stars": 5,
+   "kind": "main",
+   "id": "foot-401874780",
+   "sport": "foot",
+   "league": "Serie A",
+   "time": "20:45",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "home": "AS Roma",
+   "away": "Cagliari",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
+  },
+  {
    "market": "point",
    "label": "Connor McDavid : au moins 1 point",
-   "p": 0.79,
-   "prob": 79,
-   "fair": 1.27,
-   "stars": 4,
+   "p": 0.82,
+   "prob": 82,
+   "fair": 1.22,
+   "stars": 5,
    "player": "Connor McDavid",
    "pid": 8478402,
    "team": "Edmonton Oilers",
-   "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,5 buts attendus pour Edmonton Oilers",
+   "why": "8 buts et 25 passes en 11 matchs · Edmonton Oilers favori (62 %) · 3,8 buts attendus pour Edmonton Oilers",
    "kind": "player",
    "id": "nhl-2026020187",
    "sport": "nhl",
@@ -1893,120 +2216,150 @@
    "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg"
   },
   {
-   "market": "point",
-   "label": "William Nylander : au moins 1 point",
-   "p": 0.67,
-   "prob": 67,
-   "fair": 1.49,
-   "stars": 3,
-   "player": "William Nylander",
-   "pid": 8477939,
-   "team": "Toronto Maple Leafs",
-   "why": "8 buts et 10 passes en 13 matchs · Toronto Maple Leafs favori (55 %) · 3,3 buts attendus pour Toronto Maple Leafs",
-   "kind": "player",
-   "id": "nhl-2026020186",
-   "sport": "nhl",
-   "league": "NHL",
-   "time": "01:30",
-   "kickoff": "2026-10-27T00:30:00+00:00",
-   "home": "Calgary Flames",
-   "away": "Toronto Maple Leafs",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg"
-  },
-  {
-   "market": "win_h",
-   "label": "Victoire Edmonton Oilers",
-   "p": 0.6164,
-   "prob": 62,
-   "fair": 1.62,
-   "stars": 3,
+   "market": "N2",
+   "label": "Nul ou Como",
+   "p": 0.7979,
+   "prob": 80,
+   "fair": 1.25,
+   "stars": 4,
    "kind": "main",
-   "id": "nhl-2026020187",
-   "sport": "nhl",
-   "league": "NHL",
-   "time": "02:30",
-   "kickoff": "2026-10-27T01:30:00+00:00",
-   "home": "Edmonton Oilers",
-   "away": "Detroit Red Wings",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg"
+   "id": "foot-401874786",
+   "sport": "foot",
+   "league": "Serie A",
+   "time": "20:45",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "home": "Torino",
+   "away": "Como",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
+  },
+  {
+   "market": "N2",
+   "label": "Nul ou Lazio",
+   "p": 0.7037,
+   "prob": 70,
+   "fair": 1.42,
+   "stars": 4,
+   "kind": "main",
+   "id": "foot-401874980",
+   "sport": "foot",
+   "league": "Serie A",
+   "time": "18:30",
+   "kickoff": "2026-10-27T17:30:00+00:00",
+   "home": "Sassuolo",
+   "away": "Lazio",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
   },
   {
    "market": "o55",
    "label": "Plus de 5,5 buts",
-   "p": 0.6012,
-   "prob": 60,
-   "fair": 1.66,
+   "p": 0.6839,
+   "prob": 68,
+   "fair": 1.46,
    "stars": 3,
    "kind": "main",
-   "id": "nhl-2026020186",
+   "id": "nhl-2026020187",
    "sport": "nhl",
    "league": "NHL",
-   "time": "01:30",
-   "kickoff": "2026-10-27T00:30:00+00:00",
-   "home": "Calgary Flames",
-   "away": "Toronto Maple Leafs",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg"
+   "time": "02:30",
+   "kickoff": "2026-10-27T01:30:00+00:00",
+   "home": "Edmonton Oilers",
+   "away": "Detroit Red Wings",
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg"
   },
   {
-   "market": "u55",
-   "label": "Moins de 5,5 buts",
-   "p": 0.5635,
-   "prob": 56,
-   "fair": 1.77,
-   "stars": 2,
-   "kind": "main",
-   "id": "nhl-2026020185",
-   "sport": "nhl",
-   "league": "NHL",
-   "time": "00:00",
-   "kickoff": "2026-10-26T23:00:00+00:00",
-   "home": "New York Rangers",
-   "away": "Los Angeles Kings",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg"
-  },
-  {
-   "market": "point",
-   "label": "Adam Fox : au moins 1 point",
-   "p": 0.56,
-   "prob": 56,
-   "fair": 1.79,
-   "stars": 2,
-   "player": "Adam Fox",
-   "pid": 8479323,
-   "team": "New York Rangers",
-   "why": "0 but et 16 passes en 13 matchs · New York Rangers favori (55 %) · 2,8 buts attendus pour New York Rangers",
+   "market": "scorer",
+   "label": "Donyell Malen marque",
+   "p": 0.45,
+   "prob": 45,
+   "fair": 2.22,
+   "stars": 1,
+   "player": "Donyell Malen",
+   "team": "AS Roma",
+   "pid": "259481",
+   "stats_league": "ita.1",
+   "season": 2026,
+   "why": "6 buts et 1 passe en 7 matchs · AS Roma favori (70 %) · 2,2 buts attendus pour AS Roma",
    "kind": "player",
-   "id": "nhl-2026020185",
-   "sport": "nhl",
-   "league": "NHL",
-   "time": "00:00",
-   "kickoff": "2026-10-26T23:00:00+00:00",
-   "home": "New York Rangers",
-   "away": "Los Angeles Kings",
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg"
+   "id": "foot-401874780",
+   "sport": "foot",
+   "league": "Serie A",
+   "time": "20:45",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "home": "AS Roma",
+   "away": "Cagliari",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
+  },
+  {
+   "market": "scorer",
+   "label": "Anastasios Douvikas marque",
+   "p": 0.42,
+   "prob": 42,
+   "fair": 2.38,
+   "stars": 1,
+   "player": "Anastasios Douvikas",
+   "team": "Como",
+   "pid": "262071",
+   "stats_league": "ita.1",
+   "season": 2026,
+   "why": "5 buts et 0 passe en 8 matchs · Como favori (55 %) · 1,9 buts attendus pour Como",
+   "kind": "player",
+   "id": "foot-401874786",
+   "sport": "foot",
+   "league": "Serie A",
+   "time": "20:45",
+   "kickoff": "2026-10-27T19:45:00+00:00",
+   "home": "Torino",
+   "away": "Como",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
+  },
+  {
+   "market": "scorer",
+   "label": "Davide Frattesi marque",
+   "p": 0.23,
+   "prob": 23,
+   "fair": 4.35,
+   "stars": 1,
+   "player": "Davide Frattesi",
+   "team": "Lazio",
+   "pid": "250850",
+   "stats_league": "ita.1",
+   "season": 2026,
+   "why": "3 buts et 0 passe en 8 matchs · Lazio annoncé gagnant (44 %) · 1,7 buts attendus pour Lazio",
+   "kind": "player",
+   "id": "foot-401874980",
+   "sport": "foot",
+   "league": "Serie A",
+   "time": "18:30",
+   "kickoff": "2026-10-27T17:30:00+00:00",
+   "home": "Sassuolo",
+   "away": "Lazio",
+   "logo_h": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+   "logo_a": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+   "logo_h_dark": null,
+   "logo_a_dark": null
   }
  ],
  "bilan": {
   "foot": {
-   "n": 164,
+   "n": 165,
    "fav_rate": 62,
    "fav_expected": 54,
-   "brier": 0.532,
+   "brier": 0.53,
    "brier_naive": 0.667,
    "bins": [
     {
@@ -2023,9 +2376,9 @@
     },
     {
      "range": "50-60 %",
-     "n": 36,
+     "n": 37,
      "announced": 55,
-     "actual": 64
+     "actual": 65
     },
     {
      "range": "60-70 %",
@@ -2117,6 +2470,17 @@
     "score": "2-0",
     "fav": "PSG",
     "favp": 72,
+    "ok": true
+   },
+   {
+    "date": "2026-10-26",
+    "sport": "foot",
+    "league": "LaLiga",
+    "home": "Sevilla",
+    "away": "Osasuna",
+    "score": "2-0",
+    "fav": "Sevilla",
+    "favp": 53,
     "ok": true
    },
    {
@@ -2503,34 +2867,23 @@
     "fav": "Montréal Canadiens",
     "favp": 60,
     "ok": true
-   },
-   {
-    "date": "2026-10-24",
-    "sport": "nhl",
-    "league": "NHL",
-    "home": "Colorado Avalanche",
-    "away": "Tampa Bay Lightning",
-    "score": "6-3",
-    "fav": "Colorado Avalanche",
-    "favp": 53,
-    "ok": true
    }
   ],
   "picks": {
-   "n": 594,
+   "n": 599,
    "rate": 54,
    "expected": 53,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 594,
-     "ok": 322,
+     "n": 599,
+     "ok": 324,
      "rate": 54,
      "expected": 53
     },
     "foot": {
-     "n": 406,
-     "ok": 214,
+     "n": 411,
+     "ok": 216,
      "rate": 53,
      "expected": 52
     },
@@ -2543,14 +2896,14 @@
    },
    "fun": {
     "all": {
-     "n": 224,
-     "ok": 60,
+     "n": 226,
+     "ok": 61,
      "rate": 27,
      "expected": 29
     },
     "foot": {
-     "n": 176,
-     "ok": 38,
+     "n": 178,
+     "ok": 39,
      "rate": 22,
      "expected": 26
     },
@@ -2565,16 +2918,16 @@
     {
      "date": "2026-10-26",
      "all": {
-      "n": 9,
-      "ok": 6,
+      "n": 12,
+      "ok": 8,
       "rate": 67,
-      "expected": 63
+      "expected": 60
      },
      "foot": {
-      "n": 3,
-      "ok": 2,
+      "n": 6,
+      "ok": 4,
       "rate": 67,
-      "expected": 68
+      "expected": 60
      },
      "nhl": {
       "n": 6,
@@ -2584,14 +2937,14 @@
      },
      "fun": {
       "all": {
-       "n": 4,
-       "ok": 2,
+       "n": 6,
+       "ok": 3,
        "rate": 50,
-       "expected": 32
+       "expected": 30
       },
       "foot": {
-       "n": 2,
-       "ok": 1,
+       "n": 4,
+       "ok": 2,
        "rate": 50,
        "expected": 26
       },
@@ -2606,15 +2959,15 @@
     {
      "date": "2026-10-25",
      "all": {
-      "n": 107,
+      "n": 109,
       "ok": 62,
-      "rate": 58,
+      "rate": 57,
       "expected": 51
      },
      "foot": {
-      "n": 86,
+      "n": 88,
       "ok": 46,
-      "rate": 53,
+      "rate": 52,
       "expected": 51
      },
      "nhl": {
@@ -2950,16 +3303,16 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 59,
+     "n": 60,
      "ok": 38,
-     "rate": 64,
+     "rate": 63,
      "expected": 48
     },
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 56,
-     "ok": 30,
+     "n": 59,
+     "ok": 32,
      "rate": 54,
      "expected": 52
     },
@@ -2974,9 +3327,9 @@
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 49,
+     "n": 50,
      "ok": 25,
-     "rate": 51,
+     "rate": 50,
      "expected": 52
     },
     {
@@ -2999,13 +3352,13 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 260,
+     "n": 262,
      "announced": 35,
      "actual": 31
     },
     {
      "stars": 2,
-     "n": 93,
+     "n": 95,
      "announced": 55,
      "actual": 57
     },
@@ -3023,7 +3376,7 @@
     },
     {
      "stars": 5,
-     "n": 48,
+     "n": 49,
      "announced": 86,
      "actual": 88
     }
@@ -3079,6 +3432,71 @@
      "prob": 40,
      "stars": 1,
      "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882828",
+     "score": "2-0",
+     "match": "Sevilla – Osasuna",
+     "label": "Sevilla ou nul",
+     "prob": 80,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882828",
+     "score": "2-0",
+     "match": "Sevilla – Osasuna",
+     "label": "Victoire Sevilla",
+     "prob": 53,
+     "stars": 2,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882828",
+     "score": "2-0",
+     "match": "Sevilla – Osasuna",
+     "label": "Miguel Sierra marque",
+     "prob": 20,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882828",
+     "score": "2-0",
+     "match": "Sevilla – Osasuna",
+     "label": "Sevilla gagne sans encaisser de but",
+     "prob": 36,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882828",
+     "score": "2-0",
+     "match": "Sevilla – Osasuna",
+     "label": "Score exact 1-0",
+     "prob": 16,
+     "stars": 1,
+     "ok": false,
      "fun": true
     },
     {
@@ -3374,6 +3792,19 @@
      "mid": "foot-401874779",
      "score": "0-2",
      "match": "Udinese – Milan",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "prob": 46,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-25",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874779",
+     "score": "0-2",
+     "match": "Udinese – Milan",
      "label": "Milan gagne sans encaisser de but",
      "prob": 34,
      "stars": 1,
@@ -3636,6 +4067,19 @@
      "match": "Rennes – Strasbourg",
      "label": "Esteban Lepaul marque",
      "prob": 51,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-25",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876424",
+     "score": "3-0",
+     "match": "Rennes – Strasbourg",
+     "label": "Esteban Lepaul buteur ou passeur",
+     "prob": 55,
      "stars": 2,
      "ok": false,
      "fun": false
@@ -13695,6 +14139,33 @@
     {
      "date": "2026-10-26",
      "sport": "foot",
+     "match": "Sevilla – Osasuna",
+     "label": "Sevilla ou nul",
+     "prob": 80,
+     "stars": 5,
+     "ok": true
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "match": "Sevilla – Osasuna",
+     "label": "Victoire Sevilla",
+     "prob": 53,
+     "stars": 2,
+     "ok": true
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
+     "match": "Sevilla – Osasuna",
+     "label": "Miguel Sierra marque",
+     "prob": 20,
+     "stars": 1,
+     "ok": false
+    },
+    {
+     "date": "2026-10-26",
+     "sport": "foot",
      "match": "PSG – Lyon",
      "label": "PSG ou nul",
      "prob": 89,
@@ -13848,6 +14319,15 @@
     {
      "date": "2026-10-25",
      "sport": "foot",
+     "match": "Udinese – Milan",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "prob": 46,
+     "stars": 1,
+     "ok": false
+    },
+    {
+     "date": "2026-10-25",
+     "sport": "foot",
      "match": "Toulouse – Troyes",
      "label": "Toulouse ou nul",
      "prob": 84,
@@ -13974,56 +14454,20 @@
     {
      "date": "2026-10-25",
      "sport": "foot",
+     "match": "Rennes – Strasbourg",
+     "label": "Esteban Lepaul buteur ou passeur",
+     "prob": 55,
+     "stars": 2,
+     "ok": false
+    },
+    {
+     "date": "2026-10-25",
+     "sport": "foot",
      "match": "Real Sociedad – Levante",
      "label": "Real Sociedad ou nul",
      "prob": 82,
      "stars": 5,
      "ok": true
-    },
-    {
-     "date": "2026-10-25",
-     "sport": "foot",
-     "match": "Real Sociedad – Levante",
-     "label": "Victoire Real Sociedad",
-     "prob": 61,
-     "stars": 3,
-     "ok": true
-    },
-    {
-     "date": "2026-10-25",
-     "sport": "foot",
-     "match": "Real Sociedad – Levante",
-     "label": "Luka Sucic marque",
-     "prob": 25,
-     "stars": 1,
-     "ok": false
-    },
-    {
-     "date": "2026-10-25",
-     "sport": "foot",
-     "match": "Real Sociedad – Levante",
-     "label": "Luka Sucic buteur ou passeur",
-     "prob": 31,
-     "stars": 1,
-     "ok": false
-    },
-    {
-     "date": "2026-10-25",
-     "sport": "foot",
-     "match": "Monaco – Lille",
-     "label": "Monaco ou nul",
-     "prob": 76,
-     "stars": 4,
-     "ok": true
-    },
-    {
-     "date": "2026-10-25",
-     "sport": "foot",
-     "match": "Monaco – Lille",
-     "label": "Victoire Monaco",
-     "prob": 48,
-     "stars": 1,
-     "ok": false
     }
    ]
   }
@@ -14033,11 +14477,13 @@
   "foot": {
    "ok": 0,
    "missing": [],
-   "status": "ok",
-   "fetch": {}
+   "status": "ClubElo indisponible",
+   "fetch": {
+    "http://api.clubelo.com/2026-10-27": "HTTP 502, 0 car., début : ''"
+   }
   },
   "nhl": {
-   "ok": 3,
+   "ok": 1,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88519 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
