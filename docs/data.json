@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T00:30+01:00",
+ "generated": "2026-10-29T00:55+01:00",
  "date": "2026-10-29",
  "nhl_date": "2026-10-28",
  "foot": [
@@ -778,8 +778,8 @@
    "league": "NHL",
    "kickoff": "2026-10-28T23:30:00+00:00",
    "time": "00:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-0",
    "home": "Washington Capitals",
    "away": "Philadelphia Flyers",
    "rec_h": "6-4-0 · 5e Metropolitan · 1 victoire de suite",
@@ -1119,7 +1119,7 @@
      {
       "market": "h3",
       "label": "Washington Capitals gagne par 3 buts d'écart ou plus",
-      "p": 0.2596,
+      "p": 0.2595,
       "prob": 26,
       "fair": 3.85,
       "stars": 1
@@ -15158,7 +15158,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 4,
+   "ok": 3,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88900 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
