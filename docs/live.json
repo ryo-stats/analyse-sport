@@ -1,434 +1,167 @@
 {
- "generated": "2026-10-28T23:40+01:00",
- "date": "2026-10-28",
+ "generated": "2026-10-29T00:05+01:00",
+ "date": "2026-10-29",
  "matches": [
   {
-   "id": "foot-401874993",
+   "id": "foot-401874976",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-10-28T17:30:00+00:00",
+   "kickoff": "2026-10-29T17:30:00+00:00",
    "time": "18:30",
-   "home": "Milan",
-   "away": "Bologna",
-   "state": "post",
-   "xgH": 1.33,
-   "xgA": 0.6,
-   "pH": 54,
-   "pD": 29,
-   "pA": 17,
-   "edate": "20261028",
+   "home": "Frosinone",
+   "away": "Lecce",
+   "state": "pre",
+   "xgH": 2.28,
+   "xgA": 1.26,
+   "pH": 60,
+   "pD": 20,
+   "pA": 20,
+   "edate": "20261029",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Milan ou nul",
-     "p": 0.8309,
-     "prob": 83,
-     "fair": 1.2,
-     "stars": 5,
-     "why": "8 derniers matchs : Milan 16 marqués / 7 encaissés · Bologna 8 / 10"
+     "label": "Frosinone ou nul",
+     "p": 0.7987,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 4,
+     "why": "8 derniers matchs : Frosinone 17 marqués / 13 encaissés · Lecce 9 / 14"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Milan",
-     "p": 0.5444,
-     "prob": 54,
-     "fair": 1.84,
-     "stars": 2
+     "label": "Victoire Frosinone",
+     "p": 0.6034,
+     "prob": 60,
+     "fair": 1.66,
+     "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1926,
-     "prob": 19,
-     "fair": 5.19,
+     "label": "Score exact 2-1",
+     "p": 0.0951,
+     "prob": 10,
+     "fair": 10.52,
      "stars": 1,
-     "value": "1-0"
+     "value": "2-1"
     },
     "fun": {
-     "market": "wh_nil",
-     "label": "Milan gagne sans encaisser de but",
-     "p": 0.4022,
+     "market": "htft_h",
+     "label": "Frosinone mène à la mi-temps et gagne le match",
+     "p": 0.3957,
      "prob": 40,
-     "fair": 2.49,
+     "fair": 2.53,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Adrien Rabiot marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
-     "stars": 1,
-     "player": "Adrien Rabiot",
-     "team": "Milan",
-     "pid": "176203",
+     "label": "Antonio Raimondo marque",
+     "p": 0.57,
+     "prob": 57,
+     "fair": 1.75,
+     "stars": 2,
+     "player": "Antonio Raimondo",
+     "team": "Frosinone",
+     "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 3 passes en 7 matchs · Milan favori (54 %) · 1,3 but attendu pour Milan"
+     "why": "7 buts et 0 passe en 8 matchs · Frosinone favori (60 %) · 2,3 buts attendus pour Frosinone"
     },
     "decisive": {
      "market": "dec",
-     "label": "Adrien Rabiot buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Adrien Rabiot",
-     "team": "Milan",
-     "base": [
-      7,
-      4,
-      3
-     ],
-     "pid": "176203",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "4 buts et 3 passes en 7 matchs · Milan favori (54 %) · 1,3 but attendu pour Milan"
-    }
-   }
-  },
-  {
-   "id": "foot-401874965",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-28T17:30:00+00:00",
-   "time": "18:30",
-   "home": "Parma",
-   "away": "Udinese",
-   "state": "post",
-   "xgH": 1.08,
-   "xgA": 1.09,
-   "pH": 35,
-   "pD": 29,
-   "pA": 36,
-   "edate": "20261028",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Udinese",
-     "p": 0.6515,
-     "prob": 65,
-     "fair": 1.53,
-     "stars": 3,
-     "why": "8 derniers matchs : Parma 5 marqués / 15 encaissés · Udinese 9 / 18"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Udinese",
-     "p": 0.358,
-     "prob": 36,
-     "fair": 2.79,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1248,
-     "prob": 12,
-     "fair": 8.01,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Udinese gagne sans encaisser de but",
-     "p": 0.2267,
-     "prob": 23,
-     "fair": 4.41,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Jurgen Ekkelenkamp marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
-     "stars": 1,
-     "player": "Jurgen Ekkelenkamp",
-     "team": "Udinese",
-     "pid": "270817",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · forme : 3 buts et 1 passe sur ses 9 derniers matchs · Udinese annoncé gagnant (36 %) · 1,1 but attendu pour Udinese"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Jurgen Ekkelenkamp buteur ou passeur",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
-     "stars": 1,
-     "player": "Jurgen Ekkelenkamp",
-     "team": "Udinese",
+     "label": "Antonio Raimondo buteur ou passeur",
+     "p": 0.59,
+     "prob": 59,
+     "fair": 1.69,
+     "stars": 2,
+     "player": "Antonio Raimondo",
+     "team": "Frosinone",
      "base": [
       8,
-      3,
-      1
-     ],
-     "pid": "270817",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · forme : 3 buts et 1 passe sur ses 9 derniers matchs · Udinese annoncé gagnant (36 %) · 1,1 but attendu pour Udinese"
-    }
-   }
-  },
-  {
-   "id": "foot-401874773",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-28T17:30:00+00:00",
-   "time": "18:30",
-   "home": "Venezia",
-   "away": "Inter Milan",
-   "state": "post",
-   "xgH": 0.82,
-   "xgA": 2.4,
-   "pH": 11,
-   "pD": 17,
-   "pA": 72,
-   "edate": "20261028",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Inter Milan",
-     "p": 0.891,
-     "prob": 89,
-     "fair": 1.12,
-     "stars": 5,
-     "why": "8 derniers matchs : Venezia 6 marqués / 17 encaissés · Inter Milan 23 / 10"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Inter Milan",
-     "p": 0.724,
-     "prob": 72,
-     "fair": 1.38,
-     "stars": 4
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-2",
-     "p": 0.1155,
-     "prob": 12,
-     "fair": 8.66,
-     "stars": 1,
-     "value": "0-2"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Inter Milan gagne sans encaisser de but",
-     "p": 0.4016,
-     "prob": 40,
-     "fair": 2.49,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Marcus Thuram marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1,
-     "player": "Marcus Thuram",
-     "team": "Inter Milan",
-     "pid": "217331",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · forme : 5 buts et 2 passes sur ses 8 derniers matchs · Inter Milan favori (72 %) · 2,4 buts attendus pour Inter Milan"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Marcus Thuram buteur ou passeur",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
-     "stars": 2,
-     "player": "Marcus Thuram",
-     "team": "Inter Milan",
-     "base": [
       7,
-      5,
-      2
+      0
      ],
-     "pid": "217331",
+     "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · forme : 5 buts et 2 passes sur ses 8 derniers matchs · Inter Milan favori (72 %) · 2,4 buts attendus pour Inter Milan"
+     "why": "7 buts et 0 passe en 8 matchs · Frosinone favori (60 %) · 2,3 buts attendus pour Frosinone"
     }
    }
   },
   {
-   "id": "foot-401874988",
+   "id": "foot-401874969",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-10-28T19:45:00+00:00",
+   "kickoff": "2026-10-29T19:45:00+00:00",
    "time": "20:45",
-   "home": "Genoa",
-   "away": "Juventus",
-   "state": "post",
-   "xgH": 0.75,
-   "xgA": 1.08,
-   "pH": 25,
-   "pD": 32,
-   "pA": 43,
-   "edate": "20261028",
+   "home": "Fiorentina",
+   "away": "Atalanta",
+   "state": "pre",
+   "xgH": 1.67,
+   "xgA": 2.01,
+   "pH": 33,
+   "pD": 21,
+   "pA": 46,
+   "edate": "20261029",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Juventus",
-     "p": 0.7472,
-     "prob": 75,
-     "fair": 1.34,
-     "stars": 4,
-     "why": "8 derniers matchs : Genoa 6 marqués / 13 encaissés · Juventus 11 / 8"
-    },
     "winner": {
      "market": "2",
-     "label": "Victoire Juventus",
-     "p": 0.4276,
-     "prob": 43,
-     "fair": 2.34,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.173,
-     "prob": 17,
-     "fair": 5.78,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Juventus gagne sans encaisser de but",
-     "p": 0.3107,
-     "prob": 31,
-     "fair": 3.22,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Edon Zhegrova marque",
-     "p": 0.14,
-     "prob": 14,
-     "fair": 7.14,
-     "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
-     "pid": "260300",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 6 matchs · forme : 2 buts et 1 passe sur ses 7 derniers matchs · Juventus annoncé gagnant (43 %) · 1,1 but attendu pour Juventus"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Edon Zhegrova buteur ou passeur",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
-     "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
-     "base": [
-      6,
-      2,
-      1
-     ],
-     "pid": "260300",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 6 matchs · forme : 2 buts et 1 passe sur ses 7 derniers matchs · Juventus annoncé gagnant (43 %) · 1,1 but attendu pour Juventus"
-    }
-   }
-  },
-  {
-   "id": "foot-401874799",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-10-28T19:45:00+00:00",
-   "time": "20:45",
-   "home": "Monza",
-   "away": "Napoli",
-   "state": "post",
-   "xgH": 1.38,
-   "xgA": 1.86,
-   "pH": 29,
-   "pD": 23,
-   "pA": 49,
-   "edate": "20261028",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Napoli",
-     "p": 0.7128,
-     "prob": 71,
-     "fair": 1.4,
-     "stars": 4,
-     "why": "8 derniers matchs : Monza 15 marqués / 18 encaissés · Napoli 13 / 10"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Napoli",
-     "p": 0.4868,
-     "prob": 49,
-     "fair": 2.05,
+     "label": "Victoire Atalanta",
+     "p": 0.4602,
+     "prob": 46,
+     "fair": 2.17,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0934,
+     "p": 0.0851,
      "prob": 9,
-     "fair": 10.71,
+     "fair": 11.75,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.4068,
-     "prob": 41,
-     "fair": 2.46,
+     "market": "wa_o25",
+     "label": "Atalanta gagne et plus de 2,5 buts",
+     "p": 0.3584,
+     "prob": 36,
+     "fair": 2.79,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Kevin De Bruyne marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
-     "stars": 1,
-     "player": "Kevin De Bruyne",
-     "team": "Napoli",
-     "pid": "134947",
+     "label": "Nikola Krstovic marque",
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "player": "Nikola Krstovic",
+     "team": "Atalanta",
+     "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · forme : 4 buts et 1 passe sur ses 9 derniers matchs · Napoli favori (49 %) · 1,9 buts attendus pour Napoli"
+     "why": "6 buts et 2 passes en 8 matchs · Atalanta favori (46 %) · 2,0 buts attendus pour Atalanta"
     },
     "decisive": {
      "market": "dec",
-     "label": "Kevin De Bruyne buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Kevin De Bruyne",
-     "team": "Napoli",
+     "label": "Nikola Krstovic buteur ou passeur",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Nikola Krstovic",
+     "team": "Atalanta",
      "base": [
       8,
-      3,
-      1
+      6,
+      2
      ],
-     "pid": "134947",
+     "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · forme : 4 buts et 1 passe sur ses 9 derniers matchs · Napoli favori (49 %) · 1,9 buts attendus pour Napoli"
+     "why": "6 buts et 2 passes en 8 matchs · Atalanta favori (46 %) · 2,0 buts attendus pour Atalanta"
     }
    }
   },
@@ -440,7 +173,7 @@
    "time": "00:30",
    "home": "Washington Capitals",
    "away": "Philadelphia Flyers",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.51,
    "xgA": 2.66,
    "pH": 55,
@@ -713,12 +446,12 @@
   }
  ],
  "summary": {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "yesterday": {
-   "n": 102,
-   "ok": 50
+   "n": 71,
+   "ok": 33
   },
-  "foot": 5,
+  "foot": 2,
   "nhl": 4,
   "top": [
    {
@@ -728,16 +461,16 @@
     "match": "Edmonton Oilers – Calgary Flames"
    },
    {
+    "label": "Frosinone ou nul",
+    "prob": 80,
+    "time": "18:30",
+    "match": "Frosinone – Lecce"
+   },
+   {
     "label": "Nathan MacKinnon : au moins 1 point",
     "prob": 69,
     "time": "02:00",
     "match": "Colorado Avalanche – New Jersey Devils"
-   },
-   {
-    "label": "Victoire Edmonton Oilers",
-    "prob": 64,
-    "time": "01:30",
-    "match": "Edmonton Oilers – Calgary Flames"
    }
   ]
  }
