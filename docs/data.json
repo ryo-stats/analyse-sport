@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T01:33+01:00",
+ "generated": "2026-10-28T01:58+01:00",
  "date": "2026-10-28",
  "nhl_date": "2026-10-27",
  "foot": [
@@ -2307,7 +2307,7 @@
    "kickoff": "2026-10-28T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-1",
+   "score": "1-1",
    "home": "Carolina Hurricanes",
    "away": "Boston Bruins",
    "rec_h": "9-2-2 · 1e Metropolitan · 1 victoire de suite",
@@ -4928,6 +4928,15 @@
    "stakes": "Match de division (Central) : battre un rival direct compte double au classement. Début de saison (12 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892592",
    "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.614,
+     "prob": 61,
+     "fair": 1.63,
+     "stars": 3,
+     "why": "10 derniers matchs : Utah Mammoth 6 victoires · Minnesota Wild 6"
+    },
     "winner": {
      "market": "win_a",
      "label": "Victoire Minnesota Wild",
@@ -4985,22 +4994,11 @@
      "pid": 8478864,
      "team": "Minnesota Wild",
      "why": "13 buts et 8 passes en 13 matchs · forme : 18 points (10 buts) sur ses 10 derniers matchs · Minnesota Wild favori (53 %) · 3,3 buts attendus pour Minnesota Wild"
-    },
-    "held": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.614,
-     "prob": 61,
-     "fair": 1.63,
-     "stars": 3,
-     "why": "10 derniers matchs : Utah Mammoth 6 victoires · Minnesota Wild 6",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+    "agree": true
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
@@ -17947,11 +17945,7 @@
    "elo": {
     "ita.1": 835
    },
-   "elo_fetch": {
-    "ita.1": {
-     "2026": 83
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
