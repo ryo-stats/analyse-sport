@@ -21562,7 +21562,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874993|1|": {
   "match": "foot-401874993",
@@ -21586,7 +21586,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874993|wh_nil|": {
   "match": "foot-401874993",
@@ -21610,7 +21610,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874993|exact|": {
   "match": "foot-401874993",
@@ -21634,7 +21634,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874965|exact|": {
   "match": "foot-401874965",
@@ -21658,7 +21658,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874773|N2|": {
   "match": "foot-401874773",
@@ -21682,7 +21682,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874773|2|": {
   "match": "foot-401874773",
@@ -21706,7 +21706,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874773|scorer|Marcus Thuram": {
   "match": "foot-401874773",
@@ -21730,7 +21730,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874773|dec|Marcus Thuram": {
   "match": "foot-401874773",
@@ -21782,7 +21782,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874988|N2|": {
   "match": "foot-401874988",
@@ -21793,7 +21793,7 @@
   "away": "Juventus",
   "market": "N2",
   "label": "Nul ou Juventus",
-  "p": 0.7741,
+  "p": 0.7472,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -21817,7 +21817,7 @@
   "away": "Juventus",
   "market": "2",
   "label": "Victoire Juventus",
-  "p": 0.4896,
+  "p": 0.4276,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -21832,58 +21832,6 @@
   ],
   "result": null
  },
- "foot-401874988|scorer|Edon Zhegrova": {
-  "match": "foot-401874988",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-10-28",
-  "home": "Genoa",
-  "away": "Juventus",
-  "market": "scorer",
-  "label": "Edon Zhegrova marque",
-  "p": 0.17,
-  "stars": 1,
-  "player": "Edon Zhegrova",
-  "pid_player": "260300",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401874988|dec|Edon Zhegrova": {
-  "match": "foot-401874988",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-10-28",
-  "home": "Genoa",
-  "away": "Juventus",
-  "market": "dec",
-  "label": "Edon Zhegrova buteur ou passeur",
-  "p": 0.25,
-  "stars": 1,
-  "player": "Edon Zhegrova",
-  "pid_player": "260300",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   6,
-   2,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
  "foot-401874988|wa_nil|": {
   "match": "foot-401874988",
   "sport": "foot",
@@ -21893,7 +21841,7 @@
   "away": "Juventus",
   "market": "wa_nil",
   "label": "Juventus gagne sans encaisser de but",
-  "p": 0.33,
+  "p": 0.3106,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -21917,7 +21865,7 @@
   "away": "Juventus",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.1588,
+  "p": 0.1729,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -21941,7 +21889,7 @@
   "away": "Napoli",
   "market": "N2",
   "label": "Nul ou Napoli",
-  "p": 0.741,
+  "p": 0.7127,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -21965,8 +21913,8 @@
   "away": "Napoli",
   "market": "2",
   "label": "Victoire Napoli",
-  "p": 0.5335,
-  "stars": 2,
+  "p": 0.4868,
+  "stars": 1,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -21980,82 +21928,6 @@
   ],
   "result": null
  },
- "foot-401874799|scorer|Kevin De Bruyne": {
-  "match": "foot-401874799",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-10-28",
-  "home": "Monza",
-  "away": "Napoli",
-  "market": "scorer",
-  "label": "Kevin De Bruyne marque",
-  "p": 0.33,
-  "stars": 1,
-  "player": "Kevin De Bruyne",
-  "pid_player": "134947",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401874799|dec|Kevin De Bruyne": {
-  "match": "foot-401874799",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-10-28",
-  "home": "Monza",
-  "away": "Napoli",
-  "market": "dec",
-  "label": "Kevin De Bruyne buteur ou passeur",
-  "p": 0.44,
-  "stars": 1,
-  "player": "Kevin De Bruyne",
-  "pid_player": "134947",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   8,
-   3,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401874799|wa_o25|": {
-  "match": "foot-401874799",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-10-28",
-  "home": "Monza",
-  "away": "Napoli",
-  "market": "wa_o25",
-  "label": "Napoli gagne et plus de 2,5 buts",
-  "p": 0.4117,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874799|exact|": {
   "match": "foot-401874799",
   "sport": "foot",
@@ -22065,7 +21937,7 @@
   "away": "Napoli",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0915,
+  "p": 0.0934,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -22537,7 +22409,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874993|dec|Gonçalo Ramos": {
   "match": "foot-401874993",
@@ -22589,7 +22461,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874965|2|": {
   "match": "foot-401874965",
@@ -22613,7 +22485,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874965|scorer|Jurgen Ekkelenkamp": {
   "match": "foot-401874965",
@@ -22637,7 +22509,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874965|dec|Jurgen Ekkelenkamp": {
   "match": "foot-401874965",
@@ -22689,7 +22561,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874773|wa_nil|": {
   "match": "foot-401874773",
@@ -22701,6 +22573,134 @@
   "market": "wa_nil",
   "label": "Inter Milan gagne sans encaisser de but",
   "p": 0.4017,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": true
+ },
+ "foot-401874988|scorer|Randal Kolo Muani": {
+  "match": "foot-401874988",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-28",
+  "home": "Genoa",
+  "away": "Juventus",
+  "market": "scorer",
+  "label": "Randal Kolo Muani marque",
+  "p": 0.12,
+  "stars": 1,
+  "player": "Randal Kolo Muani",
+  "pid_player": "252971",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874988|dec|Randal Kolo Muani": {
+  "match": "foot-401874988",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-28",
+  "home": "Genoa",
+  "away": "Juventus",
+  "market": "dec",
+  "label": "Randal Kolo Muani buteur ou passeur",
+  "p": 0.21,
+  "stars": 1,
+  "player": "Randal Kolo Muani",
+  "pid_player": "252971",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   8,
+   1,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874799|scorer|Rasmus Højlund": {
+  "match": "foot-401874799",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-28",
+  "home": "Monza",
+  "away": "Napoli",
+  "market": "scorer",
+  "label": "Rasmus Højlund marque",
+  "p": 0.25,
+  "stars": 1,
+  "player": "Rasmus Højlund",
+  "pid_player": "309273",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874799|dec|Rasmus Højlund": {
+  "match": "foot-401874799",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-28",
+  "home": "Monza",
+  "away": "Napoli",
+  "market": "dec",
+  "label": "Rasmus Højlund buteur ou passeur",
+  "p": 0.29,
+  "stars": 1,
+  "player": "Rasmus Højlund",
+  "pid_player": "309273",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   8,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874799|o35|": {
+  "match": "foot-401874799",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-28",
+  "home": "Monza",
+  "away": "Napoli",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.4069,
   "stars": 1,
   "player": null,
   "pid_player": null,

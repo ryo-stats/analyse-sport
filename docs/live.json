@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T20:00+01:00",
+ "generated": "2026-10-28T20:25+01:00",
  "date": "2026-10-28",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "18:30",
    "home": "Milan",
    "away": "Bologna",
-   "state": "in",
+   "state": "post",
    "xgH": 1.33,
    "xgA": 0.6,
    "pH": 54,
@@ -55,38 +55,36 @@
     },
     "player": {
      "market": "scorer",
-     "label": "Gonçalo Ramos marque",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
-     "stars": 1,
-     "player": "Gonçalo Ramos",
-     "team": "Milan",
-     "lineup": "start",
-     "pid": "288896",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 8 matchs · titulaire · Milan favori (54 %) · 1,3 but attendu pour Milan"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Gonçalo Ramos buteur ou passeur",
+     "label": "Adrien Rabiot marque",
      "p": 0.26,
      "prob": 26,
      "fair": 3.85,
      "stars": 1,
-     "player": "Gonçalo Ramos",
+     "player": "Adrien Rabiot",
      "team": "Milan",
-     "base": [
-      8,
-      2,
-      1
-     ],
-     "lineup": "start",
-     "pid": "288896",
+     "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 8 matchs · titulaire · Milan favori (54 %) · 1,3 but attendu pour Milan"
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (54 %) · 1,3 but attendu pour Milan"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1,
+     "player": "Adrien Rabiot",
+     "team": "Milan",
+     "base": [
+      7,
+      4,
+      3
+     ],
+     "pid": "176203",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 3 passes en 7 matchs · Milan favori (54 %) · 1,3 but attendu pour Milan"
     }
    }
   },
@@ -99,7 +97,7 @@
    "time": "18:30",
    "home": "Parma",
    "away": "Udinese",
-   "state": "in",
+   "state": "post",
    "xgH": 1.08,
    "xgA": 1.09,
    "pH": 35,
@@ -150,11 +148,10 @@
      "stars": 1,
      "player": "Jurgen Ekkelenkamp",
      "team": "Udinese",
-     "lineup": "start",
      "pid": "270817",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · titulaire · Udinese annoncé gagnant (36 %) · 1,1 but attendu pour Udinese"
+     "why": "3 buts et 1 passe en 8 matchs · Udinese annoncé gagnant (36 %) · 1,1 but attendu pour Udinese"
     },
     "decisive": {
      "market": "dec",
@@ -170,11 +167,10 @@
       3,
       1
      ],
-     "lineup": "start",
      "pid": "270817",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · titulaire · Udinese annoncé gagnant (36 %) · 1,1 but attendu pour Udinese"
+     "why": "3 buts et 1 passe en 8 matchs · Udinese annoncé gagnant (36 %) · 1,1 but attendu pour Udinese"
     }
    }
   },
@@ -187,7 +183,7 @@
    "time": "18:30",
    "home": "Venezia",
    "away": "Inter Milan",
-   "state": "in",
+   "state": "post",
    "xgH": 0.82,
    "xgA": 2.4,
    "pH": 11,
@@ -238,11 +234,10 @@
      "stars": 1,
      "player": "Marcus Thuram",
      "team": "Inter Milan",
-     "lineup": "start",
      "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · titulaire · Inter Milan favori (72 %) · 2,4 buts attendus pour Inter Milan"
+     "why": "5 buts et 2 passes en 7 matchs · Inter Milan favori (72 %) · 2,4 buts attendus pour Inter Milan"
     },
     "decisive": {
      "market": "dec",
@@ -258,11 +253,10 @@
       5,
       2
      ],
-     "lineup": "start",
      "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · titulaire · Inter Milan favori (72 %) · 2,4 buts attendus pour Inter Milan"
+     "why": "5 buts et 2 passes en 7 matchs · Inter Milan favori (72 %) · 2,4 buts attendus pour Inter Milan"
     }
    }
   },
@@ -276,79 +270,81 @@
    "home": "Genoa",
    "away": "Juventus",
    "state": "pre",
-   "xgH": 0.8,
-   "xgA": 1.32,
-   "pH": 23,
-   "pD": 28,
-   "pA": 49,
+   "xgH": 0.75,
+   "xgA": 1.08,
+   "pH": 25,
+   "pD": 32,
+   "pA": 43,
    "edate": "20261028",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Juventus",
-     "p": 0.7741,
-     "prob": 77,
-     "fair": 1.29,
+     "p": 0.7472,
+     "prob": 75,
+     "fair": 1.34,
      "stars": 4,
      "why": "8 derniers matchs : Genoa 6 marqués / 13 encaissés · Juventus 11 / 8"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Juventus",
-     "p": 0.4896,
-     "prob": 49,
-     "fair": 2.04,
+     "p": 0.4276,
+     "prob": 43,
+     "fair": 2.34,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1588,
-     "prob": 16,
-     "fair": 6.3,
+     "p": 0.1729,
+     "prob": 17,
+     "fair": 5.78,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Juventus gagne sans encaisser de but",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.3106,
+     "prob": 31,
+     "fair": 3.22,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Edon Zhegrova marque",
-     "p": 0.17,
-     "prob": 17,
-     "fair": 5.88,
+     "label": "Randal Kolo Muani marque",
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
      "stars": 1,
-     "player": "Edon Zhegrova",
+     "player": "Randal Kolo Muani",
      "team": "Juventus",
-     "pid": "260300",
+     "lineup": "start",
+     "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 6 matchs · Juventus favori (49 %) · 1,3 but attendu pour Juventus"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Juventus annoncé gagnant (43 %) · 1,1 but attendu pour Juventus"
     },
     "decisive": {
      "market": "dec",
-     "label": "Edon Zhegrova buteur ou passeur",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Randal Kolo Muani buteur ou passeur",
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
      "stars": 1,
-     "player": "Edon Zhegrova",
+     "player": "Randal Kolo Muani",
      "team": "Juventus",
      "base": [
-      6,
-      2,
+      8,
+      1,
       1
      ],
-     "pid": "260300",
+     "lineup": "start",
+     "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 6 matchs · Juventus favori (49 %) · 1,3 but attendu pour Juventus"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Juventus annoncé gagnant (43 %) · 1,1 but attendu pour Juventus"
     }
    }
   },
@@ -362,79 +358,81 @@
    "home": "Monza",
    "away": "Napoli",
    "state": "pre",
-   "xgH": 1.45,
-   "xgA": 2.14,
-   "pH": 26,
-   "pD": 21,
-   "pA": 53,
+   "xgH": 1.38,
+   "xgA": 1.86,
+   "pH": 29,
+   "pD": 23,
+   "pA": 49,
    "edate": "20261028",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Napoli",
-     "p": 0.741,
-     "prob": 74,
-     "fair": 1.35,
+     "p": 0.7127,
+     "prob": 71,
+     "fair": 1.4,
      "stars": 4,
      "why": "8 derniers matchs : Monza 15 marqués / 18 encaissés · Napoli 13 / 10"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Napoli",
-     "p": 0.5335,
-     "prob": 53,
-     "fair": 1.87,
-     "stars": 2
+     "p": 0.4868,
+     "prob": 49,
+     "fair": 2.05,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0915,
+     "p": 0.0934,
      "prob": 9,
-     "fair": 10.93,
+     "fair": 10.71,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Napoli gagne et plus de 2,5 buts",
-     "p": 0.4117,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.4069,
      "prob": 41,
-     "fair": 2.43,
+     "fair": 2.46,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Kevin De Bruyne marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "label": "Rasmus Højlund marque",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
-     "player": "Kevin De Bruyne",
+     "player": "Rasmus Højlund",
      "team": "Napoli",
-     "pid": "134947",
+     "lineup": "start",
+     "pid": "309273",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Napoli favori (53 %) · 2,1 buts attendus pour Napoli"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Napoli favori (49 %) · 1,9 buts attendus pour Napoli"
     },
     "decisive": {
      "market": "dec",
-     "label": "Kevin De Bruyne buteur ou passeur",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "label": "Rasmus Højlund buteur ou passeur",
+     "p": 0.29,
+     "prob": 29,
+     "fair": 3.45,
      "stars": 1,
-     "player": "Kevin De Bruyne",
+     "player": "Rasmus Højlund",
      "team": "Napoli",
      "base": [
       8,
-      3,
-      1
+      2,
+      0
      ],
-     "pid": "134947",
+     "lineup": "start",
+     "pid": "309273",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Napoli favori (53 %) · 2,1 buts attendus pour Napoli"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Napoli favori (49 %) · 1,9 buts attendus pour Napoli"
     }
    }
   },
@@ -721,8 +719,8 @@
  "summary": {
   "date": "2026-10-28",
   "yesterday": {
-   "n": 76,
-   "ok": 40
+   "n": 91,
+   "ok": 45
   },
   "foot": 5,
   "nhl": 4,
@@ -735,13 +733,13 @@
    },
    {
     "label": "Nul ou Juventus",
-    "prob": 77,
+    "prob": 75,
     "time": "20:45",
     "match": "Genoa – Juventus"
    },
    {
     "label": "Nul ou Napoli",
-    "prob": 74,
+    "prob": 71,
     "time": "20:45",
     "match": "Monza – Napoli"
    }
