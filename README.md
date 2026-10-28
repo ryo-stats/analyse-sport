@@ -93,7 +93,7 @@ Le calcul et l'hébergement passent par GitHub, gratuitement.
 ## Présentation et bankroll
 
 - **Menu** (5 onglets : Aujourd'hui, Matchs, Mes paris, Pronos, Bilan) : sur la gauche sur ordinateur, barre en bas sur téléphone.
-  - **Pronos** : tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun), aussi ouverts par « Tout voir » sur Aujourd'hui.
+  - **Pronos** : tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun), aussi ouverts par « Tout voir » sur Aujourd'hui. Combinés : sous-onglets **Foot / NHL**, chacun avec son combiné safe (3 matchs) et son combiné fun (2 matchs) du seul sport choisi ; par défaut, le sport qui a le plus de matchs à venir.
   - Toucher une notification de match ouvre directement la fiche de ce match (adresse `…#m=foot-123`).
   - **Sans réseau** : le site garde sur le téléphone une copie de lui-même et des dernières analyses (`docs/sw.js`, réseau d'abord, copie si pas de réponse en 5 s) et l'indique par un bandeau « 📴 Hors ligne » ; il se recharge seul au retour du réseau.
   - **Aujourd'hui** : le pari du jour (réussite, cote minimum, mise conseillée, bouton « Ajouter »), les 4 plus sûrs suivants (un clic ouvre la fiche du match), le direct et le nombre de matchs analysés. « Tout voir » ouvre tous les pronostics (Paris foot / NHL, Buteur, Décisif, Combinés, En direct, Fun).
