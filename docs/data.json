@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T01:08+01:00",
+ "generated": "2026-10-28T01:33+01:00",
  "date": "2026-10-28",
  "nhl_date": "2026-10-27",
  "foot": [
@@ -1920,7 +1920,7 @@
    "kickoff": "2026-10-27T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "0-3",
+   "score": "1-3",
    "home": "Philadelphia Flyers",
    "away": "Columbus Blue Jackets",
    "rec_h": "3-7-3 · 7e Metropolitan · 1 défaite de suite",
@@ -2307,7 +2307,7 @@
    "kickoff": "2026-10-28T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Carolina Hurricanes",
    "away": "Boston Bruins",
    "rec_h": "9-2-2 · 1e Metropolitan · 1 victoire de suite",
@@ -2694,7 +2694,7 @@
    "kickoff": "2026-10-28T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Chicago Blackhawks",
    "away": "Los Angeles Kings",
    "rec_h": "3-8-0 · 8e Central · 3 défaites de suite",
@@ -3467,7 +3467,7 @@
    "kickoff": "2026-10-28T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-2",
    "home": "Nashville Predators",
    "away": "New York Islanders",
    "rec_h": "4-3-4 · 5e Central · 1 victoire de suite",
@@ -3853,7 +3853,7 @@
    "kickoff": "2026-10-28T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Dallas Stars",
    "away": "New Jersey Devils",
    "rec_h": "7-3-1 · 3e Central · 5 victoires de suite",
@@ -4240,7 +4240,7 @@
    "kickoff": "2026-10-28T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-3",
    "home": "Winnipeg Jets",
    "away": "Florida Panthers",
    "rec_h": "4-4-3 · 7e Central · 1 défaite de suite",
@@ -4625,7 +4625,7 @@
    "league": "NHL",
    "kickoff": "2026-10-28T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Utah Mammoth",
    "away": "Minnesota Wild",
@@ -17945,9 +17945,13 @@
   "foot": {
    "ok": 5,
    "elo": {
-    "ita.1": 832
+    "ita.1": 835
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ita.1": {
+     "2026": 83
+    }
+   },
    "status": "ok"
   },
   "nhl": {
