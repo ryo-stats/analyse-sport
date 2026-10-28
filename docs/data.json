@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T18:11+01:00",
+ "generated": "2026-10-28T19:35+01:00",
  "date": "2026-10-28",
  "nhl_date": "2026-10-28",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-28T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-1",
    "home": "Milan",
    "away": "Bologna",
    "form_h": "NDVVN",
@@ -207,27 +207,6 @@
      "lineup": "start"
     },
     {
-     "name": "Nicoló",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Bologna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 8,
-      "gp": 3,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 5,
-     "p_dec": 5,
-     "pid": "250707",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
      "name": "Lewis Ferguson",
      "pos": "Milieu",
      "side": "a",
@@ -289,6 +268,27 @@
      "stats_league": "ita.1",
      "season": 2026,
      "lineup": "bench"
+    },
+    {
+     "name": "Nicolò Cambiaghi",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 0,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 1,
+     "p_dec": 5,
+     "pid": "287790",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -296,8 +296,6 @@
     "Bologna : 13e, 8 points, 8 buts marqués et 10 encaissés en 8 matchs.",
     "Milan : 16 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
     "Bologna : 8 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat.",
-    "Milan : attaque revue à la baisse (−25 %) d'après la compo officielle (Adrien Rabiot, Christian Pulisic, Diego Moreira ne commencent pas).",
-    "Bologna : attaque revue à la baisse (−17 %) d'après la compo officielle (Artem Dovbyk, Riccardo Orsolini, Roberto Piccoli ne commencent pas).",
     "Compositions officielles prises en compte : Adrien Rabiot (absent), Diego Moreira (absent) ne commencent pas le match."
    ],
    "reading": "Milan est favori sans écraser le match (54 %).",
@@ -306,7 +304,7 @@
     "main": {
      "market": "1N",
      "label": "Milan ou nul",
-     "p": 0.831,
+     "p": 0.8309,
      "prob": 83,
      "fair": 1.2,
      "stars": 5,
@@ -407,8 +405,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-28T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Parma",
    "away": "Udinese",
    "form_h": "NDDVD",
@@ -420,7 +418,7 @@
    "pA": 36,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.08,
-   "xgA": 1.1,
+   "xgA": 1.09,
    "scores": [
     "1-1",
     "0-1",
@@ -618,7 +616,7 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
+     "p_goal": 10,
      "p_dec": 15,
      "pid": "237055",
      "stats_league": "ita.1",
@@ -694,8 +692,6 @@
     "Udinese : 17e, 4 points, 9 buts marqués et 18 encaissés en 8 matchs.",
     "Parma : 5 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
     "Udinese : 9 buts marqués et 18 encaissés sur ses 8 derniers matchs de championnat.",
-    "Parma : attaque revue à la baisse (−21 %) d'après la compo officielle (Pontus Almqvist, Simone Lontani ne commencent pas).",
-    "Udinese : attaque revue à la baisse (−9 %) d'après la compo officielle (Jakub Piotrowski, Idrissa Gueye ne commencent pas).",
     "Compositions officielles prises en compte : Simone Lontani (remplaçant) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (29 %).",
@@ -730,7 +726,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "Udinese gagne sans encaisser de but",
-     "p": 0.2268,
+     "p": 0.2267,
      "prob": 23,
      "fair": 4.41,
      "stars": 1
@@ -739,15 +735,15 @@
      {
       "market": "wa_by1",
       "label": "Udinese gagne d'un seul but",
-      "p": 0.2144,
+      "p": 0.2143,
       "prob": 21,
-      "fair": 4.66,
+      "fair": 4.67,
       "stars": 1
      },
      {
       "market": "htft_a",
       "label": "Udinese mène à la mi-temps et gagne le match",
-      "p": 0.2036,
+      "p": 0.2035,
       "prob": 20,
       "fair": 4.91,
       "stars": 1
@@ -805,8 +801,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-28T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Venezia",
    "away": "Inter Milan",
    "form_h": "NVDDD",
@@ -1092,8 +1088,6 @@
     "Inter Milan : 2e, 22 points, 23 buts marqués et 10 encaissés en 8 matchs.",
     "Venezia : 6 buts marqués et 17 encaissés sur ses 8 derniers matchs de championnat.",
     "Inter Milan : 23 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat.",
-    "Venezia : attaque revue à la baisse (−12 %) d'après la compo officielle (Richie Sagrado, John Yeboah ne commencent pas).",
-    "Inter Milan : attaque revue à la baisse (−15 %) d'après la compo officielle (Hakan Çalhanoglu, Lautaro Martínez ne commencent pas).",
     "Compositions officielles prises en compte : Hakan Çalhanoglu (remplaçant), Lautaro Martínez (remplaçant), Pio Esposito (remplaçant) ne commencent pas le match."
    ],
    "reading": "Inter Milan est nettement favori (72 %).",
@@ -1102,7 +1096,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Inter Milan",
-     "p": 0.8909,
+     "p": 0.891,
      "prob": 89,
      "fair": 1.12,
      "stars": 5,
@@ -1128,7 +1122,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "Inter Milan gagne sans encaisser de but",
-     "p": 0.4017,
+     "p": 0.4016,
      "prob": 40,
      "fair": 2.49,
      "stars": 1
@@ -1137,7 +1131,7 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.4005,
+      "p": 0.4006,
       "prob": 40,
       "fair": 2.5,
       "stars": 1
@@ -16000,11 +15994,15 @@
  },
  "second": {
   "foot": {
-   "ok": 5,
+   "ok": 2,
    "elo": {
     "ita.1": 835
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ita.1": {
+     "2026": 83
+    }
+   },
    "status": "ok"
   },
   "nhl": {

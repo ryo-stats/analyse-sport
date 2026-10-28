@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T18:11+01:00",
+ "generated": "2026-10-28T19:35+01:00",
  "date": "2026-10-28",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "18:30",
    "home": "Milan",
    "away": "Bologna",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.33,
    "xgA": 0.6,
    "pH": 54,
@@ -22,7 +22,7 @@
     "main": {
      "market": "1N",
      "label": "Milan ou nul",
-     "p": 0.831,
+     "p": 0.8309,
      "prob": 83,
      "fair": 1.2,
      "stars": 5,
@@ -99,9 +99,9 @@
    "time": "18:30",
    "home": "Parma",
    "away": "Udinese",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.08,
-   "xgA": 1.1,
+   "xgA": 1.09,
    "pH": 35,
    "pD": 29,
    "pA": 36,
@@ -136,7 +136,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "Udinese gagne sans encaisser de but",
-     "p": 0.2268,
+     "p": 0.2267,
      "prob": 23,
      "fair": 4.41,
      "stars": 1
@@ -187,7 +187,7 @@
    "time": "18:30",
    "home": "Venezia",
    "away": "Inter Milan",
-   "state": "pre",
+   "state": "in",
    "xgH": 0.82,
    "xgA": 2.4,
    "pH": 11,
@@ -198,7 +198,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Inter Milan",
-     "p": 0.8909,
+     "p": 0.891,
      "prob": 89,
      "fair": 1.12,
      "stars": 5,
@@ -224,7 +224,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "Inter Milan gagne sans encaisser de but",
-     "p": 0.4017,
+     "p": 0.4016,
      "prob": 40,
      "fair": 2.49,
      "stars": 1
@@ -728,22 +728,22 @@
   "nhl": 4,
   "top": [
    {
-    "label": "Nul ou Inter Milan",
-    "prob": 89,
-    "time": "18:30",
-    "match": "Venezia – Inter Milan"
-   },
-   {
-    "label": "Milan ou nul",
-    "prob": 83,
-    "time": "18:30",
-    "match": "Milan – Bologna"
-   },
-   {
     "label": "Connor McDavid : au moins 1 point",
     "prob": 80,
     "time": "01:30",
     "match": "Edmonton Oilers – Calgary Flames"
+   },
+   {
+    "label": "Nul ou Juventus",
+    "prob": 77,
+    "time": "20:45",
+    "match": "Genoa – Juventus"
+   },
+   {
+    "label": "Nul ou Napoli",
+    "prob": 74,
+    "time": "20:45",
+    "match": "Monza – Napoli"
    }
   ]
  }
