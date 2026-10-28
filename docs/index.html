@@ -192,6 +192,7 @@ td.r,th.r{text-align:right}
 .ctitle{font-family:var(--display);font-size:1.25rem;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
 .chead .pp{font-size:1.35rem}
 .cleg{list-style:none;margin:0;padding:0}
+.sporttag{font-weight:600;color:var(--ink)}
 .cleg li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
 .cleg li:first-child{border-top:0}
 /* ---- mise en page : menu à gauche (ordinateur), barre en bas (téléphone) */
@@ -999,7 +1000,7 @@ let PVIEW = "matchs";    // dans Paris foot / Paris NHL : matchs | buteur | deci
 try { PVIEW = localStorage.getItem("pview") || "matchs"; } catch (e) {}
 if (PSUB === "scorers"){ PSUB = "foot"; PVIEW = "buteur"; }     // ancien sous-onglet « Buteurs ⚽ »
 const PVIEWS = ["matchs", "buteur", "decisif"];
-let CSPORT = "";         // dans Combinés : foot | nhl (vide = le sport qui a le plus de matchs à venir)
+let CSPORT = "";         // dans Combinés : foot | nhl | mix (vide = le sport qui a le plus de matchs à venir)
 try { CSPORT = localStorage.getItem("csport") || ""; } catch (e) {}
 if (!PVIEWS.includes(PVIEW)) PVIEW = "matchs";
 // pari joueur d'un match : foot Buteur = « marque », Décisif = « buteur ou passeur » ;
@@ -1039,25 +1040,33 @@ function comboCard(title, legs, kind){
   const pk = {stars: starsOf(p), prob: Math.round(p * 100), p};
   const first = [...legs].sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff))[0].time;   // l'heure seule trierait mal les matchs NHL après minuit
   const key = comboRef(legs, kind);
-  return `<section class="combo"><div class="chead"><div><h3 class="ctitle">${esc(title)}</h3><span class="smeta">${legs.length} sélections · premier match à ${esc(first)}</span></div>${conf(pk)}<button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter ce combiné à ma bankroll">+</button></div>
+  const sports = [...new Set(legs.map(l => l.sport))];
+  const mixNote = sports.length > 1 ? ` · ${legs.filter(l => l.sport === "foot").length} ⚽ + ${legs.filter(l => l.sport === "nhl").length} 🏒` : "";
+  return `<section class="combo"><div class="chead"><div><h3 class="ctitle">${esc(title)}</h3><span class="smeta">${legs.length} sélections${mixNote} · premier match à ${esc(first)}</span></div>${conf(pk)}<button type="button" class="addbet" data-addbet="${esc(key)}" aria-label="Ajouter ce combiné à ma bankroll">+</button></div>
     <ol class="cleg">${legs.map(l => `<li><div class="sbody"><div class="spick">${esc(l.label)}</div>
       <div class="smatch">${logo(l.logo_h, l.logo_h_dark, "lg sm")}<span>${esc(l.home)} – ${esc(l.away)}</span>${logo(l.logo_a, l.logo_a_dark, "lg sm")}</div>
-      <div class="smeta">${esc(l.time)} · ${esc(l.sport === "nhl" ? "NHL" : l.league)}</div></div><b class="pp num">${l.prob} %</b></li>`).join("")}</ol></section>`;
+      <div class="smeta"><span class="sporttag ${l.sport}">${l.sport === "nhl" ? "🏒 NHL" : "⚽ " + esc(l.league)}</span> · ${esc(l.time)}</div></div><b class="pp num">${l.prob} %</b></li>`).join("")}</ol></section>`;
 }
-// Combinés, un sport à la fois (sous-onglets Foot / NHL) : « safe » (les 3 pronostics les plus sûrs) et
-// « fun » (les 2 paris fun les plus probables), tous du même sport
+// Combinés (sous-onglets Foot / NHL / Mixte) : « safe » (les 3 pronostics les plus sûrs) et « fun » (les 2 paris fun
+// les plus probables). Foot et NHL : un seul sport ; Mixte : les deux mélangés, chaque sélection marquée ⚽ ou 🏒.
 function comboView(){
-  const up = k => (DATA[k] || []).filter(notStarted).length;
-  const sport = ["foot", "nhl"].includes(CSPORT) ? CSPORT : (up("nhl") > up("foot") ? "nhl" : "foot");
-  const nav2 = `<nav class="pviews two" aria-label="Sport">${[["foot", "Foot"], ["nhl", "NHL"]].map(([k, l]) =>
+  const up = k => k === "mix" ? up("foot") + up("nhl") : (DATA[k] || []).filter(notStarted).length;
+  const sport = ["foot", "nhl", "mix"].includes(CSPORT) ? CSPORT : (up("nhl") > up("foot") ? "nhl" : "foot");
+  const nav2 = `<nav class="pviews" aria-label="Sport">${[["foot", "⚽ Foot"], ["nhl", "🏒 NHL"], ["mix", "Mixte"]].map(([k, l]) =>
     `<button type="button" data-csport="${k}" aria-pressed="${k === sport}">${l}<span class="n num">${up(k)}</span></button>`).join("")}</nav>`;
-  const all = DATA[sport] || [];
-  const safe = legsOf(all), fun = funLegsOf(all), cards = [];
-  if (safe.length >= 3) cards.push(comboCard("Combiné safe · 3 matchs", safe.slice(0, 3), "safe"));
-  if (fun.length >= 2) cards.push(comboCard("Combiné fun · 2 matchs", fun.slice(0, 2), "fun"));
-  const intro = `<p class="warnline"><b>Combiné safe</b> : les 3 pronostics les plus sûrs de matchs différents. <b>Combiné fun</b> : les 2 paris fun les plus probables, pour une grosse cote. Tous les paris d'un combiné doivent passer : sa réussite est le produit des probabilités (3 × 80 % ≈ 51 %, 2 × 40 % = 16 %).</p>`;
+  const all = sport === "mix" ? [...(DATA.foot || []), ...(DATA.nhl || [])] : DATA[sport] || [];
+  // Mixte : toujours au moins une sélection de chaque sport (sinon ce serait le combiné d'un seul sport)
+  const mixed = (legs, n) => {
+    const f = legs.find(l => l.sport === "foot"), h = legs.find(l => l.sport === "nhl");
+    if (sport !== "mix" || !f || !h) return legs.slice(0, n);
+    return [f, h, ...legs.filter(l => l !== f && l !== h)].slice(0, n).sort((a, b) => b.p - a.p);
+  };
+  const safe = mixed(legsOf(all), 3), fun = mixed(funLegsOf(all), 2), cards = [];
+  if (safe.length >= 3) cards.push(comboCard("Combiné safe · 3 matchs", safe, "safe"));
+  if (fun.length >= 2) cards.push(comboCard("Combiné fun · 2 matchs", fun, "fun"));
+  const intro = `<p class="warnline">${sport === "mix" ? "<b>Mixte</b> : foot et NHL mélangés (⚽ foot, 🏒 hockey). " : ""}<b>Combiné safe</b> : les 3 pronostics les plus sûrs de matchs différents. <b>Combiné fun</b> : les 2 paris fun les plus probables, pour une grosse cote. Tous les paris d'un combiné doivent passer : sa réussite est le produit des probabilités (3 × 80 % ≈ 51 %, 2 × 40 % = 16 %).</p>`;
   return nav2 + intro + (cards.length ? cards.join("")
-    : `<div class="empty">Pas assez de matchs ${sport === "nhl" ? "NHL" : "de foot"} à venir aujourd'hui pour proposer un combiné${up(sport === "nhl" ? "foot" : "nhl") >= 2 ? ` : regarde l'onglet ${sport === "nhl" ? "Foot" : "NHL"}` : ""}.</div>`);
+    : `<div class="empty">Pas assez de matchs ${sport === "nhl" ? "NHL " : sport === "foot" ? "de foot " : ""}à venir aujourd'hui pour proposer un combiné${sport !== "mix" && up("mix") >= 3 ? " : regarde l'onglet Mixte" : ""}.</div>`);
 }
 // ---- sous-onglet En direct : pronostics recalculés pendant les matchs (calcul dans docs/live.js)
 let LIVEM = null;
