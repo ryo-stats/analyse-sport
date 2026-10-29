@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T00:13+01:00",
+ "generated": "2026-10-30T00:38+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-29",
  "foot": [
@@ -2310,7 +2310,7 @@
    "kickoff": "2026-10-29T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-2",
    "home": "Pittsburgh Penguins",
    "away": "Utah Mammoth",
    "rec_h": "5-6-1 · 6e Metropolitan · 2 victoires de suite",
@@ -2696,7 +2696,7 @@
    "kickoff": "2026-10-29T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "1-0",
    "home": "Carolina Hurricanes",
    "away": "Columbus Blue Jackets",
    "rec_h": "10-2-2 · 1e Metropolitan · 2 victoires de suite",
@@ -3082,8 +3082,8 @@
    "league": "NHL",
    "kickoff": "2026-10-29T23:30:00+00:00",
    "time": "00:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Detroit Red Wings",
    "away": "Chicago Blackhawks",
    "rec_h": "5-4-3 · 8e Atlantic · 1 victoire de suite",
@@ -3469,7 +3469,7 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "St. Louis Blues",
    "away": "Boston Bruins",
@@ -3855,7 +3855,7 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Nashville Predators",
    "away": "Washington Capitals",
@@ -4241,7 +4241,7 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Dallas Stars",
    "away": "Montréal Canadiens",
@@ -4628,7 +4628,7 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Minnesota Wild",
    "away": "New York Islanders",
@@ -19449,27 +19449,11 @@
     "esp.1": 833,
     "ger.1": 649
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2024": 294,
-     "2025": 303,
-     "2026": 72
-    },
-    "esp.1": {
-     "2024": 360,
-     "2025": 374,
-     "2026": 99
-    },
-    "ger.1": {
-     "2024": 286,
-     "2025": 300,
-     "2026": 63
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
-   "ok": 8,
+   "ok": 7,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88977 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
