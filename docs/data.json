@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T19:32+01:00",
+ "generated": "2026-10-29T19:57+01:00",
  "date": "2026-10-29",
  "nhl_date": "2026-10-29",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-10-29T17:30:00+00:00",
    "time": "18:30",
    "state": "in",
-   "score": "2-0",
+   "score": "3-0",
    "home": "Frosinone",
    "away": "Lecce",
    "form_h": "NVDVN",
@@ -684,15 +684,6 @@
    "reading": "Atalanta est favori sans écraser le match (46 %).",
    "stakes": "Fiorentina (19e) est en zone de relégation : match vital.",
    "picks": {
-    "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.7106,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
-     "why": "8 derniers matchs : Fiorentina 9 marqués / 19 encaissés · Atalanta 14 / 15"
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Atalanta",
@@ -771,11 +762,22 @@
      "stats_league": "ita.1",
      "season": 2026,
      "why": "6 buts et 2 passes en 8 matchs · Atalanta favori (46 %) · 2,0 buts attendus pour Atalanta"
+    },
+    "held": {
+     "market": "o25",
+     "label": "Plus de 2,5 buts",
+     "p": 0.7106,
+     "prob": 71,
+     "fair": 1.41,
+     "stars": 4,
+     "why": "8 derniers matchs : Fiorentina 9 marqués / 19 encaissés · Atalanta 14 / 15",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "country": "Italie",
    "code": "ita.1",
@@ -18182,11 +18184,7 @@
    "elo": {
     "ita.1": 840
    },
-   "elo_fetch": {
-    "ita.1": {
-     "2026": 88
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
