@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T18:09+01:00",
+ "generated": "2026-10-29T19:32+01:00",
  "date": "2026-10-29",
  "nhl_date": "2026-10-29",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-29T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-0",
    "home": "Frosinone",
    "away": "Lecce",
    "form_h": "NVDVN",
@@ -207,27 +207,6 @@
      "lineup": "start"
     },
     {
-     "name": "Willem Geubbels",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Lecce",
-     "goals": 0,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 4,
-     "pid": "259744",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
      "name": "Konan N’Dri",
      "pos": "Attaquant",
      "side": "a",
@@ -289,6 +268,27 @@
      "stats_league": "ita.1",
      "season": 2026,
      "lineup": "start"
+    },
+    {
+     "name": "Oumar Ngom",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Lecce",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 5,
+     "pid": "334793",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -296,7 +296,6 @@
     "Lecce : 14e, 9 points, 9 buts marqués et 14 encaissés en 8 matchs.",
     "Frosinone : 17 buts marqués et 13 encaissés sur ses 8 derniers matchs de championnat.",
     "Lecce : 9 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat.",
-    "Lecce : attaque revue à la baisse (−24 %) d'après la compo officielle (Kialonda Gaspar, Lassana Coulibaly, Konan N’Dri, Amar Ahmed ne commencent pas).",
     "Compositions officielles prises en compte : Lassana Coulibaly (absent) ne commence pas le match."
    ],
    "reading": "Frosinone est nettement favori (67 %).",
@@ -331,7 +330,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4038,
+     "p": 0.4039,
      "prob": 40,
      "fair": 2.48,
      "stars": 1
@@ -348,7 +347,7 @@
      {
       "market": "wh_btts",
       "label": "Frosinone gagne et les deux équipes marquent",
-      "p": 0.3255,
+      "p": 0.3256,
       "prob": 33,
       "fair": 3.07,
       "stars": 1
@@ -685,6 +684,15 @@
    "reading": "Atalanta est favori sans écraser le match (46 %).",
    "stakes": "Fiorentina (19e) est en zone de relégation : match vital.",
    "picks": {
+    "main": {
+     "market": "o25",
+     "label": "Plus de 2,5 buts",
+     "p": 0.7106,
+     "prob": 71,
+     "fair": 1.41,
+     "stars": 4,
+     "why": "8 derniers matchs : Fiorentina 9 marqués / 19 encaissés · Atalanta 14 / 15"
+    },
     "winner": {
      "market": "2",
      "label": "Victoire Atalanta",
@@ -763,22 +771,11 @@
      "stats_league": "ita.1",
      "season": 2026,
      "why": "6 buts et 2 passes en 8 matchs · Atalanta favori (46 %) · 2,0 buts attendus pour Atalanta"
-    },
-    "held": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.7106,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
-     "why": "8 derniers matchs : Fiorentina 9 marqués / 19 encaissés · Atalanta 14 / 15",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+    "agree": true
    },
    "country": "Italie",
    "code": "ita.1",
@@ -18181,11 +18178,15 @@
  },
  "second": {
   "foot": {
-   "ok": 2,
+   "ok": 1,
    "elo": {
     "ita.1": 840
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ita.1": {
+     "2026": 88
+    }
+   },
    "status": "ok"
   },
   "nhl": {
