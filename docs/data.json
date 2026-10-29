@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T01:20+01:00",
+ "generated": "2026-10-29T01:45+01:00",
  "date": "2026-10-29",
  "nhl_date": "2026-10-28",
  "foot": [
@@ -779,7 +779,7 @@
    "kickoff": "2026-10-28T23:30:00+00:00",
    "time": "00:30",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "1-1",
    "home": "Washington Capitals",
    "away": "Philadelphia Flyers",
    "rec_h": "6-4-0 · 5e Metropolitan · 1 victoire de suite",
@@ -1165,8 +1165,8 @@
    "league": "NHL",
    "kickoff": "2026-10-29T00:30:00+00:00",
    "time": "01:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Edmonton Oilers",
    "away": "Calgary Flames",
    "rec_h": "8-2-2 · 2e Pacific · 1 défaite en prolongation de suite",
@@ -1489,7 +1489,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-     "p": 0.3649,
+     "p": 0.365,
      "prob": 36,
      "fair": 2.74,
      "stars": 1
@@ -1552,7 +1552,7 @@
    "league": "NHL",
    "kickoff": "2026-10-29T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Colorado Avalanche",
    "away": "New Jersey Devils",
@@ -15152,13 +15152,17 @@
   "foot": {
    "ok": 2,
    "elo": {
-    "ita.1": 835
+    "ita.1": 840
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ita.1": {
+     "2026": 88
+    }
+   },
    "status": "ok"
   },
   "nhl": {
-   "ok": 3,
+   "ok": 2,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88900 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",

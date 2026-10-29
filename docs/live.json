@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T01:20+01:00",
+ "generated": "2026-10-29T01:45+01:00",
  "date": "2026-10-29",
  "matches": [
   {
@@ -243,7 +243,7 @@
    "time": "01:30",
    "home": "Edmonton Oilers",
    "away": "Calgary Flames",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.44,
    "xgA": 2.54,
    "pH": 56,
@@ -274,7 +274,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-     "p": 0.3649,
+     "p": 0.365,
      "prob": 36,
      "fair": 2.74,
      "stars": 1
@@ -313,7 +313,7 @@
    "time": "02:00",
    "home": "Colorado Avalanche",
    "away": "New Jersey Devils",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.09,
    "xgA": 2.76,
    "pH": 47,
@@ -455,12 +455,6 @@
   "nhl": 4,
   "top": [
    {
-    "label": "Connor McDavid : au moins 1 point",
-    "prob": 80,
-    "time": "01:30",
-    "match": "Edmonton Oilers – Calgary Flames"
-   },
-   {
     "label": "Frosinone ou nul",
     "prob": 80,
     "time": "18:30",
@@ -471,6 +465,12 @@
     "prob": 69,
     "time": "02:00",
     "match": "Colorado Avalanche – New Jersey Devils"
+   },
+   {
+    "label": "Plus de 5,5 buts",
+    "prob": 59,
+    "time": "03:00",
+    "match": "Seattle Kraken – Toronto Maple Leafs"
    }
   ]
  }
