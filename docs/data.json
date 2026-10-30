@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T19:26+01:00",
+ "generated": "2026-10-30T19:51+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-10-30T18:00:00+00:00",
    "time": "19:00",
    "state": "in",
-   "score": "1-0",
+   "score": "1-2",
    "home": "Le Havre AC",
    "away": "PSG",
    "form_h": "NDDDN",
@@ -406,7 +406,7 @@
    "kickoff": "2026-10-30T18:00:00+00:00",
    "time": "19:00",
    "state": "in",
-   "score": "1-1",
+   "score": "3-1",
    "home": "Nice",
    "away": "Rennes",
    "form_h": "NDVVD",
@@ -812,24 +812,24 @@
    "form_a": "NDVDV",
    "rank_h": 8,
    "rank_a": 7,
-   "pH": 38,
-   "pD": 20,
-   "pA": 41,
+   "pH": 41,
+   "pD": 21,
+   "pA": 39,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 2.04,
-   "xgA": 2.12,
+   "xgA": 1.98,
    "scores": [
+    "2-1",
     "2-2",
-    "1-2",
-    "2-1"
+    "1-1"
    ],
    "scorep": [
     7,
     7,
     7
    ],
-   "over25": 78,
-   "btts": 76,
+   "over25": 76,
+   "btts": 75,
    "squad_h": [
     {
      "name": "Maurice Krattenmacher",
@@ -849,7 +849,8 @@
      "p_dec": 44,
      "pid": "358496",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lukas Petkov",
@@ -869,7 +870,8 @@
      "p_dec": 50,
      "pid": "310692",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "David Mokwa",
@@ -889,27 +891,8 @@
      "p_dec": 32,
      "pid": "398004",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Cole Campbell",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Elversberg",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 7,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 19,
-     "pid": "379024",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Felix Keidel",
@@ -929,7 +912,8 @@
      "p_dec": 25,
      "pid": "340739",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maximilian Rohr",
@@ -949,7 +933,29 @@
      "p_dec": 15,
      "pid": "190167",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Lasse Günther",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Elversberg",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 13,
+     "p_dec": 15,
+     "pid": "321061",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -967,11 +973,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 46,
-     "p_dec": 49,
+     "p_goal": 44,
+     "p_dec": 47,
      "pid": "234376",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Anthony Caci",
@@ -987,11 +994,12 @@
       "g": 3,
       "a": 3
      },
-     "p_goal": 28,
-     "p_dec": 48,
+     "p_goal": 26,
+     "p_dec": 46,
      "pid": "241297",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Sheraldo Becker",
@@ -1007,51 +1015,12 @@
       "g": 2,
       "a": 4
      },
-     "p_goal": 25,
-     "p_dec": 53,
+     "p_goal": 24,
+     "p_dec": 51,
      "pid": "195027",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Lee Jae-Sung",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Mainz",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 12,
-     "p_dec": 25,
-     "pid": "134103",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Ransford-Yeboah Königsdörffer",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Mainz",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "300961",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Phillipp Mwene",
@@ -1067,18 +1036,63 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 22,
+     "p_goal": 10,
+     "p_dec": 20,
      "pid": "239574",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Danny da Costa",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Mainz",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 11,
+     "pid": "154603",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kaishu Sano",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Mainz",
+     "goals": 0,
+     "assists": 2,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 3,
+     "p_dec": 26,
+     "pid": "357030",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Elversberg : 8e, 10 points, 12 buts marqués et 15 encaissés en 7 matchs.",
     "Mainz : 7e, 10 points, 16 buts marqués et 13 encaissés en 7 matchs.",
     "Elversberg : 12 buts marqués et 15 encaissés sur ses 7 derniers matchs de championnat.",
-    "Mainz : 16 buts marqués et 13 encaissés sur ses 7 derniers matchs de championnat."
+    "Mainz : 16 buts marqués et 13 encaissés sur ses 7 derniers matchs de championnat.",
+    "Mainz : attaque revue à la baisse (−7 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : Cole Campbell (remplaçant) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Mainz (7e) est dans la course à l'Europe. Adversaires directs au classement : même nombre de points.",
@@ -1086,90 +1100,89 @@
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7835,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.764,
+     "prob": 76,
+     "fair": 1.31,
      "stars": 4,
      "why": "7 derniers matchs : Elversberg 12 marqués / 15 encaissés · Mainz 16 / 13"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Mainz",
-     "p": 0.4137,
+     "market": "1",
+     "label": "Victoire Elversberg",
+     "p": 0.4081,
      "prob": 41,
-     "fair": 2.42,
+     "fair": 2.45,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0717,
+     "label": "Score exact 2-1",
+     "p": 0.0741,
      "prob": 7,
-     "fair": 13.95,
+     "fair": 13.5,
      "stars": 1,
-     "value": "1-2"
+     "value": "2-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Mainz gagne et plus de 2,5 buts",
-     "p": 0.3453,
-     "prob": 35,
-     "fair": 2.9,
+     "market": "wh_o25",
+     "label": "Elversberg gagne et plus de 2,5 buts",
+     "p": 0.3339,
+     "prob": 33,
+     "fair": 2.99,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_btts",
-      "label": "Mainz gagne et les deux équipes marquent",
-      "p": 0.299,
-      "prob": 30,
-      "fair": 3.34,
+      "market": "wh_btts",
+      "label": "Elversberg gagne et les deux équipes marquent",
+      "p": 0.2878,
+      "prob": 29,
+      "fair": 3.47,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Phillip Tietz marque et Mainz gagne",
-      "p": 0.2601,
-      "prob": 26,
-      "fair": 3.84,
-      "stars": 1,
-      "player": "Phillip Tietz",
-      "team": "Mainz",
-      "side": "a"
+      "market": "htft_h",
+      "label": "Elversberg mène à la mi-temps et gagne le match",
+      "p": 0.2532,
+      "prob": 25,
+      "fair": 3.95,
+      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Phillip Tietz marque",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "label": "Maurice Krattenmacher marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Phillip Tietz",
-     "team": "Mainz",
-     "pid": "234376",
+     "player": "Maurice Krattenmacher",
+     "team": "Elversberg",
+     "lineup": "start",
+     "pid": "358496",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 7 matchs · Mainz annoncé gagnant (41 %) · 2,1 buts attendus pour Mainz"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Elversberg annoncé gagnant (41 %) · 2,0 buts attendus pour Elversberg"
     },
     "decisive": {
      "market": "dec",
-     "label": "Phillip Tietz buteur ou passeur",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
+     "label": "Maurice Krattenmacher buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
-     "player": "Phillip Tietz",
-     "team": "Mainz",
+     "player": "Maurice Krattenmacher",
+     "team": "Elversberg",
      "base": [
       7,
-      5,
-      0
+      3,
+      1
      ],
-     "pid": "234376",
+     "lineup": "start",
+     "pid": "358496",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 7 matchs · Mainz annoncé gagnant (41 %) · 2,1 buts attendus pour Mainz"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Elversberg annoncé gagnant (41 %) · 2,0 buts attendus pour Elversberg"
     }
    },
    "second": {

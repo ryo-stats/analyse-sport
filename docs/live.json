@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T19:26+01:00",
+ "generated": "2026-10-30T19:51+01:00",
  "date": "2026-10-30",
  "matches": [
   {
@@ -192,78 +192,80 @@
    "away": "Mainz",
    "state": "pre",
    "xgH": 2.04,
-   "xgA": 2.12,
-   "pH": 38,
-   "pD": 20,
-   "pA": 41,
+   "xgA": 1.98,
+   "pH": 41,
+   "pD": 21,
+   "pA": 39,
    "edate": "20261030",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7835,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.764,
+     "prob": 76,
+     "fair": 1.31,
      "stars": 4,
      "why": "7 derniers matchs : Elversberg 12 marqués / 15 encaissés · Mainz 16 / 13"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Mainz",
-     "p": 0.4137,
+     "market": "1",
+     "label": "Victoire Elversberg",
+     "p": 0.4081,
      "prob": 41,
-     "fair": 2.42,
+     "fair": 2.45,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0717,
+     "label": "Score exact 2-1",
+     "p": 0.0741,
      "prob": 7,
-     "fair": 13.95,
+     "fair": 13.5,
      "stars": 1,
-     "value": "1-2"
+     "value": "2-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Mainz gagne et plus de 2,5 buts",
-     "p": 0.3453,
-     "prob": 35,
-     "fair": 2.9,
+     "market": "wh_o25",
+     "label": "Elversberg gagne et plus de 2,5 buts",
+     "p": 0.3339,
+     "prob": 33,
+     "fair": 2.99,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Phillip Tietz marque",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "label": "Maurice Krattenmacher marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Phillip Tietz",
-     "team": "Mainz",
-     "pid": "234376",
+     "player": "Maurice Krattenmacher",
+     "team": "Elversberg",
+     "lineup": "start",
+     "pid": "358496",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 7 matchs · Mainz annoncé gagnant (41 %) · 2,1 buts attendus pour Mainz"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Elversberg annoncé gagnant (41 %) · 2,0 buts attendus pour Elversberg"
     },
     "decisive": {
      "market": "dec",
-     "label": "Phillip Tietz buteur ou passeur",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
+     "label": "Maurice Krattenmacher buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
-     "player": "Phillip Tietz",
-     "team": "Mainz",
+     "player": "Maurice Krattenmacher",
+     "team": "Elversberg",
      "base": [
       7,
-      5,
-      0
+      3,
+      1
      ],
-     "pid": "234376",
+     "lineup": "start",
+     "pid": "358496",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 7 matchs · Mainz annoncé gagnant (41 %) · 2,1 buts attendus pour Mainz"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Elversberg annoncé gagnant (41 %) · 2,0 buts attendus pour Elversberg"
     }
    }
   },
@@ -666,7 +668,7 @@
    },
    {
     "label": "Plus de 2,5 buts",
-    "prob": 78,
+    "prob": 76,
     "time": "20:30",
     "match": "Elversberg – Mainz"
    },
