@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T18:19+01:00",
+ "generated": "2026-10-30T18:44+01:00",
  "date": "2026-10-30",
  "matches": [
   {
@@ -13,66 +13,67 @@
    "away": "PSG",
    "state": "pre",
    "xgH": 0.84,
-   "xgA": 2.09,
-   "pH": 14,
-   "pD": 20,
-   "pA": 66,
+   "xgA": 1.62,
+   "pH": 19,
+   "pD": 25,
+   "pA": 56,
    "edate": "20261030",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou PSG",
-     "p": 0.8591,
-     "prob": 86,
-     "fair": 1.16,
+     "p": 0.8059,
+     "prob": 81,
+     "fair": 1.24,
      "stars": 5,
      "why": "8 derniers matchs : Le Havre AC 8 marqués / 15 encaissés · PSG 16 / 9"
     },
     "winner": {
      "market": "2",
      "label": "Victoire PSG",
-     "p": 0.6613,
-     "prob": 66,
-     "fair": 1.51,
-     "stars": 3
+     "p": 0.5586,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-2",
-     "p": 0.1163,
-     "prob": 12,
-     "fair": 8.6,
+     "label": "Score exact 0-1",
+     "p": 0.1378,
+     "prob": 14,
+     "fair": 7.25,
      "stars": 1,
-     "value": "0-2"
+     "value": "0-1"
     },
     "fun": {
-     "market": "a2",
-     "label": "PSG gagne avec 2 buts d'écart ou plus",
-     "p": 0.4185,
-     "prob": 42,
-     "fair": 2.39,
+     "market": "htft_a",
+     "label": "PSG mène à la mi-temps et gagne le match",
+     "p": 0.3458,
+     "prob": 35,
+     "fair": 2.89,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Ferran Torres marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · titulaire · PSG favori (56 %) · 1,6 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
      "label": "Ferran Torres buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
@@ -81,10 +82,11 @@
       4,
       1
      ],
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · titulaire · PSG favori (56 %) · 1,6 buts attendus pour PSG"
     }
    }
   },
@@ -657,16 +659,16 @@
   "nhl": 3,
   "top": [
    {
-    "label": "Nul ou PSG",
-    "prob": 86,
-    "time": "19:00",
-    "match": "Le Havre AC – PSG"
-   },
-   {
     "label": "Villarreal ou nul",
     "prob": 81,
     "time": "21:00",
     "match": "Villarreal – Espanyol"
+   },
+   {
+    "label": "Nul ou PSG",
+    "prob": 81,
+    "time": "19:00",
+    "match": "Le Havre AC – PSG"
    },
    {
     "label": "Plus de 2,5 buts",

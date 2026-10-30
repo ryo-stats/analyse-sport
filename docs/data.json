@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T18:19+01:00",
+ "generated": "2026-10-30T18:44+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -17,24 +17,24 @@
    "form_a": "NVVVV",
    "rank_h": 18,
    "rank_a": 1,
-   "pH": 14,
-   "pD": 20,
-   "pA": 66,
+   "pH": 19,
+   "pD": 25,
+   "pA": 56,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 0.84,
-   "xgA": 2.09,
+   "xgA": 1.62,
    "scores": [
-    "0-2",
     "0-1",
-    "1-2"
+    "1-1",
+    "0-2"
    ],
    "scorep": [
+    14,
     12,
-    11,
-    10
+    11
    ],
-   "over25": 56,
-   "btts": 50,
+   "over25": 45,
+   "btts": 46,
    "squad_h": [
     {
      "name": "Josh Maja",
@@ -178,91 +178,12 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 38,
-     "p_dec": 46,
+     "p_goal": 31,
+     "p_dec": 38,
      "pid": "265869",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Marquinhos",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "PSG",
-     "goals": 3,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 27,
-     "p_dec": 28,
-     "pid": "159047",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Désiré Doué",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "PSG",
-     "goals": 1,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 15,
-     "p_dec": 26,
-     "pid": "336388",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Khvicha Kvaratskhelia",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "PSG",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 14,
-     "p_dec": 25,
-     "pid": "274745",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Ousmane Dembélé",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "PSG",
-     "goals": 1,
-     "assists": 2,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 13,
-     "p_dec": 30,
-     "pid": "229744",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mika Godts",
@@ -278,11 +199,96 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 12,
-     "p_dec": 30,
+     "p_goal": 10,
+     "p_dec": 24,
      "pid": "353363",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Maghnes Akliouche",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "PSG",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 13,
+     "pid": "329690",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Illia Zabarnyi",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "PSG",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 8,
+      "gp": 3,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "304503",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Senny Mayulu",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "PSG",
+     "goals": 1,
+     "assists": 0,
+     "apps": 2,
+     "l10": {
+      "n": 8,
+      "gp": 2,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 8,
+     "pid": "379088",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Désiré Doué",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "PSG",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 7,
+     "pid": "336388",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -291,83 +297,85 @@
     "Le Havre AC : 8 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
     "PSG : 16 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
     "Le Havre AC : attaque revue à la baisse (−9 %) d'après la compo officielle (Mbwana Samatta ne commence pas).",
-    "Compositions officielles prises en compte : Mbwana Samatta (remplaçant) ne commence pas le match."
+    "PSG : attaque revue à la baisse (−22 %) d'après la compo officielle (Marquinhos ne commence pas).",
+    "Compositions officielles prises en compte : Mbwana Samatta (remplaçant), Marquinhos (absent) ne commencent pas le match."
    ],
-   "reading": "PSG est nettement favori (66 %).",
+   "reading": "PSG est favori sans écraser le match (56 %).",
    "stakes": "Le Havre AC (18e) est en zone de relégation : match vital. PSG est leader (17 points).",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou PSG",
-     "p": 0.8591,
-     "prob": 86,
-     "fair": 1.16,
+     "p": 0.8059,
+     "prob": 81,
+     "fair": 1.24,
      "stars": 5,
      "why": "8 derniers matchs : Le Havre AC 8 marqués / 15 encaissés · PSG 16 / 9"
     },
     "winner": {
      "market": "2",
      "label": "Victoire PSG",
-     "p": 0.6613,
-     "prob": 66,
-     "fair": 1.51,
-     "stars": 3
+     "p": 0.5586,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-2",
-     "p": 0.1163,
-     "prob": 12,
-     "fair": 8.6,
+     "label": "Score exact 0-1",
+     "p": 0.1378,
+     "prob": 14,
+     "fair": 7.25,
      "stars": 1,
-     "value": "0-2"
+     "value": "0-1"
     },
     "fun": {
-     "market": "a2",
-     "label": "PSG gagne avec 2 buts d'écart ou plus",
-     "p": 0.4185,
-     "prob": 42,
-     "fair": 2.39,
+     "market": "htft_a",
+     "label": "PSG mène à la mi-temps et gagne le match",
+     "p": 0.3458,
+     "prob": 35,
+     "fair": 2.89,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_nil",
       "label": "PSG gagne sans encaisser de but",
-      "p": 0.3771,
-      "prob": 38,
-      "fair": 2.65,
+      "p": 0.3456,
+      "prob": 35,
+      "fair": 2.89,
       "stars": 1
      },
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.3369,
-      "prob": 34,
-      "fair": 2.97,
+      "market": "wa_o25",
+      "label": "PSG gagne et plus de 2,5 buts",
+      "p": 0.3088,
+      "prob": 31,
+      "fair": 3.24,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Ferran Torres marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · titulaire · PSG favori (56 %) · 1,6 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
      "label": "Ferran Torres buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
@@ -376,10 +384,11 @@
       4,
       1
      ],
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · titulaire · PSG favori (56 %) · 1,6 buts attendus pour PSG"
     }
    },
    "second": {
@@ -17068,7 +17077,11 @@
     "esp.1": 833,
     "ger.1": 649
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ger.1": {
+     "2026": 63
+    }
+   },
    "status": "ok"
   },
   "nhl": {
