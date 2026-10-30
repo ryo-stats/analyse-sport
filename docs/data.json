@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T00:38+01:00",
+ "generated": "2026-10-30T01:47+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-29",
  "foot": [
@@ -1923,7 +1923,7 @@
    "kickoff": "2026-10-29T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "4-1",
    "home": "Tampa Bay Lightning",
    "away": "Winnipeg Jets",
    "rec_h": "7-3-1 · 6e Atlantic · 1 défaite en prolongation de suite",
@@ -2310,7 +2310,7 @@
    "kickoff": "2026-10-29T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "0-2",
+   "score": "1-2",
    "home": "Pittsburgh Penguins",
    "away": "Utah Mammoth",
    "rec_h": "5-6-1 · 6e Metropolitan · 2 victoires de suite",
@@ -2696,7 +2696,7 @@
    "kickoff": "2026-10-29T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "2-0",
    "home": "Carolina Hurricanes",
    "away": "Columbus Blue Jackets",
    "rec_h": "10-2-2 · 1e Metropolitan · 2 victoires de suite",
@@ -3083,7 +3083,7 @@
    "kickoff": "2026-10-29T23:30:00+00:00",
    "time": "00:30",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Detroit Red Wings",
    "away": "Chicago Blackhawks",
    "rec_h": "5-4-3 · 8e Atlantic · 1 victoire de suite",
@@ -3469,8 +3469,8 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-1",
    "home": "St. Louis Blues",
    "away": "Boston Bruins",
    "rec_h": "5-6-1 · 6e Central · 2 défaites de suite",
@@ -3775,7 +3775,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5423,
+     "p": 0.5424,
      "prob": 54,
      "fair": 1.84,
      "stars": 2,
@@ -3792,7 +3792,7 @@
     "fun": {
      "market": "h2",
      "label": "St. Louis Blues gagne par 2 buts d'écart ou plus",
-     "p": 0.3138,
+     "p": 0.3139,
      "prob": 31,
      "fair": 3.19,
      "stars": 1
@@ -3809,7 +3809,7 @@
      {
       "market": "wh_o65",
       "label": "St. Louis Blues gagne et plus de 6,5 buts",
-      "p": 0.2241,
+      "p": 0.2242,
       "prob": 22,
       "fair": 4.46,
       "stars": 1
@@ -3855,8 +3855,8 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-0",
    "home": "Nashville Predators",
    "away": "Washington Capitals",
    "rec_h": "4-3-5 · 5e Central · 1 défaite en prolongation de suite",
@@ -4161,7 +4161,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6474,
+     "p": 0.6475,
      "prob": 65,
      "fair": 1.54,
      "stars": 3,
@@ -4187,7 +4187,7 @@
      {
       "market": "h2",
       "label": "Nashville Predators gagne par 2 buts d'écart ou plus",
-      "p": 0.3156,
+      "p": 0.3157,
       "prob": 32,
       "fair": 3.17,
       "stars": 1
@@ -4241,8 +4241,8 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-3",
    "home": "Dallas Stars",
    "away": "Montréal Canadiens",
    "rec_h": "7-4-1 · 3e Central · 1 défaite de suite",
@@ -4582,7 +4582,7 @@
      {
       "market": "wh_o65",
       "label": "Dallas Stars gagne et plus de 6,5 buts",
-      "p": 0.2659,
+      "p": 0.2658,
       "prob": 27,
       "fair": 3.76,
       "stars": 1
@@ -4628,8 +4628,8 @@
    "league": "NHL",
    "kickoff": "2026-10-30T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-1",
    "home": "Minnesota Wild",
    "away": "New York Islanders",
    "rec_h": "9-3-2 · 1e Central · 3 victoires de suite",
@@ -4961,7 +4961,7 @@
      {
       "market": "h3",
       "label": "Minnesota Wild gagne par 3 buts d'écart ou plus",
-      "p": 0.3525,
+      "p": 0.3524,
       "prob": 35,
       "fair": 2.84,
       "stars": 1
@@ -19453,7 +19453,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 7,
+   "ok": 3,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 88977 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
