@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T18:44+01:00",
+ "generated": "2026-10-30T19:26+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Ligue 1",
    "kickoff": "2026-10-30T18:00:00+00:00",
    "time": "19:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Le Havre AC",
    "away": "PSG",
    "form_h": "NDDDN",
@@ -296,8 +296,6 @@
     "PSG : 1er, 17 points, 16 buts marqués et 9 encaissés en 8 matchs.",
     "Le Havre AC : 8 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
     "PSG : 16 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Le Havre AC : attaque revue à la baisse (−9 %) d'après la compo officielle (Mbwana Samatta ne commence pas).",
-    "PSG : attaque revue à la baisse (−22 %) d'après la compo officielle (Marquinhos ne commence pas).",
     "Compositions officielles prises en compte : Mbwana Samatta (remplaçant), Marquinhos (absent) ne commencent pas le match."
    ],
    "reading": "PSG est favori sans écraser le match (56 %).",
@@ -306,7 +304,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou PSG",
-     "p": 0.8059,
+     "p": 0.806,
      "prob": 81,
      "fair": 1.24,
      "stars": 5,
@@ -325,7 +323,7 @@
      "label": "Score exact 0-1",
      "p": 0.1378,
      "prob": 14,
-     "fair": 7.25,
+     "fair": 7.26,
      "stars": 1,
      "value": "0-1"
     },
@@ -349,7 +347,7 @@
      {
       "market": "wa_o25",
       "label": "PSG gagne et plus de 2,5 buts",
-      "p": 0.3088,
+      "p": 0.3089,
       "prob": 31,
       "fair": 3.24,
       "stars": 1
@@ -407,8 +405,8 @@
    "league": "Ligue 1",
    "kickoff": "2026-10-30T18:00:00+00:00",
    "time": "19:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-1",
    "home": "Nice",
    "away": "Rennes",
    "form_h": "NDVVD",
@@ -694,7 +692,6 @@
     "Rennes : 2e, 16 points, 18 buts marqués et 14 encaissés en 8 matchs.",
     "Nice : 8 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat.",
     "Rennes : 18 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat.",
-    "Rennes : attaque revue à la baisse (−21 %) d'après la compo officielle (Esteban Lepaul ne commence pas).",
     "Compositions officielles prises en compte : Esteban Lepaul (absent) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -722,7 +719,7 @@
      "label": "Score exact 1-0",
      "p": 0.0943,
      "prob": 9,
-     "fair": 10.61,
+     "fair": 10.6,
      "stars": 1,
      "value": "1-0"
     },
@@ -749,7 +746,7 @@
      {
       "market": "htft_h",
       "label": "Nice mène à la mi-temps et gagne le match",
-      "p": 0.2336,
+      "p": 0.2337,
       "prob": 23,
       "fair": 4.28,
       "stars": 1
@@ -17071,17 +17068,13 @@
  },
  "second": {
   "foot": {
-   "ok": 5,
+   "ok": 3,
    "elo": {
     "fra.1": 669,
     "esp.1": 833,
     "ger.1": 649
    },
-   "elo_fetch": {
-    "ger.1": {
-     "2026": 63
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
