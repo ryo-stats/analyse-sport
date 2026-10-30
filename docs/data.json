@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T17:54+01:00",
+ "generated": "2026-10-30T18:19+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -17,11 +17,11 @@
    "form_a": "NVVVV",
    "rank_h": 18,
    "rank_a": 1,
-   "pH": 16,
+   "pH": 14,
    "pD": 20,
-   "pA": 64,
+   "pA": 66,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 0.92,
+   "xgH": 0.84,
    "xgA": 2.09,
    "scores": [
     "0-2",
@@ -29,12 +29,12 @@
     "1-2"
    ],
    "scorep": [
+    12,
     11,
-    10,
     10
    ],
-   "over25": 58,
-   "btts": 53,
+   "over25": 56,
+   "btts": 50,
    "squad_h": [
     {
      "name": "Josh Maja",
@@ -50,31 +50,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 24,
-     "p_dec": 26,
+     "p_goal": 22,
+     "p_dec": 24,
      "pid": "243514",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Mbwana Samatta",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Le Havre AC",
-     "goals": 2,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 19,
-     "p_dec": 22,
-     "pid": "231366",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Rayan Fofana",
@@ -90,11 +71,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 18,
+     "p_goal": 15,
+     "p_dec": 16,
      "pid": "401045",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mouhamed N'Diaye",
@@ -110,11 +92,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 8,
+     "p_goal": 7,
+     "p_dec": 7,
      "pid": "408085",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Mbwana Samatta",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Le Havre AC",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "231366",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Sota Nakamura",
@@ -131,10 +135,11 @@
       "a": 1
      },
      "p_goal": 3,
-     "p_dec": 12,
+     "p_dec": 11,
      "pid": "399434",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Amir Richardson",
@@ -154,7 +159,8 @@
      "p_dec": 7,
      "pid": "319285",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -283,60 +289,62 @@
     "Le Havre AC : 18e, 2 points, 8 buts marqués et 15 encaissés en 8 matchs.",
     "PSG : 1er, 17 points, 16 buts marqués et 9 encaissés en 8 matchs.",
     "Le Havre AC : 8 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
-    "PSG : 16 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat."
+    "PSG : 16 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
+    "Le Havre AC : attaque revue à la baisse (−9 %) d'après la compo officielle (Mbwana Samatta ne commence pas).",
+    "Compositions officielles prises en compte : Mbwana Samatta (remplaçant) ne commence pas le match."
    ],
-   "reading": "PSG est nettement favori (64 %).",
+   "reading": "PSG est nettement favori (66 %).",
    "stakes": "Le Havre AC (18e) est en zone de relégation : match vital. PSG est leader (17 points).",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou PSG",
-     "p": 0.8429,
-     "prob": 84,
-     "fair": 1.19,
+     "p": 0.8591,
+     "prob": 86,
+     "fair": 1.16,
      "stars": 5,
      "why": "8 derniers matchs : Le Havre AC 8 marqués / 15 encaissés · PSG 16 / 9"
     },
     "winner": {
      "market": "2",
      "label": "Victoire PSG",
-     "p": 0.6418,
-     "prob": 64,
-     "fair": 1.56,
+     "p": 0.6613,
+     "prob": 66,
+     "fair": 1.51,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.1073,
-     "prob": 11,
-     "fair": 9.32,
+     "p": 0.1163,
+     "prob": 12,
+     "fair": 8.6,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "PSG mène à la mi-temps et gagne le match",
-     "p": 0.4196,
+     "market": "a2",
+     "label": "PSG gagne avec 2 buts d'écart ou plus",
+     "p": 0.4185,
      "prob": 42,
-     "fair": 2.38,
+     "fair": 2.39,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "a2",
-      "label": "PSG gagne avec 2 buts d'écart ou plus",
-      "p": 0.4024,
-      "prob": 40,
-      "fair": 2.48,
+      "market": "wa_nil",
+      "label": "PSG gagne sans encaisser de but",
+      "p": 0.3771,
+      "prob": 38,
+      "fair": 2.65,
       "stars": 1
      },
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.355,
-      "prob": 36,
-      "fair": 2.82,
+      "p": 0.3369,
+      "prob": 34,
+      "fair": 2.97,
       "stars": 1
      }
     ],
@@ -352,7 +360,7 @@
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (64 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
@@ -371,7 +379,7 @@
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (64 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
     }
    },
    "second": {
@@ -398,24 +406,24 @@
    "form_a": "NNDVV",
    "rank_h": 10,
    "rank_a": 2,
-   "pH": 33,
-   "pD": 24,
-   "pA": 43,
+   "pH": 40,
+   "pD": 26,
+   "pA": 35,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.4,
-   "xgA": 1.63,
+   "xgA": 1.3,
    "scores": [
     "1-1",
-    "1-2",
+    "1-0",
     "0-1"
    ],
    "scorep": [
-    11,
+    12,
     9,
-    8
+    9
    ],
-   "over25": 58,
-   "btts": 61,
+   "over25": 51,
+   "btts": 55,
    "squad_h": [
     {
      "name": "Elye Wahi",
@@ -435,7 +443,8 @@
      "p_dec": 51,
      "pid": "311118",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mohamed Amoura",
@@ -455,7 +464,8 @@
      "p_dec": 33,
      "pid": "315384",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Sofiane Diop",
@@ -475,7 +485,8 @@
      "p_dec": 38,
      "pid": "276995",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jonathan Clauss",
@@ -495,27 +506,8 @@
      "p_dec": 28,
      "pid": "232089",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Gauthier Hein",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Nice",
-     "goals": 0,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 4,
-     "p_dec": 23,
-     "pid": "239905",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Youssouf Ndayishimiye",
@@ -535,30 +527,32 @@
      "p_dec": 13,
      "pid": "255192",
      "stats_league": "fra.1",
-     "season": 2026
-    }
-   ],
-   "squad_a": [
+     "season": 2026,
+     "lineup": "start"
+    },
     {
-     "name": "Esteban Lepaul",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Rennes",
-     "goals": 7,
+     "name": "Xavier Junior Mandza Tsiendi",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Nice",
+     "goals": 0,
      "assists": 0,
      "apps": 7,
      "l10": {
       "n": 8,
       "gp": 7,
-      "g": 7,
+      "g": 0,
       "a": 0
      },
-     "p_goal": 45,
-     "p_dec": 47,
-     "pid": "323850",
+     "p_goal": 4,
+     "p_dec": 11,
+     "pid": "3117261",
      "stats_league": "fra.1",
-     "season": 2026
-    },
+     "season": 2026,
+     "lineup": "start"
+    }
+   ],
+   "squad_a": [
     {
      "name": "Sebastian Szymanski",
      "pos": "Milieu",
@@ -573,11 +567,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 22,
-     "p_dec": 30,
+     "p_goal": 18,
+     "p_dec": 24,
      "pid": "243844",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Boulaye Dia",
@@ -593,11 +588,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 22,
-     "p_dec": 23,
+     "p_goal": 18,
+     "p_dec": 19,
      "pid": "282381",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adrien Thomasson",
@@ -613,11 +609,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 16,
-     "p_dec": 31,
+     "p_goal": 13,
+     "p_dec": 25,
      "pid": "173266",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Valentin Rongier",
@@ -633,11 +630,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 14,
+     "p_goal": 8,
+     "p_dec": 11,
      "pid": "207136",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Przemyslaw Frankowski",
@@ -653,109 +651,135 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 9,
-     "p_dec": 25,
+     "p_goal": 7,
+     "p_dec": 21,
      "pid": "190806",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Mousa Al-Tamari",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Rennes",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 3,
+     "p_dec": 11,
+     "pid": "257489",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Nice : 10e, 11 points, 8 buts marqués et 10 encaissés en 8 matchs.",
     "Rennes : 2e, 16 points, 18 buts marqués et 14 encaissés en 8 matchs.",
     "Nice : 8 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat.",
-    "Rennes : 18 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat."
+    "Rennes : 18 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat.",
+    "Rennes : attaque revue à la baisse (−21 %) d'après la compo officielle (Esteban Lepaul ne commence pas).",
+    "Compositions officielles prises en compte : Esteban Lepaul (absent) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Rennes (2e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
-     "market": "N2",
-     "label": "Nul ou Rennes",
-     "p": 0.6704,
-     "prob": 67,
-     "fair": 1.49,
+     "market": "1N",
+     "label": "Nice ou nul",
+     "p": 0.653,
+     "prob": 65,
+     "fair": 1.53,
      "stars": 3,
      "why": "8 derniers matchs : Nice 8 marqués / 10 encaissés · Rennes 18 / 14"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Rennes",
-     "p": 0.4308,
-     "prob": 43,
-     "fair": 2.32,
+     "market": "1",
+     "label": "Victoire Nice",
+     "p": 0.3952,
+     "prob": 40,
+     "fair": 2.53,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0899,
+     "label": "Score exact 1-0",
+     "p": 0.0943,
      "prob": 9,
-     "fair": 11.13,
+     "fair": 10.61,
      "stars": 1,
-     "value": "1-2"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3607,
-     "prob": 36,
-     "fair": 2.77,
-     "stars": 1
+     "market": "scw",
+     "label": "Elye Wahi marque et Nice gagne",
+     "p": 0.2415,
+     "prob": 24,
+     "fair": 4.14,
+     "stars": 1,
+     "player": "Elye Wahi",
+     "team": "Nice",
+     "side": "h"
     },
     "fun_alt": [
      {
-      "market": "wa_o25",
-      "label": "Rennes gagne et plus de 2,5 buts",
-      "p": 0.2882,
-      "prob": 29,
-      "fair": 3.47,
+      "market": "wh_o25",
+      "label": "Nice gagne et plus de 2,5 buts",
+      "p": 0.2348,
+      "prob": 23,
+      "fair": 4.26,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Esteban Lepaul marque et Rennes gagne",
-      "p": 0.2778,
-      "prob": 28,
-      "fair": 3.6,
-      "stars": 1,
-      "player": "Esteban Lepaul",
-      "team": "Rennes",
-      "side": "a"
+      "market": "htft_h",
+      "label": "Nice mène à la mi-temps et gagne le match",
+      "p": 0.2336,
+      "prob": 23,
+      "fair": 4.28,
+      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Esteban Lepaul marque",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "label": "Elye Wahi marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
-     "player": "Esteban Lepaul",
-     "team": "Rennes",
-     "pid": "323850",
+     "player": "Elye Wahi",
+     "team": "Nice",
+     "lineup": "start",
+     "pid": "311118",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 7 matchs · Rennes annoncé gagnant (43 %) · 1,6 buts attendus pour Rennes"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Nice annoncé gagnant (40 %) · 1,4 but attendu pour Nice"
     },
     "decisive": {
      "market": "dec",
-     "label": "Esteban Lepaul buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
-     "stars": 1,
-     "player": "Esteban Lepaul",
-     "team": "Rennes",
+     "label": "Elye Wahi buteur ou passeur",
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2,
+     "player": "Elye Wahi",
+     "team": "Nice",
      "base": [
       7,
-      7,
-      0
+      3,
+      1
      ],
-     "pid": "323850",
+     "lineup": "start",
+     "pid": "311118",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 7 matchs · Rennes annoncé gagnant (43 %) · 1,6 buts attendus pour Rennes"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Nice annoncé gagnant (40 %) · 1,4 but attendu pour Nice"
     }
    },
    "second": {

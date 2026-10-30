@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T17:54+01:00",
+ "generated": "2026-10-30T18:19+01:00",
  "date": "2026-10-30",
  "matches": [
   {
@@ -12,45 +12,45 @@
    "home": "Le Havre AC",
    "away": "PSG",
    "state": "pre",
-   "xgH": 0.92,
+   "xgH": 0.84,
    "xgA": 2.09,
-   "pH": 16,
+   "pH": 14,
    "pD": 20,
-   "pA": 64,
+   "pA": 66,
    "edate": "20261030",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou PSG",
-     "p": 0.8429,
-     "prob": 84,
-     "fair": 1.19,
+     "p": 0.8591,
+     "prob": 86,
+     "fair": 1.16,
      "stars": 5,
      "why": "8 derniers matchs : Le Havre AC 8 marqués / 15 encaissés · PSG 16 / 9"
     },
     "winner": {
      "market": "2",
      "label": "Victoire PSG",
-     "p": 0.6418,
-     "prob": 64,
-     "fair": 1.56,
+     "p": 0.6613,
+     "prob": 66,
+     "fair": 1.51,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.1073,
-     "prob": 11,
-     "fair": 9.32,
+     "p": 0.1163,
+     "prob": 12,
+     "fair": 8.6,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "PSG mène à la mi-temps et gagne le match",
-     "p": 0.4196,
+     "market": "a2",
+     "label": "PSG gagne avec 2 buts d'écart ou plus",
+     "p": 0.4185,
      "prob": 42,
-     "fair": 2.38,
+     "fair": 2.39,
      "stars": 1
     },
     "player": {
@@ -65,7 +65,7 @@
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (64 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
@@ -84,7 +84,7 @@
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · PSG favori (64 %) · 2,1 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 8 matchs · PSG favori (66 %) · 2,1 buts attendus pour PSG"
     }
    }
   },
@@ -99,78 +99,83 @@
    "away": "Rennes",
    "state": "pre",
    "xgH": 1.4,
-   "xgA": 1.63,
-   "pH": 33,
-   "pD": 24,
-   "pA": 43,
+   "xgA": 1.3,
+   "pH": 40,
+   "pD": 26,
+   "pA": 35,
    "edate": "20261030",
    "picks": {
     "main": {
-     "market": "N2",
-     "label": "Nul ou Rennes",
-     "p": 0.6704,
-     "prob": 67,
-     "fair": 1.49,
+     "market": "1N",
+     "label": "Nice ou nul",
+     "p": 0.653,
+     "prob": 65,
+     "fair": 1.53,
      "stars": 3,
      "why": "8 derniers matchs : Nice 8 marqués / 10 encaissés · Rennes 18 / 14"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Rennes",
-     "p": 0.4308,
-     "prob": 43,
-     "fair": 2.32,
+     "market": "1",
+     "label": "Victoire Nice",
+     "p": 0.3952,
+     "prob": 40,
+     "fair": 2.53,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0899,
+     "label": "Score exact 1-0",
+     "p": 0.0943,
      "prob": 9,
-     "fair": 11.13,
+     "fair": 10.61,
      "stars": 1,
-     "value": "1-2"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3607,
-     "prob": 36,
-     "fair": 2.77,
-     "stars": 1
+     "market": "scw",
+     "label": "Elye Wahi marque et Nice gagne",
+     "p": 0.2415,
+     "prob": 24,
+     "fair": 4.14,
+     "stars": 1,
+     "player": "Elye Wahi",
+     "team": "Nice",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
-     "label": "Esteban Lepaul marque",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "label": "Elye Wahi marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
-     "player": "Esteban Lepaul",
-     "team": "Rennes",
-     "pid": "323850",
+     "player": "Elye Wahi",
+     "team": "Nice",
+     "lineup": "start",
+     "pid": "311118",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 7 matchs · Rennes annoncé gagnant (43 %) · 1,6 buts attendus pour Rennes"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Nice annoncé gagnant (40 %) · 1,4 but attendu pour Nice"
     },
     "decisive": {
      "market": "dec",
-     "label": "Esteban Lepaul buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
-     "stars": 1,
-     "player": "Esteban Lepaul",
-     "team": "Rennes",
+     "label": "Elye Wahi buteur ou passeur",
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2,
+     "player": "Elye Wahi",
+     "team": "Nice",
      "base": [
       7,
-      7,
-      0
+      3,
+      1
      ],
-     "pid": "323850",
+     "lineup": "start",
+     "pid": "311118",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 7 matchs · Rennes annoncé gagnant (43 %) · 1,6 buts attendus pour Rennes"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Nice annoncé gagnant (40 %) · 1,4 but attendu pour Nice"
     }
    }
   },
@@ -653,7 +658,7 @@
   "top": [
    {
     "label": "Nul ou PSG",
-    "prob": 84,
+    "prob": 86,
     "time": "19:00",
     "match": "Le Havre AC – PSG"
    },
