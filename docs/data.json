@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T20:16+01:00",
+ "generated": "2026-10-30T20:41+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-10-30T18:00:00+00:00",
    "time": "19:00",
    "state": "in",
-   "score": "1-3",
+   "score": "1-5",
    "home": "Le Havre AC",
    "away": "PSG",
    "form_h": "NDDDN",
@@ -406,7 +406,7 @@
    "kickoff": "2026-10-30T18:00:00+00:00",
    "time": "19:00",
    "state": "in",
-   "score": "4-1",
+   "score": "5-2",
    "home": "Nice",
    "away": "Rennes",
    "form_h": "NDVVD",
@@ -804,8 +804,8 @@
    "league": "Bundesliga",
    "kickoff": "2026-10-30T19:30:00+00:00",
    "time": "20:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Elversberg",
    "away": "Mainz",
    "form_h": "NDVDN",
@@ -1091,7 +1091,6 @@
     "Mainz : 7e, 10 points, 16 buts marqués et 13 encaissés en 7 matchs.",
     "Elversberg : 12 buts marqués et 15 encaissés sur ses 7 derniers matchs de championnat.",
     "Mainz : 16 buts marqués et 13 encaissés sur ses 7 derniers matchs de championnat.",
-    "Mainz : attaque revue à la baisse (−7 %) d'après la compo officielle.",
     "Compositions officielles prises en compte : Cole Campbell (remplaçant) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -1100,7 +1099,7 @@
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.764,
+     "p": 0.7639,
      "prob": 76,
      "fair": 1.31,
      "stars": 4,
@@ -1126,7 +1125,7 @@
     "fun": {
      "market": "wh_o25",
      "label": "Elversberg gagne et plus de 2,5 buts",
-     "p": 0.3339,
+     "p": 0.334,
      "prob": 33,
      "fair": 2.99,
      "stars": 1
@@ -1135,7 +1134,7 @@
      {
       "market": "wh_btts",
       "label": "Elversberg gagne et les deux équipes marquent",
-      "p": 0.2878,
+      "p": 0.2879,
       "prob": 29,
       "fair": 3.47,
       "stars": 1
@@ -1143,7 +1142,7 @@
      {
       "market": "htft_h",
       "label": "Elversberg mène à la mi-temps et gagne le match",
-      "p": 0.2532,
+      "p": 0.2533,
       "prob": 25,
       "fair": 3.95,
       "stars": 1
@@ -17115,13 +17114,20 @@
  },
  "second": {
   "foot": {
-   "ok": 3,
+   "ok": 2,
    "elo": {
     "fra.1": 669,
     "esp.1": 833,
     "ger.1": 649
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 72
+    },
+    "esp.1": {
+     "2026": 99
+    }
+   },
    "status": "ok"
   },
   "nhl": {
