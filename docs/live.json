@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T07:27+01:00",
+ "generated": "2026-10-30T12:28+01:00",
  "date": "2026-10-30",
  "matches": [
   {
@@ -171,6 +171,92 @@
      "stats_league": "fra.1",
      "season": 2026,
      "why": "7 buts et 0 passe en 7 matchs · Rennes annoncé gagnant (43 %) · 1,6 buts attendus pour Rennes"
+    }
+   }
+  },
+  {
+   "id": "foot-401884746",
+   "sport": "foot",
+   "league": "Bundesliga",
+   "code": "ger.1",
+   "kickoff": "2026-10-30T19:30:00+00:00",
+   "time": "20:30",
+   "home": "Elversberg",
+   "away": "Mainz",
+   "state": "pre",
+   "xgH": 2.04,
+   "xgA": 2.12,
+   "pH": 38,
+   "pD": 20,
+   "pA": 41,
+   "edate": "20261030",
+   "picks": {
+    "main": {
+     "market": "o25",
+     "label": "Plus de 2,5 buts",
+     "p": 0.7835,
+     "prob": 78,
+     "fair": 1.28,
+     "stars": 4,
+     "why": "7 derniers matchs : Elversberg 12 marqués / 15 encaissés · Mainz 16 / 13"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Mainz",
+     "p": 0.4137,
+     "prob": 41,
+     "fair": 2.42,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-2",
+     "p": 0.0717,
+     "prob": 7,
+     "fair": 13.95,
+     "stars": 1,
+     "value": "1-2"
+    },
+    "fun": {
+     "market": "wa_o25",
+     "label": "Mainz gagne et plus de 2,5 buts",
+     "p": 0.3453,
+     "prob": 35,
+     "fair": 2.9,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Phillip Tietz marque",
+     "p": 0.46,
+     "prob": 46,
+     "fair": 2.17,
+     "stars": 1,
+     "player": "Phillip Tietz",
+     "team": "Mainz",
+     "pid": "234376",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 7 matchs · Mainz annoncé gagnant (41 %) · 2,1 buts attendus pour Mainz"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Phillip Tietz buteur ou passeur",
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
+     "player": "Phillip Tietz",
+     "team": "Mainz",
+     "base": [
+      7,
+      5,
+      0
+     ],
+     "pid": "234376",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "5 buts et 0 passe en 7 matchs · Mainz annoncé gagnant (41 %) · 2,1 buts attendus pour Mainz"
     }
    }
   },
@@ -355,8 +441,8 @@
    "home": "Vegas Golden Knights",
    "away": "New Jersey Devils",
    "state": "FUT",
-   "xgH": 3.02,
-   "xgA": 2.78,
+   "xgH": 3.01,
+   "xgA": 2.77,
    "pH": 46,
    "pD": 17,
    "pA": 38,
@@ -367,7 +453,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.5432,
+     "p": 0.5431,
      "prob": 54,
      "fair": 1.84,
      "stars": 2,
@@ -376,7 +462,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.5432,
+     "p": 0.5431,
      "prob": 54,
      "fair": 1.84,
      "stars": 2,
@@ -385,9 +471,9 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4106,
+     "p": 0.4084,
      "prob": 41,
-     "fair": 2.44,
+     "fair": 2.45,
      "stars": 1
     },
     "player": {
@@ -425,7 +511,7 @@
    "home": "Florida Panthers",
    "away": "Winnipeg Jets",
    "state": "FUT",
-   "xgH": 3.49,
+   "xgH": 3.48,
    "xgA": 2.62,
    "pH": 56,
    "pD": 16,
@@ -437,7 +523,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Florida Panthers",
-     "p": 0.6371,
+     "p": 0.6369,
      "prob": 64,
      "fair": 1.57,
      "stars": 3,
@@ -446,7 +532,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Florida Panthers",
-     "p": 0.6371,
+     "p": 0.6369,
      "prob": 64,
      "fair": 1.57,
      "stars": 3,
@@ -455,9 +541,9 @@
     "fun": {
      "market": "wh_o55",
      "label": "Florida Panthers gagne et plus de 5,5 buts",
-     "p": 0.3741,
+     "p": 0.3726,
      "prob": 37,
-     "fair": 2.67,
+     "fair": 2.68,
      "stars": 1
     },
     "player": {
@@ -475,9 +561,9 @@
     "scorer": {
      "market": "goal",
      "label": "Brady Tkachuk marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Brady Tkachuk",
      "pid": 8480801,
@@ -495,8 +581,8 @@
    "home": "Calgary Flames",
    "away": "Seattle Kraken",
    "state": "FUT",
-   "xgH": 3.02,
-   "xgA": 2.86,
+   "xgH": 3.01,
+   "xgA": 2.85,
    "pH": 44,
    "pD": 17,
    "pA": 39,
@@ -507,9 +593,9 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.535,
+     "p": 0.5327,
      "prob": 53,
-     "fair": 1.87,
+     "fair": 1.88,
      "stars": 2,
      "why": "10 derniers matchs : Calgary Flames 5 victoires · Seattle Kraken 6"
     },
@@ -524,7 +610,7 @@
     "fun": {
      "market": "h2",
      "label": "Calgary Flames gagne par 2 buts d'écart ou plus",
-     "p": 0.3241,
+     "p": 0.3239,
      "prob": 32,
      "fair": 3.09,
      "stars": 1
@@ -559,10 +645,10 @@
  "summary": {
   "date": "2026-10-30",
   "yesterday": {
-   "n": 72,
+   "n": 73,
    "ok": 38
   },
-  "foot": 4,
+  "foot": 5,
   "nhl": 3,
   "top": [
    {
@@ -578,10 +664,10 @@
     "match": "Villarreal – Espanyol"
    },
    {
-    "label": "Lille ou nul",
-    "prob": 73,
-    "time": "21:05",
-    "match": "Lille – Lens"
+    "label": "Plus de 2,5 buts",
+    "prob": 78,
+    "time": "20:30",
+    "match": "Elversberg – Mainz"
    }
   ]
  }
