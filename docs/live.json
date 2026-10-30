@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T19:51+01:00",
+ "generated": "2026-10-30T20:16+01:00",
  "date": "2026-10-30",
  "matches": [
   {
@@ -279,67 +279,68 @@
    "home": "Villarreal",
    "away": "Espanyol",
    "state": "pre",
-   "xgH": 1.75,
-   "xgA": 0.91,
-   "pH": 57,
-   "pD": 23,
-   "pA": 19,
+   "xgH": 1.39,
+   "xgA": 0.84,
+   "pH": 50,
+   "pD": 28,
+   "pA": 23,
    "edate": "20261030",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Villarreal ou nul",
-     "p": 0.8072,
-     "prob": 81,
-     "fair": 1.24,
-     "stars": 5,
+     "p": 0.7738,
+     "prob": 77,
+     "fair": 1.29,
+     "stars": 4,
      "why": "10 derniers matchs : Villarreal 15 marqués / 14 encaissés · Espanyol 12 / 14"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Villarreal",
-     "p": 0.573,
-     "prob": 57,
-     "fair": 1.75,
-     "stars": 2
+     "p": 0.4987,
+     "prob": 50,
+     "fair": 2.01,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1228,
-     "prob": 12,
-     "fair": 8.15,
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.66,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Villarreal mène à la mi-temps et gagne le match",
-     "p": 0.3598,
-     "prob": 36,
-     "fair": 2.78,
+     "market": "wh_nil",
+     "label": "Villarreal gagne sans encaisser de but",
+     "p": 0.3251,
+     "prob": 33,
+     "fair": 3.08,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Georges Mikautadze marque",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
      "player": "Georges Mikautadze",
      "team": "Villarreal",
+     "lineup": "start",
      "pid": "300002",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 10 matchs · Villarreal favori (57 %) · 1,8 buts attendus pour Villarreal"
+     "why": "3 buts et 1 passe en 10 matchs · titulaire · Villarreal favori (50 %) · 1,4 but attendu pour Villarreal"
     },
     "decisive": {
      "market": "dec",
      "label": "Georges Mikautadze buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Georges Mikautadze",
      "team": "Villarreal",
@@ -348,10 +349,11 @@
       3,
       1
      ],
+     "lineup": "start",
      "pid": "300002",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 10 matchs · Villarreal favori (57 %) · 1,8 buts attendus pour Villarreal"
+     "why": "3 buts et 1 passe en 10 matchs · titulaire · Villarreal favori (50 %) · 1,4 but attendu pour Villarreal"
     }
    }
   },
@@ -365,79 +367,81 @@
    "home": "Lille",
    "away": "Lens",
    "state": "pre",
-   "xgH": 1.54,
-   "xgA": 1.1,
-   "pH": 47,
-   "pD": 25,
-   "pA": 27,
+   "xgH": 1.16,
+   "xgA": 0.94,
+   "pH": 41,
+   "pD": 30,
+   "pA": 30,
    "edate": "20261030",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Lille ou nul",
-     "p": 0.7281,
-     "prob": 73,
-     "fair": 1.37,
+     "p": 0.7038,
+     "prob": 70,
+     "fair": 1.42,
      "stars": 4,
      "why": "8 derniers matchs : Lille 11 marqués / 6 encaissés · Lens 16 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Lille",
-     "p": 0.474,
-     "prob": 47,
-     "fair": 2.11,
+     "p": 0.4062,
+     "prob": 41,
+     "fair": 2.46,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1096,
-     "prob": 11,
-     "fair": 9.12,
+     "p": 0.1421,
+     "prob": 14,
+     "fair": 7.04,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Lille mène à la mi-temps et gagne le match",
-     "p": 0.2873,
-     "prob": 29,
-     "fair": 3.48,
+     "market": "wh_nil",
+     "label": "Lille gagne sans encaisser de but",
+     "p": 0.2674,
+     "prob": 27,
+     "fair": 3.74,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Olivier Giroud marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
+     "label": "Ethan Mbappé marque",
+     "p": 0.16,
+     "prob": 16,
+     "fair": 6.25,
      "stars": 1,
-     "player": "Olivier Giroud",
+     "player": "Ethan Mbappé",
      "team": "Lille",
-     "pid": "88965",
+     "lineup": "start",
+     "pid": "355971",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 7 matchs · Lille favori (47 %) · 1,5 buts attendus pour Lille"
+     "why": "2 buts et 0 passe en 7 matchs · titulaire · Lille annoncé gagnant (41 %) · 1,2 but attendu pour Lille"
     },
     "decisive": {
      "market": "dec",
-     "label": "Olivier Giroud buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "label": "Ethan Mbappé buteur ou passeur",
+     "p": 0.18,
+     "prob": 18,
+     "fair": 5.56,
      "stars": 1,
-     "player": "Olivier Giroud",
+     "player": "Ethan Mbappé",
      "team": "Lille",
      "base": [
       7,
       2,
-      2
+      0
      ],
-     "pid": "88965",
+     "lineup": "start",
+     "pid": "355971",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 7 matchs · Lille favori (47 %) · 1,5 buts attendus pour Lille"
+     "why": "2 buts et 0 passe en 7 matchs · titulaire · Lille annoncé gagnant (41 %) · 1,2 but attendu pour Lille"
     }
    }
   },
@@ -662,7 +666,7 @@
   "top": [
    {
     "label": "Villarreal ou nul",
-    "prob": 81,
+    "prob": 77,
     "time": "21:00",
     "match": "Villarreal – Espanyol"
    },
@@ -673,10 +677,10 @@
     "match": "Elversberg – Mainz"
    },
    {
-    "label": "Lille ou nul",
-    "prob": 73,
-    "time": "21:05",
-    "match": "Lille – Lens"
+    "label": "Matthew Tkachuk : au moins 1 point",
+    "prob": 71,
+    "time": "00:00",
+    "match": "Florida Panthers – Winnipeg Jets"
    }
   ]
  }
