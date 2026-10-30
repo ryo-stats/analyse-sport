@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T22:40+01:00",
+ "generated": "2026-10-30T23:05+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -397,7 +397,7 @@
    "form_h": "VVDVV",
    "form_a": "DVNDV",
    "rank_h": 7,
-   "rank_a": 2,
+   "rank_a": 3,
    "pH": 40,
    "pD": 26,
    "pA": 35,
@@ -662,12 +662,12 @@
    ],
    "ctx": [
     "Nice : 7e, 14 points, 13 buts marqués et 12 encaissés en 9 matchs.",
-    "Rennes : 2e, 16 points, 20 buts marqués et 19 encaissés en 9 matchs.",
+    "Rennes : 3e, 16 points, 20 buts marqués et 19 encaissés en 9 matchs.",
     "Nice : 13 buts marqués et 12 encaissés sur ses 9 derniers matchs de championnat.",
     "Rennes : 20 buts marqués et 19 encaissés sur ses 9 derniers matchs de championnat."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Nice (7e) est dans la course à l'Europe. Rennes (2e) défend une place qualificative pour la Ligue des champions.",
+   "stakes": "Nice (7e) est dans la course à l'Europe. Rennes (3e) défend une place qualificative pour la Ligue des champions. Adversaires directs au classement : 2 points d'écart.",
    "picks": {
     "main": {
      "market": "1N",
@@ -1155,14 +1155,14 @@
    "league": "LaLiga",
    "kickoff": "2026-10-30T20:00:00+00:00",
    "time": "21:00",
-   "state": "in",
+   "state": "post",
    "score": "0-1",
    "home": "Villarreal",
    "away": "Espanyol",
-   "form_h": "NVDNV",
-   "form_a": "NDDND",
+   "form_h": "DVVDN",
+   "form_a": "VDDDN",
    "rank_h": 10,
-   "rank_a": 18,
+   "rank_a": 12,
    "pH": 50,
    "pD": 28,
    "pA": 23,
@@ -1194,14 +1194,33 @@
       "n": 10,
       "gp": 10,
       "g": 3,
-      "a": 1
+      "a": 0
      },
-     "p_goal": 24,
-     "p_dec": 31,
+     "p_goal": 25,
+     "p_dec": 29,
      "pid": "300002",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Pape Gueye",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Villarreal",
+     "goals": 3,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 20,
+     "p_dec": 24,
+     "pid": "255889",
+     "stats_league": "esp.1",
+     "season": 2026
     },
     {
      "name": "Gerard Moreno",
@@ -1217,12 +1236,11 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 18,
+     "p_goal": 18,
+     "p_dec": 19,
      "pid": "156172",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Alberto Moleiro",
@@ -1236,14 +1254,13 @@
       "n": 10,
       "gp": 10,
       "g": 2,
-      "a": 4
+      "a": 3
      },
-     "p_goal": 16,
+     "p_goal": 17,
      "p_dec": 40,
      "pid": "307390",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Nicolas Pépé",
@@ -1256,15 +1273,14 @@
      "l10": {
       "n": 10,
       "gp": 6,
-      "g": 2,
+      "g": 1,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 6,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "210397",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
      "name": "Ayoze Pérez",
@@ -1280,33 +1296,11 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 3,
-     "p_dec": 9,
+     "p_goal": 12,
+     "p_dec": 27,
      "pid": "192133",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Tajon Buchanan",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Villarreal",
-     "goals": 0,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 5,
-     "pid": "284769",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -1321,15 +1315,34 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 6,
+      "g": 4,
       "a": 0
      },
-     "p_goal": 32,
-     "p_dec": 34,
+     "p_goal": 30,
+     "p_dec": 32,
      "pid": "318773",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Bryan Zaragoza",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Espanyol",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 8,
+     "p_dec": 12,
+     "pid": "311571",
+     "stats_league": "esp.1",
+     "season": 2026
     },
     {
      "name": "Marcos Fernández",
@@ -1341,16 +1354,15 @@
      "apps": 9,
      "l10": {
       "n": 10,
-      "gp": 9,
+      "gp": 8,
       "g": 1,
       "a": 1
      },
      "p_goal": 7,
-     "p_dec": 12,
+     "p_dec": 13,
      "pid": "354621",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Edu Expósito",
@@ -1367,53 +1379,30 @@
       "a": 0
      },
      "p_goal": 7,
-     "p_dec": 10,
+     "p_dec": 11,
      "pid": "255272",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Bryan Zaragoza",
-     "pos": "Attaquant",
+     "name": "Cala",
+     "pos": "Milieu",
      "side": "a",
      "team": "Espanyol",
      "goals": 1,
      "assists": 0,
-     "apps": 7,
+     "apps": 10,
      "l10": {
       "n": 10,
-      "gp": 7,
+      "gp": 9,
       "g": 1,
       "a": 0
      },
      "p_goal": 7,
-     "p_dec": 8,
-     "pid": "311571",
+     "p_dec": 9,
+     "pid": "355902",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Javi Hernandez",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Espanyol",
-     "goals": 0,
-     "assists": 6,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 6
-     },
-     "p_goal": 2,
-     "p_dec": 32,
-     "pid": "367946",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Tyrhys Dolan",
@@ -1425,27 +1414,25 @@
      "apps": 8,
      "l10": {
       "n": 10,
-      "gp": 8,
-      "g": 1,
+      "gp": 7,
+      "g": 0,
       "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 3,
+     "p_goal": 6,
+     "p_dec": 8,
      "pid": "306520",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Villarreal : 10e, 12 points, 15 buts marqués et 14 encaissés en 10 matchs.",
-    "Espanyol : 18e, 8 points, 12 buts marqués et 14 encaissés en 10 matchs.",
-    "Villarreal : 15 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
-    "Espanyol : 12 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Pape Gueye (absent), Nicolas Pépé (remplaçant) ne commencent pas le match."
+    "Villarreal : 10e, 12 points, 15 buts marqués et 15 encaissés en 11 matchs.",
+    "Espanyol : 12e, 11 points, 13 buts marqués et 14 encaissés en 11 matchs.",
+    "Villarreal : 13 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
+    "Espanyol : 10 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Villarreal est favori sans écraser le match (50 %).",
-   "stakes": "Espanyol (18e) est en zone de relégation : match vital.",
+   "stakes": "Match de milieu de tableau : enjeu modéré au classement. Adversaires directs au classement : 1 point d'écart.",
    "picks": {
     "main": {
      "market": "1N",
@@ -1502,24 +1489,23 @@
     "player": {
      "market": "scorer",
      "label": "Georges Mikautadze marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
      "player": "Georges Mikautadze",
      "team": "Villarreal",
-     "lineup": "start",
      "pid": "300002",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 10 matchs · titulaire · Villarreal favori (50 %) · 1,4 but attendu pour Villarreal"
+     "why": "3 buts et 1 passe en 10 matchs · forme : 3 buts et 0 passe sur ses 10 derniers matchs · Villarreal favori (50 %) · 1,4 but attendu pour Villarreal"
     },
     "decisive": {
      "market": "dec",
      "label": "Georges Mikautadze buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "p": 0.29,
+     "prob": 29,
+     "fair": 3.45,
      "stars": 1,
      "player": "Georges Mikautadze",
      "team": "Villarreal",
@@ -1528,11 +1514,10 @@
       3,
       1
      ],
-     "lineup": "start",
      "pid": "300002",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 10 matchs · titulaire · Villarreal favori (50 %) · 1,4 but attendu pour Villarreal"
+     "why": "3 buts et 1 passe en 10 matchs · forme : 3 buts et 0 passe sur ses 10 derniers matchs · Villarreal favori (50 %) · 1,4 but attendu pour Villarreal"
     }
    },
    "second": {
@@ -1551,13 +1536,13 @@
    "league": "Ligue 1",
    "kickoff": "2026-10-30T20:05:00+00:00",
    "time": "21:05",
-   "state": "in",
-   "score": "0-0",
+   "state": "post",
+   "score": "1-0",
    "home": "Lille",
    "away": "Lens",
-   "form_h": "NDNDV",
-   "form_a": "NDVDV",
-   "rank_h": 3,
+   "form_h": "VNDND",
+   "form_a": "DVDVD",
+   "rank_h": 2,
    "rank_a": 8,
    "pH": 41,
    "pD": 30,
@@ -1579,48 +1564,6 @@
    "btts": 42,
    "squad_h": [
     {
-     "name": "Ethan Mbappé",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Lille",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 18,
-     "pid": "355971",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Hákon Haraldsson",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Lille",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 13,
-     "pid": "318779",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
      "name": "Olivier Giroud",
      "pos": "Attaquant",
      "side": "h",
@@ -1629,17 +1572,16 @@
      "assists": 2,
      "apps": 7,
      "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
+      "n": 9,
+      "gp": 8,
+      "g": 3,
       "a": 2
      },
-     "p_goal": 5,
-     "p_dec": 11,
+     "p_goal": 20,
+     "p_dec": 33,
      "pid": "88965",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
      "name": "Dilane Bakwa",
@@ -1650,59 +1592,96 @@
      "assists": 1,
      "apps": 6,
      "l10": {
-      "n": 8,
-      "gp": 6,
+      "n": 9,
+      "gp": 7,
       "g": 2,
       "a": 1
      },
-     "p_goal": 5,
-     "p_dec": 8,
+     "p_goal": 16,
+     "p_dec": 24,
      "pid": "297157",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
-     "name": "Nabil Bentaleb",
-     "pos": "Milieu",
+     "name": "Ayase Ueda",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Lille",
-     "goals": 0,
-     "assists": 1,
-     "apps": 8,
+     "goals": 2,
+     "assists": 0,
+     "apps": 4,
      "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 0,
-      "a": 1
+      "n": 9,
+      "gp": 4,
+      "g": 2,
+      "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 13,
-     "pid": "179187",
+     "p_goal": 16,
+     "p_dec": 17,
+     "pid": "274277",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Ngal'ayel Mukau",
+     "name": "Ethan Mbappé",
      "pos": "Milieu",
      "side": "h",
      "team": "Lille",
-     "goals": 0,
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 8,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 15,
+     "p_dec": 18,
+     "pid": "355971",
+     "stats_league": "fra.1",
+     "season": 2026
+    },
+    {
+     "name": "Tiago Santos",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Lille",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 9,
+      "gp": 6,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 14,
+     "p_dec": 15,
+     "pid": "346844",
+     "stats_league": "fra.1",
+     "season": 2026
+    },
+    {
+     "name": "Hákon Haraldsson",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Lille",
+     "goals": 1,
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 0,
+      "n": 9,
+      "gp": 9,
+      "g": 1,
       "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 5,
-     "pid": "345988",
+     "p_goal": 9,
+     "p_dec": 13,
+     "pid": "318779",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -1715,8 +1694,8 @@
      "assists": 7,
      "apps": 8,
      "l10": {
-      "n": 8,
-      "gp": 8,
+      "n": 9,
+      "gp": 9,
       "g": 4,
       "a": 7
      },
@@ -1724,8 +1703,27 @@
      "p_dec": 46,
      "pid": "156898",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Franjo Ivanovic",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lens",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 12,
+     "pid": "364180",
+     "stats_league": "fra.1",
+     "season": 2026
     },
     {
      "name": "Matthieu Udol",
@@ -1736,8 +1734,8 @@
      "assists": 0,
      "apps": 7,
      "l10": {
-      "n": 8,
-      "gp": 7,
+      "n": 9,
+      "gp": 8,
       "g": 2,
       "a": 0
      },
@@ -1745,8 +1743,27 @@
      "p_dec": 11,
      "pid": "233199",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Abdallah Sima",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lens",
+     "goals": 1,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 9,
+      "gp": 5,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 7,
+     "p_dec": 13,
+     "pid": "308246",
+     "stats_league": "fra.1",
+     "season": 2026
     },
     {
      "name": "Florian Sotoca",
@@ -1757,8 +1774,8 @@
      "assists": 0,
      "apps": 5,
      "l10": {
-      "n": 8,
-      "gp": 5,
+      "n": 9,
+      "gp": 6,
       "g": 1,
       "a": 0
      },
@@ -1766,82 +1783,37 @@
      "p_dec": 7,
      "pid": "215687",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Thorgan Hazard",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lens",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 5,
-     "p_dec": 11,
-     "pid": "158066",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Ruben Aguilar",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Lens",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 5,
-     "p_dec": 10,
-     "pid": "181946",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Saud Abdulhamid",
-     "pos": "Défenseur",
+     "name": "Odsonne Édouard",
+     "pos": "Attaquant",
      "side": "a",
      "team": "Lens",
      "goals": 1,
      "assists": 0,
-     "apps": 3,
+     "apps": 6,
      "l10": {
-      "n": 8,
-      "gp": 3,
+      "n": 9,
+      "gp": 6,
       "g": 1,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 5,
-     "pid": "286011",
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "222180",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Lille : 3e, 15 points, 11 buts marqués et 6 encaissés en 8 matchs.",
-    "Lens : 8e, 13 points, 16 buts marqués et 12 encaissés en 8 matchs.",
-    "Lille : 11 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat.",
-    "Lens : 16 buts marqués et 12 encaissés sur ses 8 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Tiago Santos (absent), Olivier Giroud (remplaçant), Ayase Ueda (absent), Dilane Bakwa (remplaçant) ne commencent pas le match."
+    "Lille : 2e, 18 points, 12 buts marqués et 6 encaissés en 9 matchs.",
+    "Lens : 8e, 13 points, 16 buts marqués et 13 encaissés en 9 matchs.",
+    "Lille : 12 buts marqués et 6 encaissés sur ses 9 derniers matchs de championnat.",
+    "Lens : 16 buts marqués et 13 encaissés sur ses 9 derniers matchs de championnat."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
-   "stakes": "Lille (3e) défend une place qualificative pour la Ligue des champions.",
+   "stakes": "Lille (2e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
      "market": "1N",
@@ -1897,38 +1869,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Ethan Mbappé marque",
-     "p": 0.15,
-     "prob": 15,
-     "fair": 6.67,
+     "label": "Olivier Giroud marque",
+     "p": 0.2,
+     "prob": 20,
+     "fair": 5.0,
      "stars": 1,
-     "player": "Ethan Mbappé",
+     "player": "Olivier Giroud",
      "team": "Lille",
-     "lineup": "start",
-     "pid": "355971",
+     "pid": "88965",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · titulaire · Lille annoncé gagnant (41 %) · 1,2 but attendu pour Lille"
+     "why": "2 buts et 2 passes en 7 matchs · forme : 3 buts et 2 passes sur ses 8 derniers matchs · Lille annoncé gagnant (41 %) · 1,2 but attendu pour Lille"
     },
     "decisive": {
      "market": "dec",
-     "label": "Ethan Mbappé buteur ou passeur",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
+     "label": "Olivier Giroud buteur ou passeur",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Ethan Mbappé",
+     "player": "Olivier Giroud",
      "team": "Lille",
      "base": [
       7,
       2,
-      0
+      2
      ],
-     "lineup": "start",
-     "pid": "355971",
+     "pid": "88965",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · titulaire · Lille annoncé gagnant (41 %) · 1,2 but attendu pour Lille"
+     "why": "2 buts et 2 passes en 7 matchs · forme : 3 buts et 2 passes sur ses 8 derniers matchs · Lille annoncé gagnant (41 %) · 1,2 but attendu pour Lille"
     }
    },
    "second": {
@@ -3106,15 +3076,15 @@
  ],
  "bilan": {
   "foot": {
-   "n": 178,
+   "n": 180,
    "fav_rate": 62,
    "fav_expected": 54,
-   "brier": 0.528,
+   "brier": 0.53,
    "brier_naive": 0.667,
    "vs_mkt": {
-    "n": 13,
-    "model": 0.499,
-    "mkt": 0.521
+    "n": 15,
+    "model": 0.53,
+    "mkt": 0.578
    },
    "bins": [
     {
@@ -3125,7 +3095,7 @@
     },
     {
      "range": "40-50 %",
-     "n": 52,
+     "n": 54,
      "announced": 45,
      "actual": 52
     },
@@ -3188,20 +3158,20 @@
    ]
   },
   "picks": {
-   "n": 751,
+   "n": 757,
    "rate": 54,
-   "expected": 53,
+   "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 751,
-     "ok": 408,
+     "n": 757,
+     "ok": 410,
      "rate": 54,
-     "expected": 53
+     "expected": 52
     },
     "foot": {
-     "n": 463,
-     "ok": 243,
+     "n": 469,
+     "ok": 245,
      "rate": 52,
      "expected": 52
     },
@@ -3214,15 +3184,15 @@
    },
    "fun": {
     "all": {
-     "n": 281,
-     "ok": 81,
+     "n": 285,
+     "ok": 83,
      "rate": 29,
      "expected": 29
     },
     "foot": {
-     "n": 204,
-     "ok": 49,
-     "rate": 24,
+     "n": 208,
+     "ok": 51,
+     "rate": 25,
      "expected": 25
     },
     "nhl": {
@@ -3236,16 +3206,16 @@
     {
      "date": "2026-10-30",
      "all": {
-      "n": 36,
-      "ok": 22,
-      "rate": 61,
-      "expected": 53
+      "n": 42,
+      "ok": 24,
+      "rate": 57,
+      "expected": 52
      },
      "foot": {
-      "n": 11,
-      "ok": 10,
-      "rate": 91,
-      "expected": 51
+      "n": 17,
+      "ok": 12,
+      "rate": 71,
+      "expected": 49
      },
      "nhl": {
       "n": 25,
@@ -3255,16 +3225,16 @@
      },
      "fun": {
       "all": {
-       "n": 13,
-       "ok": 5,
-       "rate": 38,
-       "expected": 29
+       "n": 17,
+       "ok": 7,
+       "rate": 41,
+       "expected": 27
       },
       "foot": {
-       "n": 6,
-       "ok": 3,
+       "n": 10,
+       "ok": 5,
        "rate": 50,
-       "expected": 20
+       "expected": 21
       },
       "nhl": {
        "n": 7,
@@ -3793,17 +3763,17 @@
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 60,
+     "n": 63,
      "ok": 32,
-     "rate": 53,
+     "rate": 51,
      "expected": 52
     },
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 58,
-     "ok": 31,
-     "rate": 53,
+     "n": 61,
+     "ok": 33,
+     "rate": 54,
      "expected": 52
     },
     {
@@ -3834,7 +3804,7 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 318,
+     "n": 322,
      "announced": 35,
      "actual": 31
     },
@@ -3852,9 +3822,9 @@
     },
     {
      "stars": 4,
-     "n": 77,
+     "n": 79,
      "announced": 74,
-     "actual": 79
+     "actual": 78
     },
     {
      "stars": 5,
@@ -3864,6 +3834,71 @@
     }
    ],
    "details": [
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882817",
+     "score": "0-1",
+     "match": "Villarreal – Espanyol",
+     "label": "Villarreal ou nul",
+     "prob": 77,
+     "stars": 4,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882817",
+     "score": "0-1",
+     "match": "Villarreal – Espanyol",
+     "label": "Victoire Villarreal",
+     "prob": 50,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882817",
+     "score": "0-1",
+     "match": "Villarreal – Espanyol",
+     "label": "Georges Mikautadze marque",
+     "prob": 24,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882817",
+     "score": "0-1",
+     "match": "Villarreal – Espanyol",
+     "label": "Score exact 1-0",
+     "prob": 15,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882817",
+     "score": "0-1",
+     "match": "Villarreal – Espanyol",
+     "label": "Villarreal gagne sans encaisser de but",
+     "prob": 33,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
     {
      "date": "2026-10-30",
      "sport": "nhl",
@@ -4237,6 +4272,71 @@
      "match": "Los Angeles Kings – Ottawa Senators",
      "label": "Plus de 6,5 buts",
      "prob": 38,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876420",
+     "score": "1-0",
+     "match": "Lille – Lens",
+     "label": "Lille ou nul",
+     "prob": 70,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876420",
+     "score": "1-0",
+     "match": "Lille – Lens",
+     "label": "Victoire Lille",
+     "prob": 41,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876420",
+     "score": "1-0",
+     "match": "Lille – Lens",
+     "label": "Score exact 1-0",
+     "prob": 14,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876420",
+     "score": "1-0",
+     "match": "Lille – Lens",
+     "label": "Ethan Mbappé marque",
+     "prob": 16,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876420",
+     "score": "1-0",
+     "match": "Lille – Lens",
+     "label": "Lille gagne sans encaisser de but",
+     "prob": 27,
      "stars": 1,
      "ok": true,
      "fun": true
