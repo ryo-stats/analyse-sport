@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T23:05+01:00",
+ "generated": "2026-10-30T23:30+01:00",
  "date": "2026-10-30",
  "nhl_date": "2026-10-30",
  "foot": [
@@ -1919,8 +1919,8 @@
    "league": "NHL",
    "kickoff": "2026-10-30T22:00:00+00:00",
    "time": "23:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-1",
    "home": "Vegas Golden Knights",
    "away": "New Jersey Devils",
    "rec_h": "9-4-1 · 2e Pacific · 1 victoire de suite",
@@ -2243,7 +2243,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4084,
+     "p": 0.4083,
      "prob": 41,
      "fair": 2.45,
      "stars": 1
@@ -2252,7 +2252,7 @@
      {
       "market": "h2",
       "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-      "p": 0.3348,
+      "p": 0.3347,
       "prob": 33,
       "fair": 2.99,
       "stars": 1
@@ -2260,7 +2260,7 @@
      {
       "market": "wh_o55",
       "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
-      "p": 0.285,
+      "p": 0.2849,
       "prob": 28,
       "fair": 3.51,
       "stars": 1
@@ -2306,7 +2306,7 @@
    "league": "NHL",
    "kickoff": "2026-10-30T23:00:00+00:00",
    "time": "00:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Florida Panthers",
    "away": "Winnipeg Jets",
@@ -17400,7 +17400,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 3,
+   "ok": 2,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89185 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
