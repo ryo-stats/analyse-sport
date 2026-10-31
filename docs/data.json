@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:09+01:00",
+ "generated": "2026-10-31T14:34+01:00",
  "date": "2026-10-31",
  "nhl_date": "2026-10-31",
  "foot": [
@@ -811,10 +811,10 @@
    "rank_a": 16,
    "pH": 64,
    "pD": 19,
-   "pA": 18,
+   "pA": 17,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.37,
-   "xgA": 1.18,
+   "xgH": 2.26,
+   "xgA": 1.1,
    "scores": [
     "2-1",
     "2-0",
@@ -822,32 +822,12 @@
    ],
    "scorep": [
     10,
-    8,
-    8
+    9,
+    9
    ],
-   "over25": 69,
-   "btts": 63,
+   "over25": 65,
+   "btts": 60,
    "squad_h": [
-    {
-     "name": "Samuel Mbangula",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Bologna",
-     "goals": 3,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 9,
-      "gp": 4,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 39,
-     "p_dec": 40,
-     "pid": "355997",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
     {
      "name": "Federico Bernardeschi",
      "pos": "Attaquant",
@@ -862,31 +842,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 34,
-     "p_dec": 38,
+     "p_goal": 33,
+     "p_dec": 37,
      "pid": "180956",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Roberto Piccoli",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Bologna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 21,
-     "p_dec": 25,
-     "pid": "285438",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tommaso Pobega",
@@ -902,15 +863,16 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 24,
+     "p_goal": 17,
+     "p_dec": 23,
      "pid": "276654",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Riccardo Orsolini",
-     "pos": "Attaquant",
+     "name": "Nicoló Casale",
+     "pos": "Défenseur",
      "side": "h",
      "team": "Bologna",
      "goals": 1,
@@ -922,31 +884,75 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 19,
-     "pid": "234426",
+     "p_goal": 15,
+     "p_dec": 16,
+     "pid": "250707",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Artem Dovbyk",
+     "name": "Samuel Mbangula",
      "pos": "Attaquant",
      "side": "h",
      "team": "Bologna",
-     "goals": 1,
+     "goals": 3,
      "assists": 0,
      "apps": 4,
      "l10": {
       "n": 9,
       "gp": 4,
-      "g": 1,
+      "g": 3,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 17,
-     "pid": "226211",
+     "p_goal": 13,
+     "p_dec": 13,
+     "pid": "355997",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Nicolò Cambiaghi",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Bologna",
+     "goals": 0,
+     "assists": 2,
+     "apps": 9,
+     "l10": {
+      "n": 9,
+      "gp": 9,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 10,
+     "p_dec": 37,
+     "pid": "287790",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jens Odgaard",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Bologna",
+     "goals": 0,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 7,
+     "p_dec": 23,
+     "pid": "238407",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -964,31 +970,12 @@
       "g": 8,
       "a": 1
      },
-     "p_goal": 42,
-     "p_dec": 47,
+     "p_goal": 40,
+     "p_dec": 45,
      "pid": "384482",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Jay Robinson",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Monza",
-     "goals": 2,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 14,
-     "p_dec": 21,
-     "pid": "355359",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ricardo Mangas",
@@ -1004,31 +991,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 7,
-     "p_dec": 18,
+     "p_goal": 6,
+     "p_dec": 17,
      "pid": "259871",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Andrea Colpani",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Monza",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 8,
-     "pid": "272892",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Eddy Kouadio",
@@ -1044,11 +1012,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 7,
+     "p_goal": 6,
      "p_dec": 7,
      "pid": "390673",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Saba Goglichidze",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Monza",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 9,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 6,
+     "pid": "363886",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Exequiel Zeballos",
@@ -1064,18 +1054,43 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 7,
-     "p_dec": 7,
+     "p_goal": 6,
+     "p_dec": 6,
      "pid": "297051",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jay Robinson",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Monza",
+     "goals": 2,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "355359",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Bologna : 11e, 11 points, 12 buts marqués et 12 encaissés en 9 matchs.",
     "Monza : 16e, 7 points, 16 buts marqués et 22 encaissés en 9 matchs.",
     "Bologna : 12 buts marqués et 12 encaissés sur ses 9 derniers matchs de championnat.",
-    "Monza : 16 buts marqués et 22 encaissés sur ses 9 derniers matchs de championnat."
+    "Monza : 16 buts marqués et 22 encaissés sur ses 9 derniers matchs de championnat.",
+    "Bologna : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Monza : attaque revue à la baisse (−7 %) d'après la compo officielle (Jay Robinson ne commence pas).",
+    "Compositions officielles prises en compte : Artem Dovbyk (remplaçant), Riccardo Orsolini (remplaçant), Roberto Piccoli (absent), Jay Enem (absent), Samuel Mbangula (remplaçant) ne commencent pas le match."
    ],
    "reading": "Bologna est nettement favori (64 %).",
    "stakes": "Monza (16e) lutte pour le maintien, 2 points d'avance sur la zone rouge.",
@@ -1083,8 +1098,8 @@
     "main": {
      "market": "1N",
      "label": "Bologna ou nul",
-     "p": 0.8241,
-     "prob": 82,
+     "p": 0.8279,
+     "prob": 83,
      "fair": 1.21,
      "stars": 5,
      "why": "9 derniers matchs : Bologna 12 marqués / 12 encaissés · Monza 16 / 22"
@@ -1092,7 +1107,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Bologna",
-     "p": 0.6382,
+     "p": 0.6362,
      "prob": 64,
      "fair": 1.57,
      "stars": 3
@@ -1100,73 +1115,72 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0952,
+     "p": 0.0975,
      "prob": 10,
-     "fair": 10.51,
+     "fair": 10.25,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "h2",
      "label": "Bologna gagne avec 2 buts d'écart ou plus",
-     "p": 0.4187,
-     "prob": 42,
-     "fair": 2.39,
+     "p": 0.4103,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_btts",
       "label": "Bologna gagne et les deux équipes marquent",
-      "p": 0.3597,
-      "prob": 36,
-      "fair": 2.78,
+      "p": 0.3373,
+      "prob": 34,
+      "fair": 2.96,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Samuel Mbangula marque et Bologna gagne",
-      "p": 0.3108,
-      "prob": 31,
-      "fair": 3.22,
-      "stars": 1,
-      "player": "Samuel Mbangula",
-      "team": "Bologna",
-      "side": "h"
+      "market": "wh_nil",
+      "label": "Bologna gagne sans encaisser de but",
+      "p": 0.2989,
+      "prob": 30,
+      "fair": 3.35,
+      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Samuel Mbangula marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "label": "Federico Bernardeschi marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Samuel Mbangula",
+     "player": "Federico Bernardeschi",
      "team": "Bologna",
-     "pid": "355997",
+     "lineup": "start",
+     "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 4 matchs · Bologna favori (64 %) · 2,4 buts attendus pour Bologna"
+     "why": "2 buts et 0 passe en 9 matchs · titulaire · Bologna favori (64 %) · 2,3 buts attendus pour Bologna"
     },
     "decisive": {
      "market": "dec",
-     "label": "Samuel Mbangula buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "label": "Federico Bernardeschi buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Samuel Mbangula",
+     "player": "Federico Bernardeschi",
      "team": "Bologna",
      "base": [
-      4,
-      3,
+      9,
+      2,
       0
      ],
-     "pid": "355997",
+     "lineup": "start",
+     "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 4 matchs · Bologna favori (64 %) · 2,4 buts attendus pour Bologna"
+     "why": "2 buts et 0 passe en 9 matchs · titulaire · Bologna favori (64 %) · 2,3 buts attendus pour Bologna"
     }
    },
    "second": {
@@ -1193,24 +1207,24 @@
    "form_a": "NDNDV",
    "rank_h": 4,
    "rank_a": 15,
-   "pH": 58,
-   "pD": 19,
+   "pH": 57,
+   "pD": 21,
    "pA": 22,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.35,
-   "xgA": 1.42,
+   "xgH": 2.08,
+   "xgA": 1.23,
    "scores": [
     "2-1",
     "1-1",
-    "3-1"
+    "2-0"
    ],
    "scorep": [
+    10,
     9,
-    8,
-    7
+    8
    ],
-   "over25": 73,
-   "btts": 69,
+   "over25": 64,
+   "btts": 62,
    "squad_h": [
     {
      "name": "Patrik Schick",
@@ -1226,11 +1240,12 @@
       "g": 6,
       "a": 2
      },
-     "p_goal": 55,
-     "p_dec": 66,
+     "p_goal": 50,
+     "p_dec": 61,
      "pid": "212330",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ibrahim Maza",
@@ -1246,51 +1261,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 24,
-     "p_dec": 44,
+     "p_goal": 21,
+     "p_dec": 40,
      "pid": "361212",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Christian Kofane",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Leverkusen",
-     "goals": 2,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 7,
-      "gp": 4,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 23,
-     "p_dec": 24,
-     "pid": "398709",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Moussa Diaby",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Leverkusen",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 7,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 17,
-     "p_dec": 20,
-     "pid": "270670",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ezequiel Fernández",
@@ -1306,11 +1282,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 18,
+     "p_goal": 12,
+     "p_dec": 16,
      "pid": "364080",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Miguel Gutiérrez",
@@ -1326,11 +1303,54 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 12,
-     "p_dec": 40,
+     "p_goal": 11,
+     "p_dec": 36,
      "pid": "290044",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jarell Quansah",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Leverkusen",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 11,
+     "p_dec": 21,
+     "pid": "298524",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Facundo Medina",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Leverkusen",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 12,
+     "pid": "249663",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1348,31 +1368,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 31,
-     "p_dec": 33,
+     "p_goal": 27,
+     "p_dec": 30,
      "pid": "269136",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Josha Vagnoman",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Stuttgart",
-     "goals": 2,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 7,
-      "gp": 6,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 19,
-     "p_dec": 28,
-     "pid": "266839",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Grischa Prömel",
@@ -1388,31 +1389,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 15,
+     "p_goal": 10,
+     "p_dec": 13,
      "pid": "218714",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Maximilian Mittelstädt",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Stuttgart",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 7,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 11,
-     "p_dec": 21,
-     "pid": "216225",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Chris Führich",
@@ -1428,11 +1410,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 15,
+     "p_goal": 10,
+     "p_dec": 13,
      "pid": "268951",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Bilal El Khannouss",
@@ -1448,97 +1431,144 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 14,
+     "p_goal": 10,
+     "p_dec": 12,
      "pid": "336595",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jeff Chabot",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Stuttgart",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "258909",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Deniz Undav",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Stuttgart",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 8,
+     "pid": "273300",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Leverkusen : 4e, 13 points, 16 buts marqués et 12 encaissés en 7 matchs.",
     "Stuttgart : 15e, 6 points, 10 buts marqués et 13 encaissés en 7 matchs.",
     "Leverkusen : 16 buts marqués et 12 encaissés sur ses 7 derniers matchs de championnat.",
-    "Stuttgart : 10 buts marqués et 13 encaissés sur ses 7 derniers matchs de championnat."
+    "Stuttgart : 10 buts marqués et 13 encaissés sur ses 7 derniers matchs de championnat.",
+    "Leverkusen : attaque revue à la baisse (−12 %) d'après la compo officielle (Christian Kofane ne commence pas).",
+    "Stuttgart : attaque revue à la baisse (−14 %) d'après la compo officielle (Maximilian Mittelstädt, Josha Vagnoman ne commencent pas).",
+    "Compositions officielles prises en compte : Moussa Diaby (absent), Christian Kofane (absent), Josha Vagnoman (absent) ne commencent pas le match."
    ],
-   "reading": "Leverkusen est favori sans écraser le match (58 %).",
+   "reading": "Leverkusen est favori sans écraser le match (57 %).",
    "stakes": "Leverkusen (4e) défend une place qualificative pour la Ligue des champions. Stuttgart (15e) lutte pour le maintien, 0 point d'avance sur la zone rouge.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Leverkusen ou nul",
-     "p": 0.7751,
+     "p": 0.7783,
      "prob": 78,
-     "fair": 1.29,
+     "fair": 1.28,
      "stars": 4,
      "why": "7 derniers matchs : Leverkusen 16 marqués / 12 encaissés · Stuttgart 10 / 13"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Leverkusen",
-     "p": 0.5812,
-     "prob": 58,
-     "fair": 1.72,
+     "p": 0.5683,
+     "prob": 57,
+     "fair": 1.76,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0903,
-     "prob": 9,
-     "fair": 11.07,
+     "p": 0.0972,
+     "prob": 10,
+     "fair": 10.29,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "scw",
-     "label": "Patrik Schick marque et Leverkusen gagne",
-     "p": 0.3985,
-     "prob": 40,
-     "fair": 2.51,
-     "stars": 1,
-     "player": "Patrik Schick",
-     "team": "Leverkusen",
-     "side": "h"
+     "market": "wh_o25",
+     "label": "Leverkusen gagne et plus de 2,5 buts",
+     "p": 0.4133,
+     "prob": 41,
+     "fair": 2.42,
+     "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Leverkusen mène à la mi-temps et gagne le match",
-      "p": 0.3805,
-      "prob": 38,
-      "fair": 2.63,
-      "stars": 1
+      "market": "scw",
+      "label": "Patrik Schick marque et Leverkusen gagne",
+      "p": 0.3661,
+      "prob": 37,
+      "fair": 2.73,
+      "stars": 1,
+      "player": "Patrik Schick",
+      "team": "Leverkusen",
+      "side": "h"
      },
      {
-      "market": "h2",
-      "label": "Leverkusen gagne avec 2 buts d'écart ou plus",
-      "p": 0.3698,
+      "market": "htft_h",
+      "label": "Leverkusen mène à la mi-temps et gagne le match",
+      "p": 0.3653,
       "prob": 37,
-      "fair": 2.7,
+      "fair": 2.74,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Patrik Schick marque",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.5,
+     "prob": 50,
+     "fair": 2.0,
      "stars": 2,
      "player": "Patrik Schick",
      "team": "Leverkusen",
+     "lineup": "start",
      "pid": "212330",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 7 matchs · Leverkusen favori (58 %) · 2,3 buts attendus pour Leverkusen"
+     "why": "6 buts et 2 passes en 7 matchs · titulaire · Leverkusen favori (57 %) · 2,1 buts attendus pour Leverkusen"
     },
     "decisive": {
      "market": "dec",
      "label": "Patrik Schick buteur ou passeur",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3,
      "player": "Patrik Schick",
      "team": "Leverkusen",
@@ -1547,10 +1577,11 @@
       6,
       2
      ],
+     "lineup": "start",
      "pid": "212330",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 7 matchs · Leverkusen favori (58 %) · 2,3 buts attendus pour Leverkusen"
+     "why": "6 buts et 2 passes en 7 matchs · titulaire · Leverkusen favori (57 %) · 2,1 buts attendus pour Leverkusen"
     }
    },
    "second": {
@@ -2339,24 +2370,24 @@
    "form_a": "NVDDV",
    "rank_h": 16,
    "rank_a": 6,
-   "pH": 24,
-   "pD": 26,
-   "pA": 50,
+   "pH": 29,
+   "pD": 28,
+   "pA": 43,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 0.98,
-   "xgA": 1.54,
+   "xgA": 1.26,
    "scores": [
     "0-1",
     "1-1",
-    "0-2"
+    "0-0"
    ],
    "scorep": [
-    12,
-    12,
-    10
+    13,
+    13,
+    11
    ],
-   "over25": 46,
-   "btts": 49,
+   "over25": 39,
+   "btts": 45,
    "squad_h": [
     {
      "name": "Kenan Karaman",
@@ -2376,7 +2407,8 @@
      "p_dec": 20,
      "pid": "188057",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adil Aouchiche",
@@ -2396,47 +2428,8 @@
      "p_dec": 20,
      "pid": "290166",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Robin Gosens",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Schalke",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "198087",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Maximilian Wöber",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Schalke",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 7,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "231674",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Junior Adamu",
@@ -2456,70 +2449,74 @@
      "p_dec": 19,
      "pid": "305957",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Moussa Sylla",
+     "name": "Hwang Hee-Chan",
      "pos": "Attaquant",
      "side": "h",
      "team": "Schalke",
      "goals": 0,
-     "assists": 0,
-     "apps": 4,
+     "assists": 1,
+     "apps": 5,
      "l10": {
       "n": 7,
-      "gp": 4,
+      "gp": 5,
       "g": 0,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 5,
-     "p_dec": 8,
-     "pid": "40791",
+     "p_goal": 3,
+     "p_dec": 15,
+     "pid": "237224",
      "stats_league": "ger.1",
-     "season": 2026
-    }
-   ],
-   "squad_a": [
+     "season": 2026,
+     "lineup": "start"
+    },
     {
-     "name": "Christopher Nkunku",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "RB Leipzig",
-     "goals": 4,
-     "assists": 1,
+     "name": "Satoshi Tanaka",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Schalke",
+     "goals": 0,
+     "assists": 0,
      "apps": 6,
      "l10": {
       "n": 7,
       "gp": 6,
-      "g": 4,
-      "a": 1
+      "g": 0,
+      "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 31,
-     "pid": "222176",
+     "p_goal": 3,
+     "p_dec": 9,
+     "pid": "297565",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Tidiam Gomis",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "RB Leipzig",
-     "goals": 3,
-     "assists": 2,
+     "name": "Nikola Katic",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Schalke",
+     "goals": 0,
+     "assists": 0,
      "apps": 7,
      "l10": {
       "n": 7,
       "gp": 7,
-      "g": 3,
-      "a": 2
+      "g": 0,
+      "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 31,
-     "pid": "366911",
+     "p_goal": 1,
+     "p_dec": 4,
+     "pid": "220538",
      "stats_league": "ger.1",
-     "season": 2026
-    },
+     "season": 2026,
+     "lineup": "start"
+    }
+   ],
+   "squad_a": [
     {
      "name": "Antonio Nusa",
      "pos": "Milieu",
@@ -2534,11 +2531,12 @@
       "g": 3,
       "a": 5
      },
-     "p_goal": 19,
-     "p_dec": 43,
+     "p_goal": 16,
+     "p_dec": 37,
      "pid": "319368",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Rômulo",
@@ -2554,31 +2552,33 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 20,
+     "p_goal": 16,
+     "p_dec": 17,
      "pid": "324766",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Ridle Baku",
-     "pos": "Défenseur",
+     "name": "Christopher Nkunku",
+     "pos": "Attaquant",
      "side": "a",
      "team": "RB Leipzig",
-     "goals": 2,
-     "assists": 0,
-     "apps": 5,
+     "goals": 4,
+     "assists": 1,
+     "apps": 6,
      "l10": {
       "n": 7,
-      "gp": 5,
-      "g": 2,
-      "a": 0
+      "gp": 6,
+      "g": 4,
+      "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "258963",
+     "p_goal": 7,
+     "p_dec": 9,
+     "pid": "222176",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Ezechiel Banzuzi",
@@ -2594,106 +2594,153 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 8,
-     "p_dec": 22,
+     "p_goal": 6,
+     "p_dec": 18,
      "pid": "330233",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Willi Orbán",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "RB Leipzig",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "162162",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rocco Reitz",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "RB Leipzig",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 7,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "307364",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Schalke : 16e, 6 points, 4 buts marqués et 7 encaissés en 7 matchs.",
     "RB Leipzig : 6e, 12 points, 20 buts marqués et 11 encaissés en 7 matchs.",
     "Schalke : 4 buts marqués et 7 encaissés sur ses 7 derniers matchs de championnat.",
-    "RB Leipzig : 20 buts marqués et 11 encaissés sur ses 7 derniers matchs de championnat."
+    "RB Leipzig : 20 buts marqués et 11 encaissés sur ses 7 derniers matchs de championnat.",
+    "RB Leipzig : attaque revue à la baisse (−18 %) d'après la compo officielle (Ridle Baku, Christopher Nkunku, Tidiam Gomis ne commencent pas).",
+    "Compositions officielles prises en compte : Christopher Nkunku (remplaçant), Tidiam Gomis (remplaçant) ne commencent pas le match."
    ],
-   "reading": "RB Leipzig est favori sans écraser le match (50 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Schalke (16e) est en zone de relégation : match vital. RB Leipzig (6e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou RB Leipzig",
-     "p": 0.7599,
-     "prob": 76,
-     "fair": 1.32,
+     "p": 0.7124,
+     "prob": 71,
+     "fair": 1.4,
      "stars": 4,
      "why": "7 derniers matchs : Schalke 4 marqués / 7 encaissés · RB Leipzig 20 / 11"
     },
     "winner": {
      "market": "2",
      "label": "Victoire RB Leipzig",
-     "p": 0.504,
-     "prob": 50,
-     "fair": 1.98,
-     "stars": 2
+     "p": 0.4279,
+     "prob": 43,
+     "fair": 2.34,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1239,
-     "prob": 12,
-     "fair": 8.07,
+     "p": 0.1342,
+     "prob": 13,
+     "fair": 7.45,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "RB Leipzig mène à la mi-temps et gagne le match",
-     "p": 0.3069,
-     "prob": 31,
-     "fair": 3.26,
+     "market": "wa_nil",
+     "label": "RB Leipzig gagne sans encaisser de but",
+     "p": 0.2692,
+     "prob": 27,
+     "fair": 3.72,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_nil",
-      "label": "RB Leipzig gagne sans encaisser de but",
-      "p": 0.2953,
-      "prob": 30,
-      "fair": 3.39,
+      "market": "htft_a",
+      "label": "RB Leipzig mène à la mi-temps et gagne le match",
+      "p": 0.2503,
+      "prob": 25,
+      "fair": 4.0,
       "stars": 1
      },
      {
-      "market": "wa_o25",
-      "label": "RB Leipzig gagne et plus de 2,5 buts",
-      "p": 0.2845,
-      "prob": 28,
-      "fair": 3.51,
+      "market": "wa_by1",
+      "label": "RB Leipzig gagne d'un seul but",
+      "p": 0.236,
+      "prob": 24,
+      "fair": 4.24,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Christopher Nkunku marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Antonio Nusa marque",
+     "p": 0.16,
+     "prob": 16,
+     "fair": 6.25,
      "stars": 1,
-     "player": "Christopher Nkunku",
+     "player": "Antonio Nusa",
      "team": "RB Leipzig",
-     "pid": "222176",
+     "lineup": "start",
+     "pid": "319368",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 6 matchs · RB Leipzig favori (50 %) · 1,5 buts attendus pour RB Leipzig"
+     "why": "3 buts et 5 passes en 7 matchs · titulaire · RB Leipzig annoncé gagnant (43 %) · 1,3 but attendu pour RB Leipzig"
     },
     "decisive": {
      "market": "dec",
-     "label": "Christopher Nkunku buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "Antonio Nusa buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Christopher Nkunku",
+     "player": "Antonio Nusa",
      "team": "RB Leipzig",
      "base": [
-      6,
-      4,
-      1
+      7,
+      3,
+      5
      ],
-     "pid": "222176",
+     "lineup": "start",
+     "pid": "319368",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 6 matchs · RB Leipzig favori (50 %) · 1,5 buts attendus pour RB Leipzig"
+     "why": "3 buts et 5 passes en 7 matchs · titulaire · RB Leipzig annoncé gagnant (43 %) · 1,3 but attendu pour RB Leipzig"
     }
    },
    "second": {

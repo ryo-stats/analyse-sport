@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:09+01:00",
+ "generated": "2026-10-31T14:34+01:00",
  "date": "2026-10-31",
  "matches": [
   {
@@ -188,18 +188,18 @@
    "home": "Bologna",
    "away": "Monza",
    "state": "pre",
-   "xgH": 2.37,
-   "xgA": 1.18,
+   "xgH": 2.26,
+   "xgA": 1.1,
    "pH": 64,
    "pD": 19,
-   "pA": 18,
+   "pA": 17,
    "edate": "20261031",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Bologna ou nul",
-     "p": 0.8241,
-     "prob": 82,
+     "p": 0.8279,
+     "prob": 83,
      "fair": 1.21,
      "stars": 5,
      "why": "9 derniers matchs : Bologna 12 marqués / 12 encaissés · Monza 16 / 22"
@@ -207,7 +207,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Bologna",
-     "p": 0.6382,
+     "p": 0.6362,
      "prob": 64,
      "fair": 1.57,
      "stars": 3
@@ -215,52 +215,54 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0952,
+     "p": 0.0975,
      "prob": 10,
-     "fair": 10.51,
+     "fair": 10.25,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "h2",
      "label": "Bologna gagne avec 2 buts d'écart ou plus",
-     "p": 0.4187,
-     "prob": 42,
-     "fair": 2.39,
+     "p": 0.4103,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Samuel Mbangula marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "label": "Federico Bernardeschi marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Samuel Mbangula",
+     "player": "Federico Bernardeschi",
      "team": "Bologna",
-     "pid": "355997",
+     "lineup": "start",
+     "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 4 matchs · Bologna favori (64 %) · 2,4 buts attendus pour Bologna"
+     "why": "2 buts et 0 passe en 9 matchs · titulaire · Bologna favori (64 %) · 2,3 buts attendus pour Bologna"
     },
     "decisive": {
      "market": "dec",
-     "label": "Samuel Mbangula buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "label": "Federico Bernardeschi buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Samuel Mbangula",
+     "player": "Federico Bernardeschi",
      "team": "Bologna",
      "base": [
-      4,
-      3,
+      9,
+      2,
       0
      ],
-     "pid": "355997",
+     "lineup": "start",
+     "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 4 matchs · Bologna favori (64 %) · 2,4 buts attendus pour Bologna"
+     "why": "2 buts et 0 passe en 9 matchs · titulaire · Bologna favori (64 %) · 2,3 buts attendus pour Bologna"
     }
    }
   },
@@ -274,70 +276,68 @@
    "home": "Leverkusen",
    "away": "Stuttgart",
    "state": "pre",
-   "xgH": 2.35,
-   "xgA": 1.42,
-   "pH": 58,
-   "pD": 19,
+   "xgH": 2.08,
+   "xgA": 1.23,
+   "pH": 57,
+   "pD": 21,
    "pA": 22,
    "edate": "20261031",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Leverkusen ou nul",
-     "p": 0.7751,
+     "p": 0.7783,
      "prob": 78,
-     "fair": 1.29,
+     "fair": 1.28,
      "stars": 4,
      "why": "7 derniers matchs : Leverkusen 16 marqués / 12 encaissés · Stuttgart 10 / 13"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Leverkusen",
-     "p": 0.5812,
-     "prob": 58,
-     "fair": 1.72,
+     "p": 0.5683,
+     "prob": 57,
+     "fair": 1.76,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0903,
-     "prob": 9,
-     "fair": 11.07,
+     "p": 0.0972,
+     "prob": 10,
+     "fair": 10.29,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "scw",
-     "label": "Patrik Schick marque et Leverkusen gagne",
-     "p": 0.3985,
-     "prob": 40,
-     "fair": 2.51,
-     "stars": 1,
-     "player": "Patrik Schick",
-     "team": "Leverkusen",
-     "side": "h"
+     "market": "wh_o25",
+     "label": "Leverkusen gagne et plus de 2,5 buts",
+     "p": 0.4133,
+     "prob": 41,
+     "fair": 2.42,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Patrik Schick marque",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.5,
+     "prob": 50,
+     "fair": 2.0,
      "stars": 2,
      "player": "Patrik Schick",
      "team": "Leverkusen",
+     "lineup": "start",
      "pid": "212330",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 7 matchs · Leverkusen favori (58 %) · 2,3 buts attendus pour Leverkusen"
+     "why": "6 buts et 2 passes en 7 matchs · titulaire · Leverkusen favori (57 %) · 2,1 buts attendus pour Leverkusen"
     },
     "decisive": {
      "market": "dec",
      "label": "Patrik Schick buteur ou passeur",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3,
      "player": "Patrik Schick",
      "team": "Leverkusen",
@@ -346,10 +346,11 @@
       6,
       2
      ],
+     "lineup": "start",
      "pid": "212330",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 7 matchs · Leverkusen favori (58 %) · 2,3 buts attendus pour Leverkusen"
+     "why": "6 buts et 2 passes en 7 matchs · titulaire · Leverkusen favori (57 %) · 2,1 buts attendus pour Leverkusen"
     }
    }
   },
@@ -536,78 +537,80 @@
    "away": "RB Leipzig",
    "state": "pre",
    "xgH": 0.98,
-   "xgA": 1.54,
-   "pH": 24,
-   "pD": 26,
-   "pA": 50,
+   "xgA": 1.26,
+   "pH": 29,
+   "pD": 28,
+   "pA": 43,
    "edate": "20261031",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou RB Leipzig",
-     "p": 0.7599,
-     "prob": 76,
-     "fair": 1.32,
+     "p": 0.7124,
+     "prob": 71,
+     "fair": 1.4,
      "stars": 4,
      "why": "7 derniers matchs : Schalke 4 marqués / 7 encaissés · RB Leipzig 20 / 11"
     },
     "winner": {
      "market": "2",
      "label": "Victoire RB Leipzig",
-     "p": 0.504,
-     "prob": 50,
-     "fair": 1.98,
-     "stars": 2
+     "p": 0.4279,
+     "prob": 43,
+     "fair": 2.34,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1239,
-     "prob": 12,
-     "fair": 8.07,
+     "p": 0.1342,
+     "prob": 13,
+     "fair": 7.45,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "RB Leipzig mène à la mi-temps et gagne le match",
-     "p": 0.3069,
-     "prob": 31,
-     "fair": 3.26,
+     "market": "wa_nil",
+     "label": "RB Leipzig gagne sans encaisser de but",
+     "p": 0.2692,
+     "prob": 27,
+     "fair": 3.72,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Christopher Nkunku marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Antonio Nusa marque",
+     "p": 0.16,
+     "prob": 16,
+     "fair": 6.25,
      "stars": 1,
-     "player": "Christopher Nkunku",
+     "player": "Antonio Nusa",
      "team": "RB Leipzig",
-     "pid": "222176",
+     "lineup": "start",
+     "pid": "319368",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 6 matchs · RB Leipzig favori (50 %) · 1,5 buts attendus pour RB Leipzig"
+     "why": "3 buts et 5 passes en 7 matchs · titulaire · RB Leipzig annoncé gagnant (43 %) · 1,3 but attendu pour RB Leipzig"
     },
     "decisive": {
      "market": "dec",
-     "label": "Christopher Nkunku buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "Antonio Nusa buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Christopher Nkunku",
+     "player": "Antonio Nusa",
      "team": "RB Leipzig",
      "base": [
-      6,
-      4,
-      1
+      7,
+      3,
+      5
      ],
-     "pid": "222176",
+     "lineup": "start",
+     "pid": "319368",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 6 matchs · RB Leipzig favori (50 %) · 1,5 buts attendus pour RB Leipzig"
+     "why": "3 buts et 5 passes en 7 matchs · titulaire · RB Leipzig annoncé gagnant (43 %) · 1,3 but attendu pour RB Leipzig"
     }
    }
   },
