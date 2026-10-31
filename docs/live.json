@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T18:08+01:00",
+ "generated": "2026-10-31T18:33+01:00",
  "date": "2026-10-31",
  "matches": [
   {
@@ -1120,7 +1120,7 @@
    "time": "16:15",
    "home": "Rayo",
    "away": "Celta Vigo",
-   "state": "in",
+   "state": "post",
    "xgH": 1.08,
    "xgA": 1.0,
    "pH": 37,
@@ -1155,37 +1155,33 @@
      "value": "1-0"
     },
     "fun": {
-     "market": "scw",
-     "label": "Sergio Camello marque et Rayo gagne",
-     "p": 0.2471,
-     "prob": 25,
-     "fair": 4.05,
-     "stars": 1,
-     "player": "Sergio Camello",
-     "team": "Rayo",
-     "side": "h"
+     "market": "wh_nil",
+     "label": "Rayo gagne sans encaisser de but",
+     "p": 0.2424,
+     "prob": 24,
+     "fair": 4.13,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Sergio Camello marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Sergio Camello",
      "team": "Rayo",
-     "lineup": "start",
      "pid": "276652",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "7 buts et 1 passe en 10 matchs · forme : 7 buts et 1 passe sur ses 9 derniers matchs · titulaire · Rayo annoncé gagnant (37 %) · 1,1 but attendu pour Rayo"
+     "why": "7 buts et 1 passe en 10 matchs · forme : 7 buts et 2 passes sur ses 10 derniers matchs · Rayo annoncé gagnant (37 %) · 1,1 but attendu pour Rayo"
     },
     "decisive": {
      "market": "dec",
      "label": "Sergio Camello buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Sergio Camello",
      "team": "Rayo",
@@ -1194,11 +1190,10 @@
       7,
       1
      ],
-     "lineup": "start",
      "pid": "276652",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "7 buts et 1 passe en 10 matchs · forme : 7 buts et 1 passe sur ses 9 derniers matchs · titulaire · Rayo annoncé gagnant (37 %) · 1,1 but attendu pour Rayo"
+     "why": "7 buts et 1 passe en 10 matchs · forme : 7 buts et 2 passes sur ses 10 derniers matchs · Rayo annoncé gagnant (37 %) · 1,1 but attendu pour Rayo"
     }
    }
   },
@@ -1299,7 +1294,7 @@
    "time": "18:30",
    "home": "Spurs",
    "away": "C Palace",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.59,
    "xgA": 0.94,
    "pH": 52,
@@ -1475,9 +1470,9 @@
    "time": "18:30",
    "home": "Bayern",
    "away": "Dortmund",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.63,
-   "xgA": 0.87,
+   "xgA": 0.86,
    "pH": 56,
    "pD": 25,
    "pA": 20,
@@ -2046,7 +2041,7 @@
    "time": "19:00",
    "home": "Nashville Predators",
    "away": "Tampa Bay Lightning",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.84,
    "xgA": 3.66,
    "pH": 30,
@@ -2115,7 +2110,7 @@
    "time": "19:00",
    "home": "New York Islanders",
    "away": "Edmonton Oilers",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.85,
    "xgA": 3.22,
    "pH": 36,
@@ -2588,8 +2583,8 @@
  "summary": {
   "date": "2026-10-31",
   "yesterday": {
-   "n": 146,
-   "ok": 75
+   "n": 151,
+   "ok": 77
   },
   "foot": 22,
   "nhl": 10,
@@ -2607,10 +2602,10 @@
     "match": "Betis – Málaga"
    },
    {
-    "label": "Bayern ou nul",
-    "prob": 80,
-    "time": "18:30",
-    "match": "Bayern – Dortmund"
+    "label": "Connor McDavid : au moins 1 point",
+    "prob": 78,
+    "time": "19:00",
+    "match": "New York Islanders – Edmonton Oilers"
    }
   ]
  }
