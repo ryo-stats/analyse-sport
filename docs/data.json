@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:34+01:00",
+ "generated": "2026-10-31T14:59+01:00",
  "date": "2026-10-31",
  "nhl_date": "2026-10-31",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-10-31T12:30:00+00:00",
    "time": "13:30",
    "state": "in",
-   "score": "0-0",
+   "score": "2-0",
    "home": "Chelsea",
    "away": "Man Utd",
    "form_h": "NDVVD",
@@ -406,7 +406,7 @@
    "kickoff": "2026-10-31T13:00:00+00:00",
    "time": "14:00",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Levante",
    "away": "Atlético",
    "form_h": "NVNND",
@@ -1608,24 +1608,24 @@
    "form_a": "NVNDV",
    "rank_h": 18,
    "rank_a": 13,
-   "pH": 41,
-   "pD": 24,
-   "pA": 35,
+   "pH": 42,
+   "pD": 26,
+   "pA": 32,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.59,
-   "xgA": 1.43,
+   "xgH": 1.39,
+   "xgA": 1.18,
    "scores": [
     "1-1",
-    "2-1",
-    "1-2"
+    "1-0",
+    "0-1"
    ],
    "scorep": [
+    13,
     11,
-    9,
-    8
+    9
    ],
-   "over25": 58,
-   "btts": 61,
+   "over25": 47,
+   "btts": 52,
    "squad_h": [
     {
      "name": "Joe Scally",
@@ -1641,51 +1641,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 28,
-     "p_dec": 36,
+     "p_goal": 25,
+     "p_dec": 33,
      "pid": "272135",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Wael Mohya",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Gladbach",
-     "goals": 2,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 21,
-     "p_dec": 32,
-     "pid": "408539",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Hugo Bolin",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Gladbach",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 21,
-     "p_dec": 26,
-     "pid": "330239",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Shuto Machino",
@@ -1701,31 +1662,33 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 23,
+     "p_goal": 19,
+     "p_dec": 20,
      "pid": "271352",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Isac Lidberg",
-     "pos": "Attaquant",
+     "name": "Wael Mohya",
+     "pos": "Milieu",
      "side": "h",
      "team": "Gladbach",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
+     "goals": 2,
+     "assists": 1,
+     "apps": 7,
      "l10": {
       "n": 7,
-      "gp": 6,
-      "g": 1,
-      "a": 0
+      "gp": 7,
+      "g": 2,
+      "a": 1
      },
-     "p_goal": 14,
-     "p_dec": 16,
-     "pid": "221690",
+     "p_goal": 18,
+     "p_dec": 28,
+     "pid": "408539",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Florian Neuhaus",
@@ -1741,11 +1704,54 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 23,
+     "p_goal": 10,
+     "p_dec": 20,
      "pid": "238527",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Isac Lidberg",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Gladbach",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 7,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "221690",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Philipp Sander",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Gladbach",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 9,
+     "pid": "275805",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1763,31 +1769,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 31,
-     "p_dec": 34,
+     "p_goal": 26,
+     "p_dec": 29,
      "pid": "332543",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Steffen Tigges",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Paderborn",
-     "goals": 2,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 29,
-     "p_dec": 41,
-     "pid": "231764",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Santiago Castaneda",
@@ -1803,31 +1790,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 25,
+     "p_goal": 14,
+     "p_dec": 21,
      "pid": "338837",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Rayan Philippe",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Paderborn",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 7,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 17,
-     "pid": "291849",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Gabriel Vidovic",
@@ -1843,11 +1811,33 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 16,
+     "p_goal": 8,
+     "p_dec": 13,
      "pid": "323936",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Steffen Tigges",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Paderborn",
+     "goals": 2,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 8,
+     "p_dec": 12,
+     "pid": "231764",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Marvin Pieringer",
@@ -1863,18 +1853,43 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 12,
+     "p_goal": 7,
+     "p_dec": 10,
      "pid": "312389",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Raphael Obermair",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Paderborn",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 11,
+     "pid": "251639",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Gladbach : 18e, 3 points, 11 buts marqués et 22 encaissés en 7 matchs.",
     "Paderborn : 13e, 8 points, 6 buts marqués et 9 encaissés en 7 matchs.",
     "Gladbach : 11 buts marqués et 22 encaissés sur ses 7 derniers matchs de championnat.",
-    "Paderborn : 6 buts marqués et 9 encaissés sur ses 7 derniers matchs de championnat."
+    "Paderborn : 6 buts marqués et 9 encaissés sur ses 7 derniers matchs de championnat.",
+    "Gladbach : attaque revue à la baisse (−12 %) d'après la compo officielle (Hugo Bolin ne commence pas).",
+    "Paderborn : attaque revue à la baisse (−17 %) d'après la compo officielle (Steffen Tigges, Rayan Philippe ne commencent pas).",
+    "Compositions officielles prises en compte : Hugo Bolin (absent), Steffen Tigges (remplaçant) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Gladbach (18e) est en zone de relégation : match vital. Paderborn (13e) lutte pour le maintien, 2 points d'avance sur la zone rouge.",
@@ -1882,75 +1897,76 @@
     "main": {
      "market": "1N",
      "label": "Gladbach ou nul",
-     "p": 0.6547,
-     "prob": 65,
-     "fair": 1.53,
+     "p": 0.6815,
+     "prob": 68,
+     "fair": 1.47,
      "stars": 3,
      "why": "7 derniers matchs : Gladbach 11 marqués / 22 encaissés · Paderborn 6 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Gladbach",
-     "p": 0.4132,
-     "prob": 41,
-     "fair": 2.42,
+     "p": 0.4176,
+     "prob": 42,
+     "fair": 2.39,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0881,
-     "prob": 9,
-     "fair": 11.35,
+     "label": "Score exact 1-0",
+     "p": 0.1063,
+     "prob": 11,
+     "fair": 9.41,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3564,
-     "prob": 36,
-     "fair": 2.81,
+     "p": 0.2578,
+     "prob": 26,
+     "fair": 3.88,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o25",
-      "label": "Gladbach gagne et plus de 2,5 buts",
-      "p": 0.274,
-      "prob": 27,
-      "fair": 3.65,
+      "market": "htft_h",
+      "label": "Gladbach mène à la mi-temps et gagne le match",
+      "p": 0.2474,
+      "prob": 25,
+      "fair": 4.04,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Gladbach mène à la mi-temps et gagne le match",
-      "p": 0.249,
-      "prob": 25,
-      "fair": 4.02,
+      "market": "wh_o25",
+      "label": "Gladbach gagne et plus de 2,5 buts",
+      "p": 0.2373,
+      "prob": 24,
+      "fair": 4.21,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Joe Scally marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
      "player": "Joe Scally",
      "team": "Gladbach",
+     "lineup": "start",
      "pid": "272135",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 7 matchs · Gladbach annoncé gagnant (41 %) · 1,6 buts attendus pour Gladbach"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Gladbach annoncé gagnant (42 %) · 1,4 but attendu pour Gladbach"
     },
     "decisive": {
      "market": "dec",
      "label": "Joe Scally buteur ou passeur",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
      "player": "Joe Scally",
      "team": "Gladbach",
@@ -1959,10 +1975,11 @@
       3,
       1
      ],
+     "lineup": "start",
      "pid": "272135",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 7 matchs · Gladbach annoncé gagnant (41 %) · 1,6 buts attendus pour Gladbach"
+     "why": "3 buts et 1 passe en 7 matchs · titulaire · Gladbach annoncé gagnant (42 %) · 1,4 but attendu pour Gladbach"
     }
    },
    "second": {
@@ -1989,24 +2006,24 @@
    "form_a": "NDDDV",
    "rank_h": 9,
    "rank_a": 3,
-   "pH": 42,
-   "pD": 21,
+   "pH": 41,
+   "pD": 22,
    "pA": 37,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.03,
-   "xgA": 1.92,
+   "xgH": 1.83,
+   "xgA": 1.74,
    "scores": [
-    "2-1",
     "1-1",
-    "2-2"
+    "2-1",
+    "1-2"
    ],
    "scorep": [
+    9,
     8,
-    8,
-    7
+    8
    ],
-   "over25": 75,
-   "btts": 74,
+   "over25": 69,
+   "btts": 69,
    "squad_h": [
     {
      "name": "Michael Gregoritsch",
@@ -2022,11 +2039,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 37,
-     "p_dec": 40,
+     "p_goal": 34,
+     "p_dec": 37,
      "pid": "146804",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Robin Fellhauer",
@@ -2042,11 +2060,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 28,
-     "p_dec": 32,
+     "p_goal": 26,
+     "p_dec": 29,
      "pid": "306928",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Fabian Rieder",
@@ -2062,31 +2081,12 @@
       "g": 2,
       "a": 4
      },
-     "p_goal": 21,
-     "p_dec": 51,
+     "p_goal": 19,
+     "p_dec": 47,
      "pid": "308908",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Rodrigo Ribeiro",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Augsburg",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 21,
-     "p_dec": 22,
-     "pid": "332689",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Han-Noah Massengo",
@@ -2102,11 +2102,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 26,
+     "p_goal": 11,
+     "p_dec": 24,
      "pid": "282885",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Anton Kade",
@@ -2122,11 +2123,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 22,
+     "p_goal": 10,
+     "p_dec": 20,
      "pid": "333837",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rodrigo Ribeiro",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Augsburg",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 6,
+     "pid": "332689",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -2144,31 +2167,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 35,
-     "p_dec": 38,
+     "p_goal": 32,
+     "p_dec": 35,
      "pid": "303031",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Igor Matanovic",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Freiburg",
-     "goals": 3,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 31,
-     "p_dec": 40,
-     "pid": "310883",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maximilian Eggestein",
@@ -2184,11 +2188,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 28,
-     "p_dec": 33,
+     "p_goal": 26,
+     "p_dec": 31,
      "pid": "214203",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Derry Scherhant",
@@ -2204,11 +2209,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 24,
-     "p_dec": 41,
+     "p_goal": 22,
+     "p_dec": 38,
      "pid": "346619",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Yannick Engelhardt",
@@ -2224,11 +2230,33 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 25,
+     "p_goal": 19,
+     "p_dec": 23,
      "pid": "337079",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Igor Matanovic",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Freiburg",
+     "goals": 3,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 10,
+     "p_dec": 13,
+     "pid": "310883",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Keisuke Goto",
@@ -2244,94 +2272,99 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 12,
+     "p_goal": 3,
+     "p_dec": 3,
      "pid": "346208",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Augsburg : 9e, 9 points, 17 buts marqués et 13 encaissés en 7 matchs.",
     "Freiburg : 3e, 13 points, 16 buts marqués et 9 encaissés en 7 matchs.",
     "Augsburg : 17 buts marqués et 13 encaissés sur ses 7 derniers matchs de championnat.",
-    "Freiburg : 16 buts marqués et 9 encaissés sur ses 7 derniers matchs de championnat."
+    "Freiburg : 16 buts marqués et 9 encaissés sur ses 7 derniers matchs de championnat.",
+    "Augsburg : attaque revue à la baisse (−10 %) d'après la compo officielle (Rodrigo Ribeiro ne commence pas).",
+    "Freiburg : attaque revue à la baisse (−9 %) d'après la compo officielle (Igor Matanovic ne commence pas).",
+    "Compositions officielles prises en compte : Rodrigo Ribeiro (remplaçant), Igor Matanovic (remplaçant) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Freiburg (3e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.7541,
-     "prob": 75,
-     "fair": 1.33,
-     "stars": 4,
+     "market": "btts_y",
+     "label": "Les deux équipes marquent",
+     "p": 0.6924,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3,
      "why": "7 derniers matchs : Augsburg 17 marqués / 13 encaissés · Freiburg 16 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Augsburg",
-     "p": 0.4182,
-     "prob": 42,
-     "fair": 2.39,
+     "p": 0.4097,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0763,
+     "p": 0.0822,
      "prob": 8,
-     "fair": 13.11,
+     "fair": 12.17,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Augsburg gagne et plus de 2,5 buts",
-     "p": 0.3392,
-     "prob": 34,
-     "fair": 2.95,
+     "p": 0.3108,
+     "prob": 31,
+     "fair": 3.22,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_btts",
       "label": "Augsburg gagne et les deux équipes marquent",
-      "p": 0.2903,
-      "prob": 29,
-      "fair": 3.44,
+      "p": 0.2618,
+      "prob": 26,
+      "fair": 3.82,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Augsburg mène à la mi-temps et gagne le match",
-      "p": 0.2599,
-      "prob": 26,
-      "fair": 3.85,
+      "market": "wh_by1",
+      "label": "Augsburg gagne d'un seul but",
+      "p": 0.191,
+      "prob": 19,
+      "fair": 5.24,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Michael Gregoritsch marque",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Michael Gregoritsch",
      "team": "Augsburg",
+     "lineup": "start",
      "pid": "146804",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 7 matchs · Augsburg annoncé gagnant (42 %) · 2,0 buts attendus pour Augsburg"
+     "why": "4 buts et 0 passe en 7 matchs · titulaire · Augsburg annoncé gagnant (41 %) · 1,8 buts attendus pour Augsburg"
     },
     "decisive": {
      "market": "dec",
      "label": "Michael Gregoritsch buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Michael Gregoritsch",
      "team": "Augsburg",
@@ -2340,10 +2373,11 @@
       4,
       0
      ],
+     "lineup": "start",
      "pid": "146804",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 7 matchs · Augsburg annoncé gagnant (42 %) · 2,0 buts attendus pour Augsburg"
+     "why": "4 buts et 0 passe en 7 matchs · titulaire · Augsburg annoncé gagnant (41 %) · 1,8 buts attendus pour Augsburg"
     }
    },
    "second": {
@@ -2767,24 +2801,24 @@
    "form_a": "NVVVD",
    "rank_h": 7,
    "rank_a": 10,
-   "pH": 47,
+   "pH": 50,
    "pD": 20,
-   "pA": 34,
+   "pA": 30,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.33,
-   "xgA": 1.98,
+   "xgH": 2.22,
+   "xgA": 1.7,
    "scores": [
     "2-1",
-    "2-2",
-    "1-1"
+    "1-1",
+    "2-2"
    ],
    "scorep": [
+    8,
     7,
-    7,
-    6
+    7
    ],
-   "over25": 80,
-   "btts": 78,
+   "over25": 75,
+   "btts": 73,
    "squad_h": [
     {
      "name": "Niclas Füllkrug",
@@ -2800,11 +2834,12 @@
       "g": 8,
       "a": 0
      },
-     "p_goal": 66,
-     "p_dec": 68,
+     "p_goal": 64,
+     "p_dec": 66,
      "pid": "170257",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Marco Grüll",
@@ -2820,11 +2855,12 @@
       "g": 2,
       "a": 5
      },
-     "p_goal": 30,
-     "p_dec": 64,
+     "p_goal": 29,
+     "p_dec": 62,
      "pid": "305853",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ludovit Reis",
@@ -2840,51 +2876,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 30,
+     "p_goal": 24,
+     "p_dec": 29,
      "pid": "261363",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Eren Dinkci",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Bremen",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 17,
-     "p_dec": 30,
-     "pid": "312112",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Dariusz Stalmach",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Bremen",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 7,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "399747",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mitchell Weiser",
@@ -2900,11 +2897,54 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
+     "p_goal": 11,
      "p_dec": 12,
      "pid": "159139",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Eren Dinkci",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Bremen",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 5,
+     "p_dec": 9,
+     "pid": "312112",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Dariusz Stalmach",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Bremen",
+     "goals": 1,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 7,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "399747",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -2922,11 +2962,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 27,
-     "p_dec": 45,
+     "p_goal": 24,
+     "p_dec": 40,
      "pid": "338854",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adam Hlozek",
@@ -2942,71 +2983,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 26,
-     "p_dec": 37,
+     "p_goal": 23,
+     "p_dec": 33,
      "pid": "292169",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Bambasé Conté",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Hoffenheim",
-     "goals": 2,
-     "assists": 2,
-     "apps": 7,
-     "l10": {
-      "n": 7,
-      "gp": 7,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 23,
-     "p_dec": 42,
-     "pid": "336355",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Alexander Prass",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Hoffenheim",
-     "goals": 2,
-     "assists": 1,
-     "apps": 3,
-     "l10": {
-      "n": 7,
-      "gp": 3,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 21,
-     "p_dec": 30,
-     "pid": "320939",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Tim Lemperle",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Hoffenheim",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 7,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 18,
-     "pid": "303792",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Leon Avdullahu",
@@ -3022,63 +3004,130 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 21,
+     "p_goal": 12,
+     "p_dec": 18,
      "pid": "362590",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Andrej Kramaric",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Hoffenheim",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 11,
+     "p_dec": 20,
+     "pid": "139520",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Ozan Kabak",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Hoffenheim",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 7,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 12,
+     "pid": "266565",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Tim Lemperle",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Hoffenheim",
+     "goals": 1,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 7,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 5,
+     "pid": "303792",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Bremen : 7e, 12 points, 15 buts marqués et 14 encaissés en 7 matchs.",
     "Hoffenheim : 10e, 9 points, 14 buts marqués et 14 encaissés en 7 matchs.",
     "Bremen : 15 buts marqués et 14 encaissés sur ses 7 derniers matchs de championnat.",
-    "Hoffenheim : 14 buts marqués et 14 encaissés sur ses 7 derniers matchs de championnat."
+    "Hoffenheim : 14 buts marqués et 14 encaissés sur ses 7 derniers matchs de championnat.",
+    "Bremen : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Hoffenheim : attaque revue à la baisse (−14 %) d'après la compo officielle (Bambasé Conté ne commence pas).",
+    "Compositions officielles prises en compte : Eren Dinkci (remplaçant), Alexander Prass (absent), Bambasé Conté (absent) ne commencent pas le match."
    ],
-   "reading": "Bremen est favori sans écraser le match (47 %).",
+   "reading": "Bremen est favori sans écraser le match (50 %).",
    "stakes": "Bremen (7e) est dans la course à l'Europe. Adversaires directs au classement : 3 points d'écart.",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.8039,
-     "prob": 80,
-     "fair": 1.24,
-     "stars": 5,
+     "p": 0.7499,
+     "prob": 75,
+     "fair": 1.33,
+     "stars": 4,
      "why": "7 derniers matchs : Bremen 15 marqués / 14 encaissés · Hoffenheim 14 / 14"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bremen",
-     "p": 0.4658,
-     "prob": 47,
-     "fair": 2.15,
+     "p": 0.4985,
+     "prob": 50,
+     "fair": 2.01,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0721,
-     "prob": 7,
-     "fair": 13.86,
+     "p": 0.0831,
+     "prob": 8,
+     "fair": 12.03,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Bremen gagne et plus de 2,5 buts",
-     "p": 0.3982,
-     "prob": 40,
-     "fair": 2.51,
+     "p": 0.4055,
+     "prob": 41,
+     "fair": 2.47,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "scw",
       "label": "Niclas Füllkrug marque et Bremen gagne",
-      "p": 0.3848,
-      "prob": 38,
-      "fair": 2.6,
+      "p": 0.4016,
+      "prob": 40,
+      "fair": 2.49,
       "stars": 1,
       "player": "Niclas Füllkrug",
       "team": "Bremen",
@@ -3087,32 +3136,33 @@
      {
       "market": "wh_btts",
       "label": "Bremen gagne et les deux équipes marquent",
-      "p": 0.3416,
+      "p": 0.3357,
       "prob": 34,
-      "fair": 2.93,
+      "fair": 2.98,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Niclas Füllkrug marque",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
+     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 7 matchs · Bremen favori (47 %) · 2,3 buts attendus pour Bremen"
+     "why": "8 buts et 0 passe en 7 matchs · titulaire · Bremen favori (50 %) · 2,2 buts attendus pour Bremen"
     },
     "decisive": {
      "market": "dec",
      "label": "Niclas Füllkrug buteur ou passeur",
-     "p": 0.68,
-     "prob": 68,
-     "fair": 1.47,
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
@@ -3121,10 +3171,11 @@
       8,
       0
      ],
+     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 7 matchs · Bremen favori (47 %) · 2,3 buts attendus pour Bremen"
+     "why": "8 buts et 0 passe en 7 matchs · titulaire · Bremen favori (50 %) · 2,2 buts attendus pour Bremen"
     }
    },
    "second": {
