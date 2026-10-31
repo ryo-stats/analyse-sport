@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T13:19+01:00",
+ "generated": "2026-10-31T13:44+01:00",
  "date": "2026-10-31",
  "nhl_date": "2026-10-31",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Premier League",
    "kickoff": "2026-10-31T12:30:00+00:00",
    "time": "13:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Chelsea",
    "away": "Man Utd",
    "form_h": "NDVVD",
@@ -296,8 +296,6 @@
     "Man Utd : 16e, 7 points, 10 buts marqués et 13 encaissés en 8 matchs.",
     "Chelsea : 17 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
     "Man Utd : 10 buts marqués et 13 encaissés sur ses 8 derniers matchs de championnat.",
-    "Chelsea : attaque revue à la baisse (−21 %) d'après la compo officielle (Jordan Henderson, João Pedro ne commencent pas).",
-    "Man Utd : attaque revue à la baisse (−6 %) d'après la compo officielle (Benjamin Sesko ne commence pas).",
     "Compositions officielles prises en compte : Jordan Henderson (absent), João Pedro (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -317,7 +315,7 @@
      "label": "Victoire Chelsea",
      "p": 0.4474,
      "prob": 45,
-     "fair": 2.23,
+     "fair": 2.24,
      "stars": 1
     },
     "score": {
@@ -332,7 +330,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4184,
+     "p": 0.4183,
      "prob": 42,
      "fair": 2.39,
      "stars": 1
@@ -341,7 +339,7 @@
      {
       "market": "wh_o25",
       "label": "Chelsea gagne et plus de 2,5 buts",
-      "p": 0.3213,
+      "p": 0.3212,
       "prob": 32,
       "fair": 3.11,
       "stars": 1
@@ -349,7 +347,7 @@
      {
       "market": "htft_h",
       "label": "Chelsea mène à la mi-temps et gagne le match",
-      "p": 0.2756,
+      "p": 0.2755,
       "prob": 28,
       "fair": 3.63,
       "stars": 1
@@ -26886,7 +26884,7 @@
  },
  "second": {
   "foot": {
-   "ok": 22,
+   "ok": 21,
    "elo": {
     "fra.1": 672,
     "eng.1": 822,
@@ -26894,7 +26892,23 @@
     "ita.1": 842,
     "ger.1": 650
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 75
+    },
+    "eng.1": {
+     "2026": 80
+    },
+    "esp.1": {
+     "2026": 100
+    },
+    "ita.1": {
+     "2026": 90
+    },
+    "ger.1": {
+     "2026": 64
+    }
+   },
    "status": "ok"
   },
   "nhl": {
