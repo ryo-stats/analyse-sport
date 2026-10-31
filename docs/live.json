@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T15:24+01:00",
+ "generated": "2026-10-31T15:49+01:00",
  "date": "2026-10-31",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "13:30",
    "home": "Chelsea",
    "away": "Man Utd",
-   "state": "in",
+   "state": "post",
    "xgH": 1.79,
    "xgA": 1.5,
    "pH": 45,
@@ -55,38 +55,36 @@
     },
     "player": {
      "market": "scorer",
-     "label": "Morgan Rogers marque",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "João Pedro marque",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Morgan Rogers",
+     "player": "João Pedro",
      "team": "Chelsea",
-     "lineup": "start",
-     "pid": "265653",
+     "pid": "284960",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · titulaire · Chelsea annoncé gagnant (45 %) · 1,8 buts attendus pour Chelsea"
+     "why": "5 buts et 3 passes en 6 matchs · Chelsea annoncé gagnant (45 %) · 1,8 buts attendus pour Chelsea"
     },
     "decisive": {
      "market": "dec",
-     "label": "Morgan Rogers buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Morgan Rogers",
+     "label": "João Pedro buteur ou passeur",
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "player": "João Pedro",
      "team": "Chelsea",
      "base": [
-      8,
-      4,
-      1
+      6,
+      5,
+      3
      ],
-     "lineup": "start",
-     "pid": "265653",
+     "pid": "284960",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · titulaire · Chelsea annoncé gagnant (45 %) · 1,8 buts attendus pour Chelsea"
+     "why": "5 buts et 3 passes en 6 matchs · Chelsea annoncé gagnant (45 %) · 1,8 buts attendus pour Chelsea"
     }
    }
   },
@@ -275,7 +273,7 @@
    "time": "15:30",
    "home": "Leverkusen",
    "away": "Stuttgart",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.08,
    "xgA": 1.23,
    "pH": 57,
@@ -363,7 +361,7 @@
    "time": "15:30",
    "home": "Gladbach",
    "away": "Paderborn",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.39,
    "xgA": 1.18,
    "pH": 42,
@@ -391,16 +389,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1063,
+     "p": 0.1064,
      "prob": 11,
-     "fair": 9.41,
+     "fair": 9.4,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.2578,
+     "p": 0.2577,
      "prob": 26,
      "fair": 3.88,
      "stars": 1
@@ -451,7 +449,7 @@
    "time": "15:30",
    "home": "Augsburg",
    "away": "Freiburg",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.83,
    "xgA": 1.74,
    "pH": 41,
@@ -462,7 +460,7 @@
     "main": {
      "market": "btts_y",
      "label": "Les deux équipes marquent",
-     "p": 0.6924,
+     "p": 0.6925,
      "prob": 69,
      "fair": 1.44,
      "stars": 3,
@@ -479,16 +477,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0822,
+     "p": 0.0821,
      "prob": 8,
-     "fair": 12.17,
+     "fair": 12.18,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Augsburg gagne et plus de 2,5 buts",
-     "p": 0.3108,
+     "p": 0.3107,
      "prob": 31,
      "fair": 3.22,
      "stars": 1
@@ -539,7 +537,7 @@
    "time": "15:30",
    "home": "Schalke",
    "away": "RB Leipzig",
-   "state": "pre",
+   "state": "in",
    "xgH": 0.98,
    "xgA": 1.26,
    "pH": 29,
@@ -550,7 +548,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou RB Leipzig",
-     "p": 0.7124,
+     "p": 0.7123,
      "prob": 71,
      "fair": 1.4,
      "stars": 4,
@@ -578,7 +576,7 @@
      "label": "RB Leipzig gagne sans encaisser de but",
      "p": 0.2692,
      "prob": 27,
-     "fair": 3.72,
+     "fair": 3.71,
      "stars": 1
     },
     "player": {
@@ -627,7 +625,7 @@
    "time": "15:30",
    "home": "Bremen",
    "away": "Hoffenheim",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.22,
    "xgA": 1.7,
    "pH": 50,
@@ -638,7 +636,7 @@
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7499,
+     "p": 0.7498,
      "prob": 75,
      "fair": 1.33,
      "stars": 4,
@@ -664,7 +662,7 @@
     "fun": {
      "market": "wh_o25",
      "label": "Bremen gagne et plus de 2,5 buts",
-     "p": 0.4055,
+     "p": 0.4056,
      "prob": 41,
      "fair": 2.47,
      "stars": 1
@@ -717,7 +715,7 @@
    "away": "Leeds",
    "state": "pre",
    "xgH": 1.22,
-   "xgA": 0.91,
+   "xgA": 0.92,
    "pH": 43,
    "pD": 29,
    "pA": 28,
@@ -726,7 +724,7 @@
     "main": {
      "market": "1N",
      "label": "Bournemouth ou nul",
-     "p": 0.7235,
+     "p": 0.7234,
      "prob": 72,
      "fair": 1.38,
      "stars": 4,
@@ -735,7 +733,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Bournemouth",
-     "p": 0.4313,
+     "p": 0.4314,
      "prob": 43,
      "fair": 2.32,
      "stars": 1
@@ -743,16 +741,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1445,
+     "p": 0.1442,
      "prob": 14,
-     "fair": 6.92,
+     "fair": 6.93,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Bournemouth gagne sans encaisser de but",
-     "p": 0.2825,
+     "p": 0.2822,
      "prob": 28,
      "fair": 3.54,
      "stars": 1
@@ -823,7 +821,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Brentford",
-     "p": 0.57,
+     "p": 0.5703,
      "prob": 57,
      "fair": 1.75,
      "stars": 2
@@ -831,16 +829,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1608,
+     "p": 0.1605,
      "prob": 16,
-     "fair": 6.22,
+     "fair": 6.23,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Brentford gagne sans encaisser de but",
-     "p": 0.3828,
+     "p": 0.3826,
      "prob": 38,
      "fair": 2.61,
      "stars": 1
@@ -902,7 +900,7 @@
     "main": {
      "market": "1N",
      "label": "Coventry ou nul",
-     "p": 0.6697,
+     "p": 0.6695,
      "prob": 67,
      "fair": 1.49,
      "stars": 3,
@@ -911,7 +909,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Coventry",
-     "p": 0.3674,
+     "p": 0.3675,
      "prob": 37,
      "fair": 2.72,
      "stars": 1
@@ -919,16 +917,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1354,
+     "p": 0.1353,
      "prob": 14,
-     "fair": 7.38,
+     "fair": 7.39,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Coventry gagne sans encaisser de but",
-     "p": 0.2422,
+     "p": 0.2421,
      "prob": 24,
      "fair": 4.13,
      "stars": 1
@@ -980,7 +978,7 @@
    "home": "Hull",
    "away": "Ipswich",
    "state": "pre",
-   "xgH": 1.63,
+   "xgH": 1.64,
    "xgA": 0.87,
    "pH": 55,
    "pD": 25,
@@ -990,7 +988,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Hull",
-     "p": 0.5541,
+     "p": 0.5544,
      "prob": 55,
      "fair": 1.8,
      "stars": 2
@@ -998,16 +996,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1337,
+     "p": 0.1334,
      "prob": 13,
-     "fair": 7.48,
+     "fair": 7.5,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Hull mène à la mi-temps et gagne le match",
-     "p": 0.3431,
+     "p": 0.3433,
      "prob": 34,
      "fair": 2.91,
      "stars": 1
@@ -1069,7 +1067,7 @@
     "main": {
      "market": "1N",
      "label": "Man City ou nul",
-     "p": 0.6668,
+     "p": 0.6666,
      "prob": 67,
      "fair": 1.5,
      "stars": 3,
@@ -1086,16 +1084,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0886,
+     "p": 0.0885,
      "prob": 9,
-     "fair": 11.29,
+     "fair": 11.3,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Man City gagne et plus de 2,5 buts",
-     "p": 0.3152,
+     "p": 0.3157,
      "prob": 32,
      "fair": 3.17,
      "stars": 1
@@ -1148,69 +1146,83 @@
    "away": "Celta Vigo",
    "state": "pre",
    "xgH": 1.08,
-   "xgA": 1.19,
-   "pH": 33,
-   "pD": 29,
-   "pA": 38,
+   "xgA": 1.0,
+   "pH": 37,
+   "pD": 30,
+   "pA": 33,
    "edate": "20261031",
    "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Rayo ou nul",
+     "p": 0.6707,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3,
+     "why": "Derniers matchs : Rayo 12 marqués / 20 encaissés · Celta Vigo 10 / 7"
+    },
     "winner": {
-     "market": "2",
-     "label": "Victoire Celta Vigo",
-     "p": 0.3832,
-     "prob": 38,
-     "fair": 2.61,
+     "market": "1",
+     "label": "Victoire Rayo",
+     "p": 0.3704,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1226,
-     "prob": 12,
-     "fair": 8.16,
+     "label": "Score exact 1-0",
+     "p": 0.1344,
+     "prob": 13,
+     "fair": 7.44,
      "stars": 1,
-     "value": "0-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wa_nil",
-     "label": "Celta Vigo gagne sans encaisser de but",
-     "p": 0.2352,
-     "prob": 24,
-     "fair": 4.25,
-     "stars": 1
+     "market": "scw",
+     "label": "Sergio Camello marque et Rayo gagne",
+     "p": 0.2472,
+     "prob": 25,
+     "fair": 4.05,
+     "stars": 1,
+     "player": "Sergio Camello",
+     "team": "Rayo",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
-     "label": "Ferran Jutglà marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
+     "label": "Sergio Camello marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
-     "player": "Ferran Jutglà",
-     "team": "Celta Vigo",
-     "pid": "279904",
+     "player": "Sergio Camello",
+     "team": "Rayo",
+     "lineup": "start",
+     "pid": "276652",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 10 matchs · Celta Vigo annoncé gagnant (38 %) · 1,2 but attendu pour Celta Vigo"
+     "why": "7 buts et 1 passe en 10 matchs · forme : 7 buts et 1 passe sur ses 9 derniers matchs · titulaire · Rayo annoncé gagnant (37 %) · 1,1 but attendu pour Rayo"
     },
     "decisive": {
      "market": "dec",
-     "label": "Ferran Jutglà buteur ou passeur",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
+     "label": "Sergio Camello buteur ou passeur",
+     "p": 0.46,
+     "prob": 46,
+     "fair": 2.17,
      "stars": 1,
-     "player": "Ferran Jutglà",
-     "team": "Celta Vigo",
+     "player": "Sergio Camello",
+     "team": "Rayo",
      "base": [
       10,
-      2,
-      0
+      7,
+      1
      ],
-     "pid": "279904",
+     "lineup": "start",
+     "pid": "276652",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 10 matchs · Celta Vigo annoncé gagnant (38 %) · 1,2 but attendu pour Celta Vigo"
+     "why": "7 buts et 1 passe en 10 matchs · forme : 7 buts et 1 passe sur ses 9 derniers matchs · titulaire · Rayo annoncé gagnant (37 %) · 1,1 but attendu pour Rayo"
     }
    }
   },
@@ -1316,7 +1328,7 @@
    "xgH": 1.76,
    "xgA": 1.11,
    "pH": 53,
-   "pD": 24,
+   "pD": 23,
    "pA": 24,
    "edate": "20261031",
    "picks": {
@@ -1332,7 +1344,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Spurs",
-     "p": 0.5265,
+     "p": 0.5267,
      "prob": 53,
      "fair": 1.9,
      "stars": 2
@@ -1340,18 +1352,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1003,
+     "p": 0.1,
      "prob": 10,
-     "fair": 9.97,
+     "fair": 10.0,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Spurs gagne et plus de 2,5 buts",
-     "p": 0.3381,
+     "p": 0.3387,
      "prob": 34,
-     "fair": 2.96,
+     "fair": 2.95,
      "stars": 1
     },
     "player": {
@@ -1753,7 +1765,7 @@
     "main": {
      "market": "1N",
      "label": "Aston Villa ou nul",
-     "p": 0.7526,
+     "p": 0.7525,
      "prob": 75,
      "fair": 1.33,
      "stars": 4,
@@ -1762,7 +1774,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Aston Villa",
-     "p": 0.4782,
+     "p": 0.4783,
      "prob": 48,
      "fair": 2.09,
      "stars": 1
@@ -1770,16 +1782,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1399,
+     "p": 0.1396,
      "prob": 14,
-     "fair": 7.15,
+     "fair": 7.16,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Aston Villa gagne sans encaisser de but",
-     "p": 0.3016,
+     "p": 0.3013,
      "prob": 30,
      "fair": 3.32,
      "stars": 1
@@ -2595,8 +2607,8 @@
  "summary": {
   "date": "2026-10-31",
   "yesterday": {
-   "n": 75,
-   "ok": 40
+   "n": 81,
+   "ok": 44
   },
   "foot": 22,
   "nhl": 10,
