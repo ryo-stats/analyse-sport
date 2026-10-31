@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:59+01:00",
+ "generated": "2026-10-31T15:24+01:00",
  "date": "2026-10-31",
  "nhl_date": "2026-10-31",
  "foot": [
@@ -406,7 +406,7 @@
    "kickoff": "2026-10-31T13:00:00+00:00",
    "time": "14:00",
    "state": "in",
-   "score": "0-1",
+   "score": "0-2",
    "home": "Levante",
    "away": "Atlético",
    "form_h": "NVNND",
@@ -801,8 +801,8 @@
    "league": "Serie A",
    "kickoff": "2026-10-31T14:00:00+00:00",
    "time": "15:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-1",
    "home": "Bologna",
    "away": "Monza",
    "form_h": "NVDVN",
@@ -1088,8 +1088,6 @@
     "Monza : 16e, 7 points, 16 buts marqués et 22 encaissés en 9 matchs.",
     "Bologna : 12 buts marqués et 12 encaissés sur ses 9 derniers matchs de championnat.",
     "Monza : 16 buts marqués et 22 encaissés sur ses 9 derniers matchs de championnat.",
-    "Bologna : attaque revue à la baisse (−5 %) d'après la compo officielle.",
-    "Monza : attaque revue à la baisse (−7 %) d'après la compo officielle (Jay Robinson ne commence pas).",
     "Compositions officielles prises en compte : Artem Dovbyk (remplaçant), Riccardo Orsolini (remplaçant), Roberto Piccoli (absent), Jay Enem (absent), Samuel Mbangula (remplaçant) ne commencent pas le match."
    ],
    "reading": "Bologna est nettement favori (64 %).",
@@ -1124,7 +1122,7 @@
     "fun": {
      "market": "h2",
      "label": "Bologna gagne avec 2 buts d'écart ou plus",
-     "p": 0.4103,
+     "p": 0.4102,
      "prob": 41,
      "fair": 2.44,
      "stars": 1
@@ -1133,9 +1131,9 @@
      {
       "market": "wh_btts",
       "label": "Bologna gagne et les deux équipes marquent",
-      "p": 0.3373,
+      "p": 0.3372,
       "prob": 34,
-      "fair": 2.96,
+      "fair": 2.97,
       "stars": 1
      },
      {
@@ -3202,24 +3200,24 @@
    "form_a": "NNDNV",
    "rank_h": 13,
    "rank_a": 7,
-   "pH": 42,
-   "pD": 28,
-   "pA": 30,
+   "pH": 43,
+   "pD": 29,
+   "pA": 28,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.28,
-   "xgA": 1.02,
+   "xgH": 1.22,
+   "xgA": 0.91,
    "scores": [
-    "1-1",
     "1-0",
-    "0-1"
+    "1-1",
+    "0-0"
    ],
    "scorep": [
+    14,
     13,
-    13,
-    10
+    12
    ],
-   "over25": 40,
-   "btts": 46,
+   "over25": 36,
+   "btts": 42,
    "squad_h": [
     {
      "name": "Marcus Tavernier",
@@ -3235,11 +3233,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 36,
-     "p_dec": 40,
+     "p_goal": 35,
+     "p_dec": 38,
      "pid": "243364",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Evanilson",
@@ -3255,11 +3254,12 @@
       "g": 3,
       "a": 4
      },
-     "p_goal": 28,
-     "p_dec": 51,
+     "p_goal": 27,
+     "p_dec": 49,
      "pid": "102368",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Rayan",
@@ -3275,11 +3275,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 15,
+     "p_goal": 14,
      "p_dec": 18,
      "pid": "357719",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Justin Kluivert",
@@ -3295,31 +3296,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 21,
+     "p_goal": 11,
+     "p_dec": 20,
      "pid": "245916",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Alex Scott",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Bournemouth",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 13,
-     "pid": "314790",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tyler Adams",
@@ -3339,7 +3321,29 @@
      "p_dec": 6,
      "pid": "222776",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Adrien Truffert",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Bournemouth",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 1,
+     "p_dec": 10,
+     "pid": "305684",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -3357,11 +3361,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 28,
-     "p_dec": 37,
+     "p_goal": 25,
+     "p_dec": 33,
      "pid": "197717",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jayden Bogle",
@@ -3377,51 +3382,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 18,
+     "p_goal": 15,
+     "p_dec": 16,
      "pid": "243408",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Noah Okafor",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Leeds",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 15,
-     "pid": "270641",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Anton Stach",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Leeds",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 15,
-     "pid": "304802",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "James Justin",
@@ -3437,11 +3403,54 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 11,
+     "p_goal": 8,
+     "p_dec": 10,
      "pid": "231863",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Anton Stach",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Leeds",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 4,
+     "pid": "304802",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Ao Tanaka",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Leeds",
+     "goals": 0,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 12,
+     "pid": "253173",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ethan Ampadu",
@@ -3457,97 +3466,99 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 3,
-     "p_dec": 8,
+     "p_goal": 2,
+     "p_dec": 7,
      "pid": "241317",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Bournemouth : 13e, 9 points, 12 buts marqués et 13 encaissés en 8 matchs.",
     "Leeds : 7e, 11 points, 9 buts marqués et 6 encaissés en 8 matchs.",
     "Bournemouth : 12 buts marqués et 13 encaissés sur ses 8 derniers matchs de championnat.",
-    "Leeds : 9 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat."
+    "Leeds : 9 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat.",
+    "Bournemouth : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Leeds : attaque revue à la baisse (−11 %) d'après la compo officielle (Anton Stach, Noah Okafor ne commencent pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (29 %).",
    "stakes": "Leeds (7e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Bournemouth ou nul",
-     "p": 0.7031,
-     "prob": 70,
-     "fair": 1.42,
+     "p": 0.7235,
+     "prob": 72,
+     "fair": 1.38,
      "stars": 4,
      "why": "8 derniers matchs : Bournemouth 12 marqués / 13 encaissés · Leeds 9 / 6"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bournemouth",
-     "p": 0.4222,
-     "prob": 42,
-     "fair": 2.37,
+     "p": 0.4313,
+     "prob": 43,
+     "fair": 2.32,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1281,
-     "prob": 13,
-     "fair": 7.8,
+     "p": 0.1445,
+     "prob": 14,
+     "fair": 6.92,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Bournemouth gagne sans encaisser de but",
-     "p": 0.2594,
-     "prob": 26,
-     "fair": 3.86,
+     "p": 0.2825,
+     "prob": 28,
+     "fair": 3.54,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Bournemouth mène à la mi-temps et gagne le match",
-      "p": 0.2472,
+      "p": 0.2511,
       "prob": 25,
-      "fair": 4.04,
+      "fair": 3.98,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Marcus Tavernier marque et Bournemouth gagne",
-      "p": 0.2381,
+      "market": "wh_by1",
+      "label": "Bournemouth gagne d'un seul but",
+      "p": 0.2413,
       "prob": 24,
-      "fair": 4.2,
-      "stars": 1,
-      "player": "Marcus Tavernier",
-      "team": "Bournemouth",
-      "side": "h"
+      "fair": 4.14,
+      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Marcus Tavernier marque",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Marcus Tavernier",
      "team": "Bournemouth",
+     "lineup": "start",
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Bournemouth annoncé gagnant (42 %) · 1,3 but attendu pour Bournemouth"
+     "why": "5 buts et 0 passe en 8 matchs · titulaire · Bournemouth annoncé gagnant (43 %) · 1,2 but attendu pour Bournemouth"
     },
     "decisive": {
      "market": "dec",
      "label": "Marcus Tavernier buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Marcus Tavernier",
      "team": "Bournemouth",
@@ -3556,10 +3567,11 @@
       5,
       0
      ],
+     "lineup": "start",
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Bournemouth annoncé gagnant (42 %) · 1,3 but attendu pour Bournemouth"
+     "why": "5 buts et 0 passe en 8 matchs · titulaire · Bournemouth annoncé gagnant (43 %) · 1,2 but attendu pour Bournemouth"
     }
    },
    "second": {
@@ -3586,24 +3598,24 @@
    "form_a": "NDDDV",
    "rank_h": 6,
    "rank_a": 18,
-   "pH": 58,
-   "pD": 24,
-   "pA": 18,
+   "pH": 57,
+   "pD": 26,
+   "pA": 17,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.64,
-   "xgA": 0.78,
+   "xgH": 1.54,
+   "xgA": 0.72,
    "scores": [
     "1-0",
     "2-0",
     "1-1"
    ],
    "scorep": [
-    15,
+    16,
     12,
-    11
+    12
    ],
-   "over25": 44,
-   "btts": 44,
+   "over25": 39,
+   "btts": 40,
    "squad_h": [
     {
      "name": "Kevin Schade",
@@ -3619,11 +3631,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 26,
-     "p_dec": 30,
+     "p_goal": 24,
+     "p_dec": 28,
      "pid": "310958",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Keane Lewis-Potter",
@@ -3639,11 +3652,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 22,
-     "p_dec": 32,
+     "p_goal": 21,
+     "p_dec": 30,
      "pid": "284490",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Vitaly Janelt",
@@ -3659,11 +3673,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 23,
+     "p_goal": 18,
+     "p_dec": 22,
      "pid": "225564",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Igor Thiago",
@@ -3679,31 +3694,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 16,
-     "p_dec": 33,
+     "p_goal": 15,
+     "p_dec": 31,
      "pid": "301894",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Jaidon Anthony",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Brentford",
-     "goals": 1,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 13,
-     "p_dec": 23,
-     "pid": "307657",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Dango Ouattara",
@@ -3719,11 +3715,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 11,
+     "p_dec": 13,
      "pid": "315530",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kristoffer Ajer",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Brentford",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 11,
+     "pid": "206173",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -3741,11 +3759,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 21,
+     "p_goal": 17,
+     "p_dec": 20,
      "pid": "275842",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Liam Delap",
@@ -3761,11 +3780,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 15,
+     "p_goal": 11,
+     "p_dec": 14,
      "pid": "307114",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Morgan Gibbs-White",
@@ -3781,31 +3801,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 10,
-     "p_dec": 26,
+     "p_goal": 9,
+     "p_dec": 24,
      "pid": "243396",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Igor Jesus",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Nottm Forest",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 11,
-     "pid": "287869",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Neco Williams",
@@ -3822,10 +3823,32 @@
       "a": 0
      },
      "p_goal": 8,
-     "p_dec": 10,
+     "p_dec": 9,
      "pid": "291638",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "James McAtee",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Nottm Forest",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 7,
+     "pid": "298518",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Xaver Schlager",
@@ -3842,93 +3865,98 @@
       "a": 0
      },
      "p_goal": 2,
-     "p_dec": 7,
+     "p_dec": 6,
      "pid": "238886",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Brentford : 6e, 11 points, 14 buts marqués et 9 encaissés en 8 matchs.",
     "Nottm Forest : 18e, 6 points, 6 buts marqués et 10 encaissés en 8 matchs.",
     "Brentford : 14 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Nottm Forest : 6 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat."
+    "Nottm Forest : 6 buts marqués et 10 encaissés sur ses 8 derniers matchs de championnat.",
+    "Brentford : attaque revue à la baisse (−6 %) d'après la compo officielle.",
+    "Nottm Forest : attaque revue à la baisse (−8 %) d'après la compo officielle (Igor Jesus ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Brentford est favori sans écraser le match (58 %).",
+   "reading": "Brentford est favori sans écraser le match (57 %).",
    "stakes": "Brentford (6e) est dans la course à l'Europe. Nottm Forest (18e) est en zone de relégation : match vital.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Brentford ou nul",
-     "p": 0.8224,
-     "prob": 82,
-     "fair": 1.22,
+     "p": 0.8263,
+     "prob": 83,
+     "fair": 1.21,
      "stars": 5,
      "why": "8 derniers matchs : Brentford 14 marqués / 9 encaissés · Nottm Forest 6 / 10"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Brentford",
-     "p": 0.5777,
-     "prob": 58,
-     "fair": 1.73,
+     "p": 0.57,
+     "prob": 57,
+     "fair": 1.75,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1452,
-     "prob": 15,
-     "fair": 6.89,
+     "p": 0.1608,
+     "prob": 16,
+     "fair": 6.22,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Brentford gagne sans encaisser de but",
-     "p": 0.3678,
-     "prob": 37,
-     "fair": 2.72,
+     "p": 0.3828,
+     "prob": 38,
+     "fair": 2.61,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Brentford mène à la mi-temps et gagne le match",
-      "p": 0.3593,
-      "prob": 36,
-      "fair": 2.78,
+      "p": 0.3505,
+      "prob": 35,
+      "fair": 2.85,
       "stars": 1
      },
      {
       "market": "h2",
       "label": "Brentford gagne avec 2 buts d'écart ou plus",
-      "p": 0.3168,
-      "prob": 32,
-      "fair": 3.16,
+      "p": 0.3021,
+      "prob": 30,
+      "fair": 3.31,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Kevin Schade marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
      "player": "Kevin Schade",
      "team": "Brentford",
+     "lineup": "start",
      "pid": "310958",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Brentford favori (58 %) · 1,6 buts attendus pour Brentford"
+     "why": "3 buts et 0 passe en 8 matchs · titulaire · Brentford favori (57 %) · 1,5 buts attendus pour Brentford"
     },
     "decisive": {
      "market": "dec",
      "label": "Kevin Schade buteur ou passeur",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
      "player": "Kevin Schade",
      "team": "Brentford",
@@ -3937,10 +3965,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "310958",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Brentford favori (58 %) · 1,6 buts attendus pour Brentford"
+     "why": "3 buts et 0 passe en 8 matchs · titulaire · Brentford favori (57 %) · 1,5 buts attendus pour Brentford"
     }
    },
    "second": {
@@ -3967,24 +3996,24 @@
    "form_a": "NNNDV",
    "rank_h": 19,
    "rank_a": 20,
-   "pH": 39,
-   "pD": 28,
-   "pA": 32,
+   "pH": 37,
+   "pD": 30,
+   "pA": 33,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.21,
-   "xgA": 1.06,
+   "xgH": 1.07,
+   "xgA": 1.0,
    "scores": [
-    "1-1",
     "1-0",
-    "0-1"
+    "1-1",
+    "0-0"
    ],
    "scorep": [
-    13,
-    13,
-    11
+    14,
+    14,
+    13
    ],
-   "over25": 40,
-   "btts": 46,
+   "over25": 34,
+   "btts": 41,
    "squad_h": [
     {
      "name": "Jack Rudoni",
@@ -4000,31 +4029,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 24,
-     "p_dec": 29,
+     "p_goal": 21,
+     "p_dec": 26,
      "pid": "286967",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Sidiki Cherif",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Coventry",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 8,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 14,
-     "p_dec": 16,
-     "pid": "366817",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jay Da Silva",
@@ -4040,31 +4050,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 24,
+     "p_goal": 11,
+     "p_dec": 22,
      "pid": "206172",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Ellis Simms",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Coventry",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 8,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 14,
-     "pid": "282647",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Stephen Mfuni",
@@ -4080,31 +4071,75 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 12,
+     "p_goal": 10,
+     "p_dec": 11,
      "pid": "374220",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Brandon Thomas-Asante",
+     "name": "Taiwo Awoniyi",
      "pos": "Attaquant",
      "side": "h",
      "team": "Coventry",
      "goals": 0,
-     "assists": 2,
-     "apps": 8,
+     "assists": 0,
+     "apps": 6,
      "l10": {
       "n": 8,
-      "gp": 8,
+      "gp": 6,
       "g": 0,
-      "a": 2
+      "a": 0
      },
-     "p_goal": 7,
-     "p_dec": 30,
-     "pid": "240495",
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "194686",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Sidiki Cherif",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Coventry",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "366817",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Ellis Simms",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Coventry",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 4,
+     "pid": "282647",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -4122,11 +4157,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 31,
-     "p_dec": 34,
+     "p_goal": 30,
+     "p_dec": 32,
      "pid": "282229",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nilson Angulo",
@@ -4143,10 +4179,11 @@
       "a": 1
      },
      "p_goal": 15,
-     "p_dec": 27,
+     "p_dec": 25,
      "pid": "318090",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Enzo Le Fée",
@@ -4162,11 +4199,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 27,
+     "p_goal": 12,
+     "p_dec": 26,
      "pid": "288340",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Wilson Isidor",
@@ -4182,11 +4220,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 4,
+     "p_dec": 4,
      "pid": "265915",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Granit Xhaka",
@@ -4203,10 +4242,11 @@
       "a": 0
      },
      "p_goal": 3,
-     "p_dec": 10,
+     "p_dec": 9,
      "pid": "149981",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Noah Sadiki",
@@ -4223,84 +4263,98 @@
       "a": 0
      },
      "p_goal": 3,
-     "p_dec": 10,
+     "p_dec": 9,
      "pid": "340240",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Coventry : 19e, 6 points, 6 buts marqués et 15 encaissés en 8 matchs.",
     "Sunderland : 20e, 5 points, 6 buts marqués et 14 encaissés en 8 matchs.",
     "Coventry : 6 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
-    "Sunderland : 6 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat."
+    "Sunderland : 6 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat.",
+    "Coventry : attaque revue à la baisse (−12 %) d'après la compo officielle (Ellis Simms, Sidiki Cherif ne commencent pas).",
+    "Sunderland : attaque revue à la baisse (−6 %) d'après la compo officielle (Wilson Isidor ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
    "stakes": "Coventry (19e) est en zone de relégation : match vital. Sunderland (20e) est en zone de relégation : match vital. Adversaires directs au classement : 1 point d'écart.",
    "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Coventry ou nul",
+     "p": 0.6697,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3,
+     "why": "8 derniers matchs : Coventry 6 marqués / 15 encaissés · Sunderland 6 / 14"
+    },
     "winner": {
      "market": "1",
      "label": "Victoire Coventry",
-     "p": 0.395,
-     "prob": 39,
-     "fair": 2.53,
+     "p": 0.3674,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1252,
-     "prob": 13,
-     "fair": 7.99,
+     "p": 0.1354,
+     "prob": 14,
+     "fair": 7.38,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Coventry gagne sans encaisser de but",
-     "p": 0.2434,
+     "p": 0.2422,
      "prob": 24,
-     "fair": 4.11,
+     "fair": 4.13,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Coventry mène à la mi-temps et gagne le match",
-      "p": 0.2288,
-      "prob": 23,
-      "fair": 4.37,
+      "market": "wh_by1",
+      "label": "Coventry gagne d'un seul but",
+      "p": 0.2216,
+      "prob": 22,
+      "fair": 4.51,
       "stars": 1
      },
      {
-      "market": "wh_by1",
-      "label": "Coventry gagne d'un seul but",
-      "p": 0.2244,
-      "prob": 22,
-      "fair": 4.46,
+      "market": "htft_h",
+      "label": "Coventry mène à la mi-temps et gagne le match",
+      "p": 0.2084,
+      "prob": 21,
+      "fair": 4.8,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Jack Rudoni marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
      "stars": 1,
      "player": "Jack Rudoni",
      "team": "Coventry",
+     "lineup": "start",
      "pid": "286967",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 8 matchs · Coventry annoncé gagnant (39 %) · 1,2 but attendu pour Coventry"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Coventry annoncé gagnant (37 %) · 1,1 but attendu pour Coventry"
     },
     "decisive": {
      "market": "dec",
      "label": "Jack Rudoni buteur ou passeur",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
      "player": "Jack Rudoni",
      "team": "Coventry",
@@ -4309,26 +4363,16 @@
       2,
       0
      ],
+     "lineup": "start",
      "pid": "286967",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 8 matchs · Coventry annoncé gagnant (39 %) · 1,2 but attendu pour Coventry"
-    },
-    "held": {
-     "market": "1N",
-     "label": "Coventry ou nul",
-     "p": 0.68,
-     "prob": 68,
-     "fair": 1.47,
-     "stars": 3,
-     "why": "8 derniers matchs : Coventry 6 marqués / 15 encaissés · Sunderland 6 / 14",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Coventry annoncé gagnant (37 %) · 1,1 but attendu pour Coventry"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+    "agree": true
    },
    "country": "Angleterre",
    "code": "eng.1",
@@ -4351,23 +4395,23 @@
    "rank_h": 10,
    "rank_a": 12,
    "pH": 55,
-   "pD": 23,
-   "pA": 21,
+   "pD": 25,
+   "pA": 20,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.79,
-   "xgA": 1.02,
+   "xgH": 1.63,
+   "xgA": 0.87,
    "scores": [
-    "1-1",
     "1-0",
-    "2-1"
+    "1-1",
+    "2-0"
    ],
    "scorep": [
-    11,
-    11,
-    10
+    13,
+    12,
+    11
    ],
-   "over25": 53,
-   "btts": 53,
+   "over25": 46,
+   "btts": 47,
    "squad_h": [
     {
      "name": "Mohamed Belloumi",
@@ -4383,11 +4427,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 41,
-     "p_dec": 59,
+     "p_goal": 39,
+     "p_dec": 55,
      "pid": "320417",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Oliver McBurnie",
@@ -4403,11 +4448,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 38,
+     "p_goal": 22,
+     "p_dec": 36,
      "pid": "193010",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Semi Ajayi",
@@ -4423,51 +4469,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 15,
-     "p_dec": 17,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "178051",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Joe Gelhardt",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Hull",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 8,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 16,
-     "pid": "277531",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Mohamed-Ali Cho",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Hull",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 16,
-     "pid": "306557",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nobel Mendy",
@@ -4483,11 +4490,54 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 15,
+     "p_goal": 13,
+     "p_dec": 14,
      "pid": "356212",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Regan Slater",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Hull",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 22,
+     "pid": "249851",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Joe Gelhardt",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Hull",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "277531",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -4505,11 +4555,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 23,
+     "p_goal": 13,
+     "p_dec": 20,
      "pid": "322654",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Leif Davis",
@@ -4525,51 +4576,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 19,
+     "p_goal": 11,
+     "p_dec": 17,
      "pid": "283086",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Zian Flemming",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Ipswich",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 13,
-     "pid": "261598",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Daizen Maeda",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Ipswich",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 11,
-     "pid": "286347",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Julio Enciso",
@@ -4585,38 +4597,85 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 8,
-     "p_dec": 22,
+     "p_goal": 7,
+     "p_dec": 19,
      "pid": "20975",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Jack Clarke",
-     "pos": "Milieu",
+     "name": "Abdoul Ouattara",
+     "pos": "Défenseur",
      "side": "a",
      "team": "Ipswich",
      "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 6,
+     "p_dec": 11,
+     "pid": "336794",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Dara O'Shea",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Ipswich",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "243440",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Fatawu Issahaku",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Ipswich",
+     "goals": 0,
      "assists": 1,
      "apps": 7,
      "l10": {
       "n": 8,
       "gp": 7,
-      "g": 1,
+      "g": 0,
       "a": 1
      },
-     "p_goal": 7,
-     "p_dec": 14,
-     "pid": "269343",
+     "p_goal": 3,
+     "p_dec": 10,
+     "pid": "318680",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Hull : 10e, 10 points, 9 buts marqués et 8 encaissés en 8 matchs.",
     "Ipswich : 12e, 10 points, 12 buts marqués et 16 encaissés en 8 matchs.",
     "Hull : 9 buts marqués et 8 encaissés sur ses 8 derniers matchs de championnat.",
-    "Ipswich : 12 buts marqués et 16 encaissés sur ses 8 derniers matchs de championnat."
+    "Ipswich : 12 buts marqués et 16 encaissés sur ses 8 derniers matchs de championnat.",
+    "Hull : attaque revue à la baisse (−9 %) d'après la compo officielle (Joe Gelhardt, Mohamed-Ali Cho ne commencent pas).",
+    "Ipswich : attaque revue à la baisse (−15 %) d'après la compo officielle (Zian Flemming ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Hull est favori sans écraser le match (55 %).",
    "stakes": "Match de milieu de tableau : enjeu modéré au classement. Adversaires directs au classement : même nombre de points.",
@@ -4624,7 +4683,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Hull",
-     "p": 0.5548,
+     "p": 0.5541,
      "prob": 55,
      "fair": 1.8,
      "stars": 2
@@ -4632,58 +4691,59 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.108,
-     "prob": 11,
-     "fair": 9.26,
+     "p": 0.1337,
+     "prob": 13,
+     "fair": 7.48,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Hull gagne et plus de 2,5 buts",
-     "p": 0.3502,
-     "prob": 35,
-     "fair": 2.86,
+     "market": "htft_h",
+     "label": "Hull mène à la mi-temps et gagne le match",
+     "p": 0.3431,
+     "prob": 34,
+     "fair": 2.91,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Hull mène à la mi-temps et gagne le match",
-      "p": 0.3483,
-      "prob": 35,
-      "fair": 2.87,
+      "market": "wh_nil",
+      "label": "Hull gagne sans encaisser de but",
+      "p": 0.3373,
+      "prob": 34,
+      "fair": 2.96,
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Hull gagne avec 2 buts d'écart ou plus",
-      "p": 0.3136,
+      "market": "wh_o25",
+      "label": "Hull gagne et plus de 2,5 buts",
+      "p": 0.3113,
       "prob": 31,
-      "fair": 3.19,
+      "fair": 3.21,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Mohamed Belloumi marque",
-     "p": 0.41,
-     "prob": 41,
-     "fair": 2.44,
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1,
      "player": "Mohamed Belloumi",
      "team": "Hull",
+     "lineup": "start",
      "pid": "320417",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 8 matchs · Hull favori (55 %) · 1,8 buts attendus pour Hull"
+     "why": "3 buts et 2 passes en 8 matchs · titulaire · Hull favori (55 %) · 1,6 buts attendus pour Hull"
     },
     "decisive": {
      "market": "dec",
      "label": "Mohamed Belloumi buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2,
      "player": "Mohamed Belloumi",
      "team": "Hull",
@@ -4692,26 +4752,27 @@
       3,
       2
      ],
+     "lineup": "start",
      "pid": "320417",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 8 matchs · Hull favori (55 %) · 1,8 buts attendus pour Hull"
+     "why": "3 buts et 2 passes en 8 matchs · titulaire · Hull favori (55 %) · 1,6 buts attendus pour Hull"
     },
     "held": {
      "market": "1N",
      "label": "Hull ou nul",
-     "p": 0.7865,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
+     "p": 0.8006,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 5,
      "why": "8 derniers matchs : Hull 9 marqués / 8 encaissés · Ipswich 12 / 16",
-     "note": "« Hull ou nul » : 79 % selon l'analyse, le marché des paris est nettement moins confiant"
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
     "agree": false,
-    "note": "« Hull ou nul » : 79 % selon l'analyse, le marché des paris est nettement moins confiant"
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "country": "Angleterre",
    "code": "eng.1",
@@ -4733,24 +4794,24 @@
    "form_a": "NDNVV",
    "rank_h": 1,
    "rank_a": 3,
-   "pH": 50,
-   "pD": 21,
-   "pA": 29,
+   "pH": 44,
+   "pD": 23,
+   "pA": 33,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.1,
-   "xgA": 1.58,
+   "xgH": 1.78,
+   "xgA": 1.53,
    "scores": [
-    "2-1",
     "1-1",
-    "2-2"
+    "2-1",
+    "1-2"
    ],
    "scorep": [
+    10,
     9,
-    8,
-    7
+    8
    ],
-   "over25": 71,
-   "btts": 70,
+   "over25": 64,
+   "btts": 65,
    "squad_h": [
     {
      "name": "Erling Haaland",
@@ -4766,71 +4827,12 @@
       "g": 9,
       "a": 0
      },
-     "p_goal": 58,
-     "p_dec": 60,
+     "p_goal": 52,
+     "p_dec": 54,
      "pid": "253989",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Rayan Cherki",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Man City",
-     "goals": 4,
-     "assists": 2,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 4,
-      "a": 2
-     },
-     "p_goal": 31,
-     "p_dec": 44,
-     "pid": "298008",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Antoine Semenyo",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Man City",
-     "goals": 2,
-     "assists": 3,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 3
-     },
-     "p_goal": 21,
-     "p_dec": 41,
-     "pid": "273292",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Phil Foden",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Man City",
-     "goals": 1,
-     "assists": 2,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 10,
-     "p_dec": 26,
-     "pid": "250787",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jérémy Doku",
@@ -4846,11 +4848,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 19,
+     "p_goal": 9,
+     "p_dec": 16,
      "pid": "283672",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rayan Cherki",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Man City",
+     "goals": 4,
+     "assists": 2,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 4,
+      "a": 2
+     },
+     "p_goal": 9,
+     "p_dec": 14,
+     "pid": "298008",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Enzo Fernández",
@@ -4866,11 +4890,54 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 13,
+     "p_goal": 9,
+     "p_dec": 11,
      "pid": "285450",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Josko Gvardiol",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Man City",
+     "goals": 1,
+     "assists": 3,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 8,
+     "p_dec": 27,
+     "pid": "299910",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Iliman Ndiaye",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Man City",
+     "goals": 0,
+     "assists": 2,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 4,
+     "p_dec": 19,
+     "pid": "268641",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -4888,11 +4955,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 22,
-     "p_dec": 33,
+     "p_goal": 21,
+     "p_dec": 32,
      "pid": "387655",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pascal Gross",
@@ -4908,51 +4976,12 @@
       "g": 3,
       "a": 4
      },
-     "p_goal": 20,
-     "p_dec": 41,
+     "p_goal": 19,
+     "p_dec": 40,
      "pid": "132659",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Jack Hinshelwood",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Brighton",
-     "goals": 3,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 8,
-      "gp": 3,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_dec": 19,
-     "pid": "328011",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Yasin Ayari",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Brighton",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 14,
-     "p_dec": 17,
-     "pid": "304242",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maxim De Cuyper",
@@ -4969,117 +4998,165 @@
       "a": 2
      },
      "p_goal": 13,
-     "p_dec": 25,
+     "p_dec": 24,
      "pid": "301327",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Malick Yalcouyé",
+     "name": "Yasin Ayari",
      "pos": "Milieu",
      "side": "a",
      "team": "Brighton",
      "goals": 2,
      "assists": 0,
-     "apps": 8,
+     "apps": 7,
      "l10": {
       "n": 8,
-      "gp": 8,
+      "gp": 7,
       "g": 2,
       "a": 0
      },
      "p_goal": 13,
-     "p_dec": 15,
-     "pid": "359097",
+     "p_dec": 16,
+     "pid": "304242",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Diego Gómez",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Brighton",
+     "goals": 1,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 8,
+     "p_dec": 22,
+     "pid": "192278",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Chema Andrés",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Brighton",
+     "goals": 1,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 8,
+      "gp": 5,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 7,
+     "p_dec": 15,
+     "pid": "387489",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Man City : 1er, 21 points, 20 buts marqués et 9 encaissés en 8 matchs.",
     "Brighton : 3e, 16 points, 23 buts marqués et 7 encaissés en 8 matchs.",
     "Man City : 20 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Brighton : 23 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat."
+    "Brighton : 23 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
+    "Man City : attaque revue à la baisse (−15 %) d'après la compo officielle (Rayan Cherki, Antoine Semenyo ne commencent pas).",
+    "Brighton : attaque revue à la baisse (−3 %) d'après la compo officielle (Malick Yalcouyé ne commence pas).",
+    "Compositions officielles prises en compte : Rayan Cherki (remplaçant), Antoine Semenyo (absent), Jack Hinshelwood (remplaçant) ne commencent pas le match."
    ],
-   "reading": "Man City est favori sans écraser le match (50 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Choc au sommet : 1er contre 3e.",
    "picks": {
     "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.7122,
-     "prob": 71,
-     "fair": 1.4,
-     "stars": 4,
+     "market": "1N",
+     "label": "Man City ou nul",
+     "p": 0.6668,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
      "why": "8 derniers matchs : Man City 20 marqués / 9 encaissés · Brighton 23 / 7"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Man City",
-     "p": 0.4986,
-     "prob": 50,
-     "fair": 2.01,
+     "p": 0.4385,
+     "prob": 44,
+     "fair": 2.28,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0878,
+     "p": 0.0886,
      "prob": 9,
-     "fair": 11.39,
+     "fair": 11.29,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Man City gagne et plus de 2,5 buts",
-     "p": 0.3903,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.3152,
+     "prob": 32,
+     "fair": 3.17,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "scw",
       "label": "Erling Haaland marque et Man City gagne",
-      "p": 0.3733,
-      "prob": 37,
-      "fair": 2.68,
+      "p": 0.3142,
+      "prob": 31,
+      "fair": 3.18,
       "stars": 1,
       "player": "Erling Haaland",
       "team": "Man City",
       "side": "h"
      },
      {
-      "market": "wh_btts",
-      "label": "Man City gagne et les deux équipes marquent",
-      "p": 0.3181,
-      "prob": 32,
-      "fair": 3.14,
+      "market": "htft_h",
+      "label": "Man City mène à la mi-temps et gagne le match",
+      "p": 0.2693,
+      "prob": 27,
+      "fair": 3.71,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Erling Haaland marque",
-     "p": 0.58,
-     "prob": 58,
-     "fair": 1.72,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Erling Haaland",
      "team": "Man City",
+     "lineup": "start",
      "pid": "253989",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 8 matchs · Man City favori (50 %) · 2,1 buts attendus pour Man City"
+     "why": "9 buts et 0 passe en 8 matchs · titulaire · Man City annoncé gagnant (44 %) · 1,8 buts attendus pour Man City"
     },
     "decisive": {
      "market": "dec",
      "label": "Erling Haaland buteur ou passeur",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
+     "stars": 2,
      "player": "Erling Haaland",
      "team": "Man City",
      "base": [
@@ -5087,10 +5164,11 @@
       9,
       0
      ],
+     "lineup": "start",
      "pid": "253989",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 8 matchs · Man City favori (50 %) · 2,1 buts attendus pour Man City"
+     "why": "9 buts et 0 passe en 8 matchs · titulaire · Man City annoncé gagnant (44 %) · 1,8 buts attendus pour Man City"
     }
    },
    "second": {
@@ -26980,7 +27058,7 @@
  },
  "second": {
   "foot": {
-   "ok": 20,
+   "ok": 19,
    "elo": {
     "fra.1": 672,
     "eng.1": 822,
