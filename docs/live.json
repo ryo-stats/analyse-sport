@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T19:42+01:00",
+ "generated": "2026-10-31T20:07+01:00",
  "date": "2026-10-31",
  "matches": [
   {
@@ -1206,7 +1206,7 @@
    "time": "18:00",
    "home": "Udinese",
    "away": "AS Roma",
-   "state": "in",
+   "state": "post",
    "xgH": 0.94,
    "xgA": 1.96,
    "pH": 17,
@@ -1251,24 +1251,23 @@
     "player": {
      "market": "scorer",
      "label": "Donyell Malen marque",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.41,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1,
      "player": "Donyell Malen",
      "team": "AS Roma",
-     "lineup": "start",
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "7 buts et 1 passe en 8 matchs · titulaire · AS Roma favori (61 %) · 2,0 buts attendus pour AS Roma"
+     "why": "7 buts et 1 passe en 8 matchs · forme : 8 buts et 1 passe sur ses 9 derniers matchs · AS Roma favori (61 %) · 2,0 buts attendus pour AS Roma"
     },
     "decisive": {
      "market": "dec",
      "label": "Donyell Malen buteur ou passeur",
-     "p": 0.48,
-     "prob": 48,
-     "fair": 2.08,
+     "p": 0.46,
+     "prob": 46,
+     "fair": 2.17,
      "stars": 1,
      "player": "Donyell Malen",
      "team": "AS Roma",
@@ -1277,11 +1276,10 @@
       7,
       1
      ],
-     "lineup": "start",
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "7 buts et 1 passe en 8 matchs · titulaire · AS Roma favori (61 %) · 2,0 buts attendus pour AS Roma"
+     "why": "7 buts et 1 passe en 8 matchs · forme : 8 buts et 1 passe sur ses 9 derniers matchs · AS Roma favori (61 %) · 2,0 buts attendus pour AS Roma"
     }
    }
   },
@@ -1559,79 +1557,81 @@
    "home": "Troyes",
    "away": "Le Mans",
    "state": "pre",
-   "xgH": 1.34,
-   "xgA": 1.4,
-   "pH": 36,
-   "pD": 26,
-   "pA": 39,
+   "xgH": 1.25,
+   "xgA": 1.17,
+   "pH": 38,
+   "pD": 28,
+   "pA": 34,
    "edate": "20261031",
    "picks": {
     "main": {
-     "market": "N2",
-     "label": "Nul ou Le Mans",
-     "p": 0.6422,
-     "prob": 64,
-     "fair": 1.56,
+     "market": "1N",
+     "label": "Troyes ou nul",
+     "p": 0.6568,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "why": "8 derniers matchs : Troyes 5 marqués / 16 encaissés · Le Mans 11 / 16"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Le Mans",
-     "p": 0.3867,
-     "prob": 39,
-     "fair": 2.59,
+     "market": "1",
+     "label": "Victoire Troyes",
+     "p": 0.3815,
+     "prob": 38,
+     "fair": 2.62,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.0902,
-     "prob": 9,
-     "fair": 11.09,
+     "label": "Score exact 1-0",
+     "p": 0.1114,
+     "prob": 11,
+     "fair": 8.98,
      "stars": 1,
-     "value": "0-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Le Mans gagne et plus de 2,5 buts",
-     "p": 0.2332,
-     "prob": 23,
-     "fair": 4.29,
+     "market": "wh_nil",
+     "label": "Troyes gagne sans encaisser de but",
+     "p": 0.2216,
+     "prob": 22,
+     "fair": 4.51,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Louis Mafouta marque",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "label": "Renaud Ripart marque",
+     "p": 0.2,
+     "prob": 20,
+     "fair": 5.0,
      "stars": 1,
-     "player": "Louis Mafouta",
-     "team": "Le Mans",
-     "pid": "268720",
+     "player": "Renaud Ripart",
+     "team": "Troyes",
+     "lineup": "start",
+     "pid": "176406",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · Le Mans annoncé gagnant (39 %) · 1,4 but attendu pour Le Mans"
+     "why": "1 but et 0 passe en 8 matchs · titulaire · Troyes annoncé gagnant (38 %) · 1,2 but attendu pour Troyes"
     },
     "decisive": {
      "market": "dec",
-     "label": "Louis Mafouta buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "label": "Renaud Ripart buteur ou passeur",
+     "p": 0.23,
+     "prob": 23,
+     "fair": 4.35,
      "stars": 1,
-     "player": "Louis Mafouta",
-     "team": "Le Mans",
+     "player": "Renaud Ripart",
+     "team": "Troyes",
      "base": [
       8,
-      4,
-      1
+      1,
+      0
      ],
-     "pid": "268720",
+     "lineup": "start",
+     "pid": "176406",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 8 matchs · Le Mans annoncé gagnant (39 %) · 1,4 but attendu pour Le Mans"
+     "why": "1 but et 0 passe en 8 matchs · titulaire · Troyes annoncé gagnant (38 %) · 1,2 but attendu pour Troyes"
     }
    }
   },
@@ -1645,67 +1645,68 @@
    "home": "Milan",
    "away": "Inter Milan",
    "state": "pre",
-   "xgH": 1.56,
-   "xgA": 1.92,
-   "pH": 32,
-   "pD": 22,
+   "xgH": 1.39,
+   "xgA": 1.73,
+   "pH": 31,
+   "pD": 23,
    "pA": 46,
    "edate": "20261031",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Inter Milan",
-     "p": 0.6844,
-     "prob": 68,
-     "fair": 1.46,
+     "p": 0.6914,
+     "prob": 69,
+     "fair": 1.45,
      "stars": 3,
      "why": "9 derniers matchs : Milan 18 marqués / 11 encaissés · Inter Milan 25 / 10"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Inter Milan",
-     "p": 0.4643,
+     "p": 0.4574,
      "prob": 46,
-     "fair": 2.15,
+     "fair": 2.19,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0887,
+     "p": 0.092,
      "prob": 9,
-     "fair": 11.27,
+     "fair": 10.87,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Inter Milan gagne et plus de 2,5 buts",
-     "p": 0.3479,
-     "prob": 35,
-     "fair": 2.87,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3796,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Marcus Thuram marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
      "player": "Marcus Thuram",
      "team": "Inter Milan",
+     "lineup": "start",
      "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 8 matchs · Inter Milan favori (46 %) · 1,9 buts attendus pour Inter Milan"
+     "why": "5 buts et 2 passes en 8 matchs · titulaire · Inter Milan favori (46 %) · 1,7 buts attendus pour Inter Milan"
     },
     "decisive": {
      "market": "dec",
      "label": "Marcus Thuram buteur ou passeur",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
      "player": "Marcus Thuram",
      "team": "Inter Milan",
@@ -1714,10 +1715,11 @@
       5,
       2
      ],
+     "lineup": "start",
      "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 8 matchs · Inter Milan favori (46 %) · 1,9 buts attendus pour Inter Milan"
+     "why": "5 buts et 2 passes en 8 matchs · titulaire · Inter Milan favori (46 %) · 1,7 buts attendus pour Inter Milan"
     }
    }
   },
@@ -1731,67 +1733,68 @@
    "home": "Aston Villa",
    "away": "Fulham",
    "state": "pre",
-   "xgH": 1.38,
-   "xgA": 0.91,
-   "pH": 48,
-   "pD": 27,
-   "pA": 25,
+   "xgH": 1.33,
+   "xgA": 0.8,
+   "pH": 49,
+   "pD": 28,
+   "pA": 23,
    "edate": "20261031",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Aston Villa ou nul",
-     "p": 0.7524,
-     "prob": 75,
-     "fair": 1.33,
+     "p": 0.7747,
+     "prob": 77,
+     "fair": 1.29,
      "stars": 4,
      "why": "8 derniers matchs : Aston Villa 9 marqués / 12 encaissés · Fulham 8 / 10"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Aston Villa",
-     "p": 0.4784,
-     "prob": 48,
-     "fair": 2.09,
+     "p": 0.4915,
+     "prob": 49,
+     "fair": 2.03,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1394,
-     "prob": 14,
-     "fair": 7.17,
+     "p": 0.1579,
+     "prob": 16,
+     "fair": 6.33,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Aston Villa gagne sans encaisser de but",
-     "p": 0.3011,
-     "prob": 30,
-     "fair": 3.32,
+     "p": 0.3301,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Nicolas Jackson marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Nicolas Jackson",
      "team": "Aston Villa",
+     "lineup": "start",
      "pid": "308524",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 7 matchs · Aston Villa favori (48 %) · 1,4 but attendu pour Aston Villa"
+     "why": "4 buts et 0 passe en 7 matchs · titulaire · Aston Villa favori (49 %) · 1,3 but attendu pour Aston Villa"
     },
     "decisive": {
      "market": "dec",
      "label": "Nicolas Jackson buteur ou passeur",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
      "player": "Nicolas Jackson",
      "team": "Aston Villa",
@@ -1800,10 +1803,11 @@
       4,
       0
      ],
+     "lineup": "start",
      "pid": "308524",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 7 matchs · Aston Villa favori (48 %) · 1,4 but attendu pour Aston Villa"
+     "why": "4 buts et 0 passe en 7 matchs · titulaire · Aston Villa favori (49 %) · 1,3 but attendu pour Aston Villa"
     }
    }
   },
@@ -2583,8 +2587,8 @@
  "summary": {
   "date": "2026-10-31",
   "yesterday": {
-   "n": 151,
-   "ok": 77
+   "n": 157,
+   "ok": 82
   },
   "foot": 22,
   "nhl": 10,
@@ -2596,16 +2600,16 @@
     "match": "Barcelona – Alavés"
    },
    {
+    "label": "Aston Villa ou nul",
+    "prob": 77,
+    "time": "21:00",
+    "match": "Aston Villa – Fulham"
+   },
+   {
     "label": "Nathan MacKinnon : au moins 1 point",
     "prob": 76,
     "time": "03:00",
     "match": "Colorado Avalanche – Calgary Flames"
-   },
-   {
-    "label": "Aston Villa ou nul",
-    "prob": 75,
-    "time": "21:00",
-    "match": "Aston Villa – Fulham"
    }
   ]
  }

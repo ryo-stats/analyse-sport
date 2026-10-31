@@ -26797,7 +26797,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874990|2|": {
   "match": "foot-401874990",
@@ -26821,7 +26821,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874990|scorer|Donyell Malen": {
   "match": "foot-401874990",
@@ -26845,7 +26845,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874990|dec|Donyell Malen": {
   "match": "foot-401874990",
@@ -26873,7 +26873,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874990|exact|": {
   "match": "foot-401874990",
@@ -26897,7 +26897,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878761|1N|": {
   "match": "foot-401878761",
@@ -27295,130 +27295,6 @@
   ],
   "result": null
  },
- "foot-401876413|N2|": {
-  "match": "foot-401876413",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-31",
-  "home": "Troyes",
-  "away": "Le Mans",
-  "market": "N2",
-  "label": "Nul ou Le Mans",
-  "p": 0.6422,
-  "stars": 3,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
- "foot-401876413|2|": {
-  "match": "foot-401876413",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-31",
-  "home": "Troyes",
-  "away": "Le Mans",
-  "market": "2",
-  "label": "Victoire Le Mans",
-  "p": 0.3867,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "foot-401876413|scorer|Louis Mafouta": {
-  "match": "foot-401876413",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-31",
-  "home": "Troyes",
-  "away": "Le Mans",
-  "market": "scorer",
-  "label": "Louis Mafouta marque",
-  "p": 0.36,
-  "stars": 1,
-  "player": "Louis Mafouta",
-  "pid_player": "268720",
-  "value": null,
-  "stats_league": "fra.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401876413|dec|Louis Mafouta": {
-  "match": "foot-401876413",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-31",
-  "home": "Troyes",
-  "away": "Le Mans",
-  "market": "dec",
-  "label": "Louis Mafouta buteur ou passeur",
-  "p": 0.45,
-  "stars": 1,
-  "player": "Louis Mafouta",
-  "pid_player": "268720",
-  "value": null,
-  "stats_league": "fra.1",
-  "season": 2026,
-  "base": [
-   8,
-   4,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401876413|wa_o25|": {
-  "match": "foot-401876413",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-10-31",
-  "home": "Troyes",
-  "away": "Le Mans",
-  "market": "wa_o25",
-  "label": "Le Mans gagne et plus de 2,5 buts",
-  "p": 0.2332,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876413|exact|": {
   "match": "foot-401876413",
   "sport": "foot",
@@ -27427,12 +27303,12 @@
   "home": "Troyes",
   "away": "Le Mans",
   "market": "exact",
-  "label": "Score exact 0-1",
-  "p": 0.0902,
+  "label": "Score exact 1-0",
+  "p": 0.1114,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "0-1",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -27452,7 +27328,7 @@
   "away": "Inter Milan",
   "market": "N2",
   "label": "Nul ou Inter Milan",
-  "p": 0.6844,
+  "p": 0.6914,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -27476,7 +27352,7 @@
   "away": "Inter Milan",
   "market": "2",
   "label": "Victoire Inter Milan",
-  "p": 0.4643,
+  "p": 0.4574,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -27500,7 +27376,7 @@
   "away": "Inter Milan",
   "market": "scorer",
   "label": "Marcus Thuram marque",
-  "p": 0.33,
+  "p": 0.3,
   "stars": 1,
   "player": "Marcus Thuram",
   "pid_player": "217331",
@@ -27524,7 +27400,7 @@
   "away": "Inter Milan",
   "market": "dec",
   "label": "Marcus Thuram buteur ou passeur",
-  "p": 0.43,
+  "p": 0.4,
   "stars": 1,
   "player": "Marcus Thuram",
   "pid_player": "217331",
@@ -27543,30 +27419,6 @@
   ],
   "result": null
  },
- "foot-401874795|wa_o25|": {
-  "match": "foot-401874795",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-10-31",
-  "home": "Milan",
-  "away": "Inter Milan",
-  "market": "wa_o25",
-  "label": "Inter Milan gagne et plus de 2,5 buts",
-  "p": 0.3479,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874795|exact|": {
   "match": "foot-401874795",
   "sport": "foot",
@@ -27576,7 +27428,7 @@
   "away": "Inter Milan",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0887,
+  "p": 0.092,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -27600,7 +27452,7 @@
   "away": "Fulham",
   "market": "1N",
   "label": "Aston Villa ou nul",
-  "p": 0.7524,
+  "p": 0.7747,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -27624,7 +27476,7 @@
   "away": "Fulham",
   "market": "1",
   "label": "Victoire Aston Villa",
-  "p": 0.4784,
+  "p": 0.4915,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -27648,7 +27500,7 @@
   "away": "Fulham",
   "market": "scorer",
   "label": "Nicolas Jackson marque",
-  "p": 0.39,
+  "p": 0.38,
   "stars": 1,
   "player": "Nicolas Jackson",
   "pid_player": "308524",
@@ -27672,7 +27524,7 @@
   "away": "Fulham",
   "market": "dec",
   "label": "Nicolas Jackson buteur ou passeur",
-  "p": 0.42,
+  "p": 0.4,
   "stars": 1,
   "player": "Nicolas Jackson",
   "pid_player": "308524",
@@ -27700,7 +27552,7 @@
   "away": "Fulham",
   "market": "wh_nil",
   "label": "Aston Villa gagne sans encaisser de but",
-  "p": 0.3011,
+  "p": 0.3301,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -27724,7 +27576,7 @@
   "away": "Fulham",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1394,
+  "p": 0.1579,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -29466,7 +29318,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401878761|htft_h|": {
   "match": "foot-401878761",
@@ -29502,6 +29354,154 @@
   "market": "wh_o25",
   "label": "Betis gagne et plus de 2,5 buts",
   "p": 0.3966,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401876413|1N|": {
+  "match": "foot-401876413",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-31",
+  "home": "Troyes",
+  "away": "Le Mans",
+  "market": "1N",
+  "label": "Troyes ou nul",
+  "p": 0.6568,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401876413|1|": {
+  "match": "foot-401876413",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-31",
+  "home": "Troyes",
+  "away": "Le Mans",
+  "market": "1",
+  "label": "Victoire Troyes",
+  "p": 0.3815,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401876413|scorer|Renaud Ripart": {
+  "match": "foot-401876413",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-31",
+  "home": "Troyes",
+  "away": "Le Mans",
+  "market": "scorer",
+  "label": "Renaud Ripart marque",
+  "p": 0.2,
+  "stars": 1,
+  "player": "Renaud Ripart",
+  "pid_player": "176406",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401876413|dec|Renaud Ripart": {
+  "match": "foot-401876413",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-31",
+  "home": "Troyes",
+  "away": "Le Mans",
+  "market": "dec",
+  "label": "Renaud Ripart buteur ou passeur",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Renaud Ripart",
+  "pid_player": "176406",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": [
+   8,
+   1,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876413|wh_nil|": {
+  "match": "foot-401876413",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-10-31",
+  "home": "Troyes",
+  "away": "Le Mans",
+  "market": "wh_nil",
+  "label": "Troyes gagne sans encaisser de but",
+  "p": 0.2216,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874795|o35|": {
+  "match": "foot-401874795",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-10-31",
+  "home": "Milan",
+  "away": "Inter Milan",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3796,
   "stars": 1,
   "player": null,
   "pid_player": null,
