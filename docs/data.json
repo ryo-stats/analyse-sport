@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T23:17+01:00",
+ "generated": "2026-10-31T23:42+01:00",
  "date": "2026-10-31",
  "nhl_date": "2026-10-31",
  "foot": [
@@ -9189,7 +9189,7 @@
    "home": "Nashville Predators",
    "away": "Tampa Bay Lightning",
    "rec_h": "5-4-5 · 6e Central · 1 victoire de suite",
-   "rec_a": "8-3-2 · 2e Atlantic · 1 défaite en prolongation de suite",
+   "rec_a": "8-3-2 · 3e Atlantic · 1 défaite en prolongation de suite",
    "winH": 38,
    "winA": 62,
    "pH": 30,
@@ -9956,8 +9956,8 @@
    "league": "NHL",
    "kickoff": "2026-10-31T20:00:00+00:00",
    "time": "21:00",
-   "state": "LIVE",
-   "score": "2-2",
+   "state": "CRIT",
+   "score": "2-3",
    "home": "Los Angeles Kings",
    "away": "Buffalo Sabres",
    "rec_h": "4-6-2 · 7e Pacific · 1 victoire de suite",
@@ -10344,12 +10344,12 @@
    "league": "NHL",
    "kickoff": "2026-10-31T20:00:00+00:00",
    "time": "21:00",
-   "state": "LIVE",
-   "score": "1-4",
+   "state": "FINAL",
+   "score": "1-5",
    "home": "San Jose Sharks",
    "away": "Ottawa Senators",
-   "rec_h": "7-6-1 · 4e Pacific · 1 victoire de suite",
-   "rec_a": "8-5-1 · 5e Atlantic · 1 défaite en prolongation de suite",
+   "rec_h": "7-7-1 · 4e Pacific · 1 défaite de suite",
+   "rec_a": "9-5-1 · 2e Atlantic · 1 victoire de suite",
    "winH": 39,
    "winA": 61,
    "pH": 31,
@@ -10376,10 +10376,10 @@
     "note": ""
    },
    "goalie_a": {
-    "name": "Samuel Ersson",
+    "name": "Jonas Johansson",
     "starts": 3,
-    "sv": "84,9 % d'arrêts",
-    "note": "le titulaire a été remplacé en cours de match la dernière fois (blessure possible)"
+    "sv": "86,1 % d'arrêts",
+    "note": ""
    },
    "squad_h": [
     {
@@ -10396,7 +10396,7 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 5,
+      "g": 4,
       "a": 6
      },
      "p_goal": 35,
@@ -10467,27 +10467,6 @@
      "p_assist": 21
     },
     {
-     "name": "Adam Gaudette",
-     "pos": "Ailier",
-     "cur": "0 but, 0 passe en 3",
-     "new": false,
-     "side": "h",
-     "team": "San Jose Sharks",
-     "goals": 0,
-     "assists": 0,
-     "gp": 3,
-     "pid": 8478874,
-     "l10": {
-      "n": 10,
-      "gp": 3,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_point": 28,
-     "p_assist": 11
-    },
-    {
      "name": "Mason Marchment",
      "pos": "Ailier",
      "cur": "4 buts, 2 passes en 14",
@@ -10507,30 +10486,30 @@
      "p_goal": 17,
      "p_point": 32,
      "p_assist": 16
-    }
-   ],
-   "squad_a": [
+    },
     {
-     "name": "Drake Batherson",
+     "name": "Ivar Stenberg",
      "pos": "Ailier",
-     "cur": "8 buts, 8 passes en 14",
-     "new": false,
-     "side": "a",
-     "team": "Ottawa Senators",
-     "goals": 8,
-     "assists": 8,
+     "cur": "3 buts, 6 passes en 14",
+     "new": true,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 3,
+     "assists": 6,
      "gp": 14,
-     "pid": 8480208,
+     "pid": 8486103,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 6,
-      "a": 7
+      "g": 3,
+      "a": 4
      },
-     "p_goal": 35,
-     "p_point": 60,
-     "p_assist": 39
-    },
+     "p_goal": 16,
+     "p_point": 39,
+     "p_assist": 26
+    }
+   ],
+   "squad_a": [
     {
      "name": "Tim Stützle",
      "pos": "Centre",
@@ -10553,6 +10532,27 @@
      "p_assist": 46
     },
     {
+     "name": "Drake Batherson",
+     "pos": "Ailier",
+     "cur": "8 buts, 8 passes en 14",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 8,
+     "assists": 8,
+     "gp": 14,
+     "pid": 8480208,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 7
+     },
+     "p_goal": 34,
+     "p_point": 60,
+     "p_assist": 39
+    },
+    {
      "name": "Dylan Cozens",
      "pos": "Centre",
      "cur": "3 buts, 5 passes en 14",
@@ -10566,10 +10566,10 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 3,
+      "g": 4,
       "a": 5
      },
-     "p_goal": 26,
+     "p_goal": 27,
      "p_point": 50,
      "p_assist": 32
     },
@@ -10587,11 +10587,11 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 4,
+      "g": 5,
       "a": 2
      },
-     "p_goal": 26,
-     "p_point": 46,
+     "p_goal": 27,
+     "p_point": 47,
      "p_assist": 27
     },
     {
@@ -10607,44 +10607,44 @@
      "pid": 8482105,
      "l10": {
       "n": 10,
-      "gp": 5,
+      "gp": 6,
       "g": 1,
-      "a": 5
+      "a": 7
      },
      "p_goal": 18,
      "p_point": 55,
-     "p_assist": 44
+     "p_assist": 45
     },
     {
-     "name": "Claude Giroux",
+     "name": "Michael Amadio",
      "pos": "Ailier",
-     "cur": "2 buts, 6 passes en 14",
+     "cur": "3 buts, 3 passes en 14",
      "new": false,
      "side": "a",
      "team": "Ottawa Senators",
-     "goals": 2,
-     "assists": 6,
+     "goals": 3,
+     "assists": 3,
      "gp": 14,
-     "pid": 8473512,
+     "pid": 8478020,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 2,
-      "a": 3
+      "g": 1,
+      "a": 2
      },
      "p_goal": 16,
-     "p_point": 44,
-     "p_assist": 33
+     "p_point": 35,
+     "p_assist": 22
     }
    ],
    "ctx": [
-    "San Jose Sharks : 40 buts marqués et 47 encaissés en 14 matchs.",
-    "Ottawa Senators : 44 buts marqués et 44 encaissés en 14 matchs.",
+    "San Jose Sharks : 41 buts marqués et 52 encaissés en 15 matchs.",
+    "Ottawa Senators : 49 buts marqués et 45 encaissés en 15 matchs.",
     "Aucune des deux équipes n'a joué hier.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Ottawa Senators est favori (61 % en comptant la prolongation).",
-   "stakes": "Début de saison (14 matchs joués) : le classement bouge encore beaucoup.",
+   "stakes": "Début de saison (15 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892619",
    "picks": {
     "main": {
@@ -10705,15 +10705,15 @@
     },
     "scorer": {
      "market": "goal",
-     "label": "Drake Batherson marque",
-     "p": 0.35,
-     "prob": 35,
-     "fair": 2.86,
+     "label": "Tim Stützle marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
-     "player": "Drake Batherson",
-     "pid": 8480208,
+     "player": "Tim Stützle",
+     "pid": 8482116,
      "team": "Ottawa Senators",
-     "why": "8 buts et 8 passes en 14 matchs · forme : 13 points (6 buts) sur ses 10 derniers matchs · Ottawa Senators favori (61 %) · 3,5 buts attendus pour Ottawa Senators"
+     "why": "8 buts et 11 passes en 14 matchs · forme : 13 points (5 buts) sur ses 10 derniers matchs · Ottawa Senators favori (61 %) · 3,5 buts attendus pour Ottawa Senators"
     }
    },
    "second": {
@@ -10731,11 +10731,11 @@
    "league": "NHL",
    "kickoff": "2026-10-31T23:00:00+00:00",
    "time": "00:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Montréal Canadiens",
    "away": "Pittsburgh Penguins",
-   "rec_h": "8-3-2 · 3e Atlantic · 4 victoires de suite",
+   "rec_h": "8-3-2 · 4e Atlantic · 4 victoires de suite",
    "rec_a": "5-6-2 · 6e Metropolitan · 1 défaite en prolongation de suite",
    "winH": 55,
    "winA": 45,
@@ -11117,7 +11117,7 @@
    "league": "NHL",
    "kickoff": "2026-10-31T23:00:00+00:00",
    "time": "00:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Vancouver Canucks",
    "away": "Toronto Maple Leafs",
