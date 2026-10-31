@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T07:26+01:00",
+ "generated": "2026-10-31T12:29+01:00",
  "date": "2026-10-31",
  "nhl_date": "2026-10-31",
  "foot": [
@@ -5260,15 +5260,6 @@
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Rayo (17e) lutte pour le maintien, 0 point d'avance sur la zone rouge.",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Celta Vigo",
-     "p": 0.6685,
-     "prob": 67,
-     "fair": 1.5,
-     "stars": 3,
-     "why": "Derniers matchs : Rayo 12 marqués / 20 encaissés · Celta Vigo 10 / 7"
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Celta Vigo",
@@ -5344,11 +5335,22 @@
      "stats_league": "esp.1",
      "season": 2026,
      "why": "2 buts et 0 passe en 10 matchs · Celta Vigo annoncé gagnant (38 %) · 1,2 but attendu pour Celta Vigo"
+    },
+    "held": {
+     "market": "N2",
+     "label": "Nul ou Celta Vigo",
+     "p": 0.6685,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "Derniers matchs : Rayo 12 marqués / 20 encaissés · Celta Vigo 10 / 7",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "country": "Espagne",
    "code": "esp.1",
@@ -8751,7 +8753,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Boston Bruins gagne et plus de 5,5 buts",
-     "p": 0.384,
+     "p": 0.3843,
      "prob": 38,
      "fair": 2.6,
      "stars": 1
@@ -8760,15 +8762,15 @@
      {
       "market": "wh_o65",
       "label": "Boston Bruins gagne et plus de 6,5 buts",
-      "p": 0.3042,
+      "p": 0.3046,
       "prob": 30,
-      "fair": 3.29,
+      "fair": 3.28,
       "stars": 1
      },
      {
       "market": "h3",
       "label": "Boston Bruins gagne par 3 buts d'écart ou plus",
-      "p": 0.2716,
+      "p": 0.2718,
       "prob": 27,
       "fair": 3.68,
       "stars": 1
@@ -8827,7 +8829,7 @@
    "pA": 33,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.17,
-   "xgA": 2.6,
+   "xgA": 2.61,
    "total": 5.8,
    "scores": [
     "3-2",
@@ -9138,7 +9140,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4058,
+     "p": 0.4064,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -9147,7 +9149,7 @@
      {
       "market": "h2",
       "label": "Detroit Red Wings gagne par 2 buts d'écart ou plus",
-      "p": 0.3835,
+      "p": 0.3836,
       "prob": 38,
       "fair": 2.61,
       "stars": 1
@@ -9155,8 +9157,8 @@
      {
       "market": "wh_o55",
       "label": "Detroit Red Wings gagne et plus de 5,5 buts",
-      "p": 0.315,
-      "prob": 31,
+      "p": 0.3153,
+      "prob": 32,
       "fair": 3.17,
       "stars": 1
      }
@@ -9213,8 +9215,8 @@
    "pD": 15,
    "pA": 55,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 2.83,
-   "xgA": 3.65,
+   "xgH": 2.84,
+   "xgA": 3.66,
    "total": 6.5,
    "scores": [
     "2-3",
@@ -9507,7 +9509,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6291,
+     "p": 0.6296,
      "prob": 63,
      "fair": 1.59,
      "stars": 3,
@@ -9516,7 +9518,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Tampa Bay Lightning",
-     "p": 0.6209,
+     "p": 0.621,
      "prob": 62,
      "fair": 1.61,
      "stars": 3
@@ -9524,24 +9526,24 @@
     "fun": {
      "market": "wa_o55",
      "label": "Tampa Bay Lightning gagne et plus de 5,5 buts",
-     "p": 0.399,
+     "p": 0.3993,
      "prob": 40,
-     "fair": 2.51,
+     "fair": 2.5,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o65",
       "label": "Tampa Bay Lightning gagne et plus de 6,5 buts",
-      "p": 0.325,
+      "p": 0.3254,
       "prob": 33,
-      "fair": 3.08,
+      "fair": 3.07,
       "stars": 1
      },
      {
       "market": "a3",
       "label": "Tampa Bay Lightning gagne par 3 buts d'écart ou plus",
-      "p": 0.2612,
+      "p": 0.2613,
       "prob": 26,
       "fair": 3.83,
       "stars": 1
@@ -9893,7 +9895,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5652,
+     "p": 0.5658,
      "prob": 57,
      "fair": 1.77,
      "stars": 2,
@@ -9910,26 +9912,26 @@
     "fun": {
      "market": "a2",
      "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-     "p": 0.3577,
+     "p": 0.3578,
      "prob": 36,
-     "fair": 2.8,
+     "fair": 2.79,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o55",
       "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-      "p": 0.3189,
+      "p": 0.3192,
       "prob": 32,
-      "fair": 3.14,
+      "fair": 3.13,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Edmonton Oilers gagne et plus de 6,5 buts",
-      "p": 0.254,
+      "p": 0.2543,
       "prob": 25,
-      "fair": 3.94,
+      "fair": 3.93,
       "stars": 1
      }
     ],
@@ -9986,7 +9988,7 @@
    "pA": 37,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.16,
-   "xgA": 2.85,
+   "xgA": 2.86,
    "total": 6.0,
    "scores": [
     "3-2",
@@ -10091,7 +10093,7 @@
       "g": 2,
       "a": 5
      },
-     "p_goal": 22,
+     "p_goal": 23,
      "p_point": 47,
      "p_assist": 31
     },
@@ -10296,7 +10298,7 @@
      {
       "market": "wh_o55",
       "label": "Los Angeles Kings gagne et plus de 5,5 buts",
-      "p": 0.3112,
+      "p": 0.3115,
       "prob": 31,
       "fair": 3.21,
       "stars": 1
@@ -10304,7 +10306,7 @@
      {
       "market": "wh_o65",
       "label": "Los Angeles Kings gagne et plus de 6,5 buts",
-      "p": 0.2481,
+      "p": 0.2484,
       "prob": 25,
       "fair": 4.03,
       "stars": 1
@@ -10337,9 +10339,9 @@
     "held": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.557,
+     "p": 0.5575,
      "prob": 56,
-     "fair": 1.8,
+     "fair": 1.79,
      "stars": 2,
      "why": "10 derniers matchs : Los Angeles Kings 4 victoires · Buffalo Sabres 4",
      "note": "l'analyse et le marché des paris ne désignent pas le même favori"
@@ -10375,7 +10377,7 @@
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 2.81,
    "xgA": 3.54,
-   "total": 6.3,
+   "total": 6.4,
    "scores": [
     "2-3",
     "2-4",
@@ -10458,7 +10460,7 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 18,
+     "p_goal": 19,
      "p_point": 41,
      "p_assist": 27
     },
@@ -10667,7 +10669,7 @@
     "main": {
      "market": "win_a",
      "label": "Victoire Ottawa Senators",
-     "p": 0.6097,
+     "p": 0.6098,
      "prob": 61,
      "fair": 1.64,
      "stars": 3,
@@ -10676,7 +10678,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Ottawa Senators",
-     "p": 0.6097,
+     "p": 0.6098,
      "prob": 61,
      "fair": 1.64,
      "stars": 3,
@@ -10685,7 +10687,7 @@
     "fun": {
      "market": "a2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.4143,
+     "p": 0.4144,
      "prob": 41,
      "fair": 2.41,
      "stars": 1
@@ -10694,7 +10696,7 @@
      {
       "market": "wa_o55",
       "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.3789,
+      "p": 0.3792,
       "prob": 38,
       "fair": 2.64,
       "stars": 1
@@ -10702,9 +10704,9 @@
      {
       "market": "wa_o65",
       "label": "Ottawa Senators gagne et plus de 6,5 buts",
-      "p": 0.306,
+      "p": 0.3063,
       "prob": 31,
-      "fair": 3.27,
+      "fair": 3.26,
       "stars": 1
      }
     ],
@@ -11054,7 +11056,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6851,
+     "p": 0.6856,
      "prob": 69,
      "fair": 1.46,
      "stars": 3,
@@ -11071,7 +11073,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Montréal Canadiens gagne et plus de 5,5 buts",
-     "p": 0.3784,
+     "p": 0.3787,
      "prob": 38,
      "fair": 2.64,
      "stars": 1
@@ -11080,7 +11082,7 @@
      {
       "market": "h2",
       "label": "Montréal Canadiens gagne par 2 buts d'écart ou plus",
-      "p": 0.3563,
+      "p": 0.3564,
       "prob": 36,
       "fair": 2.81,
       "stars": 1
@@ -11088,9 +11090,9 @@
      {
       "market": "wh_o65",
       "label": "Montréal Canadiens gagne et plus de 6,5 buts",
-      "p": 0.3199,
+      "p": 0.3202,
       "prob": 32,
-      "fair": 3.13,
+      "fair": 3.12,
       "stars": 1
      }
     ],
@@ -11440,7 +11442,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6035,
+     "p": 0.6041,
      "prob": 60,
      "fair": 1.66,
      "stars": 3,
@@ -11457,7 +11459,7 @@
     "fun": {
      "market": "a2",
      "label": "Toronto Maple Leafs gagne par 2 buts d'écart ou plus",
-     "p": 0.3769,
+     "p": 0.377,
      "prob": 38,
      "fair": 2.65,
      "stars": 1
@@ -11466,7 +11468,7 @@
      {
       "market": "wa_o55",
       "label": "Toronto Maple Leafs gagne et plus de 5,5 buts",
-      "p": 0.3508,
+      "p": 0.3512,
       "prob": 35,
       "fair": 2.85,
       "stars": 1
@@ -11474,7 +11476,7 @@
      {
       "market": "wa_o65",
       "label": "Toronto Maple Leafs gagne et plus de 6,5 buts",
-      "p": 0.284,
+      "p": 0.2844,
       "prob": 28,
       "fair": 3.52,
       "stars": 1
@@ -11537,8 +11539,8 @@
    "total": 5.7,
    "scores": [
     "3-2",
-    "3-1",
-    "4-2"
+    "4-2",
+    "3-1"
    ],
    "scorep": [
     6,
@@ -11598,7 +11600,7 @@
      },
      "p_goal": 35,
      "p_point": 60,
-     "p_assist": 37
+     "p_assist": 38
     },
     {
      "name": "Mikko Rantanen",
@@ -11844,7 +11846,7 @@
     "fun": {
      "market": "h2",
      "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
-     "p": 0.3973,
+     "p": 0.3974,
      "prob": 40,
      "fair": 2.52,
      "stars": 1
@@ -11853,7 +11855,7 @@
      {
       "market": "o65",
       "label": "Plus de 6,5 buts",
-      "p": 0.3923,
+      "p": 0.3929,
       "prob": 39,
       "fair": 2.55,
       "stars": 1
@@ -11861,7 +11863,7 @@
      {
       "market": "wh_o55",
       "label": "Dallas Stars gagne et plus de 5,5 buts",
-      "p": 0.316,
+      "p": 0.3164,
       "prob": 32,
       "fair": 3.16,
       "stars": 1
@@ -11920,7 +11922,7 @@
    "pA": 20,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.77,
-   "xgA": 2.26,
+   "xgA": 2.25,
    "total": 6.0,
    "scores": [
     "3-2",
@@ -11962,7 +11964,7 @@
       "g": 6,
       "a": 11
      },
-     "p_goal": 44,
+     "p_goal": 43,
      "p_point": 76,
      "p_assist": 57
     },
@@ -12047,7 +12049,7 @@
       "a": 2
      },
      "p_goal": 22,
-     "p_point": 43,
+     "p_point": 42,
      "p_assist": 26
     },
     {
@@ -12112,7 +12114,7 @@
       "a": 8
      },
      "p_goal": 19,
-     "p_point": 40,
+     "p_point": 39,
      "p_assist": 25
     },
     {
@@ -12153,7 +12155,7 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 18,
+     "p_goal": 17,
      "p_point": 29,
      "p_assist": 13
     },
@@ -12174,30 +12176,30 @@
       "g": 2,
       "a": 11
      },
-     "p_goal": 17,
+     "p_goal": 16,
      "p_point": 43,
      "p_assist": 32
     },
     {
-     "name": "Mikael Backlund",
+     "name": "Ryan Strome",
      "pos": "Centre",
-     "cur": "2 buts, 2 passes en 11",
+     "cur": "3 buts, 2 passes en 13",
      "new": false,
      "side": "a",
      "team": "Calgary Flames",
-     "goals": 2,
+     "goals": 3,
      "assists": 2,
-     "gp": 11,
-     "pid": 8474150,
+     "gp": 13,
+     "pid": 8476458,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 10,
       "g": 2,
       "a": 2
      },
      "p_goal": 16,
-     "p_point": 35,
-     "p_assist": 22
+     "p_point": 33,
+     "p_assist": 19
     }
    ],
    "ctx": [
@@ -12213,7 +12215,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Colorado Avalanche",
-     "p": 0.7304,
+     "p": 0.7326,
      "prob": 73,
      "fair": 1.37,
      "stars": 4,
@@ -12222,7 +12224,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Colorado Avalanche",
-     "p": 0.7304,
+     "p": 0.7326,
      "prob": 73,
      "fair": 1.37,
      "stars": 4,
@@ -12231,24 +12233,24 @@
     "fun": {
      "market": "h3",
      "label": "Colorado Avalanche gagne par 3 buts d'écart ou plus",
-     "p": 0.3487,
+     "p": 0.3505,
      "prob": 35,
-     "fair": 2.87,
+     "fair": 2.85,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o65",
       "label": "Colorado Avalanche gagne et plus de 6,5 buts",
-      "p": 0.3285,
+      "p": 0.3272,
       "prob": 33,
-      "fair": 3.04,
+      "fair": 3.06,
       "stars": 1
      },
      {
       "market": "wh_by1",
       "label": "Colorado Avalanche gagne d'un seul but (prolongation comprise)",
-      "p": 0.1958,
+      "p": 0.1957,
       "prob": 20,
       "fair": 5.11,
       "stars": 1
@@ -12269,9 +12271,9 @@
     "scorer": {
      "market": "goal",
      "label": "Nathan MacKinnon marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "p": 0.43,
+     "prob": 43,
+     "fair": 2.33,
      "stars": 1,
      "player": "Nathan MacKinnon",
      "pid": 8477492,
@@ -12373,19 +12375,19 @@
    ]
   },
   "picks": {
-   "n": 767,
+   "n": 770,
    "rate": 54,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 767,
+     "n": 770,
      "ok": 416,
      "rate": 54,
      "expected": 52
     },
     "foot": {
-     "n": 469,
+     "n": 472,
      "ok": 245,
      "rate": 52,
      "expected": 52
@@ -12458,16 +12460,16 @@
     {
      "date": "2026-10-30",
      "all": {
-      "n": 48,
+      "n": 51,
       "ok": 26,
-      "rate": 54,
-      "expected": 53
+      "rate": 51,
+      "expected": 51
      },
      "foot": {
-      "n": 17,
+      "n": 20,
       "ok": 12,
-      "rate": 71,
-      "expected": 49
+      "rate": 60,
+      "expected": 46
      },
      "nhl": {
       "n": 31,
@@ -13015,18 +13017,18 @@
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 63,
+     "n": 64,
      "ok": 32,
-     "rate": 51,
+     "rate": 50,
      "expected": 52
     },
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 61,
+     "n": 63,
      "ok": 33,
-     "rate": 54,
-     "expected": 52
+     "rate": 52,
+     "expected": 51
     },
     {
      "sport": "foot",
@@ -13056,7 +13058,7 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 325,
+     "n": 328,
      "announced": 35,
      "actual": 31
     },
@@ -13186,6 +13188,19 @@
      "match": "Villarreal – Espanyol",
      "label": "Georges Mikautadze marque",
      "prob": 24,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882817",
+     "score": "0-1",
+     "match": "Villarreal – Espanyol",
+     "label": "Georges Mikautadze buteur ou passeur",
+     "prob": 31,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -13704,6 +13719,19 @@
      "mid": "foot-401876420",
      "score": "1-0",
      "match": "Lille – Lens",
+     "label": "Ethan Mbappé buteur ou passeur",
+     "prob": 18,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876420",
+     "score": "1-0",
+     "match": "Lille – Lens",
      "label": "Lille gagne sans encaisser de but",
      "prob": 27,
      "stars": 1,
@@ -13745,6 +13773,19 @@
      "match": "Le Havre AC – PSG",
      "label": "Ferran Torres marque",
      "prob": 31,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-30",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876421",
+     "score": "1-5",
+     "match": "Le Havre AC – PSG",
+     "label": "Ferran Torres buteur ou passeur",
+     "prob": 38,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -26819,30 +26860,14 @@
     "ita.1": 842,
     "ger.1": 650
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 75
-    },
-    "eng.1": {
-     "2026": 80
-    },
-    "esp.1": {
-     "2026": 100
-    },
-    "ita.1": {
-     "2026": 90
-    },
-    "ger.1": {
-     "2026": 64
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
    "ok": 10,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89242 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89252 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
