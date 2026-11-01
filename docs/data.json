@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T13:46+01:00",
+ "generated": "2026-11-01T14:11+01:00",
  "date": "2026-11-01",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -402,8 +402,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-01T13:00:00+00:00",
    "time": "14:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Getafe",
    "away": "Sevilla",
    "form_h": "NDDNN",
@@ -656,7 +656,7 @@
       "a": 3
      },
      "p_goal": 6,
-     "p_dec": 22,
+     "p_dec": 23,
      "pid": "277307",
      "stats_league": "esp.1",
      "season": 2026,
@@ -689,8 +689,6 @@
     "Sevilla : 6e, 17 points, 16 buts marqués et 16 encaissés en 10 matchs.",
     "Getafe : 5 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
     "Sevilla : 16 buts marqués et 16 encaissés sur ses 10 derniers matchs de championnat.",
-    "Getafe : attaque revue à la baisse (−7 %) d'après la compo officielle (Ivan Azón ne commence pas).",
-    "Sevilla : attaque revue à la baisse (−11 %) d'après la compo officielle (Miguel Sierra ne commence pas).",
     "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
@@ -699,7 +697,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Sevilla",
-     "p": 0.6779,
+     "p": 0.6778,
      "prob": 68,
      "fair": 1.48,
      "stars": 3,
@@ -24981,7 +24979,7 @@
  },
  "second": {
   "foot": {
-   "ok": 15,
+   "ok": 14,
    "elo": {
     "fra.1": 673,
     "eng.1": 830,
@@ -24989,23 +24987,7 @@
     "ita.1": 845,
     "ger.1": 656
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 76
-    },
-    "eng.1": {
-     "2026": 88
-    },
-    "esp.1": {
-     "2026": 104
-    },
-    "ita.1": {
-     "2026": 93
-    },
-    "ger.1": {
-     "2026": 70
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
