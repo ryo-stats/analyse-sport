@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T18:21+01:00",
+ "generated": "2026-11-01T18:46+01:00",
  "date": "2026-11-01",
  "matches": [
   {
@@ -567,9 +567,9 @@
     "fun": {
      "market": "sc2",
      "label": "Kylian Mbappé marque au moins 2 buts",
-     "p": 0.351,
-     "prob": 35,
-     "fair": 2.85,
+     "p": 0.3636,
+     "prob": 36,
+     "fair": 2.75,
      "stars": 1,
      "player": "Kylian Mbappé",
      "team": "Real Madrid",
@@ -578,23 +578,23 @@
     "player": {
      "market": "scorer",
      "label": "Kylian Mbappé marque",
-     "p": 0.71,
-     "prob": 71,
-     "fair": 1.41,
+     "p": 0.72,
+     "prob": 72,
+     "fair": 1.39,
      "stars": 4,
      "player": "Kylian Mbappé",
      "team": "Real Madrid",
      "pid": "231388",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "11 buts et 2 passes en 10 matchs · Real Madrid favori (71 %) · 2,8 buts attendus pour Real Madrid"
+     "why": "11 buts et 2 passes en 10 matchs · 10 derniers matchs : 12 buts, 2 passes · Real Madrid favori (71 %) · 2,8 buts attendus pour Real Madrid"
     },
     "decisive": {
      "market": "dec",
      "label": "Kylian Mbappé buteur ou passeur",
-     "p": 0.78,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.79,
+     "prob": 79,
+     "fair": 1.27,
      "stars": 4,
      "player": "Kylian Mbappé",
      "team": "Real Madrid",
@@ -606,7 +606,7 @@
      "pid": "231388",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "11 buts et 2 passes en 10 matchs · Real Madrid favori (71 %) · 2,8 buts attendus pour Real Madrid"
+     "why": "11 buts et 2 passes en 10 matchs · 10 derniers matchs : 12 buts, 2 passes · Real Madrid favori (71 %) · 2,8 buts attendus pour Real Madrid"
     }
    }
   },
@@ -1062,7 +1062,7 @@
    "time": "18:30",
    "home": "Elche",
    "away": "Valencia",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.5,
    "xgA": 0.89,
    "pH": 51,
@@ -1073,7 +1073,7 @@
     "main": {
      "market": "1N",
      "label": "Elche ou nul",
-     "p": 0.7761,
+     "p": 0.776,
      "prob": 78,
      "fair": 1.29,
      "stars": 4,
@@ -1090,7 +1090,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1373,
+     "p": 0.1374,
      "prob": 14,
      "fair": 7.28,
      "stars": 1,
@@ -1407,7 +1407,7 @@
    "time": "19:00",
    "home": "Carolina Hurricanes",
    "away": "Winnipeg Jets",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 4.14,
    "xgA": 2.28,
    "pH": 70,
@@ -1757,12 +1757,6 @@
   "nhl": 5,
   "top": [
    {
-    "label": "Elche ou nul",
-    "prob": 78,
-    "time": "18:30",
-    "match": "Elche – Valencia"
-   },
-   {
     "label": "Victoire Carolina Hurricanes",
     "prob": 77,
     "time": "19:00",
@@ -1773,6 +1767,12 @@
     "prob": 76,
     "time": "20:45",
     "match": "Marseille – Toulouse"
+   },
+   {
+    "label": "Connor McDavid : au moins 1 point",
+    "prob": 74,
+    "time": "00:00",
+    "match": "New York Rangers – Edmonton Oilers"
    }
   ]
  }
