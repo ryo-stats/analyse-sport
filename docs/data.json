@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T12:31+01:00",
+ "generated": "2026-11-01T12:56+01:00",
  "date": "2026-11-01",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Serie A",
    "kickoff": "2026-11-01T11:30:00+00:00",
    "time": "12:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Como",
    "away": "Venezia",
    "form_h": "NVVVD",
@@ -296,8 +296,6 @@
     "Venezia : 20e, 3 points, 6 buts marqués et 19 encaissés en 9 matchs.",
     "Como : 17 buts marqués et 8 encaissés sur ses 9 derniers matchs de championnat.",
     "Venezia : 6 buts marqués et 19 encaissés sur ses 9 derniers matchs de championnat.",
-    "Como : attaque revue à la baisse (−6 %) d'après la compo officielle (Assane Diao ne commence pas).",
-    "Venezia : attaque revue à la baisse (−12 %) d'après la compo officielle (Richie Sagrado, John Yeboah ne commencent pas).",
     "Compositions officielles prises en compte : Assane Diao (absent) ne commence pas le match."
    ],
    "reading": "Como est nettement favori (80 %).",
@@ -306,7 +304,7 @@
     "main": {
      "market": "1N",
      "label": "Como ou nul",
-     "p": 0.942,
+     "p": 0.9419,
      "prob": 94,
      "fair": 1.06,
      "stars": 5,
@@ -323,16 +321,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1633,
+     "p": 0.1632,
      "prob": 16,
-     "fair": 6.12,
+     "fair": 6.13,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "h3",
      "label": "Como gagne avec 3 buts d'écart ou plus",
-     "p": 0.3302,
+     "p": 0.3301,
      "prob": 33,
      "fair": 3.03,
      "stars": 1
@@ -341,15 +339,15 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3159,
+      "p": 0.3161,
       "prob": 32,
-      "fair": 3.17,
+      "fair": 3.16,
       "stars": 1
      },
      {
       "market": "wh_btts",
       "label": "Como gagne et les deux équipes marquent",
-      "p": 0.234,
+      "p": 0.2342,
       "prob": 23,
       "fair": 4.27,
       "stars": 1
@@ -6435,7 +6433,7 @@
      },
      "p_goal": 11,
      "p_point": 23,
-     "p_assist": 14
+     "p_assist": 13
     }
    ],
    "ctx": [
@@ -6451,7 +6449,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.7688,
+     "p": 0.7687,
      "prob": 77,
      "fair": 1.3,
      "stars": 4,
@@ -6460,7 +6458,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.7688,
+     "p": 0.7687,
      "prob": 77,
      "fair": 1.3,
      "stars": 4,
@@ -6469,18 +6467,18 @@
     "fun": {
      "market": "h3",
      "label": "Carolina Hurricanes gagne par 3 buts d'écart ou plus",
-     "p": 0.4041,
+     "p": 0.404,
      "prob": 40,
-     "fair": 2.47,
+     "fair": 2.48,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o65",
       "label": "Carolina Hurricanes gagne et plus de 6,5 buts",
-      "p": 0.3902,
+      "p": 0.3898,
       "prob": 39,
-      "fair": 2.56,
+      "fair": 2.57,
       "stars": 1
      },
      {
@@ -6659,27 +6657,6 @@
      "p_assist": 11
     },
     {
-     "name": "Aliaksei Protas",
-     "pos": "Ailier",
-     "cur": "1 but, 4 passes en 12",
-     "new": false,
-     "side": "h",
-     "team": "Washington Capitals",
-     "goals": 1,
-     "assists": 4,
-     "gp": 12,
-     "pid": 8481656,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 3
-     },
-     "p_goal": 21,
-     "p_point": 42,
-     "p_assist": 26
-    },
-    {
      "name": "Ryan Leonard",
      "pos": "Ailier",
      "cur": "4 buts, 4 passes en 12",
@@ -6699,6 +6676,27 @@
      "p_goal": 21,
      "p_point": 41,
      "p_assist": 26
+    },
+    {
+     "name": "Jordan Kyrou",
+     "pos": "Ailier",
+     "cur": "4 buts, 7 passes en 12",
+     "new": true,
+     "side": "h",
+     "team": "Washington Capitals",
+     "goals": 4,
+     "assists": 7,
+     "gp": 12,
+     "pid": 8479385,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 7
+     },
+     "p_goal": 20,
+     "p_point": 48,
+     "p_assist": 33
     }
    ],
    "squad_a": [
@@ -6842,7 +6840,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6706,
+     "p": 0.6702,
      "prob": 67,
      "fair": 1.49,
      "stars": 3,
@@ -6851,7 +6849,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Minnesota Wild",
-     "p": 0.6074,
+     "p": 0.6073,
      "prob": 61,
      "fair": 1.65,
      "stars": 3
@@ -6859,7 +6857,7 @@
     "fun": {
      "market": "a2",
      "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
-     "p": 0.418,
+     "p": 0.4179,
      "prob": 42,
      "fair": 2.39,
      "stars": 1
@@ -6868,15 +6866,15 @@
      {
       "market": "wa_o55",
       "label": "Minnesota Wild gagne et plus de 5,5 buts",
-      "p": 0.4141,
+      "p": 0.4138,
       "prob": 41,
-      "fair": 2.41,
+      "fair": 2.42,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Minnesota Wild gagne et plus de 6,5 buts",
-      "p": 0.3448,
+      "p": 0.3445,
       "prob": 34,
       "fair": 2.9,
       "stars": 1
@@ -6935,7 +6933,7 @@
    "pA": 55,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 2.56,
-   "xgA": 3.4,
+   "xgA": 3.39,
    "total": 6.0,
    "scores": [
     "2-3",
@@ -6982,7 +6980,7 @@
       "a": 2
      },
      "p_goal": 24,
-     "p_point": 44,
+     "p_point": 43,
      "p_assist": 25
     },
     {
@@ -7250,7 +7248,7 @@
     "fun": {
      "market": "wa_o55",
      "label": "Utah Mammoth gagne et plus de 5,5 buts",
-     "p": 0.3537,
+     "p": 0.3534,
      "prob": 35,
      "fair": 2.83,
      "stars": 1
@@ -7259,15 +7257,15 @@
      {
       "market": "wa_o65",
       "label": "Utah Mammoth gagne et plus de 6,5 buts",
-      "p": 0.2761,
+      "p": 0.2758,
       "prob": 28,
-      "fair": 3.62,
+      "fair": 3.63,
       "stars": 1
      },
      {
       "market": "a3",
       "label": "Utah Mammoth gagne par 3 buts d'écart ou plus",
-      "p": 0.2546,
+      "p": 0.2545,
       "prob": 25,
       "fair": 3.93,
       "stars": 1
@@ -7623,7 +7621,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5229,
+     "p": 0.5227,
      "prob": 52,
      "fair": 1.91,
      "stars": 2,
@@ -7649,7 +7647,7 @@
      {
       "market": "wa_o55",
       "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-      "p": 0.2643,
+      "p": 0.2642,
       "prob": 26,
       "fair": 3.78,
       "stars": 1
@@ -7657,7 +7655,7 @@
      {
       "market": "wa_o65",
       "label": "Edmonton Oilers gagne et plus de 6,5 buts",
-      "p": 0.208,
+      "p": 0.2079,
       "prob": 21,
       "fair": 4.81,
       "stars": 1
@@ -7709,13 +7707,13 @@
    "away": "Ottawa Senators",
    "rec_h": "5-7-1 · 6e Pacific · 1 défaite de suite",
    "rec_a": "9-5-1 · 3e Atlantic · 1 victoire de suite",
-   "winH": 44,
-   "winA": 56,
+   "winH": 45,
+   "winA": 55,
    "pH": 36,
    "pD": 16,
    "pA": 48,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.1,
+   "xgH": 3.12,
    "xgA": 3.49,
    "total": 6.6,
    "scores": [
@@ -8007,15 +8005,15 @@
     "Gardien probable de Anaheim Ducks : Lukas Dostal (87,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "Ottawa Senators est favori (56 % en comptant la prolongation).",
+   "reading": "Ottawa Senators est favori (55 % en comptant la prolongation).",
    "stakes": "Début de saison (13 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892628",
    "picks": {
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6448,
-     "prob": 64,
+     "p": 0.6461,
+     "prob": 65,
      "fair": 1.55,
      "stars": 3,
      "why": "10 derniers matchs : Anaheim Ducks 3 victoires · Ottawa Senators 5"
@@ -8023,32 +8021,32 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Ottawa Senators",
-     "p": 0.5556,
-     "prob": 56,
-     "fair": 1.8,
+     "p": 0.5538,
+     "prob": 55,
+     "fair": 1.81,
      "stars": 2
     },
     "fun": {
      "market": "a2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3648,
+     "p": 0.3633,
      "prob": 36,
-     "fair": 2.74,
+     "fair": 2.75,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o55",
       "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.3621,
+      "p": 0.3615,
       "prob": 36,
-      "fair": 2.76,
+      "fair": 2.77,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Ottawa Senators gagne et plus de 6,5 buts",
-      "p": 0.2995,
+      "p": 0.2992,
       "prob": 30,
       "fair": 3.34,
       "stars": 1
@@ -8064,7 +8062,7 @@
      "player": "Tim Stützle",
      "pid": 8482116,
      "team": "Ottawa Senators",
-     "why": "9 buts et 12 passes en 15 matchs · 10 derniers matchs : 5 buts, 8 passes · Ottawa Senators favori (56 %) · 3,5 buts attendus pour Ottawa Senators"
+     "why": "9 buts et 12 passes en 15 matchs · 10 derniers matchs : 5 buts, 8 passes · Ottawa Senators favori (55 %) · 3,5 buts attendus pour Ottawa Senators"
     },
     "scorer": {
      "market": "goal",
@@ -8076,7 +8074,7 @@
      "player": "Tim Stützle",
      "pid": 8482116,
      "team": "Ottawa Senators",
-     "why": "9 buts et 12 passes en 15 matchs · 10 derniers matchs : 5 buts, 8 passes · Ottawa Senators favori (56 %) · 3,5 buts attendus pour Ottawa Senators"
+     "why": "9 buts et 12 passes en 15 matchs · 10 derniers matchs : 5 buts, 8 passes · Ottawa Senators favori (55 %) · 3,5 buts attendus pour Ottawa Senators"
     }
    },
    "second": {
@@ -24966,7 +24964,7 @@
  },
  "second": {
   "foot": {
-   "ok": 16,
+   "ok": 15,
    "elo": {
     "fra.1": 673,
     "eng.1": 830,
@@ -24981,7 +24979,7 @@
    "ok": 5,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89489 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89500 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
