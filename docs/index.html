@@ -660,10 +660,15 @@ function topScorer(m){
   return `<p class="top">Buteur le plus probable du match : <b>${esc(b.name)}</b> (${esc(b.team)}) · ${b.p_goal} %</p>`;
 }
 // forme sur les 10 derniers matchs de l'équipe (buts et passes), quand le robot a pu lire les feuilles de match
+// ex. « 10 derniers matchs : 2 buts, 3 passes » ; s'il a manqué des matchs : « … (joué 7 sur 10) »
+// (rien si c'est la même chose que la saison, en début de saison)
 const formSub = (p, nhl) => !p.l10 || !p.l10.n ? "" : !p.l10.gp ? `absent des ${p.l10.n} derniers matchs`
-  : nhl ? `${p.l10.n} derniers : ${plural(p.l10.g + p.l10.a, "pt")} (${p.l10.g} b)` : `${p.l10.n} derniers : ${p.l10.g} b, ${p.l10.a} p`;
-const footSub = p => [p.pos, `${plural(p.goals, "but")}, ${plural(p.assists, "passe")}${p.apps ? " en " + plural(p.apps, "match") : ""}`, formSub(p, false)].filter(Boolean).join(" · ");
-const nhlSub = p => [p.pos, p.cur, formSub(p, true)].filter(Boolean).join(" · ");
+  : p.l10.g === p.goals && p.l10.a === p.assists ? ""
+  : `${p.l10.n} derniers matchs : ${plural(p.l10.g, "but")}, ${plural(p.l10.a, "passe")}${p.l10.gp < p.l10.n ? ` (joué ${p.l10.gp} sur ${p.l10.n})` : ""}`;
+// « Attaquant · saison : 8 buts, 11 passes en 15 matchs · 10 derniers matchs : 6 buts, 7 passes »
+const seasonSub = (g, a, n) => `saison : ${plural(g, "but")}, ${plural(a, "passe")}${n ? " en " + plural(n, "match") : ""}`;
+const footSub = p => [p.pos, seasonSub(p.goals, p.assists, p.apps), formSub(p, false)].filter(Boolean).join(" · ");
+const nhlSub = p => [p.pos, p.goals != null ? seasonSub(p.goals, p.assists, p.gp) : p.cur, formSub(p, true)].filter(Boolean).join(" · ");
 
 // ---- liste des matchs : une ligne par match, l'analyse se déplie au clic
 const OPEN = new Set();

@@ -1633,10 +1633,9 @@ def scorer_why(r, team):
     if l10 and l10.get("n") and not same:        # début de saison : les 10 derniers matchs = toute la saison, rien à ajouter
         if not l10.get("gp"):
             bits.append(f"absent de ses {l10['n']} derniers matchs")
-        elif r.get("sport") == "nhl" or "p_point" in r:
-            bits.append(f"forme : {plural(l10['g'] + l10['a'], 'point')} ({plural(l10['g'], 'but')}) sur ses {plural(l10['gp'], 'dernier match', 'derniers matchs')}")
         else:
-            bits.append(f"forme : {plural(l10['g'], 'but')} et {plural(l10['a'], 'passe')} sur ses {plural(l10['gp'], 'dernier match', 'derniers matchs')}")
+            bits.append(f"{l10['n']} derniers matchs : {plural(l10['g'], 'but')}, {plural(l10['a'], 'passe')}"
+                        + (f" (joué {l10['gp']} sur {l10['n']})" if l10["gp"] < l10["n"] else ""))
     if r.get("lineup") == "start":
         bits.append("titulaire")
     bits.append(f"{name} {'favori' if p_win >= 0.45 else 'annoncé gagnant'} ({pct(p_win)} %)")
