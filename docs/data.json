@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T12:56+01:00",
+ "generated": "2026-11-01T13:21+01:00",
  "date": "2026-11-01",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-01T11:30:00+00:00",
    "time": "12:30",
    "state": "in",
-   "score": "0-0",
+   "score": "1-0",
    "home": "Como",
    "away": "Venezia",
    "form_h": "NVVVD",
@@ -411,23 +411,23 @@
    "rank_h": 18,
    "rank_a": 6,
    "pH": 32,
-   "pD": 28,
-   "pA": 40,
+   "pD": 30,
+   "pA": 37,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.05,
-   "xgA": 1.22,
+   "xgH": 0.98,
+   "xgA": 1.08,
    "scores": [
-    "1-1",
     "0-1",
-    "1-0"
+    "1-1",
+    "0-0"
    ],
    "scorep": [
+    14,
     13,
-    13,
-    11
+    13
    ],
-   "over25": 40,
-   "btts": 46,
+   "over25": 34,
+   "btts": 41,
    "squad_h": [
     {
      "name": "Martín Satriano",
@@ -443,11 +443,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 27,
-     "p_dec": 38,
+     "p_goal": 26,
+     "p_dec": 36,
      "pid": "284854",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Enes Ünal",
@@ -463,31 +464,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 21,
+     "p_goal": 16,
+     "p_dec": 20,
      "pid": "218122",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Ivan Azón",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Getafe",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 15,
-     "p_dec": 26,
-     "pid": "310259",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ramón Terrats",
@@ -503,31 +485,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 19,
+     "p_goal": 13,
+     "p_dec": 18,
      "pid": "309838",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Nemanja Gudelj",
-     "pos": "Milieu",
+     "name": "Ivan Azón",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Getafe",
-     "goals": 0,
-     "assists": 0,
-     "apps": 8,
+     "goals": 1,
+     "assists": 1,
+     "apps": 6,
      "l10": {
       "n": 10,
-      "gp": 8,
-      "g": 0,
-      "a": 0
+      "gp": 6,
+      "g": 1,
+      "a": 1
      },
-     "p_goal": 3,
+     "p_goal": 4,
      "p_dec": 8,
-     "pid": "136673",
+     "pid": "310259",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Francho Serrano",
@@ -544,10 +528,32 @@
       "a": 1
      },
      "p_goal": 2,
-     "p_dec": 17,
+     "p_dec": 16,
      "pid": "307186",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Nemanja Gudelj",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Getafe",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 7,
+     "pid": "136673",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -565,31 +571,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 19,
-     "p_dec": 24,
+     "p_goal": 17,
+     "p_dec": 22,
      "pid": "365821",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Miguel Sierra",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Sevilla",
-     "goals": 2,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 16,
-     "pid": "375514",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Felix Correia",
@@ -605,31 +592,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 14,
-     "p_dec": 21,
+     "p_goal": 13,
+     "p_dec": 19,
      "pid": "288900",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Robbie Ure",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Sevilla",
-     "goals": 1,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 9,
-     "p_dec": 21,
-     "pid": "322993",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lucas Stassin",
@@ -645,11 +613,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 14,
+     "p_goal": 7,
+     "p_dec": 13,
      "pid": "323033",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Chidera Ejuke",
@@ -665,94 +634,141 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 9,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "254270",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Youssouf Fofana",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Sevilla",
+     "goals": 1,
+     "assists": 3,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 6,
+     "p_dec": 22,
+     "pid": "277307",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Juan Iglesias",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Sevilla",
+     "goals": 1,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "279738",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Getafe : 18e, 9 points, 5 buts marqués et 15 encaissés en 10 matchs.",
     "Sevilla : 6e, 17 points, 16 buts marqués et 16 encaissés en 10 matchs.",
     "Getafe : 5 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
-    "Sevilla : 16 buts marqués et 16 encaissés sur ses 10 derniers matchs de championnat."
+    "Sevilla : 16 buts marqués et 16 encaissés sur ses 10 derniers matchs de championnat.",
+    "Getafe : attaque revue à la baisse (−7 %) d'après la compo officielle (Ivan Azón ne commence pas).",
+    "Sevilla : attaque revue à la baisse (−11 %) d'après la compo officielle (Miguel Sierra ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
    "stakes": "Getafe (18e) est en zone de relégation : match vital. Sevilla (6e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Sevilla",
-     "p": 0.6838,
+     "p": 0.6779,
      "prob": 68,
-     "fair": 1.46,
+     "fair": 1.48,
      "stars": 3,
      "why": "10 derniers matchs : Getafe 5 marqués / 15 encaissés · Sevilla 16 / 16"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Sevilla",
-     "p": 0.3989,
-     "prob": 40,
-     "fair": 2.51,
+     "p": 0.3749,
+     "prob": 37,
+     "fair": 2.67,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1261,
-     "prob": 13,
-     "fair": 7.93,
+     "p": 0.1381,
+     "prob": 14,
+     "fair": 7.24,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Sevilla gagne sans encaisser de but",
-     "p": 0.2462,
+     "p": 0.2485,
      "prob": 25,
-     "fair": 4.06,
+     "fair": 4.02,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_a",
-      "label": "Sevilla mène à la mi-temps et gagne le match",
-      "p": 0.2313,
-      "prob": 23,
-      "fair": 4.32,
+      "market": "wa_by1",
+      "label": "Sevilla gagne d'un seul but",
+      "p": 0.2248,
+      "prob": 22,
+      "fair": 4.45,
       "stars": 1
      },
      {
-      "market": "wa_by1",
-      "label": "Sevilla gagne d'un seul but",
-      "p": 0.2258,
-      "prob": 23,
-      "fair": 4.43,
+      "market": "htft_a",
+      "label": "Sevilla mène à la mi-temps et gagne le match",
+      "p": 0.2132,
+      "prob": 21,
+      "fair": 4.69,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Isaac Romero marque",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
      "player": "Isaac Romero",
      "team": "Sevilla",
+     "lineup": "start",
      "pid": "365821",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Sevilla annoncé gagnant (40 %) · 1,2 but attendu pour Sevilla"
+     "why": "3 buts et 1 passe en 8 matchs · titulaire · Sevilla annoncé gagnant (37 %) · 1,1 but attendu pour Sevilla"
     },
     "decisive": {
      "market": "dec",
      "label": "Isaac Romero buteur ou passeur",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
      "player": "Isaac Romero",
      "team": "Sevilla",
@@ -761,10 +777,11 @@
       3,
       1
      ],
+     "lineup": "start",
      "pid": "365821",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Sevilla annoncé gagnant (40 %) · 1,2 but attendu pour Sevilla"
+     "why": "3 buts et 1 passe en 8 matchs · titulaire · Sevilla annoncé gagnant (37 %) · 1,1 but attendu pour Sevilla"
     }
    },
    "second": {
