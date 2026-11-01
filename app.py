@@ -2238,7 +2238,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         ctx.append("Aucune des deux équipes n'a joué hier.")
     for name, gk in ((hname, gk_h), (aname, gk_a)):
         f = goalie_factor(gk)
-        if gk and abs(f - 1) >= 0.03:
+        if gk and abs(f - 1) >= 0.03 and not started:        # seulement là où il a compté (avant le match)
             ctx.append(f"Gardien probable de {name} : {gk['name']} ({gk['sv']}), "
                        + (f"au-dessus de la moyenne : l'adversaire devrait marquer environ {pct(1 - f)} % de buts en moins."
                           if f < 1 else f"sous la moyenne : l'adversaire devrait marquer environ {pct(f - 1)} % de buts en plus."))
