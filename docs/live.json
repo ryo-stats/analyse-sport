@@ -1,1389 +1,428 @@
 {
- "generated": "2026-11-01T23:45+01:00",
- "date": "2026-11-01",
+ "generated": "2026-11-02T00:10+01:00",
+ "date": "2026-11-02",
  "matches": [
   {
-   "id": "foot-401875002",
+   "id": "foot-401874963",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-11-01T11:30:00+00:00",
-   "time": "12:30",
-   "home": "Como",
-   "away": "Venezia",
-   "state": "post",
-   "xgH": 2.36,
-   "xgA": 0.48,
-   "pH": 80,
-   "pD": 15,
-   "pA": 6,
-   "edate": "20261101",
+   "kickoff": "2026-11-02T17:30:00+00:00",
+   "time": "18:30",
+   "home": "Sassuolo",
+   "away": "Fiorentina",
+   "state": "pre",
+   "xgH": 2.28,
+   "xgA": 1.73,
+   "pH": 50,
+   "pD": 20,
+   "pA": 30,
+   "edate": "20261102",
    "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Como ou nul",
-     "p": 0.9419,
-     "prob": 94,
-     "fair": 1.06,
-     "stars": 5,
-     "why": "9 derniers matchs : Como 17 marqués / 8 encaissés · Venezia 6 / 19"
-    },
     "winner": {
      "market": "1",
-     "label": "Victoire Como",
-     "p": 0.7962,
-     "prob": 80,
-     "fair": 1.26,
-     "stars": 4
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1632,
-     "prob": 16,
-     "fair": 6.13,
-     "stars": 1,
-     "value": "2-0"
-    },
-    "fun": {
-     "market": "h3",
-     "label": "Como gagne avec 3 buts d'écart ou plus",
-     "p": 0.3301,
-     "prob": 33,
-     "fair": 3.03,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Anastasios Douvikas marque",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
-     "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
-     "pid": "262071",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · 10 derniers matchs : 5 buts, 0 passe · Como favori (80 %) · 2,4 buts attendus pour Como"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Anastasios Douvikas buteur ou passeur",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
-     "player": "Anastasios Douvikas",
-     "team": "Como",
-     "base": [
-      9,
-      5,
-      0
-     ],
-     "pid": "262071",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · 10 derniers matchs : 5 buts, 0 passe · Como favori (80 %) · 2,4 buts attendus pour Como"
-    }
-   }
-  },
-  {
-   "id": "foot-401882821",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-11-01T13:00:00+00:00",
-   "time": "14:00",
-   "home": "Getafe",
-   "away": "Sevilla",
-   "state": "post",
-   "xgH": 0.98,
-   "xgA": 1.08,
-   "pH": 32,
-   "pD": 30,
-   "pA": 37,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Sevilla",
-     "p": 0.6778,
-     "prob": 68,
-     "fair": 1.48,
-     "stars": 3,
-     "why": "10 derniers matchs : Getafe 5 marqués / 15 encaissés · Sevilla 16 / 16"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Sevilla",
-     "p": 0.3749,
-     "prob": 37,
-     "fair": 2.67,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1381,
-     "prob": 14,
-     "fair": 7.24,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Sevilla gagne sans encaisser de but",
-     "p": 0.2485,
-     "prob": 25,
-     "fair": 4.02,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Isaac Romero marque",
-     "p": 0.17,
-     "prob": 17,
-     "fair": 5.88,
-     "stars": 1,
-     "player": "Isaac Romero",
-     "team": "Sevilla",
-     "pid": "365821",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Sevilla annoncé gagnant (37 %) · 1,1 but attendu pour Sevilla"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Isaac Romero buteur ou passeur",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
-     "stars": 1,
-     "player": "Isaac Romero",
-     "team": "Sevilla",
-     "base": [
-      8,
-      3,
-      1
-     ],
-     "pid": "365821",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Sevilla annoncé gagnant (37 %) · 1,1 but attendu pour Sevilla"
-    }
-   }
-  },
-  {
-   "id": "foot-401876414",
-   "sport": "foot",
-   "league": "Ligue 1",
-   "code": "fra.1",
-   "kickoff": "2026-11-01T14:00:00+00:00",
-   "time": "15:00",
-   "home": "Strasbourg",
-   "away": "Auxerre",
-   "state": "post",
-   "xgH": 2.03,
-   "xgA": 1.63,
-   "pH": 47,
-   "pD": 21,
-   "pA": 31,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.7084,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
-     "why": "8 derniers matchs : Strasbourg 12 marqués / 18 encaissés · Auxerre 12 / 18"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Strasbourg",
-     "p": 0.474,
-     "prob": 47,
-     "fair": 2.11,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0864,
-     "prob": 9,
-     "fair": 11.57,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "wh_o25",
-     "label": "Strasbourg gagne et plus de 2,5 buts",
-     "p": 0.369,
-     "prob": 37,
-     "fair": 2.71,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Gessime Yassine marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
-     "stars": 1,
-     "player": "Gessime Yassine",
-     "team": "Strasbourg",
-     "pid": "379012",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · 9 derniers matchs : 4 buts, 3 passes · Strasbourg favori (47 %) · 2,0 buts attendus pour Strasbourg"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Gessime Yassine buteur ou passeur",
-     "p": 0.57,
-     "prob": 57,
-     "fair": 1.75,
-     "stars": 2,
-     "player": "Gessime Yassine",
-     "team": "Strasbourg",
-     "base": [
-      8,
-      2,
-      2
-     ],
-     "pid": "379012",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · 9 derniers matchs : 4 buts, 3 passes · Strasbourg favori (47 %) · 2,0 buts attendus pour Strasbourg"
-    }
-   }
-  },
-  {
-   "id": "foot-401874782",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-11-01T14:00:00+00:00",
-   "time": "15:00",
-   "home": "Frosinone",
-   "away": "Torino",
-   "state": "post",
-   "xgH": 2.15,
-   "xgA": 1.39,
-   "pH": 55,
-   "pD": 21,
-   "pA": 24,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Frosinone ou nul",
-     "p": 0.7567,
-     "prob": 76,
-     "fair": 1.32,
-     "stars": 4,
-     "why": "9 derniers matchs : Frosinone 22 marqués / 14 encaissés · Torino 14 / 14"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Frosinone",
-     "p": 0.5504,
-     "prob": 55,
-     "fair": 1.82,
+     "label": "Victoire Sassuolo",
+     "p": 0.5041,
+     "prob": 50,
+     "fair": 1.98,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0933,
-     "prob": 9,
-     "fair": 10.72,
+     "p": 0.0815,
+     "prob": 8,
+     "fair": 12.26,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "scw",
-     "label": "Antonio Raimondo marque et Frosinone gagne",
-     "p": 0.3546,
-     "prob": 35,
-     "fair": 2.82,
-     "stars": 1,
-     "player": "Antonio Raimondo",
-     "team": "Frosinone",
-     "side": "h"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Antonio Raimondo marque",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
-     "stars": 2,
-     "player": "Antonio Raimondo",
-     "team": "Frosinone",
-     "pid": "319265",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "8 buts et 0 passe en 9 matchs · 10 derniers matchs : 8 buts, 0 passe · Frosinone favori (55 %) · 2,2 buts attendus pour Frosinone"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Antonio Raimondo buteur ou passeur",
-     "p": 0.52,
-     "prob": 52,
-     "fair": 1.92,
-     "stars": 2,
-     "player": "Antonio Raimondo",
-     "team": "Frosinone",
-     "base": [
-      9,
-      8,
-      0
-     ],
-     "pid": "319265",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "8 buts et 0 passe en 9 matchs · 10 derniers matchs : 8 buts, 0 passe · Frosinone favori (55 %) · 2,2 buts attendus pour Frosinone"
-    }
-   }
-  },
-  {
-   "id": "foot-401874983",
-   "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-11-01T14:00:00+00:00",
-   "time": "15:00",
-   "home": "Lazio",
-   "away": "Cagliari",
-   "state": "post",
-   "xgH": 2.12,
-   "xgA": 0.65,
-   "pH": 72,
-   "pD": 18,
-   "pA": 10,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Lazio ou nul",
-     "p": 0.8993,
-     "prob": 90,
-     "fair": 1.11,
-     "stars": 5,
-     "why": "9 derniers matchs : Lazio 22 marqués / 7 encaissés · Cagliari 8 / 13"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Lazio",
-     "p": 0.7154,
-     "prob": 72,
-     "fair": 1.4,
-     "stars": 4
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1414,
-     "prob": 14,
-     "fair": 7.07,
-     "stars": 1,
-     "value": "2-0"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.2998,
-     "prob": 30,
-     "fair": 3.34,
+     "market": "wh_o25",
+     "label": "Sassuolo gagne et plus de 2,5 buts",
+     "p": 0.4156,
+     "prob": 42,
+     "fair": 2.41,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Tijjani Noslin marque",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
-     "stars": 1,
-     "player": "Tijjani Noslin",
-     "team": "Lazio",
-     "pid": "323113",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "4 buts et 2 passes en 8 matchs · 10 derniers matchs : 4 buts, 3 passes (joué 9 sur 10) · Lazio favori (72 %) · 2,1 buts attendus pour Lazio"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
-     "stars": 1,
-     "player": "Tijjani Noslin",
-     "team": "Lazio",
-     "base": [
-      8,
-      4,
-      2
-     ],
-     "pid": "323113",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "4 buts et 2 passes en 8 matchs · 10 derniers matchs : 4 buts, 3 passes (joué 9 sur 10) · Lazio favori (72 %) · 2,1 buts attendus pour Lazio"
-    }
-   }
-  },
-  {
-   "id": "foot-401884750",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-11-01T14:30:00+00:00",
-   "time": "15:30",
-   "home": "Union Berlin",
-   "away": "Cologne",
-   "state": "post",
-   "xgH": 1.24,
-   "xgA": 1.25,
-   "pH": 36,
-   "pD": 27,
-   "pA": 37,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Cologne",
-     "p": 0.6372,
-     "prob": 64,
-     "fair": 1.57,
-     "stars": 3,
-     "why": "7 derniers matchs : Union Berlin 6 marqués / 18 encaissés · Cologne 8 / 11"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Cologne",
-     "p": 0.3664,
-     "prob": 37,
-     "fair": 2.73,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1037,
-     "prob": 10,
-     "fair": 9.65,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "htft_a",
-     "label": "Cologne mène à la mi-temps et gagne le match",
-     "p": 0.2125,
-     "prob": 21,
-     "fair": 4.71,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Said El Mala marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
-     "stars": 1,
-     "player": "Said El Mala",
-     "team": "Cologne",
-     "pid": "380795",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 6 matchs · 8 derniers matchs : 2 buts, 0 passe (joué 7 sur 8) · Cologne annoncé gagnant (37 %) · 1,2 but attendu pour Cologne"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Said El Mala buteur ou passeur",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
-     "stars": 1,
-     "player": "Said El Mala",
-     "team": "Cologne",
-     "base": [
-      6,
-      2,
-      0
-     ],
-     "pid": "380795",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 6 matchs · 8 derniers matchs : 2 buts, 0 passe (joué 7 sur 8) · Cologne annoncé gagnant (37 %) · 1,2 but attendu pour Cologne"
-    }
-   }
-  },
-  {
-   "id": "foot-401882819",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-11-01T15:15:00+00:00",
-   "time": "16:15",
-   "home": "Racing",
-   "away": "Real Madrid",
-   "state": "post",
-   "xgH": 1.24,
-   "xgA": 2.85,
-   "pH": 14,
-   "pD": 15,
-   "pA": 71,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Real Madrid",
-     "p": 0.86,
-     "prob": 86,
-     "fair": 1.16,
-     "stars": 5,
-     "why": "10 derniers matchs : Racing 15 marqués / 26 encaissés · Real Madrid 25 / 10"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Real Madrid",
-     "p": 0.7057,
-     "prob": 71,
-     "fair": 1.42,
-     "stars": 4
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0843,
-     "prob": 8,
-     "fair": 11.87,
-     "stars": 1,
-     "value": "1-2"
-    },
-    "fun": {
-     "market": "sc2",
-     "label": "Kylian Mbappé marque au moins 2 buts",
-     "p": 0.3636,
-     "prob": 36,
-     "fair": 2.75,
-     "stars": 1,
-     "player": "Kylian Mbappé",
-     "team": "Real Madrid",
-     "side": "a"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Kylian Mbappé marque",
-     "p": 0.72,
-     "prob": 72,
-     "fair": 1.39,
-     "stars": 4,
-     "player": "Kylian Mbappé",
-     "team": "Real Madrid",
-     "pid": "231388",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "11 buts et 2 passes en 10 matchs · 10 derniers matchs : 12 buts, 2 passes · Real Madrid favori (71 %) · 2,8 buts attendus pour Real Madrid"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Kylian Mbappé buteur ou passeur",
-     "p": 0.79,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
-     "player": "Kylian Mbappé",
-     "team": "Real Madrid",
-     "base": [
-      10,
-      11,
-      2
-     ],
-     "pid": "231388",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "11 buts et 2 passes en 10 matchs · 10 derniers matchs : 12 buts, 2 passes · Real Madrid favori (71 %) · 2,8 buts attendus pour Real Madrid"
-    }
-   }
-  },
-  {
-   "id": "foot-401876418",
-   "sport": "foot",
-   "league": "Ligue 1",
-   "code": "fra.1",
-   "kickoff": "2026-11-01T16:15:00+00:00",
-   "time": "17:15",
-   "home": "Lyon",
-   "away": "Angers",
-   "state": "post",
-   "xgH": 1.8,
-   "xgA": 0.62,
-   "pH": 66,
-   "pD": 22,
-   "pA": 12,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Lyon ou nul",
-     "p": 0.8777,
-     "prob": 88,
-     "fair": 1.14,
-     "stars": 5,
-     "why": "8 derniers matchs : Lyon 13 marqués / 7 encaissés · Angers 9 / 15"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Lyon",
-     "p": 0.6584,
-     "prob": 66,
-     "fair": 1.52,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1595,
-     "prob": 16,
-     "fair": 6.27,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "h2",
-     "label": "Lyon gagne avec 2 buts d'écart ou plus",
-     "p": 0.3913,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Ernest Nuamah marque",
+     "label": "Vasilije Adzic marque",
      "p": 0.34,
      "prob": 34,
      "fair": 2.94,
      "stars": 1,
-     "player": "Ernest Nuamah",
-     "team": "Lyon",
-     "pid": "333310",
-     "stats_league": "fra.1",
+     "player": "Vasilije Adzic",
+     "team": "Sassuolo",
+     "pid": "344917",
+     "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · 9 derniers matchs : 4 buts, 1 passe (joué 7 sur 9) · Lyon favori (66 %) · 1,8 buts attendus pour Lyon"
+     "why": "3 buts et 1 passe en 7 matchs · Sassuolo favori (50 %) · 2,3 buts attendus pour Sassuolo"
     },
     "decisive": {
      "market": "dec",
-     "label": "Ernest Nuamah buteur ou passeur",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "label": "Vasilije Adzic buteur ou passeur",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
-     "player": "Ernest Nuamah",
-     "team": "Lyon",
+     "player": "Vasilije Adzic",
+     "team": "Sassuolo",
      "base": [
-      6,
+      7,
       3,
       1
      ],
-     "pid": "333310",
-     "stats_league": "fra.1",
+     "pid": "344917",
+     "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · 9 derniers matchs : 4 buts, 1 passe (joué 7 sur 9) · Lyon favori (66 %) · 1,8 buts attendus pour Lyon"
+     "why": "3 buts et 1 passe en 7 matchs · Sassuolo favori (50 %) · 2,3 buts attendus pour Sassuolo"
     }
    }
   },
   {
-   "id": "foot-401876415",
+   "id": "foot-401876419",
    "sport": "foot",
    "league": "Ligue 1",
    "code": "fra.1",
-   "kickoff": "2026-11-01T16:15:00+00:00",
-   "time": "17:15",
-   "home": "Paris FC",
-   "away": "Monaco",
-   "state": "post",
-   "xgH": 1.16,
-   "xgA": 1.0,
-   "pH": 39,
+   "kickoff": "2026-11-02T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Lorient",
+   "away": "Brest",
+   "state": "pre",
+   "xgH": 1.25,
+   "xgA": 0.87,
+   "pH": 45,
    "pD": 29,
-   "pA": 31,
-   "edate": "20261101",
+   "pA": 26,
+   "edate": "20261102",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Paris FC ou nul",
-     "p": 0.6862,
-     "prob": 69,
-     "fair": 1.46,
-     "stars": 3,
-     "why": "8 derniers matchs : Paris FC 13 marqués / 9 encaissés · Monaco 11 / 7"
+     "label": "Lorient ou nul",
+     "p": 0.7413,
+     "prob": 74,
+     "fair": 1.35,
+     "stars": 4,
+     "why": "8 derniers matchs : Lorient 7 marqués / 6 encaissés · Brest 14 / 12"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Paris FC",
-     "p": 0.3926,
-     "prob": 39,
-     "fair": 2.55,
+     "label": "Victoire Lorient",
+     "p": 0.4505,
+     "prob": 45,
+     "fair": 2.22,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1337,
-     "prob": 13,
-     "fair": 7.48,
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.67,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
-     "label": "Paris FC gagne sans encaisser de but",
-     "p": 0.2518,
-     "prob": 25,
-     "fair": 3.97,
+     "label": "Lorient gagne sans encaisser de but",
+     "p": 0.2985,
+     "prob": 30,
+     "fair": 3.35,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Lassine Sinayoko marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "label": "Mamadou Koné marque",
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.67,
      "stars": 1,
-     "player": "Lassine Sinayoko",
-     "team": "Paris FC",
-     "pid": "271137",
+     "player": "Mamadou Koné",
+     "team": "Lorient",
+     "pid": "416429",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "6 buts et 4 passes en 8 matchs · 9 derniers matchs : 8 buts, 5 passes · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
+     "why": "1 but et 0 passe en 8 matchs · Lorient favori (45 %) · 1,2 but attendu pour Lorient"
     },
     "decisive": {
      "market": "dec",
-     "label": "Lassine Sinayoko buteur ou passeur",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2,
-     "player": "Lassine Sinayoko",
-     "team": "Paris FC",
+     "label": "Mamadou Koné buteur ou passeur",
+     "p": 0.18,
+     "prob": 18,
+     "fair": 5.56,
+     "stars": 1,
+     "player": "Mamadou Koné",
+     "team": "Lorient",
      "base": [
       8,
-      6,
-      4
-     ],
-     "pid": "271137",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "why": "6 buts et 4 passes en 8 matchs · 9 derniers matchs : 8 buts, 5 passes · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
-    }
-   }
-  },
-  {
-   "id": "foot-401879246",
-   "sport": "foot",
-   "league": "Premier League",
-   "code": "eng.1",
-   "kickoff": "2026-11-01T16:30:00+00:00",
-   "time": "17:30",
-   "home": "Liverpool",
-   "away": "Arsenal",
-   "state": "post",
-   "xgH": 0.83,
-   "xgA": 0.99,
-   "pH": 29,
-   "pD": 32,
-   "pA": 38,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "u25",
-     "label": "Moins de 2,5 buts",
-     "p": 0.7236,
-     "prob": 72,
-     "fair": 1.38,
-     "stars": 4,
-     "why": "8 derniers matchs : Liverpool 11 marqués / 8 encaissés · Arsenal 13 / 5"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Arsenal",
-     "p": 0.3817,
-     "prob": 38,
-     "fair": 2.62,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1601,
-     "prob": 16,
-     "fair": 6.25,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Arsenal gagne sans encaisser de but",
-     "p": 0.2741,
-     "prob": 27,
-     "fair": 3.65,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Bukayo Saka marque",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
-     "stars": 1,
-     "player": "Bukayo Saka",
-     "team": "Arsenal",
-     "pid": "280555",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal annoncé gagnant (38 %) · 1,0 but attendu pour Arsenal"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Bukayo Saka buteur ou passeur",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
-     "stars": 1,
-     "player": "Bukayo Saka",
-     "team": "Arsenal",
-     "base": [
-      7,
-      3,
+      1,
       0
      ],
-     "pid": "280555",
-     "stats_league": "eng.1",
+     "pid": "416429",
+     "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal annoncé gagnant (38 %) · 1,0 but attendu pour Arsenal"
+     "why": "1 but et 0 passe en 8 matchs · Lorient favori (45 %) · 1,2 but attendu pour Lorient"
     }
    }
   },
   {
-   "id": "foot-401884752",
-   "sport": "foot",
-   "league": "Bundesliga",
-   "code": "ger.1",
-   "kickoff": "2026-11-01T16:30:00+00:00",
-   "time": "17:30",
-   "home": "Frankfurt",
-   "away": "Hamburg",
-   "state": "post",
-   "xgH": 1.84,
-   "xgA": 0.96,
-   "pH": 58,
-   "pD": 23,
-   "pA": 19,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Frankfurt ou nul",
-     "p": 0.8066,
-     "prob": 81,
-     "fair": 1.24,
-     "stars": 5,
-     "why": "7 derniers matchs : Frankfurt 10 marqués / 17 encaissés · Hamburg 6 / 16"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Frankfurt",
-     "p": 0.5805,
-     "prob": 58,
-     "fair": 1.72,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1121,
-     "prob": 11,
-     "fair": 8.92,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "scw",
-     "label": "Younes Ebnoutalib marque et Frankfurt gagne",
-     "p": 0.4015,
-     "prob": 40,
-     "fair": 2.49,
-     "stars": 1,
-     "player": "Younes Ebnoutalib",
-     "team": "Frankfurt",
-     "side": "h"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Younes Ebnoutalib marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2,
-     "player": "Younes Ebnoutalib",
-     "team": "Frankfurt",
-     "pid": "359793",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "5 buts et 1 passe en 7 matchs · 8 derniers matchs : 6 buts, 1 passe · Frankfurt favori (58 %) · 1,8 buts attendus pour Frankfurt"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Younes Ebnoutalib buteur ou passeur",
-     "p": 0.61,
-     "prob": 61,
-     "fair": 1.64,
-     "stars": 3,
-     "player": "Younes Ebnoutalib",
-     "team": "Frankfurt",
-     "base": [
-      7,
-      5,
-      1
-     ],
-     "pid": "359793",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "5 buts et 1 passe en 7 matchs · 8 derniers matchs : 6 buts, 1 passe · Frankfurt favori (58 %) · 1,8 buts attendus pour Frankfurt"
-    }
-   }
-  },
-  {
-   "id": "foot-401874968",
+   "id": "foot-401874971",
    "sport": "foot",
    "league": "Serie A",
    "code": "ita.1",
-   "kickoff": "2026-11-01T17:00:00+00:00",
-   "time": "18:00",
-   "home": "Lecce",
-   "away": "Genoa",
-   "state": "post",
-   "xgH": 1.01,
-   "xgA": 1.12,
-   "pH": 33,
-   "pD": 30,
-   "pA": 38,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Genoa",
-     "p": 0.6743,
-     "prob": 67,
-     "fair": 1.48,
-     "stars": 3,
-     "why": "9 derniers matchs : Lecce 10 marqués / 19 encaissés · Genoa 8 / 13"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Genoa",
-     "p": 0.3778,
-     "prob": 38,
-     "fair": 2.65,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1326,
-     "prob": 13,
-     "fair": 7.54,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Genoa gagne sans encaisser de but",
-     "p": 0.2439,
-     "prob": 24,
-     "fair": 4.1,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Milutin Osmajic marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
-     "stars": 1,
-     "player": "Milutin Osmajic",
-     "team": "Genoa",
-     "pid": "275444",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · 10 derniers matchs : 4 buts, 1 passe (joué 9 sur 10) · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Milutin Osmajic buteur ou passeur",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
-     "stars": 1,
-     "player": "Milutin Osmajic",
-     "team": "Genoa",
-     "base": [
-      8,
-      3,
-      1
-     ],
-     "pid": "275444",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · 10 derniers matchs : 4 buts, 1 passe (joué 9 sur 10) · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
-    }
-   }
-  },
-  {
-   "id": "foot-401882823",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-11-01T17:30:00+00:00",
-   "time": "18:30",
-   "home": "Elche",
-   "away": "Valencia",
-   "state": "post",
-   "xgH": 1.5,
-   "xgA": 0.89,
-   "pH": 51,
-   "pD": 26,
-   "pA": 22,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Elche ou nul",
-     "p": 0.776,
-     "prob": 78,
-     "fair": 1.29,
-     "stars": 4,
-     "why": "10 derniers matchs : Elche 14 marqués / 17 encaissés · Valencia 7 / 17"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Elche",
-     "p": 0.5146,
-     "prob": 51,
-     "fair": 1.94,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1374,
-     "prob": 14,
-     "fair": 7.28,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Elche gagne sans encaisser de but",
-     "p": 0.3186,
-     "prob": 32,
-     "fair": 3.14,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Fer Niño marque",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
-     "stars": 1,
-     "player": "Fer Niño",
-     "team": "Elche",
-     "pid": "301684",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "6 buts et 0 passe en 10 matchs · Elche favori (51 %) · 1,5 but attendu pour Elche"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Fer Niño buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
-     "stars": 1,
-     "player": "Fer Niño",
-     "team": "Elche",
-     "base": [
-      10,
-      6,
-      0
-     ],
-     "pid": "301684",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "6 buts et 0 passe en 10 matchs · Elche favori (51 %) · 1,5 but attendu pour Elche"
-    }
-   }
-  },
-  {
-   "id": "foot-401876417",
-   "sport": "foot",
-   "league": "Ligue 1",
-   "code": "fra.1",
-   "kickoff": "2026-11-01T19:45:00+00:00",
+   "kickoff": "2026-11-02T19:45:00+00:00",
    "time": "20:45",
-   "home": "Marseille",
-   "away": "Toulouse",
-   "state": "post",
-   "xgH": 2.05,
-   "xgA": 1.37,
-   "pH": 53,
-   "pD": 21,
-   "pA": 26,
-   "edate": "20261101",
+   "home": "Atalanta",
+   "away": "Parma",
+   "state": "pre",
+   "xgH": 2.02,
+   "xgA": 0.82,
+   "pH": 65,
+   "pD": 20,
+   "pA": 14,
+   "edate": "20261102",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Marseille ou nul",
-     "p": 0.744,
-     "prob": 74,
-     "fair": 1.34,
-     "stars": 4,
-     "why": "8 derniers matchs : Marseille 18 marqués / 13 encaissés · Toulouse 12 / 11"
+     "label": "Atalanta ou nul",
+     "p": 0.857,
+     "prob": 86,
+     "fair": 1.17,
+     "stars": 5,
+     "why": "9 derniers matchs : Atalanta 16 marqués / 17 encaissés · Parma 5 / 15"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Marseille",
-     "p": 0.5305,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2
+     "label": "Victoire Atalanta",
+     "p": 0.6535,
+     "prob": 65,
+     "fair": 1.53,
+     "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0941,
-     "prob": 9,
-     "fair": 10.63,
+     "label": "Score exact 2-0",
+     "p": 0.1192,
+     "prob": 12,
+     "fair": 8.39,
      "stars": 1,
-     "value": "2-1"
+     "value": "2-0"
     },
     "fun": {
      "market": "wh_o25",
-     "label": "Marseille gagne et plus de 2,5 buts",
-     "p": 0.395,
-     "prob": 40,
-     "fair": 2.53,
+     "label": "Atalanta gagne et plus de 2,5 buts",
+     "p": 0.4163,
+     "prob": 42,
+     "fair": 2.4,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Amine Gouiri marque",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "label": "Nikola Krstovic marque",
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
      "stars": 1,
-     "player": "Amine Gouiri",
-     "team": "Marseille",
-     "pid": "259743",
-     "stats_league": "fra.1",
+     "player": "Nikola Krstovic",
+     "team": "Atalanta",
+     "pid": "258158",
+     "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 8 matchs · 9 derniers matchs : 6 buts, 3 passes · Marseille favori (53 %) · 2,0 buts attendus pour Marseille"
+     "why": "6 buts et 2 passes en 9 matchs · Atalanta favori (65 %) · 2,0 buts attendus pour Atalanta"
     },
     "decisive": {
      "market": "dec",
-     "label": "Amine Gouiri buteur ou passeur",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
+     "label": "Nikola Krstovic buteur ou passeur",
+     "p": 0.59,
+     "prob": 59,
+     "fair": 1.69,
      "stars": 2,
-     "player": "Amine Gouiri",
-     "team": "Marseille",
+     "player": "Nikola Krstovic",
+     "team": "Atalanta",
      "base": [
-      8,
-      5,
+      9,
+      6,
       2
      ],
-     "pid": "259743",
-     "stats_league": "fra.1",
+     "pid": "258158",
+     "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 8 matchs · 9 derniers matchs : 6 buts, 3 passes · Marseille favori (53 %) · 2,0 buts attendus pour Marseille"
+     "why": "6 buts et 2 passes en 9 matchs · Atalanta favori (65 %) · 2,0 buts attendus pour Atalanta"
     }
    }
   },
   {
-   "id": "foot-401874949",
+   "id": "foot-401878762",
    "sport": "foot",
-   "league": "Serie A",
-   "code": "ita.1",
-   "kickoff": "2026-11-01T19:45:00+00:00",
-   "time": "20:45",
-   "home": "Juventus",
-   "away": "Napoli",
-   "state": "post",
-   "xgH": 1.07,
-   "xgA": 1.02,
-   "pH": 36,
-   "pD": 30,
-   "pA": 34,
-   "edate": "20261101",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Juventus ou nul",
-     "p": 0.6639,
-     "prob": 66,
-     "fair": 1.51,
-     "stars": 3,
-     "why": "9 derniers matchs : Juventus 11 marqués / 10 encaissés · Napoli 17 / 11"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Juventus",
-     "p": 0.3633,
-     "prob": 36,
-     "fair": 2.75,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1327,
-     "prob": 13,
-     "fair": 7.53,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Juventus gagne sans encaisser de but",
-     "p": 0.2376,
-     "prob": 24,
-     "fair": 4.21,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Edon Zhegrova marque",
-     "p": 0.14,
-     "prob": 14,
-     "fair": 7.14,
-     "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
-     "pid": "260300",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · 10 derniers matchs : 2 buts, 2 passes (joué 8 sur 10) · Juventus annoncé gagnant (36 %) · 1,1 but attendu pour Juventus"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Edon Zhegrova buteur ou passeur",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
-     "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
-     "base": [
-      7,
-      2,
-      1
-     ],
-     "pid": "260300",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · 10 derniers matchs : 2 buts, 2 passes (joué 8 sur 10) · Juventus annoncé gagnant (36 %) · 1,1 but attendu pour Juventus"
-    }
-   }
-  },
-  {
-   "id": "foot-401882826",
-   "sport": "foot",
-   "league": "LaLiga",
-   "code": "esp.1",
-   "kickoff": "2026-11-01T20:00:00+00:00",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-11-02T20:00:00+00:00",
    "time": "21:00",
-   "home": "Athletic",
-   "away": "Real Sociedad",
-   "state": "post",
-   "xgH": 1.46,
-   "xgA": 1.07,
-   "pH": 46,
+   "home": "Newcastle",
+   "away": "Everton",
+   "state": "pre",
+   "xgH": 1.48,
+   "xgA": 1.13,
+   "pH": 45,
    "pD": 26,
-   "pA": 28,
-   "edate": "20261101",
+   "pA": 29,
+   "edate": "20261102",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Athletic ou nul",
-     "p": 0.7211,
-     "prob": 72,
-     "fair": 1.39,
+     "label": "Newcastle ou nul",
+     "p": 0.7111,
+     "prob": 71,
+     "fair": 1.41,
      "stars": 4,
-     "why": "Derniers matchs : Athletic 12 marqués / 9 encaissés · Real Sociedad 19 / 18"
+     "why": "8 derniers matchs : Newcastle 12 marqués / 14 encaissés · Everton 8 / 9"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Athletic",
-     "p": 0.4588,
-     "prob": 46,
-     "fair": 2.18,
+     "label": "Victoire Newcastle",
+     "p": 0.4527,
+     "prob": 45,
+     "fair": 2.21,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1161,
-     "prob": 12,
-     "fair": 8.61,
+     "p": 0.1087,
+     "prob": 11,
+     "fair": 9.2,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
-     "label": "Athletic mène à la mi-temps et gagne le match",
-     "p": 0.2752,
-     "prob": 28,
-     "fair": 3.63,
+     "label": "Newcastle mène à la mi-temps et gagne le match",
+     "p": 0.272,
+     "prob": 27,
+     "fair": 3.68,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Álex Berenguer marque",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "label": "Harvey Barnes marque",
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
      "stars": 1,
-     "player": "Álex Berenguer",
-     "team": "Athletic",
-     "pid": "209579",
-     "stats_league": "esp.1",
+     "player": "Harvey Barnes",
+     "team": "Newcastle",
+     "pid": "243386",
+     "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 4 passes en 10 matchs · 10 derniers matchs : 4 buts, 4 passes · Athletic favori (46 %) · 1,5 but attendu pour Athletic"
+     "why": "2 buts et 2 passes en 8 matchs · Newcastle favori (45 %) · 1,5 but attendu pour Newcastle"
     },
     "decisive": {
      "market": "dec",
-     "label": "Álex Berenguer buteur ou passeur",
-     "p": 0.51,
-     "prob": 51,
-     "fair": 1.96,
-     "stars": 2,
-     "player": "Álex Berenguer",
-     "team": "Athletic",
+     "label": "Harvey Barnes buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Harvey Barnes",
+     "team": "Newcastle",
      "base": [
-      10,
-      3,
-      4
+      8,
+      2,
+      2
      ],
-     "pid": "209579",
+     "pid": "243386",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "why": "2 buts et 2 passes en 8 matchs · Newcastle favori (45 %) · 1,5 but attendu pour Newcastle"
+    }
+   }
+  },
+  {
+   "id": "foot-401882824",
+   "sport": "foot",
+   "league": "LaLiga",
+   "code": "esp.1",
+   "kickoff": "2026-11-02T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Deportivo",
+   "away": "Osasuna",
+   "state": "pre",
+   "xgH": 1.73,
+   "xgA": 1.05,
+   "pH": 53,
+   "pD": 24,
+   "pA": 23,
+   "edate": "20261102",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Deportivo ou nul",
+     "p": 0.7714,
+     "prob": 77,
+     "fair": 1.3,
+     "stars": 4,
+     "why": "10 derniers matchs : Deportivo 13 marqués / 13 encaissés · Osasuna 10 / 20"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Deportivo",
+     "p": 0.534,
+     "prob": 53,
+     "fair": 1.87,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.1075,
+     "prob": 11,
+     "fair": 9.3,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "scw",
+     "label": "Pierre-Emerick Aubameyang marque et Deportivo gagne",
+     "p": 0.3408,
+     "prob": 34,
+     "fair": 2.93,
+     "stars": 1,
+     "player": "Pierre-Emerick Aubameyang",
+     "team": "Deportivo",
+     "side": "h"
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Pierre-Emerick Aubameyang marque",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Pierre-Emerick Aubameyang",
+     "team": "Deportivo",
+     "pid": "122260",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 4 passes en 10 matchs · 10 derniers matchs : 4 buts, 4 passes · Athletic favori (46 %) · 1,5 but attendu pour Athletic"
+     "why": "5 buts et 2 passes en 7 matchs · Deportivo favori (53 %) · 1,7 buts attendus pour Deportivo"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Pierre-Emerick Aubameyang buteur ou passeur",
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 3,
+     "player": "Pierre-Emerick Aubameyang",
+     "team": "Deportivo",
+     "base": [
+      7,
+      5,
+      2
+     ],
+     "pid": "122260",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "5 buts et 2 passes en 7 matchs · Deportivo favori (53 %) · 1,7 buts attendus pour Deportivo"
     }
    }
   },
@@ -1465,7 +504,7 @@
    "time": "21:30",
    "home": "Washington Capitals",
    "away": "Minnesota Wild",
-   "state": "LIVE",
+   "state": "FINAL",
    "xgH": 3.02,
    "xgA": 3.76,
    "pH": 31,
@@ -1510,7 +549,7 @@
      "player": "Kirill Kaprizov",
      "pid": 8478864,
      "team": "Minnesota Wild",
-     "why": "14 buts et 10 passes en 15 matchs · 10 derniers matchs : 8 buts, 8 passes · Minnesota Wild favori (61 %) · 3,8 buts attendus pour Minnesota Wild"
+     "why": "14 buts et 10 passes en 15 matchs · 10 derniers matchs : 9 buts, 7 passes · Minnesota Wild favori (61 %) · 3,8 buts attendus pour Minnesota Wild"
     },
     "scorer": {
      "market": "goal",
@@ -1522,7 +561,7 @@
      "player": "Kirill Kaprizov",
      "pid": 8478864,
      "team": "Minnesota Wild",
-     "why": "14 buts et 10 passes en 15 matchs · 10 derniers matchs : 8 buts, 8 passes · Minnesota Wild favori (61 %) · 3,8 buts attendus pour Minnesota Wild"
+     "why": "14 buts et 10 passes en 15 matchs · 10 derniers matchs : 9 buts, 7 passes · Minnesota Wild favori (61 %) · 3,8 buts attendus pour Minnesota Wild"
     }
    }
   },
@@ -1604,9 +643,9 @@
    "time": "00:00",
    "home": "New York Rangers",
    "away": "Edmonton Oilers",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.88,
-   "xgA": 2.93,
+   "xgA": 2.92,
    "pH": 41,
    "pD": 17,
    "pA": 42,
@@ -1636,7 +675,7 @@
      "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
      "p": 0.3063,
      "prob": 31,
-     "fair": 3.26,
+     "fair": 3.27,
      "stars": 1
     },
     "player": {
@@ -1736,31 +775,31 @@
   }
  ],
  "summary": {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "yesterday": {
-   "n": 269,
-   "ok": 148
+   "n": 97,
+   "ok": 59
   },
-  "foot": 16,
+  "foot": 5,
   "nhl": 5,
   "top": [
    {
-    "label": "Connor McDavid : au moins 1 point",
+    "label": "Atalanta ou nul",
+    "prob": 86,
+    "time": "20:45",
+    "match": "Atalanta – Parma"
+   },
+   {
+    "label": "Deportivo ou nul",
+    "prob": 77,
+    "time": "21:00",
+    "match": "Deportivo – Osasuna"
+   },
+   {
+    "label": "Lorient ou nul",
     "prob": 74,
-    "time": "00:00",
-    "match": "New York Rangers – Edmonton Oilers"
-   },
-   {
-    "label": "Tim Stützle : au moins 1 point",
-    "prob": 65,
-    "time": "02:00",
-    "match": "Anaheim Ducks – Ottawa Senators"
-   },
-   {
-    "label": "Plus de 5,5 buts",
-    "prob": 65,
-    "time": "02:00",
-    "match": "Anaheim Ducks – Ottawa Senators"
+    "time": "20:45",
+    "match": "Lorient – Brest"
    }
   ]
  }
