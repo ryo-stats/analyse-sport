@@ -30230,7 +30230,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882819|N2|": {
   "match": "foot-401882819",
@@ -30824,106 +30824,6 @@
   ],
   "result": null
  },
- "foot-401874968|1|": {
-  "match": "foot-401874968",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Lecce",
-  "away": "Genoa",
-  "market": "1",
-  "label": "Victoire Lecce",
-  "p": 0.3689,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "foot-401874968|scorer|Lassana Coulibaly": {
-  "match": "foot-401874968",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Lecce",
-  "away": "Genoa",
-  "market": "scorer",
-  "label": "Lassana Coulibaly marque",
-  "p": 0.18,
-  "stars": 1,
-  "player": "Lassana Coulibaly",
-  "pid_player": "223947",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401874968|dec|Lassana Coulibaly": {
-  "match": "foot-401874968",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Lecce",
-  "away": "Genoa",
-  "market": "dec",
-  "label": "Lassana Coulibaly buteur ou passeur",
-  "p": 0.28,
-  "stars": 1,
-  "player": "Lassana Coulibaly",
-  "pid_player": "223947",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   7,
-   2,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401874968|htft_h|": {
-  "match": "foot-401874968",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Lecce",
-  "away": "Genoa",
-  "market": "htft_h",
-  "label": "Lecce mène à la mi-temps et gagne le match",
-  "p": 0.2139,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874968|exact|": {
   "match": "foot-401874968",
   "sport": "foot",
@@ -30932,12 +30832,12 @@
   "home": "Lecce",
   "away": "Genoa",
   "market": "exact",
-  "label": "Score exact 1-0",
-  "p": 0.1055,
+  "label": "Score exact 0-1",
+  "p": 0.1326,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "1-0",
+  "value": "0-1",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -30957,7 +30857,7 @@
   "away": "Valencia",
   "market": "1N",
   "label": "Elche ou nul",
-  "p": 0.7763,
+  "p": 0.7761,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -30981,7 +30881,7 @@
   "away": "Valencia",
   "market": "1",
   "label": "Victoire Elche",
-  "p": 0.5301,
+  "p": 0.5146,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -31005,7 +30905,7 @@
   "away": "Valencia",
   "market": "scorer",
   "label": "Fer Niño marque",
-  "p": 0.45,
+  "p": 0.42,
   "stars": 1,
   "player": "Fer Niño",
   "pid_player": "301684",
@@ -31029,7 +30929,7 @@
   "away": "Valencia",
   "market": "dec",
   "label": "Fer Niño buteur ou passeur",
-  "p": 0.47,
+  "p": 0.44,
   "stars": 1,
   "player": "Fer Niño",
   "pid_player": "301684",
@@ -31048,30 +30948,6 @@
   ],
   "result": null
  },
- "foot-401882823|scw|Fer Niño": {
-  "match": "foot-401882823",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-01",
-  "home": "Elche",
-  "away": "Valencia",
-  "market": "scw",
-  "label": "Fer Niño marque et Elche gagne",
-  "p": 0.3295,
-  "stars": 1,
-  "player": "Fer Niño",
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": "h",
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401882823|exact|": {
   "match": "foot-401882823",
   "sport": "foot",
@@ -31081,7 +30957,7 @@
   "away": "Valencia",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1203,
+  "p": 0.1373,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -31513,30 +31389,6 @@
   "group": "fun",
   "kinds": [
    "score"
-  ],
-  "result": null
- },
- "foot-401874968|1N|": {
-  "match": "foot-401874968",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Lecce",
-  "away": "Genoa",
-  "market": "1N",
-  "label": "Lecce ou nul",
-  "p": 0.6411,
-  "stars": 3,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
   ],
   "result": null
  },
@@ -32164,7 +32016,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884750|2|": {
   "match": "foot-401884750",
@@ -32188,7 +32040,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884750|scorer|Said El Mala": {
   "match": "foot-401884750",
@@ -32212,7 +32064,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884750|dec|Said El Mala": {
   "match": "foot-401884750",
@@ -32264,7 +32116,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876418|h2|": {
   "match": "foot-401876418",
@@ -32424,6 +32276,154 @@
   "market": "wh_o25",
   "label": "Marseille gagne et plus de 2,5 buts",
   "p": 0.42,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874968|N2|": {
+  "match": "foot-401874968",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Lecce",
+  "away": "Genoa",
+  "market": "N2",
+  "label": "Nul ou Genoa",
+  "p": 0.6743,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874968|2|": {
+  "match": "foot-401874968",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Lecce",
+  "away": "Genoa",
+  "market": "2",
+  "label": "Victoire Genoa",
+  "p": 0.3778,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874968|scorer|Milutin Osmajic": {
+  "match": "foot-401874968",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Lecce",
+  "away": "Genoa",
+  "market": "scorer",
+  "label": "Milutin Osmajic marque",
+  "p": 0.29,
+  "stars": 1,
+  "player": "Milutin Osmajic",
+  "pid_player": "275444",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874968|dec|Milutin Osmajic": {
+  "match": "foot-401874968",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Lecce",
+  "away": "Genoa",
+  "market": "dec",
+  "label": "Milutin Osmajic buteur ou passeur",
+  "p": 0.38,
+  "stars": 1,
+  "player": "Milutin Osmajic",
+  "pid_player": "275444",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   8,
+   3,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874968|wa_nil|": {
+  "match": "foot-401874968",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Lecce",
+  "away": "Genoa",
+  "market": "wa_nil",
+  "label": "Genoa gagne sans encaisser de but",
+  "p": 0.244,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882823|wh_nil|": {
+  "match": "foot-401882823",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-01",
+  "home": "Elche",
+  "away": "Valencia",
+  "market": "wh_nil",
+  "label": "Elche gagne sans encaisser de but",
+  "p": 0.3186,
   "stars": 1,
   "player": null,
   "pid_player": null,
