@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T19:40+01:00",
+ "generated": "2026-11-01T20:05+01:00",
  "date": "2026-11-01",
  "matches": [
   {
@@ -966,7 +966,7 @@
    "time": "18:00",
    "home": "Lecce",
    "away": "Genoa",
-   "state": "in",
+   "state": "post",
    "xgH": 1.01,
    "xgA": 1.12,
    "pH": 33,
@@ -1017,11 +1017,10 @@
      "stars": 1,
      "player": "Milutin Osmajic",
      "team": "Genoa",
-     "lineup": "start",
      "pid": "275444",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · titulaire · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
+     "why": "3 buts et 1 passe en 8 matchs · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
     },
     "decisive": {
      "market": "dec",
@@ -1037,11 +1036,10 @@
       3,
       1
      ],
-     "lineup": "start",
      "pid": "275444",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · titulaire · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
+     "why": "3 buts et 1 passe en 8 matchs · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
     }
    }
   },
@@ -1143,67 +1141,68 @@
    "home": "Marseille",
    "away": "Toulouse",
    "state": "pre",
-   "xgH": 2.15,
+   "xgH": 2.05,
    "xgA": 1.37,
-   "pH": 55,
+   "pH": 53,
    "pD": 21,
-   "pA": 24,
+   "pA": 26,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Marseille ou nul",
-     "p": 0.7584,
-     "prob": 76,
-     "fair": 1.32,
+     "p": 0.744,
+     "prob": 74,
+     "fair": 1.34,
      "stars": 4,
      "why": "8 derniers matchs : Marseille 18 marqués / 13 encaissés · Toulouse 12 / 11"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Marseille",
-     "p": 0.5518,
-     "prob": 55,
-     "fair": 1.81,
+     "p": 0.5305,
+     "prob": 53,
+     "fair": 1.88,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0937,
+     "p": 0.0941,
      "prob": 9,
-     "fair": 10.68,
+     "fair": 10.63,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Marseille mène à la mi-temps et gagne le match",
-     "p": 0.355,
-     "prob": 35,
-     "fair": 2.82,
+     "market": "wh_o25",
+     "label": "Marseille gagne et plus de 2,5 buts",
+     "p": 0.395,
+     "prob": 39,
+     "fair": 2.53,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Amine Gouiri marque",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Amine Gouiri",
      "team": "Marseille",
+     "lineup": "start",
      "pid": "259743",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 8 matchs · Marseille favori (55 %) · 2,1 buts attendus pour Marseille"
+     "why": "5 buts et 2 passes en 8 matchs · titulaire · Marseille favori (53 %) · 2,0 buts attendus pour Marseille"
     },
     "decisive": {
      "market": "dec",
      "label": "Amine Gouiri buteur ou passeur",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Amine Gouiri",
      "team": "Marseille",
@@ -1212,10 +1211,11 @@
       5,
       2
      ],
+     "lineup": "start",
      "pid": "259743",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 8 matchs · Marseille favori (55 %) · 2,1 buts attendus pour Marseille"
+     "why": "5 buts et 2 passes en 8 matchs · titulaire · Marseille favori (53 %) · 2,0 buts attendus pour Marseille"
     }
    }
   },
@@ -1229,79 +1229,70 @@
    "home": "Juventus",
    "away": "Napoli",
    "state": "pre",
-   "xgH": 1.26,
+   "xgH": 1.07,
    "xgA": 1.21,
-   "pH": 38,
-   "pD": 27,
-   "pA": 35,
+   "pH": 32,
+   "pD": 28,
+   "pA": 39,
    "edate": "20261101",
    "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Juventus ou nul",
-     "p": 0.6494,
-     "prob": 65,
-     "fair": 1.54,
-     "stars": 3,
-     "why": "9 derniers matchs : Juventus 11 marqués / 10 encaissés · Napoli 17 / 11"
-    },
     "winner": {
-     "market": "1",
-     "label": "Victoire Juventus",
-     "p": 0.3777,
-     "prob": 38,
-     "fair": 2.65,
+     "market": "2",
+     "label": "Victoire Napoli",
+     "p": 0.3922,
+     "prob": 39,
+     "fair": 2.55,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1067,
-     "prob": 11,
-     "fair": 9.38,
+     "label": "Score exact 0-1",
+     "p": 0.1239,
+     "prob": 12,
+     "fair": 8.07,
      "stars": 1,
-     "value": "1-0"
+     "value": "0-1"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Juventus mène à la mi-temps et gagne le match",
-     "p": 0.2197,
-     "prob": 22,
-     "fair": 4.55,
+     "market": "wa_nil",
+     "label": "Napoli gagne sans encaisser de but",
+     "p": 0.2407,
+     "prob": 24,
+     "fair": 4.15,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Edon Zhegrova marque",
-     "p": 0.17,
-     "prob": 17,
-     "fair": 5.88,
+     "label": "Kevin De Bruyne marque",
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
      "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
-     "pid": "260300",
+     "player": "Kevin De Bruyne",
+     "team": "Napoli",
+     "pid": "134947",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · Juventus annoncé gagnant (38 %) · 1,3 but attendu pour Juventus"
+     "why": "4 buts et 1 passe en 9 matchs · Napoli annoncé gagnant (39 %) · 1,2 but attendu pour Napoli"
     },
     "decisive": {
      "market": "dec",
-     "label": "Edon Zhegrova buteur ou passeur",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "label": "Kevin De Bruyne buteur ou passeur",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
+     "player": "Kevin De Bruyne",
+     "team": "Napoli",
      "base": [
-      7,
-      2,
+      9,
+      4,
       1
      ],
-     "pid": "260300",
+     "pid": "134947",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 7 matchs · Juventus annoncé gagnant (38 %) · 1,3 but attendu pour Juventus"
+     "why": "4 buts et 1 passe en 9 matchs · Napoli annoncé gagnant (39 %) · 1,2 but attendu pour Napoli"
     }
    }
   },
@@ -1315,67 +1306,68 @@
    "home": "Athletic",
    "away": "Real Sociedad",
    "state": "pre",
-   "xgH": 1.7,
-   "xgA": 1.27,
-   "pH": 48,
-   "pD": 24,
-   "pA": 29,
+   "xgH": 1.45,
+   "xgA": 1.07,
+   "pH": 46,
+   "pD": 26,
+   "pA": 28,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Athletic ou nul",
-     "p": 0.714,
-     "prob": 71,
-     "fair": 1.4,
+     "p": 0.7213,
+     "prob": 72,
+     "fair": 1.39,
      "stars": 4,
      "why": "Derniers matchs : Athletic 12 marqués / 9 encaissés · Real Sociedad 19 / 18"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Athletic",
-     "p": 0.4755,
-     "prob": 48,
-     "fair": 2.1,
+     "p": 0.4584,
+     "prob": 46,
+     "fair": 2.18,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0942,
-     "prob": 9,
-     "fair": 10.62,
+     "label": "Score exact 1-0",
+     "p": 0.1166,
+     "prob": 12,
+     "fair": 8.57,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.345,
-     "prob": 35,
-     "fair": 2.9,
+     "market": "htft_h",
+     "label": "Athletic mène à la mi-temps et gagne le match",
+     "p": 0.2748,
+     "prob": 27,
+     "fair": 3.64,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Álex Berenguer marque",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
      "player": "Álex Berenguer",
      "team": "Athletic",
+     "lineup": "start",
      "pid": "209579",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 4 passes en 10 matchs · 9 derniers matchs : 3 buts, 4 passes · Athletic favori (48 %) · 1,7 buts attendus pour Athletic"
+     "why": "3 buts et 4 passes en 10 matchs · 9 derniers matchs : 3 buts, 4 passes · titulaire · Athletic favori (46 %) · 1,5 but attendu pour Athletic"
     },
     "decisive": {
      "market": "dec",
      "label": "Álex Berenguer buteur ou passeur",
-     "p": 0.57,
-     "prob": 57,
-     "fair": 1.75,
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
      "stars": 2,
      "player": "Álex Berenguer",
      "team": "Athletic",
@@ -1384,10 +1376,11 @@
       3,
       4
      ],
+     "lineup": "start",
      "pid": "209579",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 4 passes en 10 matchs · 9 derniers matchs : 3 buts, 4 passes · Athletic favori (48 %) · 1,7 buts attendus pour Athletic"
+     "why": "3 buts et 4 passes en 10 matchs · 9 derniers matchs : 3 buts, 4 passes · titulaire · Athletic favori (46 %) · 1,5 but attendu pour Athletic"
     }
    }
   },
@@ -1742,15 +1735,15 @@
  "summary": {
   "date": "2026-11-01",
   "yesterday": {
-   "n": 241,
-   "ok": 132
+   "n": 247,
+   "ok": 136
   },
   "foot": 16,
   "nhl": 5,
   "top": [
    {
     "label": "Marseille ou nul",
-    "prob": 76,
+    "prob": 74,
     "time": "20:45",
     "match": "Marseille – Toulouse"
    },
@@ -1761,10 +1754,10 @@
     "match": "New York Rangers – Edmonton Oilers"
    },
    {
-    "label": "Kirill Kaprizov : au moins 1 point",
+    "label": "Athletic ou nul",
     "prob": 72,
-    "time": "21:30",
-    "match": "Washington Capitals – Minnesota Wild"
+    "time": "21:00",
+    "match": "Athletic – Real Sociedad"
    }
   ]
  }

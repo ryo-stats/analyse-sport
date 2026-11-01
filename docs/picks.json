@@ -30846,7 +30846,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882823|1N|": {
   "match": "foot-401882823",
@@ -30981,7 +30981,7 @@
   "away": "Toulouse",
   "market": "1N",
   "label": "Marseille ou nul",
-  "p": 0.7584,
+  "p": 0.744,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -31005,7 +31005,7 @@
   "away": "Toulouse",
   "market": "1",
   "label": "Victoire Marseille",
-  "p": 0.5518,
+  "p": 0.5305,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -31029,7 +31029,7 @@
   "away": "Toulouse",
   "market": "scorer",
   "label": "Amine Gouiri marque",
-  "p": 0.43,
+  "p": 0.42,
   "stars": 1,
   "player": "Amine Gouiri",
   "pid_player": "259743",
@@ -31053,7 +31053,7 @@
   "away": "Toulouse",
   "market": "dec",
   "label": "Amine Gouiri buteur ou passeur",
-  "p": 0.56,
+  "p": 0.54,
   "stars": 2,
   "player": "Amine Gouiri",
   "pid_player": "259743",
@@ -31081,7 +31081,7 @@
   "away": "Toulouse",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.0937,
+  "p": 0.0941,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -31096,130 +31096,6 @@
   ],
   "result": null
  },
- "foot-401874949|1N|": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "1N",
-  "label": "Juventus ou nul",
-  "p": 0.6494,
-  "stars": 3,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
- "foot-401874949|1|": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "1",
-  "label": "Victoire Juventus",
-  "p": 0.3777,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "foot-401874949|scorer|Edon Zhegrova": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "scorer",
-  "label": "Edon Zhegrova marque",
-  "p": 0.17,
-  "stars": 1,
-  "player": "Edon Zhegrova",
-  "pid_player": "260300",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401874949|dec|Edon Zhegrova": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "dec",
-  "label": "Edon Zhegrova buteur ou passeur",
-  "p": 0.24,
-  "stars": 1,
-  "player": "Edon Zhegrova",
-  "pid_player": "260300",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   7,
-   2,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401874949|htft_h|": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "htft_h",
-  "label": "Juventus mène à la mi-temps et gagne le match",
-  "p": 0.2197,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874949|exact|": {
   "match": "foot-401874949",
   "sport": "foot",
@@ -31228,12 +31104,12 @@
   "home": "Juventus",
   "away": "Napoli",
   "market": "exact",
-  "label": "Score exact 1-0",
-  "p": 0.1067,
+  "label": "Score exact 0-1",
+  "p": 0.1239,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "1-0",
+  "value": "0-1",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -31253,7 +31129,7 @@
   "away": "Real Sociedad",
   "market": "1N",
   "label": "Athletic ou nul",
-  "p": 0.714,
+  "p": 0.7213,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -31277,7 +31153,7 @@
   "away": "Real Sociedad",
   "market": "1",
   "label": "Victoire Athletic",
-  "p": 0.4755,
+  "p": 0.4584,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -31301,7 +31177,7 @@
   "away": "Real Sociedad",
   "market": "scorer",
   "label": "Álex Berenguer marque",
-  "p": 0.31,
+  "p": 0.28,
   "stars": 1,
   "player": "Álex Berenguer",
   "pid_player": "209579",
@@ -31325,7 +31201,7 @@
   "away": "Real Sociedad",
   "market": "dec",
   "label": "Álex Berenguer buteur ou passeur",
-  "p": 0.57,
+  "p": 0.51,
   "stars": 2,
   "player": "Álex Berenguer",
   "pid_player": "209579",
@@ -31344,30 +31220,6 @@
   ],
   "result": null
  },
- "foot-401882826|o35|": {
-  "match": "foot-401882826",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-01",
-  "home": "Athletic",
-  "away": "Real Sociedad",
-  "market": "o35",
-  "label": "Plus de 3,5 buts",
-  "p": 0.345,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401882826|exact|": {
   "match": "foot-401882826",
   "sport": "foot",
@@ -31376,12 +31228,12 @@
   "home": "Athletic",
   "away": "Real Sociedad",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0942,
+  "label": "Score exact 1-0",
+  "p": 0.1166,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -32288,7 +32140,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874968|2|": {
   "match": "foot-401874968",
@@ -32312,7 +32164,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874968|scorer|Milutin Osmajic": {
   "match": "foot-401874968",
@@ -32336,7 +32188,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874968|dec|Milutin Osmajic": {
   "match": "foot-401874968",
@@ -32364,7 +32216,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874968|wa_nil|": {
   "match": "foot-401874968",
@@ -32388,7 +32240,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882823|wh_nil|": {
   "match": "foot-401882823",
@@ -32414,16 +32266,140 @@
   ],
   "result": null
  },
- "foot-401876417|htft_h|": {
+ "foot-401876417|wh_o25|": {
   "match": "foot-401876417",
   "sport": "foot",
   "league": "Ligue 1",
   "date": "2026-11-01",
   "home": "Marseille",
   "away": "Toulouse",
+  "market": "wh_o25",
+  "label": "Marseille gagne et plus de 2,5 buts",
+  "p": 0.395,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874949|2|": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "2",
+  "label": "Victoire Napoli",
+  "p": 0.3922,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874949|scorer|Kevin De Bruyne": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "scorer",
+  "label": "Kevin De Bruyne marque",
+  "p": 0.21,
+  "stars": 1,
+  "player": "Kevin De Bruyne",
+  "pid_player": "134947",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874949|dec|Kevin De Bruyne": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "dec",
+  "label": "Kevin De Bruyne buteur ou passeur",
+  "p": 0.28,
+  "stars": 1,
+  "player": "Kevin De Bruyne",
+  "pid_player": "134947",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   9,
+   4,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874949|wa_nil|": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "wa_nil",
+  "label": "Napoli gagne sans encaisser de but",
+  "p": 0.2407,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882826|htft_h|": {
+  "match": "foot-401882826",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-01",
+  "home": "Athletic",
+  "away": "Real Sociedad",
   "market": "htft_h",
-  "label": "Marseille mène à la mi-temps et gagne le match",
-  "p": 0.355,
+  "label": "Athletic mène à la mi-temps et gagne le match",
+  "p": 0.2748,
   "stars": 1,
   "player": null,
   "pid_player": null,
