@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T14:11+01:00",
+ "generated": "2026-11-01T14:36+01:00",
  "date": "2026-11-01",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "12:30",
    "home": "Como",
    "away": "Venezia",
-   "state": "in",
+   "state": "post",
    "xgH": 2.36,
    "xgA": 0.48,
    "pH": 80,
@@ -62,11 +62,10 @@
      "stars": 1,
      "player": "Anastasios Douvikas",
      "team": "Como",
-     "lineup": "start",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · titulaire · Como favori (80 %) · 2,4 buts attendus pour Como"
+     "why": "5 buts et 0 passe en 9 matchs · Como favori (80 %) · 2,4 buts attendus pour Como"
     },
     "decisive": {
      "market": "dec",
@@ -82,11 +81,10 @@
       5,
       0
      ],
-     "lineup": "start",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · titulaire · Como favori (80 %) · 2,4 buts attendus pour Como"
+     "why": "5 buts et 0 passe en 9 matchs · Como favori (80 %) · 2,4 buts attendus pour Como"
     }
    }
   },
@@ -188,67 +186,68 @@
    "home": "Strasbourg",
    "away": "Auxerre",
    "state": "pre",
-   "xgH": 2.36,
-   "xgA": 1.71,
-   "pH": 53,
-   "pD": 20,
-   "pA": 28,
+   "xgH": 2.03,
+   "xgA": 1.63,
+   "pH": 47,
+   "pD": 21,
+   "pA": 31,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7723,
-     "prob": 77,
-     "fair": 1.29,
+     "p": 0.7084,
+     "prob": 71,
+     "fair": 1.41,
      "stars": 4,
      "why": "8 derniers matchs : Strasbourg 12 marqués / 18 encaissés · Auxerre 12 / 18"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Strasbourg",
-     "p": 0.526,
-     "prob": 53,
-     "fair": 1.9,
-     "stars": 2
+     "p": 0.474,
+     "prob": 47,
+     "fair": 2.11,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0813,
-     "prob": 8,
-     "fair": 12.3,
+     "p": 0.0864,
+     "prob": 9,
+     "fair": 11.57,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Strasbourg gagne et les deux équipes marquent",
-     "p": 0.3618,
-     "prob": 36,
-     "fair": 2.76,
+     "market": "wh_o25",
+     "label": "Strasbourg gagne et plus de 2,5 buts",
+     "p": 0.3688,
+     "prob": 37,
+     "fair": 2.71,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Gessime Yassine marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Gessime Yassine",
      "team": "Strasbourg",
+     "lineup": "start",
      "pid": "379012",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Strasbourg favori (53 %) · 2,4 buts attendus pour Strasbourg"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Strasbourg favori (47 %) · 2,0 buts attendus pour Strasbourg"
     },
     "decisive": {
      "market": "dec",
      "label": "Gessime Yassine buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Gessime Yassine",
      "team": "Strasbourg",
@@ -257,10 +256,11 @@
       2,
       2
      ],
+     "lineup": "start",
      "pid": "379012",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Strasbourg favori (53 %) · 2,4 buts attendus pour Strasbourg"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Strasbourg favori (47 %) · 2,0 buts attendus pour Strasbourg"
     }
    }
   },
@@ -274,45 +274,45 @@
    "home": "Frosinone",
    "away": "Torino",
    "state": "pre",
-   "xgH": 2.22,
-   "xgA": 1.55,
-   "pH": 53,
-   "pD": 20,
-   "pA": 27,
+   "xgH": 2.15,
+   "xgA": 1.39,
+   "pH": 55,
+   "pD": 21,
+   "pA": 24,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Frosinone ou nul",
-     "p": 0.7315,
-     "prob": 73,
-     "fair": 1.37,
+     "p": 0.7567,
+     "prob": 76,
+     "fair": 1.32,
      "stars": 4,
      "why": "9 derniers matchs : Frosinone 22 marqués / 14 encaissés · Torino 14 / 14"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Frosinone",
-     "p": 0.528,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.5504,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.088,
+     "p": 0.0933,
      "prob": 9,
-     "fair": 11.36,
+     "fair": 10.72,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "scw",
      "label": "Antonio Raimondo marque et Frosinone gagne",
-     "p": 0.3593,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.3673,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1,
      "player": "Antonio Raimondo",
      "team": "Frosinone",
@@ -321,23 +321,24 @@
     "player": {
      "market": "scorer",
      "label": "Antonio Raimondo marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Antonio Raimondo",
      "team": "Frosinone",
+     "lineup": "start",
      "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 9 matchs · Frosinone favori (53 %) · 2,2 buts attendus pour Frosinone"
+     "why": "8 buts et 0 passe en 9 matchs · titulaire · Frosinone favori (55 %) · 2,2 buts attendus pour Frosinone"
     },
     "decisive": {
      "market": "dec",
      "label": "Antonio Raimondo buteur ou passeur",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Antonio Raimondo",
      "team": "Frosinone",
@@ -346,10 +347,11 @@
       8,
       0
      ],
+     "lineup": "start",
      "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 9 matchs · Frosinone favori (53 %) · 2,2 buts attendus pour Frosinone"
+     "why": "8 buts et 0 passe en 9 matchs · titulaire · Frosinone favori (55 %) · 2,2 buts attendus pour Frosinone"
     }
    }
   },
@@ -363,17 +365,17 @@
    "home": "Lazio",
    "away": "Cagliari",
    "state": "pre",
-   "xgH": 2.22,
-   "xgA": 0.67,
-   "pH": 73,
-   "pD": 17,
+   "xgH": 2.12,
+   "xgA": 0.65,
+   "pH": 72,
+   "pD": 18,
    "pA": 10,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Lazio ou nul",
-     "p": 0.9022,
+     "p": 0.8993,
      "prob": 90,
      "fair": 1.11,
      "stars": 5,
@@ -382,48 +384,49 @@
     "winner": {
      "market": "1",
      "label": "Victoire Lazio",
-     "p": 0.7274,
-     "prob": 73,
-     "fair": 1.37,
+     "p": 0.7154,
+     "prob": 72,
+     "fair": 1.4,
      "stars": 4
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1365,
+     "p": 0.1414,
      "prob": 14,
-     "fair": 7.32,
+     "fair": 7.07,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3289,
-     "prob": 33,
-     "fair": 3.04,
+     "p": 0.2997,
+     "prob": 30,
+     "fair": 3.34,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Tijjani Noslin marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
+     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 2 passes en 8 matchs · Lazio favori (73 %) · 2,2 buts attendus pour Lazio"
+     "why": "4 buts et 2 passes en 8 matchs · titulaire · Lazio favori (72 %) · 2,1 buts attendus pour Lazio"
     },
     "decisive": {
      "market": "dec",
      "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
@@ -432,10 +435,11 @@
       4,
       2
      ],
+     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 2 passes en 8 matchs · Lazio favori (73 %) · 2,2 buts attendus pour Lazio"
+     "why": "4 buts et 2 passes en 8 matchs · titulaire · Lazio favori (72 %) · 2,1 buts attendus pour Lazio"
     }
    }
   },
@@ -449,25 +453,25 @@
    "home": "Union Berlin",
    "away": "Cologne",
    "state": "pre",
-   "xgH": 1.4,
+   "xgH": 1.24,
    "xgA": 1.33,
-   "pH": 39,
-   "pD": 26,
-   "pA": 36,
+   "pH": 35,
+   "pD": 27,
+   "pA": 39,
    "edate": "20261101",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "Union Berlin ou nul",
-     "p": 0.6448,
-     "prob": 64,
-     "fair": 1.55,
+     "market": "N2",
+     "label": "Nul ou Cologne",
+     "p": 0.654,
+     "prob": 65,
+     "fair": 1.53,
      "stars": 3,
      "why": "7 derniers matchs : Union Berlin 6 marqués / 18 encaissés · Cologne 8 / 11"
     },
     "winner": {
-     "market": "1",
-     "label": "Victoire Union Berlin",
+     "market": "2",
+     "label": "Victoire Cologne",
      "p": 0.3887,
      "prob": 39,
      "fair": 2.57,
@@ -475,53 +479,53 @@
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.0911,
-     "prob": 9,
-     "fair": 10.98,
+     "label": "Score exact 0-1",
+     "p": 0.1017,
+     "prob": 10,
+     "fair": 9.83,
      "stars": 1,
-     "value": "1-0"
+     "value": "0-1"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Union Berlin gagne et plus de 2,5 buts",
-     "p": 0.2337,
+     "market": "htft_a",
+     "label": "Cologne mène à la mi-temps et gagne le match",
+     "p": 0.228,
      "prob": 23,
-     "fair": 4.28,
+     "fair": 4.39,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Tim Skarke marque",
+     "label": "Said El Mala marque",
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
+     "stars": 1,
+     "player": "Said El Mala",
+     "team": "Cologne",
+     "pid": "380795",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 6 matchs · Cologne annoncé gagnant (39 %) · 1,3 but attendu pour Cologne"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Said El Mala buteur ou passeur",
      "p": 0.26,
      "prob": 26,
      "fair": 3.85,
      "stars": 1,
-     "player": "Tim Skarke",
-     "team": "Union Berlin",
-     "pid": "220796",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · Union Berlin annoncé gagnant (39 %) · 1,4 but attendu pour Union Berlin"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tim Skarke buteur ou passeur",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
-     "stars": 1,
-     "player": "Tim Skarke",
-     "team": "Union Berlin",
+     "player": "Said El Mala",
+     "team": "Cologne",
      "base": [
-      7,
+      6,
       2,
       0
      ],
-     "pid": "220796",
+     "pid": "380795",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · Union Berlin annoncé gagnant (39 %) · 1,4 but attendu pour Union Berlin"
+     "why": "2 buts et 0 passe en 6 matchs · Cologne annoncé gagnant (39 %) · 1,3 but attendu pour Cologne"
     }
    }
   },
@@ -981,7 +985,7 @@
     "main": {
      "market": "1N",
      "label": "Lecce ou nul",
-     "p": 0.6415,
+     "p": 0.6413,
      "prob": 64,
      "fair": 1.56,
      "stars": 3,
@@ -990,7 +994,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Lecce",
-     "p": 0.3686,
+     "p": 0.3688,
      "prob": 37,
      "fair": 2.71,
      "stars": 1
@@ -998,16 +1002,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1063,
+     "p": 0.1058,
      "prob": 11,
-     "fair": 9.41,
+     "fair": 9.45,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Lecce mène à la mi-temps et gagne le match",
-     "p": 0.2135,
+     "p": 0.2137,
      "prob": 21,
      "fair": 4.68,
      "stars": 1
@@ -1233,7 +1237,7 @@
    "away": "Napoli",
    "state": "pre",
    "xgH": 1.26,
-   "xgA": 1.2,
+   "xgA": 1.21,
    "pH": 38,
    "pD": 27,
    "pA": 35,
@@ -1242,7 +1246,7 @@
     "main": {
      "market": "1N",
      "label": "Juventus ou nul",
-     "p": 0.6499,
+     "p": 0.6496,
      "prob": 65,
      "fair": 1.54,
      "stars": 3,
@@ -1251,7 +1255,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Juventus",
-     "p": 0.3774,
+     "p": 0.3776,
      "prob": 38,
      "fair": 2.65,
      "stars": 1
@@ -1259,18 +1263,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1075,
+     "p": 0.107,
      "prob": 11,
-     "fair": 9.3,
+     "fair": 9.35,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Juventus mène à la mi-temps et gagne le match",
-     "p": 0.2194,
+     "p": 0.2196,
      "prob": 22,
-     "fair": 4.56,
+     "fair": 4.55,
      "stars": 1
     },
     "player": {
@@ -1745,8 +1749,8 @@
  "summary": {
   "date": "2026-11-01",
   "yesterday": {
-   "n": 180,
-   "ok": 96
+   "n": 185,
+   "ok": 98
   },
   "foot": 16,
   "nhl": 5,

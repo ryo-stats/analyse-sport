@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T14:11+01:00",
+ "generated": "2026-11-01T14:36+01:00",
  "date": "2026-11-01",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -9,13 +9,13 @@
    "league": "Serie A",
    "kickoff": "2026-11-01T11:30:00+00:00",
    "time": "12:30",
-   "state": "in",
+   "state": "post",
    "score": "1-0",
    "home": "Como",
    "away": "Venezia",
-   "form_h": "NVVVD",
-   "form_a": "NDVDD",
-   "rank_h": 5,
+   "form_h": "VVVVV",
+   "form_a": "DDDVD",
+   "rank_h": 4,
    "rank_a": 20,
    "pH": 80,
    "pD": 15,
@@ -54,8 +54,7 @@
      "p_dec": 50,
      "pid": "262071",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Nico Paz",
@@ -75,8 +74,7 @@
      "p_dec": 53,
      "pid": "337970",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Martin Baturina",
@@ -96,8 +94,27 @@
      "p_dec": 39,
      "pid": "311475",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Assane Diao",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Como",
+     "goals": 2,
+     "assists": 1,
+     "apps": 6,
+     "l10": {
+      "n": 9,
+      "gp": 6,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 24,
+     "p_dec": 34,
+     "pid": "364742",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Jacobo Ramón",
@@ -117,8 +134,7 @@
      "p_dec": 23,
      "pid": "380318",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Kaiki",
@@ -138,29 +154,7 @@
      "p_dec": 21,
      "pid": "317233",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Lucas Da Cunha",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Como",
-     "goals": 0,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 9,
-     "pid": "291285",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -173,8 +167,8 @@
      "assists": 0,
      "apps": 9,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 10,
+      "gp": 10,
       "g": 2,
       "a": 0
      },
@@ -182,8 +176,7 @@
      "p_dec": 15,
      "pid": "288472",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Antoine Hainaut",
@@ -194,8 +187,8 @@
      "assists": 1,
      "apps": 9,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 10,
+      "gp": 10,
       "g": 2,
       "a": 1
      },
@@ -203,29 +196,7 @@
      "p_dec": 15,
      "pid": "346916",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Richie Sagrado",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Venezia",
-     "goals": 1,
-     "assists": 1,
-     "apps": 5,
-     "l10": {
-      "n": 9,
-      "gp": 5,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 2,
-     "p_dec": 3,
-     "pid": "345713",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
      "name": "John Yeboah",
@@ -236,17 +207,36 @@
      "assists": 0,
      "apps": 9,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 10,
+      "gp": 10,
       "g": 1,
       "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 3,
+     "p_goal": 8,
+     "p_dec": 10,
      "pid": "265926",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
+    },
+    {
+     "name": "Richie Sagrado",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Venezia",
+     "goals": 1,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 5,
+     "p_dec": 10,
+     "pid": "345713",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Gianluca Busio",
@@ -257,8 +247,8 @@
      "assists": 2,
      "apps": 5,
      "l10": {
-      "n": 9,
-      "gp": 5,
+      "n": 10,
+      "gp": 6,
       "g": 0,
       "a": 2
      },
@@ -266,8 +256,7 @@
      "p_dec": 11,
      "pid": "263705",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Simon Sohm",
@@ -278,8 +267,8 @@
      "assists": 1,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 8,
+      "n": 10,
+      "gp": 9,
       "g": 0,
       "a": 1
      },
@@ -287,19 +276,17 @@
      "p_dec": 8,
      "pid": "275015",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Como : 5e, 20 points, 17 buts marqués et 8 encaissés en 9 matchs.",
-    "Venezia : 20e, 3 points, 6 buts marqués et 19 encaissés en 9 matchs.",
+    "Como : 4e, 23 points, 18 buts marqués et 8 encaissés en 10 matchs.",
+    "Venezia : 20e, 3 points, 6 buts marqués et 20 encaissés en 10 matchs.",
     "Como : 17 buts marqués et 8 encaissés sur ses 9 derniers matchs de championnat.",
-    "Venezia : 6 buts marqués et 19 encaissés sur ses 9 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Assane Diao (absent) ne commence pas le match."
+    "Venezia : 6 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Como est nettement favori (80 %).",
-   "stakes": "Como (5e) est dans la course à l'Europe. Venezia (20e) est en zone de relégation : match vital.",
+   "stakes": "Como (4e) défend une place qualificative pour la Ligue des champions. Venezia (20e) est en zone de relégation : match vital.",
    "picks": {
     "main": {
      "market": "1N",
@@ -362,11 +349,10 @@
      "stars": 1,
      "player": "Anastasios Douvikas",
      "team": "Como",
-     "lineup": "start",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · titulaire · Como favori (80 %) · 2,4 buts attendus pour Como"
+     "why": "5 buts et 0 passe en 9 matchs · Como favori (80 %) · 2,4 buts attendus pour Como"
     },
     "decisive": {
      "market": "dec",
@@ -382,11 +368,10 @@
       5,
       0
      ],
-     "lineup": "start",
      "pid": "262071",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · titulaire · Como favori (80 %) · 2,4 buts attendus pour Como"
+     "why": "5 buts et 0 passe en 9 matchs · Como favori (80 %) · 2,4 buts attendus pour Como"
     }
    },
    "second": null,
@@ -403,7 +388,7 @@
    "kickoff": "2026-11-01T13:00:00+00:00",
    "time": "14:00",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Getafe",
    "away": "Sevilla",
    "form_h": "NDDNN",
@@ -806,24 +791,24 @@
    "form_a": "NVDVV",
    "rank_h": 16,
    "rank_a": 12,
-   "pH": 53,
-   "pD": 20,
-   "pA": 28,
+   "pH": 47,
+   "pD": 21,
+   "pA": 31,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.36,
-   "xgA": 1.71,
+   "xgH": 2.03,
+   "xgA": 1.63,
    "scores": [
     "2-1",
-    "2-2",
-    "1-1"
+    "1-1",
+    "2-2"
    ],
    "scorep": [
+    9,
     8,
-    7,
     7
    ],
-   "over25": 77,
-   "btts": 74,
+   "over25": 71,
+   "btts": 70,
    "squad_h": [
     {
      "name": "Gessime Yassine",
@@ -839,31 +824,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 38,
-     "p_dec": 59,
+     "p_goal": 34,
+     "p_dec": 54,
      "pid": "379012",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Samuel Amo-Ameyaw",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Strasbourg",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 32,
-     "p_dec": 34,
-     "pid": "350501",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giovanni Reyna",
@@ -879,31 +845,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 31,
-     "p_dec": 37,
+     "p_goal": 28,
+     "p_dec": 33,
      "pid": "290230",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Jacobo Ortega Conde",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Strasbourg",
-     "goals": 1,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 22,
-     "p_dec": 37,
-     "pid": "3117410",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Conrad Harder",
@@ -919,31 +866,75 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 20,
-     "p_dec": 35,
+     "p_goal": 18,
+     "p_dec": 31,
      "pid": "362794",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Diogo Sousa",
+     "name": "Dário Essugo",
      "pos": "Milieu",
      "side": "h",
      "team": "Strasbourg",
      "goals": 1,
      "assists": 1,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 15,
+     "p_dec": 30,
+     "pid": "316560",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Samuel Amo-Ameyaw",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Strasbourg",
+     "goals": 2,
+     "assists": 0,
      "apps": 7,
      "l10": {
       "n": 8,
       "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "350501",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Jacobo Ortega Conde",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Strasbourg",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
       "g": 1,
       "a": 1
      },
-     "p_goal": 19,
-     "p_dec": 37,
-     "pid": "368325",
+     "p_goal": 6,
+     "p_dec": 11,
+     "pid": "3117410",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -961,11 +952,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 47,
-     "p_dec": 50,
+     "p_goal": 46,
+     "p_dec": 48,
      "pid": "293347",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Danny Namaso",
@@ -981,31 +973,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 35,
-     "p_dec": 51,
+     "p_goal": 34,
+     "p_dec": 49,
      "pid": "243748",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Remy Labeau Lascary",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Auxerre",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 14,
-     "p_dec": 16,
-     "pid": "349185",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Romain Faivre",
@@ -1021,11 +994,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 13,
-     "p_dec": 34,
+     "p_goal": 12,
+     "p_dec": 33,
      "pid": "268591",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lamine Sy",
@@ -1041,11 +1015,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 11,
+     "p_dec": 13,
      "pid": "335320",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kévin Danois",
@@ -1061,94 +1036,120 @@
       "g": 0,
       "a": 1
      },
-     "p_goal": 4,
-     "p_dec": 20,
+     "p_goal": 3,
+     "p_dec": 19,
      "pid": "323722",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Naouirou Ahamada",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Auxerre",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 8,
+     "pid": "297775",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Strasbourg : 16e, 7 points, 12 buts marqués et 18 encaissés en 8 matchs.",
     "Auxerre : 12e, 10 points, 12 buts marqués et 18 encaissés en 8 matchs.",
     "Strasbourg : 12 buts marqués et 18 encaissés sur ses 8 derniers matchs de championnat.",
-    "Auxerre : 12 buts marqués et 18 encaissés sur ses 8 derniers matchs de championnat."
+    "Auxerre : 12 buts marqués et 18 encaissés sur ses 8 derniers matchs de championnat.",
+    "Strasbourg : attaque revue à la baisse (−14 %) d'après la compo officielle (Diogo Sousa, Samuel Amo-Ameyaw, Jacobo Ortega Conde ne commencent pas).",
+    "Auxerre : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : Diogo Sousa (remplaçant), Samuel Amo-Ameyaw (remplaçant), Jacobo Ortega Conde (remplaçant) ne commencent pas le match."
    ],
-   "reading": "Strasbourg est favori sans écraser le match (53 %).",
+   "reading": "Strasbourg est favori sans écraser le match (47 %).",
    "stakes": "Strasbourg (16e) est en zone de relégation : match vital. Adversaires directs au classement : 3 points d'écart.",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7723,
-     "prob": 77,
-     "fair": 1.29,
+     "p": 0.7084,
+     "prob": 71,
+     "fair": 1.41,
      "stars": 4,
      "why": "8 derniers matchs : Strasbourg 12 marqués / 18 encaissés · Auxerre 12 / 18"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Strasbourg",
-     "p": 0.526,
-     "prob": 53,
-     "fair": 1.9,
-     "stars": 2
+     "p": 0.474,
+     "prob": 47,
+     "fair": 2.11,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0813,
-     "prob": 8,
-     "fair": 12.3,
+     "p": 0.0864,
+     "prob": 9,
+     "fair": 11.57,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Strasbourg gagne et les deux équipes marquent",
-     "p": 0.3618,
-     "prob": 36,
-     "fair": 2.76,
+     "market": "wh_o25",
+     "label": "Strasbourg gagne et plus de 2,5 buts",
+     "p": 0.3688,
+     "prob": 37,
+     "fair": 2.71,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Strasbourg mène à la mi-temps et gagne le match",
-      "p": 0.3402,
-      "prob": 34,
-      "fair": 2.94,
+      "market": "wh_btts",
+      "label": "Strasbourg gagne et les deux équipes marquent",
+      "p": 0.3037,
+      "prob": 30,
+      "fair": 3.29,
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Strasbourg gagne avec 2 buts d'écart ou plus",
-      "p": 0.327,
-      "prob": 33,
-      "fair": 3.06,
+      "market": "htft_h",
+      "label": "Strasbourg mène à la mi-temps et gagne le match",
+      "p": 0.2979,
+      "prob": 30,
+      "fair": 3.36,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Gessime Yassine marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Gessime Yassine",
      "team": "Strasbourg",
+     "lineup": "start",
      "pid": "379012",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Strasbourg favori (53 %) · 2,4 buts attendus pour Strasbourg"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Strasbourg favori (47 %) · 2,0 buts attendus pour Strasbourg"
     },
     "decisive": {
      "market": "dec",
      "label": "Gessime Yassine buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Gessime Yassine",
      "team": "Strasbourg",
@@ -1157,10 +1158,11 @@
       2,
       2
      ],
+     "lineup": "start",
      "pid": "379012",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Strasbourg favori (53 %) · 2,4 buts attendus pour Strasbourg"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Strasbourg favori (47 %) · 2,0 buts attendus pour Strasbourg"
     }
    },
    "second": {
@@ -1187,24 +1189,24 @@
    "form_a": "NVVVN",
    "rank_h": 6,
    "rank_a": 10,
-   "pH": 53,
-   "pD": 20,
-   "pA": 27,
+   "pH": 55,
+   "pD": 21,
+   "pA": 24,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.22,
-   "xgA": 1.55,
+   "xgH": 2.15,
+   "xgA": 1.39,
    "scores": [
     "2-1",
     "1-1",
-    "2-2"
+    "2-0"
    ],
    "scorep": [
     9,
-    8,
+    9,
     7
    ],
-   "over25": 73,
-   "btts": 70,
+   "over25": 69,
+   "btts": 66,
    "squad_h": [
     {
      "name": "Antonio Raimondo",
@@ -1220,11 +1222,12 @@
       "g": 8,
       "a": 0
      },
-     "p_goal": 53,
-     "p_dec": 55,
+     "p_goal": 52,
+     "p_dec": 54,
      "pid": "319265",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giacomo Calo",
@@ -1240,11 +1243,12 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 31,
-     "p_dec": 40,
+     "p_goal": 30,
+     "p_dec": 39,
      "pid": "236038",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giorgi Kvernadze",
@@ -1260,11 +1264,12 @@
       "g": 3,
       "a": 3
      },
-     "p_goal": 28,
-     "p_dec": 46,
+     "p_goal": 27,
+     "p_dec": 45,
      "pid": "360714",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Romano Schmid",
@@ -1280,31 +1285,12 @@
       "g": 2,
       "a": 4
      },
-     "p_goal": 18,
-     "p_dec": 44,
+     "p_goal": 17,
+     "p_dec": 43,
      "pid": "238296",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Daniel Birligea",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Frosinone",
-     "goals": 2,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 9,
-      "gp": 4,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 16,
-     "pid": "335061",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Gabriele Bracaglia",
@@ -1324,7 +1310,29 @@
      "p_dec": 17,
      "pid": "346974",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Daniel Birligea",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Frosinone",
+     "goals": 2,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 9,
+      "gp": 4,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 5,
+     "pid": "335061",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -1342,11 +1350,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 32,
-     "p_dec": 34,
+     "p_goal": 30,
+     "p_dec": 31,
      "pid": "213725",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giovanni Simeone",
@@ -1362,71 +1371,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 21,
-     "p_dec": 30,
+     "p_goal": 19,
+     "p_dec": 27,
      "pid": "189974",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Sandro Kulenovic",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Torino",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 17,
-     "p_dec": 18,
-     "pid": "245538",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Rolando Mandragora",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 10,
-     "p_dec": 20,
-     "pid": "210392",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Kian Fitz-Jim",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Torino",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 10,
-     "p_dec": 20,
-     "pid": "305589",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nikola Vlasic",
@@ -1442,11 +1392,75 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 15,
+     "p_goal": 9,
+     "p_dec": 14,
      "pid": "206378",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rafik Belghali",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 3,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 8,
+     "p_dec": 27,
+     "pid": "364590",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Daniel Bragança",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 11,
+     "pid": "290592",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Pietro Comuzzo",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Torino",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 9,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "367168",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -1454,43 +1468,46 @@
     "Torino : 10e, 13 points, 14 buts marqués et 14 encaissés en 9 matchs.",
     "Frosinone : 22 buts marqués et 14 encaissés sur ses 9 derniers matchs de championnat.",
     "Torino : 14 buts marqués et 14 encaissés sur ses 9 derniers matchs de championnat.",
-    "Frosinone a joué il y a 3 jours : fatigue probable, chances un peu réduites."
+    "Frosinone a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Frosinone : attaque revue à la baisse (−3 %) d'après la compo officielle.",
+    "Torino : attaque revue à la baisse (−11 %) d'après la compo officielle (Sandro Kulenovic ne commence pas).",
+    "Compositions officielles prises en compte : Daniel Birligea (remplaçant), Sandro Kulenovic (remplaçant) ne commencent pas le match."
    ],
-   "reading": "Frosinone est favori sans écraser le match (53 %).",
+   "reading": "Frosinone est favori sans écraser le match (55 %).",
    "stakes": "Frosinone (6e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Frosinone ou nul",
-     "p": 0.7315,
-     "prob": 73,
-     "fair": 1.37,
+     "p": 0.7567,
+     "prob": 76,
+     "fair": 1.32,
      "stars": 4,
      "why": "9 derniers matchs : Frosinone 22 marqués / 14 encaissés · Torino 14 / 14"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Frosinone",
-     "p": 0.528,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.5504,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.088,
+     "p": 0.0933,
      "prob": 9,
-     "fair": 11.36,
+     "fair": 10.72,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "scw",
      "label": "Antonio Raimondo marque et Frosinone gagne",
-     "p": 0.3593,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.3673,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1,
      "player": "Antonio Raimondo",
      "team": "Frosinone",
@@ -1498,42 +1515,43 @@
     },
     "fun_alt": [
      {
-      "market": "wh_btts",
-      "label": "Frosinone gagne et les deux équipes marquent",
-      "p": 0.3393,
-      "prob": 34,
-      "fair": 2.95,
+      "market": "htft_h",
+      "label": "Frosinone mène à la mi-temps et gagne le match",
+      "p": 0.3541,
+      "prob": 35,
+      "fair": 2.82,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Frosinone mène à la mi-temps et gagne le match",
-      "p": 0.3392,
-      "prob": 34,
-      "fair": 2.95,
+      "market": "h2",
+      "label": "Frosinone gagne avec 2 buts d'écart ou plus",
+      "p": 0.3347,
+      "prob": 33,
+      "fair": 2.99,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Antonio Raimondo marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Antonio Raimondo",
      "team": "Frosinone",
+     "lineup": "start",
      "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 9 matchs · Frosinone favori (53 %) · 2,2 buts attendus pour Frosinone"
+     "why": "8 buts et 0 passe en 9 matchs · titulaire · Frosinone favori (55 %) · 2,2 buts attendus pour Frosinone"
     },
     "decisive": {
      "market": "dec",
      "label": "Antonio Raimondo buteur ou passeur",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Antonio Raimondo",
      "team": "Frosinone",
@@ -1542,10 +1560,11 @@
       8,
       0
      ],
+     "lineup": "start",
      "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 9 matchs · Frosinone favori (53 %) · 2,2 buts attendus pour Frosinone"
+     "why": "8 buts et 0 passe en 9 matchs · titulaire · Frosinone favori (55 %) · 2,2 buts attendus pour Frosinone"
     }
    },
    "second": {
@@ -1572,12 +1591,12 @@
    "form_a": "NDDNV",
    "rank_h": 1,
    "rank_a": 11,
-   "pH": 73,
-   "pD": 17,
+   "pH": 72,
+   "pD": 18,
    "pA": 10,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.22,
-   "xgA": 0.67,
+   "xgH": 2.12,
+   "xgA": 0.65,
    "scores": [
     "2-0",
     "1-0",
@@ -1585,11 +1604,11 @@
    ],
    "scorep": [
     14,
-    12,
+    13,
     10
    ],
-   "over25": 55,
-   "btts": 44,
+   "over25": 52,
+   "btts": 42,
    "squad_h": [
     {
      "name": "Tijjani Noslin",
@@ -1605,11 +1624,12 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 33,
-     "p_dec": 46,
+     "p_goal": 32,
+     "p_dec": 44,
      "pid": "323113",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Gustav Isaksen",
@@ -1625,11 +1645,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 27,
-     "p_dec": 35,
+     "p_goal": 26,
+     "p_dec": 33,
      "pid": "291550",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Davide Frattesi",
@@ -1645,11 +1666,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 29,
+     "p_goal": 24,
+     "p_dec": 28,
      "pid": "250850",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mattia Zaccagni",
@@ -1665,11 +1687,12 @@
       "g": 2,
       "a": 5
      },
-     "p_goal": 19,
-     "p_dec": 51,
+     "p_goal": 18,
+     "p_dec": 49,
      "pid": "204669",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kenneth Taylor",
@@ -1686,30 +1709,32 @@
       "a": 1
      },
      "p_goal": 18,
-     "p_dec": 29,
+     "p_dec": 28,
      "pid": "282228",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Matteo Cancellieri",
-     "pos": "Attaquant",
+     "name": "Nuno Tavares",
+     "pos": "Défenseur",
      "side": "h",
      "team": "Lazio",
      "goals": 1,
-     "assists": 0,
-     "apps": 6,
+     "assists": 3,
+     "apps": 9,
      "l10": {
       "n": 9,
-      "gp": 6,
+      "gp": 9,
       "g": 1,
-      "a": 0
+      "a": 3
      },
-     "p_goal": 11,
-     "p_dec": 13,
-     "pid": "308944",
+     "p_goal": 9,
+     "p_dec": 30,
+     "pid": "288901",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1727,31 +1752,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 27,
-     "p_dec": 29,
+     "p_goal": 26,
+     "p_dec": 28,
      "pid": "290545",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Paul Mendy",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Cagliari",
-     "goals": 1,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 9,
-     "p_dec": 16,
-     "pid": "418819",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Alessandro Romano",
@@ -1771,7 +1777,8 @@
      "p_dec": 10,
      "pid": "6729",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "M'Bala Nzola",
@@ -1788,10 +1795,32 @@
       "a": 0
      },
      "p_goal": 6,
-     "p_dec": 7,
+     "p_dec": 6,
      "pid": "261173",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Paul Mendy",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Cagliari",
+     "goals": 1,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 9,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 3,
+     "p_dec": 5,
+     "pid": "418819",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Michel Adopo",
@@ -1811,42 +1840,47 @@
      "p_dec": 15,
      "pid": "272745",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Alieu Fadera",
-     "pos": "Attaquant",
+     "name": "Adam Obert",
+     "pos": "Défenseur",
      "side": "a",
      "team": "Cagliari",
      "goals": 0,
-     "assists": 0,
-     "apps": 8,
+     "assists": 1,
+     "apps": 9,
      "l10": {
       "n": 9,
-      "gp": 8,
+      "gp": 9,
       "g": 0,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 2,
-     "p_dec": 2,
-     "pid": "324705",
+     "p_goal": 1,
+     "p_dec": 7,
+     "pid": "322913",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Lazio : 1er, 25 points, 22 buts marqués et 7 encaissés en 9 matchs.",
     "Cagliari : 11e, 13 points, 8 buts marqués et 13 encaissés en 9 matchs.",
     "Lazio : 22 buts marqués et 7 encaissés sur ses 9 derniers matchs de championnat.",
-    "Cagliari : 8 buts marqués et 13 encaissés sur ses 9 derniers matchs de championnat."
+    "Cagliari : 8 buts marqués et 13 encaissés sur ses 9 derniers matchs de championnat.",
+    "Lazio : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Cagliari : attaque revue à la baisse (−4 %) d'après la compo officielle (Paul Mendy ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Lazio est nettement favori (73 %).",
+   "reading": "Lazio est nettement favori (72 %).",
    "stakes": "Lazio est leader (25 points).",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Lazio ou nul",
-     "p": 0.9022,
+     "p": 0.8993,
      "prob": 90,
      "fair": 1.11,
      "stars": 5,
@@ -1855,35 +1889,35 @@
     "winner": {
      "market": "1",
      "label": "Victoire Lazio",
-     "p": 0.7274,
-     "prob": 73,
-     "fair": 1.37,
+     "p": 0.7154,
+     "prob": 72,
+     "fair": 1.4,
      "stars": 4
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1365,
+     "p": 0.1414,
      "prob": 14,
-     "fair": 7.32,
+     "fair": 7.07,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3289,
-     "prob": 33,
-     "fair": 3.04,
+     "p": 0.2997,
+     "prob": 30,
+     "fair": 3.34,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "scw",
       "label": "Tijjani Noslin marque et Lazio gagne",
-      "p": 0.2927,
-      "prob": 29,
-      "fair": 3.42,
+      "p": 0.2829,
+      "prob": 28,
+      "fair": 3.53,
       "stars": 1,
       "player": "Tijjani Noslin",
       "team": "Lazio",
@@ -1892,32 +1926,33 @@
      {
       "market": "wh_btts",
       "label": "Lazio gagne et les deux équipes marquent",
-      "p": 0.2726,
-      "prob": 27,
-      "fair": 3.67,
+      "p": 0.2544,
+      "prob": 25,
+      "fair": 3.93,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Tijjani Noslin marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
+     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 2 passes en 8 matchs · Lazio favori (73 %) · 2,2 buts attendus pour Lazio"
+     "why": "4 buts et 2 passes en 8 matchs · titulaire · Lazio favori (72 %) · 2,1 buts attendus pour Lazio"
     },
     "decisive": {
      "market": "dec",
      "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
@@ -1926,10 +1961,11 @@
       4,
       2
      ],
+     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 2 passes en 8 matchs · Lazio favori (73 %) · 2,2 buts attendus pour Lazio"
+     "why": "4 buts et 2 passes en 8 matchs · titulaire · Lazio favori (72 %) · 2,1 buts attendus pour Lazio"
     }
    },
    "second": {
@@ -1956,24 +1992,24 @@
    "form_a": "NNDVD",
    "rank_h": 17,
    "rank_a": 14,
-   "pH": 39,
-   "pD": 26,
-   "pA": 36,
+   "pH": 35,
+   "pD": 27,
+   "pA": 39,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.4,
+   "xgH": 1.24,
    "xgA": 1.33,
    "scores": [
     "1-1",
-    "1-0",
-    "0-1"
+    "0-1",
+    "1-0"
    ],
    "scorep": [
-    12,
-    9,
+    13,
+    10,
     9
    ],
-   "over25": 52,
-   "btts": 56,
+   "over25": 47,
+   "btts": 52,
    "squad_h": [
     {
      "name": "Tim Skarke",
@@ -1989,31 +2025,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 26,
-     "p_dec": 29,
+     "p_goal": 23,
+     "p_dec": 27,
      "pid": "220796",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Emmanuel Latte Lath",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Union Berlin",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 7,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_dec": 21,
-     "pid": "242439",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Livan Burcu",
@@ -2029,11 +2046,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 19,
+     "p_goal": 15,
+     "p_dec": 17,
      "pid": "366823",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Janik Haberer",
@@ -2049,31 +2067,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 15,
-     "p_dec": 20,
+     "p_goal": 14,
+     "p_dec": 18,
      "pid": "170604",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Leopold Querfeld",
-     "pos": "Défenseur",
+     "name": "Emmanuel Latte Lath",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Union Berlin",
      "goals": 1,
-     "assists": 1,
-     "apps": 4,
+     "assists": 0,
+     "apps": 5,
      "l10": {
       "n": 7,
-      "gp": 4,
+      "gp": 5,
       "g": 1,
-      "a": 1
+      "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 26,
-     "pid": "330455",
+     "p_goal": 5,
+     "p_dec": 6,
+     "pid": "242439",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Rani Khedira",
@@ -2090,10 +2110,32 @@
       "a": 0
      },
      "p_goal": 4,
-     "p_dec": 13,
+     "p_dec": 12,
      "pid": "159152",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Leopold Querfeld",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Union Berlin",
+     "goals": 1,
+     "assists": 1,
+     "apps": 4,
+     "l10": {
+      "n": 7,
+      "gp": 4,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 8,
+     "pid": "330455",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -2222,23 +2264,25 @@
     "Union Berlin : 17e, 6 points, 6 buts marqués et 18 encaissés en 7 matchs.",
     "Cologne : 14e, 8 points, 8 buts marqués et 11 encaissés en 7 matchs.",
     "Union Berlin : 6 buts marqués et 18 encaissés sur ses 7 derniers matchs de championnat.",
-    "Cologne : 8 buts marqués et 11 encaissés sur ses 7 derniers matchs de championnat."
+    "Cologne : 8 buts marqués et 11 encaissés sur ses 7 derniers matchs de championnat.",
+    "Union Berlin : attaque revue à la baisse (−12 %) d'après la compo officielle (Leopold Querfeld, Emmanuel Latte Lath ne commencent pas).",
+    "Compositions officielles prises en compte : Emmanuel Latte Lath (remplaçant) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Union Berlin (17e) est en zone de relégation : match vital. Cologne (14e) lutte pour le maintien, 2 points d'avance sur la zone rouge. Adversaires directs au classement : 2 points d'écart.",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "Union Berlin ou nul",
-     "p": 0.6448,
-     "prob": 64,
-     "fair": 1.55,
+     "market": "N2",
+     "label": "Nul ou Cologne",
+     "p": 0.654,
+     "prob": 65,
+     "fair": 1.53,
      "stars": 3,
      "why": "7 derniers matchs : Union Berlin 6 marqués / 18 encaissés · Cologne 8 / 11"
     },
     "winner": {
-     "market": "1",
-     "label": "Victoire Union Berlin",
+     "market": "2",
+     "label": "Victoire Cologne",
      "p": 0.3887,
      "prob": 39,
      "fair": 2.57,
@@ -2246,71 +2290,71 @@
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.0911,
-     "prob": 9,
-     "fair": 10.98,
+     "label": "Score exact 0-1",
+     "p": 0.1017,
+     "prob": 10,
+     "fair": 9.83,
      "stars": 1,
-     "value": "1-0"
+     "value": "0-1"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Union Berlin gagne et plus de 2,5 buts",
-     "p": 0.2337,
+     "market": "htft_a",
+     "label": "Cologne mène à la mi-temps et gagne le match",
+     "p": 0.228,
      "prob": 23,
-     "fair": 4.28,
+     "fair": 4.39,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Union Berlin mène à la mi-temps et gagne le match",
-      "p": 0.2297,
-      "prob": 23,
-      "fair": 4.35,
+      "market": "wa_o25",
+      "label": "Cologne gagne et plus de 2,5 buts",
+      "p": 0.2193,
+      "prob": 22,
+      "fair": 4.56,
       "stars": 1
      },
      {
-      "market": "wh_by1",
-      "label": "Union Berlin gagne d'un seul but",
-      "p": 0.2073,
+      "market": "wa_nil",
+      "label": "Cologne gagne sans encaisser de but",
+      "p": 0.2128,
       "prob": 21,
-      "fair": 4.82,
+      "fair": 4.7,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Tim Skarke marque",
+     "label": "Said El Mala marque",
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
+     "stars": 1,
+     "player": "Said El Mala",
+     "team": "Cologne",
+     "pid": "380795",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 6 matchs · Cologne annoncé gagnant (39 %) · 1,3 but attendu pour Cologne"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Said El Mala buteur ou passeur",
      "p": 0.26,
      "prob": 26,
      "fair": 3.85,
      "stars": 1,
-     "player": "Tim Skarke",
-     "team": "Union Berlin",
-     "pid": "220796",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · Union Berlin annoncé gagnant (39 %) · 1,4 but attendu pour Union Berlin"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tim Skarke buteur ou passeur",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
-     "stars": 1,
-     "player": "Tim Skarke",
-     "team": "Union Berlin",
+     "player": "Said El Mala",
+     "team": "Cologne",
      "base": [
-      7,
+      6,
       2,
       0
      ],
-     "pid": "220796",
+     "pid": "380795",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 7 matchs · Union Berlin annoncé gagnant (39 %) · 1,4 but attendu pour Union Berlin"
+     "why": "2 buts et 0 passe en 6 matchs · Cologne annoncé gagnant (39 %) · 1,3 but attendu pour Cologne"
     }
    },
    "second": {
@@ -4267,7 +4311,7 @@
     11,
     10
    ],
-   "over25": 44,
+   "over25": 45,
    "btts": 50,
    "squad_h": [
     {
@@ -4385,7 +4429,7 @@
       "a": 1
      },
      "p_goal": 9,
-     "p_dec": 17,
+     "p_dec": 18,
      "pid": "374812",
      "stats_league": "ita.1",
      "season": 2026
@@ -4526,7 +4570,7 @@
     "main": {
      "market": "1N",
      "label": "Lecce ou nul",
-     "p": 0.6415,
+     "p": 0.6413,
      "prob": 64,
      "fair": 1.56,
      "stars": 3,
@@ -4535,7 +4579,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Lecce",
-     "p": 0.3686,
+     "p": 0.3688,
      "prob": 37,
      "fair": 2.71,
      "stars": 1
@@ -4543,16 +4587,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1063,
+     "p": 0.1058,
      "prob": 11,
-     "fair": 9.41,
+     "fair": 9.45,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Lecce mène à la mi-temps et gagne le match",
-     "p": 0.2135,
+     "p": 0.2137,
      "prob": 21,
      "fair": 4.68,
      "stars": 1
@@ -4561,15 +4605,15 @@
      {
       "market": "wh_nil",
       "label": "Lecce gagne sans encaisser de but",
-      "p": 0.2103,
+      "p": 0.2098,
       "prob": 21,
-      "fair": 4.76,
+      "fair": 4.77,
       "stars": 1
      },
      {
       "market": "wh_by1",
       "label": "Lecce gagne d'un seul but",
-      "p": 0.2092,
+      "p": 0.2091,
       "prob": 21,
       "fair": 4.78,
       "stars": 1
@@ -5403,7 +5447,7 @@
    "pA": 35,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.26,
-   "xgA": 1.2,
+   "xgA": 1.21,
    "scores": [
     "1-1",
     "1-0",
@@ -5554,7 +5598,7 @@
       "a": 1
      },
      "p_goal": 21,
-     "p_dec": 27,
+     "p_dec": 28,
      "pid": "134947",
      "stats_league": "ita.1",
      "season": 2026
@@ -5634,7 +5678,7 @@
       "a": 1
      },
      "p_goal": 8,
-     "p_dec": 14,
+     "p_dec": 15,
      "pid": "255344",
      "stats_league": "ita.1",
      "season": 2026
@@ -5672,7 +5716,7 @@
     "main": {
      "market": "1N",
      "label": "Juventus ou nul",
-     "p": 0.6499,
+     "p": 0.6496,
      "prob": 65,
      "fair": 1.54,
      "stars": 3,
@@ -5681,7 +5725,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Juventus",
-     "p": 0.3774,
+     "p": 0.3776,
      "prob": 38,
      "fair": 2.65,
      "stars": 1
@@ -5689,33 +5733,33 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1075,
+     "p": 0.107,
      "prob": 11,
-     "fair": 9.3,
+     "fair": 9.35,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Juventus mène à la mi-temps et gagne le match",
-     "p": 0.2194,
+     "p": 0.2196,
      "prob": 22,
-     "fair": 4.56,
+     "fair": 4.55,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_nil",
       "label": "Juventus gagne sans encaisser de but",
-      "p": 0.2153,
-      "prob": 22,
-      "fair": 4.65,
+      "p": 0.2147,
+      "prob": 21,
+      "fair": 4.66,
       "stars": 1
      },
      {
       "market": "wh_by1",
       "label": "Juventus gagne d'un seul but",
-      "p": 0.2121,
+      "p": 0.2119,
       "prob": 21,
       "fair": 4.72,
       "stars": 1
@@ -8104,10 +8148,10 @@
  ],
  "bilan": {
   "foot": {
-   "n": 202,
-   "fav_rate": 62,
+   "n": 203,
+   "fav_rate": 63,
    "fav_expected": 54,
-   "brier": 0.53,
+   "brier": 0.528,
    "brier_naive": 0.667,
    "vs_mkt": {
     "n": 36,
@@ -8141,9 +8185,9 @@
     },
     {
      "range": "70-80 %",
-     "n": 19,
-     "announced": 75,
-     "actual": 84
+     "n": 20,
+     "announced": 76,
+     "actual": 85
     },
     {
      "range": "80-90 %",
@@ -8186,20 +8230,20 @@
    ]
   },
   "picks": {
-   "n": 891,
+   "n": 894,
    "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 891,
-     "ok": 490,
+     "n": 894,
+     "ok": 492,
      "rate": 55,
      "expected": 52
     },
     "foot": {
-     "n": 559,
-     "ok": 298,
+     "n": 562,
+     "ok": 300,
      "rate": 53,
      "expected": 52
     },
@@ -8212,13 +8256,13 @@
    },
    "fun": {
     "all": {
-     "n": 342,
+     "n": 344,
      "ok": 103,
      "rate": 30,
      "expected": 29
     },
     "foot": {
-     "n": 252,
+     "n": 254,
      "ok": 60,
      "rate": 24,
      "expected": 25
@@ -8234,14 +8278,16 @@
     {
      "date": "2026-11-01",
      "all": {
-      "n": 6,
-      "ok": 5,
-      "rate": 83,
-      "expected": 60
+      "n": 9,
+      "ok": 7,
+      "rate": 78,
+      "expected": 65
      },
      "foot": {
-      "n": 0,
-      "ok": 0
+      "n": 3,
+      "ok": 2,
+      "rate": 67,
+      "expected": 74
      },
      "nhl": {
       "n": 6,
@@ -8251,14 +8297,16 @@
      },
      "fun": {
       "all": {
-       "n": 2,
+       "n": 4,
        "ok": 2,
-       "rate": 100,
-       "expected": 39
+       "rate": 50,
+       "expected": 32
       },
       "foot": {
-       "n": 0,
-       "ok": 0
+       "n": 2,
+       "ok": 0,
+       "rate": 0,
+       "expected": 25
       },
       "nhl": {
        "n": 2,
@@ -8845,10 +8893,10 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 111,
-     "ok": 63,
+     "n": 114,
+     "ok": 65,
      "rate": 57,
-     "expected": 49
+     "expected": 50
     },
     {
      "sport": "foot",
@@ -8910,9 +8958,9 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 385,
+     "n": 386,
      "announced": 35,
-     "actual": 34
+     "actual": 33
     },
     {
      "stars": 2,
@@ -8928,13 +8976,13 @@
     },
     {
      "stars": 4,
-     "n": 93,
-     "announced": 74,
-     "actual": 78
+     "n": 94,
+     "announced": 75,
+     "actual": 79
     },
     {
      "stars": 5,
-     "n": 61,
+     "n": 62,
      "announced": 86,
      "actual": 89
     }
@@ -8990,6 +9038,71 @@
      "prob": 40,
      "stars": 1,
      "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875002",
+     "score": "1-0",
+     "match": "Como – Venezia",
+     "label": "Como ou nul",
+     "prob": 94,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875002",
+     "score": "1-0",
+     "match": "Como – Venezia",
+     "label": "Victoire Como",
+     "prob": 80,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875002",
+     "score": "1-0",
+     "match": "Como – Venezia",
+     "label": "Anastasios Douvikas marque",
+     "prob": 47,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875002",
+     "score": "1-0",
+     "match": "Como – Venezia",
+     "label": "Score exact 2-0",
+     "prob": 16,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875002",
+     "score": "1-0",
+     "match": "Como – Venezia",
+     "label": "Como gagne avec 3 buts d'écart ou plus",
+     "prob": 33,
+     "stars": 1,
+     "ok": false,
      "fun": true
     },
     {
