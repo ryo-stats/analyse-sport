@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T20:30+01:00",
+ "generated": "2026-11-01T20:55+01:00",
  "date": "2026-11-01",
  "matches": [
   {
@@ -1138,7 +1138,7 @@
    "time": "20:45",
    "home": "Marseille",
    "away": "Toulouse",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.05,
    "xgA": 1.37,
    "pH": 53,
@@ -1160,7 +1160,7 @@
      "label": "Victoire Marseille",
      "p": 0.5305,
      "prob": 53,
-     "fair": 1.88,
+     "fair": 1.89,
      "stars": 2
     },
     "score": {
@@ -1176,7 +1176,7 @@
      "market": "wh_o25",
      "label": "Marseille gagne et plus de 2,5 buts",
      "p": 0.395,
-     "prob": 39,
+     "prob": 40,
      "fair": 2.53,
      "stars": 1
     },
@@ -1226,7 +1226,7 @@
    "time": "20:45",
    "home": "Juventus",
    "away": "Napoli",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.07,
    "xgA": 1.02,
    "pH": 36,
@@ -1254,7 +1254,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1328,
+     "p": 0.1327,
      "prob": 13,
      "fair": 7.53,
      "stars": 1,
@@ -1263,7 +1263,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Juventus gagne sans encaisser de but",
-     "p": 0.2377,
+     "p": 0.2376,
      "prob": 24,
      "fair": 4.21,
      "stars": 1
@@ -1751,12 +1751,6 @@
   "nhl": 5,
   "top": [
    {
-    "label": "Marseille ou nul",
-    "prob": 74,
-    "time": "20:45",
-    "match": "Marseille – Toulouse"
-   },
-   {
     "label": "Connor McDavid : au moins 1 point",
     "prob": 74,
     "time": "00:00",
@@ -1767,6 +1761,12 @@
     "prob": 72,
     "time": "21:00",
     "match": "Athletic – Real Sociedad"
+   },
+   {
+    "label": "Kirill Kaprizov : au moins 1 point",
+    "prob": 72,
+    "time": "21:30",
+    "match": "Washington Capitals – Minnesota Wild"
    }
   ]
  }
