@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T07:29+01:00",
+ "generated": "2026-11-01T11:16+01:00",
  "date": "2026-11-01",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -8159,21 +8159,21 @@
    ]
   },
   "picks": {
-   "n": 879,
-   "rate": 56,
-   "expected": 53,
+   "n": 891,
+   "rate": 55,
+   "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 879,
-     "ok": 488,
-     "rate": 56,
-     "expected": 53
+     "n": 891,
+     "ok": 490,
+     "rate": 55,
+     "expected": 52
     },
     "foot": {
-     "n": 547,
-     "ok": 296,
-     "rate": 54,
+     "n": 559,
+     "ok": 298,
+     "rate": 53,
      "expected": 52
     },
     "nhl": {
@@ -8244,16 +8244,16 @@
     {
      "date": "2026-10-31",
      "all": {
-      "n": 107,
-      "ok": 71,
-      "rate": 66,
-      "expected": 53
+      "n": 119,
+      "ok": 73,
+      "rate": 61,
+      "expected": 52
      },
      "foot": {
-      "n": 75,
-      "ok": 51,
-      "rate": 68,
-      "expected": 52
+      "n": 87,
+      "ok": 53,
+      "rate": 61,
+      "expected": 50
      },
      "nhl": {
       "n": 32,
@@ -8818,7 +8818,7 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 110,
+     "n": 111,
      "ok": 63,
      "rate": 57,
      "expected": 49
@@ -8826,16 +8826,16 @@
     {
      "sport": "foot",
      "league": "Premier League",
-     "n": 82,
+     "n": 87,
      "ok": 44,
-     "rate": 54,
+     "rate": 51,
      "expected": 49
     },
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 77,
-     "ok": 42,
+     "n": 80,
+     "ok": 44,
      "rate": 55,
      "expected": 53
     },
@@ -8858,17 +8858,17 @@
     {
      "sport": "foot",
      "league": "Bundesliga",
-     "n": 68,
+     "n": 70,
      "ok": 37,
-     "rate": 54,
-     "expected": 53
+     "rate": 53,
+     "expected": 52
     },
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 66,
+     "n": 67,
      "ok": 35,
-     "rate": 53,
+     "rate": 52,
      "expected": 50
     },
     {
@@ -8883,15 +8883,15 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 375,
+     "n": 385,
      "announced": 35,
      "actual": 34
     },
     {
      "stars": 2,
-     "n": 157,
+     "n": 159,
      "announced": 55,
-     "actual": 56
+     "actual": 55
     },
     {
      "stars": 3,
@@ -9219,6 +9219,19 @@
      "mid": "foot-401876413",
      "score": "2-0",
      "match": "Troyes – Le Mans",
+     "label": "Renaud Ripart buteur ou passeur",
+     "prob": 23,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876413",
+     "score": "2-0",
+     "match": "Troyes – Le Mans",
      "label": "Troyes gagne sans encaisser de but",
      "prob": 22,
      "stars": 1,
@@ -9260,6 +9273,19 @@
      "match": "Spurs – C Palace",
      "label": "Omar Marmoush marque",
      "prob": 21,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401878761",
+     "score": "2-0",
+     "match": "Spurs – C Palace",
+     "label": "Omar Marmoush buteur ou passeur",
+     "prob": 25,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -9470,6 +9496,19 @@
      "prob": 40,
      "stars": 1,
      "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882818",
+     "score": "3-0",
+     "match": "Rayo – Celta Vigo",
+     "label": "Sergio Camello buteur ou passeur",
+     "prob": 46,
+     "stars": 1,
+     "ok": true,
      "fun": false
     },
     {
@@ -9726,6 +9765,19 @@
      "mid": "foot-401874795",
      "score": "3-1",
      "match": "Milan – Inter Milan",
+     "label": "Marcus Thuram buteur ou passeur",
+     "prob": 40,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874795",
+     "score": "3-1",
+     "match": "Milan – Inter Milan",
      "label": "Score exact 1-2",
      "prob": 9,
      "stars": 1,
@@ -9767,6 +9819,19 @@
      "match": "Man City – Brighton",
      "label": "Erling Haaland marque",
      "prob": 52,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879245",
+     "score": "0-1",
+     "match": "Man City – Brighton",
+     "label": "Erling Haaland buteur ou passeur",
+     "prob": 54,
      "stars": 2,
      "ok": false,
      "fun": false
@@ -9986,6 +10051,19 @@
      "mid": "foot-401882820",
      "score": "0-2",
      "match": "Levante – Atlético",
+     "label": "Álex Baena buteur ou passeur",
+     "prob": 43,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882820",
+     "score": "0-2",
+     "match": "Levante – Atlético",
      "label": "Atlético gagne et plus de 2,5 buts",
      "prob": 34,
      "stars": 1,
@@ -10028,6 +10106,19 @@
      "label": "Mohamed Belloumi marque",
      "prob": 39,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401878763",
+     "score": "2-2",
+     "match": "Hull – Ipswich",
+     "label": "Mohamed Belloumi buteur ou passeur",
+     "prob": 55,
+     "stars": 2,
      "ok": false,
      "fun": false
     },
@@ -10092,6 +10183,19 @@
      "match": "Gladbach – Paderborn",
      "label": "Joe Scally marque",
      "prob": 25,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884749",
+     "score": "0-0",
+     "match": "Gladbach – Paderborn",
+     "label": "Joe Scally buteur ou passeur",
+     "prob": 33,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -10441,6 +10545,19 @@
      "mid": "foot-401879249",
      "score": "2-0",
      "match": "Brentford – Nottm Forest",
+     "label": "Kevin Schade buteur ou passeur",
+     "prob": 28,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879249",
+     "score": "2-0",
+     "match": "Brentford – Nottm Forest",
      "label": "Brentford gagne sans encaisser de but",
      "prob": 38,
      "stars": 1,
@@ -10573,6 +10690,19 @@
      "match": "Bournemouth – Leeds",
      "label": "Marcus Tavernier marque",
      "prob": 35,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879251",
+     "score": "2-0",
+     "match": "Bournemouth – Leeds",
+     "label": "Marcus Tavernier buteur ou passeur",
+     "prob": 38,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -10779,6 +10909,19 @@
      "mid": "foot-401882825",
      "score": "2-1",
      "match": "Betis – Málaga",
+     "label": "Abde Ezzalzouli buteur ou passeur",
+     "prob": 33,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882825",
+     "score": "2-1",
+     "match": "Betis – Málaga",
      "label": "Score exact 1-0",
      "prob": 15,
      "stars": 1,
@@ -10833,6 +10976,19 @@
      "match": "Bayern – Dortmund",
      "label": "Michael Olise marque",
      "prob": 31,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-10-31",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884754",
+     "score": "2-2",
+     "match": "Bayern – Dortmund",
+     "label": "Michael Olise buteur ou passeur",
+     "prob": 44,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -24804,23 +24960,7 @@
     "ita.1": 845,
     "ger.1": 656
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 76
-    },
-    "eng.1": {
-     "2026": 88
-    },
-    "esp.1": {
-     "2026": 104
-    },
-    "ita.1": {
-     "2026": 93
-    },
-    "ger.1": {
-     "2026": 70
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
