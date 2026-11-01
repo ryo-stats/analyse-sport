@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T20:05+01:00",
+ "generated": "2026-11-01T20:30+01:00",
  "date": "2026-11-01",
  "matches": [
   {
@@ -1011,16 +1011,16 @@
     "player": {
      "market": "scorer",
      "label": "Milutin Osmajic marque",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
      "player": "Milutin Osmajic",
      "team": "Genoa",
      "pid": "275444",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
+     "why": "3 buts et 1 passe en 8 matchs · 10 derniers matchs : 4 buts, 1 passe (joué 9 sur 10) · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
     },
     "decisive": {
      "market": "dec",
@@ -1039,7 +1039,7 @@
      "pid": "275444",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
+     "why": "3 buts et 1 passe en 8 matchs · 10 derniers matchs : 4 buts, 1 passe (joué 9 sur 10) · Genoa annoncé gagnant (38 %) · 1,1 but attendu pour Genoa"
     }
    }
   },
@@ -1052,7 +1052,7 @@
    "time": "18:30",
    "home": "Elche",
    "away": "Valencia",
-   "state": "in",
+   "state": "post",
    "xgH": 1.5,
    "xgA": 0.89,
    "pH": 51,
@@ -1097,24 +1097,23 @@
     "player": {
      "market": "scorer",
      "label": "Fer Niño marque",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.43,
+     "prob": 43,
+     "fair": 2.33,
      "stars": 1,
      "player": "Fer Niño",
      "team": "Elche",
-     "lineup": "start",
      "pid": "301684",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 10 matchs · titulaire · Elche favori (51 %) · 1,5 but attendu pour Elche"
+     "why": "6 buts et 0 passe en 10 matchs · Elche favori (51 %) · 1,5 but attendu pour Elche"
     },
     "decisive": {
      "market": "dec",
      "label": "Fer Niño buteur ou passeur",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
      "stars": 1,
      "player": "Fer Niño",
      "team": "Elche",
@@ -1123,11 +1122,10 @@
       6,
       0
      ],
-     "lineup": "start",
      "pid": "301684",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 10 matchs · titulaire · Elche favori (51 %) · 1,5 but attendu pour Elche"
+     "why": "6 buts et 0 passe en 10 matchs · Elche favori (51 %) · 1,5 but attendu pour Elche"
     }
    }
   },
@@ -1230,69 +1228,80 @@
    "away": "Napoli",
    "state": "pre",
    "xgH": 1.07,
-   "xgA": 1.21,
-   "pH": 32,
-   "pD": 28,
-   "pA": 39,
+   "xgA": 1.02,
+   "pH": 36,
+   "pD": 30,
+   "pA": 34,
    "edate": "20261101",
    "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Juventus ou nul",
+     "p": 0.6639,
+     "prob": 66,
+     "fair": 1.51,
+     "stars": 3,
+     "why": "9 derniers matchs : Juventus 11 marqués / 10 encaissés · Napoli 17 / 11"
+    },
     "winner": {
-     "market": "2",
-     "label": "Victoire Napoli",
-     "p": 0.3922,
-     "prob": 39,
-     "fair": 2.55,
+     "market": "1",
+     "label": "Victoire Juventus",
+     "p": 0.3633,
+     "prob": 36,
+     "fair": 2.75,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1239,
-     "prob": 12,
-     "fair": 8.07,
+     "label": "Score exact 1-0",
+     "p": 0.1328,
+     "prob": 13,
+     "fair": 7.53,
      "stars": 1,
-     "value": "0-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wa_nil",
-     "label": "Napoli gagne sans encaisser de but",
-     "p": 0.2407,
+     "market": "wh_nil",
+     "label": "Juventus gagne sans encaisser de but",
+     "p": 0.2377,
      "prob": 24,
-     "fair": 4.15,
+     "fair": 4.21,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Kevin De Bruyne marque",
+     "label": "Randal Kolo Muani marque",
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
+     "stars": 1,
+     "player": "Randal Kolo Muani",
+     "team": "Juventus",
+     "lineup": "start",
+     "pid": "252971",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "1 but et 1 passe en 9 matchs · titulaire · Juventus annoncé gagnant (36 %) · 1,1 but attendu pour Juventus"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Randal Kolo Muani buteur ou passeur",
      "p": 0.21,
      "prob": 21,
      "fair": 4.76,
      "stars": 1,
-     "player": "Kevin De Bruyne",
-     "team": "Napoli",
-     "pid": "134947",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "4 buts et 1 passe en 9 matchs · Napoli annoncé gagnant (39 %) · 1,2 but attendu pour Napoli"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Kevin De Bruyne buteur ou passeur",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
-     "stars": 1,
-     "player": "Kevin De Bruyne",
-     "team": "Napoli",
+     "player": "Randal Kolo Muani",
+     "team": "Juventus",
      "base": [
       9,
-      4,
+      1,
       1
      ],
-     "pid": "134947",
+     "lineup": "start",
+     "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 9 matchs · Napoli annoncé gagnant (39 %) · 1,2 but attendu pour Napoli"
+     "why": "1 but et 1 passe en 9 matchs · titulaire · Juventus annoncé gagnant (36 %) · 1,1 but attendu pour Juventus"
     }
    }
   },
@@ -1306,7 +1315,7 @@
    "home": "Athletic",
    "away": "Real Sociedad",
    "state": "pre",
-   "xgH": 1.45,
+   "xgH": 1.46,
    "xgA": 1.07,
    "pH": 46,
    "pD": 26,
@@ -1316,7 +1325,7 @@
     "main": {
      "market": "1N",
      "label": "Athletic ou nul",
-     "p": 0.7213,
+     "p": 0.7212,
      "prob": 72,
      "fair": 1.39,
      "stars": 4,
@@ -1325,7 +1334,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Athletic",
-     "p": 0.4584,
+     "p": 0.4588,
      "prob": 46,
      "fair": 2.18,
      "stars": 1
@@ -1333,18 +1342,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1166,
+     "p": 0.1161,
      "prob": 12,
-     "fair": 8.57,
+     "fair": 8.62,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Athletic mène à la mi-temps et gagne le match",
-     "p": 0.2748,
-     "prob": 27,
-     "fair": 3.64,
+     "p": 0.2752,
+     "prob": 28,
+     "fair": 3.63,
      "stars": 1
     },
     "player": {
@@ -1735,7 +1744,7 @@
  "summary": {
   "date": "2026-11-01",
   "yesterday": {
-   "n": 247,
+   "n": 252,
    "ok": 136
   },
   "foot": 16,

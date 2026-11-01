@@ -30870,7 +30870,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882823|1|": {
   "match": "foot-401882823",
@@ -30894,7 +30894,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882823|scorer|Fer Niño": {
   "match": "foot-401882823",
@@ -30918,7 +30918,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882823|dec|Fer Niño": {
   "match": "foot-401882823",
@@ -30970,7 +30970,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876417|1N|": {
   "match": "foot-401876417",
@@ -31104,12 +31104,12 @@
   "home": "Juventus",
   "away": "Napoli",
   "market": "exact",
-  "label": "Score exact 0-1",
-  "p": 0.1239,
+  "label": "Score exact 1-0",
+  "p": 0.1328,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "0-1",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -31129,7 +31129,7 @@
   "away": "Real Sociedad",
   "market": "1N",
   "label": "Athletic ou nul",
-  "p": 0.7213,
+  "p": 0.7212,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -31153,7 +31153,7 @@
   "away": "Real Sociedad",
   "market": "1",
   "label": "Victoire Athletic",
-  "p": 0.4584,
+  "p": 0.4588,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -31229,7 +31229,7 @@
   "away": "Real Sociedad",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1166,
+  "p": 0.1161,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -32264,7 +32264,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401876417|wh_o25|": {
   "match": "foot-401876417",
@@ -32290,92 +32290,16 @@
   ],
   "result": null
  },
- "foot-401874949|2|": {
-  "match": "foot-401874949",
+ "foot-401882826|htft_h|": {
+  "match": "foot-401882826",
   "sport": "foot",
-  "league": "Serie A",
+  "league": "LaLiga",
   "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "2",
-  "label": "Victoire Napoli",
-  "p": 0.3922,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "foot-401874949|scorer|Kevin De Bruyne": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "scorer",
-  "label": "Kevin De Bruyne marque",
-  "p": 0.21,
-  "stars": 1,
-  "player": "Kevin De Bruyne",
-  "pid_player": "134947",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401874949|dec|Kevin De Bruyne": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "dec",
-  "label": "Kevin De Bruyne buteur ou passeur",
-  "p": 0.28,
-  "stars": 1,
-  "player": "Kevin De Bruyne",
-  "pid_player": "134947",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   9,
-   4,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401874949|wa_nil|": {
-  "match": "foot-401874949",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-01",
-  "home": "Juventus",
-  "away": "Napoli",
-  "market": "wa_nil",
-  "label": "Napoli gagne sans encaisser de but",
-  "p": 0.2407,
+  "home": "Athletic",
+  "away": "Real Sociedad",
+  "market": "htft_h",
+  "label": "Athletic mène à la mi-temps et gagne le match",
+  "p": 0.2752,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -32390,16 +32314,116 @@
   ],
   "result": null
  },
- "foot-401882826|htft_h|": {
-  "match": "foot-401882826",
+ "foot-401874949|1N|": {
+  "match": "foot-401874949",
   "sport": "foot",
-  "league": "LaLiga",
+  "league": "Serie A",
   "date": "2026-11-01",
-  "home": "Athletic",
-  "away": "Real Sociedad",
-  "market": "htft_h",
-  "label": "Athletic mène à la mi-temps et gagne le match",
-  "p": 0.2748,
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "1N",
+  "label": "Juventus ou nul",
+  "p": 0.6639,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874949|1|": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "1",
+  "label": "Victoire Juventus",
+  "p": 0.3633,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874949|scorer|Randal Kolo Muani": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "scorer",
+  "label": "Randal Kolo Muani marque",
+  "p": 0.12,
+  "stars": 1,
+  "player": "Randal Kolo Muani",
+  "pid_player": "252971",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874949|dec|Randal Kolo Muani": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "dec",
+  "label": "Randal Kolo Muani buteur ou passeur",
+  "p": 0.21,
+  "stars": 1,
+  "player": "Randal Kolo Muani",
+  "pid_player": "252971",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   9,
+   1,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874949|wh_nil|": {
+  "match": "foot-401874949",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-01",
+  "home": "Juventus",
+  "away": "Napoli",
+  "market": "wh_nil",
+  "label": "Juventus gagne sans encaisser de but",
+  "p": 0.2377,
   "stars": 1,
   "player": null,
   "pid_player": null,
