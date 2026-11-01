@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T16:16+01:00",
+ "generated": "2026-11-01T16:41+01:00",
  "date": "2026-11-01",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -769,7 +769,7 @@
    "kickoff": "2026-11-01T14:00:00+00:00",
    "time": "15:00",
    "state": "in",
-   "score": "2-0",
+   "score": "4-1",
    "home": "Strasbourg",
    "away": "Auxerre",
    "form_h": "NDDDN",
@@ -2352,8 +2352,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-01T15:15:00+00:00",
    "time": "16:15",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-2",
    "home": "Racing",
    "away": "Real Madrid",
    "form_h": "NVDND",
@@ -2639,8 +2639,6 @@
     "Real Madrid : 3e, 24 points, 25 buts marqués et 10 encaissés en 10 matchs.",
     "Racing : 15 buts marqués et 26 encaissés sur ses 10 derniers matchs de championnat.",
     "Real Madrid : 25 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
-    "Racing : attaque revue à la baisse (−5 %) d'après la compo officielle.",
-    "Real Madrid : attaque revue à la baisse (−7 %) d'après la compo officielle.",
     "Compositions officielles prises en compte : Vinícius Júnior (absent), Carlos Espí (remplaçant) ne commencent pas le match."
    ],
    "reading": "Real Madrid est nettement favori (71 %).",
@@ -2758,24 +2756,24 @@
    "form_a": "NDDVN",
    "rank_h": 5,
    "rank_a": 14,
-   "pH": 69,
-   "pD": 19,
+   "pH": 66,
+   "pD": 22,
    "pA": 12,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.11,
-   "xgA": 0.74,
+   "xgH": 1.81,
+   "xgA": 0.63,
    "scores": [
-    "2-0",
     "1-0",
-    "2-1"
+    "2-0",
+    "1-1"
    ],
    "scorep": [
-    13,
-    12,
+    16,
+    14,
     10
    ],
-   "over25": 54,
-   "btts": 46,
+   "over25": 44,
+   "btts": 39,
    "squad_h": [
     {
      "name": "Ernest Nuamah",
@@ -2791,11 +2789,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 37,
-     "p_dec": 47,
+     "p_goal": 32,
+     "p_dec": 42,
      "pid": "333310",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Zachary Athekame",
@@ -2811,31 +2810,12 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 24,
-     "p_dec": 49,
+     "p_goal": 21,
+     "p_dec": 44,
      "pid": "370758",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Loïs Openda",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Lyon",
-     "goals": 1,
-     "assists": 1,
-     "apps": 5,
-     "l10": {
-      "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 17,
-     "p_dec": 30,
-     "pid": "276265",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Corentin Tolisso",
@@ -2851,31 +2831,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 15,
-     "p_dec": 39,
+     "p_goal": 13,
+     "p_dec": 34,
      "pid": "192060",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Pavel Sulc",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Lyon",
-     "goals": 1,
-     "assists": 3,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 1,
-      "a": 3
-     },
-     "p_goal": 14,
-     "p_dec": 44,
-     "pid": "305545",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tanner Tessmann",
@@ -2891,34 +2852,57 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 16,
+     "p_goal": 11,
+     "p_dec": 14,
      "pid": "303308",
      "stats_league": "fra.1",
-     "season": 2026
-    }
-   ],
-   "squad_a": [
+     "season": 2026,
+     "lineup": "start"
+    },
     {
-     "name": "Amine El Ouazzani",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Angers",
-     "goals": 2,
-     "assists": 2,
+     "name": "Felix Bacher",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Lyon",
+     "goals": 1,
+     "assists": 0,
      "apps": 8,
      "l10": {
       "n": 8,
       "gp": 8,
-      "g": 2,
-      "a": 2
+      "g": 1,
+      "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 25,
-     "pid": "301262",
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "320945",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
+    {
+     "name": "Mads Bidstrup",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Lyon",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 8,
+     "pid": "290401",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    }
+   ],
+   "squad_a": [
     {
      "name": "Prosper Peter",
      "pos": "Attaquant",
@@ -2933,11 +2917,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 14,
+     "p_goal": 11,
+     "p_dec": 12,
      "pid": "403232",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Amine Sbaï",
@@ -2953,11 +2938,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 17,
+     "p_goal": 8,
+     "p_dec": 15,
      "pid": "314388",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Branco van den Boomen",
@@ -2973,11 +2959,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 7,
-     "p_dec": 16,
+     "p_goal": 6,
+     "p_dec": 13,
      "pid": "196234",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Carlens Arcus",
@@ -2993,11 +2980,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 7,
+     "p_goal": 5,
+     "p_dec": 6,
      "pid": "218703",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Lilian Raolisoa",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Angers",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 5,
+     "pid": "357154",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Harouna Djibirin",
@@ -3013,97 +3022,102 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 7,
+     "p_goal": 2,
+     "p_dec": 2,
      "pid": "412871",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Lyon : 5e, 14 points, 13 buts marqués et 7 encaissés en 8 matchs.",
     "Angers : 14e, 8 points, 9 buts marqués et 15 encaissés en 8 matchs.",
     "Lyon : 13 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
-    "Angers : 9 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat."
+    "Angers : 9 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
+    "Lyon : attaque revue à la baisse (−14 %) d'après la compo officielle.",
+    "Angers : attaque revue à la baisse (−15 %) d'après la compo officielle (Amine El Ouazzani, Harouna Djibirin ne commencent pas).",
+    "Compositions officielles prises en compte : Loïs Openda (absent) ne commence pas le match."
    ],
-   "reading": "Lyon est nettement favori (69 %).",
+   "reading": "Lyon est nettement favori (66 %).",
    "stakes": "Lyon (5e) est dans la course à l'Europe. Angers (14e) lutte pour le maintien, 1 point d'avance sur la zone rouge.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Lyon ou nul",
-     "p": 0.8819,
+     "p": 0.8778,
      "prob": 88,
-     "fair": 1.13,
+     "fair": 1.14,
      "stars": 5,
      "why": "8 derniers matchs : Lyon 13 marqués / 7 encaissés · Angers 9 / 15"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Lyon",
-     "p": 0.6921,
-     "prob": 69,
-     "fair": 1.44,
+     "p": 0.6596,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1292,
-     "prob": 13,
-     "fair": 7.74,
+     "label": "Score exact 1-0",
+     "p": 0.1582,
+     "prob": 16,
+     "fair": 6.32,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3189,
-     "prob": 32,
-     "fair": 3.14,
+     "market": "h2",
+     "label": "Lyon gagne avec 2 buts d'écart ou plus",
+     "p": 0.393,
+     "prob": 39,
+     "fair": 2.54,
      "stars": 1
     },
     "fun_alt": [
      {
+      "market": "wh_o25",
+      "label": "Lyon gagne et plus de 2,5 buts",
+      "p": 0.3581,
+      "prob": 36,
+      "fair": 2.79,
+      "stars": 1
+     },
+     {
       "market": "scw",
       "label": "Ernest Nuamah marque et Lyon gagne",
-      "p": 0.3188,
-      "prob": 32,
-      "fair": 3.14,
+      "p": 0.2751,
+      "prob": 28,
+      "fair": 3.64,
       "stars": 1,
       "player": "Ernest Nuamah",
       "team": "Lyon",
       "side": "h"
-     },
-     {
-      "market": "wh_btts",
-      "label": "Lyon gagne et les deux équipes marquent",
-      "p": 0.2714,
-      "prob": 27,
-      "fair": 3.68,
-      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Ernest Nuamah marque",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Ernest Nuamah",
      "team": "Lyon",
+     "lineup": "start",
      "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · Lyon favori (69 %) · 2,1 buts attendus pour Lyon"
+     "why": "3 buts et 1 passe en 6 matchs · titulaire · Lyon favori (66 %) · 1,8 buts attendus pour Lyon"
     },
     "decisive": {
      "market": "dec",
      "label": "Ernest Nuamah buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Ernest Nuamah",
      "team": "Lyon",
@@ -3112,10 +3126,11 @@
       3,
       1
      ],
+     "lineup": "start",
      "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · Lyon favori (69 %) · 2,1 buts attendus pour Lyon"
+     "why": "3 buts et 1 passe en 6 matchs · titulaire · Lyon favori (66 %) · 1,8 buts attendus pour Lyon"
     }
    },
    "second": {
@@ -3144,10 +3159,10 @@
    "rank_a": 4,
    "pH": 39,
    "pD": 29,
-   "pA": 32,
+   "pA": 31,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.21,
-   "xgA": 1.06,
+   "xgH": 1.16,
+   "xgA": 1.01,
    "scores": [
     "1-1",
     "1-0",
@@ -3156,10 +3171,10 @@
    "scorep": [
     13,
     13,
-    11
+    12
    ],
-   "over25": 39,
-   "btts": 46,
+   "over25": 37,
+   "btts": 44,
    "squad_h": [
     {
      "name": "Lassine Sinayoko",
@@ -3175,11 +3190,12 @@
       "g": 6,
       "a": 4
      },
-     "p_goal": 39,
-     "p_dec": 55,
+     "p_goal": 37,
+     "p_dec": 54,
      "pid": "271137",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maxime López",
@@ -3195,11 +3211,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 24,
+     "p_goal": 14,
+     "p_dec": 23,
      "pid": "223122",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pablo Pagis",
@@ -3215,31 +3232,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 20,
-     "pid": "334359",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Luca Koleosho",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Paris FC",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 1,
-      "a": 1
-     },
      "p_goal": 11,
      "p_dec": 19,
-     "pid": "341333",
+     "pid": "334359",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ilan Kebbal",
@@ -3255,11 +3253,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 9,
+     "p_goal": 8,
      "p_dec": 18,
      "pid": "304918",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Samir Chergui",
@@ -3279,7 +3278,29 @@
      "p_dec": 8,
      "pid": "287572",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Pierre Lees-Melou",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Paris FC",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 6,
+     "pid": "221527",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -3297,11 +3318,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 29,
-     "p_dec": 31,
+     "p_goal": 28,
+     "p_dec": 30,
      "pid": "365789",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Edan Diop",
@@ -3317,11 +3339,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 22,
+     "p_goal": 14,
+     "p_dec": 21,
      "pid": "345645",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Matthis Abline",
@@ -3338,10 +3361,11 @@
       "a": 1
      },
      "p_goal": 10,
-     "p_dec": 19,
+     "p_dec": 18,
      "pid": "318389",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Eric Dier",
@@ -3358,10 +3382,11 @@
       "a": 1
      },
      "p_goal": 8,
-     "p_dec": 16,
+     "p_dec": 15,
      "pid": "155532",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Názinho",
@@ -3378,116 +3403,122 @@
       "a": 1
      },
      "p_goal": 8,
-     "p_dec": 16,
+     "p_dec": 15,
      "pid": "316559",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Stanis Idumbo",
+     "name": "Aleksandr Golovin",
      "pos": "Milieu",
      "side": "a",
      "team": "Monaco",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
+     "goals": 0,
+     "assists": 3,
+     "apps": 8,
      "l10": {
       "n": 8,
-      "gp": 5,
-      "g": 1,
-      "a": 0
+      "gp": 8,
+      "g": 0,
+      "a": 3
      },
-     "p_goal": 8,
-     "p_dec": 11,
-     "pid": "356925",
+     "p_goal": 2,
+     "p_dec": 25,
+     "pid": "195501",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Paris FC : 6e, 14 points, 13 buts marqués et 9 encaissés en 8 matchs.",
     "Monaco : 4e, 15 points, 11 buts marqués et 7 encaissés en 8 matchs.",
     "Paris FC : 13 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Monaco : 11 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat."
+    "Monaco : 11 buts marqués et 7 encaissés sur ses 8 derniers matchs de championnat.",
+    "Paris FC : attaque revue à la baisse (−4 %) d'après la compo officielle.",
+    "Monaco : attaque revue à la baisse (−5 %) d'après la compo officielle (Stanis Idumbo ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (29 %).",
    "stakes": "Paris FC (6e) est dans la course à l'Europe. Monaco (4e) défend une place qualificative pour la Ligue des champions. Adversaires directs au classement : 1 point d'écart.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Paris FC ou nul",
-     "p": 0.6797,
-     "prob": 68,
-     "fair": 1.47,
+     "p": 0.6859,
+     "prob": 69,
+     "fair": 1.46,
      "stars": 3,
      "why": "8 derniers matchs : Paris FC 13 marqués / 9 encaissés · Monaco 11 / 7"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Paris FC",
-     "p": 0.3945,
+     "p": 0.3931,
      "prob": 39,
-     "fair": 2.53,
+     "fair": 2.54,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1253,
+     "p": 0.1331,
      "prob": 13,
-     "fair": 7.98,
+     "fair": 7.52,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "scw",
-     "label": "Lassine Sinayoko marque et Paris FC gagne",
-     "p": 0.2461,
+     "market": "wh_nil",
+     "label": "Paris FC gagne sans encaisser de but",
+     "p": 0.2514,
      "prob": 25,
-     "fair": 4.06,
-     "stars": 1,
-     "player": "Lassine Sinayoko",
-     "team": "Paris FC",
-     "side": "h"
+     "fair": 3.98,
+     "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_nil",
-      "label": "Paris FC gagne sans encaisser de but",
-      "p": 0.2434,
+      "market": "scw",
+      "label": "Lassine Sinayoko marque et Paris FC gagne",
+      "p": 0.2368,
       "prob": 24,
-      "fair": 4.11,
-      "stars": 1
+      "fair": 4.22,
+      "stars": 1,
+      "player": "Lassine Sinayoko",
+      "team": "Paris FC",
+      "side": "h"
      },
      {
-      "market": "htft_h",
-      "label": "Paris FC mène à la mi-temps et gagne le match",
-      "p": 0.2284,
+      "market": "wh_by1",
+      "label": "Paris FC gagne d'un seul but",
+      "p": 0.2274,
       "prob": 23,
-      "fair": 4.38,
+      "fair": 4.4,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Lassine Sinayoko marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
+     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "6 buts et 4 passes en 8 matchs · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
+     "why": "6 buts et 4 passes en 8 matchs · titulaire · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
     },
     "decisive": {
      "market": "dec",
      "label": "Lassine Sinayoko buteur ou passeur",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
@@ -3496,10 +3527,11 @@
       6,
       4
      ],
+     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "6 buts et 4 passes en 8 matchs · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
+     "why": "6 buts et 4 passes en 8 matchs · titulaire · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
     }
    },
    "second": {
@@ -3526,24 +3558,24 @@
    "form_a": "NVNVV",
    "rank_h": 5,
    "rank_a": 2,
-   "pH": 30,
-   "pD": 30,
-   "pA": 40,
+   "pH": 29,
+   "pD": 32,
+   "pA": 38,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 0.93,
-   "xgA": 1.12,
+   "xgH": 0.83,
+   "xgA": 0.99,
    "scores": [
+    "0-0",
     "0-1",
-    "1-1",
-    "0-0"
+    "1-0"
    ],
    "scorep": [
-    14,
-    13,
+    16,
+    16,
     13
    ],
-   "over25": 34,
-   "btts": 41,
+   "over25": 28,
+   "btts": 36,
    "squad_h": [
     {
      "name": "Alexander Isak",
@@ -3559,31 +3591,12 @@
       "g": 6,
       "a": 0
      },
-     "p_goal": 36,
-     "p_dec": 38,
+     "p_goal": 33,
+     "p_dec": 34,
      "pid": "235662",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Víctor Muñoz",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Liverpool",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 17,
-     "pid": "397545",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Cody Gakpo",
@@ -3599,31 +3612,33 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 10,
-     "p_dec": 28,
+     "p_goal": 9,
+     "p_dec": 25,
      "pid": "249524",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Dominik Szoboszlai",
-     "pos": "Milieu",
+     "name": "Víctor Muñoz",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Liverpool",
-     "goals": 1,
+     "goals": 2,
      "assists": 0,
-     "apps": 6,
+     "apps": 7,
      "l10": {
       "n": 8,
-      "gp": 6,
-      "g": 1,
+      "gp": 7,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 10,
-     "pid": "257206",
+     "p_goal": 4,
+     "p_dec": 5,
+     "pid": "397545",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Bradley Barcola",
@@ -3640,10 +3655,11 @@
       "a": 2
      },
      "p_goal": 3,
-     "p_dec": 17,
+     "p_dec": 15,
      "pid": "328238",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Florian Wirtz",
@@ -3660,33 +3676,35 @@
       "a": 2
      },
      "p_goal": 2,
-     "p_dec": 17,
+     "p_dec": 16,
      "pid": "303748",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Alexis Mac Allister",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Liverpool",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 5,
+     "pid": "249299",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
-    {
-     "name": "Bukayo Saka",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Arsenal",
-     "goals": 3,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 22,
-     "p_dec": 24,
-     "pid": "280555",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
     {
      "name": "Kai Havertz",
      "pos": "Attaquant",
@@ -3701,11 +3719,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 19,
+     "p_goal": 15,
+     "p_dec": 17,
      "pid": "231182",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Martin Ødegaard",
@@ -3721,11 +3740,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 17,
+     "p_goal": 13,
+     "p_dec": 16,
      "pid": "203669",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Bruno Guimarães",
@@ -3741,11 +3761,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 14,
+     "p_goal": 12,
+     "p_dec": 13,
      "pid": "218522",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Noni Madueke",
@@ -3761,11 +3782,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 9,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "293236",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Riccardo Calafiori",
@@ -3781,106 +3803,116 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 7,
-     "p_dec": 19,
+     "p_goal": 6,
+     "p_dec": 17,
      "pid": "298329",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Ezri Konsa",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Arsenal",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "231859",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Liverpool : 5e, 15 points, 11 buts marqués et 8 encaissés en 8 matchs.",
     "Arsenal : 2e, 21 points, 13 buts marqués et 5 encaissés en 8 matchs.",
     "Liverpool : 11 buts marqués et 8 encaissés sur ses 8 derniers matchs de championnat.",
-    "Arsenal : 13 buts marqués et 5 encaissés sur ses 8 derniers matchs de championnat."
+    "Arsenal : 13 buts marqués et 5 encaissés sur ses 8 derniers matchs de championnat.",
+    "Liverpool : attaque revue à la baisse (−10 %) d'après la compo officielle (Dominik Szoboszlai, Víctor Muñoz ne commencent pas).",
+    "Arsenal : attaque revue à la baisse (−12 %) d'après la compo officielle (Bukayo Saka ne commence pas).",
+    "Compositions officielles prises en compte : Bukayo Saka (absent) ne commence pas le match."
    ],
-   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (32 %).",
    "stakes": "Liverpool (5e) est dans la course à l'Europe. Arsenal (2e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
-     "market": "N2",
-     "label": "Nul ou Arsenal",
-     "p": 0.701,
-     "prob": 70,
-     "fair": 1.43,
+     "market": "u25",
+     "label": "Moins de 2,5 buts",
+     "p": 0.7237,
+     "prob": 72,
+     "fair": 1.38,
      "stars": 4,
      "why": "8 derniers matchs : Liverpool 11 marqués / 8 encaissés · Arsenal 13 / 5"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Arsenal",
-     "p": 0.3993,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.3817,
+     "prob": 38,
+     "fair": 2.62,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1442,
-     "prob": 14,
-     "fair": 6.93,
+     "p": 0.1601,
+     "prob": 16,
+     "fair": 6.25,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Arsenal gagne sans encaisser de but",
-     "p": 0.2664,
+     "p": 0.2741,
      "prob": 27,
-     "fair": 3.75,
+     "fair": 3.65,
      "stars": 1
     },
-    "fun_alt": [
-     {
-      "market": "wa_by1",
-      "label": "Arsenal gagne d'un seul but",
-      "p": 0.2338,
-      "prob": 23,
-      "fair": 4.28,
-      "stars": 1
-     },
-     {
-      "market": "htft_a",
-      "label": "Arsenal mène à la mi-temps et gagne le match",
-      "p": 0.2289,
-      "prob": 23,
-      "fair": 4.37,
-      "stars": 1
-     }
-    ],
+    "fun_alt": [],
     "player": {
      "market": "scorer",
-     "label": "Bukayo Saka marque",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
+     "label": "Kai Havertz marque",
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.67,
      "stars": 1,
-     "player": "Bukayo Saka",
+     "player": "Kai Havertz",
      "team": "Arsenal",
-     "pid": "280555",
+     "lineup": "start",
+     "pid": "231182",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal annoncé gagnant (40 %) · 1,1 but attendu pour Arsenal"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Arsenal annoncé gagnant (38 %) · 1,0 but attendu pour Arsenal"
     },
     "decisive": {
      "market": "dec",
-     "label": "Bukayo Saka buteur ou passeur",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "label": "Kai Havertz buteur ou passeur",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Bukayo Saka",
+     "player": "Kai Havertz",
      "team": "Arsenal",
      "base": [
-      7,
-      3,
+      8,
+      2,
       0
      ],
-     "pid": "280555",
+     "lineup": "start",
+     "pid": "231182",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal annoncé gagnant (40 %) · 1,1 but attendu pour Arsenal"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Arsenal annoncé gagnant (38 %) · 1,0 but attendu pour Arsenal"
     }
    },
    "second": {
@@ -25150,7 +25182,7 @@
  },
  "second": {
   "foot": {
-   "ok": 10,
+   "ok": 9,
    "elo": {
     "fra.1": 673,
     "eng.1": 830,

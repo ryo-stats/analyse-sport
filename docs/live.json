@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T16:16+01:00",
+ "generated": "2026-11-01T16:41+01:00",
  "date": "2026-11-01",
  "matches": [
   {
@@ -538,7 +538,7 @@
    "time": "16:15",
    "home": "Racing",
    "away": "Real Madrid",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.24,
    "xgA": 2.85,
    "pH": 14,
@@ -630,67 +630,68 @@
    "home": "Lyon",
    "away": "Angers",
    "state": "pre",
-   "xgH": 2.11,
-   "xgA": 0.74,
-   "pH": 69,
-   "pD": 19,
+   "xgH": 1.81,
+   "xgA": 0.63,
+   "pH": 66,
+   "pD": 22,
    "pA": 12,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Lyon ou nul",
-     "p": 0.8819,
+     "p": 0.8778,
      "prob": 88,
-     "fair": 1.13,
+     "fair": 1.14,
      "stars": 5,
      "why": "8 derniers matchs : Lyon 13 marqués / 7 encaissés · Angers 9 / 15"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Lyon",
-     "p": 0.6921,
-     "prob": 69,
-     "fair": 1.44,
+     "p": 0.6596,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1292,
-     "prob": 13,
-     "fair": 7.74,
+     "label": "Score exact 1-0",
+     "p": 0.1582,
+     "prob": 16,
+     "fair": 6.32,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3189,
-     "prob": 32,
-     "fair": 3.14,
+     "market": "h2",
+     "label": "Lyon gagne avec 2 buts d'écart ou plus",
+     "p": 0.393,
+     "prob": 39,
+     "fair": 2.54,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Ernest Nuamah marque",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Ernest Nuamah",
      "team": "Lyon",
+     "lineup": "start",
      "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · Lyon favori (69 %) · 2,1 buts attendus pour Lyon"
+     "why": "3 buts et 1 passe en 6 matchs · titulaire · Lyon favori (66 %) · 1,8 buts attendus pour Lyon"
     },
     "decisive": {
      "market": "dec",
      "label": "Ernest Nuamah buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Ernest Nuamah",
      "team": "Lyon",
@@ -699,10 +700,11 @@
       3,
       1
      ],
+     "lineup": "start",
      "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 6 matchs · Lyon favori (69 %) · 2,1 buts attendus pour Lyon"
+     "why": "3 buts et 1 passe en 6 matchs · titulaire · Lyon favori (66 %) · 1,8 buts attendus pour Lyon"
     }
    }
   },
@@ -716,70 +718,68 @@
    "home": "Paris FC",
    "away": "Monaco",
    "state": "pre",
-   "xgH": 1.21,
-   "xgA": 1.06,
+   "xgH": 1.16,
+   "xgA": 1.01,
    "pH": 39,
    "pD": 29,
-   "pA": 32,
+   "pA": 31,
    "edate": "20261101",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Paris FC ou nul",
-     "p": 0.6797,
-     "prob": 68,
-     "fair": 1.47,
+     "p": 0.6859,
+     "prob": 69,
+     "fair": 1.46,
      "stars": 3,
      "why": "8 derniers matchs : Paris FC 13 marqués / 9 encaissés · Monaco 11 / 7"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Paris FC",
-     "p": 0.3945,
+     "p": 0.3931,
      "prob": 39,
-     "fair": 2.53,
+     "fair": 2.54,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1253,
+     "p": 0.1331,
      "prob": 13,
-     "fair": 7.98,
+     "fair": 7.52,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "scw",
-     "label": "Lassine Sinayoko marque et Paris FC gagne",
-     "p": 0.2461,
+     "market": "wh_nil",
+     "label": "Paris FC gagne sans encaisser de but",
+     "p": 0.2514,
      "prob": 25,
-     "fair": 4.06,
-     "stars": 1,
-     "player": "Lassine Sinayoko",
-     "team": "Paris FC",
-     "side": "h"
+     "fair": 3.98,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Lassine Sinayoko marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
+     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "6 buts et 4 passes en 8 matchs · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
+     "why": "6 buts et 4 passes en 8 matchs · titulaire · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
     },
     "decisive": {
      "market": "dec",
      "label": "Lassine Sinayoko buteur ou passeur",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
@@ -788,10 +788,11 @@
       6,
       4
      ],
+     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "6 buts et 4 passes en 8 matchs · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
+     "why": "6 buts et 4 passes en 8 matchs · titulaire · Paris FC annoncé gagnant (39 %) · 1,2 but attendu pour Paris FC"
     }
    }
   },
@@ -805,79 +806,81 @@
    "home": "Liverpool",
    "away": "Arsenal",
    "state": "pre",
-   "xgH": 0.93,
-   "xgA": 1.12,
-   "pH": 30,
-   "pD": 30,
-   "pA": 40,
+   "xgH": 0.83,
+   "xgA": 0.99,
+   "pH": 29,
+   "pD": 32,
+   "pA": 38,
    "edate": "20261101",
    "picks": {
     "main": {
-     "market": "N2",
-     "label": "Nul ou Arsenal",
-     "p": 0.701,
-     "prob": 70,
-     "fair": 1.43,
+     "market": "u25",
+     "label": "Moins de 2,5 buts",
+     "p": 0.7237,
+     "prob": 72,
+     "fair": 1.38,
      "stars": 4,
      "why": "8 derniers matchs : Liverpool 11 marqués / 8 encaissés · Arsenal 13 / 5"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Arsenal",
-     "p": 0.3993,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.3817,
+     "prob": 38,
+     "fair": 2.62,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1442,
-     "prob": 14,
-     "fair": 6.93,
+     "p": 0.1601,
+     "prob": 16,
+     "fair": 6.25,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Arsenal gagne sans encaisser de but",
-     "p": 0.2664,
+     "p": 0.2741,
      "prob": 27,
-     "fair": 3.75,
+     "fair": 3.65,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Bukayo Saka marque",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
+     "label": "Kai Havertz marque",
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.67,
      "stars": 1,
-     "player": "Bukayo Saka",
+     "player": "Kai Havertz",
      "team": "Arsenal",
-     "pid": "280555",
+     "lineup": "start",
+     "pid": "231182",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal annoncé gagnant (40 %) · 1,1 but attendu pour Arsenal"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Arsenal annoncé gagnant (38 %) · 1,0 but attendu pour Arsenal"
     },
     "decisive": {
      "market": "dec",
-     "label": "Bukayo Saka buteur ou passeur",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "label": "Kai Havertz buteur ou passeur",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Bukayo Saka",
+     "player": "Kai Havertz",
      "team": "Arsenal",
      "base": [
-      7,
-      3,
+      8,
+      2,
       0
      ],
-     "pid": "280555",
+     "lineup": "start",
+     "pid": "231182",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Arsenal annoncé gagnant (40 %) · 1,1 but attendu pour Arsenal"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Arsenal annoncé gagnant (38 %) · 1,0 but attendu pour Arsenal"
     }
    }
   },
@@ -1764,16 +1767,16 @@
     "match": "Lyon – Angers"
    },
    {
-    "label": "Nul ou Real Madrid",
-    "prob": 86,
-    "time": "16:15",
-    "match": "Racing – Real Madrid"
-   },
-   {
     "label": "Elche ou nul",
     "prob": 78,
     "time": "18:30",
     "match": "Elche – Valencia"
+   },
+   {
+    "label": "Victoire Carolina Hurricanes",
+    "prob": 77,
+    "time": "19:00",
+    "match": "Carolina Hurricanes – Winnipeg Jets"
    }
   ]
  }
