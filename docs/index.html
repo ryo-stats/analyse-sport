@@ -192,6 +192,7 @@ td.r,th.r{text-align:right}
 .ctitle{font-family:var(--display);font-size:1.25rem;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
 .chead .pp{font-size:1.35rem}
 .cleg{list-style:none;margin:0;padding:0}
+.funmore{margin:-6px 0 12px}.funmore>summary{cursor:pointer;font-size:.86rem;font-weight:600;color:var(--muted);padding:4px 0}
 .sporttag{font-weight:600;color:var(--ink)}
 .cleg li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
 .cleg li:first-child{border-top:0}
@@ -1139,21 +1140,44 @@ function funCard(m, s, picks){
     ${live ? `<div class="lstat"><i class="dot"></i>${esc(s.label || "En direct")} · ${esc(m.sport === "nhl" ? "NHL" : m.league)} ${reds}</div>` : ""}
     <div class="plines">${picks.map(x => funLine(x, m)).join("")}</div></div>`;
 }
+// Fun : un sport à la fois (Foot / NHL), puis par championnat comme dans Paris foot / Paris NHL
+let FSPORT = "";
+try { FSPORT = localStorage.getItem("fsport") || ""; } catch (e) {}
+const funSport = () => {
+  const up = k => (DATA[k] || []).filter(notStarted).length;
+  return ["foot", "nhl"].includes(FSPORT) ? FSPORT : (up("nhl") > up("foot") ? "nhl" : "foot");
+};
 function funList(){
   if (!LIVEM) return `<div class="empty">Chargement…</div>`;
-  const all = [...(DATA.foot || []), ...(DATA.nhl || [])];
+  const sport = funSport(), all = DATA[sport] || [];
   const red = s => s.red && s.red.h !== s.red.a ? 1 : 0;
   const live = all.map(m => { const L = LIVEDATA[m.id]; return L && L.ev && L.state === "in" ? {m, s: LIVEM.parseEspn(L.ev, m.sport)} : null; })
                   .filter(Boolean).map(x => ({...x, picks: LIVEM.funPicks(x.m, x.s, {fun: true, anchors: LIVEM.storyAnchors(x.m, x.s), dedupe: false})})).filter(x => x.picks.length)
                   .sort((a, b) => red(b.s) - red(a.s) || Date.parse(a.m.kickoff) - Date.parse(b.m.kickoff));   // cartons rouges d'abord
   const next = all.filter(m => { const L = LIVEDATA[m.id]; return L ? L.state === "pre" : notStarted(m); })
                   .map(m => ({m, s: PRE_STATE, picks: [(m.picks || {}).fun || LIVEM.momentPicks(m, PRE_STATE).fun, ...((m.picks || {}).fun_alt || [])].filter(Boolean)})).filter(x => x.picks.length)
-                  .sort((a, b) => b.picks[0].p - a.picks[0].p).slice(0, 12);
-  const blk = (title, list) => list.length ? `<section class="grp"><div class="band"><span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(x => funCard(x.m, x.s, x.picks)).join("")}</section>` : "";
-  return (live.length ? blk("En direct", live) : `<div class="empty">Aucun match en cours : les paris fun en direct apparaîtront au coup d'envoi.</div>`) + blk("Avant le match", next);
+                  .sort((a, b) => Date.parse(a.m.kickoff) - Date.parse(b.m.kickoff));
+  const blk = (title, list, lg) => list.length ? `<section class="grp"><div class="band">${lg ? `<img class="bl" src="${esc(lg)}" alt="" width="20" height="20" loading="lazy" onerror="this.remove()">` : ""}<span>${title}</span><span class="cnt">${plural(list.length, "match")}</span></div>${list.map(x => funCard(x.m, x.s, x.picks)).join("")}</section>` : "";
+  // avant le match : un bandeau par championnat (même ordre que Paris foot), matchs dans l'ordre des coups d'envoi
+  const rank = l => { const i = FOOT_ORDER.indexOf(l); return i < 0 ? 99 : i; };
+  const groups = sport === "nhl" ? blk("<b>États-Unis / Canada :</b> NHL", next, NHL_LOGO)
+    : [...new Set(next.map(x => x.m.league))].sort((a, b) => rank(a) - rank(b)).map(l => {
+        const f = next.find(x => x.m.league === l).m;
+        return blk(`${f.country ? `<b>${esc(f.country)} :</b> ` : ""}${esc(l)}`, next.filter(x => x.m.league === l), f.league_logo);
+      }).join("");
+  const label = sport === "nhl" ? "NHL" : "de foot";
+  // pas de case vide « aucun match en cours » quand des matchs sont à venir : la liste suffit
+  if (!live.length && !groups) return `<div class="empty">Plus de match ${label} à venir aujourd'hui : les paris fun en direct apparaîtront ici pendant les matchs.</div>`;
+  return blk("En direct", live) + groups;
+}
+function funNav(){
+  const sport = funSport(), n = k => (DATA[k] || []).filter(m => (m.picks || {}).fun || ((m.picks || {}).fun_alt || []).length).length;
+  return `<nav class="pviews two" aria-label="Sport">${[["foot", "⚽ Foot"], ["nhl", "🏒 NHL"]].map(([k, l]) =>
+    `<button type="button" data-fsport="${k}" aria-pressed="${k === sport}">${l}<span class="n num">${n(k)}</span></button>`).join("")}</nav>`;
 }
 function funView(){
-  return `<p class="warnline">🎲 <b>Paris fun</b> : de vrais paris à cote, <b>cote juste d'au moins 2,4</b> (18 à 42 % de chances) : victoire + les deux équipes marquent, victoire sans encaisser, mi-temps/fin de match, buteur + victoire, écart de buts, puck line NHL… Ces marchés ont une forte marge chez les bookmakers (15 à 20 %) : avec une cote juste de 2,4 ou plus, ta cote réelle reste en général au-dessus de 2. Ils vont toujours dans le sens de l'analyse. <b>La plupart vont perdre</b>, c'est normal : petites mises. En direct, ils suivent le score, la minute, les tirs et les cartons. « cote mini » : si ton bookmaker propose plus, le pari est mathématiquement intéressant.</p><div id="funbox">${funList()}</div>`;
+  return `${funNav()}<p class="warnline">🎲 <b>Paris fun</b> : de vrais paris à grosse cote (18 à 42 % de chances), toujours dans le sens de l'analyse. <b>La plupart vont perdre</b>, c'est normal : petites mises.</p>
+    <details class="funmore"><summary>En savoir plus</summary><p class="warnline">Cote juste d'au moins 2,4 : victoire + les deux équipes marquent, victoire sans encaisser, mi-temps/fin de match, buteur + victoire, écart de buts, puck line NHL… Ces marchés ont une forte marge chez les bookmakers (15 à 20 %) : avec une cote juste de 2,4 ou plus, ta cote réelle reste en général au-dessus de 2. En direct, ils suivent le score, la minute, les tirs et les cartons. « cote mini » : si ton bookmaker propose plus, le pari est mathématiquement intéressant.</p></details><div id="funbox">${funList()}</div>`;
 }
 function liveList(){
   if (!LIVEM) return `<div class="empty">Chargement…</div>`;
@@ -1989,6 +2013,9 @@ function render(){
   }));
   view.querySelectorAll("[data-bmonth]").forEach(b => b.addEventListener("click", () => { if (b.dataset.bmonth){ BMONTH = b.dataset.bmonth; BDAY = ""; render(); } }));
   view.querySelectorAll("[data-themeset]").forEach(b => b.addEventListener("click", () => setTheme(b.dataset.themeset)));
+  view.querySelectorAll("[data-fsport]").forEach(b => b.addEventListener("click", () => {
+    FSPORT = b.dataset.fsport; try { localStorage.setItem("fsport", FSPORT); } catch (e) {} render();
+  }));
   view.querySelectorAll("[data-csport]").forEach(b => b.addEventListener("click", () => {
     CSPORT = b.dataset.csport; try { localStorage.setItem("csport", CSPORT); } catch (e) {} render();
   }));

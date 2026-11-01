@@ -636,6 +636,40 @@ class AppTest(unittest.TestCase):
                 self.assertTrue(main.get("why"), m["id"])
                 self.assertNotIn("Elo", main["why"])
 
+    def test_goalie_in_nhl_model(self):
+        avg = dict(shots=1000, saves=900)
+        self.assertAlmostEqual(app.goalie_factor(avg), 1.0, places=6)              # gardien moyen : rien ne change
+        good, bad = dict(shots=1000, saves=925), dict(shots=1000, saves=880)
+        self.assertLess(app.goalie_factor(good), 1)
+        self.assertGreater(app.goalie_factor(bad), 1)
+        self.assertGreaterEqual(app.goalie_factor(dict(shots=50, saves=50)), 0.88)  # 50 tirs, 0 but : lissé, borné
+        self.assertEqual(app.goalie_factor(None), 1.0)
+        self.assertEqual(app.goalie_factor(dict(shots=0, saves=0)), 1.0)
+        # sur le match du jour : les buts attendus tiennent compte des deux gardiens probables
+        g = self.data["nhl"][0]
+        base = app.nhl_model("WSH", "SEA", 20262027, False, True)
+        exp = (base[0] * app.goalie_factor(g["goalie_a"]), base[1] * app.goalie_factor(g["goalie_h"]))
+        self.assertAlmostEqual(g["xgH"], round(exp[0], 2), places=2)
+        self.assertAlmostEqual(g["xgA"], round(exp[1], 2), places=2)
+
+    def test_foot_fatigue(self):
+        base = self.data["foot"][0]                               # Liverpool – Man City, 11/10 à 15 h 30 UTC
+        ko = app.parse_time("2026-10-11T15:30Z")
+        old = app.load_last_played
+        def tired_liverpool(today):
+            app.LAST_PLAYED.clear()
+            app.LAST_PLAYED["364"] = ko - app.dt.timedelta(days=3)          # Liverpool a joué mercredi
+            app.LAST_PLAYED["382"] = ko - app.dt.timedelta(days=7)          # City est reposé
+        app.load_last_played = tired_liverpool
+        try:
+            m = app.main(NOW)["foot"][0]
+        finally:
+            app.load_last_played = old
+        self.assertLess(m["xgH"], base["xgH"])
+        self.assertGreater(m["xgA"], base["xgA"])
+        self.assertTrue(any("Liverpool a joué il y a 3 jours" in c for c in m["ctx"]), m["ctx"])
+        self.assertEqual(app.rest_hours("999", ko), None)
+
     def test_second_opinion(self):
         # ClubElo et MoneyPuck trouvés, d'accord avec les cotes : le Safe reste
         self.assertEqual(self.data["second"]["foot"]["ok"], 1)

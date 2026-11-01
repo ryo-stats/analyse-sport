@@ -505,11 +505,41 @@ def nhl_split(win_home, total):
 
 # ---------------------------------------------------------------- ESPN
 
+EVENTS = {}          # tableaux des scores déjà lus pendant ce passage (sport, championnat, jour)
+
+
 def espn_events(sport, league, day):
-    data = get_json(ESPN_SCOREBOARD.format(sport=sport, league=league), {"dates": day.strftime("%Y%m%d")})
-    if data is None:
-        return None
-    return data.get("events", []) or []
+    key = (sport, league, day.isoformat())
+    if key not in EVENTS:
+        data = get_json(ESPN_SCOREBOARD.format(sport=sport, league=league), {"dates": day.strftime("%Y%m%d")})
+        EVENTS[key] = None if data is None else (data.get("events", []) or [])
+    return EVENTS[key]
+
+
+# Fatigue foot : une équipe qui a joué il y a 3 jours ou moins (souvent une coupe d'Europe en semaine) contre une
+# équipe reposée tourne son effectif et court moins : un peu moins de buts marqués, un peu plus d'encaissés.
+LAST_PLAYED = {}     # id ESPN de l'équipe -> coup d'envoi de son dernier match (toutes compétitions suivies)
+TIRED_HOURS = 84     # 3 jours et demi
+TIRED_FACTOR = 0.96  # −4 % de buts marqués, +4 % d'encaissés (ordre de grandeur prudent)
+
+
+def load_last_played(today):
+    LAST_PLAYED.clear()
+    for _, code in LEAGUES:
+        for back in range(1, DAYS_BACK + 1):
+            for e in espn_events("soccer", code, today - dt.timedelta(days=back)) or []:
+                try:
+                    k = parse_time(e["date"])
+                    for c in e["competitions"][0]["competitors"]:
+                        tid = str(c["team"]["id"])
+                        LAST_PLAYED[tid] = max(LAST_PLAYED.get(tid, k), k)
+                except (KeyError, IndexError, TypeError, ValueError):
+                    continue
+
+
+def rest_hours(team_id, kickoff):
+    last = LAST_PLAYED.get(str(team_id))
+    return (kickoff - last).total_seconds() / 3600 if last and last < kickoff else None
 
 
 def espn_odds(comp, three_way):
@@ -993,6 +1023,7 @@ FORM_FR = {"W": "V", "D": "N", "L": "D"}
 def foot(today, history):
     rows = []
     failures = 0
+    load_last_played(today)
     for league, code in LEAGUES:
         try:
             got = foot_league(today, history, league, code)
@@ -1129,7 +1160,7 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
     saved = history.get(key, {}).get("p")
     odds = espn_odds(comp, three_way=True)
     over = None
-    absents = []
+    absents, tired = [], []
     if state != "pre" and saved and len(saved) == 3:
         # après le coup d'envoi : on garde l'analyse d'avant-match
         p_h, p_d, p_a = saved
@@ -1162,6 +1193,15 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
                 else:
                     la *= 1 - cut
                 absents.append((home if side == "h" else away, who, cut))
+        # fatigue : seulement si l'une est fatiguée et pas l'autre
+        rh_, ra_ = rest_hours(hid, kickoff), rest_hours(aid, kickoff)
+        tired_h, tired_a = (rh_ is not None and rh_ <= TIRED_HOURS), (ra_ is not None and ra_ <= TIRED_HOURS)
+        if tired_h != tired_a:
+            if tired_h:
+                lh, la = lh * TIRED_FACTOR, la / TIRED_FACTOR
+            else:
+                lh, la = lh / TIRED_FACTOR, la * TIRED_FACTOR
+            tired.append((home, rh_) if tired_h else (away, ra_))
         p_h, p_d, p_a = outcome_probs(lh, la)
     elif odds and state == "pre":
         p_h, p_d, p_a = odds["p"]
@@ -1224,6 +1264,8 @@ def foot_match(e, league, table, league_gpg, leaders, history, squads=None, line
         if rec and rec.get("n10"):
             ctx.append(f"{name} : {plural(rec['gf10'], 'but')} marqué{'s' if rec['gf10'] > 1 else ''} et "
                        f"{rec['ga10']} encaissé{'s' if rec['ga10'] > 1 else ''} sur ses {rec['n10']} derniers matchs de championnat.")
+    for name, hours in tired:
+        ctx.append(f"{name} a joué il y a {plural(round(hours / 24), 'jour')} : fatigue probable, chances un peu réduites.")
     for name, who, cut in absents:
         ctx.append(f"{name} : attaque revue à la baisse (−{pct(cut)} %) d'après la compo officielle"
                    + (f" ({', '.join(who)} ne commence{'nt' if len(who) > 1 else ''} pas)." if who else "."))
@@ -1961,6 +2003,22 @@ def team_profile(abbr, season):
                 has_prev=bool(prev.get("skaters")), last=last)
 
 
+NHL_SV = 0.900          # pourcentage d'arrêts moyen de la ligue (ordre de grandeur des dernières saisons)
+NHL_SHOTS = 28          # tirs cadrés subis par match, si la NHL ne donne pas le total
+GOALIE_K = 600          # lissage : un gardien compte comme s'il avait déjà reçu 600 tirs « moyens »
+GOALIE_WEIGHT = 0.5     # prudence : la moitié de l'écart estimé seulement (les % d'arrêts fluctuent beaucoup)
+
+
+def goalie_factor(gk):
+    """Multiplicateur des buts encaissés selon le gardien probable : 1 = gardien moyen, < 1 = meilleur, > 1 = moins bon.
+    % d'arrêts ramené vers la moyenne (lissage), puis moitié de l'écart, borné à ±12 %."""
+    if not gk or not gk.get("shots"):
+        return 1.0
+    sv = (gk["saves"] + NHL_SV * GOALIE_K) / (gk["shots"] + GOALIE_K)
+    ratio = (1 - sv) / (1 - NHL_SV)
+    return min(1.12, max(0.88, 1 + GOALIE_WEIGHT * (ratio - 1)))
+
+
 def projected_goalie(profile, back_to_back):
     goalies = [g for g in profile["goalies"] if g.get("gamesStarted", 0) > 0] or profile["goalies"]
     if not goalies:
@@ -1981,8 +2039,10 @@ def projected_goalie(profile, back_to_back):
         pool = [g for g in goalies if g["playerId"] != starter] or goalies
     best = max(pool, key=lambda g: (g.get("gamesStarted", 0), g.get("savePercentage") or 0))
     sv = best.get("savePercentage")
+    shots = best.get("shotsAgainst") or (round(best.get("gamesPlayed", 0) * NHL_SHOTS) if sv else 0)
+    saves = best.get("saves") if best.get("saves") is not None else round(shots * (sv or 0))
     return dict(name=f"{best['firstName']['default']} {best['lastName']['default']}",
-                starts=best.get("gamesStarted", 0),
+                starts=best.get("gamesStarted", 0), shots=shots, saves=saves,
                 sv=(f"{sv * 100:.1f}".replace(".", ",") + " % d'arrêts") if sv else "pas encore joué",
                 note=note_relief or ("le titulaire d'hier devrait souffler" if back_to_back and starter else ""))
 
@@ -2071,12 +2131,18 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
     started = g.get("gameState", "FUT") not in ("FUT", "PRE")
     saved = history.get(f"nhl-{g['id']}", {})
     b2b_h, b2b_a = H in yesterday_teams, A in yesterday_teams
+    prof_h, prof_a = team_profile(H, season), team_profile(A, season)
+    gk_h, gk_a = projected_goalie(prof_h, b2b_h), projected_goalie(prof_a, b2b_a)
     model = None
     if not started:
         try:
             model = nhl_model(H, A, season, b2b_h, b2b_a)
         except Exception:
             model = None
+        if model:
+            # gardien probable : les xG ne disent rien de l'arrêt ; un gardien au-dessus de la moyenne fait encaisser
+            # moins que prévu, un remplaçant faible plus (le gardien adverse agit sur les buts de chaque équipe)
+            model = (model[0] * goalie_factor(gk_a), model[1] * goalie_factor(gk_h))
     lam = None
     if started and saved.get("p"):
         # match commencé : on garde l'analyse d'avant-match
@@ -2117,8 +2183,6 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
     else:
         p_h, p_d, p_a, lh, la = nhl_split(win_h, total)
     scores, scorep = top_scores(lh, la, n=10, exclude_draws=True)
-
-    prof_h, prof_a = team_profile(H, season), team_profile(A, season)
 
     def ref(st, prof):
         gf, gp = st.get("goalFor", 0), st.get("gamesPlayed", 0)
@@ -2172,6 +2236,12 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
             ctx.append(f"{name} a joué hier soir : deuxième match en deux soirs, fatigue probable.")
     if not b2b_h and not b2b_a:
         ctx.append("Aucune des deux équipes n'a joué hier.")
+    for name, gk in ((hname, gk_h), (aname, gk_a)):
+        f = goalie_factor(gk)
+        if gk and abs(f - 1) >= 0.03:
+            ctx.append(f"Gardien probable de {name} : {gk['name']} ({gk['sv']}), "
+                       + (f"au-dessus de la moyenne : l'adversaire devrait marquer environ {pct(1 - f)} % de buts en moins."
+                          if f < 1 else f"sous la moyenne : l'adversaire devrait marquer environ {pct(f - 1)} % de buts en plus."))
     ctx.append("Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus.")
 
     fav, pf = (hname, win_h) if win_h >= win_a else (aname, win_a)
@@ -2203,7 +2273,7 @@ def nhl_game(g, standings, espn, yesterday_teams, history):
         home=hname, away=aname, rec_h=record(sh), rec_a=record(sa),
         winH=pct(win_h), winA=pct(win_a), pH=pct(p_h), pD=pct(p_d), pA=pct(p_a), source=source,
         xgH=round(lh, 2), xgA=round(la, 2), total=round(total, 1), scores=scores, scorep=scorep,
-        goalie_h=projected_goalie(prof_h, b2b_h), goalie_a=projected_goalie(prof_a, b2b_a),
+        goalie_h=gk_h, goalie_a=gk_a,
         squad_h=team_rows["h"], squad_a=team_rows["a"],
         ctx=ctx, reading=reading, stakes=nhl_stakes(hname, aname, sh, sa),
         espn_id=espn_id, picks=picks, second=agree,
@@ -2299,6 +2369,7 @@ def main(now=None):
     history = load_json(HIST_FILE, {})
     SECOND.clear()
     FETCH_LOG.clear()
+    EVENTS.clear()
     SECOND_STATS.clear()
     SECOND_STATS.update(foot=[0, []], nhl=[0, []])
     prev = load_json(DATA_FILE, {})          # passage précédent : repli si une étape échoue
