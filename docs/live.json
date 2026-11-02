@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T20:24+01:00",
+ "generated": "2026-11-02T20:49+01:00",
  "date": "2026-11-02",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "18:30",
    "home": "Sassuolo",
    "away": "Fiorentina",
-   "state": "in",
+   "state": "post",
    "xgH": 2.04,
    "xgA": 1.64,
    "pH": 47,
@@ -47,24 +47,23 @@
     "player": {
      "market": "scorer",
      "label": "Vasilije Adzic marque",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "p": 0.29,
+     "prob": 29,
+     "fair": 3.45,
      "stars": 1,
      "player": "Vasilije Adzic",
      "team": "Sassuolo",
-     "lineup": "start",
      "pid": "344917",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 7 matchs · titulaire · Sassuolo favori (47 %) · 2,0 buts attendus pour Sassuolo"
+     "why": "3 buts et 1 passe en 7 matchs · 10 derniers matchs : 3 buts, 1 passe (joué 8 sur 10) · Sassuolo favori (47 %) · 2,0 buts attendus pour Sassuolo"
     },
     "decisive": {
      "market": "dec",
      "label": "Vasilije Adzic buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1,
      "player": "Vasilije Adzic",
      "team": "Sassuolo",
@@ -73,11 +72,10 @@
       3,
       1
      ],
-     "lineup": "start",
      "pid": "344917",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 7 matchs · titulaire · Sassuolo favori (47 %) · 2,0 buts attendus pour Sassuolo"
+     "why": "3 buts et 1 passe en 7 matchs · 10 derniers matchs : 3 buts, 1 passe (joué 8 sur 10) · Sassuolo favori (47 %) · 2,0 buts attendus pour Sassuolo"
     }
    }
   },
@@ -90,7 +88,7 @@
    "time": "20:45",
    "home": "Lorient",
    "away": "Brest",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.03,
    "xgA": 0.87,
    "pH": 39,
@@ -118,7 +116,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.154,
+     "p": 0.1539,
      "prob": 15,
      "fair": 6.5,
      "stars": 1,
@@ -127,7 +125,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Lorient gagne sans encaisser de but",
-     "p": 0.2699,
+     "p": 0.2697,
      "prob": 27,
      "fair": 3.71,
      "stars": 1
@@ -178,8 +176,8 @@
    "time": "20:45",
    "home": "Atalanta",
    "away": "Parma",
-   "state": "pre",
-   "xgH": 1.81,
+   "state": "in",
+   "xgH": 1.8,
    "xgA": 0.65,
    "pH": 65,
    "pD": 22,
@@ -215,7 +213,7 @@
     "fun": {
      "market": "htft_h",
      "label": "Atalanta mène à la mi-temps et gagne le match",
-     "p": 0.4177,
+     "p": 0.4176,
      "prob": 42,
      "fair": 2.39,
      "stars": 1
@@ -715,18 +713,12 @@
  "summary": {
   "date": "2026-11-02",
   "yesterday": {
-   "n": 127,
+   "n": 131,
    "ok": 74
   },
   "foot": 5,
   "nhl": 4,
   "top": [
-   {
-    "label": "Atalanta ou nul",
-    "prob": 87,
-    "time": "20:45",
-    "match": "Atalanta – Parma"
-   },
    {
     "label": "Nathan MacKinnon : au moins 1 point",
     "prob": 76,
@@ -738,6 +730,12 @@
     "prob": 75,
     "time": "21:00",
     "match": "Deportivo – Osasuna"
+   },
+   {
+    "label": "Macklin Celebrini : au moins 1 point",
+    "prob": 74,
+    "time": "03:00",
+    "match": "San Jose Sharks – Calgary Flames"
    }
   ]
  }
