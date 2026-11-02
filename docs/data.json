@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T00:49+01:00",
+ "generated": "2026-11-02T01:14+01:00",
  "date": "2026-11-02",
  "nhl_date": "2026-11-01",
  "foot": [
@@ -2705,7 +2705,7 @@
    "league": "NHL",
    "kickoff": "2026-11-01T21:00:00+00:00",
    "time": "22:00",
-   "state": "FINAL",
+   "state": "OFF",
    "score": "6-3",
    "home": "Philadelphia Flyers",
    "away": "Utah Mammoth",
@@ -2740,23 +2740,23 @@
    },
    "goalie_a": {
     "name": "Karel Vejmelka",
-    "starts": 10,
-    "shots": 261,
-    "saves": 230,
-    "sv": "88,1 % d'arrêts",
+    "starts": 11,
+    "shots": 281,
+    "saves": 245,
+    "sv": "87,2 % d'arrêts",
     "note": ""
    },
    "squad_h": [
     {
      "name": "Matvei Michkov",
      "pos": "Ailier",
-     "cur": "9 buts, 2 passes en 15",
+     "cur": "10 buts, 2 passes en 16",
      "new": false,
      "side": "h",
      "team": "Philadelphia Flyers",
-     "goals": 9,
+     "goals": 10,
      "assists": 2,
-     "gp": 15,
+     "gp": 16,
      "pid": 8484387,
      "l10": {
       "n": 10,
@@ -2766,18 +2766,18 @@
      },
      "p_goal": 25,
      "p_point": 44,
-     "p_assist": 25
+     "p_assist": 24
     },
     {
      "name": "Travis Konecny",
      "pos": "Ailier",
-     "cur": "0 but, 3 passes en 5",
+     "cur": "1 but, 4 passes en 6",
      "new": false,
      "side": "h",
      "team": "Philadelphia Flyers",
-     "goals": 0,
-     "assists": 3,
-     "gp": 5,
+     "goals": 1,
+     "assists": 4,
+     "gp": 6,
      "pid": 8478439,
      "l10": {
       "n": 10,
@@ -2785,20 +2785,20 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 23,
+     "p_goal": 24,
      "p_point": 51,
      "p_assist": 35
     },
     {
      "name": "Trevor Zegras",
      "pos": "Centre",
-     "cur": "4 buts, 9 passes en 15",
+     "cur": "4 buts, 9 passes en 16",
      "new": false,
      "side": "h",
      "team": "Philadelphia Flyers",
      "goals": 4,
      "assists": 9,
-     "gp": 15,
+     "gp": 16,
      "pid": 8481533,
      "l10": {
       "n": 10,
@@ -2807,19 +2807,19 @@
       "a": 7
      },
      "p_goal": 23,
-     "p_point": 51,
-     "p_assist": 36
+     "p_point": 50,
+     "p_assist": 35
     },
     {
      "name": "Owen Tippett",
      "pos": "Ailier",
-     "cur": "1 but, 1 passe en 9",
+     "cur": "1 but, 1 passe en 10",
      "new": false,
      "side": "h",
      "team": "Philadelphia Flyers",
      "goals": 1,
      "assists": 1,
-     "gp": 9,
+     "gp": 10,
      "pid": 8480015,
      "l10": {
       "n": 10,
@@ -2828,19 +2828,40 @@
       "a": 1
      },
      "p_goal": 22,
-     "p_point": 39,
+     "p_point": 38,
      "p_assist": 21
+    },
+    {
+     "name": "Cole Knuble",
+     "pos": "Ailier",
+     "cur": "3 buts, 0 passe en 6",
+     "new": true,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 3,
+     "assists": 0,
+     "gp": 6,
+     "pid": 8483787,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 20,
+     "p_point": 31,
+     "p_assist": 11
     },
     {
      "name": "Tyson Foerster",
      "pos": "Ailier",
-     "cur": "2 buts, 1 passe en 14",
+     "cur": "2 buts, 1 passe en 15",
      "new": false,
      "side": "h",
      "team": "Philadelphia Flyers",
      "goals": 2,
      "assists": 1,
-     "gp": 14,
+     "gp": 15,
      "pid": 8482159,
      "l10": {
       "n": 10,
@@ -2849,42 +2870,21 @@
       "a": 1
      },
      "p_goal": 20,
-     "p_point": 31,
-     "p_assist": 12
-    },
-    {
-     "name": "Cole Knuble",
-     "pos": "Ailier",
-     "cur": "2 buts, 0 passe en 5",
-     "new": true,
-     "side": "h",
-     "team": "Philadelphia Flyers",
-     "goals": 2,
-     "assists": 0,
-     "gp": 5,
-     "pid": 8483787,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 19,
      "p_point": 30,
-     "p_assist": 11
+     "p_assist": 12
     }
    ],
    "squad_a": [
     {
      "name": "Logan Cooley",
      "pos": "Centre",
-     "cur": "7 buts, 8 passes en 14",
+     "cur": "8 buts, 9 passes en 15",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
-     "goals": 7,
-     "assists": 8,
-     "gp": 14,
+     "goals": 8,
+     "assists": 9,
+     "gp": 15,
      "pid": 8483431,
      "l10": {
       "n": 10,
@@ -2894,18 +2894,18 @@
      },
      "p_goal": 35,
      "p_point": 56,
-     "p_assist": 31
+     "p_assist": 32
     },
     {
      "name": "Dylan Guenther",
      "pos": "Ailier",
-     "cur": "5 buts, 5 passes en 14",
+     "cur": "5 buts, 5 passes en 15",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 5,
      "assists": 5,
-     "gp": 14,
+     "gp": 15,
      "pid": 8482699,
      "l10": {
       "n": 10,
@@ -2915,18 +2915,18 @@
      },
      "p_goal": 33,
      "p_point": 54,
-     "p_assist": 31
+     "p_assist": 30
     },
     {
      "name": "Nick Schmaltz",
      "pos": "Centre",
-     "cur": "7 buts, 7 passes en 14",
+     "cur": "7 buts, 9 passes en 15",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 7,
-     "assists": 7,
-     "gp": 14,
+     "assists": 9,
+     "gp": 15,
      "pid": 8477951,
      "l10": {
       "n": 10,
@@ -2936,18 +2936,18 @@
      },
      "p_goal": 30,
      "p_point": 57,
-     "p_assist": 38
+     "p_assist": 39
     },
     {
      "name": "Clayton Keller",
      "pos": "Ailier",
-     "cur": "4 buts, 12 passes en 14",
+     "cur": "4 buts, 14 passes en 15",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 4,
-     "assists": 12,
-     "gp": 14,
+     "assists": 14,
+     "gp": 15,
      "pid": 8479343,
      "l10": {
       "n": 10,
@@ -2957,18 +2957,18 @@
      },
      "p_goal": 25,
      "p_point": 63,
-     "p_assist": 50
+     "p_assist": 51
     },
     {
      "name": "Lawson Crouse",
      "pos": "Ailier",
-     "cur": "1 but, 4 passes en 14",
+     "cur": "1 but, 4 passes en 15",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 1,
      "assists": 4,
-     "gp": 14,
+     "gp": 15,
      "pid": 8478474,
      "l10": {
       "n": 10,
@@ -2983,13 +2983,13 @@
     {
      "name": "Michael Carcone",
      "pos": "Ailier",
-     "cur": "1 but, 1 passe en 5",
+     "cur": "1 but, 1 passe en 6",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 1,
      "assists": 1,
-     "gp": 5,
+     "gp": 6,
      "pid": 8479619,
      "l10": {
       "n": 10,
@@ -3066,7 +3066,7 @@
      "player": "Clayton Keller",
      "pid": 8479343,
      "team": "Utah Mammoth",
-     "why": "4 buts et 12 passes en 14 matchs · 10 derniers matchs : 3 buts, 8 passes · Utah Mammoth favori (63 %) · 3,4 buts attendus pour Utah Mammoth"
+     "why": "4 buts et 14 passes en 15 matchs · 10 derniers matchs : 3 buts, 8 passes · Utah Mammoth favori (63 %) · 3,4 buts attendus pour Utah Mammoth"
     },
     "scorer": {
      "market": "goal",
@@ -3078,7 +3078,7 @@
      "player": "Logan Cooley",
      "pid": 8483431,
      "team": "Utah Mammoth",
-     "why": "7 buts et 8 passes en 14 matchs · 10 derniers matchs : 8 buts, 5 passes · Utah Mammoth favori (63 %) · 3,4 buts attendus pour Utah Mammoth"
+     "why": "8 buts et 9 passes en 15 matchs · 10 derniers matchs : 8 buts, 5 passes · Utah Mammoth favori (63 %) · 3,4 buts attendus pour Utah Mammoth"
     }
    },
    "second": {
