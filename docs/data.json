@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T19:34+01:00",
+ "generated": "2026-11-02T19:59+01:00",
  "date": "2026-11-02",
  "nhl_date": "2026-11-02",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-02T17:30:00+00:00",
    "time": "18:30",
    "state": "in",
-   "score": "1-1",
+   "score": "2-2",
    "home": "Sassuolo",
    "away": "Fiorentina",
    "form_h": "NDDND",
@@ -415,45 +415,25 @@
    "form_a": "NNVDD",
    "rank_h": 10,
    "rank_a": 14,
-   "pH": 45,
-   "pD": 29,
-   "pA": 26,
+   "pH": 39,
+   "pD": 32,
+   "pA": 30,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.25,
+   "xgH": 1.03,
    "xgA": 0.87,
    "scores": [
     "1-0",
-    "1-1",
-    "0-0"
+    "0-0",
+    "1-1"
    ],
    "scorep": [
     15,
-    13,
-    12
+    15,
+    13
    ],
-   "over25": 36,
-   "btts": 41,
+   "over25": 30,
+   "btts": 37,
    "squad_h": [
-    {
-     "name": "Mamadou Koné",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Lorient",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 18,
-     "pid": "416429",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
     {
      "name": "Jean-Victor Makengo",
      "pos": "Milieu",
@@ -468,11 +448,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 14,
-     "p_dec": 28,
+     "p_goal": 12,
+     "p_dec": 24,
      "pid": "225557",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Noah Cadiou",
@@ -488,11 +469,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 20,
+     "p_goal": 12,
+     "p_dec": 17,
      "pid": "315215",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ibrahima Baldé",
@@ -508,11 +490,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 17,
+     "p_goal": 12,
+     "p_dec": 14,
      "pid": "324565",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Gabin Bernardeau",
@@ -528,11 +511,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 17,
+     "p_goal": 3,
+     "p_dec": 4,
      "pid": "397392",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Isak Jensen",
@@ -548,11 +532,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 14,
+     "p_goal": 3,
+     "p_dec": 4,
      "pid": "309651",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Noah Mbamba",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Lorient",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 8,
+      "gp": 3,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 3,
+     "pid": "315454",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -574,7 +580,8 @@
      "p_dec": 25,
      "pid": "330412",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ludovic Ajorque",
@@ -594,7 +601,8 @@
      "p_dec": 23,
      "pid": "192015",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pathé Mboup",
@@ -614,7 +622,8 @@
      "p_dec": 19,
      "pid": "365783",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mama Baldé",
@@ -634,7 +643,8 @@
      "p_dec": 16,
      "pid": "259960",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lucas Tousart",
@@ -654,7 +664,8 @@
      "p_dec": 7,
      "pid": "215574",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kenny Lala",
@@ -674,102 +685,90 @@
      "p_dec": 6,
      "pid": "164187",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Lorient : 10e, 12 points, 7 buts marqués et 6 encaissés en 8 matchs.",
     "Brest : 14e, 9 points, 14 buts marqués et 12 encaissés en 8 matchs.",
     "Lorient : 7 buts marqués et 6 encaissés sur ses 8 derniers matchs de championnat.",
-    "Brest : 14 buts marqués et 12 encaissés sur ses 8 derniers matchs de championnat."
+    "Brest : 14 buts marqués et 12 encaissés sur ses 8 derniers matchs de championnat.",
+    "Lorient : attaque revue à la baisse (−17 %) d'après la compo officielle (Gabin Bernardeau, Isak Jensen, Mamadou Koné ne commencent pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Lorient est favori sans écraser le match (45 %). Le nul est une issue sérieuse (29 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (32 %).",
    "stakes": "Brest (14e) lutte pour le maintien, 1 point d'avance sur la zone rouge. Adversaires directs au classement : 3 points d'écart.",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "Lorient ou nul",
-     "p": 0.7413,
-     "prob": 74,
-     "fair": 1.35,
+     "market": "u25",
+     "label": "Moins de 2,5 buts",
+     "p": 0.7024,
+     "prob": 70,
+     "fair": 1.42,
      "stars": 4,
      "why": "8 derniers matchs : Lorient 7 marqués / 6 encaissés · Brest 14 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Lorient",
-     "p": 0.4505,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.3855,
+     "prob": 39,
+     "fair": 2.59,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.15,
+     "p": 0.154,
      "prob": 15,
-     "fair": 6.67,
+     "fair": 6.5,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Lorient gagne sans encaisser de but",
-     "p": 0.2985,
-     "prob": 30,
-     "fair": 3.35,
+     "p": 0.2699,
+     "prob": 27,
+     "fair": 3.71,
      "stars": 1
     },
-    "fun_alt": [
-     {
-      "market": "htft_h",
-      "label": "Lorient mène à la mi-temps et gagne le match",
-      "p": 0.2638,
-      "prob": 26,
-      "fair": 3.79,
-      "stars": 1
-     },
-     {
-      "market": "wh_by1",
-      "label": "Lorient gagne d'un seul but",
-      "p": 0.2477,
-      "prob": 25,
-      "fair": 4.04,
-      "stars": 1
-     }
-    ],
+    "fun_alt": [],
     "player": {
      "market": "scorer",
-     "label": "Mamadou Koné marque",
-     "p": 0.15,
-     "prob": 15,
-     "fair": 6.67,
+     "label": "Jean-Victor Makengo marque",
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
      "stars": 1,
-     "player": "Mamadou Koné",
+     "player": "Jean-Victor Makengo",
      "team": "Lorient",
-     "pid": "416429",
+     "lineup": "start",
+     "pid": "225557",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 8 matchs · Lorient favori (45 %) · 1,2 but attendu pour Lorient"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Lorient annoncé gagnant (39 %) · 1,0 but attendu pour Lorient"
     },
     "decisive": {
      "market": "dec",
-     "label": "Mamadou Koné buteur ou passeur",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
+     "label": "Jean-Victor Makengo buteur ou passeur",
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
-     "player": "Mamadou Koné",
+     "player": "Jean-Victor Makengo",
      "team": "Lorient",
      "base": [
       8,
       1,
-      0
+      1
      ],
-     "pid": "416429",
+     "lineup": "start",
+     "pid": "225557",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 8 matchs · Lorient favori (45 %) · 1,2 but attendu pour Lorient"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Lorient annoncé gagnant (39 %) · 1,0 but attendu pour Lorient"
     }
    },
    "second": {
@@ -797,23 +796,23 @@
    "rank_h": 13,
    "rank_a": 18,
    "pH": 65,
-   "pD": 20,
-   "pA": 14,
+   "pD": 22,
+   "pA": 13,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.02,
-   "xgA": 0.82,
+   "xgH": 1.81,
+   "xgA": 0.65,
    "scores": [
-    "2-0",
     "1-0",
-    "2-1"
+    "2-0",
+    "1-1"
    ],
    "scorep": [
-    12,
-    12,
+    16,
+    14,
     10
    ],
-   "over25": 54,
-   "btts": 49,
+   "over25": 44,
+   "btts": 40,
    "squad_h": [
     {
      "name": "Nikola Krstovic",
@@ -829,11 +828,12 @@
       "g": 6,
       "a": 2
      },
-     "p_goal": 49,
-     "p_dec": 59,
+     "p_goal": 45,
+     "p_dec": 55,
      "pid": "258158",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Éderson",
@@ -849,11 +849,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 26,
+     "p_goal": 19,
+     "p_dec": 23,
      "pid": "278210",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Charles De Ketelaere",
@@ -869,31 +870,12 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 16,
-     "p_dec": 41,
+     "p_goal": 14,
+     "p_dec": 37,
      "pid": "296319",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Gianluca Scamacca",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Atalanta",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "233140",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nicola Zalewski",
@@ -909,54 +891,57 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 11,
-     "p_dec": 35,
+     "p_goal": 10,
+     "p_dec": 32,
      "pid": "288488",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Gianluca Gaetano",
+     "name": "Jon Rowe",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Atalanta",
+     "goals": 0,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 9,
+      "gp": 6,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "118279",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Eljif Elmas",
      "pos": "Milieu",
      "side": "h",
      "team": "Atalanta",
      "goals": 1,
      "assists": 1,
-     "apps": 8,
+     "apps": 7,
      "l10": {
       "n": 9,
-      "gp": 8,
+      "gp": 7,
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 23,
-     "pid": "276692",
+     "p_goal": 3,
+     "p_dec": 6,
+     "pid": "237435",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
-    {
-     "name": "José Romero",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Parma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 20,
-     "p_dec": 22,
-     "pid": "301980",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
     {
      "name": "Simone Lontani",
      "pos": "Attaquant",
@@ -971,31 +956,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 22,
+     "p_goal": 16,
+     "p_dec": 18,
      "pid": "413818",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Pontus Almqvist",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Parma",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 9,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 10,
-     "p_dec": 18,
-     "pid": "253569",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "El Bilal Toure",
@@ -1011,11 +977,33 @@
       "g": 0,
       "a": 1
      },
-     "p_goal": 7,
-     "p_dec": 18,
+     "p_goal": 5,
+     "p_dec": 15,
      "pid": "287430",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "José Romero",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Parma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 9,
+      "gp": 8,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 6,
+     "pid": "301980",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Mandela Keita",
@@ -1031,38 +1019,64 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 3,
-     "p_dec": 9,
+     "p_goal": 2,
+     "p_dec": 7,
      "pid": "316609",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Nesta Elphege",
+     "name": "Pontus Almqvist",
      "pos": "Attaquant",
+     "side": "a",
+     "team": "Parma",
+     "goals": 1,
+     "assists": 1,
+     "apps": 6,
+     "l10": {
+      "n": 9,
+      "gp": 6,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 4,
+     "pid": "253569",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Giovanni Fabbian",
+     "pos": "Milieu",
      "side": "a",
      "team": "Parma",
      "goals": 0,
      "assists": 1,
-     "apps": 5,
+     "apps": 7,
      "l10": {
       "n": 9,
-      "gp": 5,
+      "gp": 7,
       "g": 0,
       "a": 1
      },
-     "p_goal": 2,
-     "p_dec": 11,
-     "pid": "361749",
+     "p_goal": 1,
+     "p_dec": 9,
+     "pid": "323118",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Atalanta : 13e, 11 points, 16 buts marqués et 17 encaissés en 9 matchs.",
     "Parma : 18e, 5 points, 5 buts marqués et 15 encaissés en 9 matchs.",
     "Atalanta : 16 buts marqués et 17 encaissés sur ses 9 derniers matchs de championnat.",
-    "Parma : 5 buts marqués et 15 encaissés sur ses 9 derniers matchs de championnat."
+    "Parma : 5 buts marqués et 15 encaissés sur ses 9 derniers matchs de championnat.",
+    "Atalanta : attaque revue à la baisse (−11 %) d'après la compo officielle.",
+    "Parma : attaque revue à la baisse (−21 %) d'après la compo officielle (Pontus Almqvist, José Romero ne commencent pas).",
+    "Compositions officielles prises en compte : José Romero (remplaçant) ne commence pas le match."
    ],
    "reading": "Atalanta est nettement favori (65 %).",
    "stakes": "Parma (18e) est en zone de relégation : match vital.",
@@ -1070,52 +1084,52 @@
     "main": {
      "market": "1N",
      "label": "Atalanta ou nul",
-     "p": 0.857,
-     "prob": 86,
-     "fair": 1.17,
+     "p": 0.8724,
+     "prob": 87,
+     "fair": 1.15,
      "stars": 5,
      "why": "9 derniers matchs : Atalanta 16 marqués / 17 encaissés · Parma 5 / 15"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Atalanta",
-     "p": 0.6535,
+     "p": 0.6522,
      "prob": 65,
      "fair": 1.53,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1192,
-     "prob": 12,
-     "fair": 8.39,
+     "label": "Score exact 1-0",
+     "p": 0.1553,
+     "prob": 16,
+     "fair": 6.44,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Atalanta gagne et plus de 2,5 buts",
-     "p": 0.4163,
+     "market": "htft_h",
+     "label": "Atalanta mène à la mi-temps et gagne le match",
+     "p": 0.4177,
      "prob": 42,
-     "fair": 2.4,
+     "fair": 2.39,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "h2",
       "label": "Atalanta gagne avec 2 buts d'écart ou plus",
-      "p": 0.4067,
-      "prob": 41,
-      "fair": 2.46,
+      "p": 0.3865,
+      "prob": 39,
+      "fair": 2.59,
       "stars": 1
      },
      {
       "market": "scw",
       "label": "Nikola Krstovic marque et Atalanta gagne",
-      "p": 0.4029,
-      "prob": 40,
-      "fair": 2.48,
+      "p": 0.3793,
+      "prob": 38,
+      "fair": 2.64,
       "stars": 1,
       "player": "Nikola Krstovic",
       "team": "Atalanta",
@@ -1125,23 +1139,24 @@
     "player": {
      "market": "scorer",
      "label": "Nikola Krstovic marque",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
      "stars": 1,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 9 matchs · Atalanta favori (65 %) · 2,0 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 9 matchs · titulaire · Atalanta favori (65 %) · 1,8 buts attendus pour Atalanta"
     },
     "decisive": {
      "market": "dec",
      "label": "Nikola Krstovic buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
@@ -1150,10 +1165,11 @@
       6,
       2
      ],
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 9 matchs · Atalanta favori (65 %) · 2,0 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 9 matchs · titulaire · Atalanta favori (65 %) · 1,8 buts attendus pour Atalanta"
     }
    },
    "second": {

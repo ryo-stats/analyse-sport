@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T19:34+01:00",
+ "generated": "2026-11-02T19:59+01:00",
  "date": "2026-11-02",
  "matches": [
   {
@@ -91,79 +91,81 @@
    "home": "Lorient",
    "away": "Brest",
    "state": "pre",
-   "xgH": 1.25,
+   "xgH": 1.03,
    "xgA": 0.87,
-   "pH": 45,
-   "pD": 29,
-   "pA": 26,
+   "pH": 39,
+   "pD": 32,
+   "pA": 30,
    "edate": "20261102",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "Lorient ou nul",
-     "p": 0.7413,
-     "prob": 74,
-     "fair": 1.35,
+     "market": "u25",
+     "label": "Moins de 2,5 buts",
+     "p": 0.7024,
+     "prob": 70,
+     "fair": 1.42,
      "stars": 4,
      "why": "8 derniers matchs : Lorient 7 marqués / 6 encaissés · Brest 14 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Lorient",
-     "p": 0.4505,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.3855,
+     "prob": 39,
+     "fair": 2.59,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.15,
+     "p": 0.154,
      "prob": 15,
-     "fair": 6.67,
+     "fair": 6.5,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Lorient gagne sans encaisser de but",
-     "p": 0.2985,
-     "prob": 30,
-     "fair": 3.35,
+     "p": 0.2699,
+     "prob": 27,
+     "fair": 3.71,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Mamadou Koné marque",
-     "p": 0.15,
-     "prob": 15,
-     "fair": 6.67,
+     "label": "Jean-Victor Makengo marque",
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
      "stars": 1,
-     "player": "Mamadou Koné",
+     "player": "Jean-Victor Makengo",
      "team": "Lorient",
-     "pid": "416429",
+     "lineup": "start",
+     "pid": "225557",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 8 matchs · Lorient favori (45 %) · 1,2 but attendu pour Lorient"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Lorient annoncé gagnant (39 %) · 1,0 but attendu pour Lorient"
     },
     "decisive": {
      "market": "dec",
-     "label": "Mamadou Koné buteur ou passeur",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
+     "label": "Jean-Victor Makengo buteur ou passeur",
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
-     "player": "Mamadou Koné",
+     "player": "Jean-Victor Makengo",
      "team": "Lorient",
      "base": [
       8,
       1,
-      0
+      1
      ],
-     "pid": "416429",
+     "lineup": "start",
+     "pid": "225557",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 8 matchs · Lorient favori (45 %) · 1,2 but attendu pour Lorient"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Lorient annoncé gagnant (39 %) · 1,0 but attendu pour Lorient"
     }
    }
   },
@@ -177,67 +179,68 @@
    "home": "Atalanta",
    "away": "Parma",
    "state": "pre",
-   "xgH": 2.02,
-   "xgA": 0.82,
+   "xgH": 1.81,
+   "xgA": 0.65,
    "pH": 65,
-   "pD": 20,
-   "pA": 14,
+   "pD": 22,
+   "pA": 13,
    "edate": "20261102",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Atalanta ou nul",
-     "p": 0.857,
-     "prob": 86,
-     "fair": 1.17,
+     "p": 0.8724,
+     "prob": 87,
+     "fair": 1.15,
      "stars": 5,
      "why": "9 derniers matchs : Atalanta 16 marqués / 17 encaissés · Parma 5 / 15"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Atalanta",
-     "p": 0.6535,
+     "p": 0.6522,
      "prob": 65,
      "fair": 1.53,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1192,
-     "prob": 12,
-     "fair": 8.39,
+     "label": "Score exact 1-0",
+     "p": 0.1553,
+     "prob": 16,
+     "fair": 6.44,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Atalanta gagne et plus de 2,5 buts",
-     "p": 0.4163,
+     "market": "htft_h",
+     "label": "Atalanta mène à la mi-temps et gagne le match",
+     "p": 0.4177,
      "prob": 42,
-     "fair": 2.4,
+     "fair": 2.39,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Nikola Krstovic marque",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
      "stars": 1,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 9 matchs · Atalanta favori (65 %) · 2,0 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 9 matchs · titulaire · Atalanta favori (65 %) · 1,8 buts attendus pour Atalanta"
     },
     "decisive": {
      "market": "dec",
      "label": "Nikola Krstovic buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
@@ -246,10 +249,11 @@
       6,
       2
      ],
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 9 matchs · Atalanta favori (65 %) · 2,0 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 9 matchs · titulaire · Atalanta favori (65 %) · 1,8 buts attendus pour Atalanta"
     }
    }
   },
@@ -718,7 +722,7 @@
   "top": [
    {
     "label": "Atalanta ou nul",
-    "prob": 86,
+    "prob": 87,
     "time": "20:45",
     "match": "Atalanta – Parma"
    },
