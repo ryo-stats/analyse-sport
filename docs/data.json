@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T07:26+01:00",
+ "generated": "2026-11-02T12:27+01:00",
  "date": "2026-11-02",
  "nhl_date": "2026-11-02",
  "foot": [
@@ -3567,21 +3567,21 @@
    ]
   },
   "picks": {
-   "n": 966,
-   "rate": 57,
+   "n": 973,
+   "rate": 56,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 966,
-     "ok": 546,
-     "rate": 57,
+     "n": 973,
+     "ok": 547,
+     "rate": 56,
      "expected": 52
     },
     "foot": {
-     "n": 616,
-     "ok": 343,
-     "rate": 56,
+     "n": 623,
+     "ok": 344,
+     "rate": 55,
      "expected": 52
     },
     "nhl": {
@@ -3652,16 +3652,16 @@
     {
      "date": "2026-11-01",
      "all": {
-      "n": 77,
-      "ok": 60,
-      "rate": 78,
-      "expected": 55
+      "n": 84,
+      "ok": 61,
+      "rate": 73,
+      "expected": 53
      },
      "foot": {
-      "n": 57,
-      "ok": 45,
-      "rate": 79,
-      "expected": 54
+      "n": 64,
+      "ok": 46,
+      "rate": 72,
+      "expected": 52
      },
      "nhl": {
       "n": 20,
@@ -4267,17 +4267,17 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 127,
-     "ok": 75,
-     "rate": 59,
+     "n": 131,
+     "ok": 76,
+     "rate": 58,
      "expected": 50
     },
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 94,
+     "n": 96,
      "ok": 52,
-     "rate": 55,
+     "rate": 54,
      "expected": 53
     },
     {
@@ -4299,9 +4299,9 @@
     {
      "sport": "foot",
      "league": "Bundesliga",
-     "n": 77,
+     "n": 78,
      "ok": 42,
-     "rate": 55,
+     "rate": 54,
      "expected": 52
     },
     {
@@ -4332,14 +4332,14 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 414,
+     "n": 419,
      "announced": 35,
-     "actual": 36
+     "actual": 35
     },
     {
      "stars": 2,
-     "n": 172,
-     "announced": 55,
+     "n": 174,
+     "announced": 54,
      "actual": 56
     },
     {
@@ -4540,6 +4540,19 @@
      "match": "Union Berlin – Cologne",
      "label": "Said El Mala marque",
      "prob": 21,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884750",
+     "score": "1-1",
+     "match": "Union Berlin – Cologne",
+     "label": "Said El Mala buteur ou passeur",
+     "prob": 24,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -5266,6 +5279,19 @@
      "mid": "foot-401874983",
      "score": "2-1",
      "match": "Lazio – Cagliari",
+     "label": "Tijjani Noslin buteur ou passeur",
+     "prob": 44,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874983",
+     "score": "2-1",
+     "match": "Lazio – Cagliari",
      "label": "Plus de 3,5 buts",
      "prob": 30,
      "stars": 1,
@@ -5344,6 +5370,19 @@
      "mid": "foot-401874949",
      "score": "2-0",
      "match": "Juventus – Napoli",
+     "label": "Randal Kolo Muani buteur ou passeur",
+     "prob": 21,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874949",
+     "score": "2-0",
+     "match": "Juventus – Napoli",
      "label": "Juventus gagne sans encaisser de but",
      "prob": 24,
      "stars": 1,
@@ -5385,6 +5424,19 @@
      "match": "Getafe – Sevilla",
      "label": "Isaac Romero marque",
      "prob": 17,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882821",
+     "score": "3-1",
+     "match": "Getafe – Sevilla",
+     "label": "Isaac Romero buteur ou passeur",
+     "prob": 22,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -5450,6 +5502,19 @@
      "match": "Frosinone – Torino",
      "label": "Antonio Raimondo marque",
      "prob": 52,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874782",
+     "score": "2-0",
+     "match": "Frosinone – Torino",
+     "label": "Antonio Raimondo buteur ou passeur",
+     "prob": 54,
      "stars": 2,
      "ok": false,
      "fun": false
@@ -5604,6 +5669,19 @@
      "mid": "foot-401882823",
      "score": "0-1",
      "match": "Elche – Valencia",
+     "label": "Fer Niño buteur ou passeur",
+     "prob": 44,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882823",
+     "score": "0-1",
+     "match": "Elche – Valencia",
      "label": "Score exact 1-0",
      "prob": 14,
      "stars": 1,
@@ -5711,6 +5789,19 @@
      "label": "Anastasios Douvikas marque",
      "prob": 47,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-01",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875002",
+     "score": "1-0",
+     "match": "Como – Venezia",
+     "label": "Anastasios Douvikas buteur ou passeur",
+     "prob": 50,
+     "stars": 2,
      "ok": false,
      "fun": false
     },
@@ -21864,20 +21955,7 @@
     "esp.1": 842,
     "ita.1": 850
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 80
-    },
-    "eng.1": {
-     "2026": 89
-    },
-    "esp.1": {
-     "2026": 108
-    },
-    "ita.1": {
-     "2026": 98
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
