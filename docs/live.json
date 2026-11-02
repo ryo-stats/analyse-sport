@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T19:59+01:00",
+ "generated": "2026-11-02T20:24+01:00",
  "date": "2026-11-02",
  "matches": [
   {
@@ -267,67 +267,68 @@
    "home": "Newcastle",
    "away": "Everton",
    "state": "pre",
-   "xgH": 1.48,
-   "xgA": 1.13,
-   "pH": 45,
-   "pD": 26,
-   "pA": 29,
+   "xgH": 1.31,
+   "xgA": 1.08,
+   "pH": 42,
+   "pD": 28,
+   "pA": 31,
    "edate": "20261102",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Newcastle ou nul",
-     "p": 0.7111,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
+     "p": 0.693,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3,
      "why": "8 derniers matchs : Newcastle 12 marqués / 14 encaissés · Everton 8 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Newcastle",
-     "p": 0.4527,
-     "prob": 45,
-     "fair": 2.21,
+     "p": 0.4179,
+     "prob": 42,
+     "fair": 2.39,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1087,
-     "prob": 11,
-     "fair": 9.2,
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Newcastle mène à la mi-temps et gagne le match",
-     "p": 0.272,
-     "prob": 27,
-     "fair": 3.68,
+     "market": "wh_nil",
+     "label": "Newcastle gagne sans encaisser de but",
+     "p": 0.2478,
+     "prob": 25,
+     "fair": 4.04,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Harvey Barnes marque",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
      "player": "Harvey Barnes",
      "team": "Newcastle",
+     "lineup": "start",
      "pid": "243386",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Newcastle favori (45 %) · 1,5 but attendu pour Newcastle"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Newcastle annoncé gagnant (42 %) · 1,3 but attendu pour Newcastle"
     },
     "decisive": {
      "market": "dec",
      "label": "Harvey Barnes buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
      "player": "Harvey Barnes",
      "team": "Newcastle",
@@ -336,10 +337,11 @@
       2,
       2
      ],
+     "lineup": "start",
      "pid": "243386",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Newcastle favori (45 %) · 1,5 but attendu pour Newcastle"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Newcastle annoncé gagnant (42 %) · 1,3 but attendu pour Newcastle"
     }
    }
   },
@@ -353,82 +355,81 @@
    "home": "Deportivo",
    "away": "Osasuna",
    "state": "pre",
-   "xgH": 1.73,
-   "xgA": 1.05,
-   "pH": 53,
-   "pD": 24,
-   "pA": 23,
+   "xgH": 1.4,
+   "xgA": 0.94,
+   "pH": 48,
+   "pD": 27,
+   "pA": 25,
    "edate": "20261102",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Deportivo ou nul",
-     "p": 0.7714,
-     "prob": 77,
-     "fair": 1.3,
+     "p": 0.7483,
+     "prob": 75,
+     "fair": 1.34,
      "stars": 4,
      "why": "10 derniers matchs : Deportivo 13 marqués / 13 encaissés · Osasuna 10 / 20"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Deportivo",
-     "p": 0.534,
-     "prob": 53,
-     "fair": 1.87,
-     "stars": 2
+     "p": 0.4769,
+     "prob": 48,
+     "fair": 2.1,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1075,
-     "prob": 11,
-     "fair": 9.3,
+     "p": 0.1352,
+     "prob": 14,
+     "fair": 7.4,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "scw",
-     "label": "Pierre-Emerick Aubameyang marque et Deportivo gagne",
-     "p": 0.3408,
-     "prob": 34,
-     "fair": 2.93,
-     "stars": 1,
-     "player": "Pierre-Emerick Aubameyang",
-     "team": "Deportivo",
-     "side": "h"
+     "market": "wh_nil",
+     "label": "Deportivo gagne sans encaisser de but",
+     "p": 0.2951,
+     "prob": 30,
+     "fair": 3.39,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Pierre-Emerick Aubameyang marque",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "label": "Bil Nsongo marque",
+     "p": 0.14,
+     "prob": 14,
+     "fair": 7.14,
      "stars": 1,
-     "player": "Pierre-Emerick Aubameyang",
+     "player": "Bil Nsongo",
      "team": "Deportivo",
-     "pid": "122260",
+     "lineup": "start",
+     "pid": "414299",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · Deportivo favori (53 %) · 1,7 buts attendus pour Deportivo"
+     "why": "1 but et 0 passe en 10 matchs · titulaire · Deportivo favori (48 %) · 1,4 but attendu pour Deportivo"
     },
     "decisive": {
      "market": "dec",
-     "label": "Pierre-Emerick Aubameyang buteur ou passeur",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
-     "player": "Pierre-Emerick Aubameyang",
+     "label": "Bil Nsongo buteur ou passeur",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
+     "stars": 1,
+     "player": "Bil Nsongo",
      "team": "Deportivo",
      "base": [
-      7,
-      5,
-      2
+      10,
+      1,
+      0
      ],
-     "pid": "122260",
+     "lineup": "start",
+     "pid": "414299",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · Deportivo favori (53 %) · 1,7 buts attendus pour Deportivo"
+     "why": "1 but et 0 passe en 10 matchs · titulaire · Deportivo favori (48 %) · 1,4 but attendu pour Deportivo"
     }
    }
   },
@@ -727,16 +728,16 @@
     "match": "Atalanta – Parma"
    },
    {
-    "label": "Deportivo ou nul",
-    "prob": 77,
-    "time": "21:00",
-    "match": "Deportivo – Osasuna"
-   },
-   {
     "label": "Nathan MacKinnon : au moins 1 point",
     "prob": 76,
     "time": "02:00",
     "match": "Chicago Blackhawks – Colorado Avalanche"
+   },
+   {
+    "label": "Deportivo ou nul",
+    "prob": 75,
+    "time": "21:00",
+    "match": "Deportivo – Osasuna"
    }
   ]
  }

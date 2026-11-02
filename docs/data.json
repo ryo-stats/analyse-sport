@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T19:59+01:00",
+ "generated": "2026-11-02T20:24+01:00",
  "date": "2026-11-02",
  "nhl_date": "2026-11-02",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-02T17:30:00+00:00",
    "time": "18:30",
    "state": "in",
-   "score": "2-2",
+   "score": "2-4",
    "home": "Sassuolo",
    "away": "Fiorentina",
    "form_h": "NDDND",
@@ -1196,24 +1196,24 @@
    "form_a": "NDDNV",
    "rank_h": 12,
    "rank_a": 14,
-   "pH": 45,
-   "pD": 26,
-   "pA": 29,
+   "pH": 42,
+   "pD": 28,
+   "pA": 31,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.48,
-   "xgA": 1.13,
+   "xgH": 1.31,
+   "xgA": 1.08,
    "scores": [
     "1-1",
     "1-0",
-    "2-1"
+    "0-1"
    ],
    "scorep": [
+    13,
     12,
-    11,
-    9
+    10
    ],
-   "over25": 48,
-   "btts": 52,
+   "over25": 43,
+   "btts": 48,
    "squad_h": [
     {
      "name": "Harvey Barnes",
@@ -1229,11 +1229,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 19,
-     "p_dec": 37,
+     "p_goal": 17,
+     "p_dec": 33,
      "pid": "243386",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Joe Willock",
@@ -1249,11 +1250,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 22,
+     "p_goal": 17,
+     "p_dec": 20,
      "pid": "259517",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Anthony Elanga",
@@ -1269,51 +1271,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 21,
+     "p_goal": 17,
+     "p_dec": 18,
      "pid": "296622",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Yoane Wissa",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Newcastle",
-     "goals": 1,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 15,
-     "p_dec": 26,
-     "pid": "224077",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "William Osula",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Newcastle",
-     "goals": 1,
-     "assists": 1,
-     "apps": 4,
-     "l10": {
-      "n": 8,
-      "gp": 4,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 11,
-     "p_dec": 20,
-     "pid": "319431",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lewis Hall",
@@ -1329,11 +1292,54 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 19,
+     "p_goal": 9,
+     "p_dec": 17,
      "pid": "106139",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "William Osula",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Newcastle",
+     "goals": 1,
+     "assists": 1,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 17,
+     "pid": "319431",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Yoane Wissa",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Newcastle",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 8,
+     "pid": "224077",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -1351,11 +1357,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 30,
-     "p_dec": 33,
+     "p_goal": 29,
+     "p_dec": 32,
      "pid": "301166",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kiernan Dewsbury-Hall",
@@ -1371,11 +1378,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 20,
-     "p_dec": 31,
+     "p_goal": 19,
+     "p_dec": 30,
      "pid": "252389",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tyrique George",
@@ -1391,11 +1399,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
+     "p_goal": 13,
      "p_dec": 16,
      "pid": "368864",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "James Tarkowski",
@@ -1412,10 +1421,32 @@
       "a": 1
      },
      "p_goal": 10,
-     "p_dec": 20,
+     "p_dec": 19,
      "pid": "155226",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Harrison Armstrong",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Everton",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 3,
+     "p_dec": 16,
+     "pid": "378458",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ainsley Maitland-Niles",
@@ -1431,114 +1462,99 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 20,
+     "p_goal": 3,
+     "p_dec": 6,
      "pid": "214402",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Brennan Johnson",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Everton",
-     "goals": 0,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 4,
-     "p_dec": 7,
-     "pid": "291307",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Newcastle : 12e, 11 points, 12 buts marqués et 14 encaissés en 8 matchs.",
     "Everton : 14e, 10 points, 8 buts marqués et 9 encaissés en 8 matchs.",
     "Newcastle : 12 buts marqués et 14 encaissés sur ses 8 derniers matchs de championnat.",
-    "Everton : 8 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat."
+    "Everton : 8 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
+    "Newcastle : attaque revue à la baisse (−12 %) d'après la compo officielle.",
+    "Everton : attaque revue à la baisse (−4 %) d'après la compo officielle (Ainsley Maitland-Niles ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Newcastle est favori sans écraser le match (45 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Match de milieu de tableau : enjeu modéré au classement. Adversaires directs au classement : 1 point d'écart.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Newcastle ou nul",
-     "p": 0.7111,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
+     "p": 0.693,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3,
      "why": "8 derniers matchs : Newcastle 12 marqués / 14 encaissés · Everton 8 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Newcastle",
-     "p": 0.4527,
-     "prob": 45,
-     "fair": 2.21,
+     "p": 0.4179,
+     "prob": 42,
+     "fair": 2.39,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1087,
-     "prob": 11,
-     "fair": 9.2,
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Newcastle mène à la mi-temps et gagne le match",
-     "p": 0.272,
-     "prob": 27,
-     "fair": 3.68,
+     "market": "wh_nil",
+     "label": "Newcastle gagne sans encaisser de but",
+     "p": 0.2478,
+     "prob": 25,
+     "fair": 4.04,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.2667,
-      "prob": 27,
-      "fair": 3.75,
+      "market": "htft_h",
+      "label": "Newcastle mène à la mi-temps et gagne le match",
+      "p": 0.2455,
+      "prob": 25,
+      "fair": 4.07,
       "stars": 1
      },
      {
-      "market": "wh_o25",
-      "label": "Newcastle gagne et plus de 2,5 buts",
-      "p": 0.2634,
-      "prob": 26,
-      "fair": 3.8,
+      "market": "wh_by1",
+      "label": "Newcastle gagne d'un seul but",
+      "p": 0.2274,
+      "prob": 23,
+      "fair": 4.4,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Harvey Barnes marque",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
      "player": "Harvey Barnes",
      "team": "Newcastle",
+     "lineup": "start",
      "pid": "243386",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Newcastle favori (45 %) · 1,5 but attendu pour Newcastle"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Newcastle annoncé gagnant (42 %) · 1,3 but attendu pour Newcastle"
     },
     "decisive": {
      "market": "dec",
      "label": "Harvey Barnes buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
      "player": "Harvey Barnes",
      "team": "Newcastle",
@@ -1547,10 +1563,11 @@
       2,
       2
      ],
+     "lineup": "start",
      "pid": "243386",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Newcastle favori (45 %) · 1,5 but attendu pour Newcastle"
+     "why": "2 buts et 2 passes en 8 matchs · titulaire · Newcastle annoncé gagnant (42 %) · 1,3 but attendu pour Newcastle"
     }
    },
    "second": {
@@ -1577,24 +1594,24 @@
    "form_a": "NDVDN",
    "rank_h": 13,
    "rank_a": 15,
-   "pH": 53,
-   "pD": 24,
-   "pA": 23,
+   "pH": 48,
+   "pD": 27,
+   "pA": 25,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.73,
-   "xgA": 1.05,
+   "xgH": 1.4,
+   "xgA": 0.94,
    "scores": [
-    "1-1",
     "1-0",
-    "2-1"
+    "1-1",
+    "0-0"
    ],
    "scorep": [
-    11,
-    11,
+    14,
+    13,
     10
    ],
-   "over25": 53,
-   "btts": 53,
+   "over25": 41,
+   "btts": 46,
    "squad_h": [
     {
      "name": "Pierre-Emerick Aubameyang",
@@ -1610,11 +1627,12 @@
       "g": 5,
       "a": 2
      },
-     "p_goal": 47,
-     "p_dec": 60,
+     "p_goal": 14,
+     "p_dec": 20,
      "pid": "122260",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Bil Nsongo",
@@ -1630,11 +1648,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 21,
+     "p_goal": 14,
+     "p_dec": 17,
      "pid": "414299",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Luismi Cruz",
@@ -1650,11 +1669,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 28,
+     "p_goal": 13,
+     "p_dec": 23,
      "pid": "324166",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Yeremay Hernández",
@@ -1670,11 +1690,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 26,
+     "p_goal": 12,
+     "p_dec": 22,
      "pid": "312392",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mario Soriano Carreno",
@@ -1690,11 +1711,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 14,
-     "p_dec": 36,
+     "p_goal": 11,
+     "p_dec": 30,
      "pid": "297353",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Diego Villares",
@@ -1710,11 +1732,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 3,
+     "p_dec": 4,
      "pid": "331742",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -1732,71 +1755,12 @@
       "g": 7,
       "a": 0
      },
-     "p_goal": 44,
-     "p_dec": 46,
+     "p_goal": 41,
+     "p_dec": 42,
      "pid": "207288",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Raúl García",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 1,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 10,
-     "p_dec": 18,
-     "pid": "296163",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Enrique Barja",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 10,
-     "pid": "209580",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Asier Osambela",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Osasuna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 10,
-     "pid": "381628",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Moi Gómez",
@@ -1813,10 +1777,32 @@
       "a": 1
      },
      "p_goal": 3,
-     "p_dec": 12,
+     "p_dec": 11,
      "pid": "169089",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Raúl García",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Osasuna",
+     "goals": 1,
+     "assists": 1,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 3,
+     "p_dec": 5,
+     "pid": "296163",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Jonathan Dubasin",
@@ -1833,108 +1819,153 @@
       "a": 0
      },
      "p_goal": 3,
-     "p_dec": 5,
+     "p_dec": 4,
      "pid": "311969",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jon Moncayola",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Osasuna",
+     "goals": 0,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 5,
+     "pid": "286176",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Asier Osambela",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Osasuna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 3,
+     "pid": "381628",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Deportivo : 13e, 11 points, 13 buts marqués et 13 encaissés en 10 matchs.",
     "Osasuna : 15e, 11 points, 10 buts marqués et 20 encaissés en 10 matchs.",
     "Deportivo : 13 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Osasuna : 10 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat."
+    "Osasuna : 10 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat.",
+    "Deportivo : attaque revue à la baisse (−19 %) d'après la compo officielle (Pierre-Emerick Aubameyang ne commence pas).",
+    "Osasuna : attaque revue à la baisse (−10 %) d'après la compo officielle (Asier Osambela, Enrique Barja, Raúl García ne commencent pas).",
+    "Compositions officielles prises en compte : Pierre-Emerick Aubameyang (remplaçant) ne commence pas le match."
    ],
-   "reading": "Deportivo est favori sans écraser le match (53 %).",
+   "reading": "Deportivo est favori sans écraser le match (48 %).",
    "stakes": "Osasuna (15e) lutte pour le maintien, 1 point d'avance sur la zone rouge. Adversaires directs au classement : même nombre de points.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Deportivo ou nul",
-     "p": 0.7714,
-     "prob": 77,
-     "fair": 1.3,
+     "p": 0.7483,
+     "prob": 75,
+     "fair": 1.34,
      "stars": 4,
      "why": "10 derniers matchs : Deportivo 13 marqués / 13 encaissés · Osasuna 10 / 20"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Deportivo",
-     "p": 0.534,
-     "prob": 53,
-     "fair": 1.87,
-     "stars": 2
+     "p": 0.4769,
+     "prob": 48,
+     "fair": 2.1,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1075,
-     "prob": 11,
-     "fair": 9.3,
+     "p": 0.1352,
+     "prob": 14,
+     "fair": 7.4,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "scw",
-     "label": "Pierre-Emerick Aubameyang marque et Deportivo gagne",
-     "p": 0.3408,
-     "prob": 34,
-     "fair": 2.93,
-     "stars": 1,
-     "player": "Pierre-Emerick Aubameyang",
-     "team": "Deportivo",
-     "side": "h"
+     "market": "wh_nil",
+     "label": "Deportivo gagne sans encaisser de but",
+     "p": 0.2951,
+     "prob": 30,
+     "fair": 3.39,
+     "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o25",
-      "label": "Deportivo gagne et plus de 2,5 buts",
-      "p": 0.3334,
-      "prob": 33,
-      "fair": 3.0,
+      "market": "htft_h",
+      "label": "Deportivo mène à la mi-temps et gagne le match",
+      "p": 0.2851,
+      "prob": 29,
+      "fair": 3.51,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Deportivo mène à la mi-temps et gagne le match",
-      "p": 0.3324,
-      "prob": 33,
-      "fair": 3.01,
+      "market": "wh_o25",
+      "label": "Deportivo gagne et plus de 2,5 buts",
+      "p": 0.247,
+      "prob": 25,
+      "fair": 4.05,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Pierre-Emerick Aubameyang marque",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "label": "Bil Nsongo marque",
+     "p": 0.14,
+     "prob": 14,
+     "fair": 7.14,
      "stars": 1,
-     "player": "Pierre-Emerick Aubameyang",
+     "player": "Bil Nsongo",
      "team": "Deportivo",
-     "pid": "122260",
+     "lineup": "start",
+     "pid": "414299",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · Deportivo favori (53 %) · 1,7 buts attendus pour Deportivo"
+     "why": "1 but et 0 passe en 10 matchs · titulaire · Deportivo favori (48 %) · 1,4 but attendu pour Deportivo"
     },
     "decisive": {
      "market": "dec",
-     "label": "Pierre-Emerick Aubameyang buteur ou passeur",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
-     "player": "Pierre-Emerick Aubameyang",
+     "label": "Bil Nsongo buteur ou passeur",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
+     "stars": 1,
+     "player": "Bil Nsongo",
      "team": "Deportivo",
      "base": [
-      7,
-      5,
-      2
+      10,
+      1,
+      0
      ],
-     "pid": "122260",
+     "lineup": "start",
+     "pid": "414299",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 2 passes en 7 matchs · Deportivo favori (53 %) · 1,7 buts attendus pour Deportivo"
+     "why": "1 but et 0 passe en 10 matchs · titulaire · Deportivo favori (48 %) · 1,4 but attendu pour Deportivo"
     }
    },
    "second": {
@@ -21986,7 +22017,20 @@
     "esp.1": 842,
     "ita.1": 850
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 80
+    },
+    "eng.1": {
+     "2026": 89
+    },
+    "esp.1": {
+     "2026": 108
+    },
+    "ita.1": {
+     "2026": 98
+    }
+   },
    "status": "ok"
   },
   "nhl": {
