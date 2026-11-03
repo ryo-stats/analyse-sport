@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T01:36+01:00",
+ "generated": "2026-11-03T07:27+01:00",
  "date": "2026-11-03",
  "matches": [
   {
@@ -19,6 +19,15 @@
    "pA": 21,
    "edate": "20261103",
    "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Galatasaray ou nul",
+     "p": 0.7916,
+     "prob": 79,
+     "fair": 1.26,
+     "stars": 4,
+     "why": "Derniers matchs : Galatasaray 23 marqués / 12 encaissés · Stuttgart 14 / 15"
+    },
     "winner": {
      "market": "1",
      "label": "Victoire Galatasaray",
@@ -765,280 +774,767 @@
    }
   },
   {
-   "id": "nhl-2026020232",
+   "id": "nhl-2026020236",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-11-03T00:00:00+00:00",
+   "kickoff": "2026-11-04T00:00:00+00:00",
    "time": "01:00",
-   "home": "Boston Bruins",
-   "away": "Vegas Golden Knights",
-   "state": "LIVE",
-   "xgH": 2.76,
-   "xgA": 3.16,
-   "pH": 35,
-   "pD": 17,
-   "pA": 48,
-   "winH": 44,
-   "espn_id": "401892629",
-   "edate": "20261102",
-   "picks": {
-    "main": {
-     "market": "win_a",
-     "label": "Victoire Vegas Golden Knights",
-     "p": 0.5616,
-     "prob": 56,
-     "fair": 1.78,
-     "stars": 2,
-     "why": "10 derniers matchs : Boston Bruins 7 victoires · Vegas Golden Knights 5"
-    },
-    "winner": {
-     "market": "win_a",
-     "label": "Victoire Vegas Golden Knights",
-     "p": 0.5616,
-     "prob": 56,
-     "fair": 1.78,
-     "stars": 2,
-     "why": "10 derniers matchs : Boston Bruins 7 victoires · Vegas Golden Knights 5"
-    },
-    "fun": {
-     "market": "a2",
-     "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-     "p": 0.3607,
-     "prob": 36,
-     "fair": 2.77,
-     "stars": 1
-    },
-    "player": {
-     "market": "point",
-     "label": "Jack Eichel : au moins 1 point",
-     "p": 0.64,
-     "prob": 64,
-     "fair": 1.56,
-     "stars": 3,
-     "player": "Jack Eichel",
-     "pid": 8478403,
-     "team": "Vegas Golden Knights",
-     "why": "7 buts et 13 passes en 15 matchs · 10 derniers matchs : 4 buts, 4 passes · Vegas Golden Knights favori (56 %) · 3,2 buts attendus pour Vegas Golden Knights"
-    },
-    "scorer": {
-     "market": "goal",
-     "label": "Mark Stone marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
-     "stars": 1,
-     "player": "Mark Stone",
-     "pid": 8475913,
-     "team": "Vegas Golden Knights",
-     "why": "9 buts et 8 passes en 15 matchs · 10 derniers matchs : 6 buts, 6 passes · Vegas Golden Knights favori (56 %) · 3,2 buts attendus pour Vegas Golden Knights"
-    }
-   }
-  },
-  {
-   "id": "nhl-2026020233",
-   "sport": "nhl",
-   "league": "NHL",
-   "kickoff": "2026-11-03T00:00:00+00:00",
-   "time": "01:00",
-   "home": "Florida Panthers",
-   "away": "Detroit Red Wings",
-   "state": "LIVE",
-   "xgH": 3.36,
-   "xgA": 2.98,
-   "pH": 48,
-   "pD": 16,
-   "pA": 36,
-   "winH": 56,
-   "espn_id": "401892630",
-   "edate": "20261102",
+   "home": "Toronto Maple Leafs",
+   "away": "Utah Mammoth",
+   "state": "FUT",
+   "xgH": 2.9,
+   "xgA": 3.65,
+   "pH": 31,
+   "pD": 15,
+   "pA": 54,
+   "winH": 39,
+   "espn_id": "401892633",
+   "edate": "20261103",
    "picks": {
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6064,
-     "prob": 61,
-     "fair": 1.65,
+     "p": 0.6382,
+     "prob": 64,
+     "fair": 1.57,
      "stars": 3,
-     "why": "10 derniers matchs : Florida Panthers 6 victoires · Detroit Red Wings 5"
+     "why": "10 derniers matchs : Toronto Maple Leafs 5 victoires · Utah Mammoth 6"
     },
     "winner": {
-     "market": "win_h",
-     "label": "Victoire Florida Panthers",
-     "p": 0.5627,
-     "prob": 56,
-     "fair": 1.78,
-     "stars": 2
+     "market": "win_a",
+     "label": "Victoire Utah Mammoth",
+     "p": 0.6089,
+     "prob": 61,
+     "fair": 1.64,
+     "stars": 3
     },
     "fun": {
-     "market": "h2",
-     "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
-     "p": 0.3618,
-     "prob": 36,
-     "fair": 2.76,
+     "market": "a2",
+     "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
+     "p": 0.4164,
+     "prob": 42,
+     "fair": 2.4,
      "stars": 1
     },
     "player": {
      "market": "point",
-     "label": "Matthew Tkachuk : au moins 1 point",
-     "p": 0.69,
-     "prob": 69,
-     "fair": 1.45,
+     "label": "Clayton Keller : au moins 1 point",
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
-     "player": "Matthew Tkachuk",
-     "pid": 8479314,
-     "team": "Florida Panthers",
-     "why": "4 buts et 16 passes en 14 matchs · 10 derniers matchs : 2 buts, 15 passes · Florida Panthers favori (56 %) · 3,4 buts attendus pour Florida Panthers"
+     "player": "Clayton Keller",
+     "pid": 8479343,
+     "team": "Utah Mammoth",
+     "why": "4 buts et 14 passes en 15 matchs · 10 derniers matchs : 3 buts, 8 passes · Utah Mammoth favori (61 %) · 3,6 buts attendus pour Utah Mammoth"
     },
     "scorer": {
      "market": "goal",
-     "label": "Sam Reinhart marque",
+     "label": "Logan Cooley marque",
      "p": 0.37,
      "prob": 37,
      "fair": 2.7,
      "stars": 1,
-     "player": "Sam Reinhart",
-     "pid": 8477933,
-     "team": "Florida Panthers",
-     "why": "7 buts et 5 passes en 14 matchs · 10 derniers matchs : 7 buts, 5 passes · Florida Panthers favori (56 %) · 3,4 buts attendus pour Florida Panthers"
+     "player": "Logan Cooley",
+     "pid": 8483431,
+     "team": "Utah Mammoth",
+     "why": "8 buts et 9 passes en 15 matchs · 10 derniers matchs : 8 buts, 5 passes · Utah Mammoth favori (61 %) · 3,6 buts attendus pour Utah Mammoth"
     }
    }
   },
   {
-   "id": "nhl-2026020234",
+   "id": "nhl-2026020237",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-11-03T01:00:00+00:00",
-   "time": "02:00",
-   "home": "Chicago Blackhawks",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "Montréal Canadiens",
+   "away": "Winnipeg Jets",
+   "state": "FUT",
+   "xgH": 3.75,
+   "xgA": 2.83,
+   "pH": 56,
+   "pD": 15,
+   "pA": 29,
+   "winH": 64,
+   "espn_id": "401892634",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6414,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3,
+     "why": "10 derniers matchs : Montréal Canadiens 8 victoires · Winnipeg Jets 1"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Montréal Canadiens",
+     "p": 0.6406,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3
+    },
+    "fun": {
+     "market": "wh_o55",
+     "label": "Montréal Canadiens gagne et plus de 5,5 buts",
+     "p": 0.4198,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Cole Caufield : au moins 1 point",
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3,
+     "player": "Cole Caufield",
+     "pid": 8481540,
+     "team": "Montréal Canadiens",
+     "why": "8 buts et 4 passes en 14 matchs · 10 derniers matchs : 6 buts, 4 passes · Montréal Canadiens favori (64 %) · 3,7 buts attendus pour Montréal Canadiens"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Cole Caufield marque",
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
+     "stars": 1,
+     "player": "Cole Caufield",
+     "pid": 8481540,
+     "team": "Montréal Canadiens",
+     "why": "8 buts et 4 passes en 14 matchs · 10 derniers matchs : 6 buts, 4 passes · Montréal Canadiens favori (64 %) · 3,7 buts attendus pour Montréal Canadiens"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020238",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "Tampa Bay Lightning",
+   "away": "Detroit Red Wings",
+   "state": "FUT",
+   "xgH": 3.69,
+   "xgA": 2.79,
+   "pH": 56,
+   "pD": 15,
+   "pA": 29,
+   "winH": 64,
+   "espn_id": "401892635",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire Tampa Bay Lightning",
+     "p": 0.6382,
+     "prob": 64,
+     "fair": 1.57,
+     "stars": 3,
+     "why": "10 derniers matchs : Tampa Bay Lightning 6 victoires · Detroit Red Wings 6"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Tampa Bay Lightning",
+     "p": 0.6382,
+     "prob": 64,
+     "fair": 1.57,
+     "stars": 3,
+     "why": "10 derniers matchs : Tampa Bay Lightning 6 victoires · Detroit Red Wings 6"
+    },
+    "fun": {
+     "market": "wh_o55",
+     "label": "Tampa Bay Lightning gagne et plus de 5,5 buts",
+     "p": 0.4103,
+     "prob": 41,
+     "fair": 2.44,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Nikita Kucherov : au moins 1 point",
+     "p": 0.77,
+     "prob": 77,
+     "fair": 1.3,
+     "stars": 4,
+     "player": "Nikita Kucherov",
+     "pid": 8476453,
+     "team": "Tampa Bay Lightning",
+     "why": "4 buts et 14 passes en 13 matchs · 10 derniers matchs : 3 buts, 11 passes · Tampa Bay Lightning favori (64 %) · 3,7 buts attendus pour Tampa Bay Lightning"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Brandon Hagel marque",
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
+     "stars": 1,
+     "player": "Brandon Hagel",
+     "pid": 8479542,
+     "team": "Tampa Bay Lightning",
+     "why": "8 buts et 8 passes en 13 matchs · 10 derniers matchs : 7 buts, 6 passes · Tampa Bay Lightning favori (64 %) · 3,7 buts attendus pour Tampa Bay Lightning"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020240",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "New York Rangers",
+   "away": "St. Louis Blues",
+   "state": "FUT",
+   "xgH": 2.91,
+   "xgA": 2.81,
+   "pH": 43,
+   "pD": 17,
+   "pA": 40,
+   "winH": 52,
+   "espn_id": "401892637",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire New York Rangers",
+     "p": 0.5201,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "why": "10 derniers matchs : New York Rangers 3 victoires · St. Louis Blues 6"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire New York Rangers",
+     "p": 0.5201,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
+     "why": "10 derniers matchs : New York Rangers 3 victoires · St. Louis Blues 6"
+    },
+    "fun": {
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.3977,
+     "prob": 40,
+     "fair": 2.51,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Adam Fox : au moins 1 point",
+     "p": 0.59,
+     "prob": 59,
+     "fair": 1.69,
+     "stars": 2,
+     "player": "Adam Fox",
+     "pid": 8479323,
+     "team": "New York Rangers",
+     "why": "1 but et 16 passes en 15 matchs · 10 derniers matchs : 1 but, 11 passes · New York Rangers favori (52 %) · 2,9 buts attendus pour New York Rangers"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Mika Zibanejad marque",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
+     "stars": 1,
+     "player": "Mika Zibanejad",
+     "pid": 8476459,
+     "team": "New York Rangers",
+     "why": "3 buts et 9 passes en 15 matchs · 10 derniers matchs : 2 buts, 5 passes · New York Rangers favori (52 %) · 2,9 buts attendus pour New York Rangers"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020241",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "Philadelphia Flyers",
+   "away": "Minnesota Wild",
+   "state": "FUT",
+   "xgH": 2.35,
+   "xgA": 3.66,
+   "pH": 23,
+   "pD": 15,
+   "pA": 63,
+   "winH": 30,
+   "espn_id": "401892638",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "win_a",
+     "label": "Victoire Minnesota Wild",
+     "p": 0.6969,
+     "prob": 70,
+     "fair": 1.43,
+     "stars": 3,
+     "why": "10 derniers matchs : Philadelphia Flyers 4 victoires · Minnesota Wild 6"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Minnesota Wild",
+     "p": 0.6969,
+     "prob": 70,
+     "fair": 1.43,
+     "stars": 3,
+     "why": "10 derniers matchs : Philadelphia Flyers 4 victoires · Minnesota Wild 6"
+    },
+    "fun": {
+     "market": "wa_o55",
+     "label": "Minnesota Wild gagne et plus de 5,5 buts",
+     "p": 0.4015,
+     "prob": 40,
+     "fair": 2.49,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Kirill Kaprizov : au moins 1 point",
+     "p": 0.71,
+     "prob": 71,
+     "fair": 1.41,
+     "stars": 4,
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild",
+     "why": "15 buts et 10 passes en 16 matchs · 10 derniers matchs : 9 buts, 7 passes · Minnesota Wild favori (70 %) · 3,7 buts attendus pour Minnesota Wild"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Kirill Kaprizov marque",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild",
+     "why": "15 buts et 10 passes en 16 matchs · 10 derniers matchs : 9 buts, 7 passes · Minnesota Wild favori (70 %) · 3,7 buts attendus pour Minnesota Wild"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020242",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "Pittsburgh Penguins",
+   "away": "Vegas Golden Knights",
+   "state": "FUT",
+   "xgH": 2.91,
+   "xgA": 3.2,
+   "pH": 37,
+   "pD": 16,
+   "pA": 46,
+   "winH": 46,
+   "espn_id": "401892639",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5727,
+     "prob": 57,
+     "fair": 1.75,
+     "stars": 2,
+     "why": "10 derniers matchs : Pittsburgh Penguins 3 victoires · Vegas Golden Knights 4"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Vegas Golden Knights",
+     "p": 0.5423,
+     "prob": 54,
+     "fair": 1.84,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
+     "p": 0.3455,
+     "prob": 35,
+     "fair": 2.89,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Mark Stone : au moins 1 point",
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3,
+     "player": "Mark Stone",
+     "pid": 8475913,
+     "team": "Vegas Golden Knights",
+     "why": "10 buts et 8 passes en 16 matchs · 10 derniers matchs : 7 buts, 4 passes · Vegas Golden Knights favori (54 %) · 3,2 buts attendus pour Vegas Golden Knights"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Mark Stone marque",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Mark Stone",
+     "pid": 8475913,
+     "team": "Vegas Golden Knights",
+     "why": "10 buts et 8 passes en 16 matchs · 10 derniers matchs : 7 buts, 4 passes · Vegas Golden Knights favori (54 %) · 3,2 buts attendus pour Vegas Golden Knights"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020243",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "Washington Capitals",
+   "away": "Dallas Stars",
+   "state": "FUT",
+   "xgH": 2.99,
+   "xgA": 3.14,
+   "pH": 39,
+   "pD": 16,
+   "pA": 44,
+   "winH": 48,
+   "espn_id": "401892640",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5752,
+     "prob": 58,
+     "fair": 1.74,
+     "stars": 2,
+     "why": "10 derniers matchs : Washington Capitals 6 victoires · Dallas Stars 6"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Dallas Stars",
+     "p": 0.5201,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
+     "p": 0.3254,
+     "prob": 33,
+     "fair": 3.07,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Jason Robertson : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Jason Robertson",
+     "pid": 8480027,
+     "team": "Dallas Stars",
+     "why": "5 buts et 9 passes en 14 matchs · 10 derniers matchs : 3 buts, 8 passes · Dallas Stars favori (52 %) · 3,1 buts attendus pour Dallas Stars"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Jason Robertson marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "Jason Robertson",
+     "pid": 8480027,
+     "team": "Dallas Stars",
+     "why": "5 buts et 9 passes en 14 matchs · 10 derniers matchs : 3 buts, 8 passes · Dallas Stars favori (52 %) · 3,1 buts attendus pour Dallas Stars"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020244",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:00:00+00:00",
+   "time": "01:00",
+   "home": "Columbus Blue Jackets",
    "away": "Colorado Avalanche",
-   "state": "PRE",
-   "xgH": 2.42,
-   "xgA": 3.83,
-   "pH": 22,
-   "pD": 14,
-   "pA": 64,
-   "winH": 29,
-   "espn_id": "401892631",
-   "edate": "20261102",
+   "state": "FUT",
+   "xgH": 2.61,
+   "xgA": 3.45,
+   "pH": 29,
+   "pD": 16,
+   "pA": 55,
+   "winH": 37,
+   "espn_id": "401892641",
+   "edate": "20261103",
    "picks": {
     "main": {
      "market": "win_a",
      "label": "Victoire Colorado Avalanche",
-     "p": 0.7085,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
-     "why": "10 derniers matchs : Chicago Blackhawks 3 victoires · Colorado Avalanche 5"
+     "p": 0.6285,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "why": "10 derniers matchs : Columbus Blue Jackets 4 victoires · Colorado Avalanche 6"
     },
     "winner": {
      "market": "win_a",
      "label": "Victoire Colorado Avalanche",
-     "p": 0.7085,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
-     "why": "10 derniers matchs : Chicago Blackhawks 3 victoires · Colorado Avalanche 5"
+     "p": 0.6285,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "why": "10 derniers matchs : Columbus Blue Jackets 4 victoires · Colorado Avalanche 6"
     },
     "fun": {
-     "market": "wa_o65",
-     "label": "Colorado Avalanche gagne et plus de 6,5 buts",
-     "p": 0.3426,
-     "prob": 34,
-     "fair": 2.92,
+     "market": "wa_o55",
+     "label": "Colorado Avalanche gagne et plus de 5,5 buts",
+     "p": 0.3643,
+     "prob": 36,
+     "fair": 2.74,
      "stars": 1
     },
     "player": {
      "market": "point",
      "label": "Nathan MacKinnon : au moins 1 point",
-     "p": 0.76,
-     "prob": 76,
-     "fair": 1.32,
+     "p": 0.72,
+     "prob": 72,
+     "fair": 1.39,
      "stars": 4,
      "player": "Nathan MacKinnon",
      "pid": 8477492,
      "team": "Colorado Avalanche",
-     "why": "9 buts et 15 passes en 14 matchs · 10 derniers matchs : 6 buts, 10 passes · Colorado Avalanche favori (71 %) · 3,8 buts attendus pour Colorado Avalanche"
+     "why": "9 buts et 16 passes en 15 matchs · 10 derniers matchs : 4 buts, 11 passes · Colorado Avalanche favori (63 %) · 3,5 buts attendus pour Colorado Avalanche"
     },
     "scorer": {
      "market": "goal",
      "label": "Nathan MacKinnon marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
-     "stars": 1,
-     "player": "Nathan MacKinnon",
-     "pid": 8477492,
-     "team": "Colorado Avalanche",
-     "why": "9 buts et 15 passes en 14 matchs · 10 derniers matchs : 6 buts, 10 passes · Colorado Avalanche favori (71 %) · 3,8 buts attendus pour Colorado Avalanche"
-    }
-   }
-  },
-  {
-   "id": "nhl-2026020235",
-   "sport": "nhl",
-   "league": "NHL",
-   "kickoff": "2026-11-03T02:00:00+00:00",
-   "time": "03:00",
-   "home": "San Jose Sharks",
-   "away": "Calgary Flames",
-   "state": "FUT",
-   "xgH": 3.39,
-   "xgA": 3.08,
-   "pH": 47,
-   "pD": 16,
-   "pA": 37,
-   "winH": 55,
-   "espn_id": "401892632",
-   "edate": "20261102",
-   "picks": {
-    "main": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.6258,
-     "prob": 63,
-     "fair": 1.6,
-     "stars": 3,
-     "why": "10 derniers matchs : San Jose Sharks 4 victoires · Calgary Flames 6"
-    },
-    "winner": {
-     "market": "win_h",
-     "label": "Victoire San Jose Sharks",
-     "p": 0.5505,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2
-    },
-    "fun": {
-     "market": "h2",
-     "label": "San Jose Sharks gagne par 2 buts d'écart ou plus",
-     "p": 0.3522,
-     "prob": 35,
-     "fair": 2.84,
-     "stars": 1
-    },
-    "player": {
-     "market": "point",
-     "label": "Macklin Celebrini : au moins 1 point",
-     "p": 0.74,
-     "prob": 74,
-     "fair": 1.35,
-     "stars": 4,
-     "player": "Macklin Celebrini",
-     "pid": 8484801,
-     "team": "San Jose Sharks",
-     "why": "5 buts et 11 passes en 13 matchs · 10 derniers matchs : 4 buts, 6 passes · San Jose Sharks favori (55 %) · 3,4 buts attendus pour San Jose Sharks"
-    },
-    "scorer": {
-     "market": "goal",
-     "label": "Macklin Celebrini marque",
      "p": 0.4,
      "prob": 40,
      "fair": 2.5,
      "stars": 1,
-     "player": "Macklin Celebrini",
-     "pid": 8484801,
-     "team": "San Jose Sharks",
-     "why": "5 buts et 11 passes en 13 matchs · 10 derniers matchs : 4 buts, 6 passes · San Jose Sharks favori (55 %) · 3,4 buts attendus pour San Jose Sharks"
+     "player": "Nathan MacKinnon",
+     "pid": 8477492,
+     "team": "Colorado Avalanche",
+     "why": "9 buts et 16 passes en 15 matchs · 10 derniers matchs : 4 buts, 11 passes · Colorado Avalanche favori (63 %) · 3,5 buts attendus pour Colorado Avalanche"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020239",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T00:30:00+00:00",
+   "time": "01:30",
+   "home": "New Jersey Devils",
+   "away": "Edmonton Oilers",
+   "state": "FUT",
+   "xgH": 3.11,
+   "xgA": 2.72,
+   "pH": 48,
+   "pD": 17,
+   "pA": 35,
+   "winH": 57,
+   "espn_id": "401892636",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire New Jersey Devils",
+     "p": 0.5659,
+     "prob": 57,
+     "fair": 1.77,
+     "stars": 2,
+     "why": "10 derniers matchs : New Jersey Devils 7 victoires · Edmonton Oilers 7"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire New Jersey Devils",
+     "p": 0.5659,
+     "prob": 57,
+     "fair": 1.77,
+     "stars": 2,
+     "why": "10 derniers matchs : New Jersey Devils 7 victoires · Edmonton Oilers 7"
+    },
+    "fun": {
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.4163,
+     "prob": 42,
+     "fair": 2.4,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Jack Hughes : au moins 1 point",
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
+     "player": "Jack Hughes",
+     "pid": 8481559,
+     "team": "New Jersey Devils",
+     "why": "6 buts et 10 passes en 14 matchs · 10 derniers matchs : 5 buts, 7 passes · New Jersey Devils favori (57 %) · 3,1 buts attendus pour New Jersey Devils"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Jack Hughes marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "Jack Hughes",
+     "pid": 8481559,
+     "team": "New Jersey Devils",
+     "why": "6 buts et 10 passes en 14 matchs · 10 derniers matchs : 5 buts, 7 passes · New Jersey Devils favori (57 %) · 3,1 buts attendus pour New Jersey Devils"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020245",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T01:00:00+00:00",
+   "time": "02:00",
+   "home": "Nashville Predators",
+   "away": "Carolina Hurricanes",
+   "state": "FUT",
+   "xgH": 2.5,
+   "xgA": 3.81,
+   "pH": 23,
+   "pD": 14,
+   "pA": 63,
+   "winH": 31,
+   "espn_id": "401892642",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "win_a",
+     "label": "Victoire Carolina Hurricanes",
+     "p": 0.6944,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3,
+     "why": "10 derniers matchs : Nashville Predators 3 victoires · Carolina Hurricanes 8"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Carolina Hurricanes",
+     "p": 0.6944,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3,
+     "why": "10 derniers matchs : Nashville Predators 3 victoires · Carolina Hurricanes 8"
+    },
+    "fun": {
+     "market": "wa_o65",
+     "label": "Carolina Hurricanes gagne et plus de 6,5 buts",
+     "p": 0.3432,
+     "prob": 34,
+     "fair": 2.91,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Sebastian Aho : au moins 1 point",
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3,
+     "player": "Sebastian Aho",
+     "pid": 8478427,
+     "team": "Carolina Hurricanes",
+     "why": "9 buts et 12 passes en 16 matchs · 10 derniers matchs : 4 buts, 8 passes · Carolina Hurricanes favori (69 %) · 3,8 buts attendus pour Carolina Hurricanes"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Seth Jarvis marque",
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
+     "stars": 1,
+     "player": "Seth Jarvis",
+     "pid": 8482093,
+     "team": "Carolina Hurricanes",
+     "why": "1 but et 6 passes en 5 matchs · Carolina Hurricanes favori (69 %) · 3,8 buts attendus pour Carolina Hurricanes"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020246",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-04T02:00:00+00:00",
+   "time": "03:00",
+   "home": "Vancouver Canucks",
+   "away": "Anaheim Ducks",
+   "state": "FUT",
+   "xgH": 3.07,
+   "xgA": 3.76,
+   "pH": 32,
+   "pD": 15,
+   "pA": 53,
+   "winH": 40,
+   "espn_id": "401892643",
+   "edate": "20261103",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6772,
+     "prob": 68,
+     "fair": 1.48,
+     "stars": 3,
+     "why": "10 derniers matchs : Vancouver Canucks 1 victoire · Anaheim Ducks 3"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Anaheim Ducks",
+     "p": 0.5996,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 2
+    },
+    "fun": {
+     "market": "wa_o55",
+     "label": "Anaheim Ducks gagne et plus de 5,5 buts",
+     "p": 0.4122,
+     "prob": 41,
+     "fair": 2.43,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Leo Carlsson : au moins 1 point",
+     "p": 0.67,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3,
+     "player": "Leo Carlsson",
+     "pid": 8484153,
+     "team": "Anaheim Ducks",
+     "why": "4 buts et 17 passes en 14 matchs · 10 derniers matchs : 3 buts, 11 passes · Anaheim Ducks favori (60 %) · 3,8 buts attendus pour Anaheim Ducks"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Cutter Gauthier marque",
+     "p": 0.41,
+     "prob": 41,
+     "fair": 2.44,
+     "stars": 1,
+     "player": "Cutter Gauthier",
+     "pid": 8483445,
+     "team": "Anaheim Ducks",
+     "why": "7 buts et 5 passes en 13 matchs · 10 derniers matchs : 5 buts, 3 passes (joué 9 sur 10) · Anaheim Ducks favori (60 %) · 3,8 buts attendus pour Anaheim Ducks"
     }
    }
   }
@@ -1046,11 +1542,11 @@
  "summary": {
   "date": "2026-11-03",
   "yesterday": {
-   "n": 30,
-   "ok": 6
+   "n": 48,
+   "ok": 13
   },
   "foot": 9,
-  "nhl": 4,
+  "nhl": 11,
   "top": [
    {
     "label": "LASK Linz ou nul",
@@ -1065,10 +1561,10 @@
     "match": "Barcelona – Aston Villa"
    },
    {
-    "label": "Bodo/Glimt ou nul",
-    "prob": 78,
-    "time": "21:00",
-    "match": "Bodo/Glimt – Lille"
+    "label": "Galatasaray ou nul",
+    "prob": 79,
+    "time": "18:45",
+    "match": "Galatasaray – Stuttgart"
    }
   ]
  }
