@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T07:27+01:00",
+ "generated": "2026-11-03T12:27+01:00",
  "date": "2026-11-03",
  "nhl_date": "2026-11-03",
  "foot": [
@@ -7828,21 +7828,21 @@
    ]
   },
   "picks": {
-   "n": 1002,
-   "rate": 56,
+   "n": 1006,
+   "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1002,
+     "n": 1006,
      "ok": 558,
-     "rate": 56,
+     "rate": 55,
      "expected": 52
     },
     "foot": {
-     "n": 638,
+     "n": 642,
      "ok": 349,
-     "rate": 55,
+     "rate": 54,
      "expected": 51
     },
     "nhl": {
@@ -7913,16 +7913,16 @@
     {
      "date": "2026-11-02",
      "all": {
-      "n": 19,
+      "n": 23,
       "ok": 6,
-      "rate": 32,
-      "expected": 47
+      "rate": 26,
+      "expected": 46
      },
      "foot": {
-      "n": 15,
+      "n": 19,
       "ok": 5,
-      "rate": 33,
-      "expected": 45
+      "rate": 26,
+      "expected": 44
      },
      "nhl": {
       "n": 4,
@@ -8569,9 +8569,9 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 136,
+     "n": 138,
      "ok": 76,
-     "rate": 56,
+     "rate": 55,
      "expected": 50
     },
     {
@@ -8585,7 +8585,7 @@
     {
      "sport": "foot",
      "league": "Premier League",
-     "n": 94,
+     "n": 95,
      "ok": 48,
      "rate": 51,
      "expected": 48
@@ -8593,7 +8593,7 @@
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 86,
+     "n": 87,
      "ok": 52,
      "rate": 60,
      "expected": 50
@@ -8634,15 +8634,15 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 433,
+     "n": 436,
      "announced": 35,
      "actual": 35
     },
     {
      "stars": 2,
-     "n": 177,
+     "n": 178,
      "announced": 55,
-     "actual": 55
+     "actual": 54
     },
     {
      "stars": 3,
@@ -8931,6 +8931,19 @@
      "mid": "foot-401874963",
      "score": "2-4",
      "match": "Sassuolo – Fiorentina",
+     "label": "Vasilije Adzic buteur ou passeur",
+     "prob": 41,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-02",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874963",
+     "score": "2-4",
+     "match": "Sassuolo – Fiorentina",
      "label": "Sassuolo gagne et plus de 2,5 buts",
      "prob": 37,
      "stars": 1,
@@ -8985,6 +8998,19 @@
      "match": "Newcastle – Everton",
      "label": "Harvey Barnes marque",
      "prob": 17,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-02",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401878762",
+     "score": "0-1",
+     "match": "Newcastle – Everton",
+     "label": "Harvey Barnes buteur ou passeur",
+     "prob": 33,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -9076,6 +9102,19 @@
      "match": "Lorient – Brest",
      "label": "Jean-Victor Makengo marque",
      "prob": 12,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-02",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876419",
+     "score": "0-2",
+     "match": "Lorient – Brest",
+     "label": "Jean-Victor Makengo buteur ou passeur",
+     "prob": 24,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -9194,6 +9233,19 @@
      "label": "Nikola Krstovic marque",
      "prob": 45,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-02",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874971",
+     "score": "0-3",
+     "match": "Atalanta – Parma",
+     "label": "Nikola Krstovic buteur ou passeur",
+     "prob": 55,
+     "stars": 2,
      "ok": false,
      "fun": false
     },
@@ -26823,41 +26875,7 @@
     "ita.1": 852,
     "aut.1": 454
    },
-   "elo_fetch": {
-    "tur.1": {
-     "2026": 90
-    },
-    "ger.1": {
-     "2026": 72
-    },
-    "uefa.champions": {
-     "2026": 54
-    },
-    "por.1": {
-     "2026": 90
-    },
-    "esp.1": {
-     "2026": 109
-    },
-    "eng.1": {
-     "2026": 90
-    },
-    "nor.1": {
-     "2026": 200
-    },
-    "fra.1": {
-     "2026": 81
-    },
-    "ned.1": {
-     "2026": 99
-    },
-    "ita.1": {
-     "2026": 100
-    },
-    "aut.1": {
-     "2026": 66
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
