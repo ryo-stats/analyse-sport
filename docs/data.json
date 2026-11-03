@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T18:26+01:00",
+ "generated": "2026-11-03T19:49+01:00",
  "date": "2026-11-03",
  "nhl_date": "2026-11-03",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Ligue des champions",
    "kickoff": "2026-11-03T17:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-0",
    "home": "Galatasaray",
    "away": "Stuttgart",
    "form_h": "VVVVD",
@@ -21,8 +21,8 @@
    "pD": 21,
    "pA": 20,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.05,
-   "xgA": 1.13,
+   "xgH": 2.04,
+   "xgA": 1.12,
    "scores": [
     "2-1",
     "1-1",
@@ -221,7 +221,7 @@
       "a": 1
      },
      "p_goal": 9,
-     "p_dec": 16,
+     "p_dec": 15,
      "pid": "290811",
      "stats_league": "ger.1",
      "season": 2026,
@@ -296,9 +296,6 @@
     "Stuttgart : 6e, 7 points, 7 buts marqués et 2 encaissés en 3 matchs.",
     "Galatasaray : 23 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
     "Stuttgart : 14 buts marqués et 15 encaissés sur ses 8 derniers matchs de championnat.",
-    "Stuttgart a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
-    "Galatasaray : attaque revue à la baisse (−5 %) d'après la compo officielle.",
-    "Stuttgart : attaque revue à la baisse (−7 %) d'après la compo officielle (Josha Vagnoman ne commence pas).",
     "Compositions officielles prises en compte : Gabriel Gomes (remplaçant) ne commence pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
@@ -308,7 +305,7 @@
     "main": {
      "market": "1N",
      "label": "Galatasaray ou nul",
-     "p": 0.7965,
+     "p": 0.7966,
      "prob": 80,
      "fair": 1.26,
      "stars": 4,
@@ -354,7 +351,7 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3909,
+      "p": 0.3908,
       "prob": 39,
       "fair": 2.56,
       "stars": 1
@@ -412,8 +409,8 @@
    "league": "Ligue des champions",
    "kickoff": "2026-11-03T17:45:00+00:00",
    "time": "18:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Shakhtar",
    "away": "Sporting",
    "form_h": "NVNDD",
@@ -699,7 +696,6 @@
     "Sporting : 12e, 6 points, 7 buts marqués et 4 encaissés en 3 matchs.",
     "Shakhtar : 4 buts marqués et 3 encaissés sur ses 3 derniers matchs de championnat.",
     "Sporting : 23 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat.",
-    "Sporting : attaque revue à la baisse (−8 %) d'après la compo officielle (Flávio Gonçalves ne commence pas).",
     "Compositions officielles prises en compte : Flávio Gonçalves (remplaçant) ne commence pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
@@ -709,7 +705,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Sporting",
-     "p": 0.7492,
+     "p": 0.7491,
      "prob": 75,
      "fair": 1.33,
      "stars": 4,
@@ -726,7 +722,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1227,
+     "p": 0.1226,
      "prob": 12,
      "fair": 8.15,
      "stars": 1,
@@ -735,7 +731,7 @@
     "fun": {
      "market": "htft_a",
      "label": "Sporting mène à la mi-temps et gagne le match",
-     "p": 0.2969,
+     "p": 0.2968,
      "prob": 30,
      "fair": 3.37,
      "stars": 1
@@ -744,7 +740,7 @@
      {
       "market": "scw",
       "label": "Luis Suárez marque et Sporting gagne",
-      "p": 0.2897,
+      "p": 0.2896,
       "prob": 29,
       "fair": 3.45,
       "stars": 1,
@@ -755,7 +751,7 @@
      {
       "market": "wa_nil",
       "label": "Sporting gagne sans encaisser de but",
-      "p": 0.2864,
+      "p": 0.2862,
       "prob": 29,
       "fair": 3.49,
       "stars": 1
@@ -26894,7 +26890,7 @@
  },
  "second": {
   "foot": {
-   "ok": 9,
+   "ok": 7,
    "elo": {
     "tur.1": 702,
     "ger.1": 658,
