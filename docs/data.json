@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T00:46+01:00",
+ "generated": "2026-11-03T01:11+01:00",
  "date": "2026-11-03",
  "nhl_date": "2026-11-02",
  "foot": [
@@ -3448,8 +3448,8 @@
    "league": "NHL",
    "kickoff": "2026-11-03T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Boston Bruins",
    "away": "Vegas Golden Knights",
    "rec_h": "10-4-1 · 1e Atlantic · 1 victoire de suite",
@@ -3776,7 +3776,7 @@
     "fun": {
      "market": "a2",
      "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-     "p": 0.3606,
+     "p": 0.3607,
      "prob": 36,
      "fair": 2.77,
      "stars": 1
@@ -3793,7 +3793,7 @@
      {
       "market": "wa_o65",
       "label": "Vegas Golden Knights gagne et plus de 6,5 buts",
-      "p": 0.2434,
+      "p": 0.2433,
       "prob": 24,
       "fair": 4.11,
       "stars": 1
@@ -3839,8 +3839,8 @@
    "league": "NHL",
    "kickoff": "2026-11-03T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Florida Panthers",
    "away": "Detroit Red Wings",
    "rec_h": "8-4-2 · 5e Atlantic · 3 victoires de suite",
@@ -3852,7 +3852,7 @@
    "pA": 36,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.36,
-   "xgA": 2.97,
+   "xgA": 2.98,
    "total": 6.3,
    "scores": [
     "3-2",
@@ -4140,7 +4140,6 @@
     "Florida Panthers : 44 buts marqués et 39 encaissés en 14 matchs.",
     "Detroit Red Wings : 41 buts marqués et 43 encaissés en 14 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Detroit Red Wings : John Gibson (86,0 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Florida Panthers est favori (56 % en comptant la prolongation).",
@@ -4150,7 +4149,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6063,
+     "p": 0.6064,
      "prob": 61,
      "fair": 1.65,
      "stars": 3,
@@ -4167,7 +4166,7 @@
     "fun": {
      "market": "h2",
      "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
-     "p": 0.3619,
+     "p": 0.3618,
      "prob": 36,
      "fair": 2.76,
      "stars": 1
@@ -23819,7 +23818,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 4,
+   "ok": 2,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89593 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
