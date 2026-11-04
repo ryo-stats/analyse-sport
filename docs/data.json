@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T15:28+01:00",
+ "generated": "2026-11-04T15:53+01:00",
  "date": "2026-11-04",
  "nhl_date": "2026-11-04",
  "foot": [
@@ -17,45 +17,25 @@
    "form_a": "VVVVV",
    "rank_h": 13,
    "rank_a": 5,
-   "pH": 31,
-   "pD": 24,
-   "pA": 45,
+   "pH": 30,
+   "pD": 29,
+   "pA": 41,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.3,
-   "xgA": 1.63,
+   "xgH": 1.0,
+   "xgA": 1.22,
    "scores": [
     "1-1",
-    "1-2",
-    "0-1"
+    "0-1",
+    "1-0"
    ],
    "scorep": [
-    11,
-    9,
-    9
+    13,
+    13,
+    11
    ],
-   "over25": 56,
-   "btts": 58,
+   "over25": 38,
+   "btts": 45,
    "squad_h": [
-    {
-     "name": "Esteban Lepaul",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Rennes",
-     "goals": 7,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 9,
-      "gp": 7,
-      "g": 7,
-      "a": 0
-     },
-     "p_goal": 35,
-     "p_dec": 36,
-     "pid": "323850",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
     {
      "name": "Sebastian Szymanski",
      "pos": "Milieu",
@@ -70,11 +50,12 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 21,
-     "p_dec": 27,
+     "p_goal": 17,
+     "p_dec": 22,
      "pid": "243844",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Boulaye Dia",
@@ -90,11 +71,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 22,
+     "p_goal": 17,
+     "p_dec": 17,
      "pid": "282381",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adrien Thomasson",
@@ -110,31 +92,33 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 12,
-     "p_dec": 23,
+     "p_goal": 9,
+     "p_dec": 18,
      "pid": "173266",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Przemyslaw Frankowski",
-     "pos": "Milieu",
+     "name": "Mousa Al-Tamari",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Rennes",
-     "goals": 1,
-     "assists": 2,
+     "goals": 0,
+     "assists": 1,
      "apps": 9,
      "l10": {
       "n": 9,
       "gp": 9,
-      "g": 1,
-      "a": 2
+      "g": 0,
+      "a": 1
      },
-     "p_goal": 7,
-     "p_dec": 19,
-     "pid": "190806",
+     "p_goal": 2,
+     "p_dec": 8,
+     "pid": "257489",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Valentin Rongier",
@@ -150,11 +134,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 7,
-     "p_dec": 10,
+     "p_goal": 2,
+     "p_dec": 2,
      "pid": "207136",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Charlie Cresswell",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Rennes",
+     "goals": 0,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 9,
+      "gp": 9,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 1,
+     "p_dec": 6,
+     "pid": "307713",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -172,71 +178,33 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 38,
-     "p_dec": 45,
+     "p_goal": 10,
+     "p_dec": 13,
      "pid": "344692",
      "stats_league": "gre.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
-     "name": "Joel Roca",
-     "pos": "Milieu",
+     "name": "Panagiotis Retsos",
+     "pos": "Défenseur",
      "side": "a",
      "team": "Olympiacos",
-     "goals": 2,
+     "goals": 1,
      "assists": 0,
      "apps": 7,
      "l10": {
       "n": 9,
       "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 17,
-     "p_dec": 19,
-     "pid": "333232",
-     "stats_league": "gre.1",
-     "season": 2026
-    },
-    {
-     "name": "Marius Mouandilmadji",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Olympiacos",
-     "goals": 2,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 9,
-      "gp": 5,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 17,
-     "p_dec": 18,
-     "pid": "276831",
-     "stats_league": "gre.1",
-     "season": 2026
-    },
-    {
-     "name": "Chiquinho",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Olympiacos",
-     "goals": 1,
-     "assists": 2,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 8,
       "g": 1,
-      "a": 2
+      "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 27,
-     "pid": "275935",
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "233973",
      "stats_league": "gre.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Manolis Saliakas",
@@ -252,31 +220,75 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 9,
-     "p_dec": 16,
+     "p_goal": 6,
+     "p_dec": 13,
      "pid": "202696",
      "stats_league": "gre.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Gelson Martins",
-     "pos": "Milieu",
+     "name": "David Carmo",
+     "pos": "Défenseur",
      "side": "a",
      "team": "Olympiacos",
      "goals": 1,
      "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 9,
+      "gp": 3,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "236301",
+     "stats_league": "gre.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Leon Bailey",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Olympiacos",
+     "goals": 1,
+     "assists": 0,
+     "apps": 2,
+     "l10": {
+      "n": 9,
+      "gp": 2,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 6,
+     "pid": "224809",
+     "stats_league": "gre.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Chiquinho",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Olympiacos",
+     "goals": 1,
+     "assists": 2,
      "apps": 8,
      "l10": {
       "n": 9,
       "gp": 8,
       "g": 1,
-      "a": 0
+      "a": 2
      },
-     "p_goal": 9,
-     "p_dec": 11,
-     "pid": "215319",
+     "p_goal": 2,
+     "p_dec": 7,
+     "pid": "275935",
      "stats_league": "gre.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -284,93 +296,98 @@
     "Olympiacos : 5e, 9 points, 4 buts marqués et 1 encaissé en 3 matchs.",
     "Rennes : 20 buts marqués et 19 encaissés sur ses 9 derniers matchs de championnat.",
     "Olympiacos : 15 buts marqués et 4 encaissés sur ses 9 derniers matchs de championnat.",
+    "Rennes : attaque revue à la baisse (−23 %) d'après la compo officielle (Esteban Lepaul ne commence pas).",
+    "Olympiacos : attaque revue à la baisse (−25 %) d'après la compo officielle (Joel Roca, Marius Mouandilmadji, Jota Silva ne commencent pas).",
+    "Compositions officielles prises en compte : Esteban Lepaul (absent), Jota Silva (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
-   "reading": "Olympiacos est favori sans écraser le match (45 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Rennes (13e) : place de barrage. Olympiacos (5e) : top 8, qualification directe pour les 8es.",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire Olympiacos",
-     "p": 0.4522,
-     "prob": 45,
-     "fair": 2.21,
+     "p": 0.4119,
+     "prob": 41,
+     "fair": 2.43,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0923,
-     "prob": 9,
-     "fair": 10.84,
+     "label": "Score exact 0-1",
+     "p": 0.1322,
+     "prob": 13,
+     "fair": 7.56,
      "stars": 1,
-     "value": "1-2"
+     "value": "0-1"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3371,
-     "prob": 34,
-     "fair": 2.97,
+     "market": "wa_nil",
+     "label": "Olympiacos gagne sans encaisser de but",
+     "p": 0.2592,
+     "prob": 26,
+     "fair": 3.86,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_o25",
-      "label": "Olympiacos gagne et plus de 2,5 buts",
-      "p": 0.2941,
-      "prob": 29,
-      "fair": 3.4,
+      "market": "htft_a",
+      "label": "Olympiacos mène à la mi-temps et gagne le match",
+      "p": 0.2394,
+      "prob": 24,
+      "fair": 4.18,
       "stars": 1
      },
      {
-      "market": "htft_a",
-      "label": "Olympiacos mène à la mi-temps et gagne le match",
-      "p": 0.2753,
-      "prob": 28,
-      "fair": 3.63,
+      "market": "wa_by1",
+      "label": "Olympiacos gagne d'un seul but",
+      "p": 0.2316,
+      "prob": 23,
+      "fair": 4.32,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Jota Silva marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "label": "Leon Bailey marque",
+     "p": 0.06,
+     "prob": 6,
+     "fair": 16.67,
      "stars": 1,
-     "player": "Jota Silva",
+     "player": "Leon Bailey",
      "team": "Olympiacos",
-     "pid": "344692",
+     "lineup": "start",
+     "pid": "224809",
      "stats_league": "gre.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 9 matchs · Olympiacos favori (45 %) · 1,6 buts attendus pour Olympiacos"
+     "why": "1 but et 0 passe en 2 matchs · titulaire · Olympiacos annoncé gagnant (41 %) · 1,2 but attendu pour Olympiacos"
     },
     "decisive": {
      "market": "dec",
-     "label": "Jota Silva buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "label": "Leon Bailey buteur ou passeur",
+     "p": 0.06,
+     "prob": 6,
+     "fair": 16.67,
      "stars": 1,
-     "player": "Jota Silva",
+     "player": "Leon Bailey",
      "team": "Olympiacos",
      "base": [
-      9,
-      5,
-      1
+      2,
+      1,
+      0
      ],
-     "pid": "344692",
+     "lineup": "start",
+     "pid": "224809",
      "stats_league": "gre.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 9 matchs · Olympiacos favori (45 %) · 1,6 buts attendus pour Olympiacos"
+     "why": "1 but et 0 passe en 2 matchs · titulaire · Olympiacos annoncé gagnant (41 %) · 1,2 but attendu pour Olympiacos"
     },
     "held": {
      "market": "N2",
      "label": "Nul ou Olympiacos",
-     "p": 0.6948,
-     "prob": 69,
-     "fair": 1.44,
+     "p": 0.6989,
+     "prob": 70,
+     "fair": 1.43,
      "stars": 3,
      "why": "9 derniers matchs : Rennes 20 marqués / 19 encaissés · Olympiacos 15 / 4",
      "note": "l'analyse et le marché des paris ne désignent pas le même favori"
