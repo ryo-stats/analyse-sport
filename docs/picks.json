@@ -36076,7 +36076,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915551|exact|": {
   "match": "foot-401915551",
@@ -36100,7 +36100,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915383|N2|": {
   "match": "foot-401915383",
@@ -37334,102 +37334,6 @@
   ],
   "result": null
  },
- "nhl-2026020247|win_a|": {
-  "match": "nhl-2026020247",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-11-05",
-  "home": "Buffalo Sabres",
-  "away": "Ottawa Senators",
-  "market": "win_a",
-  "label": "Victoire Ottawa Senators",
-  "p": 0.5575,
-  "stars": 2,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "nhl-2026020247|point|Tim Stützle": {
-  "match": "nhl-2026020247",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-11-05",
-  "home": "Buffalo Sabres",
-  "away": "Ottawa Senators",
-  "market": "point",
-  "label": "Tim Stützle : au moins 1 point",
-  "p": 0.63,
-  "stars": 3,
-  "player": "Tim Stützle",
-  "pid_player": 8482116,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "nhl-2026020247|goal|Drake Batherson": {
-  "match": "nhl-2026020247",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-11-05",
-  "home": "Buffalo Sabres",
-  "away": "Ottawa Senators",
-  "market": "goal",
-  "label": "Drake Batherson marque",
-  "p": 0.34,
-  "stars": 1,
-  "player": "Drake Batherson",
-  "pid_player": 8480208,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "scorer"
-  ],
-  "result": null
- },
- "nhl-2026020247|a2|": {
-  "match": "nhl-2026020247",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-11-05",
-  "home": "Buffalo Sabres",
-  "away": "Ottawa Senators",
-  "market": "a2",
-  "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-  "p": 0.3645,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "nhl-2026020248|win_h|": {
   "match": "nhl-2026020248",
   "sport": "nhl",
@@ -37439,7 +37343,7 @@
   "away": "Chicago Blackhawks",
   "market": "win_h",
   "label": "Victoire Florida Panthers",
-  "p": 0.6931,
+  "p": 0.6908,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -37464,7 +37368,7 @@
   "away": "Chicago Blackhawks",
   "market": "point",
   "label": "Matthew Tkachuk : au moins 1 point",
-  "p": 0.73,
+  "p": 0.72,
   "stars": 4,
   "player": "Matthew Tkachuk",
   "pid_player": 8479314,
@@ -37488,7 +37392,7 @@
   "away": "Chicago Blackhawks",
   "market": "goal",
   "label": "Sam Reinhart marque",
-  "p": 0.42,
+  "p": 0.41,
   "stars": 1,
   "player": "Sam Reinhart",
   "pid_player": 8477933,
@@ -37512,7 +37416,7 @@
   "away": "Chicago Blackhawks",
   "market": "wh_o65",
   "label": "Florida Panthers gagne et plus de 6,5 buts",
-  "p": 0.3492,
+  "p": 0.3431,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -37536,8 +37440,8 @@
   "away": "San Jose Sharks",
   "market": "win_h",
   "label": "Victoire Los Angeles Kings",
-  "p": 0.6274,
-  "stars": 3,
+  "p": 0.5996,
+  "stars": 2,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -37600,30 +37504,6 @@
   ],
   "result": null
  },
- "nhl-2026020249|wh_o55|": {
-  "match": "nhl-2026020249",
-  "sport": "nhl",
-  "league": "NHL",
-  "date": "2026-11-05",
-  "home": "Los Angeles Kings",
-  "away": "San Jose Sharks",
-  "market": "wh_o55",
-  "label": "Los Angeles Kings gagne et plus de 5,5 buts",
-  "p": 0.3806,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "nhl-2026020250|win_h|": {
   "match": "nhl-2026020250",
   "sport": "nhl",
@@ -37633,7 +37513,7 @@
   "away": "Calgary Flames",
   "market": "win_h",
   "label": "Victoire Seattle Kraken",
-  "p": 0.5563,
+  "p": 0.5514,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -37658,7 +37538,7 @@
   "away": "Calgary Flames",
   "market": "point",
   "label": "Jordan Eberle : au moins 1 point",
-  "p": 0.5,
+  "p": 0.52,
   "stars": 2,
   "player": "Jordan Eberle",
   "pid_player": 8474586,
@@ -37682,7 +37562,7 @@
   "away": "Calgary Flames",
   "market": "goal",
   "label": "Jordan Eberle marque",
-  "p": 0.26,
+  "p": 0.27,
   "stars": 1,
   "player": "Jordan Eberle",
   "pid_player": 8474586,
@@ -37706,7 +37586,7 @@
   "away": "Calgary Flames",
   "market": "h2",
   "label": "Seattle Kraken gagne par 2 buts d'écart ou plus",
-  "p": 0.3499,
+  "p": 0.3532,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -37743,7 +37623,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915551|dec|Leon Bailey": {
   "match": "foot-401915551",
@@ -37795,7 +37675,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401915382|scorer|Mason Greenwood": {
   "match": "foot-401915382",
@@ -37870,6 +37750,198 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020247|o55|": {
+  "match": "nhl-2026020247",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Buffalo Sabres",
+  "away": "Ottawa Senators",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6783,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020247|win_h|": {
+  "match": "nhl-2026020247",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Buffalo Sabres",
+  "away": "Ottawa Senators",
+  "market": "win_h",
+  "label": "Victoire Buffalo Sabres",
+  "p": 0.5427,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020247|point|Tage Thompson": {
+  "match": "nhl-2026020247",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Buffalo Sabres",
+  "away": "Ottawa Senators",
+  "market": "point",
+  "label": "Tage Thompson : au moins 1 point",
+  "p": 0.63,
+  "stars": 3,
+  "player": "Tage Thompson",
+  "pid_player": 8479420,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020247|goal|Tage Thompson": {
+  "match": "nhl-2026020247",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Buffalo Sabres",
+  "away": "Ottawa Senators",
+  "market": "goal",
+  "label": "Tage Thompson marque",
+  "p": 0.4,
+  "stars": 1,
+  "player": "Tage Thompson",
+  "pid_player": 8479420,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020247|wh_o55|": {
+  "match": "nhl-2026020247",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Buffalo Sabres",
+  "away": "Ottawa Senators",
+  "market": "wh_o55",
+  "label": "Buffalo Sabres gagne et plus de 5,5 buts",
+  "p": 0.3717,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020249|o55|": {
+  "match": "nhl-2026020249",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Los Angeles Kings",
+  "away": "San Jose Sharks",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6254,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020249|h2|": {
+  "match": "nhl-2026020249",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Los Angeles Kings",
+  "away": "San Jose Sharks",
+  "market": "h2",
+  "label": "Los Angeles Kings gagne par 2 buts d'écart ou plus",
+  "p": 0.3991,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020250|o55|": {
+  "match": "nhl-2026020250",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-05",
+  "home": "Seattle Kraken",
+  "away": "Calgary Flames",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6159,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
   ],
   "result": null
  }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T18:01+01:00",
+ "generated": "2026-11-04T18:26+01:00",
  "date": "2026-11-04",
  "nhl_date": "2026-11-04",
  "foot": [
@@ -9,14 +9,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-04T15:30:00+00:00",
    "time": "16:30",
-   "state": "in",
+   "state": "post",
    "score": "0-0",
    "home": "Rennes",
    "away": "Olympiacos",
-   "form_h": "DVNDV",
-   "form_a": "VVVVV",
-   "rank_h": 13,
-   "rank_a": 5,
+   "form_h": "NDVND",
+   "form_a": "NVVVV",
+   "rank_h": 12,
+   "rank_a": 1,
    "pH": 30,
    "pD": 29,
    "pA": 41,
@@ -37,6 +37,26 @@
    "btts": 45,
    "squad_h": [
     {
+     "name": "Esteban Lepaul",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Rennes",
+     "goals": 7,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 7,
+      "a": 0
+     },
+     "p_goal": 28,
+     "p_dec": 29,
+     "pid": "323850",
+     "stats_league": "fra.1",
+     "season": 2026
+    },
+    {
      "name": "Sebastian Szymanski",
      "pos": "Milieu",
      "side": "h",
@@ -54,8 +74,7 @@
      "p_dec": 22,
      "pid": "243844",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Boulaye Dia",
@@ -75,8 +94,7 @@
      "p_dec": 17,
      "pid": "282381",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Adrien Thomasson",
@@ -96,29 +114,27 @@
      "p_dec": 18,
      "pid": "173266",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Mousa Al-Tamari",
-     "pos": "Attaquant",
+     "name": "Przemyslaw Frankowski",
+     "pos": "Milieu",
      "side": "h",
      "team": "Rennes",
-     "goals": 0,
-     "assists": 1,
+     "goals": 1,
+     "assists": 2,
      "apps": 9,
      "l10": {
       "n": 9,
       "gp": 9,
-      "g": 0,
-      "a": 1
+      "g": 1,
+      "a": 2
      },
-     "p_goal": 2,
-     "p_dec": 8,
-     "pid": "257489",
+     "p_goal": 5,
+     "p_dec": 15,
+     "pid": "190806",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Valentin Rongier",
@@ -134,33 +150,11 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 2,
+     "p_goal": 5,
+     "p_dec": 8,
      "pid": "207136",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Charlie Cresswell",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Rennes",
-     "goals": 0,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 1,
-     "p_dec": 6,
-     "pid": "307713",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -178,12 +172,71 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 13,
+     "p_goal": 30,
+     "p_dec": 36,
      "pid": "344692",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
+    },
+    {
+     "name": "Joel Roca",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Olympiacos",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 9,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 13,
+     "p_dec": 14,
+     "pid": "333232",
+     "stats_league": "gre.1",
+     "season": 2026
+    },
+    {
+     "name": "Marius Mouandilmadji",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Olympiacos",
+     "goals": 2,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 9,
+      "gp": 5,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 13,
+     "p_dec": 14,
+     "pid": "276831",
+     "stats_league": "gre.1",
+     "season": 2026
+    },
+    {
+     "name": "Chiquinho",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Olympiacos",
+     "goals": 1,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 9,
+      "gp": 8,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 7,
+     "p_dec": 21,
+     "pid": "275935",
+     "stats_league": "gre.1",
+     "season": 2026
     },
     {
      "name": "Panagiotis Retsos",
@@ -203,104 +256,38 @@
      "p_dec": 8,
      "pid": "233973",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Manolis Saliakas",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Olympiacos",
-     "goals": 1,
-     "assists": 1,
-     "apps": 4,
-     "l10": {
-      "n": 9,
-      "gp": 4,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 6,
-     "p_dec": 13,
-     "pid": "202696",
-     "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "David Carmo",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Olympiacos",
-     "goals": 1,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 9,
-      "gp": 3,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 6,
-     "p_dec": 7,
-     "pid": "236301",
-     "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Leon Bailey",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Olympiacos",
-     "goals": 1,
-     "assists": 0,
-     "apps": 2,
-     "l10": {
-      "n": 9,
-      "gp": 2,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 6,
-     "p_dec": 6,
-     "pid": "224809",
-     "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Chiquinho",
+     "name": "Gelson Martins",
      "pos": "Milieu",
      "side": "a",
      "team": "Olympiacos",
      "goals": 1,
-     "assists": 2,
+     "assists": 0,
      "apps": 8,
      "l10": {
       "n": 9,
       "gp": 8,
       "g": 1,
-      "a": 2
+      "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 7,
-     "pid": "275935",
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "215319",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Rennes : 13e, 5 points, 4 buts marqués et 3 encaissés en 3 matchs.",
-    "Olympiacos : 5e, 9 points, 4 buts marqués et 1 encaissé en 3 matchs.",
+    "Rennes : 12e, 6 points, 4 buts marqués et 3 encaissés en 4 matchs.",
+    "Olympiacos : 1er, 10 points, 4 buts marqués et 1 encaissé en 4 matchs.",
     "Rennes : 20 buts marqués et 19 encaissés sur ses 9 derniers matchs de championnat.",
     "Olympiacos : 15 buts marqués et 4 encaissés sur ses 9 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Esteban Lepaul (absent), Jota Silva (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Rennes (13e) : place de barrage. Olympiacos (5e) : top 8, qualification directe pour les 8es.",
+   "stakes": "Rennes (12e) : place de barrage. Olympiacos (1er) : top 8, qualification directe pour les 8es.",
    "picks": {
     "winner": {
      "market": "2",
@@ -347,38 +334,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Leon Bailey marque",
-     "p": 0.06,
-     "prob": 6,
-     "fair": 16.67,
+     "label": "Jota Silva marque",
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
-     "player": "Leon Bailey",
+     "player": "Jota Silva",
      "team": "Olympiacos",
-     "lineup": "start",
-     "pid": "224809",
+     "pid": "344692",
      "stats_league": "gre.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 2 matchs · titulaire · Olympiacos annoncé gagnant (41 %) · 1,2 but attendu pour Olympiacos"
+     "why": "5 buts et 1 passe en 9 matchs · Olympiacos annoncé gagnant (41 %) · 1,2 but attendu pour Olympiacos"
     },
     "decisive": {
      "market": "dec",
-     "label": "Leon Bailey buteur ou passeur",
-     "p": 0.06,
-     "prob": 6,
-     "fair": 16.67,
+     "label": "Jota Silva buteur ou passeur",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
-     "player": "Leon Bailey",
+     "player": "Jota Silva",
      "team": "Olympiacos",
      "base": [
-      2,
-      1,
-      0
+      9,
+      5,
+      1
      ],
-     "lineup": "start",
-     "pid": "224809",
+     "pid": "344692",
      "stats_league": "gre.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 2 matchs · titulaire · Olympiacos annoncé gagnant (41 %) · 1,2 but attendu pour Olympiacos"
+     "why": "5 buts et 1 passe en 9 matchs · Olympiacos annoncé gagnant (41 %) · 1,2 but attendu pour Olympiacos"
     },
     "held": {
      "market": "N2",
@@ -3907,22 +3892,22 @@
    "away": "Ottawa Senators",
    "rec_h": "7-4-3 · 7e Atlantic · 3 victoires de suite",
    "rec_a": "9-6-1 · 4e Atlantic · 1 défaite de suite",
-   "winH": 44,
-   "winA": 56,
-   "pH": 36,
-   "pD": 16,
-   "pA": 48,
-   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.02,
-   "xgA": 3.42,
-   "total": 6.4,
+   "winH": 54,
+   "winA": 46,
+   "pH": 43,
+   "pD": 22,
+   "pA": 35,
+   "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
+   "xgH": 3.56,
+   "xgA": 3.28,
+   "total": 6.8,
    "scores": [
-    "2-3",
     "3-2",
-    "3-4"
+    "4-3",
+    "2-3"
    ],
    "scorep": [
-    5,
+    4,
     4,
     4
    ],
@@ -3960,9 +3945,9 @@
       "g": 8,
       "a": 5
      },
-     "p_goal": 35,
-     "p_point": 57,
-     "p_assist": 33
+     "p_goal": 40,
+     "p_point": 63,
+     "p_assist": 38
     },
     {
      "name": "Jason Zucker",
@@ -3981,9 +3966,9 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 24,
-     "p_point": 41,
-     "p_assist": 21
+     "p_goal": 27,
+     "p_point": 46,
+     "p_assist": 25
     },
     {
      "name": "Jack Quinn",
@@ -4002,9 +3987,9 @@
       "g": 6,
       "a": 6
      },
-     "p_goal": 22,
-     "p_point": 45,
-     "p_assist": 28
+     "p_goal": 26,
+     "p_point": 50,
+     "p_assist": 32
     },
     {
      "name": "Josh Doan",
@@ -4023,9 +4008,9 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 20,
-     "p_point": 37,
-     "p_assist": 21
+     "p_goal": 23,
+     "p_point": 42,
+     "p_assist": 24
     },
     {
      "name": "Rasmus Dahlin",
@@ -4044,9 +4029,9 @@
       "g": 1,
       "a": 6
      },
-     "p_goal": 17,
-     "p_point": 53,
-     "p_assist": 43
+     "p_goal": 20,
+     "p_point": 59,
+     "p_assist": 48
     },
     {
      "name": "Josh Norris",
@@ -4065,9 +4050,9 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 17,
-     "p_point": 37,
-     "p_assist": 23
+     "p_goal": 20,
+     "p_point": 42,
+     "p_assist": 27
     }
    ],
    "squad_a": [
@@ -4088,9 +4073,9 @@
       "g": 6,
       "a": 8
      },
-     "p_goal": 34,
-     "p_point": 59,
-     "p_assist": 38
+     "p_goal": 33,
+     "p_point": 58,
+     "p_assist": 37
     },
     {
      "name": "Tim Stützle",
@@ -4109,9 +4094,9 @@
       "g": 4,
       "a": 7
      },
-     "p_goal": 33,
-     "p_point": 63,
-     "p_assist": 44
+     "p_goal": 32,
+     "p_point": 61,
+     "p_assist": 43
     },
     {
      "name": "Dylan Cozens",
@@ -4130,9 +4115,9 @@
       "g": 4,
       "a": 4
      },
-     "p_goal": 26,
-     "p_point": 49,
-     "p_assist": 30
+     "p_goal": 25,
+     "p_point": 48,
+     "p_assist": 29
     },
     {
      "name": "Shane Pinto",
@@ -4151,9 +4136,9 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 26,
-     "p_point": 46,
-     "p_assist": 26
+     "p_goal": 25,
+     "p_point": 44,
+     "p_assist": 25
     },
     {
      "name": "Jake Sanderson",
@@ -4172,30 +4157,30 @@
       "g": 1,
       "a": 9
      },
-     "p_goal": 17,
-     "p_point": 56,
-     "p_assist": 46
+     "p_goal": 16,
+     "p_point": 54,
+     "p_assist": 45
     },
     {
-     "name": "Michael Amadio",
+     "name": "Claude Giroux",
      "pos": "Ailier",
-     "cur": "4 buts, 3 passes en 16",
+     "cur": "3 buts, 7 passes en 16",
      "new": false,
      "side": "a",
      "team": "Ottawa Senators",
-     "goals": 4,
-     "assists": 3,
+     "goals": 3,
+     "assists": 7,
      "gp": 16,
-     "pid": 8478020,
+     "pid": 8473512,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 2,
-      "a": 1
+      "g": 3,
+      "a": 3
      },
-     "p_goal": 17,
-     "p_point": 34,
-     "p_assist": 20
+     "p_goal": 16,
+     "p_point": 42,
+     "p_assist": 31
     }
    ],
    "ctx": [
@@ -4206,84 +4191,79 @@
     "Gardien probable de Ottawa Senators : Samuel Ersson (86,6 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 3 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "Ottawa Senators est favori (56 % en comptant la prolongation).",
+   "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
    "stakes": "Match de division (Atlantic) : battre un rival direct compte double au classement. Début de saison (14 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892644",
    "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6783,
+     "prob": 68,
+     "fair": 1.47,
+     "stars": 3,
+     "why": "10 derniers matchs : Buffalo Sabres 5 victoires · Ottawa Senators 4"
+    },
     "winner": {
-     "market": "win_a",
-     "label": "Victoire Ottawa Senators",
-     "p": 0.5575,
-     "prob": 56,
-     "fair": 1.79,
+     "market": "win_h",
+     "label": "Victoire Buffalo Sabres",
+     "p": 0.5427,
+     "prob": 54,
+     "fair": 1.84,
      "stars": 2
     },
     "fun": {
-     "market": "a2",
-     "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3645,
-     "prob": 36,
-     "fair": 2.74,
+     "market": "wh_o55",
+     "label": "Buffalo Sabres gagne et plus de 5,5 buts",
+     "p": 0.3717,
+     "prob": 37,
+     "fair": 2.69,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_o55",
-      "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.3508,
+      "market": "h2",
+      "label": "Buffalo Sabres gagne par 2 buts d'écart ou plus",
+      "p": 0.3516,
       "prob": 35,
-      "fair": 2.85,
+      "fair": 2.84,
       "stars": 1
      },
      {
-      "market": "wa_o65",
-      "label": "Ottawa Senators gagne et plus de 6,5 buts",
-      "p": 0.287,
-      "prob": 29,
-      "fair": 3.48,
+      "market": "wh_o65",
+      "label": "Buffalo Sabres gagne et plus de 6,5 buts",
+      "p": 0.3135,
+      "prob": 31,
+      "fair": 3.19,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
-     "label": "Tim Stützle : au moins 1 point",
+     "label": "Tage Thompson : au moins 1 point",
      "p": 0.63,
      "prob": 63,
      "fair": 1.59,
      "stars": 3,
-     "player": "Tim Stützle",
-     "pid": 8482116,
-     "team": "Ottawa Senators",
-     "why": "9 buts et 12 passes en 16 matchs · 10 derniers matchs : 4 buts, 7 passes · Ottawa Senators favori (56 %) · 3,4 buts attendus pour Ottawa Senators"
+     "player": "Tage Thompson",
+     "pid": 8479420,
+     "team": "Buffalo Sabres",
+     "why": "10 buts et 7 passes en 14 matchs · 10 derniers matchs : 8 buts, 5 passes · Buffalo Sabres favori (54 %) · 3,6 buts attendus pour Buffalo Sabres"
     },
     "scorer": {
      "market": "goal",
-     "label": "Drake Batherson marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "label": "Tage Thompson marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
-     "player": "Drake Batherson",
-     "pid": 8480208,
-     "team": "Ottawa Senators",
-     "why": "9 buts et 9 passes en 16 matchs · 10 derniers matchs : 6 buts, 8 passes · Ottawa Senators favori (56 %) · 3,4 buts attendus pour Ottawa Senators"
-    },
-    "held": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.6218,
-     "prob": 62,
-     "fair": 1.61,
-     "stars": 3,
-     "why": "10 derniers matchs : Buffalo Sabres 5 victoires · Ottawa Senators 4",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+     "player": "Tage Thompson",
+     "pid": 8479420,
+     "team": "Buffalo Sabres",
+     "why": "10 buts et 7 passes en 14 matchs · 10 derniers matchs : 8 buts, 5 passes · Buffalo Sabres favori (54 %) · 3,6 buts attendus pour Buffalo Sabres"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
-   },
+   "second": null,
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
@@ -4303,17 +4283,17 @@
    "rec_a": "4-10-1 · 8e Central · 1 défaite de suite",
    "winH": 69,
    "winA": 31,
-   "pH": 62,
-   "pD": 14,
-   "pA": 24,
-   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.82,
-   "xgA": 2.55,
-   "total": 6.4,
+   "pH": 56,
+   "pD": 22,
+   "pA": 22,
+   "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
+   "xgH": 3.75,
+   "xgA": 2.52,
+   "total": 6.3,
    "scores": [
     "3-2",
     "4-2",
-    "4-3"
+    "3-1"
    ],
    "scorep": [
     5,
@@ -4354,7 +4334,7 @@
       "g": 8,
       "a": 5
      },
-     "p_goal": 42,
+     "p_goal": 41,
      "p_point": 66,
      "p_assist": 41
     },
@@ -4375,9 +4355,9 @@
       "g": 8,
       "a": 8
      },
-     "p_goal": 40,
-     "p_point": 67,
-     "p_assist": 43
+     "p_goal": 39,
+     "p_point": 66,
+     "p_assist": 42
     },
     {
      "name": "Carter Verhaeghe",
@@ -4397,8 +4377,8 @@
       "a": 4
      },
      "p_goal": 35,
-     "p_point": 59,
-     "p_assist": 36
+     "p_point": 58,
+     "p_assist": 35
     },
     {
      "name": "Sam Bennett",
@@ -4418,7 +4398,7 @@
       "a": 0
      },
      "p_goal": 31,
-     "p_point": 55,
+     "p_point": 54,
      "p_assist": 33
     },
     {
@@ -4439,8 +4419,8 @@
       "a": 16
      },
      "p_goal": 28,
-     "p_point": 73,
-     "p_assist": 62
+     "p_point": 72,
+     "p_assist": 61
     },
     {
      "name": "Anton Lundell",
@@ -4459,9 +4439,9 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 28,
+     "p_goal": 27,
      "p_point": 51,
-     "p_assist": 32
+     "p_assist": 31
     }
    ],
    "squad_a": [
@@ -4482,7 +4462,7 @@
       "g": 4,
       "a": 6
      },
-     "p_goal": 32,
+     "p_goal": 31,
      "p_point": 62,
      "p_assist": 44
     },
@@ -4504,8 +4484,8 @@
       "a": 2
      },
      "p_goal": 27,
-     "p_point": 41,
-     "p_assist": 17
+     "p_point": 40,
+     "p_assist": 16
     },
     {
      "name": "Tyler Bertuzzi",
@@ -4546,7 +4526,7 @@
       "a": 1
      },
      "p_goal": 18,
-     "p_point": 41,
+     "p_point": 40,
      "p_assist": 27
     },
     {
@@ -4588,7 +4568,7 @@
       "a": 2
      },
      "p_goal": 16,
-     "p_point": 37,
+     "p_point": 36,
      "p_assist": 24
     }
    ],
@@ -4605,76 +4585,73 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Florida Panthers",
-     "p": 0.6931,
+     "p": 0.6908,
      "prob": 69,
-     "fair": 1.44,
+     "fair": 1.45,
      "stars": 3,
      "why": "10 derniers matchs : Florida Panthers 6 victoires · Chicago Blackhawks 3"
     },
     "winner": {
      "market": "win_h",
      "label": "Victoire Florida Panthers",
-     "p": 0.6931,
+     "p": 0.6908,
      "prob": 69,
-     "fair": 1.44,
+     "fair": 1.45,
      "stars": 3,
      "why": "10 derniers matchs : Florida Panthers 6 victoires · Chicago Blackhawks 3"
     },
     "fun": {
      "market": "wh_o65",
      "label": "Florida Panthers gagne et plus de 6,5 buts",
-     "p": 0.3492,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.3431,
+     "prob": 34,
+     "fair": 2.91,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "h3",
       "label": "Florida Panthers gagne par 3 buts d'écart ou plus",
-      "p": 0.3191,
-      "prob": 32,
-      "fair": 3.13,
+      "p": 0.3123,
+      "prob": 31,
+      "fair": 3.2,
       "stars": 1
      },
      {
       "market": "wh_by1",
       "label": "Florida Panthers gagne d'un seul but (prolongation comprise)",
-      "p": 0.1959,
-      "prob": 20,
-      "fair": 5.1,
+      "p": 0.209,
+      "prob": 21,
+      "fair": 4.79,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "Matthew Tkachuk : au moins 1 point",
-     "p": 0.73,
-     "prob": 73,
-     "fair": 1.37,
+     "p": 0.72,
+     "prob": 72,
+     "fair": 1.39,
      "stars": 4,
      "player": "Matthew Tkachuk",
      "pid": 8479314,
      "team": "Florida Panthers",
-     "why": "4 buts et 17 passes en 15 matchs · 10 derniers matchs : 1 but, 16 passes · Florida Panthers favori (69 %) · 3,8 buts attendus pour Florida Panthers"
+     "why": "4 buts et 17 passes en 15 matchs · 10 derniers matchs : 1 but, 16 passes · Florida Panthers favori (69 %) · 3,7 buts attendus pour Florida Panthers"
     },
     "scorer": {
      "market": "goal",
      "label": "Sam Reinhart marque",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.41,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1,
      "player": "Sam Reinhart",
      "pid": 8477933,
      "team": "Florida Panthers",
-     "why": "8 buts et 5 passes en 15 matchs · 10 derniers matchs : 8 buts, 5 passes · Florida Panthers favori (69 %) · 3,8 buts attendus pour Florida Panthers"
+     "why": "8 buts et 5 passes en 15 matchs · 10 derniers matchs : 8 buts, 5 passes · Florida Panthers favori (69 %) · 3,7 buts attendus pour Florida Panthers"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/FLA_dark.svg",
@@ -4692,15 +4669,15 @@
    "away": "San Jose Sharks",
    "rec_h": "4-7-2 · 7e Pacific · 1 défaite de suite",
    "rec_a": "7-8-1 · 5e Pacific · 2 défaites de suite",
-   "winH": 63,
-   "winA": 37,
-   "pH": 55,
-   "pD": 16,
+   "winH": 60,
+   "winA": 40,
+   "pH": 48,
+   "pD": 22,
    "pA": 30,
-   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.52,
-   "xgA": 2.72,
-   "total": 6.2,
+   "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
+   "xgH": 3.55,
+   "xgA": 2.92,
+   "total": 6.5,
    "scores": [
     "3-2",
     "4-2",
@@ -4708,7 +4685,7 @@
    ],
    "scorep": [
     5,
-    5,
+    4,
     4
    ],
    "goalie_h": {
@@ -4747,7 +4724,7 @@
      },
      "p_goal": 38,
      "p_point": 66,
-     "p_assist": 44
+     "p_assist": 45
     },
     {
      "name": "Quinton Byfield",
@@ -4766,7 +4743,7 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 27,
+     "p_goal": 28,
      "p_point": 50,
      "p_assist": 30
     },
@@ -4810,7 +4787,7 @@
      },
      "p_goal": 20,
      "p_point": 43,
-     "p_assist": 28
+     "p_assist": 29
     },
     {
      "name": "Scott Laughton",
@@ -4873,9 +4850,9 @@
       "g": 3,
       "a": 5
      },
-     "p_goal": 33,
-     "p_point": 65,
-     "p_assist": 48
+     "p_goal": 35,
+     "p_point": 68,
+     "p_assist": 50
     },
     {
      "name": "Will Smith",
@@ -4894,9 +4871,9 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 25,
-     "p_point": 48,
-     "p_assist": 30
+     "p_goal": 26,
+     "p_point": 50,
+     "p_assist": 32
     },
     {
      "name": "Tyler Toffoli",
@@ -4915,9 +4892,9 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 18,
-     "p_point": 40,
-     "p_assist": 26
+     "p_goal": 19,
+     "p_point": 42,
+     "p_assist": 28
     },
     {
      "name": "Collin Graf",
@@ -4936,9 +4913,9 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 17,
-     "p_point": 34,
-     "p_assist": 20
+     "p_goal": 18,
+     "p_point": 36,
+     "p_assist": 21
     },
     {
      "name": "Adam Gaudette",
@@ -4957,9 +4934,9 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 17,
-     "p_point": 27,
-     "p_assist": 11
+     "p_goal": 18,
+     "p_point": 28,
+     "p_assist": 12
     },
     {
      "name": "Michael Misa",
@@ -4978,9 +4955,9 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 16,
-     "p_point": 34,
-     "p_assist": 21
+     "p_goal": 17,
+     "p_point": 36,
+     "p_assist": 22
     }
    ],
    "ctx": [
@@ -4989,51 +4966,50 @@
     "Aucune des deux équipes n'a joué hier.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "Los Angeles Kings est favori (63 % en comptant la prolongation).",
+   "reading": "Los Angeles Kings est favori (60 % en comptant la prolongation).",
    "stakes": "Match de division (Pacific) : battre un rival direct compte double au classement. Début de saison (13 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892646",
    "picks": {
     "main": {
-     "market": "win_h",
-     "label": "Victoire Los Angeles Kings",
-     "p": 0.6274,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6254,
      "prob": 63,
-     "fair": 1.59,
+     "fair": 1.6,
      "stars": 3,
      "why": "10 derniers matchs : Los Angeles Kings 4 victoires · San Jose Sharks 4"
     },
     "winner": {
      "market": "win_h",
      "label": "Victoire Los Angeles Kings",
-     "p": 0.6274,
-     "prob": 63,
-     "fair": 1.59,
-     "stars": 3,
-     "why": "10 derniers matchs : Los Angeles Kings 4 victoires · San Jose Sharks 4"
+     "p": 0.5996,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 2
     },
     "fun": {
-     "market": "wh_o55",
-     "label": "Los Angeles Kings gagne et plus de 5,5 buts",
-     "p": 0.3806,
-     "prob": 38,
-     "fair": 2.63,
+     "market": "h2",
+     "label": "Los Angeles Kings gagne par 2 buts d'écart ou plus",
+     "p": 0.3991,
+     "prob": 40,
+     "fair": 2.51,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o65",
-      "label": "Los Angeles Kings gagne et plus de 6,5 buts",
-      "p": 0.3052,
-      "prob": 31,
-      "fair": 3.28,
+      "market": "wh_o55",
+      "label": "Los Angeles Kings gagne et plus de 5,5 buts",
+      "p": 0.3841,
+      "prob": 38,
+      "fair": 2.6,
       "stars": 1
      },
      {
-      "market": "h3",
-      "label": "Los Angeles Kings gagne par 3 buts d'écart ou plus",
-      "p": 0.2557,
-      "prob": 26,
-      "fair": 3.91,
+      "market": "wh_o65",
+      "label": "Los Angeles Kings gagne et plus de 6,5 buts",
+      "p": 0.3147,
+      "prob": 31,
+      "fair": 3.18,
       "stars": 1
      }
     ],
@@ -5047,7 +5023,7 @@
      "player": "Artemi Panarin",
      "pid": 8478550,
      "team": "Los Angeles Kings",
-     "why": "8 buts et 5 passes en 13 matchs · 10 derniers matchs : 6 buts, 4 passes · Los Angeles Kings favori (63 %) · 3,5 buts attendus pour Los Angeles Kings"
+     "why": "8 buts et 5 passes en 13 matchs · 10 derniers matchs : 6 buts, 4 passes · Los Angeles Kings favori (60 %) · 3,5 buts attendus pour Los Angeles Kings"
     },
     "scorer": {
      "market": "goal",
@@ -5059,13 +5035,10 @@
      "player": "Artemi Panarin",
      "pid": 8478550,
      "team": "Los Angeles Kings",
-     "why": "8 buts et 5 passes en 13 matchs · 10 derniers matchs : 6 buts, 4 passes · Los Angeles Kings favori (63 %) · 3,5 buts attendus pour Los Angeles Kings"
+     "why": "8 buts et 5 passes en 13 matchs · 10 derniers matchs : 6 buts, 4 passes · Los Angeles Kings favori (60 %) · 3,5 buts attendus pour Los Angeles Kings"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg",
@@ -5083,23 +5056,23 @@
    "away": "Calgary Flames",
    "rec_h": "8-5-1 · 3e Pacific · 1 défaite de suite",
    "rec_a": "7-8-0 · 6e Pacific · 1 victoire de suite",
-   "winH": 56,
-   "winA": 44,
-   "pH": 47,
-   "pD": 17,
-   "pA": 36,
-   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.14,
-   "xgA": 2.81,
-   "total": 6.0,
+   "winH": 55,
+   "winA": 45,
+   "pH": 44,
+   "pD": 22,
+   "pA": 34,
+   "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
+   "xgH": 3.36,
+   "xgA": 3.04,
+   "total": 6.4,
    "scores": [
     "3-2",
     "2-3",
-    "4-2"
+    "4-3"
    ],
    "scorep": [
     5,
-    5,
+    4,
     4
    ],
    "goalie_h": {
@@ -5120,27 +5093,6 @@
    },
    "squad_h": [
     {
-     "name": "Jordan Eberle",
-     "pos": "Ailier",
-     "cur": "4 buts, 6 passes en 14",
-     "new": false,
-     "side": "h",
-     "team": "Seattle Kraken",
-     "goals": 4,
-     "assists": 6,
-     "gp": 14,
-     "pid": 8474586,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 4
-     },
-     "p_goal": 26,
-     "p_point": 50,
-     "p_assist": 32
-    },
-    {
      "name": "Mackie Samoskevich",
      "pos": "Ailier",
      "cur": "6 buts, 4 passes en 13",
@@ -5157,9 +5109,30 @@
       "g": 4,
       "a": 4
      },
-     "p_goal": 26,
-     "p_point": 47,
-     "p_assist": 26
+     "p_goal": 28,
+     "p_point": 49,
+     "p_assist": 28
+    },
+    {
+     "name": "Jordan Eberle",
+     "pos": "Ailier",
+     "cur": "4 buts, 6 passes en 14",
+     "new": false,
+     "side": "h",
+     "team": "Seattle Kraken",
+     "goals": 4,
+     "assists": 6,
+     "gp": 14,
+     "pid": 8474586,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 4
+     },
+     "p_goal": 27,
+     "p_point": 52,
+     "p_assist": 33
     },
     {
      "name": "Bobby McMann",
@@ -5178,9 +5151,9 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 25,
-     "p_point": 40,
-     "p_assist": 19
+     "p_goal": 26,
+     "p_point": 42,
+     "p_assist": 20
     },
     {
      "name": "Matty Beniers",
@@ -5199,9 +5172,9 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 21,
-     "p_point": 45,
-     "p_assist": 29
+     "p_goal": 22,
+     "p_point": 47,
+     "p_assist": 31
     },
     {
      "name": "Frederick Gaudreau",
@@ -5220,9 +5193,9 @@
       "g": 6,
       "a": 3
      },
-     "p_goal": 19,
-     "p_point": 39,
-     "p_assist": 23
+     "p_goal": 21,
+     "p_point": 41,
+     "p_assist": 25
     },
     {
      "name": "Brandon Montour",
@@ -5241,9 +5214,9 @@
       "g": 3,
       "a": 5
      },
-     "p_goal": 18,
-     "p_point": 44,
-     "p_assist": 32
+     "p_goal": 19,
+     "p_point": 47,
+     "p_assist": 33
     }
    ],
    "squad_a": [
@@ -5264,9 +5237,9 @@
       "g": 5,
       "a": 7
      },
-     "p_goal": 24,
-     "p_point": 47,
-     "p_assist": 29
+     "p_goal": 26,
+     "p_point": 49,
+     "p_assist": 31
     },
     {
      "name": "Morgan Frost",
@@ -5285,9 +5258,9 @@
       "g": 2,
       "a": 5
      },
-     "p_goal": 23,
-     "p_point": 44,
-     "p_assist": 26
+     "p_goal": 25,
+     "p_point": 46,
+     "p_assist": 28
     },
     {
      "name": "Matvei Gridin",
@@ -5306,9 +5279,9 @@
       "g": 5,
       "a": 4
      },
-     "p_goal": 22,
-     "p_point": 46,
-     "p_assist": 31
+     "p_goal": 23,
+     "p_point": 49,
+     "p_assist": 33
     },
     {
      "name": "Matt Coronato",
@@ -5327,9 +5300,9 @@
       "g": 2,
       "a": 9
      },
-     "p_goal": 20,
-     "p_point": 49,
-     "p_assist": 36
+     "p_goal": 21,
+     "p_point": 52,
+     "p_assist": 39
     },
     {
      "name": "Ryan Strome",
@@ -5348,9 +5321,9 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 19,
-     "p_point": 39,
-     "p_assist": 24
+     "p_goal": 20,
+     "p_point": 42,
+     "p_assist": 26
     },
     {
      "name": "Aydar Suniev",
@@ -5369,9 +5342,9 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 19,
-     "p_point": 32,
-     "p_assist": 15
+     "p_goal": 20,
+     "p_point": 35,
+     "p_assist": 16
     }
    ],
    "ctx": [
@@ -5381,83 +5354,79 @@
     "Gardien probable de Calgary Flames : Dustin Wolf (86,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "Seattle Kraken est favori (56 % en comptant la prolongation).",
+   "reading": "Seattle Kraken est favori (55 % en comptant la prolongation).",
    "stakes": "Match de division (Pacific) : battre un rival direct compte double au classement. Début de saison (14 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892647",
    "picks": {
     "main": {
-     "market": "win_h",
-     "label": "Victoire Seattle Kraken",
-     "p": 0.5563,
-     "prob": 56,
-     "fair": 1.8,
-     "stars": 2,
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6159,
+     "prob": 62,
+     "fair": 1.62,
+     "stars": 3,
      "why": "10 derniers matchs : Seattle Kraken 6 victoires · Calgary Flames 7"
     },
     "winner": {
      "market": "win_h",
      "label": "Victoire Seattle Kraken",
-     "p": 0.5563,
-     "prob": 56,
-     "fair": 1.8,
-     "stars": 2,
-     "why": "10 derniers matchs : Seattle Kraken 6 victoires · Calgary Flames 7"
+     "p": 0.5514,
+     "prob": 55,
+     "fair": 1.81,
+     "stars": 2
     },
     "fun": {
      "market": "h2",
      "label": "Seattle Kraken gagne par 2 buts d'écart ou plus",
-     "p": 0.3499,
+     "p": 0.3532,
      "prob": 35,
-     "fair": 2.86,
+     "fair": 2.83,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o55",
       "label": "Seattle Kraken gagne et plus de 5,5 buts",
-      "p": 0.3083,
-      "prob": 31,
-      "fair": 3.24,
+      "p": 0.3443,
+      "prob": 34,
+      "fair": 2.9,
       "stars": 1
      },
      {
       "market": "wh_o65",
       "label": "Seattle Kraken gagne et plus de 6,5 buts",
-      "p": 0.2444,
-      "prob": 24,
-      "fair": 4.09,
+      "p": 0.2821,
+      "prob": 28,
+      "fair": 3.55,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "Jordan Eberle : au moins 1 point",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Jordan Eberle",
      "pid": 8474586,
      "team": "Seattle Kraken",
-     "why": "4 buts et 6 passes en 14 matchs · 10 derniers matchs : 2 buts, 4 passes · Seattle Kraken favori (56 %) · 3,1 buts attendus pour Seattle Kraken"
+     "why": "4 buts et 6 passes en 14 matchs · 10 derniers matchs : 2 buts, 4 passes · Seattle Kraken favori (55 %) · 3,4 buts attendus pour Seattle Kraken"
     },
     "scorer": {
      "market": "goal",
      "label": "Jordan Eberle marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
      "stars": 1,
      "player": "Jordan Eberle",
      "pid": 8474586,
      "team": "Seattle Kraken",
-     "why": "4 buts et 6 passes en 14 matchs · 10 derniers matchs : 2 buts, 4 passes · Seattle Kraken favori (56 %) · 3,1 buts attendus pour Seattle Kraken"
+     "why": "4 buts et 6 passes en 14 matchs · 10 derniers matchs : 2 buts, 4 passes · Seattle Kraken favori (55 %) · 3,4 buts attendus pour Seattle Kraken"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
    "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
@@ -5466,15 +5435,15 @@
  ],
  "bilan": {
   "foot": {
-   "n": 232,
+   "n": 233,
    "fav_rate": 62,
    "fav_expected": 53,
-   "brier": 0.527,
+   "brier": 0.528,
    "brier_naive": 0.667,
    "vs_mkt": {
-    "n": 61,
-    "model": 0.552,
-    "mkt": 0.555
+    "n": 62,
+    "model": 0.556,
+    "mkt": 0.56
    },
    "bins": [
     {
@@ -5485,9 +5454,9 @@
     },
     {
      "range": "40-50 %",
-     "n": 69,
+     "n": 70,
      "announced": 45,
-     "actual": 52
+     "actual": 51
     },
     {
      "range": "50-60 %",
@@ -5548,21 +5517,21 @@
    ]
   },
   "picks": {
-   "n": 1072,
+   "n": 1074,
    "rate": 56,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1072,
+     "n": 1074,
      "ok": 600,
      "rate": 56,
      "expected": 52
     },
     "foot": {
-     "n": 670,
+     "n": 672,
      "ok": 366,
-     "rate": 55,
+     "rate": 54,
      "expected": 51
     },
     "nhl": {
@@ -5574,13 +5543,13 @@
    },
    "fun": {
     "all": {
-     "n": 422,
+     "n": 424,
      "ok": 123,
      "rate": 29,
      "expected": 28
     },
     "foot": {
-     "n": 312,
+     "n": 314,
      "ok": 72,
      "rate": 23,
      "expected": 24
@@ -5596,14 +5565,16 @@
     {
      "date": "2026-11-04",
      "all": {
-      "n": 38,
+      "n": 40,
       "ok": 25,
-      "rate": 66,
-      "expected": 56
+      "rate": 62,
+      "expected": 54
      },
      "foot": {
-      "n": 0,
-      "ok": 0
+      "n": 2,
+      "ok": 0,
+      "rate": 0,
+      "expected": 24
      },
      "nhl": {
       "n": 38,
@@ -5613,14 +5584,16 @@
      },
      "fun": {
       "all": {
-       "n": 11,
+       "n": 13,
        "ok": 4,
-       "rate": 36,
-       "expected": 39
+       "rate": 31,
+       "expected": 36
       },
       "foot": {
-       "n": 0,
-       "ok": 0
+       "n": 2,
+       "ok": 0,
+       "rate": 0,
+       "expected": 20
       },
       "nhl": {
        "n": 11,
@@ -6378,10 +6351,10 @@
     {
      "sport": "foot",
      "league": "Europa League",
-     "n": 72,
+     "n": 74,
      "ok": 34,
-     "rate": 47,
-     "expected": 53
+     "rate": 46,
+     "expected": 52
     },
     {
      "sport": "nhl",
@@ -6395,7 +6368,7 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 460,
+     "n": 462,
      "announced": 35,
      "actual": 35
     },
@@ -6670,6 +6643,58 @@
      "prob": 41,
      "stars": 1,
      "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-04",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915551",
+     "score": "0-0",
+     "match": "Rennes – Olympiacos",
+     "label": "Victoire Olympiacos",
+     "prob": 41,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-04",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915551",
+     "score": "0-0",
+     "match": "Rennes – Olympiacos",
+     "label": "Score exact 0-1",
+     "prob": 13,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-04",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915551",
+     "score": "0-0",
+     "match": "Rennes – Olympiacos",
+     "label": "Leon Bailey marque",
+     "prob": 6,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-04",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915551",
+     "score": "0-0",
+     "match": "Rennes – Olympiacos",
+     "label": "Olympiacos gagne sans encaisser de but",
+     "prob": 26,
+     "stars": 1,
+     "ok": false,
      "fun": true
     },
     {
@@ -25876,11 +25901,11 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 4,
+   "ok": 0,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89934 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 403, 5653 car., début : '<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 403, 5653 car., début : '<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment'"
    }
   }
  }
