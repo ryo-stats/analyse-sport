@@ -1,37 +1,295 @@
 {
- "generated": "2026-11-05T23:55+01:00",
- "date": "2026-11-05",
+ "generated": "2026-11-06T00:35+01:00",
+ "date": "2026-11-06",
  "matches": [
   {
-   "id": "foot-401915534",
+   "id": "foot-401884739",
    "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Milan",
-   "away": "Ferencvaros",
-   "state": "post",
-   "xgH": 1.79,
-   "xgA": 0.99,
-   "pH": 56,
-   "pD": 23,
-   "pA": 21,
-   "edate": "20261105",
+   "league": "Bundesliga",
+   "code": "ger.1",
+   "kickoff": "2026-11-06T19:30:00+00:00",
+   "time": "20:30",
+   "home": "Hamburg",
+   "away": "Gladbach",
+   "state": "pre",
+   "xgH": 1.86,
+   "xgA": 1.56,
+   "pH": 45,
+   "pD": 22,
+   "pA": 33,
+   "edate": "20261106",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Milan ou nul",
-     "p": 0.7924,
-     "prob": 79,
-     "fair": 1.26,
-     "stars": 4,
-     "why": "Derniers matchs : Milan 21 marqués / 12 encaissés · Ferencvaros 9 / 3"
+     "label": "Hamburg ou nul",
+     "p": 0.6732,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3,
+     "why": "8 derniers matchs : Hamburg 7 marqués / 19 encaissés · Gladbach 11 / 22"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Milan",
-     "p": 0.5607,
+     "label": "Victoire Hamburg",
+     "p": 0.4497,
+     "prob": 45,
+     "fair": 2.22,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0883,
+     "prob": 9,
+     "fair": 11.33,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "wh_o25",
+     "label": "Hamburg gagne et plus de 2,5 buts",
+     "p": 0.3319,
+     "prob": 33,
+     "fair": 3.01,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Terem Moffi marque",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
+     "stars": 1,
+     "player": "Terem Moffi",
+     "team": "Hamburg",
+     "pid": "289769",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 8 matchs · Hamburg annoncé gagnant (45 %) · 1,9 buts attendus pour Hamburg"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Terem Moffi buteur ou passeur",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
+     "stars": 1,
+     "player": "Terem Moffi",
+     "team": "Hamburg",
+     "base": [
+      8,
+      2,
+      0
+     ],
+     "pid": "289769",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "2 buts et 0 passe en 8 matchs · Hamburg annoncé gagnant (45 %) · 1,9 buts attendus pour Hamburg"
+    }
+   }
+  },
+  {
+   "id": "foot-401876405",
+   "sport": "foot",
+   "league": "Ligue 1",
+   "code": "fra.1",
+   "kickoff": "2026-11-06T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Toulouse",
+   "away": "Strasbourg",
+   "state": "pre",
+   "xgH": 1.92,
+   "xgA": 1.6,
+   "pH": 46,
+   "pD": 22,
+   "pA": 33,
+   "edate": "20261106",
+   "picks": {
+    "main": {
+     "market": "o25",
+     "label": "Plus de 2,5 buts",
+     "p": 0.6843,
+     "prob": 68,
+     "fair": 1.46,
+     "stars": 3,
+     "why": "9 derniers matchs : Toulouse 12 marqués / 13 encaissés · Strasbourg 17 / 19"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Toulouse",
+     "p": 0.4557,
+     "prob": 46,
+     "fair": 2.19,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0872,
+     "prob": 9,
+     "fair": 11.47,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "wh_o25",
+     "label": "Toulouse gagne et plus de 2,5 buts",
+     "p": 0.3448,
+     "prob": 34,
+     "fair": 2.9,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Casper Tengstedt marque",
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
+     "player": "Casper Tengstedt",
+     "team": "Toulouse",
+     "pid": "306664",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "5 buts et 1 passe en 7 matchs · Toulouse favori (46 %) · 1,9 buts attendus pour Toulouse"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Casper Tengstedt buteur ou passeur",
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "player": "Casper Tengstedt",
+     "team": "Toulouse",
+     "base": [
+      7,
+      5,
+      1
+     ],
+     "pid": "306664",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "why": "5 buts et 1 passe en 7 matchs · Toulouse favori (46 %) · 1,9 buts attendus pour Toulouse"
+    }
+   }
+  },
+  {
+   "id": "foot-401874815",
+   "sport": "foot",
+   "league": "Serie A",
+   "code": "ita.1",
+   "kickoff": "2026-11-06T19:45:00+00:00",
+   "time": "20:45",
+   "home": "Venezia",
+   "away": "Udinese",
+   "state": "pre",
+   "xgH": 1.27,
+   "xgA": 1.28,
+   "pH": 36,
+   "pD": 27,
+   "pA": 37,
+   "edate": "20261106",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Udinese",
+     "p": 0.6363,
+     "prob": 64,
+     "fair": 1.57,
+     "stars": 3,
+     "why": "10 derniers matchs : Venezia 6 marqués / 20 encaissés · Udinese 11 / 23"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Udinese",
+     "p": 0.3688,
+     "prob": 37,
+     "fair": 2.71,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1005,
+     "prob": 10,
+     "fair": 9.95,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "htft_a",
+     "label": "Udinese mène à la mi-temps et gagne le match",
+     "p": 0.2145,
+     "prob": 21,
+     "fair": 4.66,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Jurgen Ekkelenkamp marque",
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
+     "stars": 1,
+     "player": "Jurgen Ekkelenkamp",
+     "team": "Udinese",
+     "pid": "270817",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 10 matchs · Udinese annoncé gagnant (37 %) · 1,3 but attendu pour Udinese"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Jurgen Ekkelenkamp buteur ou passeur",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "Jurgen Ekkelenkamp",
+     "team": "Udinese",
+     "base": [
+      10,
+      3,
+      1
+     ],
+     "pid": "270817",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 10 matchs · Udinese annoncé gagnant (37 %) · 1,3 but attendu pour Udinese"
+    }
+   }
+  },
+  {
+   "id": "foot-401879242",
+   "sport": "foot",
+   "league": "Premier League",
+   "code": "eng.1",
+   "kickoff": "2026-11-06T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Everton",
+   "away": "Coventry",
+   "state": "pre",
+   "xgH": 1.54,
+   "xgA": 0.75,
+   "pH": 56,
+   "pD": 26,
+   "pA": 18,
+   "edate": "20261106",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Everton ou nul",
+     "p": 0.8195,
+     "prob": 82,
+     "fair": 1.22,
+     "stars": 5,
+     "why": "9 derniers matchs : Everton 9 marqués / 9 encaissés · Coventry 9 / 16"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Everton",
+     "p": 0.563,
      "prob": 56,
      "fair": 1.78,
      "stars": 2
@@ -39,1386 +297,138 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1111,
-     "prob": 11,
-     "fair": 9.0,
+     "p": 0.1565,
+     "prob": 16,
+     "fair": 6.39,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Milan mène à la mi-temps et gagne le match",
-     "p": 0.3523,
-     "prob": 35,
-     "fair": 2.84,
+     "market": "wh_nil",
+     "label": "Everton gagne sans encaisser de but",
+     "p": 0.3727,
+     "prob": 37,
+     "fair": 2.68,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Adrien Rabiot marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
-     "stars": 1,
-     "player": "Adrien Rabiot",
-     "team": "Milan",
-     "pid": "176203",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "5 buts et 3 passes en 8 matchs · Milan favori (56 %) · 1,8 buts attendus pour Milan"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Adrien Rabiot buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
-     "stars": 1,
-     "player": "Adrien Rabiot",
-     "team": "Milan",
-     "base": [
-      8,
-      5,
-      3
-     ],
-     "pid": "176203",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "5 buts et 3 passes en 8 matchs · Milan favori (56 %) · 1,8 buts attendus pour Milan"
-    }
-   }
-  },
-  {
-   "id": "foot-401915538",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Anderlecht",
-   "away": "RB Salzburg",
-   "state": "post",
-   "xgH": 0.66,
-   "xgA": 1.15,
-   "pH": 21,
-   "pD": 31,
-   "pA": 48,
-   "edate": "20261105",
-   "picks": {
-    "winner": {
-     "market": "2",
-     "label": "Victoire RB Salzburg",
-     "p": 0.4776,
-     "prob": 48,
-     "fair": 2.09,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1889,
-     "prob": 19,
-     "fair": 5.3,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "RB Salzburg gagne sans encaisser de but",
-     "p": 0.3553,
-     "prob": 36,
-     "fair": 2.81,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Haris Tabakovic marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
-     "stars": 1,
-     "player": "Haris Tabakovic",
-     "team": "RB Salzburg",
-     "pid": "184869",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "why": "7 buts et 0 passe en 9 matchs · RB Salzburg favori (48 %) · 1,2 but attendu pour RB Salzburg"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Haris Tabakovic buteur ou passeur",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
-     "stars": 1,
-     "player": "Haris Tabakovic",
-     "team": "RB Salzburg",
-     "base": [
-      9,
-      7,
-      0
-     ],
-     "pid": "184869",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "why": "7 buts et 0 passe en 9 matchs · RB Salzburg favori (48 %) · 1,2 but attendu pour RB Salzburg"
-    }
-   }
-  },
-  {
-   "id": "foot-401915526",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "C Palace",
-   "away": "Hoffenheim",
-   "state": "post",
-   "xgH": 1.47,
-   "xgA": 1.33,
-   "pH": 41,
-   "pD": 25,
-   "pA": 34,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "C Palace ou nul",
-     "p": 0.6593,
-     "prob": 66,
-     "fair": 1.52,
-     "stars": 3,
-     "why": "Derniers matchs : C Palace 9 marqués / 21 encaissés · Hoffenheim 14 / 16"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire C Palace",
-     "p": 0.4071,
-     "prob": 41,
-     "fair": 2.46,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.0897,
-     "prob": 9,
-     "fair": 11.15,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3076,
-     "prob": 31,
-     "fair": 3.25,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Tyrick Mitchell marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
-     "stars": 1,
-     "player": "Tyrick Mitchell",
-     "team": "C Palace",
-     "pid": "300853",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 9 matchs · C Palace annoncé gagnant (41 %) · 1,5 but attendu pour C Palace"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tyrick Mitchell buteur ou passeur",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
-     "stars": 1,
-     "player": "Tyrick Mitchell",
-     "team": "C Palace",
-     "base": [
-      9,
-      2,
-      0
-     ],
-     "pid": "300853",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 9 matchs · C Palace annoncé gagnant (41 %) · 1,5 but attendu pour C Palace"
-    }
-   }
-  },
-  {
-   "id": "foot-401915536",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Levski Sofia",
-   "away": "Jagiellonia ",
-   "state": "post",
-   "xgH": 1.55,
-   "xgA": 1.03,
-   "pH": 49,
-   "pD": 25,
-   "pA": 25,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Levski Sofia ou nul",
-     "p": 0.7485,
-     "prob": 75,
-     "fair": 1.34,
-     "stars": 4,
-     "why": "3 derniers matchs : Levski Sofia 3 marqués / 3 encaissés · Jagiellonia  4 / 6"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Levski Sofia",
-     "p": 0.494,
-     "prob": 49,
-     "fair": 2.02,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1176,
-     "prob": 12,
-     "fair": 8.51,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "scw",
-     "label": "Reinaldo marque et Levski Sofia gagne",
-     "p": 0.3088,
-     "prob": 31,
-     "fair": 3.24,
-     "stars": 1,
-     "player": "Reinaldo",
-     "team": "Levski Sofia",
-     "side": "h"
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Reinaldo marque",
+     "label": "Thierno Barry marque",
      "p": 0.44,
      "prob": 44,
      "fair": 2.27,
      "stars": 1,
-     "player": "Reinaldo",
-     "team": "Levski Sofia",
-     "pid": "287830",
-     "stats_league": "uefa.europa",
+     "player": "Thierno Barry",
+     "team": "Everton",
+     "pid": "301166",
+     "stats_league": "eng.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 3 matchs · 4 derniers matchs : 2 buts, 1 passe · Levski Sofia favori (49 %) · 1,6 buts attendus pour Levski Sofia"
+     "why": "4 buts et 0 passe en 9 matchs · Everton favori (56 %) · 1,5 buts attendus pour Everton"
     },
     "decisive": {
      "market": "dec",
-     "label": "Reinaldo buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
-     "stars": 2,
-     "player": "Reinaldo",
-     "team": "Levski Sofia",
-     "base": [
-      3,
-      2,
-      1
-     ],
-     "pid": "287830",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 3 matchs · 4 derniers matchs : 2 buts, 1 passe · Levski Sofia favori (49 %) · 1,6 buts attendus pour Levski Sofia"
-    }
-   }
-  },
-  {
-   "id": "foot-401915527",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Lillestrom",
-   "away": "Viktoria Plzen",
-   "state": "post",
-   "xgH": 1.48,
-   "xgA": 1.04,
-   "pH": 47,
-   "pD": 26,
-   "pA": 27,
-   "edate": "20261105",
-   "picks": {
-    "winner": {
-     "market": "1",
-     "label": "Victoire Lillestrom",
-     "p": 0.4707,
-     "prob": 47,
-     "fair": 2.12,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1187,
-     "prob": 12,
-     "fair": 8.43,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Lillestrom mène à la mi-temps et gagne le match",
-     "p": 0.2833,
-     "prob": 28,
-     "fair": 3.53,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Vá marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
-     "stars": 1,
-     "player": "Vá",
-     "team": "Lillestrom",
-     "pid": "255219",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "why": "8 buts et 5 passes en 25 matchs · 10 derniers matchs : 5 buts, 0 passe · Lillestrom favori (47 %) · 1,5 but attendu pour Lillestrom"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Vá buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
-     "stars": 1,
-     "player": "Vá",
-     "team": "Lillestrom",
-     "base": [
-      25,
-      8,
-      5
-     ],
-     "pid": "255219",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "why": "8 buts et 5 passes en 25 matchs · 10 derniers matchs : 5 buts, 0 passe · Lillestrom favori (47 %) · 1,5 but attendu pour Lillestrom"
-    }
-   }
-  },
-  {
-   "id": "foot-401915535",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "NEC",
-   "away": "Omonia",
-   "state": "post",
-   "xgH": 1.24,
-   "xgA": 0.84,
-   "pH": 46,
-   "pD": 29,
-   "pA": 25,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "NEC ou nul",
-     "p": 0.748,
-     "prob": 75,
-     "fair": 1.34,
-     "stars": 4,
-     "why": "Derniers matchs : NEC 16 marqués / 17 encaissés · Omonia 5 / 4"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire NEC",
-     "p": 0.4552,
-     "prob": 46,
-     "fair": 2.2,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1544,
-     "prob": 15,
-     "fair": 6.48,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "NEC gagne sans encaisser de but",
-     "p": 0.306,
-     "prob": 31,
-     "fair": 3.27,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Tjaronn Chery marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
-     "stars": 1,
-     "player": "Tjaronn Chery",
-     "team": "NEC",
-     "pid": "116893",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "why": "4 buts et 2 passes en 9 matchs · 10 derniers matchs : 4 buts, 2 passes (joué 8 sur 10) · NEC favori (46 %) · 1,2 but attendu pour NEC"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tjaronn Chery buteur ou passeur",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
-     "stars": 1,
-     "player": "Tjaronn Chery",
-     "team": "NEC",
-     "base": [
-      9,
-      4,
-      2
-     ],
-     "pid": "116893",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "why": "4 buts et 2 passes en 9 matchs · 10 derniers matchs : 4 buts, 2 passes (joué 8 sur 10) · NEC favori (46 %) · 1,2 but attendu pour NEC"
-    }
-   }
-  },
-  {
-   "id": "foot-401915537",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Real Sociedad",
-   "away": "Lyon",
-   "state": "post",
-   "xgH": 1.19,
-   "xgA": 1.08,
-   "pH": 38,
-   "pD": 28,
-   "pA": 33,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Real Sociedad ou nul",
-     "p": 0.6691,
-     "prob": 67,
-     "fair": 1.49,
-     "stars": 3,
-     "why": "Derniers matchs : Real Sociedad 20 marqués / 19 encaissés · Lyon 15 / 7"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Real Sociedad",
-     "p": 0.3843,
-     "prob": 38,
-     "fair": 2.6,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1223,
-     "prob": 12,
-     "fair": 8.18,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Real Sociedad gagne sans encaisser de but",
-     "p": 0.2354,
-     "prob": 24,
-     "fair": 4.25,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Luka Sucic marque",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
-     "stars": 1,
-     "player": "Luka Sucic",
-     "team": "Real Sociedad",
-     "pid": "306263",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "4 buts et 0 passe en 10 matchs · 10 derniers matchs : 4 buts, 0 passe (joué 9 sur 10) · Real Sociedad annoncé gagnant (38 %) · 1,2 but attendu pour Real Sociedad"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Luka Sucic buteur ou passeur",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
-     "stars": 1,
-     "player": "Luka Sucic",
-     "team": "Real Sociedad",
-     "base": [
-      10,
-      4,
-      0
-     ],
-     "pid": "306263",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "4 buts et 0 passe en 10 matchs · 10 derniers matchs : 4 buts, 0 passe (joué 9 sur 10) · Real Sociedad annoncé gagnant (38 %) · 1,2 but attendu pour Real Sociedad"
-    }
-   }
-  },
-  {
-   "id": "foot-401915528",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Sparta",
-   "away": "Bournemouth",
-   "state": "post",
-   "xgH": 1.08,
-   "xgA": 2.02,
-   "pH": 19,
-   "pD": 23,
-   "pA": 58,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Bournemouth",
-     "p": 0.8101,
-     "prob": 81,
-     "fair": 1.23,
-     "stars": 5,
-     "why": "Saison : Sparta 5 marqués / 3 encaissés · Bournemouth 8 / 1"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Bournemouth",
-     "p": 0.5841,
-     "prob": 58,
-     "fair": 1.71,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0992,
-     "prob": 10,
-     "fair": 10.08,
-     "stars": 1,
-     "value": "1-2"
-    },
-    "fun": {
-     "market": "wa_o25",
-     "label": "Bournemouth gagne et plus de 2,5 buts",
-     "p": 0.4084,
-     "prob": 41,
-     "fair": 2.45,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Marcus Tavernier marque",
+     "label": "Thierno Barry buteur ou passeur",
      "p": 0.47,
      "prob": 47,
      "fair": 2.13,
      "stars": 1,
-     "player": "Marcus Tavernier",
-     "team": "Bournemouth",
-     "pid": "243364",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (58 %) · 2,0 buts attendus pour Bournemouth"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Marcus Tavernier buteur ou passeur",
-     "p": 0.51,
-     "prob": 51,
-     "fair": 1.96,
-     "stars": 2,
-     "player": "Marcus Tavernier",
-     "team": "Bournemouth",
+     "player": "Thierno Barry",
+     "team": "Everton",
      "base": [
       9,
-      5,
+      4,
       0
      ],
-     "pid": "243364",
+     "pid": "301166",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (58 %) · 2,0 buts attendus pour Bournemouth"
+     "why": "4 buts et 0 passe en 9 matchs · Everton favori (56 %) · 1,5 buts attendus pour Everton"
     }
    }
   },
   {
-   "id": "foot-401915529",
+   "id": "foot-401882809",
    "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
+   "league": "LaLiga",
+   "code": "esp.1",
+   "kickoff": "2026-11-06T20:00:00+00:00",
    "time": "21:00",
-   "home": "AZ Alkmaar",
-   "away": "Juventus",
-   "state": "post",
-   "xgH": 0.81,
-   "xgA": 0.76,
-   "pH": 34,
-   "pD": 36,
-   "pA": 31,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "u25",
-     "label": "Moins de 2,5 buts",
-     "p": 0.7908,
-     "prob": 79,
-     "fair": 1.26,
-     "stars": 4,
-     "why": "10 derniers matchs : AZ Alkmaar 18 marqués / 13 encaissés · Juventus 13 / 10"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire AZ Alkmaar",
-     "p": 0.3355,
-     "prob": 34,
-     "fair": 2.98,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1683,
-     "prob": 17,
-     "fair": 5.94,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "AZ Alkmaar gagne sans encaisser de but",
-     "p": 0.2594,
-     "prob": 26,
-     "fair": 3.86,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Ro-Zangelo Daal marque",
-     "p": 0.17,
-     "prob": 17,
-     "fair": 5.88,
-     "stars": 1,
-     "player": "Ro-Zangelo Daal",
-     "team": "AZ Alkmaar",
-     "pid": "338775",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · AZ Alkmaar annoncé gagnant (34 %) · 0,8 but attendu pour AZ Alkmaar"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Ro-Zangelo Daal buteur ou passeur",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
-     "stars": 1,
-     "player": "Ro-Zangelo Daal",
-     "team": "AZ Alkmaar",
-     "base": [
-      11,
-      5,
-      0
-     ],
-     "pid": "338775",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · AZ Alkmaar annoncé gagnant (34 %) · 0,8 but attendu pour AZ Alkmaar"
-    }
-   }
-  },
-  {
-   "id": "foot-401915533",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Leverkusen",
-   "away": "Marseille",
-   "state": "post",
-   "xgH": 1.89,
-   "xgA": 1.5,
-   "pH": 47,
-   "pD": 22,
-   "pA": 31,
-   "edate": "20261105",
+   "home": "Sevilla",
+   "away": "Alavés",
+   "state": "pre",
+   "xgH": 1.8,
+   "xgA": 1.34,
+   "pH": 48,
+   "pD": 23,
+   "pA": 29,
+   "edate": "20261106",
    "picks": {
     "main": {
      "market": "1N",
-     "label": "Leverkusen ou nul",
-     "p": 0.6918,
-     "prob": 69,
-     "fair": 1.45,
-     "stars": 3,
-     "why": "Derniers matchs : Leverkusen 18 marqués / 16 encaissés · Marseille 20 / 13"
+     "label": "Sevilla ou nul",
+     "p": 0.7131,
+     "prob": 71,
+     "fair": 1.4,
+     "stars": 4,
+     "why": "10 derniers matchs : Sevilla 15 marqués / 18 encaissés · Alavés 12 / 17"
     },
     "winner": {
      "market": "1",
-     "label": "Victoire Leverkusen",
-     "p": 0.4695,
-     "prob": 47,
-     "fair": 2.13,
+     "label": "Victoire Sevilla",
+     "p": 0.4828,
+     "prob": 48,
+     "fair": 2.07,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0902,
+     "p": 0.0939,
      "prob": 9,
-     "fair": 11.08,
+     "fair": 10.65,
      "stars": 1,
      "value": "2-1"
-    },
-    "fun": {
-     "market": "wh_o25",
-     "label": "Leverkusen gagne et plus de 2,5 buts",
-     "p": 0.3463,
-     "prob": 35,
-     "fair": 2.89,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Patrik Schick marque",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
-     "player": "Patrik Schick",
-     "team": "Leverkusen",
-     "pid": "212330",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "7 buts et 2 passes en 8 matchs · Leverkusen favori (47 %) · 1,9 buts attendus pour Leverkusen"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Patrik Schick buteur ou passeur",
-     "p": 0.58,
-     "prob": 58,
-     "fair": 1.72,
-     "stars": 2,
-     "player": "Patrik Schick",
-     "team": "Leverkusen",
-     "base": [
-      8,
-      7,
-      2
-     ],
-     "pid": "212330",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "7 buts et 2 passes en 8 matchs · Leverkusen favori (47 %) · 1,9 buts attendus pour Leverkusen"
-    }
-   }
-  },
-  {
-   "id": "foot-401915525",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Benfica",
-   "away": "Lech Poznan",
-   "state": "post",
-   "xgH": 3.0,
-   "xgA": 0.94,
-   "pH": 79,
-   "pD": 13,
-   "pA": 9,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Benfica ou nul",
-     "p": 0.9136,
-     "prob": 91,
-     "fair": 1.09,
-     "stars": 5,
-     "why": "Derniers matchs : Benfica 27 marqués / 8 encaissés · Lech Poznan 1 / 9"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Benfica",
-     "p": 0.7858,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 3-0",
-     "p": 0.0872,
-     "prob": 9,
-     "fair": 11.47,
-     "stars": 1,
-     "value": "3-0"
-    },
-    "fun": {
-     "market": "wh_btts",
-     "label": "Benfica gagne et les deux équipes marquent",
-     "p": 0.4163,
-     "prob": 42,
-     "fair": 2.4,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Vangelis Pavlidis marque",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
-     "stars": 3,
-     "player": "Vangelis Pavlidis",
-     "team": "Benfica",
-     "pid": "220819",
-     "stats_league": "por.1",
-     "season": 2026,
-     "why": "10 buts et 3 passes en 10 matchs · Benfica favori (79 %) · 3,0 buts attendus pour Benfica"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Vangelis Pavlidis buteur ou passeur",
-     "p": 0.76,
-     "prob": 76,
-     "fair": 1.32,
-     "stars": 4,
-     "player": "Vangelis Pavlidis",
-     "team": "Benfica",
-     "base": [
-      10,
-      10,
-      3
-     ],
-     "pid": "220819",
-     "stats_league": "por.1",
-     "season": 2026,
-     "why": "10 buts et 3 passes en 10 matchs · Benfica favori (79 %) · 3,0 buts attendus pour Benfica"
-    }
-   }
-  },
-  {
-   "id": "foot-401915531",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Celta Vigo",
-   "away": "Union SG",
-   "state": "post",
-   "xgH": 0.61,
-   "xgA": 1.06,
-   "pH": 21,
-   "pD": 33,
-   "pA": 46,
-   "edate": "20261105",
-   "picks": {
-    "winner": {
-     "market": "2",
-     "label": "Victoire Union SG",
-     "p": 0.459,
-     "prob": 46,
-     "fair": 2.18,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1991,
-     "prob": 20,
-     "fair": 5.02,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "wa_nil",
-     "label": "Union SG gagne sans encaisser de but",
-     "p": 0.3544,
-     "prob": 35,
-     "fair": 2.82,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Raul Florucz marque",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
-     "stars": 1,
-     "player": "Raul Florucz",
-     "team": "Union SG",
-     "pid": "344857",
-     "stats_league": "bel.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 10 matchs · Union SG favori (46 %) · 1,1 but attendu pour Union SG"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Raul Florucz buteur ou passeur",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
-     "stars": 1,
-     "player": "Raul Florucz",
-     "team": "Union SG",
-     "base": [
-      10,
-      5,
-      0
-     ],
-     "pid": "344857",
-     "stats_league": "bel.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 10 matchs · Union SG favori (46 %) · 1,1 but attendu pour Union SG"
-    }
-   }
-  },
-  {
-   "id": "foot-401915522",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Celtic",
-   "away": "Besiktas",
-   "state": "post",
-   "xgH": 1.74,
-   "xgA": 0.87,
-   "pH": 58,
-   "pD": 23,
-   "pA": 19,
-   "edate": "20261105",
-   "picks": {
-    "winner": {
-     "market": "1",
-     "label": "Victoire Celtic",
-     "p": 0.5794,
-     "prob": 58,
-     "fair": 1.73,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.128,
-     "prob": 13,
-     "fair": 7.81,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Celtic mène à la mi-temps et gagne le match",
-     "p": 0.3639,
-     "prob": 36,
-     "fair": 2.75,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Camilo Durán marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Camilo Durán",
-     "team": "Celtic",
-     "pid": "367591",
-     "stats_league": "sco.1",
-     "season": 2026,
-     "why": "7 buts et 5 passes en 12 matchs · 10 derniers matchs : 7 buts, 4 passes · Celtic favori (58 %) · 1,7 buts attendus pour Celtic"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Camilo Durán buteur ou passeur",
-     "p": 0.57,
-     "prob": 57,
-     "fair": 1.75,
-     "stars": 2,
-     "player": "Camilo Durán",
-     "team": "Celtic",
-     "base": [
-      12,
-      7,
-      5
-     ],
-     "pid": "367591",
-     "stats_league": "sco.1",
-     "season": 2026,
-     "why": "7 buts et 5 passes en 12 matchs · 10 derniers matchs : 7 buts, 4 passes · Celtic favori (58 %) · 1,7 buts attendus pour Celtic"
-    }
-   }
-  },
-  {
-   "id": "foot-401915532",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Hapoel Be'er",
-   "away": "OFI Crete",
-   "state": "post",
-   "xgH": 1.21,
-   "xgA": 1.39,
-   "pH": 33,
-   "pD": 26,
-   "pA": 41,
-   "edate": "20261105",
-   "picks": {
-    "winner": {
-     "market": "2",
-     "label": "Victoire OFI Crete",
-     "p": 0.4121,
-     "prob": 41,
-     "fair": 2.43,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1036,
-     "prob": 10,
-     "fair": 9.65,
-     "stars": 1,
-     "value": "0-1"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.2636,
-     "prob": 26,
-     "fair": 3.79,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Kenan Kodro marque",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
-     "stars": 1,
-     "player": "Kenan Kodro",
-     "team": "OFI Crete",
-     "pid": "208027",
-     "stats_league": "gre.1",
-     "season": 2026,
-     "why": "4 buts et 0 passe en 8 matchs · 9 derniers matchs : 3 buts, 0 passe (joué 8 sur 9) · OFI Crete annoncé gagnant (41 %) · 1,4 but attendu pour OFI Crete"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Kenan Kodro buteur ou passeur",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
-     "stars": 1,
-     "player": "Kenan Kodro",
-     "team": "OFI Crete",
-     "base": [
-      8,
-      4,
-      0
-     ],
-     "pid": "208027",
-     "stats_league": "gre.1",
-     "season": 2026,
-     "why": "4 buts et 0 passe en 8 matchs · 9 derniers matchs : 3 buts, 0 passe (joué 8 sur 9) · OFI Crete annoncé gagnant (41 %) · 1,4 but attendu pour OFI Crete"
-    }
-   }
-  },
-  {
-   "id": "foot-401915524",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Sturm Graz",
-   "away": "NK Celje",
-   "state": "post",
-   "xgH": 2.02,
-   "xgA": 0.8,
-   "pH": 66,
-   "pD": 20,
-   "pA": 14,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Sturm Graz ou nul",
-     "p": 0.8618,
-     "prob": 86,
-     "fair": 1.16,
-     "stars": 5,
-     "why": "Derniers matchs : Sturm Graz 18 marqués / 12 encaissés · NK Celje 2 / 7"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Sturm Graz",
-     "p": 0.6593,
-     "prob": 66,
-     "fair": 1.52,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1221,
-     "prob": 12,
-     "fair": 8.19,
-     "stars": 1,
-     "value": "2-0"
-    },
-    "fun": {
-     "market": "wh_o25",
-     "label": "Sturm Graz gagne et plus de 2,5 buts",
-     "p": 0.4162,
-     "prob": 42,
-     "fair": 2.4,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Oumar Diakité marque",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
-     "stars": 1,
-     "player": "Oumar Diakité",
-     "team": "Sturm Graz",
-     "pid": "329483",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "why": "7 buts et 0 passe en 3 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 6 sur 10) · Sturm Graz favori (66 %) · 2,0 buts attendus pour Sturm Graz"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Oumar Diakité buteur ou passeur",
-     "p": 0.48,
-     "prob": 48,
-     "fair": 2.08,
-     "stars": 1,
-     "player": "Oumar Diakité",
-     "team": "Sturm Graz",
-     "base": [
-      3,
-      7,
-      0
-     ],
-     "pid": "329483",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "why": "7 buts et 0 passe en 3 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 6 sur 10) · Sturm Graz favori (66 %) · 2,0 buts attendus pour Sturm Graz"
-    }
-   }
-  },
-  {
-   "id": "foot-401915523",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Sunderland",
-   "away": "Dinamo Zagreb",
-   "state": "post",
-   "xgH": 1.1,
-   "xgA": 0.99,
-   "pH": 38,
-   "pD": 30,
-   "pA": 32,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Sunderland ou nul",
-     "p": 0.6761,
-     "prob": 68,
-     "fair": 1.48,
-     "stars": 3,
-     "why": "Derniers matchs : Sunderland 7 marqués / 17 encaissés · Dinamo Zagreb 3 / 4"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Sunderland",
-     "p": 0.3762,
+     "p": 0.3845,
      "prob": 38,
-     "fair": 2.66,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1356,
-     "prob": 14,
-     "fair": 7.38,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Sunderland gagne sans encaisser de but",
-     "p": 0.2464,
-     "prob": 25,
-     "fair": 4.06,
+     "fair": 2.6,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Brian Brobbey marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "label": "Isaac Romero marque",
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
-     "player": "Brian Brobbey",
-     "team": "Sunderland",
-     "pid": "282229",
-     "stats_league": "eng.1",
+     "player": "Isaac Romero",
+     "team": "Sevilla",
+     "pid": "365821",
+     "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Sunderland annoncé gagnant (38 %) · 1,1 but attendu pour Sunderland"
+     "why": "3 buts et 1 passe en 9 matchs · 10 derniers matchs : 3 buts, 1 passe (joué 8 sur 10) · Sevilla favori (48 %) · 1,8 buts attendus pour Sevilla"
     },
     "decisive": {
      "market": "dec",
-     "label": "Brian Brobbey buteur ou passeur",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "label": "Isaac Romero buteur ou passeur",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
-     "player": "Brian Brobbey",
-     "team": "Sunderland",
+     "player": "Isaac Romero",
+     "team": "Sevilla",
      "base": [
-      7,
+      9,
       3,
-      0
+      1
      ],
-     "pid": "282229",
-     "stats_league": "eng.1",
+     "pid": "365821",
+     "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Sunderland annoncé gagnant (38 %) · 1,1 but attendu pour Sunderland"
-    }
-   }
-  },
-  {
-   "id": "foot-401915530",
-   "sport": "foot",
-   "league": "Europa League",
-   "code": "uefa.europa",
-   "kickoff": "2026-11-05T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Torreense",
-   "away": "Ararat-Armenia",
-   "state": "post",
-   "xgH": 2.52,
-   "xgA": 1.42,
-   "pH": 61,
-   "pD": 18,
-   "pA": 20,
-   "edate": "20261105",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Torreense ou nul",
-     "p": 0.7971,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 4,
-     "why": "3 derniers matchs : Torreense 4 marqués / 7 encaissés · Ararat-Armenia 2 / 11"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Torreense",
-     "p": 0.6144,
-     "prob": 61,
-     "fair": 1.63,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0879,
-     "prob": 9,
-     "fair": 11.38,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "htft_h",
-     "label": "Torreense mène à la mi-temps et gagne le match",
-     "p": 0.4089,
-     "prob": 41,
-     "fair": 2.45,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Manuel Pozo marque",
-     "p": 0.51,
-     "prob": 51,
-     "fair": 1.96,
-     "stars": 2,
-     "player": "Manuel Pozo",
-     "team": "Torreense",
-     "pid": "359742",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 3 matchs · 4 derniers matchs : 2 buts, 0 passe · Torreense favori (61 %) · 2,5 buts attendus pour Torreense"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Manuel Pozo buteur ou passeur",
-     "p": 0.55,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2,
-     "player": "Manuel Pozo",
-     "team": "Torreense",
-     "base": [
-      3,
-      2,
-      0
-     ],
-     "pid": "359742",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 3 matchs · 4 derniers matchs : 2 buts, 0 passe · Torreense favori (61 %) · 2,5 buts attendus pour Torreense"
+     "why": "3 buts et 1 passe en 9 matchs · 10 derniers matchs : 3 buts, 1 passe (joué 8 sur 10) · Sevilla favori (48 %) · 1,8 buts attendus pour Sevilla"
     }
    }
   },
@@ -1430,7 +440,7 @@
    "time": "01:00",
    "home": "Montréal Canadiens",
    "away": "Utah Mammoth",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.15,
    "xgA": 3.4,
    "pH": 38,
@@ -1499,7 +509,7 @@
    "time": "01:00",
    "home": "Detroit Red Wings",
    "away": "Vegas Golden Knights",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.83,
    "xgA": 2.94,
    "pH": 40,
@@ -1568,7 +578,7 @@
    "time": "01:00",
    "home": "Tampa Bay Lightning",
    "away": "Chicago Blackhawks",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 4.39,
    "xgA": 2.35,
    "pH": 72,
@@ -1630,7 +640,7 @@
    "time": "01:00",
    "home": "New Jersey Devils",
    "away": "St. Louis Blues",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.23,
    "xgA": 2.42,
    "pH": 55,
@@ -1700,7 +710,7 @@
    "time": "01:00",
    "home": "New York Islanders",
    "away": "Carolina Hurricanes",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.49,
    "xgA": 3.83,
    "pH": 23,
@@ -1770,7 +780,7 @@
    "time": "01:00",
    "home": "New York Rangers",
    "away": "Philadelphia Flyers",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.36,
    "xgA": 2.58,
    "pH": 54,
@@ -1840,7 +850,7 @@
    "time": "01:00",
    "home": "Pittsburgh Penguins",
    "away": "Boston Bruins",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.34,
    "xgA": 3.19,
    "pH": 44,
@@ -1909,7 +919,7 @@
    "time": "01:00",
    "home": "Columbus Blue Jackets",
    "away": "Dallas Stars",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.63,
    "xgA": 3.11,
    "pH": 34,
@@ -1979,7 +989,7 @@
    "time": "01:00",
    "home": "Winnipeg Jets",
    "away": "Vancouver Canucks",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.66,
    "xgA": 2.81,
    "pH": 55,
@@ -2183,12 +1193,12 @@
   }
  ],
  "summary": {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "yesterday": {
-   "n": 202,
-   "ok": 92
+   "n": 99,
+   "ok": 32
   },
-  "foot": 17,
+  "foot": 5,
   "nhl": 11,
   "top": [
    {
@@ -2198,16 +1208,16 @@
     "match": "Tampa Bay Lightning – Chicago Blackhawks"
    },
    {
+    "label": "Everton ou nul",
+    "prob": 82,
+    "time": "21:00",
+    "match": "Everton – Coventry"
+   },
+   {
     "label": "Connor McDavid : au moins 1 point",
     "prob": 81,
     "time": "02:00",
     "match": "Edmonton Oilers – Anaheim Ducks"
-   },
-   {
-    "label": "Victoire Tampa Bay Lightning",
-    "prob": 79,
-    "time": "01:00",
-    "match": "Tampa Bay Lightning – Chicago Blackhawks"
    }
   ]
  }
