@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T12:29+01:00",
+ "generated": "2026-11-05T14:22+01:00",
  "date": "2026-11-05",
  "nhl_date": "2026-11-05",
  "foot": [
@@ -2698,23 +2698,23 @@
    "rank_h": 16,
    "rank_a": 4,
    "pH": 14,
-   "pD": 20,
+   "pD": 19,
    "pA": 67,
    "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
-   "xgH": 0.94,
-   "xgA": 2.26,
+   "xgH": 0.92,
+   "xgA": 2.27,
    "scores": [
     "0-2",
     "1-2",
     "0-1"
    ],
    "scorep": [
-    10,
+    11,
     10,
     9
    ],
    "over25": 62,
-   "btts": 55,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Magnus Andersen",
@@ -2827,7 +2827,7 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
+     "p_goal": 15,
      "p_dec": 19,
      "pid": "314790",
      "stats_league": "eng.1",
@@ -2866,7 +2866,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Bournemouth",
-     "p": 0.8632,
+     "p": 0.8643,
      "prob": 86,
      "fair": 1.16,
      "stars": 5,
@@ -2875,46 +2875,43 @@
     "winner": {
      "market": "2",
      "label": "Victoire Bournemouth",
-     "p": 0.6677,
+     "p": 0.6744,
      "prob": 67,
-     "fair": 1.5,
+     "fair": 1.48,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.1041,
-     "prob": 10,
-     "fair": 9.6,
+     "p": 0.1058,
+     "prob": 11,
+     "fair": 9.45,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
-     "market": "scw",
-     "label": "Marcus Tavernier marque et Bournemouth gagne",
-     "p": 0.4194,
-     "prob": 42,
-     "fair": 2.38,
-     "stars": 1,
-     "player": "Marcus Tavernier",
-     "team": "Bournemouth",
-     "side": "a"
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3953,
+     "prob": 40,
+     "fair": 2.53,
+     "stars": 1
     },
     "fun_alt": [
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.3974,
-      "prob": 40,
-      "fair": 2.52,
+      "market": "wa_nil",
+      "label": "Bournemouth gagne sans encaisser de but",
+      "p": 0.356,
+      "prob": 36,
+      "fair": 2.81,
       "stars": 1
      },
      {
-      "market": "wa_nil",
-      "label": "Bournemouth gagne sans encaisser de but",
-      "p": 0.35,
-      "prob": 35,
-      "fair": 2.86,
+      "market": "wa_btts",
+      "label": "Bournemouth gagne et les deux équipes marquent",
+      "p": 0.3206,
+      "prob": 32,
+      "fair": 3.12,
       "stars": 1
      }
     ],
@@ -6606,7 +6603,7 @@
       "a": 2
      },
      "p_goal": 34,
-     "p_point": 55,
+     "p_point": 54,
      "p_assist": 30
     },
     {
@@ -6709,7 +6706,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6378,
+     "p": 0.6375,
      "prob": 64,
      "fair": 1.57,
      "stars": 3,
@@ -6726,7 +6723,7 @@
     "fun": {
      "market": "a2",
      "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
-     "p": 0.3455,
+     "p": 0.3454,
      "prob": 35,
      "fair": 2.89,
      "stars": 1
@@ -6735,7 +6732,7 @@
      {
       "market": "wa_o55",
       "label": "Utah Mammoth gagne et plus de 5,5 buts",
-      "p": 0.3441,
+      "p": 0.344,
       "prob": 34,
       "fair": 2.91,
       "stars": 1
@@ -6743,7 +6740,7 @@
      {
       "market": "wa_o65",
       "label": "Utah Mammoth gagne et plus de 6,5 buts",
-      "p": 0.2843,
+      "p": 0.2841,
       "prob": 28,
       "fair": 3.52,
       "stars": 1
@@ -7099,7 +7096,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5168,
+     "p": 0.5165,
      "prob": 52,
      "fair": 1.94,
      "stars": 2,
@@ -7116,7 +7113,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4065,
+     "p": 0.4062,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -7133,9 +7130,9 @@
      {
       "market": "wa_o55",
       "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
-      "p": 0.2679,
+      "p": 0.2677,
       "prob": 27,
-      "fair": 3.73,
+      "fair": 3.74,
       "stars": 1
      }
     ],
@@ -7560,7 +7557,7 @@
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.23,
    "xgA": 2.42,
-   "total": 5.7,
+   "total": 5.6,
    "scores": [
     "3-2",
     "3-1",
@@ -7857,7 +7854,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire New Jersey Devils",
-     "p": 0.6336,
+     "p": 0.6335,
      "prob": 63,
      "fair": 1.58,
      "stars": 3,
@@ -7866,7 +7863,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire New Jersey Devils",
-     "p": 0.6336,
+     "p": 0.6335,
      "prob": 63,
      "fair": 1.58,
      "stars": 3,
@@ -7875,16 +7872,16 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.384,
+     "p": 0.3837,
      "prob": 38,
-     "fair": 2.6,
+     "fair": 2.61,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o55",
       "label": "New Jersey Devils gagne et plus de 5,5 buts",
-      "p": 0.3249,
+      "p": 0.3248,
       "prob": 32,
       "fair": 3.08,
       "stars": 1
@@ -7892,7 +7889,7 @@
      {
       "market": "wh_o65",
       "label": "New Jersey Devils gagne et plus de 6,5 buts",
-      "p": 0.2478,
+      "p": 0.2476,
       "prob": 25,
       "fair": 4.04,
       "stars": 1
@@ -8249,7 +8246,7 @@
     "main": {
      "market": "win_a",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.6973,
+     "p": 0.6972,
      "prob": 70,
      "fair": 1.43,
      "stars": 3,
@@ -8258,7 +8255,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.6973,
+     "p": 0.6972,
      "prob": 70,
      "fair": 1.43,
      "stars": 3,
@@ -8267,16 +8264,16 @@
     "fun": {
      "market": "wa_o65",
      "label": "Carolina Hurricanes gagne et plus de 6,5 buts",
-     "p": 0.3455,
+     "p": 0.3452,
      "prob": 35,
-     "fair": 2.89,
+     "fair": 2.9,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "a3",
       "label": "Carolina Hurricanes gagne par 3 buts d'écart ou plus",
-      "p": 0.3278,
+      "p": 0.3277,
       "prob": 33,
       "fair": 3.05,
       "stars": 1
@@ -8667,7 +8664,7 @@
      {
       "market": "wh_o55",
       "label": "New York Rangers gagne et plus de 5,5 buts",
-      "p": 0.3505,
+      "p": 0.3503,
       "prob": 35,
       "fair": 2.85,
       "stars": 1
@@ -8675,7 +8672,7 @@
      {
       "market": "wh_o65",
       "label": "New York Rangers gagne et plus de 6,5 buts",
-      "p": 0.2745,
+      "p": 0.2744,
       "prob": 27,
       "fair": 3.64,
       "stars": 1
@@ -9031,7 +9028,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6363,
+     "p": 0.636,
      "prob": 64,
      "fair": 1.57,
      "stars": 3,
@@ -9048,16 +9045,16 @@
     "fun": {
      "market": "wh_o55",
      "label": "Pittsburgh Penguins gagne et plus de 5,5 buts",
-     "p": 0.3362,
+     "p": 0.336,
      "prob": 34,
-     "fair": 2.97,
+     "fair": 2.98,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "h2",
       "label": "Pittsburgh Penguins gagne par 2 buts d'écart ou plus",
-      "p": 0.3308,
+      "p": 0.3307,
       "prob": 33,
       "fair": 3.02,
       "stars": 1
@@ -9065,7 +9062,7 @@
      {
       "market": "wh_o65",
       "label": "Pittsburgh Penguins gagne et plus de 6,5 buts",
-      "p": 0.2787,
+      "p": 0.2786,
       "prob": 28,
       "fair": 3.59,
       "stars": 1
@@ -9212,7 +9209,7 @@
       "g": 0,
       "a": 9
      },
-     "p_goal": 17,
+     "p_goal": 16,
      "p_point": 56,
      "p_assist": 47
     },
@@ -9439,7 +9436,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4013,
+     "p": 0.401,
      "prob": 40,
      "fair": 2.49,
      "stars": 1
@@ -9448,7 +9445,7 @@
      {
       "market": "a2",
       "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
-      "p": 0.3699,
+      "p": 0.3698,
       "prob": 37,
       "fair": 2.7,
       "stars": 1
@@ -9456,7 +9453,7 @@
      {
       "market": "wa_o55",
       "label": "Dallas Stars gagne et plus de 5,5 buts",
-      "p": 0.3006,
+      "p": 0.3005,
       "prob": 30,
       "fair": 3.33,
       "stars": 1
@@ -9831,7 +9828,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Winnipeg Jets gagne et plus de 5,5 buts",
-     "p": 0.4045,
+     "p": 0.4043,
      "prob": 40,
      "fair": 2.47,
      "stars": 1
@@ -9840,15 +9837,15 @@
      {
       "market": "wh_o65",
       "label": "Winnipeg Jets gagne et plus de 6,5 buts",
-      "p": 0.3296,
+      "p": 0.3294,
       "prob": 33,
-      "fair": 3.03,
+      "fair": 3.04,
       "stars": 1
      },
      {
       "market": "h3",
       "label": "Winnipeg Jets gagne par 3 buts d'écart ou plus",
-      "p": 0.2652,
+      "p": 0.2651,
       "prob": 27,
       "fair": 3.77,
       "stars": 1
@@ -10223,7 +10220,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Edmonton Oilers gagne et plus de 5,5 buts",
-     "p": 0.4027,
+     "p": 0.4025,
      "prob": 40,
      "fair": 2.48,
      "stars": 1
@@ -10232,7 +10229,7 @@
      {
       "market": "wh_o65",
       "label": "Edmonton Oilers gagne et plus de 6,5 buts",
-      "p": 0.3278,
+      "p": 0.3276,
       "prob": 33,
       "fair": 3.05,
       "stars": 1
@@ -10240,7 +10237,7 @@
      {
       "market": "h3",
       "label": "Edmonton Oilers gagne par 3 buts d'écart ou plus",
-      "p": 0.2641,
+      "p": 0.264,
       "prob": 26,
       "fair": 3.79,
       "stars": 1
@@ -10256,7 +10253,7 @@
      "player": "Connor McDavid",
      "pid": 8478402,
      "team": "Edmonton Oilers",
-     "why": "9 buts et 31 passes en 16 matchs · 10 derniers matchs : 5 buts, 18 passes · Edmonton Oilers favori (63 %) · 3,7 buts attendus pour Edmonton Oilers"
+     "why": "9 buts et 31 passes en 16 matchs · 10 derniers matchs : 5 buts, 18 passes · Edmonton Oilers favori (63 %) · 3,6 buts attendus pour Edmonton Oilers"
     },
     "scorer": {
      "market": "goal",
@@ -10268,7 +10265,7 @@
      "player": "Leon Draisaitl",
      "pid": 8477934,
      "team": "Edmonton Oilers",
-     "why": "13 buts et 16 passes en 16 matchs · 10 derniers matchs : 9 buts, 9 passes · Edmonton Oilers favori (63 %) · 3,7 buts attendus pour Edmonton Oilers"
+     "why": "13 buts et 16 passes en 16 matchs · 10 derniers matchs : 9 buts, 9 passes · Edmonton Oilers favori (63 %) · 3,6 buts attendus pour Edmonton Oilers"
     }
    },
    "second": {
@@ -10596,7 +10593,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Colorado Avalanche",
-     "p": 0.6695,
+     "p": 0.6694,
      "prob": 67,
      "fair": 1.49,
      "stars": 3,
@@ -10605,7 +10602,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Colorado Avalanche",
-     "p": 0.6695,
+     "p": 0.6694,
      "prob": 67,
      "fair": 1.49,
      "stars": 3,
@@ -10614,7 +10611,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Colorado Avalanche gagne et plus de 5,5 buts",
-     "p": 0.4178,
+     "p": 0.4176,
      "prob": 42,
      "fair": 2.39,
      "stars": 1
@@ -10623,7 +10620,7 @@
      {
       "market": "wh_o65",
       "label": "Colorado Avalanche gagne et plus de 6,5 buts",
-      "p": 0.3354,
+      "p": 0.3352,
       "prob": 34,
       "fair": 2.98,
       "stars": 1
@@ -10631,7 +10628,7 @@
      {
       "market": "h3",
       "label": "Colorado Avalanche gagne par 3 buts d'écart ou plus",
-      "p": 0.2956,
+      "p": 0.2955,
       "prob": 30,
       "fair": 3.38,
       "stars": 1
@@ -32125,14 +32122,60 @@
     "tur.1": 702,
     "gre.1": 518
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "ita.1": {
+     "2026": 100
+    },
+    "uefa.europa": {
+     "2026": 55
+    },
+    "bel.1": {
+     "2026": 90
+    },
+    "aut.1": {
+     "2026": 66
+    },
+    "eng.1": {
+     "2026": 90
+    },
+    "ger.1": {
+     "2026": 72
+    },
+    "nor.1": {
+     "2026": 200
+    },
+    "ned.1": {
+     "2026": 99
+    },
+    "esp.1": {
+     "2026": 109
+    },
+    "fra.1": {
+     "2026": 81
+    },
+    "den.1": {
+     "2026": 78
+    },
+    "por.1": {
+     "2026": 90
+    },
+    "sco.1": {
+     "2026": 69
+    },
+    "tur.1": {
+     "2026": 90
+    },
+    "gre.1": {
+     "2026": 62
+    }
+   },
    "status": "ok"
   },
   "nhl": {
    "ok": 11,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 89980 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90013 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
