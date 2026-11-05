@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T19:52+01:00",
+ "generated": "2026-11-05T20:20+01:00",
  "date": "2026-11-05",
  "matches": [
   {
@@ -701,79 +701,81 @@
    "home": "AZ Alkmaar",
    "away": "Juventus",
    "state": "pre",
-   "xgH": 0.9,
-   "xgA": 1.02,
-   "pH": 31,
-   "pD": 32,
-   "pA": 37,
+   "xgH": 0.81,
+   "xgA": 0.76,
+   "pH": 34,
+   "pD": 36,
+   "pA": 31,
    "edate": "20261105",
    "picks": {
     "main": {
      "market": "u25",
      "label": "Moins de 2,5 buts",
-     "p": 0.701,
-     "prob": 70,
-     "fair": 1.43,
+     "p": 0.7907,
+     "prob": 79,
+     "fair": 1.26,
      "stars": 4,
      "why": "10 derniers matchs : AZ Alkmaar 18 marqués / 13 encaissés · Juventus 13 / 10"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Juventus",
-     "p": 0.3738,
-     "prob": 37,
-     "fair": 2.68,
+     "market": "1",
+     "label": "Victoire AZ Alkmaar",
+     "p": 0.3355,
+     "prob": 34,
+     "fair": 2.98,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1503,
-     "prob": 15,
-     "fair": 6.65,
+     "label": "Score exact 1-0",
+     "p": 0.1683,
+     "prob": 17,
+     "fair": 5.94,
      "stars": 1,
-     "value": "0-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wa_nil",
-     "label": "Juventus gagne sans encaisser de but",
-     "p": 0.2605,
+     "market": "wh_nil",
+     "label": "AZ Alkmaar gagne sans encaisser de but",
+     "p": 0.2593,
      "prob": 26,
-     "fair": 3.84,
+     "fair": 3.86,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Edon Zhegrova marque",
-     "p": 0.12,
-     "prob": 12,
-     "fair": 8.33,
+     "label": "Ro-Zangelo Daal marque",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
-     "pid": "260300",
-     "stats_league": "ita.1",
+     "player": "Ro-Zangelo Daal",
+     "team": "AZ Alkmaar",
+     "lineup": "start",
+     "pid": "338775",
+     "stats_league": "ned.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Juventus annoncé gagnant (37 %) · 1,0 but attendu pour Juventus"
+     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · titulaire · AZ Alkmaar annoncé gagnant (34 %) · 0,8 but attendu pour AZ Alkmaar"
     },
     "decisive": {
      "market": "dec",
-     "label": "Edon Zhegrova buteur ou passeur",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
+     "label": "Ro-Zangelo Daal buteur ou passeur",
+     "p": 0.18,
+     "prob": 18,
+     "fair": 5.56,
      "stars": 1,
-     "player": "Edon Zhegrova",
-     "team": "Juventus",
+     "player": "Ro-Zangelo Daal",
+     "team": "AZ Alkmaar",
      "base": [
-      8,
-      2,
-      2
+      11,
+      5,
+      0
      ],
-     "pid": "260300",
-     "stats_league": "ita.1",
+     "lineup": "start",
+     "pid": "338775",
+     "stats_league": "ned.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Juventus annoncé gagnant (37 %) · 1,0 but attendu pour Juventus"
+     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · titulaire · AZ Alkmaar annoncé gagnant (34 %) · 0,8 but attendu pour AZ Alkmaar"
     }
    }
   },
@@ -787,68 +789,69 @@
    "home": "Leverkusen",
    "away": "Marseille",
    "state": "pre",
-   "xgH": 2.11,
-   "xgA": 1.69,
-   "pH": 48,
-   "pD": 21,
+   "xgH": 1.89,
+   "xgA": 1.5,
+   "pH": 47,
+   "pD": 22,
    "pA": 31,
    "edate": "20261105",
    "picks": {
     "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.7311,
-     "prob": 73,
-     "fair": 1.37,
-     "stars": 4,
+     "market": "1N",
+     "label": "Leverkusen ou nul",
+     "p": 0.6918,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
      "why": "Derniers matchs : Leverkusen 18 marqués / 16 encaissés · Marseille 20 / 13"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Leverkusen",
-     "p": 0.4784,
-     "prob": 48,
-     "fair": 2.09,
+     "p": 0.4695,
+     "prob": 47,
+     "fair": 2.13,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0842,
-     "prob": 8,
-     "fair": 11.88,
+     "p": 0.0902,
+     "prob": 9,
+     "fair": 11.08,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Leverkusen gagne et plus de 2,5 buts",
-     "p": 0.3813,
-     "prob": 38,
-     "fair": 2.62,
+     "p": 0.3461,
+     "prob": 35,
+     "fair": 2.89,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Patrik Schick marque",
-     "p": 0.52,
-     "prob": 52,
-     "fair": 1.92,
-     "stars": 2,
+     "p": 0.49,
+     "prob": 49,
+     "fair": 2.04,
+     "stars": 1,
      "player": "Patrik Schick",
      "team": "Leverkusen",
+     "lineup": "start",
      "pid": "212330",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "7 buts et 2 passes en 8 matchs · Leverkusen favori (48 %) · 2,1 buts attendus pour Leverkusen"
+     "why": "7 buts et 2 passes en 8 matchs · titulaire · Leverkusen favori (47 %) · 1,9 buts attendus pour Leverkusen"
     },
     "decisive": {
      "market": "dec",
      "label": "Patrik Schick buteur ou passeur",
-     "p": 0.62,
-     "prob": 62,
-     "fair": 1.61,
-     "stars": 3,
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
      "player": "Patrik Schick",
      "team": "Leverkusen",
      "base": [
@@ -856,10 +859,11 @@
       7,
       2
      ],
+     "lineup": "start",
      "pid": "212330",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "7 buts et 2 passes en 8 matchs · Leverkusen favori (48 %) · 2,1 buts attendus pour Leverkusen"
+     "why": "7 buts et 2 passes en 8 matchs · titulaire · Leverkusen favori (47 %) · 1,9 buts attendus pour Leverkusen"
     }
    }
   },
@@ -873,82 +877,81 @@
    "home": "Benfica",
    "away": "Lech Poznan",
    "state": "pre",
-   "xgH": 3.93,
+   "xgH": 2.95,
    "xgA": 0.92,
-   "pH": 88,
-   "pD": 8,
-   "pA": 4,
+   "pH": 78,
+   "pD": 13,
+   "pA": 9,
    "edate": "20261105",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Benfica ou nul",
-     "p": 0.9568,
-     "prob": 96,
-     "fair": 1.05,
+     "p": 0.9138,
+     "prob": 91,
+     "fair": 1.09,
      "stars": 5,
      "why": "Derniers matchs : Benfica 27 marqués / 8 encaissés · Lech Poznan 1 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Benfica",
-     "p": 0.8799,
-     "prob": 88,
-     "fair": 1.14,
-     "stars": 5
+     "p": 0.784,
+     "prob": 78,
+     "fair": 1.28,
+     "stars": 4
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 3-0",
-     "p": 0.0793,
-     "prob": 8,
-     "fair": 12.6,
+     "label": "Score exact 2-0",
+     "p": 0.091,
+     "prob": 9,
+     "fair": 10.99,
      "stars": 1,
-     "value": "3-0"
+     "value": "2-0"
     },
     "fun": {
-     "market": "sc2",
-     "label": "Vangelis Pavlidis marque au moins 2 buts",
-     "p": 0.4175,
-     "prob": 42,
-     "fair": 2.4,
-     "stars": 1,
-     "player": "Vangelis Pavlidis",
-     "team": "Benfica",
-     "side": "h"
+     "market": "wh_btts",
+     "label": "Benfica gagne et les deux équipes marquent",
+     "p": 0.4056,
+     "prob": 41,
+     "fair": 2.47,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Vangelis Pavlidis marque",
-     "p": 0.76,
-     "prob": 76,
-     "fair": 1.32,
-     "stars": 4,
-     "player": "Vangelis Pavlidis",
+     "label": "Andreas Schjelderup marque",
+     "p": 0.13,
+     "prob": 13,
+     "fair": 7.69,
+     "stars": 1,
+     "player": "Andreas Schjelderup",
      "team": "Benfica",
-     "pid": "220819",
+     "lineup": "start",
+     "pid": "313415",
      "stats_league": "por.1",
      "season": 2026,
-     "why": "10 buts et 3 passes en 10 matchs · Benfica favori (88 %) · 3,9 buts attendus pour Benfica"
+     "why": "1 but et 2 passes en 10 matchs · titulaire · Benfica favori (78 %) · 2,9 buts attendus pour Benfica"
     },
     "decisive": {
      "market": "dec",
-     "label": "Vangelis Pavlidis buteur ou passeur",
-     "p": 0.85,
-     "prob": 85,
-     "fair": 1.18,
-     "stars": 5,
-     "player": "Vangelis Pavlidis",
+     "label": "Andreas Schjelderup buteur ou passeur",
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
+     "stars": 1,
+     "player": "Andreas Schjelderup",
      "team": "Benfica",
      "base": [
       10,
-      10,
-      3
+      1,
+      2
      ],
-     "pid": "220819",
+     "lineup": "start",
+     "pid": "313415",
      "stats_league": "por.1",
      "season": 2026,
-     "why": "10 buts et 3 passes en 10 matchs · Benfica favori (88 %) · 3,9 buts attendus pour Benfica"
+     "why": "1 but et 2 passes en 10 matchs · titulaire · Benfica favori (78 %) · 2,9 buts attendus pour Benfica"
     }
    }
   },
@@ -962,70 +965,72 @@
    "home": "Celta Vigo",
    "away": "Union SG",
    "state": "pre",
-   "xgH": 0.79,
-   "xgA": 1.24,
-   "pH": 24,
-   "pD": 30,
-   "pA": 47,
+   "xgH": 0.61,
+   "xgA": 1.06,
+   "pH": 21,
+   "pD": 33,
+   "pA": 46,
    "edate": "20261105",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire Union SG",
-     "p": 0.4677,
-     "prob": 47,
-     "fair": 2.14,
+     "p": 0.459,
+     "prob": 46,
+     "fair": 2.18,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1629,
-     "prob": 16,
-     "fair": 6.14,
+     "p": 0.1991,
+     "prob": 20,
+     "fair": 5.02,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Union SG gagne sans encaisser de but",
-     "p": 0.3222,
-     "prob": 32,
-     "fair": 3.1,
+     "p": 0.3542,
+     "prob": 35,
+     "fair": 2.82,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Raul Florucz marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
+     "label": "Relebohile Mofokeng marque",
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.67,
      "stars": 1,
-     "player": "Raul Florucz",
+     "player": "Relebohile Mofokeng",
      "team": "Union SG",
-     "pid": "344857",
+     "lineup": "start",
+     "pid": "361211",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 10 matchs · Union SG favori (47 %) · 1,2 but attendu pour Union SG"
+     "why": "4 buts et 2 passes en 9 matchs · titulaire · Union SG favori (46 %) · 1,1 but attendu pour Union SG"
     },
     "decisive": {
      "market": "dec",
-     "label": "Raul Florucz buteur ou passeur",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
+     "label": "Relebohile Mofokeng buteur ou passeur",
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
-     "player": "Raul Florucz",
+     "player": "Relebohile Mofokeng",
      "team": "Union SG",
      "base": [
-      10,
-      5,
-      0
+      9,
+      4,
+      2
      ],
-     "pid": "344857",
+     "lineup": "start",
+     "pid": "361211",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 10 matchs · Union SG favori (47 %) · 1,2 but attendu pour Union SG"
+     "why": "4 buts et 2 passes en 9 matchs · titulaire · Union SG favori (46 %) · 1,1 but attendu pour Union SG"
     }
    }
   },
@@ -1039,70 +1044,72 @@
    "home": "Celtic",
    "away": "Besiktas",
    "state": "pre",
-   "xgH": 1.99,
-   "xgA": 1.09,
+   "xgH": 1.74,
+   "xgA": 0.87,
    "pH": 58,
-   "pD": 21,
-   "pA": 20,
+   "pD": 23,
+   "pA": 19,
    "edate": "20261105",
    "picks": {
     "winner": {
      "market": "1",
      "label": "Victoire Celtic",
-     "p": 0.5819,
+     "p": 0.5794,
      "prob": 58,
-     "fair": 1.72,
+     "fair": 1.73,
      "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0992,
-     "prob": 10,
-     "fair": 10.08,
+     "label": "Score exact 1-0",
+     "p": 0.128,
+     "prob": 13,
+     "fair": 7.81,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Celtic gagne et plus de 2,5 buts",
-     "p": 0.3996,
-     "prob": 40,
-     "fair": 2.5,
+     "market": "htft_h",
+     "label": "Celtic mène à la mi-temps et gagne le match",
+     "p": 0.3638,
+     "prob": 36,
+     "fair": 2.75,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Camilo Durán marque",
+     "label": "Benjamin Nygren marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
+     "stars": 1,
+     "player": "Benjamin Nygren",
+     "team": "Celtic",
+     "lineup": "start",
+     "pid": "274522",
+     "stats_league": "sco.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 12 matchs · 10 derniers matchs : 4 buts, 2 passes · titulaire · Celtic favori (58 %) · 1,7 buts attendus pour Celtic"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Benjamin Nygren buteur ou passeur",
      "p": 0.44,
      "prob": 44,
      "fair": 2.27,
      "stars": 1,
-     "player": "Camilo Durán",
-     "team": "Celtic",
-     "pid": "367591",
-     "stats_league": "sco.1",
-     "season": 2026,
-     "why": "7 buts et 5 passes en 12 matchs · 10 derniers matchs : 7 buts, 4 passes · Celtic favori (58 %) · 2,0 buts attendus pour Celtic"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Camilo Durán buteur ou passeur",
-     "p": 0.62,
-     "prob": 62,
-     "fair": 1.61,
-     "stars": 3,
-     "player": "Camilo Durán",
+     "player": "Benjamin Nygren",
      "team": "Celtic",
      "base": [
       12,
-      7,
-      5
+      6,
+      3
      ],
-     "pid": "367591",
+     "lineup": "start",
+     "pid": "274522",
      "stats_league": "sco.1",
      "season": 2026,
-     "why": "7 buts et 5 passes en 12 matchs · 10 derniers matchs : 7 buts, 4 passes · Celtic favori (58 %) · 2,0 buts attendus pour Celtic"
+     "why": "6 buts et 3 passes en 12 matchs · 10 derniers matchs : 4 buts, 2 passes · titulaire · Celtic favori (58 %) · 1,7 buts attendus pour Celtic"
     }
    }
   },
@@ -1117,35 +1124,35 @@
    "away": "OFI Crete",
    "state": "pre",
    "xgH": 1.19,
-   "xgA": 1.42,
-   "pH": 32,
-   "pD": 26,
-   "pA": 42,
+   "xgA": 1.37,
+   "pH": 33,
+   "pD": 27,
+   "pA": 41,
    "edate": "20261105",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire OFI Crete",
-     "p": 0.4232,
-     "prob": 42,
-     "fair": 2.36,
+     "p": 0.4088,
+     "prob": 41,
+     "fair": 2.45,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.104,
-     "prob": 10,
-     "fair": 9.61,
+     "p": 0.1057,
+     "prob": 11,
+     "fair": 9.46,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.2675,
-     "prob": 27,
-     "fair": 3.74,
+     "p": 0.2556,
+     "prob": 26,
+     "fair": 3.91,
      "stars": 1
     },
     "player": {
@@ -1157,17 +1164,18 @@
      "stars": 1,
      "player": "Kenan Kodro",
      "team": "OFI Crete",
+     "lineup": "start",
      "pid": "208027",
      "stats_league": "gre.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 8 matchs · 9 derniers matchs : 3 buts, 0 passe (joué 8 sur 9) · OFI Crete annoncé gagnant (42 %) · 1,4 but attendu pour OFI Crete"
+     "why": "4 buts et 0 passe en 8 matchs · 9 derniers matchs : 3 buts, 0 passe (joué 8 sur 9) · titulaire · OFI Crete annoncé gagnant (41 %) · 1,4 but attendu pour OFI Crete"
     },
     "decisive": {
      "market": "dec",
      "label": "Kenan Kodro buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
      "player": "Kenan Kodro",
      "team": "OFI Crete",
@@ -1176,10 +1184,11 @@
       4,
       0
      ],
+     "lineup": "start",
      "pid": "208027",
      "stats_league": "gre.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 8 matchs · 9 derniers matchs : 3 buts, 0 passe (joué 8 sur 9) · OFI Crete annoncé gagnant (42 %) · 1,4 but attendu pour OFI Crete"
+     "why": "4 buts et 0 passe en 8 matchs · 9 derniers matchs : 3 buts, 0 passe (joué 8 sur 9) · titulaire · OFI Crete annoncé gagnant (41 %) · 1,4 but attendu pour OFI Crete"
     }
    }
   },
@@ -1193,43 +1202,43 @@
    "home": "Sturm Graz",
    "away": "NK Celje",
    "state": "pre",
-   "xgH": 2.2,
+   "xgH": 1.98,
    "xgA": 0.78,
-   "pH": 70,
-   "pD": 18,
-   "pA": 12,
+   "pH": 66,
+   "pD": 21,
+   "pA": 14,
    "edate": "20261105",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Sturm Graz ou nul",
-     "p": 0.881,
-     "prob": 88,
-     "fair": 1.14,
+     "p": 0.8614,
+     "prob": 86,
+     "fair": 1.16,
      "stars": 5,
      "why": "Derniers matchs : Sturm Graz 18 marqués / 12 encaissés · NK Celje 2 / 7"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Sturm Graz",
-     "p": 0.6975,
-     "prob": 70,
-     "fair": 1.43,
+     "p": 0.6559,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1227,
+     "label": "Score exact 1-0",
+     "p": 0.1248,
      "prob": 12,
-     "fair": 8.15,
+     "fair": 8.01,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_nil",
-     "label": "Sturm Graz gagne sans encaisser de but",
-     "p": 0.4069,
+     "market": "wh_o25",
+     "label": "Sturm Graz gagne et plus de 2,5 buts",
+     "p": 0.4072,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -1237,24 +1246,25 @@
     "player": {
      "market": "scorer",
      "label": "Oumar Diakité marque",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
-     "stars": 2,
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
      "player": "Oumar Diakité",
      "team": "Sturm Graz",
+     "lineup": "start",
      "pid": "329483",
      "stats_league": "aut.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 3 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 6 sur 10) · Sturm Graz favori (70 %) · 2,2 buts attendus pour Sturm Graz"
+     "why": "7 buts et 0 passe en 3 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 6 sur 10) · titulaire · Sturm Graz favori (66 %) · 2,0 buts attendus pour Sturm Graz"
     },
     "decisive": {
      "market": "dec",
      "label": "Oumar Diakité buteur ou passeur",
-     "p": 0.51,
-     "prob": 51,
-     "fair": 1.96,
-     "stars": 2,
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
      "player": "Oumar Diakité",
      "team": "Sturm Graz",
      "base": [
@@ -1262,10 +1272,11 @@
       7,
       0
      ],
+     "lineup": "start",
      "pid": "329483",
      "stats_league": "aut.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 3 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 6 sur 10) · Sturm Graz favori (70 %) · 2,2 buts attendus pour Sturm Graz"
+     "why": "7 buts et 0 passe en 3 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 6 sur 10) · titulaire · Sturm Graz favori (66 %) · 2,0 buts attendus pour Sturm Graz"
     }
    }
   },
@@ -1279,79 +1290,81 @@
    "home": "Sunderland",
    "away": "Dinamo Zagreb",
    "state": "pre",
-   "xgH": 1.44,
+   "xgH": 1.08,
    "xgA": 0.98,
-   "pH": 48,
-   "pD": 27,
-   "pA": 26,
+   "pH": 38,
+   "pD": 30,
+   "pA": 32,
    "edate": "20261105",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Sunderland ou nul",
-     "p": 0.7437,
-     "prob": 74,
-     "fair": 1.34,
-     "stars": 4,
+     "p": 0.6775,
+     "prob": 68,
+     "fair": 1.48,
+     "stars": 3,
      "why": "Derniers matchs : Sunderland 7 marqués / 17 encaissés · Dinamo Zagreb 3 / 4"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Sunderland",
-     "p": 0.4775,
-     "prob": 48,
-     "fair": 2.09,
+     "p": 0.375,
+     "prob": 38,
+     "fair": 2.67,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1281,
-     "prob": 13,
-     "fair": 7.81,
+     "p": 0.1377,
+     "prob": 14,
+     "fair": 7.26,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Sunderland mène à la mi-temps et gagne le match",
-     "p": 0.2867,
-     "prob": 29,
-     "fair": 3.49,
+     "market": "wh_nil",
+     "label": "Sunderland gagne sans encaisser de but",
+     "p": 0.2481,
+     "prob": 25,
+     "fair": 4.03,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Brian Brobbey marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "label": "Nilson Angulo marque",
+     "p": 0.14,
+     "prob": 14,
+     "fair": 7.14,
      "stars": 1,
-     "player": "Brian Brobbey",
+     "player": "Nilson Angulo",
      "team": "Sunderland",
-     "pid": "282229",
+     "lineup": "start",
+     "pid": "318090",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Sunderland favori (48 %) · 1,4 but attendu pour Sunderland"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Sunderland annoncé gagnant (38 %) · 1,1 but attendu pour Sunderland"
     },
     "decisive": {
      "market": "dec",
-     "label": "Brian Brobbey buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "label": "Nilson Angulo buteur ou passeur",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
-     "player": "Brian Brobbey",
+     "player": "Nilson Angulo",
      "team": "Sunderland",
      "base": [
-      7,
-      3,
-      0
+      8,
+      1,
+      1
      ],
-     "pid": "282229",
+     "lineup": "start",
+     "pid": "318090",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 7 matchs · Sunderland favori (48 %) · 1,4 but attendu pour Sunderland"
+     "why": "1 but et 1 passe en 8 matchs · titulaire · Sunderland annoncé gagnant (38 %) · 1,1 but attendu pour Sunderland"
     }
    }
   },
@@ -1418,10 +1431,11 @@
      "stars": 2,
      "player": "Manuel Pozo",
      "team": "Torreense",
+     "lineup": "start",
      "pid": "359742",
      "stats_league": "uefa.europa",
      "season": 2026,
-     "why": "2 buts et 0 passe en 3 matchs · Torreense favori (61 %) · 2,4 buts attendus pour Torreense"
+     "why": "2 buts et 0 passe en 3 matchs · titulaire · Torreense favori (61 %) · 2,4 buts attendus pour Torreense"
     },
     "decisive": {
      "market": "dec",
@@ -1437,10 +1451,11 @@
       2,
       0
      ],
+     "lineup": "start",
      "pid": "359742",
      "stats_league": "uefa.europa",
      "season": 2026,
-     "why": "2 buts et 0 passe en 3 matchs · Torreense favori (61 %) · 2,4 buts attendus pour Torreense"
+     "why": "2 buts et 0 passe en 3 matchs · titulaire · Torreense favori (61 %) · 2,4 buts attendus pour Torreense"
     }
    }
   },
@@ -2215,13 +2230,13 @@
   "top": [
    {
     "label": "Benfica ou nul",
-    "prob": 96,
+    "prob": 91,
     "time": "21:00",
     "match": "Benfica – Lech Poznan"
    },
    {
     "label": "Sturm Graz ou nul",
-    "prob": 88,
+    "prob": 86,
     "time": "21:00",
     "match": "Sturm Graz – NK Celje"
    },
