@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T07:29+01:00",
+ "generated": "2026-11-05T12:29+01:00",
  "date": "2026-11-05",
  "nhl_date": "2026-11-05",
  "foot": [
@@ -2697,12 +2697,12 @@
    "form_a": "NVVVV",
    "rank_h": 16,
    "rank_a": 4,
-   "pH": 16,
+   "pH": 14,
    "pD": 20,
-   "pA": 64,
+   "pA": 67,
    "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
-   "xgH": 0.98,
-   "xgA": 2.14,
+   "xgH": 0.94,
+   "xgA": 2.26,
    "scores": [
     "0-2",
     "1-2",
@@ -2713,7 +2713,7 @@
     10,
     9
    ],
-   "over25": 60,
+   "over25": 62,
    "btts": 55,
    "squad_h": [
     {
@@ -2726,7 +2726,7 @@
      "apps": 12,
      "l10": null,
      "p_goal": 2,
-     "p_dec": 15,
+     "p_dec": 14,
      "pid": "159996",
      "stats_league": "den.1",
      "season": 2026
@@ -2747,8 +2747,8 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 49,
-     "p_dec": 53,
+     "p_goal": 51,
+     "p_dec": 55,
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026
@@ -2767,8 +2767,8 @@
       "g": 4,
       "a": 4
      },
-     "p_goal": 46,
-     "p_dec": 69,
+     "p_goal": 47,
+     "p_dec": 71,
      "pid": "102368",
      "stats_league": "eng.1",
      "season": 2026
@@ -2787,8 +2787,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 26,
+     "p_goal": 22,
+     "p_dec": 27,
      "pid": "357719",
      "stats_league": "eng.1",
      "season": 2026
@@ -2807,8 +2807,8 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 17,
-     "p_dec": 38,
+     "p_goal": 18,
+     "p_dec": 40,
      "pid": "245916",
      "stats_league": "eng.1",
      "season": 2026
@@ -2828,7 +2828,7 @@
       "a": 0
      },
      "p_goal": 14,
-     "p_dec": 18,
+     "p_dec": 19,
      "pid": "314790",
      "stats_league": "eng.1",
      "season": 2026
@@ -2847,8 +2847,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 12,
+     "p_goal": 13,
+     "p_dec": 13,
      "pid": "291613",
      "stats_league": "eng.1",
      "season": 2026
@@ -2860,84 +2860,84 @@
     "Bournemouth : 14 buts marqués et 13 encaissés sur ses 9 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
-   "reading": "Bournemouth est nettement favori (64 %).",
+   "reading": "Bournemouth est nettement favori (67 %).",
    "stakes": "Sparta (16e) : place de barrage. Bournemouth (4e) : top 8, qualification directe pour les 8es.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Bournemouth",
-     "p": 0.8407,
-     "prob": 84,
-     "fair": 1.19,
+     "p": 0.8632,
+     "prob": 86,
+     "fair": 1.16,
      "stars": 5,
      "why": "Saison : Sparta 5 marqués / 3 encaissés · Bournemouth 8 / 1"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Bournemouth",
-     "p": 0.6373,
-     "prob": 64,
-     "fair": 1.57,
+     "p": 0.6677,
+     "prob": 67,
+     "fair": 1.5,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.101,
+     "p": 0.1041,
      "prob": 10,
-     "fair": 9.9,
+     "fair": 9.6,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "Bournemouth mène à la mi-temps et gagne le match",
-     "p": 0.4195,
+     "market": "scw",
+     "label": "Marcus Tavernier marque et Bournemouth gagne",
+     "p": 0.4194,
      "prob": 42,
      "fair": 2.38,
-     "stars": 1
+     "stars": 1,
+     "player": "Marcus Tavernier",
+     "team": "Bournemouth",
+     "side": "a"
     },
     "fun_alt": [
      {
-      "market": "a2",
-      "label": "Bournemouth gagne avec 2 buts d'écart ou plus",
-      "p": 0.4047,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.3974,
       "prob": 40,
-      "fair": 2.47,
+      "fair": 2.52,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Marcus Tavernier marque et Bournemouth gagne",
-      "p": 0.3924,
-      "prob": 39,
-      "fair": 2.55,
-      "stars": 1,
-      "player": "Marcus Tavernier",
-      "team": "Bournemouth",
-      "side": "a"
+      "market": "wa_nil",
+      "label": "Bournemouth gagne sans encaisser de but",
+      "p": 0.35,
+      "prob": 35,
+      "fair": 2.86,
+      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Marcus Tavernier marque",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
-     "stars": 1,
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
+     "stars": 2,
      "player": "Marcus Tavernier",
      "team": "Bournemouth",
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (64 %) · 2,1 buts attendus pour Bournemouth"
+     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (67 %) · 2,3 buts attendus pour Bournemouth"
     },
     "decisive": {
      "market": "dec",
      "label": "Marcus Tavernier buteur ou passeur",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
      "stars": 2,
      "player": "Marcus Tavernier",
      "team": "Bournemouth",
@@ -2949,7 +2949,7 @@
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (64 %) · 2,1 buts attendus pour Bournemouth"
+     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (67 %) · 2,3 buts attendus pour Bournemouth"
     }
    },
    "second": null,
@@ -32125,53 +32125,7 @@
     "tur.1": 702,
     "gre.1": 518
    },
-   "elo_fetch": {
-    "ita.1": {
-     "2026": 100
-    },
-    "uefa.europa": {
-     "2026": 55
-    },
-    "bel.1": {
-     "2026": 90
-    },
-    "aut.1": {
-     "2026": 66
-    },
-    "eng.1": {
-     "2026": 90
-    },
-    "ger.1": {
-     "2026": 72
-    },
-    "nor.1": {
-     "2026": 200
-    },
-    "ned.1": {
-     "2026": 99
-    },
-    "esp.1": {
-     "2026": 109
-    },
-    "fra.1": {
-     "2026": 81
-    },
-    "den.1": {
-     "2026": 78
-    },
-    "por.1": {
-     "2026": 90
-    },
-    "sco.1": {
-     "2026": 69
-    },
-    "tur.1": {
-     "2026": 90
-    },
-    "gre.1": {
-     "2026": 62
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
