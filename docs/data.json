@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T00:52+01:00",
+ "generated": "2026-11-05T01:17+01:00",
  "date": "2026-11-05",
  "nhl_date": "2026-11-04",
  "foot": [
@@ -6397,7 +6397,7 @@
    "league": "NHL",
    "kickoff": "2026-11-05T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Buffalo Sabres",
    "away": "Ottawa Senators",
@@ -6791,7 +6791,7 @@
    "league": "NHL",
    "kickoff": "2026-11-05T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Florida Panthers",
    "away": "Chicago Blackhawks",
@@ -8044,21 +8044,21 @@
    ]
   },
   "picks": {
-   "n": 1106,
-   "rate": 57,
+   "n": 1112,
+   "rate": 56,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1106,
+     "n": 1112,
      "ok": 627,
-     "rate": 57,
+     "rate": 56,
      "expected": 52
     },
     "foot": {
-     "n": 704,
+     "n": 710,
      "ok": 393,
-     "rate": 56,
+     "rate": 55,
      "expected": 51
     },
     "nhl": {
@@ -8133,16 +8133,16 @@
     {
      "date": "2026-11-03",
      "all": {
-      "n": 42,
+      "n": 48,
       "ok": 23,
-      "rate": 55,
-      "expected": 55
+      "rate": 48,
+      "expected": 53
      },
      "foot": {
-      "n": 28,
+      "n": 34,
       "ok": 17,
-      "rate": 61,
-      "expected": 54
+      "rate": 50,
+      "expected": 52
      },
      "nhl": {
       "n": 14,
@@ -8829,19 +8829,19 @@
    "leagues": [
     {
      "sport": "foot",
+     "league": "Ligue des champions",
+     "n": 138,
+     "ok": 85,
+     "rate": 62,
+     "expected": 53
+    },
+    {
+     "sport": "foot",
      "league": "Serie A",
      "n": 138,
      "ok": 76,
      "rate": 55,
      "expected": 50
-    },
-    {
-     "sport": "foot",
-     "league": "Ligue des champions",
-     "n": 132,
-     "ok": 85,
-     "rate": 64,
-     "expected": 54
     },
     {
      "sport": "foot",
@@ -8895,9 +8895,9 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 479,
+     "n": 484,
      "announced": 35,
-     "actual": 37
+     "actual": 36
     },
     {
      "stars": 2,
@@ -8907,7 +8907,7 @@
     },
     {
      "stars": 3,
-     "n": 238,
+     "n": 239,
      "announced": 64,
      "actual": 74
     },
@@ -10323,6 +10323,19 @@
      "mid": "foot-401915309",
      "score": "0-6",
      "match": "Villarreal – PSG",
+     "label": "Achraf Hakimi buteur ou passeur",
+     "prob": 22,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-03",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915309",
+     "score": "0-6",
+     "match": "Villarreal – PSG",
      "label": "PSG gagne sans encaisser de but",
      "prob": 24,
      "stars": 1,
@@ -10364,6 +10377,19 @@
      "match": "Shakhtar – Sporting",
      "label": "Luis Suárez marque",
      "prob": 41,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-03",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915310",
+     "score": "0-1",
+     "match": "Shakhtar – Sporting",
+     "label": "Luis Suárez buteur ou passeur",
+     "prob": 45,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -10635,6 +10661,19 @@
      "mid": "foot-401915311",
      "score": "2-0",
      "match": "Galatasaray – Stuttgart",
+     "label": "Victor Osimhen buteur ou passeur",
+     "prob": 64,
+     "stars": 3,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-03",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915311",
+     "score": "2-0",
+     "match": "Galatasaray – Stuttgart",
      "label": "Score exact 2-1",
      "prob": 10,
      "stars": 1,
@@ -10767,6 +10806,19 @@
      "match": "Feyenoord – Inter Milan",
      "label": "Anis Hadj Moussa marque",
      "prob": 28,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-03",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915307",
+     "score": "0-3",
+     "match": "Feyenoord – Inter Milan",
+     "label": "Anis Hadj Moussa buteur ou passeur",
+     "prob": 36,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -10934,6 +10986,19 @@
      "mid": "foot-401915384",
      "score": "0-0",
      "match": "Bodo/Glimt – Lille",
+     "label": "Andreas Helmersen buteur ou passeur",
+     "prob": 33,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-03",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915384",
+     "score": "0-0",
+     "match": "Bodo/Glimt – Lille",
      "label": "Bodo/Glimt gagne sans encaisser de but",
      "prob": 41,
      "stars": 1,
@@ -11079,6 +11144,19 @@
      "match": "Atlético – Bayern",
      "label": "Álex Baena marque",
      "prob": 20,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-03",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915386",
+     "score": "0-2",
+     "match": "Atlético – Bayern",
+     "label": "Álex Baena buteur ou passeur",
+     "prob": 32,
      "stars": 1,
      "ok": false,
      "fun": false
