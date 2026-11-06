@@ -41414,7 +41414,7 @@
   "away": "Gladbach",
   "market": "1N",
   "label": "Hamburg ou nul",
-  "p": 0.6732,
+  "p": 0.6331,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -41438,7 +41438,7 @@
   "away": "Gladbach",
   "market": "1",
   "label": "Victoire Hamburg",
-  "p": 0.4497,
+  "p": 0.3781,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -41453,58 +41453,6 @@
   ],
   "result": null
  },
- "foot-401884739|scorer|Terem Moffi": {
-  "match": "foot-401884739",
-  "sport": "foot",
-  "league": "Bundesliga",
-  "date": "2026-11-06",
-  "home": "Hamburg",
-  "away": "Gladbach",
-  "market": "scorer",
-  "label": "Terem Moffi marque",
-  "p": 0.33,
-  "stars": 1,
-  "player": "Terem Moffi",
-  "pid_player": "289769",
-  "value": null,
-  "stats_league": "ger.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401884739|dec|Terem Moffi": {
-  "match": "foot-401884739",
-  "sport": "foot",
-  "league": "Bundesliga",
-  "date": "2026-11-06",
-  "home": "Hamburg",
-  "away": "Gladbach",
-  "market": "dec",
-  "label": "Terem Moffi buteur ou passeur",
-  "p": 0.36,
-  "stars": 1,
-  "player": "Terem Moffi",
-  "pid_player": "289769",
-  "value": null,
-  "stats_league": "ger.1",
-  "season": 2026,
-  "base": [
-   8,
-   2,
-   0
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
  "foot-401884739|wh_o25|": {
   "match": "foot-401884739",
   "sport": "foot",
@@ -41514,7 +41462,7 @@
   "away": "Gladbach",
   "market": "wh_o25",
   "label": "Hamburg gagne et plus de 2,5 buts",
-  "p": 0.3319,
+  "p": 0.2285,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -41537,12 +41485,12 @@
   "home": "Hamburg",
   "away": "Gladbach",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0883,
+  "label": "Score exact 1-0",
+  "p": 0.0882,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -42455,6 +42403,58 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": null
+ },
+ "foot-401884739|scorer|Miro Muheim": {
+  "match": "foot-401884739",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-11-06",
+  "home": "Hamburg",
+  "away": "Gladbach",
+  "market": "scorer",
+  "label": "Miro Muheim marque",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Miro Muheim",
+  "pid_player": "243626",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884739|dec|Miro Muheim": {
+  "match": "foot-401884739",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-11-06",
+  "home": "Hamburg",
+  "away": "Gladbach",
+  "market": "dec",
+  "label": "Miro Muheim buteur ou passeur",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Miro Muheim",
+  "pid_player": "243626",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   4,
+   2,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
   ],
   "result": null
  }

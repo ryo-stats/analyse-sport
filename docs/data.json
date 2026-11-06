@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T19:17+01:00",
+ "generated": "2026-11-06T19:42+01:00",
  "date": "2026-11-06",
  "nhl_date": "2026-11-06",
  "foot": [
@@ -17,25 +17,46 @@
    "form_a": "NVVDD",
    "rank_h": 15,
    "rank_a": 18,
-   "pH": 45,
-   "pD": 22,
-   "pA": 33,
+   "pH": 38,
+   "pD": 25,
+   "pA": 37,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.86,
-   "xgA": 1.56,
+   "xgH": 1.39,
+   "xgA": 1.37,
    "scores": [
     "1-1",
-    "2-1",
-    "1-2"
+    "1-0",
+    "0-1"
    ],
    "scorep": [
-    10,
+    12,
     9,
-    7
+    9
    ],
-   "over25": 66,
-   "btts": 67,
+   "over25": 52,
+   "btts": 56,
    "squad_h": [
+    {
+     "name": "Miro Muheim",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Hamburg",
+     "goals": 2,
+     "assists": 1,
+     "apps": 4,
+     "l10": {
+      "n": 8,
+      "gp": 4,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 23,
+     "p_dec": 33,
+     "pid": "243626",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
     {
      "name": "Terem Moffi",
      "pos": "Attaquant",
@@ -50,11 +71,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 33,
-     "p_dec": 36,
+     "p_goal": 9,
+     "p_dec": 9,
      "pid": "289769",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Yussuf Poulsen",
@@ -70,51 +92,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 32,
-     "p_dec": 35,
+     "p_goal": 8,
+     "p_dec": 9,
      "pid": "182245",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Miro Muheim",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Hamburg",
-     "goals": 2,
-     "assists": 1,
-     "apps": 4,
-     "l10": {
-      "n": 8,
-      "gp": 4,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 29,
-     "p_dec": 41,
-     "pid": "243626",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Nicolás Capaldo",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Hamburg",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 19,
-     "p_dec": 26,
-     "pid": "284835",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Patson Daka",
@@ -130,31 +113,54 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 7,
+     "p_goal": 4,
+     "p_dec": 6,
      "pid": "232662",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Otto Stange",
-     "pos": "Attaquant",
+     "name": "Albert Grønbaek",
+     "pos": "Milieu",
      "side": "h",
      "team": "Hamburg",
      "goals": 0,
-     "assists": 0,
+     "assists": 3,
      "apps": 7,
      "l10": {
       "n": 8,
       "gp": 7,
       "g": 0,
+      "a": 3
+     },
+     "p_goal": 3,
+     "p_dec": 37,
+     "pid": "297750",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Albert Sambi Lokonga",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Hamburg",
+     "goals": 0,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 0,
       "a": 0
      },
-     "p_goal": 4,
-     "p_dec": 6,
-     "pid": "376056",
+     "p_goal": 2,
+     "p_dec": 7,
+     "pid": "268239",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -172,31 +178,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 28,
-     "p_dec": 36,
+     "p_goal": 25,
+     "p_dec": 32,
      "pid": "272135",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Hugo Bolin",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Gladbach",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 21,
-     "p_dec": 25,
-     "pid": "330239",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Shuto Machino",
@@ -212,11 +199,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 23,
+     "p_goal": 19,
+     "p_dec": 21,
      "pid": "271352",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Wael Mohya",
@@ -232,31 +220,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 20,
-     "p_dec": 31,
+     "p_goal": 18,
+     "p_dec": 28,
      "pid": "408539",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Isac Lidberg",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Gladbach",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 15,
-     "pid": "221690",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Florian Neuhaus",
@@ -272,18 +241,64 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 23,
+     "p_goal": 10,
+     "p_dec": 20,
      "pid": "238527",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Isac Lidberg",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Gladbach",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "221690",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Philipp Sander",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Gladbach",
+     "goals": 0,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 9,
+     "pid": "275805",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Hamburg : 15e, 9 points, 7 buts marqués et 19 encaissés en 8 matchs.",
     "Gladbach : 18e, 4 points, 11 buts marqués et 22 encaissés en 8 matchs.",
     "Hamburg : 7 buts marqués et 19 encaissés sur ses 8 derniers matchs de championnat.",
-    "Gladbach : 11 buts marqués et 22 encaissés sur ses 8 derniers matchs de championnat."
+    "Gladbach : 11 buts marqués et 22 encaissés sur ses 8 derniers matchs de championnat.",
+    "Hamburg : attaque revue à la baisse (−25 %) d'après la compo officielle (Nicolás Capaldo, Yussuf Poulsen, Terem Moffi ne commencent pas).",
+    "Gladbach : attaque revue à la baisse (−12 %) d'après la compo officielle (Hugo Bolin ne commence pas).",
+    "Compositions officielles prises en compte : Nicolás Capaldo (absent), Yussuf Poulsen (remplaçant), Terem Moffi (remplaçant), Hugo Bolin (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Hamburg (15e) lutte pour le maintien, 2 points d'avance sur la zone rouge. Gladbach (18e) est en zone de relégation : match vital.",
@@ -291,87 +306,89 @@
     "main": {
      "market": "1N",
      "label": "Hamburg ou nul",
-     "p": 0.6732,
-     "prob": 67,
-     "fair": 1.49,
+     "p": 0.6331,
+     "prob": 63,
+     "fair": 1.58,
      "stars": 3,
      "why": "8 derniers matchs : Hamburg 7 marqués / 19 encaissés · Gladbach 11 / 22"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Hamburg",
-     "p": 0.4497,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.3781,
+     "prob": 38,
+     "fair": 2.64,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0883,
+     "label": "Score exact 1-0",
+     "p": 0.0882,
      "prob": 9,
-     "fair": 11.33,
+     "fair": 11.34,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Hamburg gagne et plus de 2,5 buts",
-     "p": 0.3319,
-     "prob": 33,
-     "fair": 3.01,
+     "p": 0.2285,
+     "prob": 23,
+     "fair": 4.38,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Hamburg mène à la mi-temps et gagne le match",
-      "p": 0.2782,
-      "prob": 28,
-      "fair": 3.59,
+      "p": 0.2228,
+      "prob": 22,
+      "fair": 4.49,
       "stars": 1
      },
      {
-      "market": "wh_btts",
-      "label": "Hamburg gagne et les deux équipes marquent",
-      "p": 0.2721,
-      "prob": 27,
-      "fair": 3.67,
+      "market": "wh_by1",
+      "label": "Hamburg gagne d'un seul but",
+      "p": 0.2033,
+      "prob": 20,
+      "fair": 4.92,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Terem Moffi marque",
+     "label": "Miro Muheim marque",
+     "p": 0.23,
+     "prob": 23,
+     "fair": 4.35,
+     "stars": 1,
+     "player": "Miro Muheim",
+     "team": "Hamburg",
+     "lineup": "start",
+     "pid": "243626",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "2 buts et 1 passe en 4 matchs · titulaire · Hamburg annoncé gagnant (38 %) · 1,4 but attendu pour Hamburg"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Miro Muheim buteur ou passeur",
      "p": 0.33,
      "prob": 33,
      "fair": 3.03,
      "stars": 1,
-     "player": "Terem Moffi",
-     "team": "Hamburg",
-     "pid": "289769",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "2 buts et 0 passe en 8 matchs · Hamburg annoncé gagnant (45 %) · 1,9 buts attendus pour Hamburg"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Terem Moffi buteur ou passeur",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
-     "stars": 1,
-     "player": "Terem Moffi",
+     "player": "Miro Muheim",
      "team": "Hamburg",
      "base": [
-      8,
+      4,
       2,
-      0
+      1
      ],
-     "pid": "289769",
+     "lineup": "start",
+     "pid": "243626",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 0 passe en 8 matchs · Hamburg annoncé gagnant (45 %) · 1,9 buts attendus pour Hamburg"
+     "why": "2 buts et 1 passe en 4 matchs · titulaire · Hamburg annoncé gagnant (38 %) · 1,4 but attendu pour Hamburg"
     }
    },
    "second": null,
