@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T20:07+01:00",
+ "generated": "2026-11-06T20:32+01:00",
  "date": "2026-11-06",
  "nhl_date": "2026-11-06",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Bundesliga",
    "kickoff": "2026-11-06T19:30:00+00:00",
    "time": "20:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Hamburg",
    "away": "Gladbach",
    "form_h": "DDDVV",
@@ -18,7 +18,7 @@
    "rank_h": 15,
    "rank_a": 18,
    "pH": 38,
-   "pD": 25,
+   "pD": 26,
    "pA": 37,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.39,
@@ -296,8 +296,6 @@
     "Gladbach : 18e, 4 points, 11 buts marqués et 22 encaissés en 8 matchs.",
     "Hamburg : 7 buts marqués et 19 encaissés sur ses 8 derniers matchs de championnat.",
     "Gladbach : 11 buts marqués et 22 encaissés sur ses 8 derniers matchs de championnat.",
-    "Hamburg : attaque revue à la baisse (−25 %) d'après la compo officielle (Nicolás Capaldo, Yussuf Poulsen, Terem Moffi ne commencent pas).",
-    "Gladbach : attaque revue à la baisse (−12 %) d'après la compo officielle (Hugo Bolin ne commence pas).",
     "Compositions officielles prises en compte : Nicolás Capaldo (absent), Yussuf Poulsen (remplaçant), Terem Moffi (remplaçant), Hugo Bolin (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -332,16 +330,16 @@
     "fun": {
      "market": "wh_o25",
      "label": "Hamburg gagne et plus de 2,5 buts",
-     "p": 0.2285,
+     "p": 0.2287,
      "prob": 23,
-     "fair": 4.38,
+     "fair": 4.37,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Hamburg mène à la mi-temps et gagne le match",
-      "p": 0.2228,
+      "p": 0.2229,
       "prob": 22,
       "fair": 4.49,
       "stars": 1
@@ -349,7 +347,7 @@
      {
       "market": "wh_by1",
       "label": "Hamburg gagne d'un seul but",
-      "p": 0.2033,
+      "p": 0.2034,
       "prob": 20,
       "fair": 4.92,
       "stars": 1
@@ -813,11 +811,11 @@
    "form_a": "DNDDD",
    "rank_h": 20,
    "rank_a": 19,
-   "pH": 36,
+   "pH": 34,
    "pD": 27,
-   "pA": 37,
+   "pA": 38,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.27,
+   "xgH": 1.19,
    "xgA": 1.28,
    "scores": [
     "1-1",
@@ -826,11 +824,11 @@
    ],
    "scorep": [
     13,
-    10,
+    11,
     10
    ],
-   "over25": 47,
-   "btts": 52,
+   "over25": 45,
+   "btts": 50,
    "squad_h": [
     {
      "name": "Akor Adams",
@@ -846,11 +844,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 30,
-     "p_dec": 34,
+     "p_goal": 29,
+     "p_dec": 33,
      "pid": "288472",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Antoine Hainaut",
@@ -866,11 +865,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 34,
+     "p_goal": 22,
+     "p_dec": 33,
      "pid": "346916",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "John Yeboah",
@@ -886,11 +886,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 23,
+     "p_goal": 18,
+     "p_dec": 22,
      "pid": "265926",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Richie Sagrado",
@@ -906,11 +907,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 23,
+     "p_goal": 4,
+     "p_dec": 7,
      "pid": "345713",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Simon Sohm",
@@ -927,10 +929,11 @@
       "a": 1
      },
      "p_goal": 3,
-     "p_dec": 20,
+     "p_dec": 19,
      "pid": "275015",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Enrique Perez",
@@ -950,7 +953,8 @@
      "p_dec": 10,
      "pid": "276636",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1086,6 +1090,7 @@
     "Udinese : 19e, 5 points, 11 buts marqués et 23 encaissés en 10 matchs.",
     "Venezia : 6 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat.",
     "Udinese : 11 buts marqués et 23 encaissés sur ses 10 derniers matchs de championnat.",
+    "Venezia : attaque revue à la baisse (−6 %) d'après la compo officielle (Richie Sagrado ne commence pas).",
     "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -1094,52 +1099,52 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Udinese",
-     "p": 0.6363,
-     "prob": 64,
-     "fair": 1.57,
+     "p": 0.6562,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "why": "10 derniers matchs : Venezia 6 marqués / 20 encaissés · Udinese 11 / 23"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Udinese",
-     "p": 0.3688,
-     "prob": 37,
-     "fair": 2.71,
+     "p": 0.3844,
+     "prob": 38,
+     "fair": 2.6,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1005,
-     "prob": 10,
-     "fair": 9.95,
+     "p": 0.1082,
+     "prob": 11,
+     "fair": 9.24,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "htft_a",
      "label": "Udinese mène à la mi-temps et gagne le match",
-     "p": 0.2145,
-     "prob": 21,
-     "fair": 4.66,
+     "p": 0.224,
+     "prob": 22,
+     "fair": 4.46,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_by1",
-      "label": "Udinese gagne d'un seul but",
-      "p": 0.2067,
-      "prob": 21,
-      "fair": 4.84,
+      "market": "wa_nil",
+      "label": "Udinese gagne sans encaisser de but",
+      "p": 0.219,
+      "prob": 22,
+      "fair": 4.57,
       "stars": 1
      },
      {
-      "market": "wa_o25",
-      "label": "Udinese gagne et plus de 2,5 buts",
-      "p": 0.2042,
-      "prob": 20,
-      "fair": 4.9,
+      "market": "wa_by1",
+      "label": "Udinese gagne d'un seul but",
+      "p": 0.2141,
+      "prob": 21,
+      "fair": 4.67,
       "stars": 1
      }
     ],
@@ -1156,7 +1161,7 @@
      "pid": "270817",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 10 matchs · titulaire · Udinese annoncé gagnant (37 %) · 1,3 but attendu pour Udinese"
+     "why": "3 buts et 1 passe en 10 matchs · titulaire · Udinese annoncé gagnant (38 %) · 1,3 but attendu pour Udinese"
     },
     "decisive": {
      "market": "dec",
@@ -1176,7 +1181,7 @@
      "pid": "270817",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 10 matchs · titulaire · Udinese annoncé gagnant (37 %) · 1,3 but attendu pour Udinese"
+     "why": "3 buts et 1 passe en 10 matchs · titulaire · Udinese annoncé gagnant (38 %) · 1,3 but attendu pour Udinese"
     }
    },
    "second": {
@@ -26358,7 +26363,7 @@
  },
  "second": {
   "foot": {
-   "ok": 5,
+   "ok": 4,
    "elo": {
     "fra.1": 678,
     "eng.1": 832,
@@ -26366,7 +26371,23 @@
     "ita.1": 852,
     "ger.1": 658
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 81
+    },
+    "eng.1": {
+     "2026": 90
+    },
+    "esp.1": {
+     "2026": 109
+    },
+    "ita.1": {
+     "2026": 100
+    },
+    "ger.1": {
+     "2026": 72
+    }
+   },
    "status": "ok"
   },
   "nhl": {
