@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T01:00+01:00",
+ "generated": "2026-11-06T01:25+01:00",
  "date": "2026-11-06",
  "matches": [
   {
@@ -440,7 +440,7 @@
    "time": "01:00",
    "home": "Montréal Canadiens",
    "away": "Utah Mammoth",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.15,
    "xgA": 3.4,
    "pH": 38,
@@ -453,7 +453,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6375,
+     "p": 0.6376,
      "prob": 64,
      "fair": 1.57,
      "stars": 3,
@@ -509,7 +509,7 @@
    "time": "01:00",
    "home": "Detroit Red Wings",
    "away": "Vegas Golden Knights",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.83,
    "xgA": 2.94,
    "pH": 40,
@@ -522,7 +522,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5165,
+     "p": 0.5164,
      "prob": 52,
      "fair": 1.94,
      "stars": 2,
@@ -539,7 +539,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4062,
+     "p": 0.4061,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -578,7 +578,7 @@
    "time": "01:00",
    "home": "Tampa Bay Lightning",
    "away": "Chicago Blackhawks",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 4.39,
    "xgA": 2.35,
    "pH": 72,
@@ -640,7 +640,7 @@
    "time": "01:00",
    "home": "New Jersey Devils",
    "away": "St. Louis Blues",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.23,
    "xgA": 2.42,
    "pH": 55,
@@ -671,7 +671,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.3837,
+     "p": 0.3838,
      "prob": 38,
      "fair": 2.61,
      "stars": 1
@@ -710,7 +710,7 @@
    "time": "01:00",
    "home": "New York Islanders",
    "away": "Carolina Hurricanes",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.49,
    "xgA": 3.83,
    "pH": 23,
@@ -780,7 +780,7 @@
    "time": "01:00",
    "home": "New York Rangers",
    "away": "Philadelphia Flyers",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.36,
    "xgA": 2.58,
    "pH": 54,
@@ -850,7 +850,7 @@
    "time": "01:00",
    "home": "Pittsburgh Penguins",
    "away": "Boston Bruins",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.34,
    "xgA": 3.19,
    "pH": 44,
@@ -919,7 +919,7 @@
    "time": "01:00",
    "home": "Columbus Blue Jackets",
    "away": "Dallas Stars",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.63,
    "xgA": 3.11,
    "pH": 34,
@@ -950,7 +950,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.401,
+     "p": 0.4011,
      "prob": 40,
      "fair": 2.49,
      "stars": 1
@@ -989,7 +989,7 @@
    "time": "01:00",
    "home": "Winnipeg Jets",
    "away": "Vancouver Canucks",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.66,
    "xgA": 2.81,
    "pH": 55,
@@ -1020,7 +1020,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Winnipeg Jets gagne et plus de 5,5 buts",
-     "p": 0.4043,
+     "p": 0.4044,
      "prob": 40,
      "fair": 2.47,
      "stars": 1
@@ -1202,12 +1202,6 @@
   "nhl": 11,
   "top": [
    {
-    "label": "Nikita Kucherov : au moins 1 point",
-    "prob": 83,
-    "time": "01:00",
-    "match": "Tampa Bay Lightning – Chicago Blackhawks"
-   },
-   {
     "label": "Everton ou nul",
     "prob": 82,
     "time": "21:00",
@@ -1218,6 +1212,12 @@
     "prob": 81,
     "time": "02:00",
     "match": "Edmonton Oilers – Anaheim Ducks"
+   },
+   {
+    "label": "Nathan MacKinnon : au moins 1 point",
+    "prob": 75,
+    "time": "03:30",
+    "match": "Colorado Avalanche – Nashville Predators"
    }
   ]
  }
