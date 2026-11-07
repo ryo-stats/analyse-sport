@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T12:28+01:00",
+ "generated": "2026-11-07T12:53+01:00",
  "date": "2026-11-07",
  "nhl_date": "2026-11-07",
  "foot": [
@@ -17,24 +17,24 @@
    "form_a": "VVVND",
    "rank_h": 12,
    "rank_a": 9,
-   "pH": 45,
-   "pD": 31,
+   "pH": 44,
+   "pD": 34,
    "pA": 23,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.13,
-   "xgA": 0.72,
+   "xgH": 1.01,
+   "xgA": 0.63,
    "scores": [
     "1-0",
     "0-0",
     "1-1"
    ],
    "scorep": [
-    18,
-    16,
-    13
+    20,
+    19,
+    12
    ],
-   "over25": 28,
-   "btts": 35,
+   "over25": 23,
+   "btts": 30,
    "squad_h": [
     {
      "name": "Dominic Calvert-Lewin",
@@ -50,11 +50,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 30,
-     "p_dec": 39,
+     "p_goal": 28,
+     "p_dec": 36,
      "pid": "197717",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jayden Bogle",
@@ -70,51 +71,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 19,
+     "p_goal": 16,
+     "p_dec": 17,
      "pid": "243408",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Noah Okafor",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Leeds",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 16,
-     "pid": "270641",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Anton Stach",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Leeds",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 11,
-     "p_dec": 16,
-     "pid": "304802",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "James Justin",
@@ -130,11 +92,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 12,
+     "p_goal": 9,
+     "p_dec": 10,
      "pid": "231863",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Noah Okafor",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Leeds",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 9,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "270641",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Ethan Ampadu",
@@ -151,10 +135,32 @@
       "a": 0
      },
      "p_goal": 3,
-     "p_dec": 9,
+     "p_dec": 8,
      "pid": "241317",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Ao Tanaka",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Leeds",
+     "goals": 0,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 9,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 13,
+     "pid": "253173",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -172,11 +178,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 12,
+     "p_goal": 10,
+     "p_dec": 11,
      "pid": "282583",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Omar Marmoush",
@@ -192,31 +199,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 11,
+     "p_goal": 8,
+     "p_dec": 9,
      "pid": "303745",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Dominic Solanke",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Spurs",
-     "goals": 1,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 9,
-      "gp": 9,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 14,
-     "pid": "194115",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mathys Tel",
@@ -232,11 +220,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 9,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "325042",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Archie Gray",
@@ -252,105 +241,132 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 7,
-     "p_dec": 9,
+     "p_goal": 6,
+     "p_dec": 8,
      "pid": "328050",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "James Maddison",
+     "name": "Sandro Tonali",
      "pos": "Milieu",
      "side": "a",
      "team": "Spurs",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
+     "goals": 0,
+     "assists": 1,
+     "apps": 9,
      "l10": {
       "n": 9,
-      "gp": 6,
-      "g": 1,
-      "a": 0
+      "gp": 9,
+      "g": 0,
+      "a": 1
      },
-     "p_goal": 6,
-     "p_dec": 7,
-     "pid": "194450",
+     "p_goal": 2,
+     "p_dec": 9,
+     "pid": "261047",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Dominic Solanke",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Spurs",
+     "goals": 1,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 9,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 4,
+     "pid": "194115",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Leeds : 12e, 11 points, 9 buts marqués et 8 encaissés en 9 matchs.",
     "Spurs : 9e, 12 points, 10 buts marqués et 10 encaissés en 9 matchs.",
     "Leeds : 9 buts marqués et 8 encaissés sur ses 9 derniers matchs de championnat.",
-    "Spurs : 10 buts marqués et 10 encaissés sur ses 9 derniers matchs de championnat."
+    "Spurs : 10 buts marqués et 10 encaissés sur ses 9 derniers matchs de championnat.",
+    "Leeds : attaque revue à la baisse (−11 %) d'après la compo officielle (Anton Stach, Noah Okafor ne commencent pas).",
+    "Spurs : attaque revue à la baisse (−12 %) d'après la compo officielle (James Maddison, Conor Gallagher, Dominic Solanke ne commencent pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Leeds est favori sans écraser le match (45 %). Le nul est une issue sérieuse (31 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (34 %).",
    "stakes": "Match de milieu de tableau : enjeu modéré au classement. Adversaires directs au classement : 1 point d'écart.",
    "picks": {
     "winner": {
      "market": "1",
      "label": "Victoire Leeds",
-     "p": 0.4524,
-     "prob": 45,
-     "fair": 2.21,
+     "p": 0.4354,
+     "prob": 44,
+     "fair": 2.3,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1782,
-     "prob": 18,
-     "fair": 5.61,
+     "p": 0.1952,
+     "prob": 20,
+     "fair": 5.12,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Leeds gagne sans encaisser de but",
-     "p": 0.3297,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.3366,
+     "prob": 34,
+     "fair": 2.97,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Leeds mène à la mi-temps et gagne le match",
-      "p": 0.2608,
+      "market": "wh_by1",
+      "label": "Leeds gagne d'un seul but",
+      "p": 0.2644,
       "prob": 26,
-      "fair": 3.83,
+      "fair": 3.78,
       "stars": 1
      },
      {
-      "market": "wh_by1",
-      "label": "Leeds gagne d'un seul but",
-      "p": 0.2606,
-      "prob": 26,
-      "fair": 3.84,
+      "market": "htft_h",
+      "label": "Leeds mène à la mi-temps et gagne le match",
+      "p": 0.2463,
+      "prob": 25,
+      "fair": 4.06,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Dominic Calvert-Lewin marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
      "player": "Dominic Calvert-Lewin",
      "team": "Leeds",
+     "lineup": "start",
      "pid": "197717",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 9 matchs · Leeds favori (45 %) · 1,1 but attendu pour Leeds"
+     "why": "3 buts et 1 passe en 9 matchs · titulaire · Leeds annoncé gagnant (44 %) · 1,0 but attendu pour Leeds"
     },
     "decisive": {
      "market": "dec",
      "label": "Dominic Calvert-Lewin buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
      "player": "Dominic Calvert-Lewin",
      "team": "Leeds",
@@ -359,17 +375,18 @@
       3,
       1
      ],
+     "lineup": "start",
      "pid": "197717",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 9 matchs · Leeds favori (45 %) · 1,1 but attendu pour Leeds"
+     "why": "3 buts et 1 passe en 9 matchs · titulaire · Leeds annoncé gagnant (44 %) · 1,0 but attendu pour Leeds"
     },
     "held": {
      "market": "1N",
      "label": "Leeds ou nul",
-     "p": 0.7669,
+     "p": 0.7743,
      "prob": 77,
-     "fair": 1.3,
+     "fair": 1.29,
      "stars": 4,
      "why": "9 derniers matchs : Leeds 9 marqués / 8 encaissés · Spurs 10 / 10",
      "note": "« Leeds ou nul » : 77 % selon l'analyse, le marché des paris est nettement moins confiant"
@@ -7291,7 +7308,7 @@
    "pD": 16,
    "pA": 44,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.4,
+   "xgH": 3.39,
    "xgA": 3.48,
    "total": 6.9,
    "scores": [
@@ -7571,7 +7588,7 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 25,
+     "p_goal": 24,
      "p_point": 47,
      "p_assist": 29
     }
@@ -7589,7 +7606,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6835,
+     "p": 0.683,
      "prob": 68,
      "fair": 1.46,
      "stars": 3,
@@ -7606,7 +7623,7 @@
     "fun": {
      "market": "wa_o55",
      "label": "Florida Panthers gagne et plus de 5,5 buts",
-     "p": 0.349,
+     "p": 0.3487,
      "prob": 35,
      "fair": 2.87,
      "stars": 1
@@ -7623,7 +7640,7 @@
      {
       "market": "wa_o65",
       "label": "Florida Panthers gagne et plus de 6,5 buts",
-      "p": 0.295,
+      "p": 0.2948,
       "prob": 29,
       "fair": 3.39,
       "stars": 1
@@ -7962,7 +7979,7 @@
       "a": 5
      },
      "p_goal": 17,
-     "p_point": 40,
+     "p_point": 39,
      "p_assist": 26
     }
    ],
@@ -7980,7 +7997,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Nashville Predators",
-     "p": 0.5325,
+     "p": 0.5324,
      "prob": 53,
      "fair": 1.88,
      "stars": 2,
@@ -7989,35 +8006,35 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Nashville Predators",
-     "p": 0.5325,
+     "p": 0.5324,
      "prob": 53,
      "fair": 1.88,
      "stars": 2,
      "why": "10 derniers matchs : Nashville Predators 5 victoires · St. Louis Blues 4"
     },
     "fun": {
-     "market": "h2",
-     "label": "Nashville Predators gagne par 2 buts d'écart ou plus",
-     "p": 0.3262,
-     "prob": 33,
-     "fair": 3.07,
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.4198,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o55",
-      "label": "Nashville Predators gagne et plus de 5,5 buts",
-      "p": 0.2849,
-      "prob": 28,
-      "fair": 3.51,
+      "market": "h2",
+      "label": "Nashville Predators gagne par 2 buts d'écart ou plus",
+      "p": 0.3262,
+      "prob": 33,
+      "fair": 3.07,
       "stars": 1
      },
      {
-      "market": "wh_o65",
-      "label": "Nashville Predators gagne et plus de 6,5 buts",
-      "p": 0.225,
-      "prob": 23,
-      "fair": 4.44,
+      "market": "wh_o55",
+      "label": "Nashville Predators gagne et plus de 5,5 buts",
+      "p": 0.2847,
+      "prob": 28,
+      "fair": 3.51,
       "stars": 1
      }
     ],
@@ -8398,7 +8415,7 @@
      {
       "market": "wa_o55",
       "label": "New York Rangers gagne et plus de 5,5 buts",
-      "p": 0.3081,
+      "p": 0.3079,
       "prob": 31,
       "fair": 3.25,
       "stars": 1
@@ -8406,9 +8423,9 @@
      {
       "market": "wa_o65",
       "label": "New York Rangers gagne et plus de 6,5 buts",
-      "p": 0.2438,
+      "p": 0.2435,
       "prob": 24,
-      "fair": 4.1,
+      "fair": 4.11,
       "stars": 1
      }
     ],
@@ -8763,7 +8780,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6532,
+     "p": 0.6528,
      "prob": 65,
      "fair": 1.53,
      "stars": 3,
@@ -8789,7 +8806,7 @@
      {
       "market": "wa_o55",
       "label": "Montréal Canadiens gagne et plus de 5,5 buts",
-      "p": 0.3758,
+      "p": 0.3755,
       "prob": 38,
       "fair": 2.66,
       "stars": 1
@@ -8797,7 +8814,7 @@
      {
       "market": "wa_o65",
       "label": "Montréal Canadiens gagne et plus de 6,5 buts",
-      "p": 0.3116,
+      "p": 0.3113,
       "prob": 31,
       "fair": 3.21,
       "stars": 1
@@ -8856,7 +8873,7 @@
    "pA": 40,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.22,
-   "xgA": 3.1,
+   "xgA": 3.09,
    "total": 6.3,
    "scores": [
     "3-2",
@@ -9154,9 +9171,9 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6044,
+     "p": 0.6039,
      "prob": 60,
-     "fair": 1.65,
+     "fair": 1.66,
      "stars": 3,
      "why": "10 derniers matchs : Ottawa Senators 5 victoires · Utah Mammoth 5"
     },
@@ -9171,7 +9188,7 @@
     "fun": {
      "market": "h2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3251,
+     "p": 0.325,
      "prob": 33,
      "fair": 3.08,
      "stars": 1
@@ -9180,7 +9197,7 @@
      {
       "market": "wh_o55",
       "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.3175,
+      "p": 0.3173,
       "prob": 32,
       "fair": 3.15,
       "stars": 1
@@ -9188,7 +9205,7 @@
      {
       "market": "wh_o65",
       "label": "Ottawa Senators gagne et plus de 6,5 buts",
-      "p": 0.2597,
+      "p": 0.2594,
       "prob": 26,
       "fair": 3.85,
       "stars": 1
@@ -9421,7 +9438,7 @@
       "g": 6,
       "a": 7
      },
-     "p_goal": 38,
+     "p_goal": 37,
      "p_point": 72,
      "p_assist": 55
     },
@@ -9544,7 +9561,7 @@
     "main": {
      "market": "win_a",
      "label": "Victoire New Jersey Devils",
-     "p": 0.6044,
+     "p": 0.6043,
      "prob": 60,
      "fair": 1.65,
      "stars": 3,
@@ -9553,7 +9570,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire New Jersey Devils",
-     "p": 0.6044,
+     "p": 0.6043,
      "prob": 60,
      "fair": 1.65,
      "stars": 3,
@@ -9562,7 +9579,7 @@
     "fun": {
      "market": "a2",
      "label": "New Jersey Devils gagne par 2 buts d'écart ou plus",
-     "p": 0.4046,
+     "p": 0.4045,
      "prob": 40,
      "fair": 2.47,
      "stars": 1
@@ -9571,7 +9588,7 @@
      {
       "market": "wa_o55",
       "label": "New Jersey Devils gagne et plus de 5,5 buts",
-      "p": 0.35,
+      "p": 0.3497,
       "prob": 35,
       "fair": 2.86,
       "stars": 1
@@ -9579,9 +9596,9 @@
      {
       "market": "wa_o65",
       "label": "New Jersey Devils gagne et plus de 6,5 buts",
-      "p": 0.2769,
+      "p": 0.2766,
       "prob": 28,
-      "fair": 3.61,
+      "fair": 3.62,
       "stars": 1
      }
     ],
@@ -9600,9 +9617,9 @@
     "scorer": {
      "market": "goal",
      "label": "Jack Hughes marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Jack Hughes",
      "pid": 8481559,
@@ -9936,7 +9953,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.8254,
+     "p": 0.8253,
      "prob": 83,
      "fair": 1.21,
      "stars": 5,
@@ -9945,7 +9962,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.8254,
+     "p": 0.8253,
      "prob": 83,
      "fair": 1.21,
      "stars": 5,
@@ -10003,9 +10020,9 @@
    "pD": 15,
    "pA": 23,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.55,
+   "xgH": 3.56,
    "xgA": 2.3,
-   "total": 5.8,
+   "total": 5.9,
    "scores": [
     "3-2",
     "4-2",
@@ -10093,7 +10110,7 @@
       "a": 6
      },
      "p_goal": 33,
-     "p_point": 68,
+     "p_point": 69,
      "p_assist": 53
     },
     {
@@ -10301,7 +10318,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Dallas Stars",
-     "p": 0.6975,
+     "p": 0.6987,
      "prob": 70,
      "fair": 1.43,
      "stars": 3,
@@ -10310,7 +10327,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Dallas Stars",
-     "p": 0.6975,
+     "p": 0.6987,
      "prob": 70,
      "fair": 1.43,
      "stars": 3,
@@ -10319,40 +10336,40 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4122,
+     "p": 0.4134,
      "prob": 41,
-     "fair": 2.43,
+     "fair": 2.42,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o55",
       "label": "Dallas Stars gagne et plus de 5,5 buts",
-      "p": 0.3837,
-      "prob": 38,
-      "fair": 2.61,
+      "p": 0.3853,
+      "prob": 39,
+      "fair": 2.6,
       "stars": 1
      },
      {
       "market": "h3",
       "label": "Dallas Stars gagne par 3 buts d'écart ou plus",
-      "p": 0.3089,
+      "p": 0.3104,
       "prob": 31,
-      "fair": 3.24,
+      "fair": 3.22,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
-     "label": "Jason Robertson : au moins 1 point",
-     "p": 0.68,
-     "prob": 68,
-     "fair": 1.47,
+     "label": "Mikko Rantanen : au moins 1 point",
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
      "stars": 3,
-     "player": "Jason Robertson",
-     "pid": 8480027,
+     "player": "Mikko Rantanen",
+     "pid": 8478420,
      "team": "Dallas Stars",
-     "why": "8 buts et 10 passes en 16 matchs · 10 derniers matchs : 6 buts, 7 passes · Dallas Stars favori (70 %) · 3,5 buts attendus pour Dallas Stars"
+     "why": "9 buts et 10 passes en 16 matchs · 10 derniers matchs : 7 buts, 6 passes · Dallas Stars favori (70 %) · 3,6 buts attendus pour Dallas Stars"
     },
     "scorer": {
      "market": "goal",
@@ -10364,7 +10381,7 @@
      "player": "Jason Robertson",
      "pid": 8480027,
      "team": "Dallas Stars",
-     "why": "8 buts et 10 passes en 16 matchs · 10 derniers matchs : 6 buts, 7 passes · Dallas Stars favori (70 %) · 3,5 buts attendus pour Dallas Stars"
+     "why": "8 buts et 10 passes en 16 matchs · 10 derniers matchs : 6 buts, 7 passes · Dallas Stars favori (70 %) · 3,6 buts attendus pour Dallas Stars"
     }
    },
    "second": {
@@ -10548,7 +10565,7 @@
      },
      "p_goal": 18,
      "p_point": 31,
-     "p_assist": 15
+     "p_assist": 16
     }
    ],
    "squad_a": [
@@ -10692,7 +10709,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Minnesota Wild",
-     "p": 0.5307,
+     "p": 0.5321,
      "prob": 53,
      "fair": 1.88,
      "stars": 2
@@ -10700,26 +10717,26 @@
     "fun": {
      "market": "wh_o55",
      "label": "Minnesota Wild gagne et plus de 5,5 buts",
-     "p": 0.3362,
+     "p": 0.3376,
      "prob": 34,
-     "fair": 2.97,
+     "fair": 2.96,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "h2",
       "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
-      "p": 0.3343,
-      "prob": 33,
-      "fair": 2.99,
+      "p": 0.3357,
+      "prob": 34,
+      "fair": 2.98,
       "stars": 1
      },
      {
       "market": "wh_o65",
       "label": "Minnesota Wild gagne et plus de 6,5 buts",
-      "p": 0.2778,
+      "p": 0.2791,
       "prob": 28,
-      "fair": 3.6,
+      "fair": 3.58,
       "stars": 1
      }
     ],
@@ -10750,9 +10767,9 @@
     "held": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6301,
+     "p": 0.6311,
      "prob": 63,
-     "fair": 1.59,
+     "fair": 1.58,
      "stars": 3,
      "why": "10 derniers matchs : Minnesota Wild 7 victoires · Tampa Bay Lightning 6",
      "note": "l'analyse et le marché des paris ne désignent pas le même favori"
@@ -10786,7 +10803,7 @@
    "pD": 16,
    "pA": 32,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.42,
+   "xgH": 3.41,
    "xgA": 2.74,
    "total": 6.2,
    "scores": [
@@ -10877,7 +10894,7 @@
      },
      "p_goal": 29,
      "p_point": 48,
-     "p_assist": 27
+     "p_assist": 26
     },
     {
      "name": "Brock Nelson",
@@ -11103,7 +11120,7 @@
     "fun": {
      "market": "h2",
      "label": "Colorado Avalanche gagne par 2 buts d'écart ou plus",
-     "p": 0.4035,
+     "p": 0.4034,
      "prob": 40,
      "fair": 2.48,
      "stars": 1
@@ -11112,7 +11129,7 @@
      {
       "market": "wh_o55",
       "label": "Colorado Avalanche gagne et plus de 5,5 buts",
-      "p": 0.3599,
+      "p": 0.3597,
       "prob": 36,
       "fair": 2.78,
       "stars": 1
@@ -11120,7 +11137,7 @@
      {
       "market": "wh_o65",
       "label": "Colorado Avalanche gagne et plus de 6,5 buts",
-      "p": 0.2875,
+      "p": 0.2873,
       "prob": 29,
       "fair": 3.48,
       "stars": 1
@@ -11354,7 +11371,7 @@
       "a": 4
      },
      "p_goal": 25,
-     "p_point": 53,
+     "p_point": 52,
      "p_assist": 36
     },
     {
@@ -11458,9 +11475,9 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 19,
+     "p_goal": 18,
      "p_point": 34,
-     "p_assist": 19
+     "p_assist": 18
     }
    ],
    "ctx": [
@@ -11477,7 +11494,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6124,
+     "p": 0.612,
      "prob": 61,
      "fair": 1.63,
      "stars": 3,
@@ -11494,7 +11511,7 @@
     "fun": {
      "market": "h2",
      "label": "Los Angeles Kings gagne par 2 buts d'écart ou plus",
-     "p": 0.3658,
+     "p": 0.3657,
      "prob": 37,
      "fair": 2.73,
      "stars": 1
@@ -11503,7 +11520,7 @@
      {
       "market": "wh_o55",
       "label": "Los Angeles Kings gagne et plus de 5,5 buts",
-      "p": 0.3512,
+      "p": 0.3509,
       "prob": 35,
       "fair": 2.85,
       "stars": 1
@@ -11511,7 +11528,7 @@
      {
       "market": "wh_o65",
       "label": "Los Angeles Kings gagne et plus de 6,5 buts",
-      "p": 0.2867,
+      "p": 0.2864,
       "prob": 29,
       "fair": 3.49,
       "stars": 1
@@ -11867,7 +11884,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Edmonton Oilers",
-     "p": 0.7401,
+     "p": 0.74,
      "prob": 74,
      "fair": 1.35,
      "stars": 4,
@@ -11876,7 +11893,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Edmonton Oilers",
-     "p": 0.7401,
+     "p": 0.74,
      "prob": 74,
      "fair": 1.35,
      "stars": 4,
@@ -11885,16 +11902,16 @@
     "fun": {
      "market": "h3",
      "label": "Edmonton Oilers gagne par 3 buts d'écart ou plus",
-     "p": 0.3644,
+     "p": 0.3642,
      "prob": 36,
-     "fair": 2.74,
+     "fair": 2.75,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o65",
       "label": "Edmonton Oilers gagne et plus de 6,5 buts",
-      "p": 0.3525,
+      "p": 0.3521,
       "prob": 35,
       "fair": 2.84,
       "stars": 1
@@ -35945,7 +35962,7 @@
    "ok": 12,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90237 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90255 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
