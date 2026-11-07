@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T15:24+01:00",
+ "generated": "2026-11-07T15:49+01:00",
  "date": "2026-11-07",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "13:30",
    "home": "Leeds",
    "away": "Spurs",
-   "state": "in",
+   "state": "post",
    "xgH": 1.01,
    "xgA": 0.63,
    "pH": 44,
@@ -47,24 +47,23 @@
     "player": {
      "market": "scorer",
      "label": "Dominic Calvert-Lewin marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
      "stars": 1,
      "player": "Dominic Calvert-Lewin",
      "team": "Leeds",
-     "lineup": "start",
      "pid": "197717",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 9 matchs · titulaire · Leeds annoncé gagnant (44 %) · 1,0 but attendu pour Leeds"
+     "why": "3 buts et 1 passe en 9 matchs · 10 derniers matchs : 3 buts, 1 passe · Leeds annoncé gagnant (44 %) · 1,0 but attendu pour Leeds"
     },
     "decisive": {
      "market": "dec",
      "label": "Dominic Calvert-Lewin buteur ou passeur",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Dominic Calvert-Lewin",
      "team": "Leeds",
@@ -73,11 +72,10 @@
       3,
       1
      ],
-     "lineup": "start",
      "pid": "197717",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 9 matchs · titulaire · Leeds annoncé gagnant (44 %) · 1,0 but attendu pour Leeds"
+     "why": "3 buts et 1 passe en 9 matchs · 10 derniers matchs : 3 buts, 1 passe · Leeds annoncé gagnant (44 %) · 1,0 but attendu pour Leeds"
     }
    }
   },
@@ -354,7 +352,7 @@
    "time": "15:30",
    "home": "Dortmund",
    "away": "Elversberg",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.79,
    "xgA": 0.85,
    "pH": 60,
@@ -391,7 +389,7 @@
     "fun": {
      "market": "htft_h",
      "label": "Dortmund mène à la mi-temps et gagne le match",
-     "p": 0.3778,
+     "p": 0.3777,
      "prob": 38,
      "fair": 2.65,
      "stars": 1
@@ -442,7 +440,7 @@
    "time": "15:30",
    "home": "Mainz",
    "away": "Bayern",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.21,
    "xgA": 2.63,
    "pH": 16,
@@ -481,7 +479,7 @@
      "label": "Bayern gagne et les deux équipes marquent",
      "p": 0.4008,
      "prob": 40,
-     "fair": 2.49,
+     "fair": 2.5,
      "stars": 1
     },
     "player": {
@@ -530,7 +528,7 @@
    "time": "15:30",
    "home": "RB Leipzig",
    "away": "Augsburg",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.5,
    "xgA": 1.37,
    "pH": 62,
@@ -541,7 +539,7 @@
     "main": {
      "market": "1N",
      "label": "RB Leipzig ou nul",
-     "p": 0.8039,
+     "p": 0.804,
      "prob": 80,
      "fair": 1.24,
      "stars": 5,
@@ -618,7 +616,7 @@
    "time": "15:30",
    "home": "Paderborn",
    "away": "Frankfurt",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.08,
    "xgA": 0.97,
    "pH": 38,
@@ -648,7 +646,7 @@
      "label": "Paderborn gagne sans encaisser de but",
      "p": 0.2503,
      "prob": 25,
-     "fair": 4.0,
+     "fair": 3.99,
      "stars": 1
     },
     "player": {
@@ -698,7 +696,7 @@
    "home": "Arsenal",
    "away": "Hull",
    "state": "pre",
-   "xgH": 1.4,
+   "xgH": 1.41,
    "xgA": 0.38,
    "pH": 63,
    "pD": 27,
@@ -717,7 +715,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Arsenal",
-     "p": 0.631,
+     "p": 0.6316,
      "prob": 63,
      "fair": 1.58,
      "stars": 3
@@ -725,18 +723,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.2366,
+     "p": 0.236,
      "prob": 24,
-     "fair": 4.23,
+     "fair": 4.24,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Arsenal mène à la mi-temps et gagne le match",
-     "p": 0.3851,
+     "p": 0.3857,
      "prob": 39,
-     "fair": 2.6,
+     "fair": 2.59,
      "stars": 1
     },
     "player": {
@@ -796,7 +794,7 @@
     "main": {
      "market": "1N",
      "label": "Fulham ou nul",
-     "p": 0.7536,
+     "p": 0.7534,
      "prob": 75,
      "fair": 1.33,
      "stars": 4,
@@ -805,7 +803,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Fulham",
-     "p": 0.4678,
+     "p": 0.4682,
      "prob": 47,
      "fair": 2.14,
      "stars": 1
@@ -813,18 +811,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1507,
+     "p": 0.1501,
      "prob": 15,
-     "fair": 6.64,
+     "fair": 6.66,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Fulham gagne sans encaisser de but",
-     "p": 0.3086,
+     "p": 0.3081,
      "prob": 31,
-     "fair": 3.24,
+     "fair": 3.25,
      "stars": 1
     },
     "player": {
@@ -1048,8 +1046,8 @@
    "home": "Nottm Forest",
    "away": "Man City",
    "state": "pre",
-   "xgH": 0.87,
-   "xgA": 1.66,
+   "xgH": 0.88,
+   "xgA": 1.67,
    "pH": 20,
    "pD": 24,
    "pA": 56,
@@ -1058,7 +1056,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Man City",
-     "p": 0.8035,
+     "p": 0.8036,
      "prob": 80,
      "fair": 1.24,
      "stars": 5,
@@ -1067,7 +1065,7 @@
     "winner": {
      "market": "2",
      "label": "Victoire Man City",
-     "p": 0.5605,
+     "p": 0.5611,
      "prob": 56,
      "fair": 1.78,
      "stars": 2
@@ -1075,16 +1073,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1313,
+     "p": 0.1307,
      "prob": 13,
-     "fair": 7.61,
+     "fair": 7.65,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "scw",
      "label": "Erling Haaland marque et Man City gagne",
-     "p": 0.3782,
+     "p": 0.3783,
      "prob": 38,
      "fair": 2.64,
      "stars": 1,
@@ -2465,8 +2463,8 @@
  "summary": {
   "date": "2026-11-07",
   "yesterday": {
-   "n": 89,
-   "ok": 45
+   "n": 93,
+   "ok": 48
   },
   "foot": 19,
   "nhl": 12,
