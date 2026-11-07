@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T19:43+01:00",
+ "generated": "2026-11-07T20:08+01:00",
  "date": "2026-11-07",
  "matches": [
   {
@@ -939,7 +939,7 @@
    "time": "18:00",
    "home": "Parma",
    "away": "Bologna",
-   "state": "in",
+   "state": "post",
    "xgH": 0.93,
    "xgA": 1.05,
    "pH": 31,
@@ -984,24 +984,23 @@
     "player": {
      "market": "scorer",
      "label": "Federico Bernardeschi marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
-     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · titulaire · Bologna annoncé gagnant (38 %) · 1,0 but attendu pour Bologna"
+     "why": "3 buts et 0 passe en 10 matchs · Bologna annoncé gagnant (38 %) · 1,0 but attendu pour Bologna"
     },
     "decisive": {
      "market": "dec",
      "label": "Federico Bernardeschi buteur ou passeur",
-     "p": 0.22,
-     "prob": 22,
-     "fair": 4.55,
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
@@ -1010,11 +1009,10 @@
       3,
       0
      ],
-     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · titulaire · Bologna annoncé gagnant (38 %) · 1,0 but attendu pour Bologna"
+     "why": "3 buts et 0 passe en 10 matchs · Bologna annoncé gagnant (38 %) · 1,0 but attendu pour Bologna"
     }
    }
   },
@@ -1383,71 +1381,69 @@
    "home": "AS Roma",
    "away": "Sassuolo",
    "state": "pre",
-   "xgH": 3.99,
-   "xgA": 1.24,
+   "xgH": 3.64,
+   "xgA": 1.0,
    "pH": 84,
    "pD": 9,
-   "pA": 7,
+   "pA": 6,
    "edate": "20261107",
    "picks": {
     "main": {
      "market": "1N",
      "label": "AS Roma ou nul",
-     "p": 0.9325,
-     "prob": 93,
-     "fair": 1.07,
+     "p": 0.9394,
+     "prob": 94,
+     "fair": 1.06,
      "stars": 5,
      "why": "10 derniers matchs : AS Roma 28 marqués / 10 encaissés · Sassuolo 16 / 26"
     },
     "winner": {
      "market": "1",
      "label": "Victoire AS Roma",
-     "p": 0.8402,
+     "p": 0.8449,
      "prob": 84,
-     "fair": 1.19,
+     "fair": 1.18,
      "stars": 5
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 3-1",
-     "p": 0.0704,
-     "prob": 7,
-     "fair": 14.21,
+     "label": "Score exact 3-0",
+     "p": 0.0777,
+     "prob": 8,
+     "fair": 12.87,
      "stars": 1,
-     "value": "3-1"
+     "value": "3-0"
     },
     "fun": {
-     "market": "sc2",
-     "label": "Donyell Malen marque au moins 2 buts",
-     "p": 0.2932,
-     "prob": 29,
-     "fair": 3.41,
-     "stars": 1,
-     "player": "Donyell Malen",
-     "team": "AS Roma",
-     "side": "h"
+     "market": "wh_nil",
+     "label": "AS Roma gagne sans encaisser de but",
+     "p": 0.3586,
+     "prob": 36,
+     "fair": 2.79,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Donyell Malen marque",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
      "stars": 3,
      "player": "Donyell Malen",
      "team": "AS Roma",
+     "lineup": "start",
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 1 passe en 9 matchs · AS Roma favori (84 %) · 4,0 buts attendus pour AS Roma"
+     "why": "8 buts et 1 passe en 9 matchs · titulaire · AS Roma favori (84 %) · 3,6 buts attendus pour AS Roma"
     },
     "decisive": {
      "market": "dec",
      "label": "Donyell Malen buteur ou passeur",
-     "p": 0.71,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
+     "p": 0.68,
+     "prob": 68,
+     "fair": 1.47,
+     "stars": 3,
      "player": "Donyell Malen",
      "team": "AS Roma",
      "base": [
@@ -1455,10 +1451,11 @@
       8,
       1
      ],
+     "lineup": "start",
      "pid": "259481",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 1 passe en 9 matchs · AS Roma favori (84 %) · 4,0 buts attendus pour AS Roma"
+     "why": "8 buts et 1 passe en 9 matchs · titulaire · AS Roma favori (84 %) · 3,6 buts attendus pour AS Roma"
     }
    }
   },
@@ -1472,67 +1469,68 @@
    "home": "Valencia",
    "away": "Real Madrid",
    "state": "pre",
-   "xgH": 0.87,
-   "xgA": 2.03,
-   "pH": 15,
-   "pD": 20,
-   "pA": 64,
+   "xgH": 0.72,
+   "xgA": 1.93,
+   "pH": 13,
+   "pD": 21,
+   "pA": 66,
    "edate": "20261107",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Real Madrid",
-     "p": 0.8476,
-     "prob": 85,
-     "fair": 1.18,
+     "p": 0.869,
+     "prob": 87,
+     "fair": 1.15,
      "stars": 5,
      "why": "10 derniers matchs : Valencia 8 marqués / 17 encaissés · Real Madrid 26 / 9"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Real Madrid",
-     "p": 0.6427,
-     "prob": 64,
-     "fair": 1.56,
+     "p": 0.6606,
+     "prob": 66,
+     "fair": 1.51,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 0-2",
-     "p": 0.1135,
-     "prob": 11,
-     "fair": 8.81,
+     "label": "Score exact 0-1",
+     "p": 0.1361,
+     "prob": 14,
+     "fair": 7.35,
      "stars": 1,
-     "value": "0-2"
+     "value": "0-1"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "Real Madrid mène à la mi-temps et gagne le match",
-     "p": 0.4185,
+     "market": "wa_nil",
+     "label": "Real Madrid gagne sans encaisser de but",
+     "p": 0.4162,
      "prob": 42,
-     "fair": 2.39,
+     "fair": 2.4,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Kylian Mbappé marque",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
      "stars": 2,
      "player": "Kylian Mbappé",
      "team": "Real Madrid",
+     "lineup": "start",
      "pid": "231388",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "12 buts et 2 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes · Real Madrid favori (64 %) · 2,0 buts attendus pour Real Madrid"
+     "why": "12 buts et 2 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes · titulaire · Real Madrid favori (66 %) · 1,9 buts attendus pour Real Madrid"
     },
     "decisive": {
      "market": "dec",
      "label": "Kylian Mbappé buteur ou passeur",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3,
      "player": "Kylian Mbappé",
      "team": "Real Madrid",
@@ -1541,10 +1539,11 @@
       12,
       2
      ],
+     "lineup": "start",
      "pid": "231388",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "12 buts et 2 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes · Real Madrid favori (64 %) · 2,0 buts attendus pour Real Madrid"
+     "why": "12 buts et 2 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes · titulaire · Real Madrid favori (66 %) · 1,9 buts attendus pour Real Madrid"
     }
    }
   },
@@ -1558,67 +1557,71 @@
    "home": "PSG",
    "away": "Troyes",
    "state": "pre",
-   "xgH": 2.72,
-   "xgA": 0.64,
-   "pH": 81,
-   "pD": 13,
-   "pA": 6,
+   "xgH": 2.09,
+   "xgA": 0.58,
+   "pH": 73,
+   "pD": 18,
+   "pA": 9,
    "edate": "20261107",
    "picks": {
     "main": {
      "market": "1N",
      "label": "PSG ou nul",
-     "p": 0.9369,
-     "prob": 94,
-     "fair": 1.07,
+     "p": 0.9102,
+     "prob": 91,
+     "fair": 1.1,
      "stars": 5,
      "why": "9 derniers matchs : PSG 21 marqués / 10 encaissés · Troyes 7 / 16"
     },
     "winner": {
      "market": "1",
      "label": "Victoire PSG",
-     "p": 0.8095,
-     "prob": 81,
-     "fair": 1.24,
-     "stars": 5
+     "p": 0.7282,
+     "prob": 73,
+     "fair": 1.37,
+     "stars": 4
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1285,
-     "prob": 13,
-     "fair": 7.78,
+     "p": 0.1518,
+     "prob": 15,
+     "fair": 6.59,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
-     "market": "h3",
-     "label": "PSG gagne avec 3 buts d'écart ou plus",
-     "p": 0.3838,
-     "prob": 38,
-     "fair": 2.61,
-     "stars": 1
+     "market": "scw",
+     "label": "Ferran Torres marque et PSG gagne",
+     "p": 0.2868,
+     "prob": 29,
+     "fair": 3.49,
+     "stars": 1,
+     "player": "Ferran Torres",
+     "team": "PSG",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
      "label": "Ferran Torres marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 9 matchs · PSG favori (81 %) · 2,7 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 9 matchs · titulaire · PSG favori (73 %) · 2,1 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
      "label": "Ferran Torres buteur ou passeur",
-     "p": 0.48,
-     "prob": 48,
-     "fair": 2.08,
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
@@ -1627,10 +1630,11 @@
       4,
       1
      ],
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 9 matchs · PSG favori (81 %) · 2,7 buts attendus pour PSG"
+     "why": "4 buts et 1 passe en 9 matchs · titulaire · PSG favori (73 %) · 2,1 buts attendus pour PSG"
     }
    }
   },
@@ -2456,27 +2460,27 @@
  "summary": {
   "date": "2026-11-07",
   "yesterday": {
-   "n": 144,
-   "ok": 66
+   "n": 149,
+   "ok": 68
   },
   "foot": 19,
   "nhl": 12,
   "top": [
    {
-    "label": "PSG ou nul",
-    "prob": 94,
-    "time": "21:05",
-    "match": "PSG – Troyes"
-   },
-   {
     "label": "AS Roma ou nul",
-    "prob": 93,
+    "prob": 94,
     "time": "20:45",
     "match": "AS Roma – Sassuolo"
    },
    {
+    "label": "PSG ou nul",
+    "prob": 91,
+    "time": "21:05",
+    "match": "PSG – Troyes"
+   },
+   {
     "label": "Nul ou Real Madrid",
-    "prob": 85,
+    "prob": 87,
     "time": "21:00",
     "match": "Valencia – Real Madrid"
    }

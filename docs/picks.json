@@ -43688,7 +43688,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874974|2|": {
   "match": "foot-401874974",
@@ -43712,7 +43712,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874974|scorer|Federico Bernardeschi": {
   "match": "foot-401874974",
@@ -43736,7 +43736,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874974|dec|Federico Bernardeschi": {
   "match": "foot-401874974",
@@ -43788,7 +43788,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874974|exact|": {
   "match": "foot-401874974",
@@ -43812,7 +43812,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878757|N2|": {
   "match": "foot-401878757",
@@ -44267,7 +44267,7 @@
   "away": "Sassuolo",
   "market": "1N",
   "label": "AS Roma ou nul",
-  "p": 0.9325,
+  "p": 0.9394,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44291,7 +44291,7 @@
   "away": "Sassuolo",
   "market": "1",
   "label": "Victoire AS Roma",
-  "p": 0.8402,
+  "p": 0.8449,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44315,7 +44315,7 @@
   "away": "Sassuolo",
   "market": "scorer",
   "label": "Donyell Malen marque",
-  "p": 0.66,
+  "p": 0.62,
   "stars": 3,
   "player": "Donyell Malen",
   "pid_player": "259481",
@@ -44339,8 +44339,8 @@
   "away": "Sassuolo",
   "market": "dec",
   "label": "Donyell Malen buteur ou passeur",
-  "p": 0.71,
-  "stars": 4,
+  "p": 0.68,
+  "stars": 3,
   "player": "Donyell Malen",
   "pid_player": "259481",
   "value": null,
@@ -44366,12 +44366,12 @@
   "home": "AS Roma",
   "away": "Sassuolo",
   "market": "exact",
-  "label": "Score exact 3-1",
-  "p": 0.0704,
+  "label": "Score exact 3-0",
+  "p": 0.0777,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "3-1",
+  "value": "3-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -44391,7 +44391,7 @@
   "away": "Real Madrid",
   "market": "N2",
   "label": "Nul ou Real Madrid",
-  "p": 0.8476,
+  "p": 0.869,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44415,7 +44415,7 @@
   "away": "Real Madrid",
   "market": "2",
   "label": "Victoire Real Madrid",
-  "p": 0.6427,
+  "p": 0.6606,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -44439,7 +44439,7 @@
   "away": "Real Madrid",
   "market": "scorer",
   "label": "Kylian Mbappé marque",
-  "p": 0.59,
+  "p": 0.58,
   "stars": 2,
   "player": "Kylian Mbappé",
   "pid_player": "231388",
@@ -44463,7 +44463,7 @@
   "away": "Real Madrid",
   "market": "dec",
   "label": "Kylian Mbappé buteur ou passeur",
-  "p": 0.66,
+  "p": 0.64,
   "stars": 3,
   "player": "Kylian Mbappé",
   "pid_player": "231388",
@@ -44482,30 +44482,6 @@
   ],
   "result": null
  },
- "foot-401882808|htft_a|": {
-  "match": "foot-401882808",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-07",
-  "home": "Valencia",
-  "away": "Real Madrid",
-  "market": "htft_a",
-  "label": "Real Madrid mène à la mi-temps et gagne le match",
-  "p": 0.4185,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401882808|exact|": {
   "match": "foot-401882808",
   "sport": "foot",
@@ -44514,12 +44490,12 @@
   "home": "Valencia",
   "away": "Real Madrid",
   "market": "exact",
-  "label": "Score exact 0-2",
-  "p": 0.1135,
+  "label": "Score exact 0-1",
+  "p": 0.1361,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "0-2",
+  "value": "0-1",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -44539,7 +44515,7 @@
   "away": "Troyes",
   "market": "1N",
   "label": "PSG ou nul",
-  "p": 0.9369,
+  "p": 0.9102,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44563,8 +44539,8 @@
   "away": "Troyes",
   "market": "1",
   "label": "Victoire PSG",
-  "p": 0.8095,
-  "stars": 5,
+  "p": 0.7282,
+  "stars": 4,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -44587,7 +44563,7 @@
   "away": "Troyes",
   "market": "scorer",
   "label": "Ferran Torres marque",
-  "p": 0.4,
+  "p": 0.32,
   "stars": 1,
   "player": "Ferran Torres",
   "pid_player": "265869",
@@ -44611,7 +44587,7 @@
   "away": "Troyes",
   "market": "dec",
   "label": "Ferran Torres buteur ou passeur",
-  "p": 0.48,
+  "p": 0.4,
   "stars": 1,
   "player": "Ferran Torres",
   "pid_player": "265869",
@@ -44630,30 +44606,6 @@
   ],
   "result": null
  },
- "foot-401876407|h3|": {
-  "match": "foot-401876407",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-07",
-  "home": "PSG",
-  "away": "Troyes",
-  "market": "h3",
-  "label": "PSG gagne avec 3 buts d'écart ou plus",
-  "p": 0.3838,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876407|exact|": {
   "match": "foot-401876407",
   "sport": "foot",
@@ -44663,7 +44615,7 @@
   "away": "Troyes",
   "market": "exact",
   "label": "Score exact 2-0",
-  "p": 0.1285,
+  "p": 0.1518,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -46305,30 +46257,6 @@
   ],
   "result": false
  },
- "foot-401874803|sc2|Donyell Malen": {
-  "match": "foot-401874803",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-07",
-  "home": "AS Roma",
-  "away": "Sassuolo",
-  "market": "sc2",
-  "label": "Donyell Malen marque au moins 2 buts",
-  "p": 0.2932,
-  "stars": 1,
-  "player": "Donyell Malen",
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": "h",
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401878757|wa_nil|": {
   "match": "foot-401878757",
   "sport": "foot",
@@ -46471,6 +46399,78 @@
   "season": null,
   "base": null,
   "side": "a",
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874803|wh_nil|": {
+  "match": "foot-401874803",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-07",
+  "home": "AS Roma",
+  "away": "Sassuolo",
+  "market": "wh_nil",
+  "label": "AS Roma gagne sans encaisser de but",
+  "p": 0.3586,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882808|wa_nil|": {
+  "match": "foot-401882808",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-07",
+  "home": "Valencia",
+  "away": "Real Madrid",
+  "market": "wa_nil",
+  "label": "Real Madrid gagne sans encaisser de but",
+  "p": 0.4162,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401876407|scw|Ferran Torres": {
+  "match": "foot-401876407",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-07",
+  "home": "PSG",
+  "away": "Troyes",
+  "market": "scw",
+  "label": "Ferran Torres marque et PSG gagne",
+  "p": 0.2868,
+  "stars": 1,
+  "player": "Ferran Torres",
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": "h",
   "group": "fun",
   "kinds": [
    "fun"
