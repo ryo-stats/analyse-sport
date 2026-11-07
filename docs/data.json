@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T07:28+01:00",
+ "generated": "2026-11-07T12:28+01:00",
  "date": "2026-11-07",
  "nhl_date": "2026-11-07",
  "foot": [
@@ -2971,6 +2971,15 @@
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Paderborn (15e) lutte pour le maintien, 2 points d'avance sur la zone rouge.",
    "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Paderborn ou nul",
+     "p": 0.6666,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "8 derniers matchs : Paderborn 6 marqués / 9 encaissés · Frankfurt 13 / 18"
+    },
     "winner": {
      "market": "1",
      "label": "Victoire Paderborn",
@@ -3046,22 +3055,11 @@
      "stats_league": "ger.1",
      "season": 2026,
      "why": "2 buts et 0 passe en 8 matchs · Paderborn annoncé gagnant (40 %) · 1,3 but attendu pour Paderborn"
-    },
-    "held": {
-     "market": "1N",
-     "label": "Paderborn ou nul",
-     "p": 0.6666,
-     "prob": 67,
-     "fair": 1.5,
-     "stars": 3,
-     "why": "8 derniers matchs : Paderborn 6 marqués / 9 encaissés · Frankfurt 13 / 18",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+    "agree": true
    },
    "country": "Allemagne",
    "code": "ger.1",
@@ -12029,22 +12027,22 @@
    ]
   },
   "picks": {
-   "n": 1256,
+   "n": 1259,
    "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1256,
+     "n": 1259,
      "ok": 692,
      "rate": 55,
      "expected": 52
     },
     "foot": {
-     "n": 794,
+     "n": 797,
      "ok": 423,
      "rate": 53,
-     "expected": 51
+     "expected": 50
     },
     "nhl": {
      "n": 462,
@@ -12114,16 +12112,16 @@
     {
      "date": "2026-11-06",
      "all": {
-      "n": 53,
+      "n": 56,
       "ok": 28,
-      "rate": 53,
-      "expected": 54
+      "rate": 50,
+      "expected": 53
      },
      "foot": {
-      "n": 17,
+      "n": 20,
       "ok": 11,
-      "rate": 65,
-      "expected": 48
+      "rate": 55,
+      "expected": 47
      },
      "nhl": {
       "n": 36,
@@ -12933,19 +12931,19 @@
    "leagues": [
     {
      "sport": "foot",
+     "league": "Serie A",
+     "n": 142,
+     "ok": 76,
+     "rate": 54,
+     "expected": 50
+    },
+    {
+     "sport": "foot",
      "league": "Ligue des champions",
      "n": 141,
      "ok": 85,
      "rate": 60,
      "expected": 53
-    },
-    {
-     "sport": "foot",
-     "league": "Serie A",
-     "n": 141,
-     "ok": 76,
-     "rate": 54,
-     "expected": 50
     },
     {
      "sport": "foot",
@@ -12958,7 +12956,7 @@
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 103,
+     "n": 104,
      "ok": 57,
      "rate": 55,
      "expected": 52
@@ -12974,9 +12972,9 @@
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 90,
+     "n": 91,
      "ok": 54,
-     "rate": 60,
+     "rate": 59,
      "expected": 50
     },
     {
@@ -12999,13 +12997,13 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 557,
+     "n": 559,
      "announced": 34,
      "actual": 35
     },
     {
      "stars": 2,
-     "n": 213,
+     "n": 214,
      "announced": 55,
      "actual": 56
     },
@@ -13296,6 +13294,19 @@
      "mid": "foot-401874815",
      "score": "2-1",
      "match": "Venezia – Udinese",
+     "label": "Jurgen Ekkelenkamp buteur ou passeur",
+     "prob": 34,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-06",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874815",
+     "score": "2-1",
+     "match": "Venezia – Udinese",
      "label": "Udinese mène à la mi-temps et gagne le match",
      "prob": 22,
      "stars": 1,
@@ -13338,6 +13349,19 @@
      "label": "Casper Tengstedt marque",
      "prob": 47,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-06",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876405",
+     "score": "3-1",
+     "match": "Toulouse – Strasbourg",
+     "label": "Casper Tengstedt buteur ou passeur",
+     "prob": 54,
+     "stars": 2,
      "ok": false,
      "fun": false
     },
@@ -13454,6 +13478,19 @@
      "match": "Sevilla – Alavés",
      "label": "Isaac Romero marque",
      "prob": 23,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-06",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882809",
+     "score": "0-0",
+     "match": "Sevilla – Alavés",
+     "label": "Isaac Romero buteur ou passeur",
+     "prob": 30,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -35901,23 +35938,7 @@
     "ita.1": 853,
     "ger.1": 659
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 82
-    },
-    "eng.1": {
-     "2026": 91
-    },
-    "esp.1": {
-     "2026": 110
-    },
-    "ita.1": {
-     "2026": 101
-    },
-    "ger.1": {
-     "2026": 73
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
