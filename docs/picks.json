@@ -42824,7 +42824,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874811|1|": {
   "match": "foot-401874811",
@@ -42848,7 +42848,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874811|exact|": {
   "match": "foot-401874811",
@@ -42872,7 +42872,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884745|1N|": {
   "match": "foot-401884745",
@@ -43675,8 +43675,8 @@
   "away": "Bologna",
   "market": "N2",
   "label": "Nul ou Bologna",
-  "p": 0.7027,
-  "stars": 4,
+  "p": 0.6853,
+  "stars": 3,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -43699,7 +43699,7 @@
   "away": "Bologna",
   "market": "2",
   "label": "Victoire Bologna",
-  "p": 0.4125,
+  "p": 0.3757,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -43723,7 +43723,7 @@
   "away": "Bologna",
   "market": "scorer",
   "label": "Federico Bernardeschi marque",
-  "p": 0.23,
+  "p": 0.2,
   "stars": 1,
   "player": "Federico Bernardeschi",
   "pid_player": "180956",
@@ -43747,7 +43747,7 @@
   "away": "Bologna",
   "market": "dec",
   "label": "Federico Bernardeschi buteur ou passeur",
-  "p": 0.25,
+  "p": 0.22,
   "stars": 1,
   "player": "Federico Bernardeschi",
   "pid_player": "180956",
@@ -43775,7 +43775,7 @@
   "away": "Bologna",
   "market": "wa_nil",
   "label": "Bologna gagne sans encaisser de but",
-  "p": 0.2637,
+  "p": 0.2557,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -43799,7 +43799,7 @@
   "away": "Bologna",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.1359,
+  "p": 0.1447,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -44415,7 +44415,7 @@
   "away": "Sassuolo",
   "market": "1N",
   "label": "AS Roma ou nul",
-  "p": 0.9323,
+  "p": 0.9325,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44439,7 +44439,7 @@
   "away": "Sassuolo",
   "market": "1",
   "label": "Victoire AS Roma",
-  "p": 0.8395,
+  "p": 0.8402,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44463,7 +44463,7 @@
   "away": "Sassuolo",
   "market": "scorer",
   "label": "Donyell Malen marque",
-  "p": 0.65,
+  "p": 0.66,
   "stars": 3,
   "player": "Donyell Malen",
   "pid_player": "259481",
@@ -44506,30 +44506,6 @@
   ],
   "result": null
  },
- "foot-401874803|wh_nil|": {
-  "match": "foot-401874803",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-07",
-  "home": "AS Roma",
-  "away": "Sassuolo",
-  "market": "wh_nil",
-  "label": "AS Roma gagne sans encaisser de but",
-  "p": 0.2873,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874803|exact|": {
   "match": "foot-401874803",
   "sport": "foot",
@@ -44539,7 +44515,7 @@
   "away": "Sassuolo",
   "market": "exact",
   "label": "Score exact 3-1",
-  "p": 0.0709,
+  "p": 0.0704,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -46203,7 +46179,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874811|dec|Giovanni Simeone": {
   "match": "foot-401874811",
@@ -46255,7 +46231,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884745|scorer|Fábio Silva": {
   "match": "foot-401884745",
@@ -46471,6 +46447,30 @@
   "season": null,
   "base": null,
   "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874803|sc2|Donyell Malen": {
+  "match": "foot-401874803",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-07",
+  "home": "AS Roma",
+  "away": "Sassuolo",
+  "market": "sc2",
+  "label": "Donyell Malen marque au moins 2 buts",
+  "p": 0.2932,
+  "stars": 1,
+  "player": "Donyell Malen",
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": "h",
   "group": "fun",
   "kinds": [
    "fun"

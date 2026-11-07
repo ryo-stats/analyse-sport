@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T16:54+01:00",
+ "generated": "2026-11-07T17:19+01:00",
  "date": "2026-11-07",
  "matches": [
   {
@@ -228,7 +228,7 @@
      "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 10 matchs · Frosinone annoncé gagnant (39 %) · 1,4 but attendu pour Frosinone"
+     "why": "8 buts et 0 passe en 10 matchs · 10 derniers matchs : 8 buts, 0 passe (joué 9 sur 10) · Frosinone annoncé gagnant (39 %) · 1,4 but attendu pour Frosinone"
     },
     "decisive": {
      "market": "dec",
@@ -247,7 +247,7 @@
      "pid": "319265",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 10 matchs · Frosinone annoncé gagnant (39 %) · 1,4 but attendu pour Frosinone"
+     "why": "8 buts et 0 passe en 10 matchs · 10 derniers matchs : 8 buts, 0 passe (joué 9 sur 10) · Frosinone annoncé gagnant (39 %) · 1,4 but attendu pour Frosinone"
     }
    }
   },
@@ -260,7 +260,7 @@
    "time": "15:00",
    "home": "Torino",
    "away": "Lecce",
-   "state": "in",
+   "state": "post",
    "xgH": 1.73,
    "xgA": 0.92,
    "pH": 56,
@@ -304,38 +304,36 @@
     },
     "player": {
      "market": "scorer",
-     "label": "Giovanni Simeone marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
-     "stars": 1,
-     "player": "Giovanni Simeone",
-     "team": "Torino",
-     "lineup": "start",
-     "pid": "189974",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "2 buts et 1 passe en 10 matchs · titulaire · Torino favori (56 %) · 1,7 buts attendus pour Torino"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Giovanni Simeone buteur ou passeur",
+     "label": "Ché Adams marque",
      "p": 0.33,
      "prob": 33,
      "fair": 3.03,
      "stars": 1,
-     "player": "Giovanni Simeone",
+     "player": "Ché Adams",
      "team": "Torino",
-     "base": [
-      10,
-      2,
-      1
-     ],
-     "lineup": "start",
-     "pid": "189974",
+     "pid": "213725",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 10 matchs · titulaire · Torino favori (56 %) · 1,7 buts attendus pour Torino"
+     "why": "4 buts et 0 passe en 8 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 8 sur 10) · Torino favori (56 %) · 1,7 buts attendus pour Torino"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Ché Adams buteur ou passeur",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Ché Adams",
+     "team": "Torino",
+     "base": [
+      8,
+      4,
+      0
+     ],
+     "pid": "213725",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "4 buts et 0 passe en 8 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 8 sur 10) · Torino favori (56 %) · 1,7 buts attendus pour Torino"
     }
    }
   },
@@ -956,67 +954,68 @@
    "home": "Parma",
    "away": "Bologna",
    "state": "pre",
-   "xgH": 0.98,
-   "xgA": 1.21,
-   "pH": 30,
-   "pD": 29,
-   "pA": 41,
+   "xgH": 0.93,
+   "xgA": 1.05,
+   "pH": 31,
+   "pD": 31,
+   "pA": 38,
    "edate": "20261107",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Bologna",
-     "p": 0.7027,
-     "prob": 70,
-     "fair": 1.42,
-     "stars": 4,
+     "p": 0.6853,
+     "prob": 69,
+     "fair": 1.46,
+     "stars": 3,
      "why": "10 derniers matchs : Parma 8 marqués / 15 encaissés · Bologna 14 / 13"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Bologna",
-     "p": 0.4125,
-     "prob": 41,
-     "fair": 2.42,
+     "p": 0.3757,
+     "prob": 38,
+     "fair": 2.66,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1359,
+     "p": 0.1447,
      "prob": 14,
-     "fair": 7.36,
+     "fair": 6.91,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Bologna gagne sans encaisser de but",
-     "p": 0.2637,
+     "p": 0.2557,
      "prob": 26,
-     "fair": 3.79,
+     "fair": 3.91,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Federico Bernardeschi marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
+     "p": 0.2,
+     "prob": 20,
+     "fair": 5.0,
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
+     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Bologna annoncé gagnant (41 %) · 1,2 but attendu pour Bologna"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Bologna annoncé gagnant (38 %) · 1,0 but attendu pour Bologna"
     },
     "decisive": {
      "market": "dec",
      "label": "Federico Bernardeschi buteur ou passeur",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
@@ -1025,10 +1024,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Bologna annoncé gagnant (41 %) · 1,2 but attendu pour Bologna"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Bologna annoncé gagnant (38 %) · 1,0 but attendu pour Bologna"
     }
    }
   },
@@ -1389,8 +1389,8 @@
    "home": "AS Roma",
    "away": "Sassuolo",
    "state": "pre",
-   "xgH": 3.96,
-   "xgA": 1.23,
+   "xgH": 3.99,
+   "xgA": 1.24,
    "pH": 84,
    "pD": 9,
    "pA": 7,
@@ -1399,7 +1399,7 @@
     "main": {
      "market": "1N",
      "label": "AS Roma ou nul",
-     "p": 0.9323,
+     "p": 0.9325,
      "prob": 93,
      "fair": 1.07,
      "stars": 5,
@@ -1408,7 +1408,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire AS Roma",
-     "p": 0.8395,
+     "p": 0.8402,
      "prob": 84,
      "fair": 1.19,
      "stars": 5
@@ -1416,26 +1416,29 @@
     "score": {
      "market": "exact",
      "label": "Score exact 3-1",
-     "p": 0.0709,
+     "p": 0.0704,
      "prob": 7,
-     "fair": 14.1,
+     "fair": 14.21,
      "stars": 1,
      "value": "3-1"
     },
     "fun": {
-     "market": "wh_nil",
-     "label": "AS Roma gagne sans encaisser de but",
-     "p": 0.2873,
+     "market": "sc2",
+     "label": "Donyell Malen marque au moins 2 buts",
+     "p": 0.2932,
      "prob": 29,
-     "fair": 3.48,
-     "stars": 1
+     "fair": 3.41,
+     "stars": 1,
+     "player": "Donyell Malen",
+     "team": "AS Roma",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
      "label": "Donyell Malen marque",
-     "p": 0.65,
-     "prob": 65,
-     "fair": 1.54,
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "player": "Donyell Malen",
      "team": "AS Roma",
@@ -2459,8 +2462,8 @@
  "summary": {
   "date": "2026-11-07",
   "yesterday": {
-   "n": 103,
-   "ok": 48
+   "n": 108,
+   "ok": 49
   },
   "foot": 19,
   "nhl": 12,
