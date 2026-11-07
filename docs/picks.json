@@ -42896,7 +42896,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884745|1|": {
   "match": "foot-401884745",
@@ -42920,7 +42920,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884745|exact|": {
   "match": "foot-401884745",
@@ -42944,7 +42944,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884740|N2|": {
   "match": "foot-401884740",
@@ -42968,7 +42968,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884740|2|": {
   "match": "foot-401884740",
@@ -42992,7 +42992,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884740|scorer|Michael Olise": {
   "match": "foot-401884740",
@@ -43016,7 +43016,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884740|dec|Michael Olise": {
   "match": "foot-401884740",
@@ -43068,7 +43068,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884744|1|": {
   "match": "foot-401884744",
@@ -43092,7 +43092,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884744|scorer|Christopher Nkunku": {
   "match": "foot-401884744",
@@ -43116,7 +43116,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884744|dec|Christopher Nkunku": {
   "match": "foot-401884744",
@@ -43144,7 +43144,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884744|exact|": {
   "match": "foot-401884744",
@@ -43168,7 +43168,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884737|1|": {
   "match": "foot-401884737",
@@ -43192,7 +43192,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884737|scorer|Stefano Marino": {
   "match": "foot-401884737",
@@ -43216,7 +43216,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884737|dec|Stefano Marino": {
   "match": "foot-401884737",
@@ -43268,7 +43268,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401878760|1N|": {
   "match": "foot-401878760",
@@ -43823,7 +43823,7 @@
   "away": "Man City",
   "market": "N2",
   "label": "Nul ou Man City",
-  "p": 0.8036,
+  "p": 0.8272,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -43847,7 +43847,7 @@
   "away": "Man City",
   "market": "2",
   "label": "Victoire Man City",
-  "p": 0.5611,
+  "p": 0.5731,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -43871,8 +43871,8 @@
   "away": "Man City",
   "market": "scorer",
   "label": "Erling Haaland marque",
-  "p": 0.5,
-  "stars": 2,
+  "p": 0.47,
+  "stars": 1,
   "player": "Erling Haaland",
   "pid_player": "253989",
   "value": null,
@@ -43895,8 +43895,8 @@
   "away": "Man City",
   "market": "dec",
   "label": "Erling Haaland buteur ou passeur",
-  "p": 0.51,
-  "stars": 2,
+  "p": 0.49,
+  "stars": 1,
   "player": "Erling Haaland",
   "pid_player": "253989",
   "value": null,
@@ -43914,30 +43914,6 @@
   ],
   "result": null
  },
- "foot-401878757|scw|Erling Haaland": {
-  "match": "foot-401878757",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-11-07",
-  "home": "Nottm Forest",
-  "away": "Man City",
-  "market": "scw",
-  "label": "Erling Haaland marque et Man City gagne",
-  "p": 0.3783,
-  "stars": 1,
-  "player": "Erling Haaland",
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": "a",
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401878757|exact|": {
   "match": "foot-401878757",
   "sport": "foot",
@@ -43947,7 +43923,7 @@
   "away": "Man City",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.1307,
+  "p": 0.159,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -43971,7 +43947,7 @@
   "away": "Athletic",
   "market": "N2",
   "label": "Nul ou Athletic",
-  "p": 0.7153,
+  "p": 0.7087,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -43995,7 +43971,7 @@
   "away": "Athletic",
   "market": "2",
   "label": "Victoire Athletic",
-  "p": 0.4582,
+  "p": 0.4366,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -44019,7 +43995,7 @@
   "away": "Athletic",
   "market": "scorer",
   "label": "Álex Berenguer marque",
-  "p": 0.32,
+  "p": 0.29,
   "stars": 1,
   "player": "Álex Berenguer",
   "pid_player": "209579",
@@ -44043,8 +44019,8 @@
   "away": "Athletic",
   "market": "dec",
   "label": "Álex Berenguer buteur ou passeur",
-  "p": 0.53,
-  "stars": 2,
+  "p": 0.49,
+  "stars": 1,
   "player": "Álex Berenguer",
   "pid_player": "209579",
   "value": null,
@@ -44062,30 +44038,6 @@
   ],
   "result": null
  },
- "foot-401882811|htft_a|": {
-  "match": "foot-401882811",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-07",
-  "home": "Osasuna",
-  "away": "Athletic",
-  "market": "htft_a",
-  "label": "Athletic mène à la mi-temps et gagne le match",
-  "p": 0.276,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401882811|exact|": {
   "match": "foot-401882811",
   "sport": "foot",
@@ -44095,7 +44047,7 @@
   "away": "Athletic",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.1086,
+  "p": 0.1218,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -44110,30 +44062,6 @@
   ],
   "result": null
  },
- "foot-401884743|o25|": {
-  "match": "foot-401884743",
-  "sport": "foot",
-  "league": "Bundesliga",
-  "date": "2026-11-07",
-  "home": "Stuttgart",
-  "away": "Bremen",
-  "market": "o25",
-  "label": "Plus de 2,5 buts",
-  "p": 0.7371,
-  "stars": 4,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
  "foot-401884743|1|": {
   "match": "foot-401884743",
   "sport": "foot",
@@ -44143,8 +44071,8 @@
   "away": "Bremen",
   "market": "1",
   "label": "Victoire Stuttgart",
-  "p": 0.504,
-  "stars": 2,
+  "p": 0.4274,
+  "stars": 1,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -44158,58 +44086,6 @@
   ],
   "result": null
  },
- "foot-401884743|scorer|Ermedin Demirovic": {
-  "match": "foot-401884743",
-  "sport": "foot",
-  "league": "Bundesliga",
-  "date": "2026-11-07",
-  "home": "Stuttgart",
-  "away": "Bremen",
-  "market": "scorer",
-  "label": "Ermedin Demirovic marque",
-  "p": 0.5,
-  "stars": 2,
-  "player": "Ermedin Demirovic",
-  "pid_player": "269136",
-  "value": null,
-  "stats_league": "ger.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401884743|dec|Ermedin Demirovic": {
-  "match": "foot-401884743",
-  "sport": "foot",
-  "league": "Bundesliga",
-  "date": "2026-11-07",
-  "home": "Stuttgart",
-  "away": "Bremen",
-  "market": "dec",
-  "label": "Ermedin Demirovic buteur ou passeur",
-  "p": 0.52,
-  "stars": 2,
-  "player": "Ermedin Demirovic",
-  "pid_player": "269136",
-  "value": null,
-  "stats_league": "ger.1",
-  "season": 2026,
-  "base": [
-   8,
-   5,
-   0
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
  "foot-401884743|wh_o25|": {
   "match": "foot-401884743",
   "sport": "foot",
@@ -44219,7 +44095,7 @@
   "away": "Bremen",
   "market": "wh_o25",
   "label": "Stuttgart gagne et plus de 2,5 buts",
-  "p": 0.405,
+  "p": 0.3069,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -44243,7 +44119,7 @@
   "away": "Bremen",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.0852,
+  "p": 0.0874,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -46031,7 +45907,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020266|o65|": {
   "match": "nhl-2026020266",
@@ -46255,7 +46131,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884745|dec|Fábio Silva": {
   "match": "foot-401884745",
@@ -46307,7 +46183,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884740|wa_btts|": {
   "match": "foot-401884740",
@@ -46331,7 +46207,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884744|1N|": {
   "match": "foot-401884744",
@@ -46355,7 +46231,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884744|htft_h|": {
   "match": "foot-401884744",
@@ -46379,7 +46255,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884737|wh_nil|": {
   "match": "foot-401884737",
@@ -46403,7 +46279,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879241|wh_nil|": {
   "match": "foot-401879241",
@@ -46474,6 +46350,130 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": null
+ },
+ "foot-401878757|wa_nil|": {
+  "match": "foot-401878757",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-11-07",
+  "home": "Nottm Forest",
+  "away": "Man City",
+  "market": "wa_nil",
+  "label": "Man City gagne sans encaisser de but",
+  "p": 0.3826,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882811|wa_nil|": {
+  "match": "foot-401882811",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-07",
+  "home": "Osasuna",
+  "away": "Athletic",
+  "market": "wa_nil",
+  "label": "Athletic gagne sans encaisser de but",
+  "p": 0.2587,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884743|1N|": {
+  "match": "foot-401884743",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-11-07",
+  "home": "Stuttgart",
+  "away": "Bremen",
+  "market": "1N",
+  "label": "Stuttgart ou nul",
+  "p": 0.6562,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401884743|scorer|Bilal El Khannouss": {
+  "match": "foot-401884743",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-11-07",
+  "home": "Stuttgart",
+  "away": "Bremen",
+  "market": "scorer",
+  "label": "Bilal El Khannouss marque",
+  "p": 0.19,
+  "stars": 1,
+  "player": "Bilal El Khannouss",
+  "pid_player": "336595",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401884743|dec|Bilal El Khannouss": {
+  "match": "foot-401884743",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-11-07",
+  "home": "Stuttgart",
+  "away": "Bremen",
+  "market": "dec",
+  "label": "Bilal El Khannouss buteur ou passeur",
+  "p": 0.22,
+  "stars": 1,
+  "player": "Bilal El Khannouss",
+  "pid_player": "336595",
+  "value": null,
+  "stats_league": "ger.1",
+  "season": 2026,
+  "base": [
+   8,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
   ],
   "result": null
  }
