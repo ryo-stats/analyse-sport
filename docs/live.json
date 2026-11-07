@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T20:33+01:00",
+ "generated": "2026-11-07T20:58+01:00",
  "date": "2026-11-07",
  "matches": [
   {
@@ -1283,7 +1283,7 @@
    "time": "19:00",
    "home": "Auxerre",
    "away": "Paris FC",
-   "state": "in",
+   "state": "post",
    "xgH": 1.43,
    "xgA": 1.97,
    "pH": 28,
@@ -1337,11 +1337,10 @@
      "stars": 2,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
-     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "8 buts et 5 passes en 9 matchs · titulaire · Paris FC favori (50 %) · 2,0 buts attendus pour Paris FC"
+     "why": "8 buts et 5 passes en 9 matchs · Paris FC favori (50 %) · 2,0 buts attendus pour Paris FC"
     },
     "decisive": {
      "market": "dec",
@@ -1357,11 +1356,10 @@
       8,
       5
      ],
-     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "8 buts et 5 passes en 9 matchs · titulaire · Paris FC favori (50 %) · 2,0 buts attendus pour Paris FC"
+     "why": "8 buts et 5 passes en 9 matchs · Paris FC favori (50 %) · 2,0 buts attendus pour Paris FC"
     }
    }
   },
@@ -1374,7 +1372,7 @@
    "time": "20:45",
    "home": "AS Roma",
    "away": "Sassuolo",
-   "state": "pre",
+   "state": "in",
    "xgH": 3.64,
    "xgA": 1.0,
    "pH": 84,
@@ -1385,7 +1383,7 @@
     "main": {
      "market": "1N",
      "label": "AS Roma ou nul",
-     "p": 0.9394,
+     "p": 0.9395,
      "prob": 94,
      "fair": 1.06,
      "stars": 5,
@@ -1551,7 +1549,7 @@
    "home": "PSG",
    "away": "Troyes",
    "state": "pre",
-   "xgH": 2.09,
+   "xgH": 2.1,
    "xgA": 0.58,
    "pH": 73,
    "pD": 18,
@@ -1561,7 +1559,7 @@
     "main": {
      "market": "1N",
      "label": "PSG ou nul",
-     "p": 0.9102,
+     "p": 0.9103,
      "prob": 91,
      "fair": 1.1,
      "stars": 5,
@@ -1570,7 +1568,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire PSG",
-     "p": 0.7282,
+     "p": 0.7291,
      "prob": 73,
      "fair": 1.37,
      "stars": 4
@@ -1578,16 +1576,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1518,
+     "p": 0.1513,
      "prob": 15,
-     "fair": 6.59,
+     "fair": 6.61,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "scw",
      "label": "Ferran Torres marque et PSG gagne",
-     "p": 0.2868,
+     "p": 0.2869,
      "prob": 29,
      "fair": 3.49,
      "stars": 1,
@@ -2454,18 +2452,12 @@
  "summary": {
   "date": "2026-11-07",
   "yesterday": {
-   "n": 164,
-   "ok": 71
+   "n": 170,
+   "ok": 76
   },
   "foot": 19,
   "nhl": 12,
   "top": [
-   {
-    "label": "AS Roma ou nul",
-    "prob": 94,
-    "time": "20:45",
-    "match": "AS Roma – Sassuolo"
-   },
    {
     "label": "PSG ou nul",
     "prob": 91,
@@ -2477,6 +2469,12 @@
     "prob": 87,
     "time": "21:00",
     "match": "Valencia – Real Madrid"
+   },
+   {
+    "label": "Connor McDavid : au moins 1 point",
+    "prob": 84,
+    "time": "04:00",
+    "match": "Edmonton Oilers – Vancouver Canucks"
    }
   ]
  }
