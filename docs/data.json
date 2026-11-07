@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T13:18+01:00",
+ "generated": "2026-11-07T13:43+01:00",
  "date": "2026-11-07",
  "nhl_date": "2026-11-07",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Premier League",
    "kickoff": "2026-11-07T12:30:00+00:00",
    "time": "13:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Leeds",
    "away": "Spurs",
    "form_h": "NNNDN",
@@ -296,8 +296,6 @@
     "Spurs : 9e, 12 points, 10 buts marqués et 10 encaissés en 9 matchs.",
     "Leeds : 9 buts marqués et 8 encaissés sur ses 9 derniers matchs de championnat.",
     "Spurs : 10 buts marqués et 10 encaissés sur ses 9 derniers matchs de championnat.",
-    "Leeds : attaque revue à la baisse (−11 %) d'après la compo officielle (Anton Stach, Noah Okafor ne commencent pas).",
-    "Spurs : attaque revue à la baisse (−12 %) d'après la compo officielle (James Maddison, Conor Gallagher, Dominic Solanke ne commencent pas).",
     "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (34 %).",
@@ -314,7 +312,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1952,
+     "p": 0.1951,
      "prob": 20,
      "fair": 5.12,
      "stars": 1,
@@ -323,7 +321,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Leeds gagne sans encaisser de but",
-     "p": 0.3366,
+     "p": 0.3365,
      "prob": 34,
      "fair": 2.97,
      "stars": 1
@@ -340,7 +338,7 @@
      {
       "market": "htft_h",
       "label": "Leeds mène à la mi-temps et gagne le match",
-      "p": 0.2463,
+      "p": 0.2462,
       "prob": 25,
       "fair": 4.06,
       "stars": 1
@@ -3005,15 +3003,6 @@
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Paderborn (15e) lutte pour le maintien, 2 points d'avance sur la zone rouge.",
    "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Paderborn ou nul",
-     "p": 0.6666,
-     "prob": 67,
-     "fair": 1.5,
-     "stars": 3,
-     "why": "8 derniers matchs : Paderborn 6 marqués / 9 encaissés · Frankfurt 13 / 18"
-    },
     "winner": {
      "market": "1",
      "label": "Victoire Paderborn",
@@ -3089,11 +3078,22 @@
      "stats_league": "ger.1",
      "season": 2026,
      "why": "2 buts et 0 passe en 8 matchs · Paderborn annoncé gagnant (40 %) · 1,3 but attendu pour Paderborn"
+    },
+    "held": {
+     "market": "1N",
+     "label": "Paderborn ou nul",
+     "p": 0.6666,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "8 derniers matchs : Paderborn 6 marqués / 9 encaissés · Frankfurt 13 / 18",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "country": "Allemagne",
    "code": "ger.1",
@@ -35964,7 +35964,7 @@
  },
  "second": {
   "foot": {
-   "ok": 19,
+   "ok": 18,
    "elo": {
     "fra.1": 679,
     "eng.1": 833,
@@ -35972,7 +35972,23 @@
     "ita.1": 853,
     "ger.1": 659
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 82
+    },
+    "eng.1": {
+     "2026": 91
+    },
+    "esp.1": {
+     "2026": 110
+    },
+    "ita.1": {
+     "2026": 101
+    },
+    "ger.1": {
+     "2026": 73
+    }
+   },
    "status": "ok"
   },
   "nhl": {
