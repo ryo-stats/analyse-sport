@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T18:09+01:00",
+ "generated": "2026-11-07T18:34+01:00",
  "date": "2026-11-07",
  "matches": [
   {
@@ -853,7 +853,7 @@
    "time": "16:15",
    "home": "Espanyol",
    "away": "Deportivo",
-   "state": "in",
+   "state": "post",
    "xgH": 1.27,
    "xgA": 0.89,
    "pH": 45,
@@ -898,24 +898,23 @@
     "player": {
      "market": "scorer",
      "label": "Roberto Fernández marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.41,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1,
      "player": "Roberto Fernández",
      "team": "Espanyol",
-     "lineup": "start",
      "pid": "318773",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · titulaire · Espanyol favori (45 %) · 1,3 but attendu pour Espanyol"
+     "why": "6 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · Espanyol favori (45 %) · 1,3 but attendu pour Espanyol"
     },
     "decisive": {
      "market": "dec",
      "label": "Roberto Fernández buteur ou passeur",
-     "p": 0.43,
-     "prob": 43,
-     "fair": 2.33,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Roberto Fernández",
      "team": "Espanyol",
@@ -924,11 +923,10 @@
       6,
       0
      ],
-     "lineup": "start",
      "pid": "318773",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · titulaire · Espanyol favori (45 %) · 1,3 but attendu pour Espanyol"
+     "why": "6 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · Espanyol favori (45 %) · 1,3 but attendu pour Espanyol"
     }
    }
   },
@@ -1029,9 +1027,9 @@
    "time": "18:30",
    "home": "Nottm Forest",
    "away": "Man City",
-   "state": "pre",
+   "state": "in",
    "xgH": 0.73,
-   "xgA": 1.57,
+   "xgA": 1.56,
    "pH": 17,
    "pD": 25,
    "pA": 57,
@@ -1057,7 +1055,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1581,
+     "p": 0.158,
      "prob": 16,
      "fair": 6.33,
      "stars": 1,
@@ -1066,7 +1064,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "Man City gagne sans encaisser de but",
-     "p": 0.3821,
+     "p": 0.3819,
      "prob": 38,
      "fair": 2.62,
      "stars": 1
@@ -1117,7 +1115,7 @@
    "time": "18:30",
    "home": "Osasuna",
    "away": "Athletic",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.05,
    "xgA": 1.35,
    "pH": 29,
@@ -1154,7 +1152,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "Athletic gagne sans encaisser de but",
-     "p": 0.2587,
+     "p": 0.2586,
      "prob": 26,
      "fair": 3.87,
      "stars": 1
@@ -1205,7 +1203,7 @@
    "time": "18:30",
    "home": "Stuttgart",
    "away": "Bremen",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.75,
    "xgA": 1.55,
    "pH": 43,
@@ -1233,9 +1231,9 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0874,
+     "p": 0.0875,
      "prob": 9,
-     "fair": 11.44,
+     "fair": 11.43,
      "stars": 1,
      "value": "2-1"
     },
@@ -1294,17 +1292,17 @@
    "home": "Auxerre",
    "away": "Paris FC",
    "state": "pre",
-   "xgH": 1.52,
-   "xgA": 2.08,
+   "xgH": 1.43,
+   "xgA": 1.97,
    "pH": 28,
-   "pD": 21,
-   "pA": 51,
+   "pD": 22,
+   "pA": 50,
    "edate": "20261107",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Paris FC",
-     "p": 0.7173,
+     "p": 0.7193,
      "prob": 72,
      "fair": 1.39,
      "stars": 4,
@@ -1313,48 +1311,52 @@
     "winner": {
      "market": "2",
      "label": "Victoire Paris FC",
-     "p": 0.5058,
-     "prob": 51,
-     "fair": 1.98,
+     "p": 0.5008,
+     "prob": 50,
+     "fair": 2.0,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0898,
+     "p": 0.0925,
      "prob": 9,
-     "fair": 11.14,
+     "fair": 10.81,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Paris FC gagne et plus de 2,5 buts",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1
+     "market": "scw",
+     "label": "Lassine Sinayoko marque et Paris FC gagne",
+     "p": 0.379,
+     "prob": 38,
+     "fair": 2.64,
+     "stars": 1,
+     "player": "Lassine Sinayoko",
+     "team": "Paris FC",
+     "side": "a"
     },
     "player": {
      "market": "scorer",
      "label": "Lassine Sinayoko marque",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
+     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "8 buts et 5 passes en 9 matchs · Paris FC favori (51 %) · 2,1 buts attendus pour Paris FC"
+     "why": "8 buts et 5 passes en 9 matchs · titulaire · Paris FC favori (50 %) · 2,0 buts attendus pour Paris FC"
     },
     "decisive": {
      "market": "dec",
      "label": "Lassine Sinayoko buteur ou passeur",
-     "p": 0.77,
-     "prob": 77,
-     "fair": 1.3,
+     "p": 0.76,
+     "prob": 76,
+     "fair": 1.32,
      "stars": 4,
      "player": "Lassine Sinayoko",
      "team": "Paris FC",
@@ -1363,10 +1365,11 @@
       8,
       5
      ],
+     "lineup": "start",
      "pid": "271137",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "8 buts et 5 passes en 9 matchs · Paris FC favori (51 %) · 2,1 buts attendus pour Paris FC"
+     "why": "8 buts et 5 passes en 9 matchs · titulaire · Paris FC favori (50 %) · 2,0 buts attendus pour Paris FC"
     }
    }
   },
@@ -1469,17 +1472,17 @@
    "home": "Valencia",
    "away": "Real Madrid",
    "state": "pre",
-   "xgH": 0.86,
-   "xgA": 2.02,
+   "xgH": 0.87,
+   "xgA": 2.03,
    "pH": 15,
-   "pD": 21,
+   "pD": 20,
    "pA": 64,
    "edate": "20261107",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Real Madrid",
-     "p": 0.8475,
+     "p": 0.8476,
      "prob": 85,
      "fair": 1.18,
      "stars": 5,
@@ -1488,7 +1491,7 @@
     "winner": {
      "market": "2",
      "label": "Victoire Real Madrid",
-     "p": 0.6418,
+     "p": 0.6427,
      "prob": 64,
      "fair": 1.56,
      "stars": 3
@@ -1496,18 +1499,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-2",
-     "p": 0.114,
+     "p": 0.1135,
      "prob": 11,
-     "fair": 8.77,
+     "fair": 8.81,
      "stars": 1,
      "value": "0-2"
     },
     "fun": {
      "market": "htft_a",
      "label": "Real Madrid mène à la mi-temps et gagne le match",
-     "p": 0.4174,
+     "p": 0.4185,
      "prob": 42,
-     "fair": 2.4,
+     "fair": 2.39,
      "stars": 1
     },
     "player": {
@@ -1708,7 +1711,7 @@
    "time": "19:00",
    "home": "Nashville Predators",
    "away": "St. Louis Blues",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.02,
    "xgA": 2.84,
    "pH": 44,
@@ -2453,8 +2456,8 @@
  "summary": {
   "date": "2026-11-07",
   "yesterday": {
-   "n": 139,
-   "ok": 65
+   "n": 144,
+   "ok": 66
   },
   "foot": 19,
   "nhl": 12,

@@ -43564,7 +43564,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882813|1|": {
   "match": "foot-401882813",
@@ -43588,7 +43588,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882813|scorer|Roberto Fernández": {
   "match": "foot-401882813",
@@ -43612,7 +43612,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882813|dec|Roberto Fernández": {
   "match": "foot-401882813",
@@ -43664,7 +43664,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874974|N2|": {
   "match": "foot-401874974",
@@ -44143,7 +44143,7 @@
   "away": "Paris FC",
   "market": "N2",
   "label": "Nul ou Paris FC",
-  "p": 0.7173,
+  "p": 0.7193,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -44167,7 +44167,7 @@
   "away": "Paris FC",
   "market": "2",
   "label": "Victoire Paris FC",
-  "p": 0.5058,
+  "p": 0.5008,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -44191,8 +44191,8 @@
   "away": "Paris FC",
   "market": "scorer",
   "label": "Lassine Sinayoko marque",
-  "p": 0.6,
-  "stars": 3,
+  "p": 0.58,
+  "stars": 2,
   "player": "Lassine Sinayoko",
   "pid_player": "271137",
   "value": null,
@@ -44215,7 +44215,7 @@
   "away": "Paris FC",
   "market": "dec",
   "label": "Lassine Sinayoko buteur ou passeur",
-  "p": 0.77,
+  "p": 0.76,
   "stars": 4,
   "player": "Lassine Sinayoko",
   "pid_player": "271137",
@@ -44234,30 +44234,6 @@
   ],
   "result": null
  },
- "foot-401876411|wa_o25|": {
-  "match": "foot-401876411",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-07",
-  "home": "Auxerre",
-  "away": "Paris FC",
-  "market": "wa_o25",
-  "label": "Paris FC gagne et plus de 2,5 buts",
-  "p": 0.39,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876411|exact|": {
   "match": "foot-401876411",
   "sport": "foot",
@@ -44267,7 +44243,7 @@
   "away": "Paris FC",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0898,
+  "p": 0.0925,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -44415,7 +44391,7 @@
   "away": "Real Madrid",
   "market": "N2",
   "label": "Nul ou Real Madrid",
-  "p": 0.8475,
+  "p": 0.8476,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -44439,7 +44415,7 @@
   "away": "Real Madrid",
   "market": "2",
   "label": "Victoire Real Madrid",
-  "p": 0.6418,
+  "p": 0.6427,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -44515,7 +44491,7 @@
   "away": "Real Madrid",
   "market": "htft_a",
   "label": "Real Madrid mène à la mi-temps et gagne le match",
-  "p": 0.4174,
+  "p": 0.4185,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -44539,7 +44515,7 @@
   "away": "Real Madrid",
   "market": "exact",
   "label": "Score exact 0-2",
-  "p": 0.114,
+  "p": 0.1135,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -46327,7 +46303,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874803|sc2|Donyell Malen": {
   "match": "foot-401874803",
@@ -46474,6 +46450,30 @@
   "group": "safe",
   "kinds": [
    "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876411|scw|Lassine Sinayoko": {
+  "match": "foot-401876411",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-07",
+  "home": "Auxerre",
+  "away": "Paris FC",
+  "market": "scw",
+  "label": "Lassine Sinayoko marque et Paris FC gagne",
+  "p": 0.379,
+  "stars": 1,
+  "player": "Lassine Sinayoko",
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": "a",
+  "group": "fun",
+  "kinds": [
+   "fun"
   ],
   "result": null
  }
