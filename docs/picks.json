@@ -48543,7 +48543,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874808|1|": {
   "match": "foot-401874808",
@@ -48567,7 +48567,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874808|scorer|Marcus Thuram": {
   "match": "foot-401874808",
@@ -48591,7 +48591,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874808|dec|Marcus Thuram": {
   "match": "foot-401874808",
@@ -48619,7 +48619,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874808|exact|": {
   "match": "foot-401874808",
@@ -48643,7 +48643,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882815|1N|": {
   "match": "foot-401882815",
@@ -48985,30 +48985,6 @@
   ],
   "result": null
  },
- "foot-401876404|o25|": {
-  "match": "foot-401876404",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-08",
-  "home": "Lens",
-  "away": "Marseille",
-  "market": "o25",
-  "label": "Plus de 2,5 buts",
-  "p": 0.708,
-  "stars": 4,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
  "foot-401876404|1|": {
   "match": "foot-401876404",
   "sport": "foot",
@@ -49018,7 +48994,7 @@
   "away": "Marseille",
   "market": "1",
   "label": "Victoire Lens",
-  "p": 0.4884,
+  "p": 0.4124,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -49042,7 +49018,7 @@
   "away": "Marseille",
   "market": "scorer",
   "label": "Florian Thauvin marque",
-  "p": 0.41,
+  "p": 0.35,
   "stars": 1,
   "player": "Florian Thauvin",
   "pid_player": "156898",
@@ -49066,8 +49042,8 @@
   "away": "Marseille",
   "market": "dec",
   "label": "Florian Thauvin buteur ou passeur",
-  "p": 0.74,
-  "stars": 4,
+  "p": 0.66,
+  "stars": 3,
   "player": "Florian Thauvin",
   "pid_player": "156898",
   "value": null,
@@ -49085,30 +49061,6 @@
   ],
   "result": null
  },
- "foot-401876404|wh_o25|": {
-  "match": "foot-401876404",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-08",
-  "home": "Lens",
-  "away": "Marseille",
-  "market": "wh_o25",
-  "label": "Lens gagne et plus de 2,5 buts",
-  "p": 0.3804,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876404|exact|": {
   "match": "foot-401876404",
   "sport": "foot",
@@ -49118,7 +49070,7 @@
   "away": "Marseille",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.0875,
+  "p": 0.0868,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -49142,7 +49094,7 @@
   "away": "Juventus",
   "market": "N2",
   "label": "Nul ou Juventus",
-  "p": 0.6803,
+  "p": 0.654,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -49166,7 +49118,7 @@
   "away": "Juventus",
   "market": "2",
   "label": "Victoire Juventus",
-  "p": 0.4333,
+  "p": 0.3872,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -49181,82 +49133,6 @@
   ],
   "result": null
  },
- "foot-401875003|scorer|Edon Zhegrova": {
-  "match": "foot-401875003",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-08",
-  "home": "Fiorentina",
-  "away": "Juventus",
-  "market": "scorer",
-  "label": "Edon Zhegrova marque",
-  "p": 0.18,
-  "stars": 1,
-  "player": "Edon Zhegrova",
-  "pid_player": "260300",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401875003|dec|Edon Zhegrova": {
-  "match": "foot-401875003",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-08",
-  "home": "Fiorentina",
-  "away": "Juventus",
-  "market": "dec",
-  "label": "Edon Zhegrova buteur ou passeur",
-  "p": 0.33,
-  "stars": 1,
-  "player": "Edon Zhegrova",
-  "pid_player": "260300",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   8,
-   2,
-   2
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401875003|o35|": {
-  "match": "foot-401875003",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-08",
-  "home": "Fiorentina",
-  "away": "Juventus",
-  "market": "o35",
-  "label": "Plus de 3,5 buts",
-  "p": 0.3234,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401875003|exact|": {
   "match": "foot-401875003",
   "sport": "foot",
@@ -49265,12 +49141,12 @@
   "home": "Fiorentina",
   "away": "Juventus",
   "market": "exact",
-  "label": "Score exact 1-2",
-  "p": 0.0905,
+  "label": "Score exact 0-1",
+  "p": 0.1031,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "1-2",
+  "value": "0-1",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -49278,30 +49154,6 @@
   "group": "fun",
   "kinds": [
    "score"
-  ],
-  "result": null
- },
- "foot-401882816|o25|": {
-  "match": "foot-401882816",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-08",
-  "home": "Atlético",
-  "away": "Barcelona",
-  "market": "o25",
-  "label": "Plus de 2,5 buts",
-  "p": 0.7177,
-  "stars": 4,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
   ],
   "result": null
  },
@@ -49314,7 +49166,7 @@
   "away": "Barcelona",
   "market": "2",
   "label": "Victoire Barcelona",
-  "p": 0.4611,
+  "p": 0.4584,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -49338,7 +49190,7 @@
   "away": "Barcelona",
   "market": "scorer",
   "label": "Raphinha marque",
-  "p": 0.48,
+  "p": 0.45,
   "stars": 1,
   "player": "Raphinha",
   "pid_player": "231050",
@@ -49362,7 +49214,7 @@
   "away": "Barcelona",
   "market": "dec",
   "label": "Raphinha buteur ou passeur",
-  "p": 0.54,
+  "p": 0.51,
   "stars": 2,
   "player": "Raphinha",
   "pid_player": "231050",
@@ -49390,7 +49242,7 @@
   "away": "Barcelona",
   "market": "wa_o25",
   "label": "Barcelona gagne et plus de 2,5 buts",
-  "p": 0.3619,
+  "p": 0.3357,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -49414,7 +49266,7 @@
   "away": "Barcelona",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0844,
+  "p": 0.0896,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -50597,7 +50449,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882815|scorer|Pablo Durán": {
   "match": "foot-401882815",
@@ -50700,6 +50552,154 @@
   "group": "safe",
   "kinds": [
    "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876404|1N|": {
+  "match": "foot-401876404",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-08",
+  "home": "Lens",
+  "away": "Marseille",
+  "market": "1N",
+  "label": "Lens ou nul",
+  "p": 0.6455,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401876404|o35|": {
+  "match": "foot-401876404",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-08",
+  "home": "Lens",
+  "away": "Marseille",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.4004,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401875003|scorer|Randal Kolo Muani": {
+  "match": "foot-401875003",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-08",
+  "home": "Fiorentina",
+  "away": "Juventus",
+  "market": "scorer",
+  "label": "Randal Kolo Muani marque",
+  "p": 0.13,
+  "stars": 1,
+  "player": "Randal Kolo Muani",
+  "pid_player": "252971",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401875003|dec|Randal Kolo Muani": {
+  "match": "foot-401875003",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-08",
+  "home": "Fiorentina",
+  "away": "Juventus",
+  "market": "dec",
+  "label": "Randal Kolo Muani buteur ou passeur",
+  "p": 0.23,
+  "stars": 1,
+  "player": "Randal Kolo Muani",
+  "pid_player": "252971",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   10,
+   1,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401875003|htft_a|": {
+  "match": "foot-401875003",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-08",
+  "home": "Fiorentina",
+  "away": "Juventus",
+  "market": "htft_a",
+  "label": "Juventus mène à la mi-temps et gagne le match",
+  "p": 0.2268,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882816|N2|": {
+  "match": "foot-401882816",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-08",
+  "home": "Atlético",
+  "away": "Barcelona",
+  "market": "N2",
+  "label": "Nul ou Barcelona",
+  "p": 0.6826,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
   ],
   "result": null
  }
