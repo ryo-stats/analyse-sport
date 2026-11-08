@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T01:06+01:00",
+ "generated": "2026-11-08T01:31+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-07",
  "foot": [
@@ -9968,8 +9968,8 @@
    "league": "NHL",
    "kickoff": "2026-11-07T22:00:00+00:00",
    "time": "23:00",
-   "state": "LIVE",
-   "score": "1-4",
+   "state": "CRIT",
+   "score": "3-4",
    "home": "Seattle Kraken",
    "away": "New York Rangers",
    "rec_h": "9-5-1 · 3e Pacific · 1 victoire de suite",
@@ -10359,8 +10359,8 @@
    "league": "NHL",
    "kickoff": "2026-11-08T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-1",
    "home": "Toronto Maple Leafs",
    "away": "Montréal Canadiens",
    "rec_h": "8-7-2 · 7e Atlantic · 1 défaite de suite",
@@ -10660,7 +10660,6 @@
     "Toronto Maple Leafs : 62 buts marqués et 56 encaissés en 17 matchs.",
     "Montréal Canadiens : 57 buts marqués et 51 encaissés en 16 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Montréal Canadiens : Jacob Fowler (92,5 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 4 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Montréal Canadiens est favori (57 % en comptant la prolongation).",
@@ -10750,8 +10749,8 @@
    "league": "NHL",
    "kickoff": "2026-11-08T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-0",
    "home": "Ottawa Senators",
    "away": "Utah Mammoth",
    "rec_h": "10-6-1 · 4e Atlantic · 1 victoire de suite",
@@ -11051,7 +11050,6 @@
     "Ottawa Senators : 54 buts marqués et 52 encaissés en 17 matchs.",
     "Utah Mammoth : 61 buts marqués et 59 encaissés en 17 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Utah Mammoth : Karel Vejmelka (87,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -11078,7 +11076,7 @@
     "fun": {
      "market": "h2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.325,
+     "p": 0.3251,
      "prob": 33,
      "fair": 3.08,
      "stars": 1
@@ -11141,8 +11139,8 @@
    "league": "NHL",
    "kickoff": "2026-11-08T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "New York Islanders",
    "away": "New Jersey Devils",
    "rec_h": "7-6-2 · 5e Metropolitan · 2 défaites de suite",
@@ -11469,7 +11467,7 @@
     "fun": {
      "market": "a2",
      "label": "New Jersey Devils gagne par 2 buts d'écart ou plus",
-     "p": 0.4045,
+     "p": 0.4044,
      "prob": 40,
      "fair": 2.47,
      "stars": 1
@@ -11532,7 +11530,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Carolina Hurricanes",
    "away": "Chicago Blackhawks",
@@ -11898,7 +11896,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Dallas Stars",
    "away": "San Jose Sharks",
@@ -12289,7 +12287,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Minnesota Wild",
    "away": "Tampa Bay Lightning",
@@ -39114,7 +39112,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 9,
+   "ok": 6,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90303 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
