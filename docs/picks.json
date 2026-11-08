@@ -47655,7 +47655,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884738|2|": {
   "match": "foot-401884738",
@@ -47679,7 +47679,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884738|scorer|Patrik Schick": {
   "match": "foot-401884738",
@@ -47703,7 +47703,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884738|dec|Patrik Schick": {
   "match": "foot-401884738",
@@ -47731,7 +47731,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401884738|o35|": {
   "match": "foot-401884738",
@@ -47755,7 +47755,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "foot-401884738|exact|": {
   "match": "foot-401884738",
@@ -47779,7 +47779,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882810|o25|": {
   "match": "foot-401882810",
@@ -48530,7 +48530,7 @@
   "away": "Como",
   "market": "1N",
   "label": "Inter Milan ou nul",
-  "p": 0.7393,
+  "p": 0.7447,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -48554,7 +48554,7 @@
   "away": "Como",
   "market": "1",
   "label": "Victoire Inter Milan",
-  "p": 0.5069,
+  "p": 0.5033,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -48578,7 +48578,7 @@
   "away": "Como",
   "market": "scorer",
   "label": "Marcus Thuram marque",
-  "p": 0.3,
+  "p": 0.29,
   "stars": 1,
   "player": "Marcus Thuram",
   "pid_player": "217331",
@@ -48602,7 +48602,7 @@
   "away": "Como",
   "market": "dec",
   "label": "Marcus Thuram buteur ou passeur",
-  "p": 0.4,
+  "p": 0.38,
   "stars": 1,
   "player": "Marcus Thuram",
   "pid_player": "217331",
@@ -48621,30 +48621,6 @@
   ],
   "result": null
  },
- "foot-401874808|o35|": {
-  "match": "foot-401874808",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-08",
-  "home": "Inter Milan",
-  "away": "Como",
-  "market": "o35",
-  "label": "Plus de 3,5 buts",
-  "p": 0.3541,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874808|exact|": {
   "match": "foot-401874808",
   "sport": "foot",
@@ -48653,12 +48629,12 @@
   "home": "Inter Milan",
   "away": "Como",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0963,
+  "label": "Score exact 1-0",
+  "p": 0.1013,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -48678,7 +48654,7 @@
   "away": "Levante",
   "market": "1N",
   "label": "Celta Vigo ou nul",
-  "p": 0.74,
+  "p": 0.7386,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -48702,7 +48678,7 @@
   "away": "Levante",
   "market": "1",
   "label": "Victoire Celta Vigo",
-  "p": 0.4715,
+  "p": 0.4409,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -48717,58 +48693,6 @@
   ],
   "result": null
  },
- "foot-401882815|scorer|Ferran Jutglà": {
-  "match": "foot-401882815",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-08",
-  "home": "Celta Vigo",
-  "away": "Levante",
-  "market": "scorer",
-  "label": "Ferran Jutglà marque",
-  "p": 0.23,
-  "stars": 1,
-  "player": "Ferran Jutglà",
-  "pid_player": "279904",
-  "value": null,
-  "stats_league": "esp.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401882815|dec|Ferran Jutglà": {
-  "match": "foot-401882815",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-08",
-  "home": "Celta Vigo",
-  "away": "Levante",
-  "market": "dec",
-  "label": "Ferran Jutglà buteur ou passeur",
-  "p": 0.26,
-  "stars": 1,
-  "player": "Ferran Jutglà",
-  "pid_player": "279904",
-  "value": null,
-  "stats_league": "esp.1",
-  "season": 2026,
-  "base": [
-   11,
-   2,
-   0
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
  "foot-401882815|wh_nil|": {
   "match": "foot-401882815",
   "sport": "foot",
@@ -48778,7 +48702,7 @@
   "away": "Levante",
   "market": "wh_nil",
   "label": "Celta Vigo gagne sans encaisser de but",
-  "p": 0.2847,
+  "p": 0.2983,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -48802,7 +48726,7 @@
   "away": "Levante",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1289,
+  "p": 0.1544,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -48826,7 +48750,7 @@
   "away": "Getafe",
   "market": "1N",
   "label": "Villarreal ou nul",
-  "p": 0.8217,
+  "p": 0.8043,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -48850,7 +48774,7 @@
   "away": "Getafe",
   "market": "1",
   "label": "Victoire Villarreal",
-  "p": 0.5599,
+  "p": 0.505,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -48874,7 +48798,7 @@
   "away": "Getafe",
   "market": "scorer",
   "label": "Georges Mikautadze marque",
-  "p": 0.27,
+  "p": 0.23,
   "stars": 1,
   "player": "Georges Mikautadze",
   "pid_player": "300002",
@@ -48898,7 +48822,7 @@
   "away": "Getafe",
   "market": "dec",
   "label": "Georges Mikautadze buteur ou passeur",
-  "p": 0.32,
+  "p": 0.27,
   "stars": 1,
   "player": "Georges Mikautadze",
   "pid_player": "300002",
@@ -48926,7 +48850,7 @@
   "away": "Getafe",
   "market": "wh_nil",
   "label": "Villarreal gagne sans encaisser de but",
-  "p": 0.3793,
+  "p": 0.3698,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -48950,7 +48874,7 @@
   "away": "Getafe",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1635,
+  "p": 0.1865,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -48998,7 +48922,7 @@
   "away": "Schalke",
   "market": "1",
   "label": "Victoire Hoffenheim",
-  "p": 0.5312,
+  "p": 0.5313,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -49074,7 +48998,7 @@
   "away": "Schalke",
   "market": "wh_nil",
   "label": "Hoffenheim gagne sans encaisser de but",
-  "p": 0.3499,
+  "p": 0.3498,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -49098,7 +49022,7 @@
   "away": "Schalke",
   "market": "exact",
   "label": "Score exact 1-0",
-  "p": 0.1545,
+  "p": 0.1544,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -50700,6 +50624,82 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": null
+ },
+ "foot-401874808|wh_o25|": {
+  "match": "foot-401874808",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-08",
+  "home": "Inter Milan",
+  "away": "Como",
+  "market": "wh_o25",
+  "label": "Inter Milan gagne et plus de 2,5 buts",
+  "p": 0.3168,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882815|scorer|Pablo Durán": {
+  "match": "foot-401882815",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-08",
+  "home": "Celta Vigo",
+  "away": "Levante",
+  "market": "scorer",
+  "label": "Pablo Durán marque",
+  "p": 0.18,
+  "stars": 1,
+  "player": "Pablo Durán",
+  "pid_player": "138448",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401882815|dec|Pablo Durán": {
+  "match": "foot-401882815",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-08",
+  "home": "Celta Vigo",
+  "away": "Levante",
+  "market": "dec",
+  "label": "Pablo Durán buteur ou passeur",
+  "p": 0.2,
+  "stars": 1,
+  "player": "Pablo Durán",
+  "pid_player": "138448",
+  "value": null,
+  "stats_league": "esp.1",
+  "season": 2026,
+  "base": [
+   8,
+   2,
+   0
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
   ],
   "result": null
  }
