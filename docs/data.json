@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T15:03+01:00",
+ "generated": "2026-11-08T15:28+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-08",
  "foot": [
@@ -789,7 +789,7 @@
    "kickoff": "2026-11-08T14:00:00+00:00",
    "time": "15:00",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Rennes",
    "away": "Lille",
    "form_h": "NDVND",
@@ -1185,7 +1185,7 @@
    "kickoff": "2026-11-08T14:00:00+00:00",
    "time": "15:00",
    "state": "in",
-   "score": "0-0",
+   "score": "1-0",
    "home": "Brighton",
    "away": "Brentford",
    "form_h": "VVDDN",
@@ -1980,7 +1980,7 @@
    "kickoff": "2026-11-08T14:00:00+00:00",
    "time": "15:00",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Ipswich",
    "away": "Bournemouth",
    "form_h": "NNDVD",
@@ -2775,7 +2775,7 @@
    "kickoff": "2026-11-08T14:00:00+00:00",
    "time": "15:00",
    "state": "in",
-   "score": "0-0",
+   "score": "0-2",
    "home": "Genoa",
    "away": "Milan",
    "form_h": "VVVDV",
@@ -3979,24 +3979,24 @@
    "form_a": "VVDNN",
    "rank_h": 5,
    "rank_a": 14,
-   "pH": 51,
-   "pD": 20,
+   "pH": 49,
+   "pD": 21,
    "pA": 30,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.35,
-   "xgA": 1.78,
+   "xgH": 2.07,
+   "xgA": 1.61,
    "scores": [
     "2-1",
-    "2-2",
-    "1-1"
+    "1-1",
+    "2-2"
    ],
    "scorep": [
+    9,
     8,
-    7,
     7
    ],
-   "over25": 78,
-   "btts": 75,
+   "over25": 71,
+   "btts": 70,
    "squad_h": [
     {
      "name": "Luka Sucic",
@@ -4012,11 +4012,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 34,
-     "p_dec": 37,
+     "p_goal": 31,
+     "p_dec": 34,
      "pid": "306263",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Orri Óskarsson",
@@ -4032,31 +4033,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 29,
-     "p_dec": 30,
+     "p_goal": 26,
+     "p_dec": 27,
      "pid": "341367",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Mikel Oyarzabal",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Real Sociedad",
-     "goals": 2,
-     "assists": 2,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 23,
-     "p_dec": 39,
-     "pid": "229018",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ander Barrenetxea",
@@ -4072,51 +4054,75 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 22,
-     "p_dec": 31,
+     "p_goal": 19,
+     "p_dec": 28,
      "pid": "283941",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Gonçalo Guedes",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Real Sociedad",
-     "goals": 2,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 21,
-     "p_dec": 31,
-     "pid": "213141",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Job Ochieng",
-     "pos": "Attaquant",
+     "name": "Carlos Soler",
+     "pos": "Milieu",
      "side": "h",
      "team": "Real Sociedad",
      "goals": 1,
      "assists": 3,
-     "apps": 8,
+     "apps": 10,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 9,
       "g": 1,
       "a": 3
      },
-     "p_goal": 12,
-     "p_dec": 35,
-     "pid": "406379",
+     "p_goal": 10,
+     "p_dec": 33,
+     "pid": "235072",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Takefusa Kubo",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Real Sociedad",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 10,
+     "p_dec": 19,
+     "pid": "256587",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jon Martín",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Real Sociedad",
+     "goals": 1,
+     "assists": 1,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 18,
+     "pid": "366885",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -4134,31 +4140,12 @@
       "g": 7,
       "a": 2
      },
-     "p_goal": 51,
-     "p_dec": 61,
+     "p_goal": 47,
+     "p_dec": 57,
      "pid": "276652",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Álvaro García",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Rayo",
-     "goals": 3,
-     "assists": 2,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 2
-     },
-     "p_goal": 26,
-     "p_dec": 42,
-     "pid": "125200",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jorge de Frutos",
@@ -4174,11 +4161,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 21,
-     "p_dec": 37,
+     "p_goal": 19,
+     "p_dec": 34,
      "pid": "260740",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Unai López",
@@ -4194,11 +4182,12 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 11,
-     "p_dec": 37,
+     "p_goal": 10,
+     "p_dec": 34,
      "pid": "203711",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adrià Pedrosa",
@@ -4214,11 +4203,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 19,
+     "p_goal": 9,
+     "p_dec": 17,
      "pid": "277292",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Andrei Ratiu",
@@ -4234,11 +4224,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 19,
+     "p_goal": 9,
+     "p_dec": 17,
      "pid": "287224",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Pathé Ciss",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Rayo",
+     "goals": 0,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 7,
+     "pid": "294228",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -4246,83 +4258,87 @@
     "Rayo : 14e, 12 points, 15 buts marqués et 20 encaissés en 10 matchs.",
     "Real Sociedad : 20 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
     "Rayo : 15 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat.",
-    "Real Sociedad a joué il y a 3 jours : fatigue probable, chances un peu réduites."
+    "Real Sociedad a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Real Sociedad : attaque revue à la baisse (−12 %) d'après la compo officielle (Gonçalo Guedes, Mikel Oyarzabal ne commencent pas).",
+    "Rayo : attaque revue à la baisse (−10 %) d'après la compo officielle (Álvaro García ne commence pas).",
+    "Compositions officielles prises en compte : Gonçalo Guedes (remplaçant), Mikel Oyarzabal (absent), Álvaro García (absent) ne commencent pas le match."
    ],
-   "reading": "Real Sociedad est favori sans écraser le match (51 %).",
+   "reading": "Real Sociedad est favori sans écraser le match (49 %).",
    "stakes": "Real Sociedad (5e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7808,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.71,
+     "prob": 71,
+     "fair": 1.41,
      "stars": 4,
      "why": "10 derniers matchs : Real Sociedad 20 marqués / 19 encaissés · Rayo 15 / 20"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Real Sociedad",
-     "p": 0.508,
-     "prob": 51,
-     "fair": 1.97,
-     "stars": 2
+     "p": 0.4861,
+     "prob": 49,
+     "fair": 2.06,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0789,
-     "prob": 8,
-     "fair": 12.67,
+     "p": 0.0871,
+     "prob": 9,
+     "fair": 11.47,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Real Sociedad gagne et les deux équipes marquent",
-     "p": 0.3561,
-     "prob": 36,
-     "fair": 2.81,
+     "market": "wh_o25",
+     "label": "Real Sociedad gagne et plus de 2,5 buts",
+     "p": 0.3793,
+     "prob": 38,
+     "fair": 2.64,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Real Sociedad mène à la mi-temps et gagne le match",
-      "p": 0.3269,
-      "prob": 33,
-      "fair": 3.06,
+      "market": "wh_btts",
+      "label": "Real Sociedad gagne et les deux équipes marquent",
+      "p": 0.3108,
+      "prob": 31,
+      "fair": 3.22,
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Real Sociedad gagne avec 2 buts d'écart ou plus",
-      "p": 0.3124,
+      "market": "htft_h",
+      "label": "Real Sociedad mène à la mi-temps et gagne le match",
+      "p": 0.3069,
       "prob": 31,
-      "fair": 3.2,
+      "fair": 3.26,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Luka Sucic marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
      "player": "Luka Sucic",
      "team": "Real Sociedad",
+     "lineup": "start",
      "pid": "306263",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 10 matchs · 10 derniers matchs : 4 buts, 0 passe (joué 9 sur 10) · Real Sociedad favori (51 %) · 2,3 buts attendus pour Real Sociedad"
+     "why": "4 buts et 0 passe en 10 matchs · 10 derniers matchs : 4 buts, 0 passe (joué 9 sur 10) · titulaire · Real Sociedad favori (49 %) · 2,1 buts attendus pour Real Sociedad"
     },
     "decisive": {
      "market": "dec",
      "label": "Luka Sucic buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Luka Sucic",
      "team": "Real Sociedad",
@@ -4331,10 +4347,11 @@
       4,
       0
      ],
+     "lineup": "start",
      "pid": "306263",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 10 matchs · 10 derniers matchs : 4 buts, 0 passe (joué 9 sur 10) · Real Sociedad favori (51 %) · 2,3 buts attendus pour Real Sociedad"
+     "why": "4 buts et 0 passe en 10 matchs · 10 derniers matchs : 4 buts, 0 passe (joué 9 sur 10) · titulaire · Real Sociedad favori (49 %) · 2,1 buts attendus pour Real Sociedad"
     }
    },
    "second": {
