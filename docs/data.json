@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T01:56+01:00",
+ "generated": "2026-11-08T02:45+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-07",
  "foot": [
@@ -9996,9 +9996,9 @@
    "goalie_h": {
     "name": "Philipp Grubauer",
     "starts": 8,
-    "shots": 229,
-    "saves": 203,
-    "sv": "88,6 % d'arrêts",
+    "shots": 245,
+    "saves": 218,
+    "sv": "89,0 % d'arrêts",
     "note": ""
    },
    "goalie_a": {
@@ -10360,7 +10360,7 @@
    "kickoff": "2026-11-08T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-2",
+   "score": "0-3",
    "home": "Toronto Maple Leafs",
    "away": "Montréal Canadiens",
    "rec_h": "8-7-2 · 7e Atlantic · 1 défaite de suite",
@@ -11140,7 +11140,7 @@
    "kickoff": "2026-11-08T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "2-1",
+   "score": "4-2",
    "home": "New York Islanders",
    "away": "New Jersey Devils",
    "rec_h": "7-6-2 · 5e Metropolitan · 2 défaites de suite",
@@ -11530,8 +11530,8 @@
    "league": "NHL",
    "kickoff": "2026-11-08T01:00:00+00:00",
    "time": "02:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "4-0",
    "home": "Carolina Hurricanes",
    "away": "Chicago Blackhawks",
    "rec_h": "13-3-2 · 1e Metropolitan · 1 victoire de suite",
@@ -11831,7 +11831,6 @@
     "Carolina Hurricanes : 69 buts marqués et 43 encaissés en 18 matchs.",
     "Chicago Blackhawks : 37 buts marqués et 67 encaissés en 17 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Carolina Hurricanes : Pyotr Kochetkov (92,2 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 3 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Carolina Hurricanes est nettement favori (83 % en comptant la prolongation).",
@@ -11896,8 +11895,8 @@
    "league": "NHL",
    "kickoff": "2026-11-08T01:00:00+00:00",
    "time": "02:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "3-1",
    "home": "Dallas Stars",
    "away": "San Jose Sharks",
    "rec_h": "9-5-2 · 4e Central · 1 défaite en prolongation de suite",
@@ -12234,7 +12233,7 @@
       "market": "wh_o55",
       "label": "Dallas Stars gagne et plus de 5,5 buts",
       "p": 0.385,
-      "prob": 38,
+      "prob": 39,
       "fair": 2.6,
       "stars": 1
      },
@@ -12287,8 +12286,8 @@
    "league": "NHL",
    "kickoff": "2026-11-08T01:00:00+00:00",
    "time": "02:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "2-0",
    "home": "Minnesota Wild",
    "away": "Tampa Bay Lightning",
    "rec_h": "12-3-3 · 1e Central · 3 victoires de suite",
@@ -12614,7 +12613,7 @@
      {
       "market": "h2",
       "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
-      "p": 0.3357,
+      "p": 0.3356,
       "prob": 34,
       "fair": 2.98,
       "stars": 1
@@ -12655,7 +12654,7 @@
     "held": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6306,
+     "p": 0.6307,
      "prob": 63,
      "fair": 1.59,
      "stars": 3,
@@ -12679,7 +12678,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T02:00:00+00:00",
    "time": "03:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Colorado Avalanche",
    "away": "Detroit Red Wings",
@@ -13071,7 +13070,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T02:00:00+00:00",
    "time": "03:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Los Angeles Kings",
    "away": "Pittsburgh Penguins",
@@ -39108,27 +39107,11 @@
     "ita.1": 857,
     "ger.1": 664
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 84
-    },
-    "eng.1": {
-     "2026": 95
-    },
-    "esp.1": {
-     "2026": 114
-    },
-    "ita.1": {
-     "2026": 105
-    },
-    "ger.1": {
-     "2026": 78
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
-   "ok": 6,
+   "ok": 3,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90303 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
