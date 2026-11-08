@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T14:13+01:00",
+ "generated": "2026-11-08T14:38+01:00",
  "date": "2026-11-08",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "12:30",
    "home": "Napoli",
    "away": "Lazio",
-   "state": "in",
+   "state": "post",
    "xgH": 1.26,
    "xgA": 1.38,
    "pH": 34,
@@ -53,18 +53,17 @@
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
-     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 3 passes en 9 matchs · titulaire · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
+     "why": "4 buts et 3 passes en 9 matchs · 10 derniers matchs : 4 buts, 4 passes (joué 9 sur 10) · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
     },
     "decisive": {
      "market": "dec",
      "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
@@ -73,11 +72,10 @@
       4,
       3
      ],
-     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 3 passes en 9 matchs · titulaire · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
+     "why": "4 buts et 3 passes en 9 matchs · 10 derniers matchs : 4 buts, 4 passes (joué 9 sur 10) · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
     }
    }
   },
@@ -622,45 +620,45 @@
    "home": "Genoa",
    "away": "Milan",
    "state": "pre",
-   "xgH": 1.1,
+   "xgH": 1.07,
    "xgA": 1.53,
-   "pH": 27,
+   "pH": 26,
    "pD": 26,
-   "pA": 47,
+   "pA": 48,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Milan",
-     "p": 0.7262,
-     "prob": 73,
-     "fair": 1.38,
+     "p": 0.7361,
+     "prob": 74,
+     "fair": 1.36,
      "stars": 4,
      "why": "10 derniers matchs : Genoa 10 marqués / 14 encaissés · Milan 21 / 12"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Milan",
-     "p": 0.4711,
-     "prob": 47,
-     "fair": 2.12,
+     "p": 0.4804,
+     "prob": 48,
+     "fair": 2.08,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1101,
+     "p": 0.1142,
      "prob": 11,
-     "fair": 9.08,
+     "fair": 8.76,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "htft_a",
      "label": "Milan mène à la mi-temps et gagne le match",
-     "p": 0.285,
+     "p": 0.2912,
      "prob": 29,
-     "fair": 3.51,
+     "fair": 3.43,
      "stars": 1
     },
     "player": {
@@ -672,10 +670,11 @@
      "stars": 1,
      "player": "Adrien Rabiot",
      "team": "Milan",
+     "lineup": "start",
      "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 8 matchs · Milan favori (47 %) · 1,5 buts attendus pour Milan"
+     "why": "5 buts et 3 passes en 8 matchs · titulaire · Milan favori (48 %) · 1,5 buts attendus pour Milan"
     },
     "decisive": {
      "market": "dec",
@@ -691,10 +690,11 @@
       5,
       3
      ],
+     "lineup": "start",
      "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 8 matchs · Milan favori (47 %) · 1,5 buts attendus pour Milan"
+     "why": "5 buts et 3 passes en 8 matchs · titulaire · Milan favori (48 %) · 1,5 buts attendus pour Milan"
     }
    }
   },
@@ -708,67 +708,68 @@
    "home": "Monza",
    "away": "Atalanta",
    "state": "pre",
-   "xgH": 1.98,
-   "xgA": 2.25,
-   "pH": 35,
+   "xgH": 1.99,
+   "xgA": 2.09,
+   "pH": 38,
    "pD": 20,
-   "pA": 45,
+   "pA": 42,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7945,
-     "prob": 79,
-     "fair": 1.26,
+     "p": 0.7727,
+     "prob": 77,
+     "fair": 1.29,
      "stars": 4,
      "why": "10 derniers matchs : Monza 17 marqués / 24 encaissés · Atalanta 16 / 20"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Atalanta",
-     "p": 0.4514,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.4174,
+     "prob": 42,
+     "fair": 2.4,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0728,
+     "p": 0.0736,
      "prob": 7,
-     "fair": 13.73,
+     "fair": 13.58,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
      "market": "wa_o25",
      "label": "Atalanta gagne et plus de 2,5 buts",
-     "p": 0.3821,
-     "prob": 38,
-     "fair": 2.62,
+     "p": 0.3448,
+     "prob": 34,
+     "fair": 2.9,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Nikola Krstovic marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.5,
+     "prob": 50,
+     "fair": 2.0,
      "stars": 2,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 10 matchs · Atalanta favori (45 %) · 2,3 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 10 matchs · titulaire · Atalanta annoncé gagnant (42 %) · 2,1 buts attendus pour Atalanta"
     },
     "decisive": {
      "market": "dec",
      "label": "Nikola Krstovic buteur ou passeur",
-     "p": 0.64,
-     "prob": 64,
-     "fair": 1.56,
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
@@ -777,10 +778,11 @@
       6,
       2
      ],
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 10 matchs · Atalanta favori (45 %) · 2,3 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 10 matchs · titulaire · Atalanta annoncé gagnant (42 %) · 2,1 buts attendus pour Atalanta"
     }
    }
   },
@@ -1495,7 +1497,7 @@
     "main": {
      "market": "1N",
      "label": "Inter Milan ou nul",
-     "p": 0.7396,
+     "p": 0.7395,
      "prob": 74,
      "fair": 1.35,
      "stars": 4,
@@ -1504,7 +1506,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Inter Milan",
-     "p": 0.5066,
+     "p": 0.5067,
      "prob": 51,
      "fair": 1.97,
      "stars": 2
@@ -1521,9 +1523,9 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3507,
+     "p": 0.3518,
      "prob": 35,
-     "fair": 2.85,
+     "fair": 2.84,
      "stars": 1
     },
     "player": {
@@ -1916,7 +1918,7 @@
    "away": "Juventus",
    "state": "pre",
    "xgH": 1.3,
-   "xgA": 1.55,
+   "xgA": 1.56,
    "pH": 32,
    "pD": 25,
    "pA": 43,
@@ -1925,7 +1927,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Juventus",
-     "p": 0.6805,
+     "p": 0.6804,
      "prob": 68,
      "fair": 1.47,
      "stars": 3,
@@ -1934,7 +1936,7 @@
     "winner": {
      "market": "2",
      "label": "Victoire Juventus",
-     "p": 0.4327,
+     "p": 0.4329,
      "prob": 43,
      "fair": 2.31,
      "stars": 1
@@ -1951,9 +1953,9 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3201,
+     "p": 0.3212,
      "prob": 32,
-     "fair": 3.12,
+     "fair": 3.11,
      "stars": 1
     },
     "player": {
@@ -2497,8 +2499,8 @@
  "summary": {
   "date": "2026-11-08",
   "yesterday": {
-   "n": 177,
-   "ok": 90
+   "n": 182,
+   "ok": 91
   },
   "foot": 24,
   "nhl": 6,

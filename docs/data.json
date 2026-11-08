@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T14:13+01:00",
+ "generated": "2026-11-08T14:38+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-08",
  "foot": [
@@ -9,12 +9,12 @@
    "league": "Serie A",
    "kickoff": "2026-11-08T11:30:00+00:00",
    "time": "12:30",
-   "state": "in",
+   "state": "post",
    "score": "1-1",
    "home": "Napoli",
    "away": "Lazio",
-   "form_h": "DDVNV",
-   "form_a": "VVVVV",
+   "form_h": "NDDVN",
+   "form_a": "NVVVV",
    "rank_h": 10,
    "rank_a": 1,
    "pH": 34,
@@ -47,15 +47,14 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 4,
-      "a": 1
+      "g": 3,
+      "a": 0
      },
-     "p_goal": 22,
-     "p_dec": 28,
+     "p_goal": 21,
+     "p_dec": 25,
      "pid": "134947",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Rasmus Højlund",
@@ -71,12 +70,31 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 21,
+     "p_goal": 20,
+     "p_dec": 22,
      "pid": "309273",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Matteo Politano",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Napoli",
+     "goals": 2,
+     "assists": 3,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 15,
+     "p_dec": 31,
+     "pid": "188306",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Scott McTominay",
@@ -92,12 +110,11 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 13,
+     "p_dec": 15,
      "pid": "255850",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Noa Lang",
@@ -114,53 +131,30 @@
       "a": 1
      },
      "p_goal": 9,
-     "p_dec": 15,
+     "p_dec": 16,
      "pid": "255344",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Billy Gilmour",
+     "name": "Stanislav Lobotka",
      "pos": "Milieu",
      "side": "h",
      "team": "Napoli",
      "goals": 1,
      "assists": 0,
-     "apps": 7,
+     "apps": 9,
      "l10": {
       "n": 10,
-      "gp": 7,
+      "gp": 8,
       "g": 1,
       "a": 0
      },
      "p_goal": 7,
-     "p_dec": 8,
-     "pid": "274217",
+     "p_dec": 10,
+     "pid": "188412",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Antonio Vergara",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Napoli",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 6,
-     "p_dec": 12,
-     "pid": "332411",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -176,14 +170,13 @@
       "n": 10,
       "gp": 9,
       "g": 4,
-      "a": 3
+      "a": 4
      },
      "p_goal": 21,
-     "p_dec": 33,
+     "p_dec": 35,
      "pid": "323113",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Gustav Isaksen",
@@ -203,8 +196,7 @@
      "p_dec": 26,
      "pid": "291550",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Davide Frattesi",
@@ -224,8 +216,27 @@
      "p_dec": 18,
      "pid": "250850",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Mattia Zaccagni",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Lazio",
+     "goals": 2,
+     "assists": 5,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 5
+     },
+     "p_goal": 11,
+     "p_dec": 33,
+     "pid": "204669",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Kenneth Taylor",
@@ -245,8 +256,7 @@
      "p_dec": 18,
      "pid": "282228",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Andrea Pinamonti",
@@ -258,7 +268,7 @@
      "apps": 8,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 9,
       "g": 2,
       "a": 1
      },
@@ -266,40 +276,17 @@
      "p_dec": 16,
      "pid": "239086",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Romano Floriani",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Lazio",
-     "goals": 1,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 6,
-     "p_dec": 6,
-     "pid": "330041",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Napoli : 10e, 14 points, 17 buts marqués et 13 encaissés en 10 matchs.",
-    "Lazio : 1er, 28 points, 24 buts marqués et 8 encaissés en 10 matchs.",
-    "Napoli : 17 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Lazio : 24 buts marqués et 8 encaissés sur ses 10 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
+    "Napoli : 10e, 15 points, 18 buts marqués et 14 encaissés en 11 matchs.",
+    "Lazio : 1er, 29 points, 25 buts marqués et 9 encaissés en 11 matchs.",
+    "Napoli : 16 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
+    "Lazio : 24 buts marqués et 9 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Lazio est leader (28 points).",
+   "stakes": "Lazio est leader (29 points).",
    "picks": {
     "winner": {
      "market": "2",
@@ -353,18 +340,17 @@
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
-     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 3 passes en 9 matchs · titulaire · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
+     "why": "4 buts et 3 passes en 9 matchs · 10 derniers matchs : 4 buts, 4 passes (joué 9 sur 10) · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
     },
     "decisive": {
      "market": "dec",
      "label": "Tijjani Noslin buteur ou passeur",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Tijjani Noslin",
      "team": "Lazio",
@@ -373,11 +359,10 @@
       4,
       3
      ],
-     "lineup": "start",
      "pid": "323113",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 3 passes en 9 matchs · titulaire · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
+     "why": "4 buts et 3 passes en 9 matchs · 10 derniers matchs : 4 buts, 4 passes (joué 9 sur 10) · Lazio annoncé gagnant (40 %) · 1,4 but attendu pour Lazio"
     },
     "held": {
      "market": "N2",
@@ -2809,11 +2794,11 @@
    "form_a": "DVDVD",
    "rank_h": 12,
    "rank_a": 5,
-   "pH": 27,
+   "pH": 26,
    "pD": 26,
-   "pA": 47,
+   "pA": 48,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.1,
+   "xgH": 1.07,
    "xgA": 1.53,
    "scores": [
     "1-1",
@@ -2825,8 +2810,8 @@
     11,
     9
    ],
-   "over25": 49,
-   "btts": 52,
+   "over25": 48,
+   "btts": 51,
    "squad_h": [
     {
      "name": "Milutin Osmajic",
@@ -2842,11 +2827,12 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 31,
-     "p_dec": 38,
+     "p_goal": 30,
+     "p_dec": 37,
      "pid": "275444",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Junior Messias",
@@ -2862,11 +2848,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 18,
-     "p_dec": 26,
+     "p_goal": 17,
+     "p_dec": 25,
      "pid": "261054",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mikael Ellertsson",
@@ -2882,31 +2869,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 21,
+     "p_goal": 9,
+     "p_dec": 20,
      "pid": "324256",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Tommaso Baldanzi",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Genoa",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 9,
-     "p_dec": 17,
-     "pid": "309518",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Johan Vásquez",
@@ -2923,10 +2891,11 @@
       "a": 0
      },
      "p_goal": 8,
-     "p_dec": 10,
+     "p_dec": 9,
      "pid": "259975",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kingsley Ehizibue",
@@ -2946,7 +2915,29 @@
      "p_dec": 8,
      "pid": "212476",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Vitinha",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Genoa",
+     "goals": 0,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 5,
+     "pid": "403234",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -2968,7 +2959,8 @@
      "p_dec": 42,
      "pid": "176203",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Diego Moreira",
@@ -2988,7 +2980,8 @@
      "p_dec": 38,
      "pid": "340678",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Alphadjo Cissè",
@@ -3008,7 +3001,8 @@
      "p_dec": 24,
      "pid": "359754",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Christian Pulisic",
@@ -3028,7 +3022,8 @@
      "p_dec": 25,
      "pid": "225607",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Gonçalo Ramos",
@@ -3048,7 +3043,8 @@
      "p_dec": 24,
      "pid": "288896",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mario Gila",
@@ -3068,7 +3064,8 @@
      "p_dec": 8,
      "pid": "324097",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -3076,58 +3073,60 @@
     "Milan : 5e, 21 points, 21 buts marqués et 12 encaissés en 10 matchs.",
     "Genoa : 10 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
     "Milan : 21 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
-    "Milan a joué il y a 3 jours : fatigue probable, chances un peu réduites."
+    "Milan a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Genoa : attaque revue à la baisse (−3 %) d'après la compo officielle (Tommaso Baldanzi ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Milan est favori sans écraser le match (47 %).",
+   "reading": "Milan est favori sans écraser le match (48 %).",
    "stakes": "Milan (5e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Milan",
-     "p": 0.7262,
-     "prob": 73,
-     "fair": 1.38,
+     "p": 0.7361,
+     "prob": 74,
+     "fair": 1.36,
      "stars": 4,
      "why": "10 derniers matchs : Genoa 10 marqués / 14 encaissés · Milan 21 / 12"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Milan",
-     "p": 0.4711,
-     "prob": 47,
-     "fair": 2.12,
+     "p": 0.4804,
+     "prob": 48,
+     "fair": 2.08,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1101,
+     "p": 0.1142,
      "prob": 11,
-     "fair": 9.08,
+     "fair": 8.76,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "htft_a",
      "label": "Milan mène à la mi-temps et gagne le match",
-     "p": 0.285,
+     "p": 0.2912,
      "prob": 29,
-     "fair": 3.51,
+     "fair": 3.43,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o25",
       "label": "Milan gagne et plus de 2,5 buts",
-      "p": 0.2768,
+      "p": 0.2789,
       "prob": 28,
-      "fair": 3.61,
+      "fair": 3.59,
       "stars": 1
      },
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.2706,
+      "market": "wa_nil",
+      "label": "Milan gagne sans encaisser de but",
+      "p": 0.2701,
       "prob": 27,
       "fair": 3.7,
       "stars": 1
@@ -3142,10 +3141,11 @@
      "stars": 1,
      "player": "Adrien Rabiot",
      "team": "Milan",
+     "lineup": "start",
      "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 8 matchs · Milan favori (47 %) · 1,5 buts attendus pour Milan"
+     "why": "5 buts et 3 passes en 8 matchs · titulaire · Milan favori (48 %) · 1,5 buts attendus pour Milan"
     },
     "decisive": {
      "market": "dec",
@@ -3161,10 +3161,11 @@
       5,
       3
      ],
+     "lineup": "start",
      "pid": "176203",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 8 matchs · Milan favori (47 %) · 1,5 buts attendus pour Milan"
+     "why": "5 buts et 3 passes en 8 matchs · titulaire · Milan favori (48 %) · 1,5 buts attendus pour Milan"
     }
    },
    "second": {
@@ -3191,12 +3192,12 @@
    "form_a": "NDNND",
    "rank_h": 18,
    "rank_a": 13,
-   "pH": 35,
+   "pH": 38,
    "pD": 20,
-   "pA": 45,
+   "pA": 42,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.98,
-   "xgA": 2.25,
+   "xgH": 1.99,
+   "xgA": 2.09,
    "scores": [
     "1-2",
     "2-2",
@@ -3205,10 +3206,10 @@
    "scorep": [
     7,
     7,
-    6
+    7
    ],
-   "over25": 79,
-   "btts": 77,
+   "over25": 77,
+   "btts": 76,
    "squad_h": [
     {
      "name": "Gustavo Varela",
@@ -3228,7 +3229,8 @@
      "p_dec": 67,
      "pid": "384482",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jay Robinson",
@@ -3248,27 +3250,8 @@
      "p_dec": 31,
      "pid": "355359",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Exequiel Zeballos",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Monza",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 10,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 11,
-     "p_dec": 11,
-     "pid": "297051",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ricardo Mangas",
@@ -3288,7 +3271,8 @@
      "p_dec": 28,
      "pid": "259871",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Eddy Kouadio",
@@ -3308,7 +3292,29 @@
      "p_dec": 12,
      "pid": "390673",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Saba Goglichidze",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Monza",
+     "goals": 1,
+     "assists": 0,
+     "apps": 5,
+     "l10": {
+      "n": 10,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 11,
+     "pid": "363886",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Andrea Colpani",
@@ -3324,11 +3330,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 12,
+     "p_goal": 3,
+     "p_dec": 4,
      "pid": "272892",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -3346,11 +3353,12 @@
       "g": 6,
       "a": 2
      },
-     "p_goal": 53,
-     "p_dec": 64,
+     "p_goal": 50,
+     "p_dec": 61,
      "pid": "258158",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Éderson",
@@ -3366,11 +3374,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 23,
-     "p_dec": 28,
+     "p_goal": 21,
+     "p_dec": 26,
      "pid": "278210",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Charles De Ketelaere",
@@ -3386,31 +3395,12 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 18,
-     "p_dec": 44,
+     "p_goal": 17,
+     "p_dec": 42,
      "pid": "296319",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Gianluca Scamacca",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Atalanta",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 15,
-     "pid": "233140",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nicola Zalewski",
@@ -3426,14 +3416,15 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 12,
-     "p_dec": 39,
+     "p_goal": 11,
+     "p_dec": 37,
      "pid": "288488",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Gianluca Gaetano",
+     "name": "Eljif Elmas",
      "pos": "Milieu",
      "side": "a",
      "team": "Atalanta",
@@ -3446,71 +3437,95 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 25,
-     "pid": "276692",
+     "p_goal": 11,
+     "p_dec": 22,
+     "pid": "237435",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Gianluca Scamacca",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Atalanta",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 4,
+     "pid": "233140",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Monza : 18e, 7 points, 17 buts marqués et 24 encaissés en 10 matchs.",
     "Atalanta : 13e, 11 points, 16 buts marqués et 20 encaissés en 10 matchs.",
     "Monza : 17 buts marqués et 24 encaissés sur ses 10 derniers matchs de championnat.",
-    "Atalanta : 16 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat."
+    "Atalanta : 16 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat.",
+    "Atalanta : attaque revue à la baisse (−8 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Atalanta est favori sans écraser le match (45 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Monza (18e) est en zone de relégation : match vital.",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7945,
-     "prob": 79,
-     "fair": 1.26,
+     "p": 0.7727,
+     "prob": 77,
+     "fair": 1.29,
      "stars": 4,
      "why": "10 derniers matchs : Monza 17 marqués / 24 encaissés · Atalanta 16 / 20"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Atalanta",
-     "p": 0.4514,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.4174,
+     "prob": 42,
+     "fair": 2.4,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0728,
+     "p": 0.0736,
      "prob": 7,
-     "fair": 13.73,
+     "fair": 13.58,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
      "market": "wa_o25",
      "label": "Atalanta gagne et plus de 2,5 buts",
-     "p": 0.3821,
-     "prob": 38,
-     "fair": 2.62,
+     "p": 0.3448,
+     "prob": 34,
+     "fair": 2.9,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_btts",
       "label": "Atalanta gagne et les deux équipes marquent",
-      "p": 0.3281,
-      "prob": 33,
-      "fair": 3.05,
+      "p": 0.2971,
+      "prob": 30,
+      "fair": 3.37,
       "stars": 1
      },
      {
       "market": "scw",
       "label": "Nikola Krstovic marque et Atalanta gagne",
-      "p": 0.3138,
-      "prob": 31,
-      "fair": 3.19,
+      "p": 0.2824,
+      "prob": 28,
+      "fair": 3.54,
       "stars": 1,
       "player": "Nikola Krstovic",
       "team": "Atalanta",
@@ -3520,23 +3535,24 @@
     "player": {
      "market": "scorer",
      "label": "Nikola Krstovic marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.5,
+     "prob": 50,
+     "fair": 2.0,
      "stars": 2,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 10 matchs · Atalanta favori (45 %) · 2,3 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 10 matchs · titulaire · Atalanta annoncé gagnant (42 %) · 2,1 buts attendus pour Atalanta"
     },
     "decisive": {
      "market": "dec",
      "label": "Nikola Krstovic buteur ou passeur",
-     "p": 0.64,
-     "prob": 64,
-     "fair": 1.56,
+     "p": 0.61,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3,
      "player": "Nikola Krstovic",
      "team": "Atalanta",
@@ -3545,10 +3561,11 @@
       6,
       2
      ],
+     "lineup": "start",
      "pid": "258158",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 2 passes en 10 matchs · Atalanta favori (45 %) · 2,3 buts attendus pour Atalanta"
+     "why": "6 buts et 2 passes en 10 matchs · titulaire · Atalanta annoncé gagnant (42 %) · 2,1 buts attendus pour Atalanta"
     }
    },
    "second": {
@@ -6654,7 +6671,7 @@
     10,
     9
    ],
-   "over25": 57,
+   "over25": 58,
    "btts": 58,
    "squad_h": [
     {
@@ -6894,7 +6911,7 @@
       "a": 0
      },
      "p_goal": 7,
-     "p_dec": 9,
+     "p_dec": 10,
      "pid": "291285",
      "stats_league": "ita.1",
      "season": 2026
@@ -6912,7 +6929,7 @@
     "main": {
      "market": "1N",
      "label": "Inter Milan ou nul",
-     "p": 0.7396,
+     "p": 0.7395,
      "prob": 74,
      "fair": 1.35,
      "stars": 4,
@@ -6921,7 +6938,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Inter Milan",
-     "p": 0.5066,
+     "p": 0.5067,
      "prob": 51,
      "fair": 1.97,
      "stars": 2
@@ -6938,16 +6955,16 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3507,
+     "p": 0.3518,
      "prob": 35,
-     "fair": 2.85,
+     "fair": 2.84,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o25",
       "label": "Inter Milan gagne et plus de 2,5 buts",
-      "p": 0.3378,
+      "p": 0.3383,
       "prob": 34,
       "fair": 2.96,
       "stars": 1
@@ -6955,7 +6972,7 @@
      {
       "market": "htft_h",
       "label": "Inter Milan mène à la mi-temps et gagne le match",
-      "p": 0.315,
+      "p": 0.3151,
       "prob": 32,
       "fair": 3.17,
       "stars": 1
@@ -8551,7 +8568,7 @@
    "pA": 43,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.3,
-   "xgA": 1.55,
+   "xgA": 1.56,
    "scores": [
     "1-1",
     "1-2",
@@ -8580,7 +8597,7 @@
       "a": 0
      },
      "p_goal": 29,
-     "p_dec": 31,
+     "p_dec": 32,
      "pid": "376473",
      "stats_league": "ita.1",
      "season": 2026
@@ -8599,7 +8616,7 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 23,
+     "p_goal": 24,
      "p_dec": 26,
      "pid": "312757",
      "stats_league": "ita.1",
@@ -8821,7 +8838,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Juventus",
-     "p": 0.6805,
+     "p": 0.6804,
      "prob": 68,
      "fair": 1.47,
      "stars": 3,
@@ -8830,7 +8847,7 @@
     "winner": {
      "market": "2",
      "label": "Victoire Juventus",
-     "p": 0.4327,
+     "p": 0.4329,
      "prob": 43,
      "fair": 2.31,
      "stars": 1
@@ -8847,16 +8864,16 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3201,
+     "p": 0.3212,
      "prob": 32,
-     "fair": 3.12,
+     "fair": 3.11,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o25",
       "label": "Juventus gagne et plus de 2,5 buts",
-      "p": 0.2737,
+      "p": 0.2743,
       "prob": 27,
       "fair": 3.65,
       "stars": 1
@@ -8864,7 +8881,7 @@
      {
       "market": "htft_a",
       "label": "Juventus mène à la mi-temps et gagne le match",
-      "p": 0.2608,
+      "p": 0.261,
       "prob": 26,
       "fair": 3.83,
       "stars": 1
@@ -11649,22 +11666,22 @@
  ],
  "bilan": {
   "foot": {
-   "n": 283,
+   "n": 284,
    "fav_rate": 62,
    "fav_expected": 53,
-   "brier": 0.527,
+   "brier": 0.529,
    "brier_naive": 0.667,
    "vs_mkt": {
-    "n": 111,
-    "model": 0.542,
-    "mkt": 0.544
+    "n": 112,
+    "model": 0.544,
+    "mkt": 0.547
    },
    "bins": [
     {
      "range": "30-40 %",
-     "n": 48,
+     "n": 49,
      "announced": 38,
-     "actual": 48
+     "actual": 47
     },
     {
      "range": "40-50 %",
@@ -11737,21 +11754,21 @@
    ]
   },
   "picks": {
-   "n": 1374,
+   "n": 1377,
    "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1374,
-     "ok": 756,
+     "n": 1377,
+     "ok": 757,
      "rate": 55,
      "expected": 52
     },
     "foot": {
-     "n": 872,
-     "ok": 458,
-     "rate": 53,
+     "n": 875,
+     "ok": 459,
+     "rate": 52,
      "expected": 51
     },
     "nhl": {
@@ -11763,13 +11780,13 @@
    },
    "fun": {
     "all": {
-     "n": 551,
+     "n": 553,
      "ok": 153,
      "rate": 28,
      "expected": 28
     },
     "foot": {
-     "n": 414,
+     "n": 416,
      "ok": 91,
      "rate": 22,
      "expected": 24
@@ -11785,14 +11802,16 @@
     {
      "date": "2026-11-08",
      "all": {
-      "n": 30,
-      "ok": 23,
-      "rate": 77,
-      "expected": 58
+      "n": 33,
+      "ok": 24,
+      "rate": 73,
+      "expected": 57
      },
      "foot": {
-      "n": 0,
-      "ok": 0
+      "n": 3,
+      "ok": 1,
+      "rate": 33,
+      "expected": 42
      },
      "nhl": {
       "n": 30,
@@ -11802,14 +11821,16 @@
      },
      "fun": {
       "all": {
-       "n": 8,
+       "n": 10,
        "ok": 4,
-       "rate": 50,
-       "expected": 37
+       "rate": 40,
+       "expected": 34
       },
       "foot": {
-       "n": 0,
-       "ok": 0
+       "n": 2,
+       "ok": 0,
+       "rate": 0,
+       "expected": 19
       },
       "nhl": {
        "n": 8,
@@ -12683,8 +12704,8 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 158,
-     "ok": 82,
+     "n": 161,
+     "ok": 83,
      "rate": 52,
      "expected": 50
     },
@@ -12748,7 +12769,7 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 609,
+     "n": 611,
      "announced": 35,
      "actual": 34
     },
@@ -12760,9 +12781,9 @@
     },
     {
      "stars": 3,
-     "n": 298,
+     "n": 299,
      "announced": 64,
-     "actual": 74
+     "actual": 75
     },
     {
      "stars": 4,
@@ -12956,6 +12977,71 @@
      "match": "New York Islanders – New Jersey Devils",
      "label": "New Jersey Devils gagne par 2 buts d'écart ou plus",
      "prob": 40,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874810",
+     "score": "1-1",
+     "match": "Napoli – Lazio",
+     "label": "Nul ou Lazio",
+     "prob": 65,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874810",
+     "score": "1-1",
+     "match": "Napoli – Lazio",
+     "label": "Victoire Lazio",
+     "prob": 40,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874810",
+     "score": "1-1",
+     "match": "Napoli – Lazio",
+     "label": "Tijjani Noslin marque",
+     "prob": 21,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874810",
+     "score": "1-1",
+     "match": "Napoli – Lazio",
+     "label": "Plus de 3,5 buts",
+     "prob": 27,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874810",
+     "score": "1-1",
+     "match": "Napoli – Lazio",
+     "label": "Score exact 0-1",
+     "prob": 10,
      "stars": 1,
      "ok": false,
      "fun": true
