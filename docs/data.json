@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T12:58+01:00",
+ "generated": "2026-11-08T13:23+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-08",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-08T11:30:00+00:00",
    "time": "12:30",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Napoli",
    "away": "Lazio",
    "form_h": "DDVNV",
@@ -415,24 +415,24 @@
    "form_a": "DVNVD",
    "rank_h": 17,
    "rank_a": 4,
-   "pH": 32,
-   "pD": 24,
-   "pA": 44,
+   "pH": 31,
+   "pD": 26,
+   "pA": 43,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.39,
-   "xgA": 1.65,
+   "xgH": 1.17,
+   "xgA": 1.44,
    "scores": [
     "1-1",
-    "1-2",
-    "0-1"
+    "0-1",
+    "1-2"
    ],
    "scorep": [
+    12,
     11,
-    9,
-    8
+    9
    ],
-   "over25": 59,
-   "btts": 61,
+   "over25": 48,
+   "btts": 53,
    "squad_h": [
     {
      "name": "Fer Niño",
@@ -448,11 +448,12 @@
       "g": 6,
       "a": 0
      },
-     "p_goal": 41,
-     "p_dec": 43,
+     "p_goal": 36,
+     "p_dec": 38,
      "pid": "301684",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Germán Valera",
@@ -468,31 +469,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 23,
+     "p_goal": 17,
+     "p_dec": 20,
      "pid": "297358",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Abiel Osorio",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Elche",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 11,
-     "pid": "336840",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Federico Redondo",
@@ -508,31 +490,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 12,
+     "p_goal": 8,
+     "p_dec": 10,
      "pid": "318181",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Thomas Lemar",
-     "pos": "Milieu",
+     "name": "Lucas Cepeda",
+     "pos": "Attaquant",
      "side": "h",
      "team": "Elche",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
+     "goals": 0,
+     "assists": 2,
+     "apps": 11,
      "l10": {
       "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
+      "gp": 10,
+      "g": 0,
+      "a": 2
      },
-     "p_goal": 9,
-     "p_dec": 11,
-     "pid": "190291",
+     "p_goal": 3,
+     "p_dec": 16,
+     "pid": "320648",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Facundo Buonanotte",
@@ -548,11 +532,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 17,
+     "p_goal": 2,
+     "p_dec": 5,
      "pid": "318284",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Abiel Osorio",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Elche",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 3,
+     "pid": "336840",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -570,31 +576,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 27,
+     "p_goal": 22,
+     "p_dec": 24,
      "pid": "300912",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Cucho Hernández",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Betis",
-     "goals": 2,
-     "assists": 2,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 19,
-     "p_dec": 30,
-     "pid": "336809",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Isco",
@@ -610,11 +597,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 25,
+     "p_goal": 14,
+     "p_dec": 22,
      "pid": "143564",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Marc Bartra",
@@ -630,31 +618,33 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 16,
+     "p_goal": 14,
+     "p_dec": 14,
      "pid": "145078",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Rodrigo Riquelme",
-     "pos": "Milieu",
+     "name": "Troy Parrott",
+     "pos": "Attaquant",
      "side": "a",
      "team": "Betis",
-     "goals": 2,
-     "assists": 0,
-     "apps": 10,
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
      "l10": {
       "n": 10,
-      "gp": 9,
+      "gp": 8,
       "g": 1,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 15,
-     "pid": "70224",
+     "p_goal": 9,
+     "p_dec": 16,
+     "pid": "279790",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pablo Fornals",
@@ -670,18 +660,43 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 20,
+     "p_goal": 8,
+     "p_dec": 18,
      "pid": "227714",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Natan",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Betis",
+     "goals": 1,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "301526",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Elche : 17e, 10 points, 14 buts marqués et 18 encaissés en 11 matchs.",
     "Betis : 4e, 23 points, 18 buts marqués et 15 encaissés en 11 matchs.",
     "Elche : 13 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
-    "Betis : 17 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat."
+    "Betis : 17 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
+    "Elche : attaque revue à la baisse (−16 %) d'après la compo officielle.",
+    "Betis : attaque revue à la baisse (−13 %) d'après la compo officielle (Rodrigo Riquelme, Cucho Hernández ne commencent pas).",
+    "Compositions officielles prises en compte : Cucho Hernández (absent) ne commence pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Elche (17e) lutte pour le maintien, 0 point d'avance sur la zone rouge. Betis (4e) défend une place qualificative pour la Ligue des champions.",
@@ -689,75 +704,76 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Betis",
-     "p": 0.6752,
-     "prob": 68,
-     "fair": 1.48,
+     "p": 0.6916,
+     "prob": 69,
+     "fair": 1.45,
      "stars": 3,
      "why": "10 derniers matchs : Elche 13 marqués / 17 encaissés · Betis 17 / 15"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Betis",
-     "p": 0.4361,
-     "prob": 44,
-     "fair": 2.29,
+     "p": 0.431,
+     "prob": 43,
+     "fair": 2.32,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0904,
-     "prob": 9,
-     "fair": 11.06,
+     "label": "Score exact 0-1",
+     "p": 0.1056,
+     "prob": 11,
+     "fair": 9.47,
      "stars": 1,
-     "value": "1-2"
+     "value": "0-1"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3617,
-     "prob": 36,
-     "fair": 2.76,
+     "p": 0.2662,
+     "prob": 27,
+     "fair": 3.76,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_o25",
-      "label": "Betis gagne et plus de 2,5 buts",
-      "p": 0.2923,
-      "prob": 29,
-      "fair": 3.42,
+      "market": "htft_a",
+      "label": "Betis mène à la mi-temps et gagne le match",
+      "p": 0.257,
+      "prob": 26,
+      "fair": 3.89,
       "stars": 1
      },
      {
-      "market": "htft_a",
-      "label": "Betis mène à la mi-temps et gagne le match",
-      "p": 0.2651,
-      "prob": 27,
-      "fair": 3.77,
+      "market": "wa_o25",
+      "label": "Betis gagne et plus de 2,5 buts",
+      "p": 0.2495,
+      "prob": 25,
+      "fair": 4.01,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Abde Ezzalzouli marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
      "player": "Abde Ezzalzouli",
      "team": "Betis",
+     "lineup": "start",
      "pid": "300912",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Betis annoncé gagnant (44 %) · 1,6 buts attendus pour Betis"
+     "why": "3 buts et 0 passe en 8 matchs · titulaire · Betis annoncé gagnant (43 %) · 1,4 but attendu pour Betis"
     },
     "decisive": {
      "market": "dec",
      "label": "Abde Ezzalzouli buteur ou passeur",
-     "p": 0.27,
-     "prob": 27,
-     "fair": 3.7,
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
      "player": "Abde Ezzalzouli",
      "team": "Betis",
@@ -766,10 +782,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "300912",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 8 matchs · Betis annoncé gagnant (44 %) · 1,6 buts attendus pour Betis"
+     "why": "3 buts et 0 passe en 8 matchs · titulaire · Betis annoncé gagnant (43 %) · 1,4 but attendu pour Betis"
     }
    },
    "second": {
