@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T23:18+01:00",
+ "generated": "2026-11-08T23:43+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-08",
  "foot": [
@@ -9549,7 +9549,7 @@
    "kickoff": "2026-11-08T20:30:00+00:00",
    "time": "21:30",
    "state": "LIVE",
-   "score": "0-2",
+   "score": "1-3",
    "home": "Buffalo Sabres",
    "away": "Vegas Golden Knights",
    "rec_h": "8-5-3 · 6e Atlantic · 1 victoire de suite",
@@ -9939,7 +9939,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T23:00:00+00:00",
    "time": "00:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Winnipeg Jets",
    "away": "Tampa Bay Lightning",
@@ -39308,13 +39308,29 @@
   "foot": {
    "ok": 0,
    "elo": {
-    "fra.1": 682,
-    "eng.1": 841,
-    "esp.1": 849,
-    "ita.1": 860,
-    "ger.1": 665
+    "fra.1": 687,
+    "eng.1": 842,
+    "esp.1": 853,
+    "ita.1": 862,
+    "ger.1": 667
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 90
+    },
+    "eng.1": {
+     "2026": 100
+    },
+    "esp.1": {
+     "2026": 119
+    },
+    "ita.1": {
+     "2026": 110
+    },
+    "ger.1": {
+     "2026": 81
+    }
+   },
    "status": "ok"
   },
   "nhl": {
