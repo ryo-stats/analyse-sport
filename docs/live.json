@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T13:48+01:00",
+ "generated": "2026-11-08T14:13+01:00",
  "date": "2026-11-08",
  "matches": [
   {
@@ -90,7 +90,7 @@
    "time": "14:00",
    "home": "Elche",
    "away": "Betis",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.17,
    "xgA": 1.44,
    "pH": 31,
@@ -179,79 +179,81 @@
    "home": "Rennes",
    "away": "Lille",
    "state": "pre",
-   "xgH": 1.44,
-   "xgA": 1.49,
-   "pH": 37,
-   "pD": 25,
-   "pA": 39,
+   "xgH": 1.08,
+   "xgA": 1.15,
+   "pH": 34,
+   "pD": 29,
+   "pA": 37,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Lille",
-     "p": 0.6337,
-     "prob": 63,
-     "fair": 1.58,
+     "p": 0.6611,
+     "prob": 66,
+     "fair": 1.51,
      "stars": 3,
      "why": "9 derniers matchs : Rennes 20 marqués / 19 encaissés · Lille 12 / 6"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Lille",
-     "p": 0.3875,
-     "prob": 39,
-     "fair": 2.58,
+     "p": 0.3723,
+     "prob": 37,
+     "fair": 2.69,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0853,
-     "prob": 9,
-     "fair": 11.73,
+     "label": "Score exact 0-1",
+     "p": 0.1236,
+     "prob": 12,
+     "fair": 8.09,
      "stars": 1,
-     "value": "1-2"
+     "value": "0-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Lille gagne et plus de 2,5 buts",
-     "p": 0.2488,
-     "prob": 25,
-     "fair": 4.02,
+     "market": "wa_nil",
+     "label": "Lille gagne sans encaisser de but",
+     "p": 0.2316,
+     "prob": 23,
+     "fair": 4.32,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Olivier Giroud marque",
-     "p": 0.27,
-     "prob": 27,
-     "fair": 3.7,
+     "label": "Ethan Mbappé marque",
+     "p": 0.15,
+     "prob": 15,
+     "fair": 6.67,
      "stars": 1,
-     "player": "Olivier Giroud",
+     "player": "Ethan Mbappé",
      "team": "Lille",
-     "pid": "88965",
+     "lineup": "start",
+     "pid": "355971",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 8 matchs · Lille annoncé gagnant (39 %) · 1,5 but attendu pour Lille"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Lille annoncé gagnant (37 %) · 1,1 but attendu pour Lille"
     },
     "decisive": {
      "market": "dec",
-     "label": "Olivier Giroud buteur ou passeur",
-     "p": 0.41,
-     "prob": 41,
-     "fair": 2.44,
+     "label": "Ethan Mbappé buteur ou passeur",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Olivier Giroud",
+     "player": "Ethan Mbappé",
      "team": "Lille",
      "base": [
       8,
-      3,
-      2
+      2,
+      0
      ],
-     "pid": "88965",
+     "lineup": "start",
+     "pid": "355971",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 8 matchs · Lille annoncé gagnant (39 %) · 1,5 but attendu pour Lille"
+     "why": "2 buts et 0 passe en 8 matchs · titulaire · Lille annoncé gagnant (37 %) · 1,1 but attendu pour Lille"
     }
    }
   },
@@ -265,67 +267,68 @@
    "home": "Brighton",
    "away": "Brentford",
    "state": "pre",
-   "xgH": 2.02,
-   "xgA": 1.1,
-   "pH": 59,
-   "pD": 21,
+   "xgH": 1.95,
+   "xgA": 1.05,
+   "pH": 58,
+   "pD": 22,
    "pA": 20,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Brighton ou nul",
-     "p": 0.798,
+     "p": 0.8005,
      "prob": 80,
      "fair": 1.25,
-     "stars": 4,
+     "stars": 5,
      "why": "9 derniers matchs : Brighton 24 marqués / 7 encaissés · Brentford 16 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Brighton",
-     "p": 0.5858,
-     "prob": 59,
+     "p": 0.5834,
+     "prob": 58,
      "fair": 1.71,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0991,
+     "p": 0.0994,
      "prob": 10,
-     "fair": 10.09,
+     "fair": 10.06,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Brighton gagne et plus de 2,5 buts",
-     "p": 0.4073,
-     "prob": 41,
-     "fair": 2.46,
+     "p": 0.3924,
+     "prob": 39,
+     "fair": 2.55,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Charalambos Kostoulas marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
      "player": "Charalambos Kostoulas",
      "team": "Brighton",
+     "lineup": "start",
      "pid": "387655",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 9 matchs · Brighton favori (59 %) · 2,0 buts attendus pour Brighton"
+     "why": "3 buts et 2 passes en 9 matchs · titulaire · Brighton favori (58 %) · 2,0 buts attendus pour Brighton"
     },
     "decisive": {
      "market": "dec",
      "label": "Charalambos Kostoulas buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Charalambos Kostoulas",
      "team": "Brighton",
@@ -334,10 +337,11 @@
       3,
       2
      ],
+     "lineup": "start",
      "pid": "387655",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 9 matchs · Brighton favori (59 %) · 2,0 buts attendus pour Brighton"
+     "why": "3 buts et 2 passes en 9 matchs · titulaire · Brighton favori (58 %) · 2,0 buts attendus pour Brighton"
     }
    }
   },
@@ -351,45 +355,45 @@
    "home": "C Palace",
    "away": "Liverpool",
    "state": "pre",
-   "xgH": 1.01,
-   "xgA": 1.74,
+   "xgH": 0.96,
+   "xgA": 1.62,
    "pH": 22,
-   "pD": 24,
-   "pA": 55,
+   "pD": 25,
+   "pA": 53,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Liverpool",
-     "p": 0.7821,
+     "p": 0.7754,
      "prob": 78,
-     "fair": 1.28,
+     "fair": 1.29,
      "stars": 4,
      "why": "9 derniers matchs : C Palace 9 marqués / 21 encaissés · Liverpool 11 / 9"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Liverpool",
-     "p": 0.5455,
-     "prob": 55,
-     "fair": 1.83,
+     "p": 0.5267,
+     "prob": 53,
+     "fair": 1.9,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1119,
-     "prob": 11,
-     "fair": 8.94,
+     "p": 0.1228,
+     "prob": 12,
+     "fair": 8.15,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "scw",
      "label": "Alexander Isak marque et Liverpool gagne",
-     "p": 0.4117,
-     "prob": 41,
-     "fair": 2.43,
+     "p": 0.3875,
+     "prob": 39,
+     "fair": 2.58,
      "stars": 1,
      "player": "Alexander Isak",
      "team": "Liverpool",
@@ -398,23 +402,24 @@
     "player": {
      "market": "scorer",
      "label": "Alexander Isak marque",
-     "p": 0.57,
-     "prob": 57,
-     "fair": 1.75,
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
      "stars": 2,
      "player": "Alexander Isak",
      "team": "Liverpool",
+     "lineup": "start",
      "pid": "235662",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 8 matchs · Liverpool favori (55 %) · 1,7 buts attendus pour Liverpool"
+     "why": "6 buts et 0 passe en 8 matchs · titulaire · Liverpool favori (53 %) · 1,6 buts attendus pour Liverpool"
     },
     "decisive": {
      "market": "dec",
      "label": "Alexander Isak buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
      "stars": 2,
      "player": "Alexander Isak",
      "team": "Liverpool",
@@ -423,10 +428,11 @@
       6,
       0
      ],
+     "lineup": "start",
      "pid": "235662",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "6 buts et 0 passe en 8 matchs · Liverpool favori (55 %) · 1,7 buts attendus pour Liverpool"
+     "why": "6 buts et 0 passe en 8 matchs · titulaire · Liverpool favori (53 %) · 1,6 buts attendus pour Liverpool"
     }
    }
   },
@@ -440,45 +446,45 @@
    "home": "Ipswich",
    "away": "Bournemouth",
    "state": "pre",
-   "xgH": 1.64,
+   "xgH": 1.48,
    "xgA": 1.94,
-   "pH": 33,
+   "pH": 30,
    "pD": 22,
-   "pA": 45,
+   "pA": 48,
    "edate": "20261108",
    "picks": {
     "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.6941,
-     "prob": 69,
-     "fair": 1.44,
-     "stars": 3,
+     "market": "N2",
+     "label": "Nul ou Bournemouth",
+     "p": 0.7042,
+     "prob": 70,
+     "fair": 1.42,
+     "stars": 4,
      "why": "9 derniers matchs : Ipswich 14 marqués / 18 encaissés · Bournemouth 14 / 13"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Bournemouth",
-     "p": 0.4505,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.4842,
+     "prob": 48,
+     "fair": 2.07,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0859,
+     "p": 0.0911,
      "prob": 9,
-     "fair": 11.65,
+     "fair": 10.98,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
      "market": "wa_o25",
      "label": "Bournemouth gagne et plus de 2,5 buts",
-     "p": 0.3444,
-     "prob": 34,
-     "fair": 2.9,
+     "p": 0.3591,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1
     },
     "player": {
@@ -490,10 +496,11 @@
      "stars": 1,
      "player": "Marcus Tavernier",
      "team": "Bournemouth",
+     "lineup": "start",
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (45 %) · 1,9 buts attendus pour Bournemouth"
+     "why": "5 buts et 0 passe en 9 matchs · titulaire · Bournemouth favori (48 %) · 1,9 buts attendus pour Bournemouth"
     },
     "decisive": {
      "market": "dec",
@@ -509,10 +516,11 @@
       5,
       0
      ],
+     "lineup": "start",
      "pid": "243364",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 9 matchs · Bournemouth favori (45 %) · 1,9 buts attendus pour Bournemouth"
+     "why": "5 buts et 0 passe en 9 matchs · titulaire · Bournemouth favori (48 %) · 1,9 buts attendus pour Bournemouth"
     }
    }
   },
@@ -526,79 +534,81 @@
    "home": "Sunderland",
    "away": "Chelsea",
    "state": "pre",
-   "xgH": 1.35,
-   "xgA": 2.12,
-   "pH": 24,
-   "pD": 21,
-   "pA": 55,
+   "xgH": 1.21,
+   "xgA": 1.84,
+   "pH": 25,
+   "pD": 23,
+   "pA": 52,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Chelsea",
-     "p": 0.7602,
-     "prob": 76,
-     "fair": 1.32,
+     "p": 0.7493,
+     "prob": 75,
+     "fair": 1.33,
      "stars": 4,
      "why": "9 derniers matchs : Sunderland 7 marqués / 17 encaissés · Chelsea 19 / 15"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Chelsea",
-     "p": 0.5521,
-     "prob": 55,
-     "fair": 1.81,
+     "p": 0.5214,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0945,
-     "prob": 9,
-     "fair": 10.59,
+     "p": 0.097,
+     "prob": 10,
+     "fair": 10.31,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Chelsea gagne et plus de 2,5 buts",
-     "p": 0.416,
-     "prob": 42,
-     "fair": 2.4,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3652,
+     "prob": 37,
+     "fair": 2.74,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "João Pedro marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "label": "Morgan Rogers marque",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
-     "player": "João Pedro",
+     "player": "Morgan Rogers",
      "team": "Chelsea",
-     "pid": "284960",
+     "lineup": "start",
+     "pid": "265653",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 6 matchs · Chelsea favori (55 %) · 2,1 buts attendus pour Chelsea"
+     "why": "5 buts et 1 passe en 9 matchs · titulaire · Chelsea favori (52 %) · 1,8 buts attendus pour Chelsea"
     },
     "decisive": {
      "market": "dec",
-     "label": "João Pedro buteur ou passeur",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
-     "stars": 2,
-     "player": "João Pedro",
+     "label": "Morgan Rogers buteur ou passeur",
+     "p": 0.43,
+     "prob": 43,
+     "fair": 2.33,
+     "stars": 1,
+     "player": "Morgan Rogers",
      "team": "Chelsea",
      "base": [
-      6,
+      9,
       5,
-      3
+      1
      ],
-     "pid": "284960",
+     "lineup": "start",
+     "pid": "265653",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 6 matchs · Chelsea favori (55 %) · 2,1 buts attendus pour Chelsea"
+     "why": "5 buts et 1 passe en 9 matchs · titulaire · Chelsea favori (52 %) · 1,8 buts attendus pour Chelsea"
     }
    }
   },
@@ -2506,10 +2516,10 @@
     "match": "Villarreal – Getafe"
    },
    {
-    "label": "Hoffenheim ou nul",
+    "label": "Brighton ou nul",
     "prob": 80,
-    "time": "19:30",
-    "match": "Hoffenheim – Schalke"
+    "time": "15:00",
+    "match": "Brighton – Brentford"
    }
   ]
  }
