@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T18:23+01:00",
+ "generated": "2026-11-08T18:48+01:00",
  "date": "2026-11-08",
  "matches": [
   {
@@ -1576,7 +1576,7 @@
    "time": "18:30",
    "home": "Celta Vigo",
    "away": "Levante",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.2,
    "xgA": 0.85,
    "pH": 44,
@@ -1587,7 +1587,7 @@
     "main": {
      "market": "1N",
      "label": "Celta Vigo ou nul",
-     "p": 0.7384,
+     "p": 0.7383,
      "prob": 74,
      "fair": 1.35,
      "stars": 4,
@@ -1604,9 +1604,9 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1539,
+     "p": 0.154,
      "prob": 15,
-     "fair": 6.5,
+     "fair": 6.49,
      "stars": 1,
      "value": "1-0"
     },
@@ -1664,7 +1664,7 @@
    "time": "18:30",
    "home": "Villarreal",
    "away": "Getafe",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.25,
    "xgA": 0.66,
    "pH": 51,
@@ -1701,7 +1701,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Villarreal gagne sans encaisser de but",
-     "p": 0.3696,
+     "p": 0.3695,
      "prob": 37,
      "fair": 2.71,
      "stars": 1
@@ -1753,79 +1753,81 @@
    "home": "Hoffenheim",
    "away": "Schalke",
    "state": "pre",
-   "xgH": 1.46,
+   "xgH": 1.15,
    "xgA": 0.79,
-   "pH": 53,
-   "pD": 27,
-   "pA": 20,
+   "pH": 44,
+   "pD": 31,
+   "pA": 25,
    "edate": "20261108",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Hoffenheim ou nul",
-     "p": 0.7981,
-     "prob": 80,
-     "fair": 1.25,
+     "p": 0.7498,
+     "prob": 75,
+     "fair": 1.33,
      "stars": 4,
      "why": "8 derniers matchs : Hoffenheim 14 marqués / 16 encaissés · Schalke 4 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Hoffenheim",
-     "p": 0.5313,
-     "prob": 53,
-     "fair": 1.88,
-     "stars": 2
+     "p": 0.4428,
+     "prob": 44,
+     "fair": 2.26,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1544,
-     "prob": 15,
-     "fair": 6.47,
+     "p": 0.1659,
+     "prob": 17,
+     "fair": 6.03,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Hoffenheim gagne sans encaisser de but",
-     "p": 0.3498,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.3115,
+     "prob": 31,
+     "fair": 3.21,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Adam Daghim marque",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
+     "label": "Alexander Prass marque",
+     "p": 0.13,
+     "prob": 13,
+     "fair": 7.69,
      "stars": 1,
-     "player": "Adam Daghim",
+     "player": "Alexander Prass",
      "team": "Hoffenheim",
-     "pid": "338854",
+     "lineup": "start",
+     "pid": "320939",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Hoffenheim favori (53 %) · 1,5 but attendu pour Hoffenheim"
+     "why": "2 buts et 1 passe en 3 matchs · titulaire · Hoffenheim annoncé gagnant (44 %) · 1,2 but attendu pour Hoffenheim"
     },
     "decisive": {
      "market": "dec",
-     "label": "Adam Daghim buteur ou passeur",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "label": "Alexander Prass buteur ou passeur",
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
      "stars": 1,
-     "player": "Adam Daghim",
+     "player": "Alexander Prass",
      "team": "Hoffenheim",
      "base": [
-      8,
+      3,
       2,
-      2
+      1
      ],
-     "pid": "338854",
+     "lineup": "start",
+     "pid": "320939",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Hoffenheim favori (53 %) · 1,5 but attendu pour Hoffenheim"
+     "why": "2 buts et 1 passe en 3 matchs · titulaire · Hoffenheim annoncé gagnant (44 %) · 1,2 but attendu pour Hoffenheim"
     }
    }
   },
@@ -2095,7 +2097,7 @@
    "time": "19:00",
    "home": "Boston Bruins",
    "away": "Florida Panthers",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.13,
    "xgA": 2.99,
    "pH": 44,
@@ -2514,22 +2516,22 @@
   "nhl": 6,
   "top": [
    {
-    "label": "Villarreal ou nul",
-    "prob": 80,
-    "time": "18:30",
-    "match": "Villarreal – Getafe"
-   },
-   {
-    "label": "Hoffenheim ou nul",
-    "prob": 80,
-    "time": "19:30",
-    "match": "Hoffenheim – Schalke"
-   },
-   {
     "label": "Nikita Kucherov : au moins 1 point",
     "prob": 76,
     "time": "00:00",
     "match": "Winnipeg Jets – Tampa Bay Lightning"
+   },
+   {
+    "label": "Hoffenheim ou nul",
+    "prob": 75,
+    "time": "19:30",
+    "match": "Hoffenheim – Schalke"
+   },
+   {
+    "label": "Jack Hughes : au moins 1 point",
+    "prob": 74,
+    "time": "01:00",
+    "match": "Toronto Maple Leafs – New Jersey Devils"
    }
   ]
  }

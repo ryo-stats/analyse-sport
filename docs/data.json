@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T18:23+01:00",
+ "generated": "2026-11-08T18:48+01:00",
  "date": "2026-11-08",
  "nhl_date": "2026-11-08",
  "foot": [
@@ -5782,7 +5782,7 @@
    "kickoff": "2026-11-08T16:30:00+00:00",
    "time": "17:30",
    "state": "in",
-   "score": "2-2",
+   "score": "2-4",
    "home": "Man Utd",
    "away": "Aston Villa",
    "form_h": "VDDDN",
@@ -6181,7 +6181,7 @@
    "kickoff": "2026-11-08T16:30:00+00:00",
    "time": "17:30",
    "state": "in",
-   "score": "0-0",
+   "score": "1-0",
    "home": "Freiburg",
    "away": "Union Berlin",
    "form_h": "VVVDD",
@@ -6580,7 +6580,7 @@
    "kickoff": "2026-11-08T17:00:00+00:00",
    "time": "18:00",
    "state": "in",
-   "score": "1-0",
+   "score": "2-0",
    "home": "Inter Milan",
    "away": "Como",
    "form_h": "VDVVV",
@@ -6975,8 +6975,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-08T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Celta Vigo",
    "away": "Levante",
    "form_h": "DDNVV",
@@ -7262,9 +7262,6 @@
     "Levante : 17e, 10 points, 16 buts marqués et 21 encaissés en 11 matchs.",
     "Celta Vigo : 10 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
     "Levante : 16 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat.",
-    "Celta Vigo a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
-    "Celta Vigo : attaque revue à la baisse (−15 %) d'après la compo officielle (Miguel Román, Ferran Jutglà, Hugo Gonzalez ne commencent pas).",
-    "Levante : attaque revue à la baisse (−13 %) d'après la compo officielle (Adrián de la Fuente, Iván Romero ne commencent pas).",
     "Compositions officielles prises en compte : Ferran Jutglà (remplaçant), Iván Romero (remplaçant) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
@@ -7273,7 +7270,7 @@
     "main": {
      "market": "1N",
      "label": "Celta Vigo ou nul",
-     "p": 0.7384,
+     "p": 0.7383,
      "prob": 74,
      "fair": 1.35,
      "stars": 4,
@@ -7290,9 +7287,9 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1539,
+     "p": 0.154,
      "prob": 15,
-     "fair": 6.5,
+     "fair": 6.49,
      "stars": 1,
      "value": "1-0"
     },
@@ -7374,8 +7371,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-08T17:30:00+00:00",
    "time": "18:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Villarreal",
    "away": "Getafe",
    "form_h": "DDVVD",
@@ -7661,8 +7658,6 @@
     "Getafe : 15e, 12 points, 8 buts marqués et 16 encaissés en 11 matchs.",
     "Villarreal : 13 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Getafe : 8 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Villarreal : attaque revue à la baisse (−17 %) d'après la compo officielle (Gerard Moreno, Nicolas Pépé ne commencent pas).",
-    "Getafe : attaque revue à la baisse (−9 %) d'après la compo officielle (Ramón Terrats, Ivan Azón ne commencent pas).",
     "Compositions officielles prises en compte : Gerard Moreno (absent) ne commence pas le match."
    ],
    "reading": "Villarreal est favori sans écraser le match (51 %). Le nul est une issue sérieuse (30 %).",
@@ -7697,7 +7692,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Villarreal gagne sans encaisser de but",
-     "p": 0.3696,
+     "p": 0.3695,
      "prob": 37,
      "fair": 2.71,
      "stars": 1
@@ -7706,7 +7701,7 @@
      {
       "market": "htft_h",
       "label": "Villarreal mène à la mi-temps et gagne le match",
-      "p": 0.2977,
+      "p": 0.2976,
       "prob": 30,
       "fair": 3.36,
       "stars": 1
@@ -7780,85 +7775,25 @@
    "form_a": "DDNDD",
    "rank_h": 14,
    "rank_a": 17,
-   "pH": 53,
-   "pD": 27,
-   "pA": 20,
+   "pH": 44,
+   "pD": 31,
+   "pA": 25,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.46,
+   "xgH": 1.15,
    "xgA": 0.79,
    "scores": [
     "1-0",
-    "1-1",
-    "2-0"
+    "0-0",
+    "1-1"
    ],
    "scorep": [
-    15,
-    12,
-    11
+    17,
+    14,
+    13
    ],
-   "over25": 39,
-   "btts": 42,
+   "over25": 31,
+   "btts": 37,
    "squad_h": [
-    {
-     "name": "Adam Daghim",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Hoffenheim",
-     "goals": 2,
-     "assists": 2,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 21,
-     "p_dec": 36,
-     "pid": "338854",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Adam Hlozek",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Hoffenheim",
-     "goals": 2,
-     "assists": 1,
-     "apps": 8,
-     "l10": {
-      "n": 8,
-      "gp": 8,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 20,
-     "p_dec": 29,
-     "pid": "292169",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Bambasé Conté",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Hoffenheim",
-     "goals": 2,
-     "assists": 2,
-     "apps": 7,
-     "l10": {
-      "n": 8,
-      "gp": 7,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 17,
-     "p_dec": 33,
-     "pid": "336355",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
     {
      "name": "Alexander Prass",
      "pos": "Défenseur",
@@ -7873,31 +7808,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 23,
+     "p_goal": 13,
+     "p_dec": 19,
      "pid": "320939",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Tim Lemperle",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Hoffenheim",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "303792",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Leon Avdullahu",
@@ -7913,11 +7829,96 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 16,
+     "p_goal": 9,
+     "p_dec": 13,
      "pid": "362590",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Tim Lemperle",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Hoffenheim",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 8,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 11,
+     "pid": "303792",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Andrej Kramaric",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Hoffenheim",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 8,
+     "p_dec": 15,
+     "pid": "139520",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Ozan Kabak",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Hoffenheim",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "266565",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Adam Daghim",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Hoffenheim",
+     "goals": 2,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 8,
+      "gp": 8,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 5,
+     "p_dec": 10,
+     "pid": "338854",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -7939,7 +7940,8 @@
      "p_dec": 17,
      "pid": "188057",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adil Aouchiche",
@@ -7959,7 +7961,8 @@
      "p_dec": 16,
      "pid": "290166",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Robin Gosens",
@@ -7979,47 +7982,8 @@
      "p_dec": 11,
      "pid": "198087",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Maximilian Wöber",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Schalke",
-     "goals": 1,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 10,
-     "pid": "231674",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Junior Adamu",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Schalke",
-     "goals": 0,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 8,
-      "gp": 6,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 4,
-     "p_dec": 16,
-     "pid": "305957",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Hwang Hee-Chan",
@@ -8039,7 +8003,50 @@
      "p_dec": 13,
      "pid": "237224",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Satoshi Tanaka",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Schalke",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 8,
+     "pid": "297565",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Soufian El-Faouzi",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Schalke",
+     "goals": 0,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 8,
+      "gp": 7,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 8,
+     "pid": "318343",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -8047,95 +8054,99 @@
     "Schalke : 17e, 6 points, 4 buts marqués et 9 encaissés en 8 matchs.",
     "Hoffenheim : 14 buts marqués et 16 encaissés sur ses 8 derniers matchs de championnat.",
     "Schalke : 4 buts marqués et 9 encaissés sur ses 8 derniers matchs de championnat.",
-    "Hoffenheim a joué il y a 3 jours : fatigue probable, chances un peu réduites."
+    "Hoffenheim a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Hoffenheim : attaque revue à la baisse (−21 %) d'après la compo officielle (Bambasé Conté, Adam Hlozek, Adam Daghim ne commencent pas).",
+    "Compositions officielles prises en compte : Adam Hlozek (remplaçant), Adam Daghim (remplaçant) ne commencent pas le match."
    ],
-   "reading": "Hoffenheim est favori sans écraser le match (53 %).",
+   "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (31 %).",
    "stakes": "Hoffenheim (14e) lutte pour le maintien, 2 points d'avance sur la zone rouge. Schalke (17e) est en zone de relégation : match vital. Adversaires directs au classement : 3 points d'écart.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Hoffenheim ou nul",
-     "p": 0.7981,
-     "prob": 80,
-     "fair": 1.25,
+     "p": 0.7498,
+     "prob": 75,
+     "fair": 1.33,
      "stars": 4,
      "why": "8 derniers matchs : Hoffenheim 14 marqués / 16 encaissés · Schalke 4 / 9"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Hoffenheim",
-     "p": 0.5313,
-     "prob": 53,
-     "fair": 1.88,
-     "stars": 2
+     "p": 0.4428,
+     "prob": 44,
+     "fair": 2.26,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1544,
-     "prob": 15,
-     "fair": 6.47,
+     "p": 0.1659,
+     "prob": 17,
+     "fair": 6.03,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Hoffenheim gagne sans encaisser de but",
-     "p": 0.3498,
-     "prob": 35,
-     "fair": 2.86,
+     "p": 0.3115,
+     "prob": 31,
+     "fair": 3.21,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Hoffenheim mène à la mi-temps et gagne le match",
-      "p": 0.3221,
-      "prob": 32,
-      "fair": 3.1,
+      "p": 0.2558,
+      "prob": 26,
+      "fair": 3.91,
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Hoffenheim gagne avec 2 buts d'écart ou plus",
-      "p": 0.2695,
-      "prob": 27,
-      "fair": 3.71,
+      "market": "wh_by1",
+      "label": "Hoffenheim gagne d'un seul but",
+      "p": 0.2532,
+      "prob": 25,
+      "fair": 3.95,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Adam Daghim marque",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
+     "label": "Alexander Prass marque",
+     "p": 0.13,
+     "prob": 13,
+     "fair": 7.69,
      "stars": 1,
-     "player": "Adam Daghim",
+     "player": "Alexander Prass",
      "team": "Hoffenheim",
-     "pid": "338854",
+     "lineup": "start",
+     "pid": "320939",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Hoffenheim favori (53 %) · 1,5 but attendu pour Hoffenheim"
+     "why": "2 buts et 1 passe en 3 matchs · titulaire · Hoffenheim annoncé gagnant (44 %) · 1,2 but attendu pour Hoffenheim"
     },
     "decisive": {
      "market": "dec",
-     "label": "Adam Daghim buteur ou passeur",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "label": "Alexander Prass buteur ou passeur",
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
      "stars": 1,
-     "player": "Adam Daghim",
+     "player": "Alexander Prass",
      "team": "Hoffenheim",
      "base": [
-      8,
+      3,
       2,
-      2
+      1
      ],
-     "pid": "338854",
+     "lineup": "start",
+     "pid": "320939",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 8 matchs · Hoffenheim favori (53 %) · 1,5 but attendu pour Hoffenheim"
+     "why": "2 buts et 1 passe en 3 matchs · titulaire · Hoffenheim annoncé gagnant (44 %) · 1,2 but attendu pour Hoffenheim"
     }
    },
    "second": {
@@ -9304,7 +9315,7 @@
    "league": "NHL",
    "kickoff": "2026-11-08T18:00:00+00:00",
    "time": "19:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Boston Bruins",
    "away": "Florida Panthers",
@@ -38569,7 +38580,7 @@
  },
  "second": {
   "foot": {
-   "ok": 6,
+   "ok": 4,
    "elo": {
     "fra.1": 682,
     "eng.1": 841,
