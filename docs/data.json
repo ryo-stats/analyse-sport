@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T07:29+01:00",
+ "generated": "2026-11-09T12:30+01:00",
  "date": "2026-11-09",
  "nhl_date": "2026-11-09",
  "foot": [],
@@ -1267,22 +1267,22 @@
    ]
   },
   "picks": {
-   "n": 1474,
-   "rate": 56,
+   "n": 1492,
+   "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1474,
-     "ok": 819,
-     "rate": 56,
+     "n": 1492,
+     "ok": 822,
+     "rate": 55,
      "expected": 52
     },
     "foot": {
-     "n": 950,
-     "ok": 507,
+     "n": 968,
+     "ok": 510,
      "rate": 53,
-     "expected": 51
+     "expected": 50
     },
     "nhl": {
      "n": 524,
@@ -1352,16 +1352,16 @@
     {
      "date": "2026-11-08",
      "all": {
-      "n": 119,
-      "ok": 77,
-      "rate": 65,
-      "expected": 52
+      "n": 137,
+      "ok": 80,
+      "rate": 58,
+      "expected": 50
      },
      "foot": {
-      "n": 78,
-      "ok": 49,
-      "rate": 63,
-      "expected": 50
+      "n": 96,
+      "ok": 52,
+      "rate": 54,
+      "expected": 47
      },
      "nhl": {
       "n": 41,
@@ -2254,10 +2254,10 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 175,
-     "ok": 93,
-     "rate": 53,
-     "expected": 50
+     "n": 178,
+     "ok": 96,
+     "rate": 54,
+     "expected": 49
     },
     {
      "sport": "foot",
@@ -2269,6 +2269,14 @@
     },
     {
      "sport": "foot",
+     "league": "LaLiga",
+     "n": 140,
+     "ok": 72,
+     "rate": 51,
+     "expected": 51
+    },
+    {
+     "sport": "foot",
      "league": "Europa League",
      "n": 138,
      "ok": 53,
@@ -2277,34 +2285,26 @@
     },
     {
      "sport": "foot",
-     "league": "LaLiga",
-     "n": 135,
-     "ok": 72,
-     "rate": 53,
-     "expected": 52
-    },
-    {
-     "sport": "foot",
      "league": "Premier League",
-     "n": 130,
+     "n": 134,
      "ok": 65,
-     "rate": 50,
+     "rate": 49,
      "expected": 49
     },
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 119,
+     "n": 123,
      "ok": 73,
-     "rate": 61,
-     "expected": 50
+     "rate": 59,
+     "expected": 49
     },
     {
      "sport": "foot",
      "league": "Bundesliga",
-     "n": 112,
+     "n": 114,
      "ok": 66,
-     "rate": 59,
+     "rate": 58,
      "expected": 51
     },
     {
@@ -2319,15 +2319,15 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 658,
-     "announced": 35,
+     "n": 673,
+     "announced": 34,
      "actual": 34
     },
     {
      "stars": 2,
-     "n": 245,
+     "n": 248,
      "announced": 55,
-     "actual": 58
+     "actual": 57
     },
     {
      "stars": 3,
@@ -2642,6 +2642,19 @@
      "mid": "foot-401882807",
      "score": "2-0",
      "match": "Villarreal – Getafe",
+     "label": "Georges Mikautadze buteur ou passeur",
+     "prob": 27,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882807",
+     "score": "2-0",
+     "match": "Villarreal – Getafe",
      "label": "Villarreal gagne sans encaisser de but",
      "prob": 37,
      "stars": 1,
@@ -2785,6 +2798,19 @@
      "mid": "foot-401879239",
      "score": "1-0",
      "match": "Sunderland – Chelsea",
+     "label": "Morgan Rogers buteur ou passeur",
+     "prob": 43,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879239",
+     "score": "1-0",
+     "match": "Sunderland – Chelsea",
      "label": "Plus de 3,5 buts",
      "prob": 37,
      "stars": 1,
@@ -2850,6 +2876,19 @@
      "mid": "foot-401876406",
      "score": "1-2",
      "match": "Rennes – Lille",
+     "label": "Ethan Mbappé buteur ou passeur",
+     "prob": 17,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876406",
+     "score": "1-2",
+     "match": "Rennes – Lille",
      "label": "Lille gagne sans encaisser de but",
      "prob": 23,
      "stars": 1,
@@ -2891,6 +2930,19 @@
      "match": "Real Sociedad – Rayo",
      "label": "Luka Sucic marque",
      "prob": 31,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882810",
+     "score": "1-0",
+     "match": "Real Sociedad – Rayo",
+     "label": "Luka Sucic buteur ou passeur",
+     "prob": 34,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -3084,6 +3136,19 @@
      "mid": "foot-401874810",
      "score": "1-1",
      "match": "Napoli – Lazio",
+     "label": "Tijjani Noslin buteur ou passeur",
+     "prob": 33,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401874810",
+     "score": "1-1",
+     "match": "Napoli – Lazio",
      "label": "Plus de 3,5 buts",
      "prob": 27,
      "stars": 1,
@@ -3268,6 +3333,19 @@
      "match": "Man Utd – Aston Villa",
      "label": "Bryan Mbeumo marque",
      "prob": 41,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879240",
+     "score": "4-4",
+     "match": "Man Utd – Aston Villa",
+     "label": "Bryan Mbeumo buteur ou passeur",
+     "prob": 44,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -3500,6 +3578,19 @@
      "mid": "foot-401876408",
      "score": "1-1",
      "match": "Le Mans – Monaco",
+     "label": "Matthis Abline buteur ou passeur",
+     "prob": 20,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876408",
+     "score": "1-1",
+     "match": "Le Mans – Monaco",
      "label": "Monaco gagne sans encaisser de but",
      "prob": 28,
      "stars": 1,
@@ -3528,6 +3619,19 @@
      "match": "Le Havre AC – Lorient",
      "label": "Noah Cadiou marque",
      "prob": 11,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876409",
+     "score": "0-2",
+     "match": "Le Havre AC – Lorient",
+     "label": "Noah Cadiou buteur ou passeur",
+     "prob": 15,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -3593,6 +3697,19 @@
      "match": "Ipswich – Bournemouth",
      "label": "Marcus Tavernier marque",
      "prob": 45,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401878759",
+     "score": "1-2",
+     "match": "Ipswich – Bournemouth",
+     "label": "Marcus Tavernier buteur ou passeur",
+     "prob": 49,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -3782,6 +3899,19 @@
     {
      "date": "2026-11-08",
      "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884742",
+     "score": "2-1",
+     "match": "Hoffenheim – Schalke",
+     "label": "Alexander Prass buteur ou passeur",
+     "prob": 19,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
      "league": "Serie A",
      "mid": "foot-401875018",
      "score": "1-2",
@@ -3816,6 +3946,19 @@
      "prob": 28,
      "stars": 1,
      "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875018",
+     "score": "1-2",
+     "match": "Genoa – Milan",
+     "label": "Adrien Rabiot buteur ou passeur",
+     "prob": 42,
+     "stars": 1,
+     "ok": true,
      "fun": false
     },
     {
@@ -3880,6 +4023,19 @@
      "label": "Igor Matanovic marque",
      "prob": 44,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884741",
+     "score": "2-0",
+     "match": "Freiburg – Union Berlin",
+     "label": "Igor Matanovic buteur ou passeur",
+     "prob": 53,
+     "stars": 2,
      "ok": false,
      "fun": false
     },
@@ -3968,6 +4124,19 @@
      "mid": "foot-401875003",
      "score": "2-2",
      "match": "Fiorentina – Juventus",
+     "label": "Randal Kolo Muani buteur ou passeur",
+     "prob": 23,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875003",
+     "score": "2-2",
+     "match": "Fiorentina – Juventus",
      "label": "Juventus mène à la mi-temps et gagne le match",
      "prob": 23,
      "stars": 1,
@@ -4009,6 +4178,19 @@
      "match": "Elche – Betis",
      "label": "Abde Ezzalzouli marque",
      "prob": 22,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882814",
+     "score": "0-2",
+     "match": "Elche – Betis",
+     "label": "Abde Ezzalzouli buteur ou passeur",
+     "prob": 24,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -4340,6 +4522,19 @@
     },
     {
      "date": "2026-11-08",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882815",
+     "score": "0-0",
+     "match": "Celta Vigo – Levante",
+     "label": "Pablo Durán buteur ou passeur",
+     "prob": 20,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
      "sport": "nhl",
      "league": "NHL",
      "mid": "nhl-2026020271",
@@ -4553,6 +4748,19 @@
      "mid": "foot-401879244",
      "score": "2-0",
      "match": "Brighton – Brentford",
+     "label": "Charalambos Kostoulas buteur ou passeur",
+     "prob": 38,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879244",
+     "score": "2-0",
+     "match": "Brighton – Brentford",
      "label": "Brighton gagne et plus de 2,5 buts",
      "prob": 39,
      "stars": 1,
@@ -4748,6 +4956,19 @@
      "mid": "foot-401882816",
      "score": "1-2",
      "match": "Atlético – Barcelona",
+     "label": "Raphinha buteur ou passeur",
+     "prob": 51,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882816",
+     "score": "1-2",
+     "match": "Atlético – Barcelona",
      "label": "Barcelona gagne et plus de 2,5 buts",
      "prob": 34,
      "stars": 1,
@@ -4816,6 +5037,19 @@
      "label": "Elye Wahi marque",
      "prob": 48,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-08",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876412",
+     "score": "0-2",
+     "match": "Angers – Nice",
+     "label": "Elye Wahi buteur ou passeur",
+     "prob": 59,
+     "stars": 2,
      "ok": false,
      "fun": false
     },
