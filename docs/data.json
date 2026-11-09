@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T00:52+01:00",
+ "generated": "2026-11-09T01:17+01:00",
  "date": "2026-11-09",
  "nhl_date": "2026-11-08",
  "foot": [],
@@ -792,7 +792,7 @@
    "kickoff": "2026-11-08T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "1-0",
    "home": "Winnipeg Jets",
    "away": "Tampa Bay Lightning",
    "rec_h": "6-8-3 · 7e Central · 2 victoires de suite",
@@ -1573,8 +1573,8 @@
    "league": "NHL",
    "kickoff": "2026-11-09T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Calgary Flames",
    "away": "Philadelphia Flyers",
    "rec_h": "7-9-1 · 5e Pacific · 1 défaite de suite",
@@ -1874,7 +1874,6 @@
     "Calgary Flames : 42 buts marqués et 60 encaissés en 17 matchs.",
     "Philadelphia Flyers : 39 buts marqués et 61 encaissés en 18 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Calgary Flames : Dustin Wolf (86,9 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -1884,7 +1883,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5126,
+     "p": 0.5127,
      "prob": 51,
      "fair": 1.95,
      "stars": 2,
@@ -1910,7 +1909,7 @@
      {
       "market": "o65",
       "label": "Plus de 6,5 buts",
-      "p": 0.4025,
+      "p": 0.4026,
       "prob": 40,
       "fair": 2.48,
       "stars": 1
@@ -30164,7 +30163,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 3,
+   "ok": 2,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90530 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
