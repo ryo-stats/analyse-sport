@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T01:17+01:00",
+ "generated": "2026-11-09T01:42+01:00",
  "date": "2026-11-09",
  "nhl_date": "2026-11-08",
  "foot": [],
@@ -792,7 +792,7 @@
    "kickoff": "2026-11-08T23:00:00+00:00",
    "time": "00:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "2-0",
    "home": "Winnipeg Jets",
    "away": "Tampa Bay Lightning",
    "rec_h": "6-8-3 · 7e Central · 2 victoires de suite",
@@ -1181,8 +1181,8 @@
    "league": "NHL",
    "kickoff": "2026-11-09T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Toronto Maple Leafs",
    "away": "New Jersey Devils",
    "rec_h": "8-8-2 · 7e Atlantic · 2 défaites de suite",
@@ -1527,7 +1527,7 @@
      {
       "market": "a3",
       "label": "New Jersey Devils gagne par 3 buts d'écart ou plus",
-      "p": 0.2741,
+      "p": 0.274,
       "prob": 27,
       "fair": 3.65,
       "stars": 1
@@ -1574,7 +1574,7 @@
    "kickoff": "2026-11-09T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "1-1",
    "home": "Calgary Flames",
    "away": "Philadelphia Flyers",
    "rec_h": "7-9-1 · 5e Pacific · 1 défaite de suite",
@@ -1963,7 +1963,7 @@
    "league": "NHL",
    "kickoff": "2026-11-09T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Anaheim Ducks",
    "away": "Pittsburgh Penguins",
@@ -30163,7 +30163,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 2,
+   "ok": 1,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90530 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
