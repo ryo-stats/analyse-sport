@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T00:46+01:00",
+ "generated": "2026-11-11T01:11+01:00",
  "date": "2026-11-11",
  "nhl_date": "2026-11-10",
  "foot": [],
@@ -10,8 +10,8 @@
    "league": "NHL",
    "kickoff": "2026-11-11T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Toronto Maple Leafs",
    "away": "Colorado Avalanche",
    "rec_h": "8-9-2 · 7e Atlantic · 3 défaites de suite",
@@ -338,7 +338,7 @@
     "fun": {
      "market": "wa_o65",
      "label": "Colorado Avalanche gagne et plus de 6,5 buts",
-     "p": 0.3389,
+     "p": 0.339,
      "prob": 34,
      "fair": 2.95,
      "stars": 1
@@ -347,7 +347,7 @@
      {
       "market": "a3",
       "label": "Colorado Avalanche gagne par 3 buts d'écart ou plus",
-      "p": 0.303,
+      "p": 0.3029,
       "prob": 30,
       "fair": 3.3,
       "stars": 1
@@ -355,9 +355,9 @@
      {
       "market": "wa_by1",
       "label": "Colorado Avalanche gagne d'un seul but (prolongation comprise)",
-      "p": 0.1917,
+      "p": 0.1918,
       "prob": 19,
-      "fair": 5.22,
+      "fair": 5.21,
       "stars": 1
      }
     ],
@@ -793,8 +793,8 @@
    "league": "NHL",
    "kickoff": "2026-11-11T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-1",
    "home": "Ottawa Senators",
    "away": "Washington Capitals",
    "rec_h": "11-6-1 · 4e Atlantic · 2 victoires de suite",
@@ -1103,7 +1103,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6607,
+     "p": 0.6606,
      "prob": 66,
      "fair": 1.51,
      "stars": 3,
@@ -1120,7 +1120,7 @@
     "fun": {
      "market": "h2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.4101,
+     "p": 0.4102,
      "prob": 41,
      "fair": 2.44,
      "stars": 1
@@ -1129,7 +1129,7 @@
      {
       "market": "wh_o55",
       "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.4073,
+      "p": 0.4072,
       "prob": 41,
       "fair": 2.46,
       "stars": 1
@@ -1139,7 +1139,7 @@
       "label": "Ottawa Senators gagne et plus de 6,5 buts",
       "p": 0.3384,
       "prob": 34,
-      "fair": 2.95,
+      "fair": 2.96,
       "stars": 1
      }
     ],
@@ -1183,8 +1183,8 @@
    "league": "NHL",
    "kickoff": "2026-11-11T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Winnipeg Jets",
    "away": "New Jersey Devils",
    "rec_h": "7-8-3 · 6e Central · 3 victoires de suite",
@@ -1484,7 +1484,6 @@
     "Winnipeg Jets : 49 buts marqués et 63 encaissés en 18 matchs.",
     "New Jersey Devils : 66 buts marqués et 51 encaissés en 18 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Winnipeg Jets : Stuart Skinner (88,3 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 3 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "New Jersey Devils est favori (62 % en comptant la prolongation).",
@@ -1512,7 +1511,7 @@
     "fun": {
      "market": "wa_o55",
      "label": "New Jersey Devils gagne et plus de 5,5 buts",
-     "p": 0.377,
+     "p": 0.3771,
      "prob": 38,
      "fair": 2.65,
      "stars": 1
@@ -1521,15 +1520,15 @@
      {
       "market": "wa_o65",
       "label": "New Jersey Devils gagne et plus de 6,5 buts",
-      "p": 0.3025,
+      "p": 0.3026,
       "prob": 30,
-      "fair": 3.31,
+      "fair": 3.3,
       "stars": 1
      },
      {
       "market": "a3",
       "label": "New Jersey Devils gagne par 3 buts d'écart ou plus",
-      "p": 0.2526,
+      "p": 0.2527,
       "prob": 25,
       "fair": 3.96,
       "stars": 1
@@ -1575,7 +1574,7 @@
    "league": "NHL",
    "kickoff": "2026-11-11T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Columbus Blue Jackets",
    "away": "Florida Panthers",
@@ -31398,7 +31397,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 7,
+   "ok": 4,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90729 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
