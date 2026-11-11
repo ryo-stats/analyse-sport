@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T01:11+01:00",
+ "generated": "2026-11-11T01:36+01:00",
  "date": "2026-11-11",
  "nhl_date": "2026-11-10",
  "foot": [],
@@ -11,7 +11,7 @@
    "kickoff": "2026-11-11T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "1-0",
    "home": "Toronto Maple Leafs",
    "away": "Colorado Avalanche",
    "rec_h": "8-9-2 · 7e Atlantic · 3 défaites de suite",
@@ -401,8 +401,8 @@
    "league": "NHL",
    "kickoff": "2026-11-11T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Montréal Canadiens",
    "away": "Minnesota Wild",
    "rec_h": "11-3-3 · 2e Atlantic · 2 victoires de suite",
@@ -702,8 +702,6 @@
     "Montréal Canadiens : 61 buts marqués et 53 encaissés en 17 matchs.",
     "Minnesota Wild : 63 buts marqués et 43 encaissés en 19 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Montréal Canadiens : Jacob Fowler (92,5 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 4 % de buts en moins.",
-    "Gardien probable de Minnesota Wild : Jesper Wallstedt (92,2 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 5 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Minnesota Wild est favori (60 % en comptant la prolongation).",
@@ -713,7 +711,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6227,
+     "p": 0.6226,
      "prob": 62,
      "fair": 1.61,
      "stars": 3,
@@ -730,7 +728,7 @@
     "fun": {
      "market": "a2",
      "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
-     "p": 0.4012,
+     "p": 0.4013,
      "prob": 40,
      "fair": 2.49,
      "stars": 1
@@ -739,7 +737,7 @@
      {
       "market": "wa_o55",
       "label": "Minnesota Wild gagne et plus de 5,5 buts",
-      "p": 0.3775,
+      "p": 0.3774,
       "prob": 38,
       "fair": 2.65,
       "stars": 1
@@ -747,7 +745,7 @@
      {
       "market": "wa_o65",
       "label": "Minnesota Wild gagne et plus de 6,5 buts",
-      "p": 0.3076,
+      "p": 0.3075,
       "prob": 31,
       "fair": 3.25,
       "stars": 1
@@ -1184,7 +1182,7 @@
    "kickoff": "2026-11-11T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "2-0",
    "home": "Winnipeg Jets",
    "away": "New Jersey Devils",
    "rec_h": "7-8-3 · 6e Central · 3 victoires de suite",
@@ -1574,8 +1572,8 @@
    "league": "NHL",
    "kickoff": "2026-11-11T00:30:00+00:00",
    "time": "01:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Columbus Blue Jackets",
    "away": "Florida Panthers",
    "rec_h": "7-8-0 · 7e Metropolitan · 1 défaite de suite",
@@ -1884,7 +1882,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.624,
+     "p": 0.6239,
      "prob": 62,
      "fair": 1.6,
      "stars": 3,
@@ -1901,7 +1899,7 @@
     "fun": {
      "market": "a2",
      "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
-     "p": 0.3699,
+     "p": 0.37,
      "prob": 37,
      "fair": 2.7,
      "stars": 1
@@ -1964,7 +1962,7 @@
    "league": "NHL",
    "kickoff": "2026-11-11T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "St. Louis Blues",
    "away": "Detroit Red Wings",
@@ -31397,7 +31395,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 4,
+   "ok": 2,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90729 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
