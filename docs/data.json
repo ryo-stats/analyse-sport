@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T18:12+01:00",
+ "generated": "2026-11-12T20:32+01:00",
  "date": "2026-11-12",
  "nhl_date": "2026-11-12",
  "foot": [],
@@ -11,7 +11,7 @@
    "kickoff": "2026-11-12T17:00:00+00:00",
    "time": "18:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-4",
    "home": "Seattle Kraken",
    "away": "Carolina Hurricanes",
    "rec_h": "9-6-1 · 4e Pacific · 1 défaite de suite",
@@ -3841,15 +3841,6 @@
    "stakes": "Match de division (Central) : battre un rival direct compte double au classement. Début de saison (18 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892704",
    "picks": {
-    "main": {
-     "market": "win_h",
-     "label": "Victoire Utah Mammoth",
-     "p": 0.5648,
-     "prob": 56,
-     "fair": 1.77,
-     "stars": 2,
-     "why": "10 derniers matchs : Utah Mammoth 4 victoires · St. Louis Blues 5"
-    },
     "winner": {
      "market": "win_h",
      "label": "Victoire Utah Mammoth",
@@ -3908,11 +3899,22 @@
      "pid": 8477951,
      "team": "Utah Mammoth",
      "why": "9 buts et 11 passes en 19 matchs · 10 derniers matchs : 3 buts, 6 passes · Utah Mammoth favori (56 %) · 3,1 buts attendus pour Utah Mammoth"
+    },
+    "held": {
+     "market": "win_h",
+     "label": "Victoire Utah Mammoth",
+     "p": 0.5648,
+     "prob": 56,
+     "fair": 1.77,
+     "stars": 2,
+     "why": "10 derniers matchs : Utah Mammoth 4 victoires · St. Louis Blues 5",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
