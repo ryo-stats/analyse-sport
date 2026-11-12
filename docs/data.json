@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T17:47+01:00",
+ "generated": "2026-11-12T18:12+01:00",
  "date": "2026-11-12",
  "nhl_date": "2026-11-12",
  "foot": [],
@@ -10,8 +10,8 @@
    "league": "NHL",
    "kickoff": "2026-11-12T17:00:00+00:00",
    "time": "18:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Seattle Kraken",
    "away": "Carolina Hurricanes",
    "rec_h": "9-6-1 · 4e Pacific · 1 défaite de suite",
@@ -338,16 +338,16 @@
     "fun": {
      "market": "a3",
      "label": "Carolina Hurricanes gagne par 3 buts d'écart ou plus",
-     "p": 0.371,
+     "p": 0.3711,
      "prob": 37,
-     "fair": 2.7,
+     "fair": 2.69,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o65",
       "label": "Carolina Hurricanes gagne et plus de 6,5 buts",
-      "p": 0.3551,
+      "p": 0.355,
       "prob": 36,
       "fair": 2.82,
       "stars": 1
@@ -355,7 +355,7 @@
      {
       "market": "wa_by1",
       "label": "Carolina Hurricanes gagne d'un seul but (prolongation comprise)",
-      "p": 0.1842,
+      "p": 0.1841,
       "prob": 18,
       "fair": 5.43,
       "stars": 1
@@ -33821,7 +33821,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 11,
+   "ok": 10,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90896 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
