@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T00:40+01:00",
+ "generated": "2026-11-12T01:05+01:00",
  "date": "2026-11-12",
  "nhl_date": "2026-11-11",
  "foot": [],
@@ -10,8 +10,8 @@
    "league": "NHL",
    "kickoff": "2026-11-12T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Buffalo Sabres",
    "away": "Tampa Bay Lightning",
    "rec_h": "8-6-3 · 6e Atlantic · 1 défaite de suite",
@@ -311,7 +311,6 @@
     "Buffalo Sabres : 50 buts marqués et 57 encaissés en 17 matchs.",
     "Tampa Bay Lightning : 63 buts marqués et 53 encaissés en 17 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Buffalo Sabres : Ukko-Pekka Luukkonen (87,8 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Tampa Bay Lightning est favori (59 % en comptant la prolongation).",
@@ -355,7 +354,7 @@
      {
       "market": "wa_o65",
       "label": "Tampa Bay Lightning gagne et plus de 6,5 buts",
-      "p": 0.3298,
+      "p": 0.3299,
       "prob": 33,
       "fair": 3.03,
       "stars": 1
@@ -401,7 +400,7 @@
    "league": "NHL",
    "kickoff": "2026-11-12T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Calgary Flames",
    "away": "New York Rangers",
@@ -31459,7 +31458,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 6,
+   "ok": 5,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90822 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
