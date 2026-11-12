@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T20:32+01:00",
+ "generated": "2026-11-12T23:51+01:00",
  "date": "2026-11-12",
  "nhl_date": "2026-11-12",
  "foot": [],
@@ -10,12 +10,12 @@
    "league": "NHL",
    "kickoff": "2026-11-12T17:00:00+00:00",
    "time": "18:00",
-   "state": "LIVE",
-   "score": "0-4",
+   "state": "OFF",
+   "score": "1-4",
    "home": "Seattle Kraken",
    "away": "Carolina Hurricanes",
-   "rec_h": "9-6-1 · 4e Pacific · 1 défaite de suite",
-   "rec_a": "14-3-2 · 1e Metropolitan · 2 victoires de suite",
+   "rec_h": "9-7-1 · 4e Pacific · 2 défaites de suite",
+   "rec_a": "15-3-2 · 1e Metropolitan · 3 victoires de suite",
    "winH": 26,
    "winA": 74,
    "pH": 19,
@@ -37,11 +37,11 @@
    ],
    "goalie_h": {
     "name": "Philipp Grubauer",
-    "starts": 8,
-    "shots": 245,
-    "saves": 218,
-    "sv": "89,0 % d'arrêts",
-    "note": "le titulaire a été remplacé en cours de match la dernière fois (blessure possible)"
+    "starts": 9,
+    "shots": 275,
+    "saves": 244,
+    "sv": "88,7 % d'arrêts",
+    "note": ""
    },
    "goalie_a": {
     "name": "Pyotr Kochetkov",
@@ -55,34 +55,34 @@
     {
      "name": "Jordan Eberle",
      "pos": "Ailier",
-     "cur": "5 buts, 6 passes en 16",
+     "cur": "5 buts, 6 passes en 17",
      "new": false,
      "side": "h",
      "team": "Seattle Kraken",
      "goals": 5,
      "assists": 6,
-     "gp": 16,
+     "gp": 17,
      "pid": 8474586,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 2,
-      "a": 4
+      "a": 3
      },
      "p_goal": 20,
      "p_point": 39,
-     "p_assist": 24
+     "p_assist": 23
     },
     {
      "name": "Mackie Samoskevich",
      "pos": "Ailier",
-     "cur": "6 buts, 5 passes en 15",
+     "cur": "6 buts, 6 passes en 16",
      "new": true,
      "side": "h",
      "team": "Seattle Kraken",
      "goals": 6,
-     "assists": 5,
-     "gp": 15,
+     "assists": 6,
+     "gp": 16,
      "pid": 8482713,
      "l10": {
       "n": 10,
@@ -91,40 +91,19 @@
       "a": 5
      },
      "p_goal": 18,
-     "p_point": 37,
-     "p_assist": 22
-    },
-    {
-     "name": "Bobby McMann",
-     "pos": "Centre",
-     "cur": "3 buts, 2 passes en 16",
-     "new": false,
-     "side": "h",
-     "team": "Seattle Kraken",
-     "goals": 3,
-     "assists": 2,
-     "gp": 16,
-     "pid": 8482259,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 18,
-     "p_point": 30,
-     "p_assist": 13
+     "p_point": 38,
+     "p_assist": 23
     },
     {
      "name": "Matty Beniers",
      "pos": "Centre",
-     "cur": "4 buts, 5 passes en 16",
+     "cur": "4 buts, 5 passes en 17",
      "new": false,
      "side": "h",
      "team": "Seattle Kraken",
      "goals": 4,
      "assists": 5,
-     "gp": 16,
+     "gp": 17,
      "pid": 8482665,
      "l10": {
       "n": 10,
@@ -137,15 +116,57 @@
      "p_assist": 23
     },
     {
+     "name": "Bobby McMann",
+     "pos": "Centre",
+     "cur": "3 buts, 2 passes en 17",
+     "new": false,
+     "side": "h",
+     "team": "Seattle Kraken",
+     "goals": 3,
+     "assists": 2,
+     "gp": 17,
+     "pid": 8482259,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 17,
+     "p_point": 28,
+     "p_assist": 13
+    },
+    {
+     "name": "Frederick Gaudreau",
+     "pos": "Centre",
+     "cur": "8 buts, 3 passes en 17",
+     "new": false,
+     "side": "h",
+     "team": "Seattle Kraken",
+     "goals": 8,
+     "assists": 3,
+     "gp": 17,
+     "pid": 8477919,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 2
+     },
+     "p_goal": 14,
+     "p_point": 29,
+     "p_assist": 17
+    },
+    {
      "name": "Kaapo Kakko",
      "pos": "Ailier",
-     "cur": "3 buts, 10 passes en 16",
+     "cur": "3 buts, 10 passes en 17",
      "new": false,
      "side": "h",
      "team": "Seattle Kraken",
      "goals": 3,
      "assists": 10,
-     "gp": 16,
+     "gp": 17,
      "pid": 8481554,
      "l10": {
       "n": 10,
@@ -156,165 +177,144 @@
      "p_goal": 13,
      "p_point": 38,
      "p_assist": 29
-    },
-    {
-     "name": "Brandon Montour",
-     "pos": "Défenseur",
-     "cur": "3 buts, 9 passes en 15",
-     "new": false,
-     "side": "h",
-     "team": "Seattle Kraken",
-     "goals": 3,
-     "assists": 9,
-     "gp": 15,
-     "pid": 8477986,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 3,
-      "a": 4
-     },
-     "p_goal": 13,
-     "p_point": 35,
-     "p_assist": 25
     }
    ],
    "squad_a": [
     {
+     "name": "Sebastian Aho",
+     "pos": "Centre",
+     "cur": "12 buts, 16 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Carolina Hurricanes",
+     "goals": 12,
+     "assists": 16,
+     "gp": 20,
+     "pid": 8478427,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 8
+     },
+     "p_goal": 32,
+     "p_point": 66,
+     "p_assist": 49
+    },
+    {
      "name": "Seth Jarvis",
      "pos": "Ailier",
-     "cur": "2 buts, 6 passes en 8",
+     "cur": "2 buts, 6 passes en 9",
      "new": false,
      "side": "a",
      "team": "Carolina Hurricanes",
      "goals": 2,
      "assists": 6,
-     "gp": 8,
+     "gp": 9,
      "pid": 8482093,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 9,
       "g": 2,
       "a": 6
      },
-     "p_goal": 32,
+     "p_goal": 31,
      "p_point": 59,
-     "p_assist": 40
+     "p_assist": 39
     },
     {
      "name": "Andrei Svechnikov",
      "pos": "Ailier",
-     "cur": "9 buts, 9 passes en 19",
+     "cur": "9 buts, 10 passes en 20",
      "new": false,
      "side": "a",
      "team": "Carolina Hurricanes",
      "goals": 9,
-     "assists": 9,
-     "gp": 19,
+     "assists": 10,
+     "gp": 20,
      "pid": 8480830,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 3,
-      "a": 4
+      "a": 5
      },
-     "p_goal": 32,
+     "p_goal": 31,
      "p_point": 58,
      "p_assist": 38
     },
     {
-     "name": "Sebastian Aho",
-     "pos": "Centre",
-     "cur": "10 buts, 16 passes en 19",
-     "new": false,
-     "side": "a",
-     "team": "Carolina Hurricanes",
-     "goals": 10,
-     "assists": 16,
-     "gp": 19,
-     "pid": 8478427,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 9
-     },
-     "p_goal": 30,
-     "p_point": 65,
-     "p_assist": 50
-    },
-    {
      "name": "Logan Stankoven",
      "pos": "Centre",
-     "cur": "11 buts, 7 passes en 19",
+     "cur": "11 buts, 9 passes en 20",
      "new": false,
      "side": "a",
      "team": "Carolina Hurricanes",
      "goals": 11,
-     "assists": 7,
-     "gp": 19,
+     "assists": 9,
+     "gp": 20,
      "pid": 8482702,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 7,
-      "a": 5
+      "a": 7
      },
      "p_goal": 29,
-     "p_point": 49,
-     "p_assist": 28
+     "p_point": 50,
+     "p_assist": 30
     },
     {
      "name": "Nikolaj Ehlers",
      "pos": "Ailier",
-     "cur": "4 buts, 11 passes en 19",
-     "new": false,
-     "side": "a",
-     "team": "Carolina Hurricanes",
-     "goals": 4,
-     "assists": 11,
-     "gp": 19,
-     "pid": 8477940,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 7
-     },
-     "p_goal": 25,
-     "p_point": 57,
-     "p_assist": 42
-    },
-    {
-     "name": "Jackson Blake",
-     "pos": "Ailier",
-     "cur": "5 buts, 14 passes en 19",
+     "cur": "5 buts, 12 passes en 20",
      "new": false,
      "side": "a",
      "team": "Carolina Hurricanes",
      "goals": 5,
-     "assists": 14,
-     "gp": 19,
+     "assists": 12,
+     "gp": 20,
+     "pid": 8477940,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 8
+     },
+     "p_goal": 26,
+     "p_point": 58,
+     "p_assist": 43
+    },
+    {
+     "name": "Jackson Blake",
+     "pos": "Ailier",
+     "cur": "5 buts, 15 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Carolina Hurricanes",
+     "goals": 5,
+     "assists": 15,
+     "gp": 20,
      "pid": 8482809,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 4,
-      "a": 7
+      "a": 8
      },
      "p_goal": 24,
      "p_point": 53,
-     "p_assist": 37
+     "p_assist": 38
     }
    ],
    "ctx": [
-    "Seattle Kraken : 57 buts marqués et 57 encaissés en 16 matchs.",
-    "Carolina Hurricanes : 78 buts marqués et 45 encaissés en 19 matchs.",
+    "Seattle Kraken : 58 buts marqués et 61 encaissés en 17 matchs.",
+    "Carolina Hurricanes : 82 buts marqués et 46 encaissés en 20 matchs.",
     "Aucune des deux équipes n'a joué hier.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Carolina Hurricanes est nettement favori (74 % en comptant la prolongation).",
-   "stakes": "Début de saison (16 matchs joués) : le classement bouge encore beaucoup.",
+   "stakes": "Début de saison (17 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401891808",
    "picks": {
     "main": {
@@ -364,26 +364,26 @@
     "player": {
      "market": "point",
      "label": "Sebastian Aho : au moins 1 point",
-     "p": 0.65,
-     "prob": 65,
-     "fair": 1.54,
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "player": "Sebastian Aho",
      "pid": 8478427,
      "team": "Carolina Hurricanes",
-     "why": "10 buts et 16 passes en 19 matchs · 10 derniers matchs : 4 buts, 9 passes · Carolina Hurricanes favori (74 %) · 3,9 buts attendus pour Carolina Hurricanes"
+     "why": "12 buts et 16 passes en 20 matchs · 10 derniers matchs : 6 buts, 8 passes · Carolina Hurricanes favori (74 %) · 3,9 buts attendus pour Carolina Hurricanes"
     },
     "scorer": {
      "market": "goal",
-     "label": "Seth Jarvis marque",
+     "label": "Sebastian Aho marque",
      "p": 0.32,
      "prob": 32,
      "fair": 3.12,
      "stars": 1,
-     "player": "Seth Jarvis",
-     "pid": 8482093,
+     "player": "Sebastian Aho",
+     "pid": 8478427,
      "team": "Carolina Hurricanes",
-     "why": "2 buts et 6 passes en 8 matchs · Carolina Hurricanes favori (74 %) · 3,9 buts attendus pour Carolina Hurricanes"
+     "why": "12 buts et 16 passes en 20 matchs · 10 derniers matchs : 6 buts, 8 passes · Carolina Hurricanes favori (74 %) · 3,9 buts attendus pour Carolina Hurricanes"
     }
    },
    "second": {
