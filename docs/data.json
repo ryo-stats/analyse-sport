@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T12:30+01:00",
+ "generated": "2026-11-13T14:23+01:00",
  "date": "2026-11-13",
  "nhl_date": "2026-11-13",
  "foot": [],
@@ -20,10 +20,10 @@
    "winA": 68,
    "pH": 25,
    "pD": 15,
-   "pA": 60,
+   "pA": 61,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 2.53,
-   "xgA": 3.7,
+   "xgA": 3.71,
    "total": 6.2,
    "scores": [
     "2-3",
@@ -220,7 +220,7 @@
      },
      "p_goal": 30,
      "p_point": 60,
-     "p_assist": 41
+     "p_assist": 42
     },
     {
      "name": "Tye Kartye",
@@ -320,7 +320,7 @@
     "main": {
      "market": "win_a",
      "label": "Victoire New York Rangers",
-     "p": 0.6756,
+     "p": 0.6758,
      "prob": 68,
      "fair": 1.48,
      "stars": 3,
@@ -329,7 +329,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire New York Rangers",
-     "p": 0.6756,
+     "p": 0.6758,
      "prob": 68,
      "fair": 1.48,
      "stars": 3,
@@ -338,26 +338,26 @@
     "fun": {
      "market": "wa_o55",
      "label": "New York Rangers gagne et plus de 5,5 buts",
-     "p": 0.4113,
+     "p": 0.4124,
      "prob": 41,
-     "fair": 2.43,
+     "fair": 2.42,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o65",
       "label": "New York Rangers gagne et plus de 6,5 buts",
-      "p": 0.3259,
+      "p": 0.3271,
       "prob": 33,
-      "fair": 3.07,
+      "fair": 3.06,
       "stars": 1
      },
      {
       "market": "a3",
       "label": "New York Rangers gagne par 3 buts d'écart ou plus",
-      "p": 0.3041,
+      "p": 0.3045,
       "prob": 30,
-      "fair": 3.29,
+      "fair": 3.28,
       "stars": 1
      }
     ],
@@ -414,7 +414,7 @@
    "pA": 30,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 3.36,
-   "xgA": 2.62,
+   "xgA": 2.63,
    "total": 6.0,
    "scores": [
     "3-2",
@@ -712,25 +712,25 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.6192,
+     "p": 0.6193,
      "prob": 62,
-     "fair": 1.62,
+     "fair": 1.61,
      "stars": 3,
      "why": "10 derniers matchs : Vegas Golden Knights 5 victoires · Nashville Predators 7"
     },
     "winner": {
      "market": "win_h",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.6192,
+     "p": 0.6193,
      "prob": 62,
-     "fair": 1.62,
+     "fair": 1.61,
      "stars": 3,
      "why": "10 derniers matchs : Vegas Golden Knights 5 victoires · Nashville Predators 7"
     },
     "fun": {
      "market": "h2",
      "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-     "p": 0.4116,
+     "p": 0.4118,
      "prob": 41,
      "fair": 2.43,
      "stars": 1
@@ -739,17 +739,17 @@
      {
       "market": "wh_o55",
       "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
-      "p": 0.3498,
+      "p": 0.3508,
       "prob": 35,
-      "fair": 2.86,
+      "fair": 2.85,
       "stars": 1
      },
      {
       "market": "wh_o65",
       "label": "Vegas Golden Knights gagne et plus de 6,5 buts",
-      "p": 0.2751,
+      "p": 0.2761,
       "prob": 28,
-      "fair": 3.64,
+      "fair": 3.62,
       "stars": 1
      }
     ],
@@ -30974,7 +30974,7 @@
    "ok": 2,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91024 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91064 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
