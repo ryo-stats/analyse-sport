@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T01:56+01:00",
+ "generated": "2026-11-13T03:38+01:00",
  "date": "2026-11-13",
  "matches": [
   {
@@ -80,7 +80,7 @@
    "time": "01:00",
    "home": "Boston Bruins",
    "away": "Montréal Canadiens",
-   "state": "LIVE",
+   "state": "FINAL",
    "xgH": 3.24,
    "xgA": 3.12,
    "pH": 44,
@@ -125,19 +125,19 @@
      "player": "David Pastrnak",
      "pid": 8477956,
      "team": "Boston Bruins",
-     "why": "8 buts et 16 passes en 18 matchs · 10 derniers matchs : 5 buts, 9 passes · Boston Bruins favori (52 %) · 3,2 buts attendus pour Boston Bruins"
+     "why": "8 buts et 16 passes en 18 matchs · 10 derniers matchs : 4 buts, 8 passes · Boston Bruins favori (52 %) · 3,2 buts attendus pour Boston Bruins"
     },
     "scorer": {
      "market": "goal",
      "label": "David Pastrnak marque",
-     "p": 0.29,
-     "prob": 29,
-     "fair": 3.45,
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
      "player": "David Pastrnak",
      "pid": 8477956,
      "team": "Boston Bruins",
-     "why": "8 buts et 16 passes en 18 matchs · 10 derniers matchs : 5 buts, 9 passes · Boston Bruins favori (52 %) · 3,2 buts attendus pour Boston Bruins"
+     "why": "8 buts et 16 passes en 18 matchs · 10 derniers matchs : 4 buts, 8 passes · Boston Bruins favori (52 %) · 3,2 buts attendus pour Boston Bruins"
     }
    }
   },
@@ -149,7 +149,7 @@
    "time": "01:00",
    "home": "Toronto Maple Leafs",
    "away": "Minnesota Wild",
-   "state": "LIVE",
+   "state": "CRIT",
    "xgH": 2.53,
    "xgA": 3.89,
    "pH": 23,
@@ -219,7 +219,7 @@
    "time": "01:00",
    "home": "Ottawa Senators",
    "away": "Colorado Avalanche",
-   "state": "LIVE",
+   "state": "CRIT",
    "xgH": 2.93,
    "xgA": 3.12,
    "pH": 39,
@@ -288,7 +288,7 @@
    "time": "01:00",
    "home": "New Jersey Devils",
    "away": "Washington Capitals",
-   "state": "LIVE",
+   "state": "CRIT",
    "xgH": 3.75,
    "xgA": 2.9,
    "pH": 55,
@@ -357,7 +357,7 @@
    "time": "01:00",
    "home": "Columbus Blue Jackets",
    "away": "Tampa Bay Lightning",
-   "state": "LIVE",
+   "state": "CRIT",
    "xgH": 2.81,
    "xgA": 3.37,
    "pH": 33,
@@ -487,7 +487,7 @@
    "time": "02:00",
    "home": "Chicago Blackhawks",
    "away": "Buffalo Sabres",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.87,
    "xgA": 3.42,
    "pH": 33,
@@ -500,7 +500,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5996,
+     "p": 0.5997,
      "prob": 60,
      "fair": 1.67,
      "stars": 2,
@@ -517,7 +517,7 @@
     "fun": {
      "market": "a2",
      "label": "Buffalo Sabres gagne par 2 buts d'écart ou plus",
-     "p": 0.3864,
+     "p": 0.3865,
      "prob": 39,
      "fair": 2.59,
      "stars": 1
@@ -556,7 +556,7 @@
    "time": "02:00",
    "home": "Dallas Stars",
    "away": "Winnipeg Jets",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.35,
    "xgA": 2.58,
    "pH": 54,
@@ -587,7 +587,7 @@
     "fun": {
      "market": "h2",
      "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
-     "p": 0.4157,
+     "p": 0.4156,
      "prob": 42,
      "fair": 2.41,
      "stars": 1
@@ -626,7 +626,7 @@
    "time": "03:00",
    "home": "Utah Mammoth",
    "away": "St. Louis Blues",
-   "state": "FUT",
+   "state": "LIVE",
    "xgH": 3.13,
    "xgA": 2.75,
    "pH": 48,
@@ -650,7 +650,7 @@
      "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
      "p": 0.3565,
      "prob": 36,
-     "fair": 2.81,
+     "fair": 2.8,
      "stars": 1
     },
     "player": {
@@ -687,7 +687,7 @@
    "time": "04:00",
    "home": "Los Angeles Kings",
    "away": "New York Islanders",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.3,
    "xgA": 2.79,
    "pH": 50,
@@ -760,22 +760,16 @@
   "nhl": 11,
   "top": [
    {
-    "label": "Mikko Rantanen : au moins 1 point",
-    "prob": 67,
-    "time": "02:00",
-    "match": "Dallas Stars – Winnipeg Jets"
-   },
-   {
     "label": "Artemi Panarin : au moins 1 point",
     "prob": 67,
     "time": "04:00",
     "match": "Los Angeles Kings – New York Islanders"
    },
    {
-    "label": "Victoire Dallas Stars",
-    "prob": 62,
-    "time": "02:00",
-    "match": "Dallas Stars – Winnipeg Jets"
+    "label": "Victoire Los Angeles Kings",
+    "prob": 58,
+    "time": "04:00",
+    "match": "Los Angeles Kings – New York Islanders"
    }
   ]
  }
