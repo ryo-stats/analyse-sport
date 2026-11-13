@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T00:41+01:00",
+ "generated": "2026-11-13T01:06+01:00",
  "date": "2026-11-13",
  "nhl_date": "2026-11-12",
  "foot": [],
@@ -401,8 +401,8 @@
    "league": "NHL",
    "kickoff": "2026-11-13T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Boston Bruins",
    "away": "Montréal Canadiens",
    "rec_h": "13-4-1 · 1e Atlantic · 4 victoires de suite",
@@ -702,8 +702,6 @@
     "Boston Bruins : 68 buts marqués et 41 encaissés en 18 matchs.",
     "Montréal Canadiens : 62 buts marqués et 55 encaissés en 18 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Boston Bruins : Jeremy Swayman (92,0 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 4 % de buts en moins.",
-    "Gardien probable de Montréal Canadiens : Jacob Fowler (92,5 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 4 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -793,8 +791,8 @@
    "league": "NHL",
    "kickoff": "2026-11-13T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Toronto Maple Leafs",
    "away": "Minnesota Wild",
    "rec_h": "8-10-2 · 7e Atlantic · 4 défaites de suite",
@@ -1094,8 +1092,6 @@
     "Toronto Maple Leafs : 67 buts marqués et 70 encaissés en 20 matchs.",
     "Minnesota Wild : 65 buts marqués et 44 encaissés en 20 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Toronto Maple Leafs : Sergei Bobrovsky (88,1 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
-    "Gardien probable de Minnesota Wild : Jesper Wallstedt (92,5 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 5 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Minnesota Wild est nettement favori (70 % en comptant la prolongation).",
@@ -1123,7 +1119,7 @@
     "fun": {
      "market": "wa_o65",
      "label": "Minnesota Wild gagne et plus de 6,5 buts",
-     "p": 0.3571,
+     "p": 0.3572,
      "prob": 36,
      "fair": 2.8,
      "stars": 1
@@ -1132,7 +1128,7 @@
      {
       "market": "a3",
       "label": "Minnesota Wild gagne par 3 buts d'écart ou plus",
-      "p": 0.331,
+      "p": 0.3311,
       "prob": 33,
       "fair": 3.02,
       "stars": 1
@@ -2273,15 +2269,6 @@
    "stakes": "Début de saison (16 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892701",
    "picks": {
-    "main": {
-     "market": "win_a",
-     "label": "Victoire Tampa Bay Lightning",
-     "p": 0.5845,
-     "prob": 58,
-     "fair": 1.71,
-     "stars": 2,
-     "why": "10 derniers matchs : Columbus Blue Jackets 4 victoires · Tampa Bay Lightning 6"
-    },
     "winner": {
      "market": "win_a",
      "label": "Victoire Tampa Bay Lightning",
@@ -2340,11 +2327,22 @@
      "pid": 8476453,
      "team": "Tampa Bay Lightning",
      "why": "8 buts et 18 passes en 18 matchs · 10 derniers matchs : 5 buts, 11 passes · Tampa Bay Lightning favori (58 %) · 3,4 buts attendus pour Tampa Bay Lightning"
+    },
+    "held": {
+     "market": "win_a",
+     "label": "Victoire Tampa Bay Lightning",
+     "p": 0.5845,
+     "prob": 58,
+     "fair": 1.71,
+     "stars": 2,
+     "why": "10 derniers matchs : Columbus Blue Jackets 4 victoires · Tampa Bay Lightning 6",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
@@ -2357,7 +2355,7 @@
    "league": "NHL",
    "kickoff": "2026-11-13T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Florida Panthers",
    "away": "Detroit Red Wings",
@@ -33823,7 +33821,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 10,
+   "ok": 8,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90896 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
