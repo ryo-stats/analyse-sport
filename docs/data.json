@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T01:31+01:00",
+ "generated": "2026-11-13T01:56+01:00",
  "date": "2026-11-13",
  "nhl_date": "2026-11-12",
  "foot": [],
@@ -792,7 +792,7 @@
    "kickoff": "2026-11-13T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Toronto Maple Leafs",
    "away": "Minnesota Wild",
    "rec_h": "8-10-2 · 7e Atlantic · 4 défaites de suite",
@@ -1183,7 +1183,7 @@
    "kickoff": "2026-11-13T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "2-0",
    "home": "Ottawa Senators",
    "away": "Colorado Avalanche",
    "rec_h": "11-6-2 · 4e Atlantic · 1 défaite en prolongation de suite",
@@ -1573,7 +1573,7 @@
    "kickoff": "2026-11-13T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "1-1",
    "home": "New Jersey Devils",
    "away": "Washington Capitals",
    "rec_h": "13-6-0 · 2e Metropolitan · 1 défaite de suite",
@@ -1963,7 +1963,7 @@
    "kickoff": "2026-11-13T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-1",
+   "score": "1-1",
    "home": "Columbus Blue Jackets",
    "away": "Tampa Bay Lightning",
    "rec_h": "7-9-0 · 8e Metropolitan · 2 défaites de suite",
@@ -2355,8 +2355,8 @@
    "league": "NHL",
    "kickoff": "2026-11-13T00:30:00+00:00",
    "time": "01:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-1",
    "home": "Florida Panthers",
    "away": "Detroit Red Wings",
    "rec_h": "10-7-2 · 5e Atlantic · 1 victoire de suite",
@@ -2656,7 +2656,6 @@
     "Florida Panthers : 60 buts marqués et 56 encaissés en 19 matchs.",
     "Detroit Red Wings : 51 buts marqués et 59 encaissés en 19 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Detroit Red Wings : John Gibson (86,6 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Florida Panthers est favori (59 % en comptant la prolongation).",
@@ -2700,7 +2699,7 @@
      {
       "market": "wh_o65",
       "label": "Florida Panthers gagne et plus de 6,5 buts",
-      "p": 0.313,
+      "p": 0.3131,
       "prob": 31,
       "fair": 3.19,
       "stars": 1
@@ -33821,7 +33820,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 5,
+   "ok": 4,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 90896 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
