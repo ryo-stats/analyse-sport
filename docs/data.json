@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T07:28+01:00",
+ "generated": "2026-11-14T12:28+01:00",
  "date": "2026-11-14",
  "nhl_date": "2026-11-14",
  "foot": [],
@@ -1867,15 +1867,6 @@
    "stakes": "Début de saison (19 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892711",
    "picks": {
-    "main": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.6157,
-     "prob": 62,
-     "fair": 1.62,
-     "stars": 3,
-     "why": "10 derniers matchs : Montréal Canadiens 8 victoires · Colorado Avalanche 6"
-    },
     "winner": {
      "market": "win_a",
      "label": "Victoire Colorado Avalanche",
@@ -1933,11 +1924,22 @@
      "pid": 8477492,
      "team": "Colorado Avalanche",
      "why": "10 buts et 20 passes en 20 matchs · 10 derniers matchs : 4 buts, 10 passes · Colorado Avalanche favori (57 %) · 3,4 buts attendus pour Colorado Avalanche"
+    },
+    "held": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6157,
+     "prob": 62,
+     "fair": 1.62,
+     "stars": 3,
+     "why": "10 derniers matchs : Montréal Canadiens 8 victoires · Colorado Avalanche 6",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
