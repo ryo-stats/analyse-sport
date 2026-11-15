@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T01:13+01:00",
+ "generated": "2026-11-15T01:38+01:00",
  "date": "2026-11-15",
  "matches": [
   {
@@ -219,7 +219,7 @@
    "time": "01:00",
    "home": "Toronto Maple Leafs",
    "away": "Edmonton Oilers",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.68,
    "xgA": 3.39,
    "pH": 31,
@@ -250,7 +250,7 @@
     "fun": {
      "market": "a2",
      "label": "Edmonton Oilers gagne par 2 buts d'écart ou plus",
-     "p": 0.409,
+     "p": 0.4089,
      "prob": 41,
      "fair": 2.45,
      "stars": 1
@@ -289,7 +289,7 @@
    "time": "01:00",
    "home": "Montréal Canadiens",
    "away": "Colorado Avalanche",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.96,
    "xgA": 3.43,
    "pH": 35,
@@ -418,7 +418,7 @@
    "time": "01:00",
    "home": "Pittsburgh Penguins",
    "away": "Ottawa Senators",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.88,
    "xgA": 3.48,
    "pH": 33,
@@ -448,7 +448,7 @@
     "fun": {
      "market": "a2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3947,
+     "p": 0.3948,
      "prob": 39,
      "fair": 2.53,
      "stars": 1
@@ -694,7 +694,7 @@
    "time": "02:00",
    "home": "Dallas Stars",
    "away": "Buffalo Sabres",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.36,
    "xgA": 2.71,
    "pH": 52,
@@ -976,22 +976,22 @@
   "nhl": 14,
   "top": [
    {
-    "label": "Connor McDavid : au moins 1 point",
-    "prob": 78,
-    "time": "01:00",
-    "match": "Toronto Maple Leafs – Edmonton Oilers"
-   },
-   {
-    "label": "Nathan MacKinnon : au moins 1 point",
-    "prob": 72,
-    "time": "01:00",
-    "match": "Montréal Canadiens – Colorado Avalanche"
-   },
-   {
     "label": "Clayton Keller : au moins 1 point",
     "prob": 71,
     "time": "03:00",
     "match": "Utah Mammoth – San Jose Sharks"
+   },
+   {
+    "label": "Victoire Utah Mammoth",
+    "prob": 69,
+    "time": "03:00",
+    "match": "Utah Mammoth – San Jose Sharks"
+   },
+   {
+    "label": "Plus de 5,5 buts",
+    "prob": 68,
+    "time": "04:00",
+    "match": "Anaheim Ducks – New York Islanders"
    }
   ]
  }
