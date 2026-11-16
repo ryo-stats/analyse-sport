@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T01:31+01:00",
+ "generated": "2026-11-16T01:56+01:00",
  "date": "2026-11-16",
  "nhl_date": "2026-11-15",
  "foot": [],
@@ -10,8 +10,8 @@
    "league": "NHL",
    "kickoff": "2026-11-16T00:30:00+00:00",
    "time": "01:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-1",
    "home": "Philadelphia Flyers",
    "away": "Edmonton Oilers",
    "rec_h": "6-10-6 · 6e Metropolitan · 1 victoire de suite",
@@ -312,7 +312,6 @@
     "Philadelphia Flyers a joué hier soir : deuxième match en deux soirs, fatigue probable.",
     "Edmonton Oilers : 82 buts marqués et 58 encaissés en 21 matchs.",
     "Edmonton Oilers a joué hier soir : deuxième match en deux soirs, fatigue probable.",
-    "Gardien probable de Philadelphia Flyers : Dan Vladar (87,9 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 3 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Edmonton Oilers est favori (59 % en comptant la prolongation).",
@@ -349,7 +348,7 @@
      {
       "market": "o65",
       "label": "Plus de 6,5 buts",
-      "p": 0.3276,
+      "p": 0.3274,
       "prob": 33,
       "fair": 3.05,
       "stars": 1
@@ -33142,7 +33141,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 5,
+   "ok": 4,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91344 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
