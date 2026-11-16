@@ -55403,7 +55403,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020326|point|Connor McDavid": {
   "match": "nhl-2026020326",
@@ -55427,7 +55427,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020326|goal|Leon Draisaitl": {
   "match": "nhl-2026020326",
@@ -55451,7 +55451,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020326|a2|": {
   "match": "nhl-2026020326",
@@ -55475,7 +55475,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020327|win_h|": {
   "match": "nhl-2026020327",
@@ -55500,7 +55500,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020327|point|Jason Robertson": {
   "match": "nhl-2026020327",
@@ -55524,7 +55524,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020327|goal|Jason Robertson": {
   "match": "nhl-2026020327",
@@ -55548,7 +55548,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020327|o65|": {
   "match": "nhl-2026020327",
@@ -55572,7 +55572,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020328|win_h|": {
   "match": "nhl-2026020328",
@@ -55597,7 +55597,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020328|point|Leo Carlsson": {
   "match": "nhl-2026020328",
@@ -55621,7 +55621,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020328|goal|Cutter Gauthier": {
   "match": "nhl-2026020328",
@@ -55645,7 +55645,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020328|h2|": {
   "match": "nhl-2026020328",
@@ -55669,7 +55669,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020329|win_h|": {
   "match": "nhl-2026020329",
@@ -55694,7 +55694,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020329|point|Jack Eichel": {
   "match": "nhl-2026020329",
@@ -55718,7 +55718,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020329|goal|Mark Stone": {
   "match": "nhl-2026020329",
@@ -55742,7 +55742,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020329|wh_o65|": {
   "match": "nhl-2026020329",
@@ -55766,7 +55766,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020330|win_a|": {
   "match": "nhl-2026020330",
@@ -55791,7 +55791,7 @@
    "main",
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020330|point|Filip Forsberg": {
   "match": "nhl-2026020330",
@@ -55815,7 +55815,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020330|goal|Filip Forsberg": {
   "match": "nhl-2026020330",
@@ -55839,7 +55839,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020330|a2|": {
   "match": "nhl-2026020330",
@@ -55862,6 +55862,199 @@
   "group": "fun",
   "kinds": [
    "fun"
+  ],
+  "result": false
+ },
+ "nhl-2026020331|o55|": {
+  "match": "nhl-2026020331",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "New York Rangers",
+  "away": "Montréal Canadiens",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6272,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020331|win_h|": {
+  "match": "nhl-2026020331",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "New York Rangers",
+  "away": "Montréal Canadiens",
+  "market": "win_h",
+  "label": "Victoire New York Rangers",
+  "p": 0.5633,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020331|point|Adam Fox": {
+  "match": "nhl-2026020331",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "New York Rangers",
+  "away": "Montréal Canadiens",
+  "market": "point",
+  "label": "Adam Fox : au moins 1 point",
+  "p": 0.66,
+  "stars": 3,
+  "player": "Adam Fox",
+  "pid_player": 8479323,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020331|goal|Mika Zibanejad": {
+  "match": "nhl-2026020331",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "New York Rangers",
+  "away": "Montréal Canadiens",
+  "market": "goal",
+  "label": "Mika Zibanejad marque",
+  "p": 0.33,
+  "stars": 1,
+  "player": "Mika Zibanejad",
+  "pid_player": 8476459,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020331|h2|": {
+  "match": "nhl-2026020331",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "New York Rangers",
+  "away": "Montréal Canadiens",
+  "market": "h2",
+  "label": "New York Rangers gagne par 2 buts d'écart ou plus",
+  "p": 0.3645,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020332|win_h|": {
+  "match": "nhl-2026020332",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "Utah Mammoth",
+  "away": "Vancouver Canucks",
+  "market": "win_h",
+  "label": "Victoire Utah Mammoth",
+  "p": 0.8057,
+  "stars": 5,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020332|point|Clayton Keller": {
+  "match": "nhl-2026020332",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "Utah Mammoth",
+  "away": "Vancouver Canucks",
+  "market": "point",
+  "label": "Clayton Keller : au moins 1 point",
+  "p": 0.76,
+  "stars": 4,
+  "player": "Clayton Keller",
+  "pid_player": 8479343,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020332|goal|Clayton Keller": {
+  "match": "nhl-2026020332",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-17",
+  "home": "Utah Mammoth",
+  "away": "Vancouver Canucks",
+  "market": "goal",
+  "label": "Clayton Keller marque",
+  "p": 0.3,
+  "stars": 1,
+  "player": "Clayton Keller",
+  "pid_player": 8479343,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
   ],
   "result": null
  }
