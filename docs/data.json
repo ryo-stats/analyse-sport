@@ -1,30 +1,2762 @@
 {
- "generated": "2026-11-17T01:06+01:00",
+ "generated": "2026-11-17T07:27+01:00",
  "date": "2026-11-17",
- "nhl_date": "2026-11-16",
+ "nhl_date": "2026-11-17",
  "foot": [],
  "nhl": [
   {
-   "id": "nhl-2026020331",
+   "id": "nhl-2026020333",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-11-17T00:30:00+00:00",
-   "time": "01:30",
-   "state": "PRE",
+   "kickoff": "2026-11-18T00:00:00+00:00",
+   "time": "01:00",
+   "state": "FUT",
    "score": null,
-   "home": "New York Rangers",
-   "away": "Montréal Canadiens",
-   "rec_h": "12-8-1 · 3e Metropolitan · 2 victoires de suite",
-   "rec_a": "12-4-4 · 2e Atlantic · 1 défaite de suite",
+   "home": "Boston Bruins",
+   "away": "Los Angeles Kings",
+   "rec_h": "13-6-1 · 4e Atlantic · 2 défaites de suite",
+   "rec_a": "5-11-2 · 7e Pacific · 4 défaites de suite",
+   "winH": 53,
+   "winA": 47,
+   "pH": 44,
+   "pD": 17,
+   "pA": 39,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.12,
+   "xgA": 2.94,
+   "total": 6.1,
+   "scores": [
+    "3-2",
+    "2-3",
+    "4-2"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Jeremy Swayman",
+    "starts": 15,
+    "shots": 403,
+    "saves": 365,
+    "sv": "90,6 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Darcy Kuemper",
+    "starts": 11,
+    "shots": 291,
+    "saves": 254,
+    "sv": "87,3 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Morgan Geekie",
+     "pos": "Centre",
+     "cur": "5 buts, 10 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Boston Bruins",
+     "goals": 5,
+     "assists": 10,
+     "gp": 20,
+     "pid": 8479987,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 3
+     },
+     "p_goal": 30,
+     "p_point": 50,
+     "p_assist": 28
+    },
+    {
+     "name": "David Pastrnak",
+     "pos": "Ailier",
+     "cur": "9 buts, 17 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Boston Bruins",
+     "goals": 9,
+     "assists": 17,
+     "gp": 20,
+     "pid": 8477956,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 9
+     },
+     "p_goal": 28,
+     "p_point": 66,
+     "p_assist": 52
+    },
+    {
+     "name": "Pavel Zacha",
+     "pos": "Centre",
+     "cur": "5 buts, 10 passes en 19",
+     "new": false,
+     "side": "h",
+     "team": "Boston Bruins",
+     "goals": 5,
+     "assists": 10,
+     "gp": 19,
+     "pid": 8478401,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 7
+     },
+     "p_goal": 26,
+     "p_point": 51,
+     "p_assist": 34
+    },
+    {
+     "name": "Elias Lindholm",
+     "pos": "Centre",
+     "cur": "7 buts, 10 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Boston Bruins",
+     "goals": 7,
+     "assists": 10,
+     "gp": 20,
+     "pid": 8477496,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 6
+     },
+     "p_goal": 21,
+     "p_point": 48,
+     "p_assist": 33
+    },
+    {
+     "name": "Casey Mittelstadt",
+     "pos": "Centre",
+     "cur": "7 buts, 5 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Boston Bruins",
+     "goals": 7,
+     "assists": 5,
+     "gp": 20,
+     "pid": 8479999,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 20,
+     "p_point": 41,
+     "p_assist": 26
+    },
+    {
+     "name": "Fraser Minten",
+     "pos": "Centre",
+     "cur": "7 buts, 6 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Boston Bruins",
+     "goals": 7,
+     "assists": 6,
+     "gp": 20,
+     "pid": 8483489,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 2
+     },
+     "p_goal": 19,
+     "p_point": 35,
+     "p_assist": 19
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Adrian Kempe",
+     "pos": "Ailier",
+     "cur": "6 buts, 7 passes en 17",
+     "new": false,
+     "side": "a",
+     "team": "Los Angeles Kings",
+     "goals": 6,
+     "assists": 7,
+     "gp": 17,
+     "pid": 8477960,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 33,
+     "p_point": 57,
+     "p_assist": 36
+    },
+    {
+     "name": "Quinton Byfield",
+     "pos": "Ailier",
+     "cur": "5 buts, 2 passes en 16",
+     "new": false,
+     "side": "a",
+     "team": "Los Angeles Kings",
+     "goals": 5,
+     "assists": 2,
+     "gp": 16,
+     "pid": 8482124,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 4,
+      "a": 1
+     },
+     "p_goal": 27,
+     "p_point": 45,
+     "p_assist": 25
+    },
+    {
+     "name": "Kevin Fiala",
+     "pos": "Ailier",
+     "cur": "0 but, 1 passe en 2",
+     "new": false,
+     "side": "a",
+     "team": "Los Angeles Kings",
+     "goals": 0,
+     "assists": 1,
+     "gp": 2,
+     "pid": 8477942,
+     "l10": {
+      "n": 10,
+      "gp": 2,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 24,
+     "p_point": 49,
+     "p_assist": 32
+    },
+    {
+     "name": "Alex Laferriere",
+     "pos": "Ailier",
+     "cur": "3 buts, 10 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Los Angeles Kings",
+     "goals": 3,
+     "assists": 10,
+     "gp": 18,
+     "pid": 8482155,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 5
+     },
+     "p_goal": 20,
+     "p_point": 45,
+     "p_assist": 30
+    },
+    {
+     "name": "Joel Armia",
+     "pos": "Ailier",
+     "cur": "4 buts, 4 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Los Angeles Kings",
+     "goals": 4,
+     "assists": 4,
+     "gp": 18,
+     "pid": 8476469,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 19,
+     "p_point": 35,
+     "p_assist": 20
+    },
+    {
+     "name": "Corey Perry",
+     "pos": "Ailier",
+     "cur": "2 buts, 1 passe en 16",
+     "new": false,
+     "side": "a",
+     "team": "Los Angeles Kings",
+     "goals": 2,
+     "assists": 1,
+     "gp": 16,
+     "pid": 8470621,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 18,
+     "p_point": 38,
+     "p_assist": 23
+    }
+   ],
+   "ctx": [
+    "Boston Bruins : 72 buts marqués et 52 encaissés en 20 matchs.",
+    "Los Angeles Kings : 49 buts marqués et 63 encaissés en 18 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Gardien probable de Los Angeles Kings : Darcy Kuemper (87,3 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
+   "stakes": "Début de saison (18 matchs joués) : le classement bouge encore beaucoup.",
+   "espn_id": "401892728",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5644,
+     "prob": 56,
+     "fair": 1.77,
+     "stars": 2,
+     "why": "10 derniers matchs : Boston Bruins 6 victoires · Los Angeles Kings 3"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Boston Bruins",
+     "p": 0.5309,
+     "prob": 53,
+     "fair": 1.88,
+     "stars": 2
+    },
+    "fun": {
+     "market": "h2",
+     "label": "Boston Bruins gagne par 2 buts d'écart ou plus",
+     "p": 0.3282,
+     "prob": 33,
+     "fair": 3.05,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wh_o55",
+      "label": "Boston Bruins gagne et plus de 5,5 buts",
+      "p": 0.3017,
+      "prob": 30,
+      "fair": 3.31,
+      "stars": 1
+     },
+     {
+      "market": "wh_o65",
+      "label": "Boston Bruins gagne et plus de 6,5 buts",
+      "p": 0.2421,
+      "prob": 24,
+      "fair": 4.13,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "David Pastrnak : au moins 1 point",
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
+     "stars": 3,
+     "player": "David Pastrnak",
+     "pid": 8477956,
+     "team": "Boston Bruins",
+     "why": "9 buts et 17 passes en 20 matchs · 10 derniers matchs : 5 buts, 9 passes · Boston Bruins favori (53 %) · 3,1 buts attendus pour Boston Bruins"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Morgan Geekie marque",
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
+     "stars": 1,
+     "player": "Morgan Geekie",
+     "pid": 8479987,
+     "team": "Boston Bruins",
+     "why": "5 buts et 10 passes en 20 matchs · 10 derniers matchs : 4 buts, 3 passes · Boston Bruins favori (53 %) · 3,1 buts attendus pour Boston Bruins"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/BOS_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg"
+  },
+  {
+   "id": "nhl-2026020335",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T00:00:00+00:00",
+   "time": "01:00",
+   "state": "FUT",
+   "score": null,
+   "home": "Florida Panthers",
+   "away": "Edmonton Oilers",
+   "rec_h": "12-7-3 · 5e Atlantic · 1 défaite en prolongation de suite",
+   "rec_a": "16-3-3 · 1e Pacific · 5 victoires de suite",
+   "winH": 54,
+   "winA": 46,
+   "pH": 46,
+   "pD": 17,
+   "pA": 38,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.07,
+   "xgA": 2.82,
+   "total": 5.9,
+   "scores": [
+    "3-2",
+    "2-3",
+    "4-2"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Jacob Markstrom",
+    "starts": 11,
+    "shots": 266,
+    "saves": 241,
+    "sv": "90,6 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Tristan Jarry",
+    "starts": 10,
+    "shots": 274,
+    "saves": 250,
+    "sv": "91,2 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Sam Reinhart",
+     "pos": "Centre",
+     "cur": "12 buts, 10 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 12,
+     "assists": 10,
+     "gp": 22,
+     "pid": 8477933,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 7,
+      "a": 6
+     },
+     "p_goal": 35,
+     "p_point": 59,
+     "p_assist": 36
+    },
+    {
+     "name": "Brady Tkachuk",
+     "pos": "Ailier",
+     "cur": "11 buts, 12 passes en 22",
+     "new": true,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 11,
+     "assists": 12,
+     "gp": 22,
+     "pid": 8480801,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 7
+     },
+     "p_goal": 28,
+     "p_point": 55,
+     "p_assist": 36
+    },
+    {
+     "name": "Carter Verhaeghe",
+     "pos": "Centre",
+     "cur": "10 buts, 10 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 10,
+     "assists": 10,
+     "gp": 22,
+     "pid": 8477409,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 7
+     },
+     "p_goal": 27,
+     "p_point": 52,
+     "p_assist": 33
+    },
+    {
+     "name": "Sam Bennett",
+     "pos": "Centre",
+     "cur": "7 buts, 4 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 7,
+     "assists": 4,
+     "gp": 22,
+     "pid": 8477935,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 1
+     },
+     "p_goal": 27,
+     "p_point": 47,
+     "p_assist": 28
+    },
+    {
+     "name": "Anton Lundell",
+     "pos": "Centre",
+     "cur": "7 buts, 4 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 7,
+     "assists": 4,
+     "gp": 21,
+     "pid": 8482113,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 6,
+      "a": 2
+     },
+     "p_goal": 25,
+     "p_point": 46,
+     "p_assist": 27
+    },
+    {
+     "name": "Matthew Tkachuk",
+     "pos": "Ailier",
+     "cur": "5 buts, 25 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 5,
+     "assists": 25,
+     "gp": 22,
+     "pid": 8479314,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 13
+     },
+     "p_goal": 23,
+     "p_point": 64,
+     "p_assist": 54
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Leon Draisaitl",
+     "pos": "Centre",
+     "cur": "20 buts, 21 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Edmonton Oilers",
+     "goals": 20,
+     "assists": 21,
+     "gp": 22,
+     "pid": 8477934,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 8,
+      "a": 9
+     },
+     "p_goal": 36,
+     "p_point": 67,
+     "p_assist": 48
+    },
+    {
+     "name": "Connor McDavid",
+     "pos": "Centre",
+     "cur": "12 buts, 41 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Edmonton Oilers",
+     "goals": 12,
+     "assists": 41,
+     "gp": 22,
+     "pid": 8478402,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 15
+     },
+     "p_goal": 32,
+     "p_point": 72,
+     "p_assist": 59
+    },
+    {
+     "name": "Zach Hyman",
+     "pos": "Ailier",
+     "cur": "4 buts, 1 passe en 11",
+     "new": false,
+     "side": "a",
+     "team": "Edmonton Oilers",
+     "goals": 4,
+     "assists": 1,
+     "gp": 11,
+     "pid": 8475786,
+     "l10": {
+      "n": 10,
+      "gp": 5,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 29,
+     "p_point": 44,
+     "p_assist": 20
+    },
+    {
+     "name": "Evan Bouchard",
+     "pos": "Défenseur",
+     "cur": "12 buts, 24 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Edmonton Oilers",
+     "goals": 12,
+     "assists": 24,
+     "gp": 22,
+     "pid": 8480803,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 10
+     },
+     "p_goal": 21,
+     "p_point": 60,
+     "p_assist": 49
+    },
+    {
+     "name": "Vasily Podkolzin",
+     "pos": "Ailier",
+     "cur": "10 buts, 6 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Edmonton Oilers",
+     "goals": 10,
+     "assists": 6,
+     "gp": 22,
+     "pid": 8481617,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 18,
+     "p_point": 31,
+     "p_assist": 16
+    },
+    {
+     "name": "Kasperi Kapanen",
+     "pos": "Ailier",
+     "cur": "5 buts, 5 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Edmonton Oilers",
+     "goals": 5,
+     "assists": 5,
+     "gp": 22,
+     "pid": 8477953,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 14,
+     "p_point": 28,
+     "p_assist": 16
+    }
+   ],
+   "ctx": [
+    "Florida Panthers : 70 buts marqués et 63 encaissés en 22 matchs.",
+    "Edmonton Oilers : 87 buts marqués et 60 encaissés en 22 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
+   "stakes": "Florida Panthers est qualifié pour les séries s'ils commençaient ce soir. Edmonton Oilers est qualifié pour les séries s'ils commençaient ce soir.",
+   "espn_id": "401892730",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire Florida Panthers",
+     "p": 0.5442,
+     "prob": 54,
+     "fair": 1.84,
+     "stars": 2,
+     "why": "10 derniers matchs : Florida Panthers 6 victoires · Edmonton Oilers 8"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Florida Panthers",
+     "p": 0.5442,
+     "prob": 54,
+     "fair": 1.84,
+     "stars": 2,
+     "why": "10 derniers matchs : Florida Panthers 6 victoires · Edmonton Oilers 8"
+    },
+    "fun": {
+     "market": "h2",
+     "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
+     "p": 0.3375,
+     "prob": 34,
+     "fair": 2.96,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wh_o55",
+      "label": "Florida Panthers gagne et plus de 5,5 buts",
+      "p": 0.295,
+      "prob": 30,
+      "fair": 3.39,
+      "stars": 1
+     },
+     {
+      "market": "wh_o65",
+      "label": "Florida Panthers gagne et plus de 6,5 buts",
+      "p": 0.2332,
+      "prob": 23,
+      "fair": 4.29,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Matthew Tkachuk : au moins 1 point",
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3,
+     "player": "Matthew Tkachuk",
+     "pid": 8479314,
+     "team": "Florida Panthers",
+     "why": "5 buts et 25 passes en 22 matchs · 10 derniers matchs : 1 but, 13 passes · Florida Panthers favori (54 %) · 3,1 buts attendus pour Florida Panthers"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Sam Reinhart marque",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
+     "stars": 1,
+     "player": "Sam Reinhart",
+     "pid": 8477933,
+     "team": "Florida Panthers",
+     "why": "12 buts et 10 passes en 22 matchs · 10 derniers matchs : 7 buts, 6 passes · Florida Panthers favori (54 %) · 3,1 buts attendus pour Florida Panthers"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/FLA_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg"
+  },
+  {
+   "id": "nhl-2026020336",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T00:00:00+00:00",
+   "time": "01:00",
+   "state": "FUT",
+   "score": null,
+   "home": "New York Islanders",
+   "away": "Columbus Blue Jackets",
+   "rec_h": "9-6-4 · 4e Metropolitan · 2 victoires de suite",
+   "rec_a": "7-11-0 · 8e Metropolitan · 4 défaites de suite",
+   "winH": 55,
+   "winA": 45,
+   "pH": 47,
+   "pD": 16,
+   "pA": 37,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.26,
+   "xgA": 2.93,
+   "total": 6.2,
+   "scores": [
+    "3-2",
+    "2-3",
+    "4-2"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Ilya Sorokin",
+    "starts": 13,
+    "shots": 390,
+    "saves": 357,
+    "sv": "91,5 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Jet Greaves",
+    "starts": 10,
+    "shots": 265,
+    "saves": 232,
+    "sv": "87,5 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Bo Horvat",
+     "pos": "Centre",
+     "cur": "9 buts, 11 passes en 19",
+     "new": false,
+     "side": "h",
+     "team": "New York Islanders",
+     "goals": 9,
+     "assists": 11,
+     "gp": 19,
+     "pid": 8477500,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 6
+     },
+     "p_goal": 36,
+     "p_point": 60,
+     "p_assist": 37
+    },
+    {
+     "name": "Matthew Schaefer",
+     "pos": "Défenseur",
+     "cur": "6 buts, 15 passes en 19",
+     "new": false,
+     "side": "h",
+     "team": "New York Islanders",
+     "goals": 6,
+     "assists": 15,
+     "gp": 19,
+     "pid": 8485366,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 7
+     },
+     "p_goal": 27,
+     "p_point": 58,
+     "p_assist": 42
+    },
+    {
+     "name": "Simon Holmstrom",
+     "pos": "Ailier",
+     "cur": "9 buts, 6 passes en 19",
+     "new": false,
+     "side": "h",
+     "team": "New York Islanders",
+     "goals": 9,
+     "assists": 6,
+     "gp": 19,
+     "pid": 8481601,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 5
+     },
+     "p_goal": 27,
+     "p_point": 48,
+     "p_assist": 28
+    },
+    {
+     "name": "Victor Eklund",
+     "pos": "Ailier",
+     "cur": "7 buts, 4 passes en 19",
+     "new": false,
+     "side": "h",
+     "team": "New York Islanders",
+     "goals": 7,
+     "assists": 4,
+     "gp": 19,
+     "pid": 8485388,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 27,
+     "p_point": 46,
+     "p_assist": 24
+    },
+    {
+     "name": "Brayden Schenn",
+     "pos": "Centre",
+     "cur": "6 buts, 10 passes en 19",
+     "new": false,
+     "side": "h",
+     "team": "New York Islanders",
+     "goals": 6,
+     "assists": 10,
+     "gp": 19,
+     "pid": 8475170,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 6
+     },
+     "p_goal": 26,
+     "p_point": 52,
+     "p_assist": 34
+    },
+    {
+     "name": "Ben Hutton",
+     "pos": "Défenseur",
+     "cur": "2 buts, 0 passe en 4",
+     "new": true,
+     "side": "h",
+     "team": "New York Islanders",
+     "goals": 2,
+     "assists": 0,
+     "gp": 4,
+     "pid": 8477018,
+     "l10": {
+      "n": 10,
+      "gp": 4,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 22,
+     "p_point": 36,
+     "p_assist": 15
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Adam Fantilli",
+     "pos": "Centre",
+     "cur": "5 buts, 2 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Columbus Blue Jackets",
+     "goals": 5,
+     "assists": 2,
+     "gp": 18,
+     "pid": 8484166,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 23,
+     "p_point": 45,
+     "p_assist": 28
+    },
+    {
+     "name": "Zach Werenski",
+     "pos": "Défenseur",
+     "cur": "2 buts, 13 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Columbus Blue Jackets",
+     "goals": 2,
+     "assists": 13,
+     "gp": 18,
+     "pid": 8478460,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 7
+     },
+     "p_goal": 21,
+     "p_point": 60,
+     "p_assist": 49
+    },
+    {
+     "name": "Charlie Coyle",
+     "pos": "Centre",
+     "cur": "3 buts, 10 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Columbus Blue Jackets",
+     "goals": 3,
+     "assists": 10,
+     "gp": 18,
+     "pid": 8475745,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 4
+     },
+     "p_goal": 19,
+     "p_point": 48,
+     "p_assist": 35
+    },
+    {
+     "name": "Dmitri Voronkov",
+     "pos": "Ailier",
+     "cur": "1 but, 3 passes en 13",
+     "new": false,
+     "side": "a",
+     "team": "Columbus Blue Jackets",
+     "goals": 1,
+     "assists": 3,
+     "gp": 13,
+     "pid": 8481716,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 19,
+     "p_point": 36,
+     "p_assist": 20
+    },
+    {
+     "name": "Mathieu Olivier",
+     "pos": "Ailier",
+     "cur": "3 buts, 3 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Columbus Blue Jackets",
+     "goals": 3,
+     "assists": 3,
+     "gp": 18,
+     "pid": 8479671,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 18,
+     "p_point": 33,
+     "p_assist": 18
+    },
+    {
+     "name": "Denton Mateychuk",
+     "pos": "Défenseur",
+     "cur": "4 buts, 3 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Columbus Blue Jackets",
+     "goals": 4,
+     "assists": 3,
+     "gp": 18,
+     "pid": 8483485,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 2
+     },
+     "p_goal": 17,
+     "p_point": 34,
+     "p_assist": 20
+    }
+   ],
+   "ctx": [
+    "New York Islanders : 60 buts marqués et 56 encaissés en 19 matchs.",
+    "Columbus Blue Jackets : 45 buts marqués et 58 encaissés en 18 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Gardien probable de New York Islanders : Ilya Sorokin (91,5 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 3 % de buts en moins.",
+    "Gardien probable de Columbus Blue Jackets : Jet Greaves (87,5 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "New York Islanders est favori (55 % en comptant la prolongation).",
+   "stakes": "Match de division (Metropolitan) : battre un rival direct compte double au classement. Début de saison (18 matchs joués) : le classement bouge encore beaucoup.",
+   "espn_id": "401892731",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5845,
+     "prob": 58,
+     "fair": 1.71,
+     "stars": 2,
+     "why": "10 derniers matchs : New York Islanders 4 victoires · Columbus Blue Jackets 4"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire New York Islanders",
+     "p": 0.5536,
+     "prob": 55,
+     "fair": 1.81,
+     "stars": 2
+    },
+    "fun": {
+     "market": "h2",
+     "label": "New York Islanders gagne par 2 buts d'écart ou plus",
+     "p": 0.3511,
+     "prob": 35,
+     "fair": 2.85,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wh_o55",
+      "label": "New York Islanders gagne et plus de 5,5 buts",
+      "p": 0.3272,
+      "prob": 33,
+      "fair": 3.06,
+      "stars": 1
+     },
+     {
+      "market": "wh_o65",
+      "label": "New York Islanders gagne et plus de 6,5 buts",
+      "p": 0.2641,
+      "prob": 26,
+      "fair": 3.79,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Bo Horvat : au moins 1 point",
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 3,
+     "player": "Bo Horvat",
+     "pid": 8477500,
+     "team": "New York Islanders",
+     "why": "9 buts et 11 passes en 19 matchs · 10 derniers matchs : 4 buts, 6 passes · New York Islanders favori (55 %) · 3,3 buts attendus pour New York Islanders"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Bo Horvat marque",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
+     "stars": 1,
+     "player": "Bo Horvat",
+     "pid": 8477500,
+     "team": "New York Islanders",
+     "why": "9 buts et 11 passes en 19 matchs · 10 derniers matchs : 4 buts, 6 passes · New York Islanders favori (55 %) · 3,3 buts attendus pour New York Islanders"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg"
+  },
+  {
+   "id": "nhl-2026020337",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T00:00:00+00:00",
+   "time": "01:00",
+   "state": "FUT",
+   "score": null,
+   "home": "Philadelphia Flyers",
+   "away": "Buffalo Sabres",
+   "rec_h": "6-11-6 · 6e Metropolitan · 1 défaite de suite",
+   "rec_a": "8-8-4 · 6e Atlantic · 1 défaite de suite",
+   "winH": 50,
+   "winA": 50,
+   "pH": 42,
+   "pD": 16,
+   "pA": 42,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.13,
+   "xgA": 3.12,
+   "total": 6.3,
+   "scores": [
+    "3-2",
+    "2-3",
+    "4-3"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Dan Vladar",
+    "starts": 12,
+    "shots": 317,
+    "saves": 278,
+    "sv": "87,7 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Ukko-Pekka Luukkonen",
+    "starts": 11,
+    "shots": 301,
+    "saves": 261,
+    "sv": "86,7 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Travis Konecny",
+     "pos": "Ailier",
+     "cur": "2 buts, 4 passes en 13",
+     "new": false,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 2,
+     "assists": 4,
+     "gp": 13,
+     "pid": 8478439,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 27,
+     "p_point": 55,
+     "p_assist": 38
+    },
+    {
+     "name": "Matvei Michkov",
+     "pos": "Ailier",
+     "cur": "11 buts, 6 passes en 23",
+     "new": false,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 11,
+     "assists": 6,
+     "gp": 23,
+     "pid": 8484387,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 4
+     },
+     "p_goal": 26,
+     "p_point": 50,
+     "p_assist": 31
+    },
+    {
+     "name": "Trevor Zegras",
+     "pos": "Centre",
+     "cur": "5 buts, 10 passes en 23",
+     "new": false,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 5,
+     "assists": 10,
+     "gp": 23,
+     "pid": 8481533,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 25,
+     "p_point": 55,
+     "p_assist": 39
+    },
+    {
+     "name": "Owen Tippett",
+     "pos": "Ailier",
+     "cur": "2 buts, 3 passes en 17",
+     "new": false,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 2,
+     "assists": 3,
+     "gp": 17,
+     "pid": 8480015,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 25,
+     "p_point": 44,
+     "p_assist": 25
+    },
+    {
+     "name": "Tyson Foerster",
+     "pos": "Ailier",
+     "cur": "4 buts, 3 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 4,
+     "assists": 3,
+     "gp": 22,
+     "pid": 8482159,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 25,
+     "p_point": 39,
+     "p_assist": 18
+    },
+    {
+     "name": "Cole Knuble",
+     "pos": "Ailier",
+     "cur": "4 buts, 0 passe en 10",
+     "new": true,
+     "side": "h",
+     "team": "Philadelphia Flyers",
+     "goals": 4,
+     "assists": 0,
+     "gp": 10,
+     "pid": 8483787,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 22,
+     "p_point": 33,
+     "p_assist": 11
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Tage Thompson",
+     "pos": "Centre",
+     "cur": "12 buts, 9 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Buffalo Sabres",
+     "goals": 12,
+     "assists": 9,
+     "gp": 20,
+     "pid": 8479420,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 7,
+      "a": 5
+     },
+     "p_goal": 36,
+     "p_point": 58,
+     "p_assist": 35
+    },
+    {
+     "name": "Jason Zucker",
+     "pos": "Ailier",
+     "cur": "2 buts, 0 passe en 11",
+     "new": false,
+     "side": "a",
+     "team": "Buffalo Sabres",
+     "goals": 2,
+     "assists": 0,
+     "gp": 11,
+     "pid": 8475722,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 23,
+     "p_point": 40,
+     "p_assist": 20
+    },
+    {
+     "name": "Jack Quinn",
+     "pos": "Ailier",
+     "cur": "9 buts, 10 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Buffalo Sabres",
+     "goals": 9,
+     "assists": 10,
+     "gp": 20,
+     "pid": 8482097,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 5
+     },
+     "p_goal": 22,
+     "p_point": 46,
+     "p_assist": 30
+    },
+    {
+     "name": "Josh Doan",
+     "pos": "Ailier",
+     "cur": "4 buts, 1 passe en 20",
+     "new": false,
+     "side": "a",
+     "team": "Buffalo Sabres",
+     "goals": 4,
+     "assists": 1,
+     "gp": 20,
+     "pid": 8482659,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 22,
+     "p_point": 38,
+     "p_assist": 20
+    },
+    {
+     "name": "Josh Norris",
+     "pos": "Centre",
+     "cur": "4 buts, 3 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Buffalo Sabres",
+     "goals": 4,
+     "assists": 3,
+     "gp": 20,
+     "pid": 8480064,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 19,
+     "p_point": 41,
+     "p_assist": 26
+    },
+    {
+     "name": "Rasmus Dahlin",
+     "pos": "Défenseur",
+     "cur": "3 buts, 8 passes en 17",
+     "new": false,
+     "side": "a",
+     "team": "Buffalo Sabres",
+     "goals": 3,
+     "assists": 8,
+     "gp": 17,
+     "pid": 8480839,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 6
+     },
+     "p_goal": 17,
+     "p_point": 53,
+     "p_assist": 43
+    }
+   ],
+   "ctx": [
+    "Philadelphia Flyers : 53 buts marqués et 77 encaissés en 23 matchs.",
+    "Buffalo Sabres : 55 buts marqués et 70 encaissés en 20 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Gardien probable de Philadelphia Flyers : Dan Vladar (87,7 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
+    "Gardien probable de Buffalo Sabres : Ukko-Pekka Luukkonen (86,7 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
+   "stakes": "Philadelphia Flyers est hors des places en séries pour l'instant. Buffalo Sabres est hors des places en séries pour l'instant.",
+   "espn_id": "401892732",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.595,
+     "prob": 60,
+     "fair": 1.68,
+     "stars": 2,
+     "why": "10 derniers matchs : Philadelphia Flyers 3 victoires · Buffalo Sabres 4"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Philadelphia Flyers",
+     "p": 0.5047,
+     "prob": 50,
+     "fair": 1.98,
+     "stars": 2
+    },
+    "fun": {
+     "market": "reg_h",
+     "label": "Philadelphia Flyers gagne dans le temps réglementaire",
+     "p": 0.4199,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "h2",
+      "label": "Philadelphia Flyers gagne par 2 buts d'écart ou plus",
+      "p": 0.3076,
+      "prob": 31,
+      "fair": 3.25,
+      "stars": 1
+     },
+     {
+      "market": "wh_o55",
+      "label": "Philadelphia Flyers gagne et plus de 5,5 buts",
+      "p": 0.3002,
+      "prob": 30,
+      "fair": 3.33,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Travis Konecny : au moins 1 point",
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
+     "stars": 2,
+     "player": "Travis Konecny",
+     "pid": 8478439,
+     "team": "Philadelphia Flyers",
+     "why": "2 buts et 4 passes en 13 matchs · 10 derniers matchs : 2 buts, 1 passe (joué 8 sur 10) · Philadelphia Flyers favori (50 %) · 3,1 buts attendus pour Philadelphia Flyers"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Travis Konecny marque",
+     "p": 0.27,
+     "prob": 27,
+     "fair": 3.7,
+     "stars": 1,
+     "player": "Travis Konecny",
+     "pid": 8478439,
+     "team": "Philadelphia Flyers",
+     "why": "2 buts et 4 passes en 13 matchs · 10 derniers matchs : 2 buts, 1 passe (joué 8 sur 10) · Philadelphia Flyers favori (50 %) · 3,1 buts attendus pour Philadelphia Flyers"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg"
+  },
+  {
+   "id": "nhl-2026020341",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T00:00:00+00:00",
+   "time": "01:00",
+   "state": "FUT",
+   "score": null,
+   "home": "Winnipeg Jets",
+   "away": "Ottawa Senators",
+   "rec_h": "10-8-3 · 5e Central · 6 victoires de suite",
+   "rec_a": "13-6-2 · 2e Atlantic · 2 victoires de suite",
+   "winH": 42,
+   "winA": 58,
+   "pH": 33,
+   "pD": 16,
+   "pA": 50,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 2.7,
+   "xgA": 3.23,
+   "total": 5.9,
+   "scores": [
+    "2-3",
+    "3-2",
+    "2-4"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Nico Daws",
+    "starts": 2,
+    "shots": 80,
+    "saves": 73,
+    "sv": "91,2 % d'arrêts",
+    "note": "le titulaire a été remplacé en cours de match la dernière fois (blessure possible)"
+   },
+   "goalie_a": {
+    "name": "Linus Ullmark",
+    "starts": 10,
+    "shots": 228,
+    "saves": 214,
+    "sv": "93,9 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Kyle Connor",
+     "pos": "Ailier",
+     "cur": "17 buts, 9 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "Winnipeg Jets",
+     "goals": 17,
+     "assists": 9,
+     "gp": 21,
+     "pid": 8478398,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 8,
+      "a": 6
+     },
+     "p_goal": 37,
+     "p_point": 63,
+     "p_assist": 40
+    },
+    {
+     "name": "Mark Scheifele",
+     "pos": "Centre",
+     "cur": "7 buts, 19 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "Winnipeg Jets",
+     "goals": 7,
+     "assists": 19,
+     "gp": 21,
+     "pid": 8476460,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 13
+     },
+     "p_goal": 30,
+     "p_point": 66,
+     "p_assist": 52
+    },
+    {
+     "name": "Dawson Mercer",
+     "pos": "Centre",
+     "cur": "5 buts, 3 passes en 11",
+     "new": true,
+     "side": "h",
+     "team": "Winnipeg Jets",
+     "goals": 5,
+     "assists": 3,
+     "gp": 11,
+     "pid": 8482110,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 24,
+     "p_point": 41,
+     "p_assist": 21
+    },
+    {
+     "name": "Gabriel Vilardi",
+     "pos": "Centre",
+     "cur": "3 buts, 11 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "Winnipeg Jets",
+     "goals": 3,
+     "assists": 11,
+     "gp": 21,
+     "pid": 8480014,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 6
+     },
+     "p_goal": 23,
+     "p_point": 50,
+     "p_assist": 35
+    },
+    {
+     "name": "Cole Perfetti",
+     "pos": "Centre",
+     "cur": "8 buts, 11 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "Winnipeg Jets",
+     "goals": 8,
+     "assists": 11,
+     "gp": 21,
+     "pid": 8482149,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 8
+     },
+     "p_goal": 17,
+     "p_point": 42,
+     "p_assist": 29
+    },
+    {
+     "name": "Morgan Barron",
+     "pos": "Centre",
+     "cur": "3 buts, 5 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "Winnipeg Jets",
+     "goals": 3,
+     "assists": 5,
+     "gp": 21,
+     "pid": 8480289,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 14,
+     "p_point": 30,
+     "p_assist": 18
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Drake Batherson",
+     "pos": "Ailier",
+     "cur": "10 buts, 9 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 10,
+     "assists": 9,
+     "gp": 21,
+     "pid": 8480208,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 5
+     },
+     "p_goal": 32,
+     "p_point": 55,
+     "p_assist": 34
+    },
+    {
+     "name": "Tim Stützle",
+     "pos": "Centre",
+     "cur": "11 buts, 14 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 11,
+     "assists": 14,
+     "gp": 21,
+     "pid": 8482116,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 6
+     },
+     "p_goal": 31,
+     "p_point": 60,
+     "p_assist": 42
+    },
+    {
+     "name": "Shane Pinto",
+     "pos": "Centre",
+     "cur": "9 buts, 8 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 9,
+     "assists": 8,
+     "gp": 21,
+     "pid": 8481596,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 7,
+      "a": 3
+     },
+     "p_goal": 28,
+     "p_point": 47,
+     "p_assist": 26
+    },
+    {
+     "name": "Dylan Cozens",
+     "pos": "Centre",
+     "cur": "4 buts, 8 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 4,
+     "assists": 8,
+     "gp": 21,
+     "pid": 8481528,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 5
+     },
+     "p_goal": 24,
+     "p_point": 47,
+     "p_assist": 30
+    },
+    {
+     "name": "Michael Amadio",
+     "pos": "Ailier",
+     "cur": "7 buts, 6 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 7,
+     "assists": 6,
+     "gp": 21,
+     "pid": 8478020,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 4
+     },
+     "p_goal": 19,
+     "p_point": 37,
+     "p_assist": 22
+    },
+    {
+     "name": "Jake Sanderson",
+     "pos": "Défenseur",
+     "cur": "1 but, 9 passes en 13",
+     "new": false,
+     "side": "a",
+     "team": "Ottawa Senators",
+     "goals": 1,
+     "assists": 9,
+     "gp": 13,
+     "pid": 8482105,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 7
+     },
+     "p_goal": 15,
+     "p_point": 50,
+     "p_assist": 41
+    }
+   ],
+   "ctx": [
+    "Winnipeg Jets : 66 buts marqués et 72 encaissés en 21 matchs.",
+    "Ottawa Senators : 68 buts marqués et 61 encaissés en 21 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Gardien probable de Ottawa Senators : Linus Ullmark (93,9 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 5 % de buts en moins.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Ottawa Senators est favori (58 % en comptant la prolongation).",
+   "stakes": "Winnipeg Jets est qualifié pour les séries s'ils commençaient ce soir. Ottawa Senators est qualifié pour les séries s'ils commençaient ce soir.",
+   "espn_id": "401892736",
+   "picks": {
+    "main": {
+     "market": "win_a",
+     "label": "Victoire Ottawa Senators",
+     "p": 0.5807,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
+     "why": "10 derniers matchs : Winnipeg Jets 6 victoires · Ottawa Senators 6"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Ottawa Senators",
+     "p": 0.5807,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
+     "why": "10 derniers matchs : Winnipeg Jets 6 victoires · Ottawa Senators 6"
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
+     "p": 0.379,
+     "prob": 38,
+     "fair": 2.64,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wa_o55",
+      "label": "Ottawa Senators gagne et plus de 5,5 buts",
+      "p": 0.3217,
+      "prob": 32,
+      "fair": 3.11,
+      "stars": 1
+     },
+     {
+      "market": "wa_o65",
+      "label": "Ottawa Senators gagne et plus de 6,5 buts",
+      "p": 0.2525,
+      "prob": 25,
+      "fair": 3.96,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Tim Stützle : au moins 1 point",
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 3,
+     "player": "Tim Stützle",
+     "pid": 8482116,
+     "team": "Ottawa Senators",
+     "why": "11 buts et 14 passes en 21 matchs · 10 derniers matchs : 4 buts, 6 passes · Ottawa Senators favori (58 %) · 3,2 buts attendus pour Ottawa Senators"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Drake Batherson marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
+     "stars": 1,
+     "player": "Drake Batherson",
+     "pid": 8480208,
+     "team": "Ottawa Senators",
+     "why": "10 buts et 9 passes en 21 matchs · 10 derniers matchs : 6 buts, 5 passes · Ottawa Senators favori (58 %) · 3,2 buts attendus pour Ottawa Senators"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/OTT_dark.svg"
+  },
+  {
+   "id": "nhl-2026020334",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T00:30:00+00:00",
+   "time": "01:30",
+   "state": "FUT",
+   "score": null,
+   "home": "Tampa Bay Lightning",
+   "away": "Washington Capitals",
+   "rec_h": "13-5-2 · 1e Atlantic · 1 défaite de suite",
+   "rec_a": "10-8-0 · 5e Metropolitan · 2 défaites de suite",
+   "winH": 65,
+   "winA": 35,
+   "pH": 57,
+   "pD": 14,
+   "pA": 29,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 4.04,
+   "xgA": 3.05,
+   "total": 7.1,
+   "scores": [
+    "4-3",
+    "4-2",
+    "3-2"
+   ],
+   "scorep": [
+    4,
+    4,
+    4
+   ],
+   "goalie_h": {
+    "name": "Andrei Vasilevskiy",
+    "starts": 15,
+    "shots": 368,
+    "saves": 327,
+    "sv": "88,9 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Logan Thompson",
+    "starts": 13,
+    "shots": 349,
+    "saves": 310,
+    "sv": "88,8 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Brandon Hagel",
+     "pos": "Ailier",
+     "cur": "13 buts, 11 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Tampa Bay Lightning",
+     "goals": 13,
+     "assists": 11,
+     "gp": 20,
+     "pid": 8479542,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 5
+     },
+     "p_goal": 42,
+     "p_point": 67,
+     "p_assist": 42
+    },
+    {
+     "name": "Nikita Kucherov",
+     "pos": "Ailier",
+     "cur": "8 buts, 20 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Tampa Bay Lightning",
+     "goals": 8,
+     "assists": 20,
+     "gp": 20,
+     "pid": 8476453,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 11
+     },
+     "p_goal": 41,
+     "p_point": 81,
+     "p_assist": 67
+    },
+    {
+     "name": "Jake Guentzel",
+     "pos": "Centre",
+     "cur": "11 buts, 13 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Tampa Bay Lightning",
+     "goals": 11,
+     "assists": 13,
+     "gp": 20,
+     "pid": 8477404,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 8
+     },
+     "p_goal": 39,
+     "p_point": 68,
+     "p_assist": 48
+    },
+    {
+     "name": "John Carlson",
+     "pos": "Défenseur",
+     "cur": "6 buts, 10 passes en 20",
+     "new": true,
+     "side": "h",
+     "team": "Tampa Bay Lightning",
+     "goals": 6,
+     "assists": 10,
+     "gp": 20,
+     "pid": 8474590,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 8
+     },
+     "p_goal": 22,
+     "p_point": 54,
+     "p_assist": 40
+    },
+    {
+     "name": "Pontus Holmberg",
+     "pos": "Ailier",
+     "cur": "6 buts, 7 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Tampa Bay Lightning",
+     "goals": 6,
+     "assists": 7,
+     "gp": 20,
+     "pid": 8480995,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 4
+     },
+     "p_goal": 20,
+     "p_point": 38,
+     "p_assist": 22
+    },
+    {
+     "name": "Ilya Mikheyev",
+     "pos": "Ailier",
+     "cur": "4 buts, 3 passes en 20",
+     "new": true,
+     "side": "h",
+     "team": "Tampa Bay Lightning",
+     "goals": 4,
+     "assists": 3,
+     "gp": 20,
+     "pid": 8481624,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 17,
+     "p_point": 32,
+     "p_assist": 17
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Alex Tuch",
+     "pos": "Ailier",
+     "cur": "11 buts, 2 passes en 18",
+     "new": true,
+     "side": "a",
+     "team": "Washington Capitals",
+     "goals": 11,
+     "assists": 2,
+     "gp": 18,
+     "pid": 8477949,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 0
+     },
+     "p_goal": 31,
+     "p_point": 40,
+     "p_assist": 11
+    },
+    {
+     "name": "Tom Wilson",
+     "pos": "Ailier",
+     "cur": "2 buts, 4 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Washington Capitals",
+     "goals": 2,
+     "assists": 4,
+     "gp": 18,
+     "pid": 8476880,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 24,
+     "p_point": 45,
+     "p_assist": 28
+    },
+    {
+     "name": "Alex Ovechkin",
+     "pos": "Ailier",
+     "cur": "1 but, 4 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Washington Capitals",
+     "goals": 1,
+     "assists": 4,
+     "gp": 18,
+     "pid": 8471214,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 22,
+     "p_point": 43,
+     "p_assist": 26
+    },
+    {
+     "name": "Ryan Leonard",
+     "pos": "Ailier",
+     "cur": "7 buts, 7 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Washington Capitals",
+     "goals": 7,
+     "assists": 7,
+     "gp": 18,
+     "pid": 8484186,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 3
+     },
+     "p_goal": 22,
+     "p_point": 43,
+     "p_assist": 26
+    },
+    {
+     "name": "Aliaksei Protas",
+     "pos": "Ailier",
+     "cur": "2 buts, 8 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Washington Capitals",
+     "goals": 2,
+     "assists": 8,
+     "gp": 18,
+     "pid": 8481656,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 6
+     },
+     "p_goal": 21,
+     "p_point": 44,
+     "p_assist": 29
+    },
+    {
+     "name": "Jakob Chychrun",
+     "pos": "Défenseur",
+     "cur": "2 buts, 11 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Washington Capitals",
+     "goals": 2,
+     "assists": 11,
+     "gp": 18,
+     "pid": 8479345,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 8
+     },
+     "p_goal": 20,
+     "p_point": 48,
+     "p_assist": 34
+    }
+   ],
+   "ctx": [
+    "Tampa Bay Lightning : 74 buts marqués et 59 encaissés en 20 matchs.",
+    "Washington Capitals : 62 buts marqués et 65 encaissés en 18 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Tampa Bay Lightning est favori (65 % en comptant la prolongation).",
+   "stakes": "Début de saison (18 matchs joués) : le classement bouge encore beaucoup.",
+   "espn_id": "401892729",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.7112,
+     "prob": 71,
+     "fair": 1.41,
+     "stars": 4,
+     "why": "10 derniers matchs : Tampa Bay Lightning 6 victoires · Washington Capitals 5"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Tampa Bay Lightning",
+     "p": 0.645,
+     "prob": 65,
+     "fair": 1.55,
+     "stars": 3
+    },
+    "fun": {
+     "market": "wh_o65",
+     "label": "Tampa Bay Lightning gagne et plus de 6,5 buts",
+     "p": 0.3954,
+     "prob": 40,
+     "fair": 2.53,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "h3",
+      "label": "Tampa Bay Lightning gagne par 3 buts d'écart ou plus",
+      "p": 0.2904,
+      "prob": 29,
+      "fair": 3.44,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Nikita Kucherov : au moins 1 point",
+     "p": 0.81,
+     "prob": 81,
+     "fair": 1.23,
+     "stars": 5,
+     "player": "Nikita Kucherov",
+     "pid": 8476453,
+     "team": "Tampa Bay Lightning",
+     "why": "8 buts et 20 passes en 20 matchs · 10 derniers matchs : 4 buts, 11 passes · Tampa Bay Lightning favori (65 %) · 4,0 buts attendus pour Tampa Bay Lightning"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Brandon Hagel marque",
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1,
+     "player": "Brandon Hagel",
+     "pid": 8479542,
+     "team": "Tampa Bay Lightning",
+     "why": "13 buts et 11 passes en 20 matchs · 10 derniers matchs : 6 buts, 5 passes · Tampa Bay Lightning favori (65 %) · 4,0 buts attendus pour Tampa Bay Lightning"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_dark.svg"
+  },
+  {
+   "id": "nhl-2026020338",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T00:30:00+00:00",
+   "time": "01:30",
+   "state": "FUT",
+   "score": null,
+   "home": "Chicago Blackhawks",
+   "away": "Toronto Maple Leafs",
+   "rec_h": "5-13-2 · 8e Central · 1 défaite en prolongation de suite",
+   "rec_a": "8-12-2 · 8e Atlantic · 6 défaites de suite",
+   "winH": 48,
+   "winA": 52,
+   "pH": 39,
+   "pD": 16,
+   "pA": 45,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.0,
+   "xgA": 3.18,
+   "total": 6.2,
+   "scores": [
+    "2-3",
+    "3-2",
+    "2-4"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Spencer Knight",
+    "starts": 16,
+    "shots": 467,
+    "saves": 412,
+    "sv": "88,2 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Sergei Bobrovsky",
+    "starts": 13,
+    "shots": 379,
+    "saves": 334,
+    "sv": "88,1 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Connor Bedard",
+     "pos": "Centre",
+     "cur": "6 buts, 11 passes en 14",
+     "new": false,
+     "side": "h",
+     "team": "Chicago Blackhawks",
+     "goals": 6,
+     "assists": 11,
+     "gp": 14,
+     "pid": 8484144,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 9
+     },
+     "p_goal": 36,
+     "p_point": 69,
+     "p_assist": 52
+    },
+    {
+     "name": "Roman Kantserov",
+     "pos": "Ailier",
+     "cur": "9 buts, 3 passes en 20",
+     "new": true,
+     "side": "h",
+     "team": "Chicago Blackhawks",
+     "goals": 9,
+     "assists": 3,
+     "gp": 20,
+     "pid": 8484390,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 3
+     },
+     "p_goal": 33,
+     "p_point": 49,
+     "p_assist": 21
+    },
+    {
+     "name": "Tyler Bertuzzi",
+     "pos": "Ailier",
+     "cur": "3 buts, 4 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Chicago Blackhawks",
+     "goals": 3,
+     "assists": 4,
+     "gp": 20,
+     "pid": 8477479,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 30,
+     "p_point": 50,
+     "p_assist": 28
+    },
+    {
+     "name": "Frank Nazar",
+     "pos": "Centre",
+     "cur": "8 buts, 2 passes en 18",
+     "new": false,
+     "side": "h",
+     "team": "Chicago Blackhawks",
+     "goals": 8,
+     "assists": 2,
+     "gp": 18,
+     "pid": 8483493,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 1
+     },
+     "p_goal": 27,
+     "p_point": 49,
+     "p_assist": 29
+    },
+    {
+     "name": "Anton Frondell",
+     "pos": "Centre",
+     "cur": "4 buts, 6 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Chicago Blackhawks",
+     "goals": 4,
+     "assists": 6,
+     "gp": 20,
+     "pid": 8485391,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 21,
+     "p_point": 44,
+     "p_assist": 28
+    },
+    {
+     "name": "Teuvo Teravainen",
+     "pos": "Centre",
+     "cur": "2 buts, 6 passes en 16",
+     "new": false,
+     "side": "h",
+     "team": "Chicago Blackhawks",
+     "goals": 2,
+     "assists": 6,
+     "gp": 16,
+     "pid": 8476882,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 0,
+      "a": 3
+     },
+     "p_goal": 17,
+     "p_point": 41,
+     "p_assist": 29
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "William Nylander",
+     "pos": "Ailier",
+     "cur": "11 buts, 11 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Toronto Maple Leafs",
+     "goals": 11,
+     "assists": 11,
+     "gp": 22,
+     "pid": 8477939,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 1
+     },
+     "p_goal": 34,
+     "p_point": 63,
+     "p_assist": 44
+    },
+    {
+     "name": "Auston Matthews",
+     "pos": "Centre",
+     "cur": "12 buts, 17 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Toronto Maple Leafs",
+     "goals": 12,
+     "assists": 17,
+     "gp": 22,
+     "pid": 8479318,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 7
+     },
+     "p_goal": 34,
+     "p_point": 60,
+     "p_assist": 39
+    },
+    {
+     "name": "Jack Roslovic",
+     "pos": "Centre",
+     "cur": "9 buts, 11 passes en 21",
+     "new": true,
+     "side": "a",
+     "team": "Toronto Maple Leafs",
+     "goals": 9,
+     "assists": 11,
+     "gp": 21,
+     "pid": 8478458,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 5,
+      "a": 5
+     },
+     "p_goal": 28,
+     "p_point": 53,
+     "p_assist": 34
+    },
+    {
+     "name": "John Tavares",
+     "pos": "Centre",
+     "cur": "2 buts, 5 passes en 12",
+     "new": false,
+     "side": "a",
+     "team": "Toronto Maple Leafs",
+     "goals": 2,
+     "assists": 5,
+     "gp": 12,
+     "pid": 8475166,
+     "l10": {
+      "n": 10,
+      "gp": 5,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 26,
+     "p_point": 52,
+     "p_assist": 35
+    },
+    {
+     "name": "Gavin McKenna",
+     "pos": "Ailier",
+     "cur": "6 buts, 7 passes en 22",
+     "new": true,
+     "side": "a",
+     "team": "Toronto Maple Leafs",
+     "goals": 6,
+     "assists": 7,
+     "gp": 22,
+     "pid": 8486067,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 20,
+     "p_point": 40,
+     "p_assist": 24
+    },
+    {
+     "name": "Easton Cowan",
+     "pos": "Ailier",
+     "cur": "7 buts, 9 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Toronto Maple Leafs",
+     "goals": 7,
+     "assists": 9,
+     "gp": 22,
+     "pid": 8484158,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 17,
+     "p_point": 39,
+     "p_assist": 26
+    }
+   ],
+   "ctx": [
+    "Chicago Blackhawks : 46 buts marqués et 83 encaissés en 20 matchs.",
+    "Toronto Maple Leafs : 69 buts marqués et 76 encaissés en 22 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Gardien probable de Chicago Blackhawks : Spencer Knight (88,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
+    "Gardien probable de Toronto Maple Leafs : Sergei Bobrovsky (88,1 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
+   "stakes": "Chicago Blackhawks est hors des places en séries pour l'instant. Toronto Maple Leafs est hors des places en séries pour l'instant.",
+   "espn_id": "401892733",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.582,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
+     "why": "10 derniers matchs : Chicago Blackhawks 2 victoires · Toronto Maple Leafs 2"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Toronto Maple Leafs",
+     "p": 0.5247,
+     "prob": 52,
+     "fair": 1.91,
+     "stars": 2
+    },
+    "fun": {
+     "market": "a2",
+     "label": "Toronto Maple Leafs gagne par 2 buts d'écart ou plus",
+     "p": 0.3302,
+     "prob": 33,
+     "fair": 3.03,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wa_o55",
+      "label": "Toronto Maple Leafs gagne et plus de 5,5 buts",
+      "p": 0.3074,
+      "prob": 31,
+      "fair": 3.25,
+      "stars": 1
+     },
+     {
+      "market": "wa_o65",
+      "label": "Toronto Maple Leafs gagne et plus de 6,5 buts",
+      "p": 0.2478,
+      "prob": 25,
+      "fair": 4.03,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "William Nylander : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "William Nylander",
+     "pid": 8477939,
+     "team": "Toronto Maple Leafs",
+     "why": "11 buts et 11 passes en 22 matchs · 10 derniers matchs : 5 buts, 1 passe · Toronto Maple Leafs favori (52 %) · 3,2 buts attendus pour Toronto Maple Leafs"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "William Nylander marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "William Nylander",
+     "pid": 8477939,
+     "team": "Toronto Maple Leafs",
+     "why": "11 buts et 11 passes en 22 matchs · 10 derniers matchs : 5 buts, 1 passe · Toronto Maple Leafs favori (52 %) · 3,2 buts attendus pour Toronto Maple Leafs"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg"
+  },
+  {
+   "id": "nhl-2026020339",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T01:00:00+00:00",
+   "time": "02:00",
+   "state": "FUT",
+   "score": null,
+   "home": "St. Louis Blues",
+   "away": "Anaheim Ducks",
+   "rec_h": "9-9-2 · 7e Central · 1 défaite de suite",
+   "rec_a": "11-9-1 · 3e Pacific · 1 victoire de suite",
    "winH": 56,
    "winA": 44,
    "pH": 48,
    "pD": 16,
    "pA": 36,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.43,
-   "xgA": 3.04,
-   "total": 6.5,
+   "xgH": 3.41,
+   "xgA": 3.03,
+   "total": 6.4,
    "scores": [
     "3-2",
     "2-3",
@@ -36,390 +2768,391 @@
     4
    ],
    "goalie_h": {
-    "name": "Dylan Garand",
-    "starts": 13,
-    "shots": 356,
-    "saves": 324,
-    "sv": "91,0 % d'arrêts",
+    "name": "Joel Hofer",
+    "starts": 15,
+    "shots": 432,
+    "saves": 398,
+    "sv": "92,1 % d'arrêts",
     "note": ""
    },
    "goalie_a": {
-    "name": "Jacob Fowler",
-    "starts": 12,
-    "shots": 351,
-    "saves": 325,
-    "sv": "92,6 % d'arrêts",
+    "name": "Lukas Dostal",
+    "starts": 11,
+    "shots": 278,
+    "saves": 238,
+    "sv": "85,6 % d'arrêts",
     "note": ""
    },
    "squad_h": [
     {
-     "name": "Mika Zibanejad",
-     "pos": "Centre",
-     "cur": "5 buts, 14 passes en 21",
+     "name": "Jimmy Snuggerud",
+     "pos": "Ailier",
+     "cur": "10 buts, 4 passes en 20",
      "new": false,
      "side": "h",
-     "team": "New York Rangers",
-     "goals": 5,
-     "assists": 14,
-     "gp": 21,
-     "pid": 8476459,
+     "team": "St. Louis Blues",
+     "goals": 10,
+     "assists": 4,
+     "gp": 20,
+     "pid": 8483516,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 3,
-      "a": 7
+      "g": 4,
+      "a": 2
      },
-     "p_goal": 33,
-     "p_point": 64,
-     "p_assist": 46
+     "p_goal": 31,
+     "p_point": 55,
+     "p_assist": 33
     },
     {
-     "name": "Alexis Lafrenière",
-     "pos": "Ailier",
-     "cur": "10 buts, 12 passes en 21",
+     "name": "Robert Thomas",
+     "pos": "Centre",
+     "cur": "3 buts, 11 passes en 20",
      "new": false,
      "side": "h",
-     "team": "New York Rangers",
-     "goals": 10,
-     "assists": 12,
-     "gp": 21,
-     "pid": 8482109,
+     "team": "St. Louis Blues",
+     "goals": 3,
+     "assists": 11,
+     "gp": 20,
+     "pid": 8480023,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 3,
+      "g": 2,
       "a": 6
      },
      "p_goal": 29,
-     "p_point": 57,
-     "p_assist": 39
-    },
-    {
-     "name": "Tye Kartye",
-     "pos": "Ailier",
-     "cur": "7 buts, 7 passes en 21",
-     "new": false,
-     "side": "h",
-     "team": "New York Rangers",
-     "goals": 7,
-     "assists": 7,
-     "gp": 21,
-     "pid": 8481789,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 5,
-      "a": 2
-     },
-     "p_goal": 26,
-     "p_point": 48,
-     "p_assist": 29
-    },
-    {
-     "name": "Glenn Gawdin",
-     "pos": "Centre",
-     "cur": "2 buts, 0 passe en 2",
-     "new": true,
-     "side": "h",
-     "team": "New York Rangers",
-     "goals": 2,
-     "assists": 0,
-     "gp": 2,
-     "pid": 8478446,
-     "l10": {
-      "n": 10,
-      "gp": 2,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 26,
-     "p_point": 42,
-     "p_assist": 18
-    },
-    {
-     "name": "Gabe Perreault",
-     "pos": "Ailier",
-     "cur": "7 buts, 4 passes en 21",
-     "new": false,
-     "side": "h",
-     "team": "New York Rangers",
-     "goals": 7,
-     "assists": 4,
-     "gp": 21,
-     "pid": 8484210,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 25,
-     "p_point": 44,
-     "p_assist": 25
-    },
-    {
-     "name": "Pavel Dorofeyev",
-     "pos": "Ailier",
-     "cur": "6 buts, 6 passes en 21",
-     "new": true,
-     "side": "h",
-     "team": "New York Rangers",
-     "goals": 6,
-     "assists": 6,
-     "gp": 21,
-     "pid": 8481604,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 3
-     },
-     "p_goal": 24,
-     "p_point": 45,
-     "p_assist": 26
-    }
-   ],
-   "squad_a": [
-    {
-     "name": "Cole Caufield",
-     "pos": "Ailier",
-     "cur": "12 buts, 7 passes en 20",
-     "new": false,
-     "side": "a",
-     "team": "Montréal Canadiens",
-     "goals": 12,
-     "assists": 7,
-     "gp": 20,
-     "pid": 8481540,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 6,
-      "a": 5
-     },
-     "p_goal": 38,
-     "p_point": 57,
-     "p_assist": 30
-    },
-    {
-     "name": "Nick Suzuki",
-     "pos": "Centre",
-     "cur": "8 buts, 9 passes en 14",
-     "new": false,
-     "side": "a",
-     "team": "Montréal Canadiens",
-     "goals": 8,
-     "assists": 9,
-     "gp": 14,
-     "pid": 8480018,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 3,
-      "a": 2
-     },
-     "p_goal": 27,
-     "p_point": 62,
+     "p_point": 63,
      "p_assist": 47
     },
     {
-     "name": "Juraj Slafkovský",
+     "name": "Dylan Holloway",
      "pos": "Ailier",
-     "cur": "2 buts, 11 passes en 20",
+     "cur": "4 buts, 10 passes en 20",
      "new": false,
-     "side": "a",
-     "team": "Montréal Canadiens",
-     "goals": 2,
-     "assists": 11,
+     "side": "h",
+     "team": "St. Louis Blues",
+     "goals": 4,
+     "assists": 10,
      "gp": 20,
-     "pid": 8483515,
+     "pid": 8482077,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 0,
-      "a": 6
+      "g": 1,
+      "a": 3
      },
-     "p_goal": 21,
-     "p_point": 49,
-     "p_assist": 35
+     "p_goal": 28,
+     "p_point": 57,
+     "p_assist": 40
     },
     {
-     "name": "Alex Newhook",
-     "pos": "Centre",
-     "cur": "5 buts, 5 passes en 20",
-     "new": false,
-     "side": "a",
-     "team": "Montréal Canadiens",
-     "goals": 5,
-     "assists": 5,
-     "gp": 20,
-     "pid": 8481618,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 2
-     },
-     "p_goal": 21,
-     "p_point": 37,
-     "p_assist": 20
-    },
-    {
-     "name": "Josh Anderson",
+     "name": "Pavel Buchnevich",
      "pos": "Ailier",
-     "cur": "8 buts, 4 passes en 19",
+     "cur": "3 buts, 4 passes en 19",
      "new": false,
-     "side": "a",
-     "team": "Montréal Canadiens",
-     "goals": 8,
+     "side": "h",
+     "team": "St. Louis Blues",
+     "goals": 3,
      "assists": 4,
      "gp": 19,
-     "pid": 8476981,
+     "pid": 8477402,
      "l10": {
       "n": 10,
-      "gp": 9,
-      "g": 4,
-      "a": 2
+      "gp": 10,
+      "g": 1,
+      "a": 0
      },
-     "p_goal": 19,
-     "p_point": 30,
-     "p_assist": 13
+     "p_goal": 22,
+     "p_point": 45,
+     "p_assist": 29
     },
     {
-     "name": "Oliver Kapanen",
+     "name": "Mason McTavish",
      "pos": "Centre",
-     "cur": "1 but, 1 passe en 13",
-     "new": false,
-     "side": "a",
-     "team": "Montréal Canadiens",
-     "goals": 1,
-     "assists": 1,
-     "gp": 13,
-     "pid": 8482775,
+     "cur": "7 buts, 5 passes en 20",
+     "new": true,
+     "side": "h",
+     "team": "St. Louis Blues",
+     "goals": 7,
+     "assists": 5,
+     "gp": 20,
+     "pid": 8482745,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 1,
       "a": 1
      },
-     "p_goal": 17,
-     "p_point": 29,
-     "p_assist": 14
+     "p_goal": 22,
+     "p_point": 40,
+     "p_assist": 22
+    },
+    {
+     "name": "Pius Suter",
+     "pos": "Centre",
+     "cur": "5 buts, 4 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "St. Louis Blues",
+     "goals": 5,
+     "assists": 4,
+     "gp": 20,
+     "pid": 8480459,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 21,
+     "p_point": 40,
+     "p_assist": 23
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Cutter Gauthier",
+     "pos": "Ailier",
+     "cur": "18 buts, 7 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Anaheim Ducks",
+     "goals": 18,
+     "assists": 7,
+     "gp": 20,
+     "pid": 8483445,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 16,
+      "a": 3
+     },
+     "p_goal": 43,
+     "p_point": 58,
+     "p_assist": 26
+    },
+    {
+     "name": "Leo Carlsson",
+     "pos": "Centre",
+     "cur": "6 buts, 21 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Anaheim Ducks",
+     "goals": 6,
+     "assists": 21,
+     "gp": 21,
+     "pid": 8484153,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 11
+     },
+     "p_goal": 26,
+     "p_point": 58,
+     "p_assist": 43
+    },
+    {
+     "name": "Beckett Sennecke",
+     "pos": "Ailier",
+     "cur": "12 buts, 14 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Anaheim Ducks",
+     "goals": 12,
+     "assists": 14,
+     "gp": 21,
+     "pid": 8484762,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 6,
+      "a": 11
+     },
+     "p_goal": 25,
+     "p_point": 53,
+     "p_assist": 36
+    },
+    {
+     "name": "Mikael Granlund",
+     "pos": "Centre",
+     "cur": "7 buts, 17 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Anaheim Ducks",
+     "goals": 7,
+     "assists": 17,
+     "gp": 20,
+     "pid": 8475798,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 11
+     },
+     "p_goal": 24,
+     "p_point": 52,
+     "p_assist": 36
+    },
+    {
+     "name": "Troy Terry",
+     "pos": "Ailier",
+     "cur": "0 but, 1 passe en 3",
+     "new": false,
+     "side": "a",
+     "team": "Anaheim Ducks",
+     "goals": 0,
+     "assists": 1,
+     "gp": 3,
+     "pid": 8478873,
+     "l10": {
+      "n": 10,
+      "gp": 3,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 20,
+     "p_point": 50,
+     "p_assist": 37
+    },
+    {
+     "name": "Tristan Luneau",
+     "pos": "Défenseur",
+     "cur": "4 buts, 10 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Anaheim Ducks",
+     "goals": 4,
+     "assists": 10,
+     "gp": 21,
+     "pid": 8483482,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 6
+     },
+     "p_goal": 16,
+     "p_point": 42,
+     "p_assist": 29
     }
    ],
    "ctx": [
-    "New York Rangers : 64 buts marqués et 57 encaissés en 21 matchs.",
-    "Montréal Canadiens : 68 buts marqués et 61 encaissés en 20 matchs.",
+    "St. Louis Blues : 55 buts marqués et 59 encaissés en 20 matchs.",
+    "Anaheim Ducks : 79 buts marqués et 77 encaissés en 21 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Montréal Canadiens : Jacob Fowler (92,6 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 5 % de buts en moins.",
+    "Gardien probable de St. Louis Blues : Joel Hofer (92,1 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 4 % de buts en moins.",
+    "Gardien probable de Anaheim Ducks : Lukas Dostal (85,6 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 7 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "New York Rangers est favori (56 % en comptant la prolongation).",
-   "stakes": "New York Rangers est qualifié pour les séries s'ils commençaient ce soir. Montréal Canadiens est qualifié pour les séries s'ils commençaient ce soir.",
-   "espn_id": "401892726",
+   "reading": "St. Louis Blues est favori (56 % en comptant la prolongation).",
+   "stakes": "St. Louis Blues est hors des places en séries pour l'instant. Anaheim Ducks est qualifié pour les séries s'ils commençaient ce soir.",
+   "espn_id": "401892734",
    "picks": {
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6262,
-     "prob": 63,
-     "fair": 1.6,
+     "p": 0.6218,
+     "prob": 62,
+     "fair": 1.61,
      "stars": 3,
-     "why": "10 derniers matchs : New York Rangers 5 victoires · Montréal Canadiens 7"
+     "why": "10 derniers matchs : St. Louis Blues 4 victoires · Anaheim Ducks 6"
     },
     "winner": {
      "market": "win_h",
-     "label": "Victoire New York Rangers",
-     "p": 0.5632,
+     "label": "Victoire St. Louis Blues",
+     "p": 0.5622,
      "prob": 56,
      "fair": 1.78,
      "stars": 2
     },
     "fun": {
      "market": "h2",
-     "label": "New York Rangers gagne par 2 buts d'écart ou plus",
-     "p": 0.3643,
+     "label": "St. Louis Blues gagne par 2 buts d'écart ou plus",
+     "p": 0.3629,
      "prob": 36,
-     "fair": 2.74,
+     "fair": 2.76,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o55",
-      "label": "New York Rangers gagne et plus de 5,5 buts",
-      "p": 0.3568,
-      "prob": 36,
-      "fair": 2.8,
+      "label": "St. Louis Blues gagne et plus de 5,5 buts",
+      "p": 0.3536,
+      "prob": 35,
+      "fair": 2.83,
       "stars": 1
      },
      {
       "market": "wh_o65",
-      "label": "New York Rangers gagne et plus de 6,5 buts",
-      "p": 0.2932,
+      "label": "St. Louis Blues gagne et plus de 6,5 buts",
+      "p": 0.29,
       "prob": 29,
-      "fair": 3.41,
+      "fair": 3.45,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
-     "label": "Adam Fox : au moins 1 point",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "label": "Robert Thomas : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
      "stars": 3,
-     "player": "Adam Fox",
-     "pid": 8479323,
-     "team": "New York Rangers",
-     "why": "2 buts et 21 passes en 21 matchs · 10 derniers matchs : 2 buts, 11 passes · New York Rangers favori (56 %) · 3,4 buts attendus pour New York Rangers"
+     "player": "Robert Thomas",
+     "pid": 8480023,
+     "team": "St. Louis Blues",
+     "why": "3 buts et 11 passes en 20 matchs · 10 derniers matchs : 2 buts, 6 passes · St. Louis Blues favori (56 %) · 3,4 buts attendus pour St. Louis Blues"
     },
     "scorer": {
      "market": "goal",
-     "label": "Mika Zibanejad marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "label": "Jimmy Snuggerud marque",
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
      "stars": 1,
-     "player": "Mika Zibanejad",
-     "pid": 8476459,
-     "team": "New York Rangers",
-     "why": "5 buts et 14 passes en 21 matchs · 10 derniers matchs : 3 buts, 7 passes · New York Rangers favori (56 %) · 3,4 buts attendus pour New York Rangers"
+     "player": "Jimmy Snuggerud",
+     "pid": 8483516,
+     "team": "St. Louis Blues",
+     "why": "10 buts et 4 passes en 20 matchs · 10 derniers matchs : 4 buts, 2 passes · St. Louis Blues favori (56 %) · 3,4 buts attendus pour St. Louis Blues"
     }
    },
    "second": {
     "src": "marché des paris",
     "agree": true
    },
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg"
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg"
   },
   {
-   "id": "nhl-2026020332",
+   "id": "nhl-2026020340",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-11-17T02:30:00+00:00",
-   "time": "03:30",
+   "kickoff": "2026-11-18T01:00:00+00:00",
+   "time": "02:00",
    "state": "FUT",
    "score": null,
-   "home": "Utah Mammoth",
-   "away": "Vancouver Canucks",
-   "rec_h": "10-8-3 · 5e Central · 2 défaites en prolongation de suite",
-   "rec_a": "4-17-1 · 8e Pacific · 1 victoire de suite",
-   "winH": 80,
-   "winA": 20,
-   "pH": 74,
-   "pD": 11,
-   "pA": 15,
+   "home": "Minnesota Wild",
+   "away": "Nashville Predators",
+   "rec_h": "15-3-4 · 1e Central · 3 victoires de suite",
+   "rec_a": "11-5-5 · 3e Central · 1 défaite de suite",
+   "winH": 67,
+   "winA": 33,
+   "pH": 59,
+   "pD": 15,
+   "pA": 26,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 4.58,
-   "xgA": 2.35,
-   "total": 6.9,
+   "xgH": 3.63,
+   "xgA": 2.56,
+   "total": 6.2,
    "scores": [
+    "3-2",
     "4-2",
-    "5-2",
-    "3-2"
+    "3-1"
    ],
    "scorep": [
     5,
@@ -427,340 +3160,1147 @@
     4
    ],
    "goalie_h": {
-    "name": "Karel Vejmelka",
-    "starts": 14,
-    "shots": 344,
-    "saves": 300,
-    "sv": "87,2 % d'arrêts",
+    "name": "Jesper Wallstedt",
+    "starts": 19,
+    "shots": 500,
+    "saves": 463,
+    "sv": "92,6 % d'arrêts",
     "note": ""
    },
    "goalie_a": {
-    "name": "Kevin Lankinen",
-    "starts": 8,
-    "shots": 219,
-    "saves": 177,
-    "sv": "80,8 % d'arrêts",
-    "note": "le titulaire d'hier devrait souffler"
+    "name": "Juuse Saros",
+    "starts": 15,
+    "shots": 459,
+    "saves": 421,
+    "sv": "91,7 % d'arrêts",
+    "note": ""
    },
    "squad_h": [
     {
-     "name": "Clayton Keller",
+     "name": "Kirill Kaprizov",
      "pos": "Ailier",
-     "cur": "5 buts, 22 passes en 21",
+     "cur": "17 buts, 20 passes en 22",
      "new": false,
      "side": "h",
-     "team": "Utah Mammoth",
-     "goals": 5,
-     "assists": 22,
-     "gp": 21,
-     "pid": 8479343,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 12
-     },
-     "p_goal": 30,
-     "p_point": 76,
-     "p_assist": 65
-    },
-    {
-     "name": "Zac Jones",
-     "pos": "Défenseur",
-     "cur": "2 buts, 0 passe en 2",
-     "new": true,
-     "side": "h",
-     "team": "Utah Mammoth",
-     "goals": 2,
-     "assists": 0,
-     "gp": 2,
-     "pid": 8481708,
-     "l10": {
-      "n": 10,
-      "gp": 2,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 29,
-     "p_point": 47,
-     "p_assist": 21
-    },
-    {
-     "name": "Lawson Crouse",
-     "pos": "Ailier",
-     "cur": "2 buts, 5 passes en 21",
-     "new": false,
-     "side": "h",
-     "team": "Utah Mammoth",
-     "goals": 2,
-     "assists": 5,
-     "gp": 21,
-     "pid": 8478474,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 26,
-     "p_point": 47,
-     "p_assist": 28
-    },
-    {
-     "name": "Kailer Yamamoto",
-     "pos": "Ailier",
-     "cur": "3 buts, 7 passes en 12",
-     "new": false,
-     "side": "h",
-     "team": "Utah Mammoth",
-     "goals": 3,
-     "assists": 7,
-     "gp": 12,
-     "pid": 8479977,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 1,
-      "a": 3
-     },
-     "p_goal": 24,
-     "p_point": 47,
-     "p_assist": 29
-    },
-    {
-     "name": "Mikhail Sergachev",
-     "pos": "Défenseur",
-     "cur": "6 buts, 16 passes en 21",
-     "new": false,
-     "side": "h",
-     "team": "Utah Mammoth",
-     "goals": 6,
-     "assists": 16,
-     "gp": 21,
-     "pid": 8479410,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 6
-     },
-     "p_goal": 20,
-     "p_point": 65,
-     "p_assist": 55
-    },
-    {
-     "name": "Michael Carcone",
-     "pos": "Ailier",
-     "cur": "1 but, 2 passes en 12",
-     "new": false,
-     "side": "h",
-     "team": "Utah Mammoth",
-     "goals": 1,
-     "assists": 2,
-     "gp": 12,
-     "pid": 8479619,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 20,
-     "p_point": 39,
-     "p_assist": 23
-    }
-   ],
-   "squad_a": [
-    {
-     "name": "Brock Boeser",
-     "pos": "Ailier",
-     "cur": "7 buts, 13 passes en 22",
-     "new": false,
-     "side": "a",
-     "team": "Vancouver Canucks",
-     "goals": 7,
-     "assists": 13,
+     "team": "Minnesota Wild",
+     "goals": 17,
+     "assists": 20,
      "gp": 22,
-     "pid": 8478444,
+     "pid": 8478864,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 5,
-      "a": 7
+      "a": 13
      },
-     "p_goal": 22,
-     "p_point": 46,
-     "p_assist": 30
+     "p_goal": 44,
+     "p_point": 72,
+     "p_assist": 49
     },
     {
-     "name": "Jake DeBrusk",
+     "name": "Matt Boldy",
      "pos": "Ailier",
-     "cur": "5 buts, 5 passes en 20",
+     "cur": "10 buts, 11 passes en 22",
      "new": false,
-     "side": "a",
-     "team": "Vancouver Canucks",
-     "goals": 5,
+     "side": "h",
+     "team": "Minnesota Wild",
+     "goals": 10,
+     "assists": 11,
+     "gp": 22,
+     "pid": 8481557,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 6
+     },
+     "p_goal": 40,
+     "p_point": 65,
+     "p_assist": 42
+    },
+    {
+     "name": "Maxim Shabanov",
+     "pos": "Ailier",
+     "cur": "8 buts, 5 passes en 21",
+     "new": true,
+     "side": "h",
+     "team": "Minnesota Wild",
+     "goals": 8,
      "assists": 5,
-     "gp": 20,
-     "pid": 8478498,
+     "gp": 21,
+     "pid": 8485702,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 2,
+      "g": 6,
       "a": 1
      },
-     "p_goal": 20,
-     "p_point": 35,
-     "p_assist": 18
-    },
-    {
-     "name": "Jonathan Lekkerimäki",
-     "pos": "Ailier",
-     "cur": "7 buts, 9 passes en 22",
-     "new": false,
-     "side": "a",
-     "team": "Vancouver Canucks",
-     "goals": 7,
-     "assists": 9,
-     "gp": 22,
-     "pid": 8483476,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 4
-     },
-     "p_goal": 18,
-     "p_point": 37,
-     "p_assist": 22
-    },
-    {
-     "name": "Elias Pettersson",
-     "pos": "Centre",
-     "cur": "6 buts, 17 passes en 22",
-     "new": false,
-     "side": "a",
-     "team": "Vancouver Canucks",
-     "goals": 6,
-     "assists": 17,
-     "gp": 22,
-     "pid": 8480012,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 9
-     },
-     "p_goal": 16,
-     "p_point": 48,
-     "p_assist": 37
-    },
-    {
-     "name": "Linus Karlsson",
-     "pos": "Centre",
-     "cur": "6 buts, 6 passes en 22",
-     "new": false,
-     "side": "a",
-     "team": "Vancouver Canucks",
-     "goals": 6,
-     "assists": 6,
-     "gp": 22,
-     "pid": 8481024,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 16,
-     "p_point": 33,
+     "p_goal": 29,
+     "p_point": 44,
      "p_assist": 19
     },
     {
-     "name": "Liam Ohgren",
+     "name": "Joel Eriksson Ek",
+     "pos": "Centre",
+     "cur": "6 buts, 11 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Minnesota Wild",
+     "goals": 6,
+     "assists": 11,
+     "gp": 22,
+     "pid": 8478493,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 5
+     },
+     "p_goal": 24,
+     "p_point": 53,
+     "p_assist": 37
+    },
+    {
+     "name": "Ryan Hartman",
      "pos": "Ailier",
-     "cur": "6 buts, 4 passes en 21",
+     "cur": "3 buts, 4 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Minnesota Wild",
+     "goals": 3,
+     "assists": 4,
+     "gp": 22,
+     "pid": 8477451,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 23,
+     "p_point": 41,
+     "p_assist": 23
+    },
+    {
+     "name": "Danila Yurov",
+     "pos": "Ailier",
+     "cur": "9 buts, 2 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Minnesota Wild",
+     "goals": 9,
+     "assists": 2,
+     "gp": 22,
+     "pid": 8483525,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 1
+     },
+     "p_goal": 22,
+     "p_point": 36,
+     "p_assist": 18
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Steven Stamkos",
+     "pos": "Centre",
+     "cur": "12 buts, 10 passes en 21",
      "new": false,
      "side": "a",
-     "team": "Vancouver Canucks",
-     "goals": 6,
-     "assists": 4,
+     "team": "Nashville Predators",
+     "goals": 12,
+     "assists": 10,
      "gp": 21,
-     "pid": 8483499,
+     "pid": 8474564,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 33,
+     "p_point": 49,
+     "p_assist": 23
+    },
+    {
+     "name": "Filip Forsberg",
+     "pos": "Ailier",
+     "cur": "7 buts, 16 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Nashville Predators",
+     "goals": 7,
+     "assists": 16,
+     "gp": 21,
+     "pid": 8476887,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 6
+     },
+     "p_goal": 30,
+     "p_point": 53,
+     "p_assist": 33
+    },
+    {
+     "name": "Ryan O'Reilly",
+     "pos": "Centre",
+     "cur": "9 buts, 11 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Nashville Predators",
+     "goals": 9,
+     "assists": 11,
+     "gp": 21,
+     "pid": 8475158,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 5
+     },
+     "p_goal": 22,
+     "p_point": 51,
+     "p_assist": 36
+    },
+    {
+     "name": "Ross Colton",
+     "pos": "Centre",
+     "cur": "5 buts, 3 passes en 21",
+     "new": true,
+     "side": "a",
+     "team": "Nashville Predators",
+     "goals": 5,
+     "assists": 3,
+     "gp": 21,
+     "pid": 8479525,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 4,
       "a": 1
      },
+     "p_goal": 17,
+     "p_point": 29,
+     "p_assist": 13
+    },
+    {
+     "name": "Adam Edstrom",
+     "pos": "Centre",
+     "cur": "6 buts, 1 passe en 21",
+     "new": true,
+     "side": "a",
+     "team": "Nashville Predators",
+     "goals": 6,
+     "assists": 1,
+     "gp": 21,
+     "pid": 8481726,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 1
+     },
      "p_goal": 16,
-     "p_point": 30,
-     "p_assist": 15
+     "p_point": 25,
+     "p_assist": 10
+    },
+    {
+     "name": "Nils Hoglander",
+     "pos": "Ailier",
+     "cur": "5 buts, 5 passes en 21",
+     "new": true,
+     "side": "a",
+     "team": "Nashville Predators",
+     "goals": 5,
+     "assists": 5,
+     "gp": 21,
+     "pid": 8481535,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 4
+     },
+     "p_goal": 14,
+     "p_point": 32,
+     "p_assist": 20
     }
    ],
    "ctx": [
-    "Utah Mammoth : 71 buts marqués et 75 encaissés en 21 matchs.",
-    "Vancouver Canucks : 63 buts marqués et 98 encaissés en 22 matchs.",
-    "Vancouver Canucks a joué hier soir : deuxième match en deux soirs, fatigue probable.",
-    "Gardien probable de Utah Mammoth : Karel Vejmelka (87,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
-    "Gardien probable de Vancouver Canucks : Kevin Lankinen (80,8 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 12 % de buts en plus.",
+    "Minnesota Wild : 76 buts marqués et 48 encaissés en 22 matchs.",
+    "Nashville Predators : 64 buts marqués et 59 encaissés en 21 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Gardien probable de Minnesota Wild : Jesper Wallstedt (92,6 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 6 % de buts en moins.",
+    "Gardien probable de Nashville Predators : Juuse Saros (91,7 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 4 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
-   "reading": "Utah Mammoth est nettement favori (80 % en comptant la prolongation).",
-   "stakes": "Utah Mammoth est qualifié pour les séries s'ils commençaient ce soir. Vancouver Canucks est hors des places en séries pour l'instant.",
-   "espn_id": "401892727",
+   "reading": "Minnesota Wild est nettement favori (67 % en comptant la prolongation).",
+   "stakes": "Match de division (Central) : battre un rival direct compte double au classement. Minnesota Wild est qualifié pour les séries s'ils commençaient ce soir. Nashville Predators est qualifié pour les séries s'ils commençaient ce soir.",
+   "espn_id": "401892735",
    "picks": {
     "main": {
      "market": "win_h",
-     "label": "Victoire Utah Mammoth",
-     "p": 0.8022,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 5,
-     "why": "10 derniers matchs : Utah Mammoth 3 victoires · Vancouver Canucks 2"
+     "label": "Victoire Minnesota Wild",
+     "p": 0.6662,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "10 derniers matchs : Minnesota Wild 8 victoires · Nashville Predators 7"
     },
     "winner": {
      "market": "win_h",
-     "label": "Victoire Utah Mammoth",
-     "p": 0.8022,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 5,
-     "why": "10 derniers matchs : Utah Mammoth 3 victoires · Vancouver Canucks 2"
+     "label": "Victoire Minnesota Wild",
+     "p": 0.6662,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
+     "why": "10 derniers matchs : Minnesota Wild 8 victoires · Nashville Predators 7"
     },
+    "fun": {
+     "market": "wh_o55",
+     "label": "Minnesota Wild gagne et plus de 5,5 buts",
+     "p": 0.4005,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wh_o65",
+      "label": "Minnesota Wild gagne et plus de 6,5 buts",
+      "p": 0.3178,
+      "prob": 32,
+      "fair": 3.15,
+      "stars": 1
+     },
+     {
+      "market": "h3",
+      "label": "Minnesota Wild gagne par 3 buts d'écart ou plus",
+      "p": 0.2885,
+      "prob": 29,
+      "fair": 3.47,
+      "stars": 1
+     }
+    ],
     "player": {
      "market": "point",
-     "label": "Clayton Keller : au moins 1 point",
-     "p": 0.76,
-     "prob": 76,
-     "fair": 1.32,
+     "label": "Kirill Kaprizov : au moins 1 point",
+     "p": 0.72,
+     "prob": 72,
+     "fair": 1.39,
      "stars": 4,
-     "player": "Clayton Keller",
-     "pid": 8479343,
-     "team": "Utah Mammoth",
-     "why": "5 buts et 22 passes en 21 matchs · 10 derniers matchs : 1 but, 12 passes · Utah Mammoth favori (80 %) · 4,6 buts attendus pour Utah Mammoth"
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild",
+     "why": "17 buts et 20 passes en 22 matchs · 10 derniers matchs : 5 buts, 13 passes · Minnesota Wild favori (67 %) · 3,6 buts attendus pour Minnesota Wild"
     },
     "scorer": {
      "market": "goal",
-     "label": "Clayton Keller marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "label": "Kirill Kaprizov marque",
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
-     "player": "Clayton Keller",
-     "pid": 8479343,
-     "team": "Utah Mammoth",
-     "why": "5 buts et 22 passes en 21 matchs · 10 derniers matchs : 1 but, 12 passes · Utah Mammoth favori (80 %) · 4,6 buts attendus pour Utah Mammoth"
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild",
+     "why": "17 buts et 20 passes en 22 matchs · 10 derniers matchs : 5 buts, 13 passes · Minnesota Wild favori (67 %) · 3,6 buts attendus pour Minnesota Wild"
     }
    },
    "second": {
     "src": "marché des paris",
     "agree": true
    },
-   "logo_h": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-   "logo_a": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg",
-   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg"
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/NSH_dark.svg"
+  },
+  {
+   "id": "nhl-2026020342",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T03:00:00+00:00",
+   "time": "04:00",
+   "state": "FUT",
+   "score": null,
+   "home": "Vegas Golden Knights",
+   "away": "Dallas Stars",
+   "rec_h": "13-6-3 · 2e Pacific · 1 défaite de suite",
+   "rec_a": "12-6-2 · 4e Central · 2 victoires de suite",
+   "winH": 56,
+   "winA": 44,
+   "pH": 47,
+   "pD": 17,
+   "pA": 36,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.02,
+   "xgA": 2.68,
+   "total": 5.7,
+   "scores": [
+    "3-2",
+    "2-3",
+    "4-2"
+   ],
+   "scorep": [
+    6,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Carter Hart",
+    "starts": 12,
+    "shots": 294,
+    "saves": 261,
+    "sv": "88,8 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Jake Oettinger",
+    "starts": 15,
+    "shots": 326,
+    "saves": 294,
+    "sv": "90,2 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Mark Stone",
+     "pos": "Ailier",
+     "cur": "11 buts, 10 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Vegas Golden Knights",
+     "goals": 11,
+     "assists": 10,
+     "gp": 22,
+     "pid": 8475913,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 31,
+     "p_point": 59,
+     "p_assist": 40
+    },
+    {
+     "name": "Victor Olofsson",
+     "pos": "Ailier",
+     "cur": "7 buts, 4 passes en 9",
+     "new": true,
+     "side": "h",
+     "team": "Vegas Golden Knights",
+     "goals": 7,
+     "assists": 4,
+     "gp": 9,
+     "pid": 8478109,
+     "l10": {
+      "n": 10,
+      "gp": 5,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 28,
+     "p_point": 48,
+     "p_assist": 26
+    },
+    {
+     "name": "Jack Eichel",
+     "pos": "Centre",
+     "cur": "9 buts, 18 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Vegas Golden Knights",
+     "goals": 9,
+     "assists": 18,
+     "gp": 22,
+     "pid": 8478403,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 5
+     },
+     "p_goal": 26,
+     "p_point": 62,
+     "p_assist": 49
+    },
+    {
+     "name": "Tomas Hertl",
+     "pos": "Centre",
+     "cur": "9 buts, 8 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Vegas Golden Knights",
+     "goals": 9,
+     "assists": 8,
+     "gp": 22,
+     "pid": 8476881,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 5
+     },
+     "p_goal": 24,
+     "p_point": 47,
+     "p_assist": 30
+    },
+    {
+     "name": "Ivan Barbashev",
+     "pos": "Ailier",
+     "cur": "4 buts, 12 passes en 22",
+     "new": false,
+     "side": "h",
+     "team": "Vegas Golden Knights",
+     "goals": 4,
+     "assists": 12,
+     "gp": 22,
+     "pid": 8477964,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 4
+     },
+     "p_goal": 20,
+     "p_point": 47,
+     "p_assist": 33
+    },
+    {
+     "name": "Mitch Marner",
+     "pos": "Ailier",
+     "cur": "3 buts, 23 passes en 20",
+     "new": false,
+     "side": "h",
+     "team": "Vegas Golden Knights",
+     "goals": 3,
+     "assists": 23,
+     "gp": 20,
+     "pid": 8478483,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 13
+     },
+     "p_goal": 19,
+     "p_point": 60,
+     "p_assist": 50
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Jason Robertson",
+     "pos": "Ailier",
+     "cur": "10 buts, 12 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Dallas Stars",
+     "goals": 10,
+     "assists": 12,
+     "gp": 20,
+     "pid": 8480027,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 7,
+      "a": 4
+     },
+     "p_goal": 33,
+     "p_point": 57,
+     "p_assist": 36
+    },
+    {
+     "name": "Wyatt Johnston",
+     "pos": "Centre",
+     "cur": "5 buts, 13 passes en 18",
+     "new": false,
+     "side": "a",
+     "team": "Dallas Stars",
+     "goals": 5,
+     "assists": 13,
+     "gp": 18,
+     "pid": 8482740,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 8
+     },
+     "p_goal": 30,
+     "p_point": 54,
+     "p_assist": 34
+    },
+    {
+     "name": "Mikko Rantanen",
+     "pos": "Ailier",
+     "cur": "9 buts, 13 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Dallas Stars",
+     "goals": 9,
+     "assists": 13,
+     "gp": 20,
+     "pid": 8478420,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 5
+     },
+     "p_goal": 24,
+     "p_point": 57,
+     "p_assist": 43
+    },
+    {
+     "name": "Roope Hintz",
+     "pos": "Centre",
+     "cur": "8 buts, 11 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Dallas Stars",
+     "goals": 8,
+     "assists": 11,
+     "gp": 20,
+     "pid": 8478449,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 8
+     },
+     "p_goal": 20,
+     "p_point": 48,
+     "p_assist": 34
+    },
+    {
+     "name": "Jamie Benn",
+     "pos": "Ailier",
+     "cur": "4 buts, 4 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Dallas Stars",
+     "goals": 4,
+     "assists": 4,
+     "gp": 20,
+     "pid": 8473994,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 17,
+     "p_point": 35,
+     "p_assist": 21
+    },
+    {
+     "name": "Tyler Seguin",
+     "pos": "Centre",
+     "cur": "3 buts, 3 passes en 20",
+     "new": false,
+     "side": "a",
+     "team": "Dallas Stars",
+     "goals": 3,
+     "assists": 3,
+     "gp": 20,
+     "pid": 8475794,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 13,
+     "p_point": 29,
+     "p_assist": 18
+    }
+   ],
+   "ctx": [
+    "Vegas Golden Knights : 74 buts marqués et 63 encaissés en 22 matchs.",
+    "Dallas Stars : 56 buts marqués et 50 encaissés en 20 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Vegas Golden Knights est favori (56 % en comptant la prolongation).",
+   "stakes": "Vegas Golden Knights est qualifié pour les séries s'ils commençaient ce soir. Dallas Stars est qualifié pour les séries s'ils commençaient ce soir.",
+   "espn_id": "401892737",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire Vegas Golden Knights",
+     "p": 0.5599,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "why": "10 derniers matchs : Vegas Golden Knights 5 victoires · Dallas Stars 6"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Vegas Golden Knights",
+     "p": 0.5599,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "why": "10 derniers matchs : Vegas Golden Knights 5 victoires · Dallas Stars 6"
+    },
+    "fun": {
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.3947,
+     "prob": 39,
+     "fair": 2.53,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "h2",
+      "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
+      "p": 0.3489,
+      "prob": 35,
+      "fair": 2.87,
+      "stars": 1
+     },
+     {
+      "market": "wh_o55",
+      "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
+      "p": 0.2874,
+      "prob": 29,
+      "fair": 3.48,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Jack Eichel : au moins 1 point",
+     "p": 0.62,
+     "prob": 62,
+     "fair": 1.61,
+     "stars": 3,
+     "player": "Jack Eichel",
+     "pid": 8478403,
+     "team": "Vegas Golden Knights",
+     "why": "9 buts et 18 passes en 22 matchs · 10 derniers matchs : 3 buts, 5 passes · Vegas Golden Knights favori (56 %) · 3,0 buts attendus pour Vegas Golden Knights"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Mark Stone marque",
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
+     "stars": 1,
+     "player": "Mark Stone",
+     "pid": 8475913,
+     "team": "Vegas Golden Knights",
+     "why": "11 buts et 10 passes en 22 matchs · 10 derniers matchs : 3 buts, 3 passes · Vegas Golden Knights favori (56 %) · 3,0 buts attendus pour Vegas Golden Knights"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/DAL_dark.svg"
+  },
+  {
+   "id": "nhl-2026020343",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-18T03:00:00+00:00",
+   "time": "04:00",
+   "state": "FUT",
+   "score": null,
+   "home": "San Jose Sharks",
+   "away": "Calgary Flames",
+   "rec_h": "10-11-2 · 4e Pacific · 2 victoires de suite",
+   "rec_a": "9-11-1 · 6e Pacific · 1 défaite de suite",
+   "winH": 51,
+   "winA": 49,
+   "pH": 43,
+   "pD": 16,
+   "pA": 41,
+   "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
+   "xgH": 3.15,
+   "xgA": 3.09,
+   "total": 6.2,
+   "scores": [
+    "3-2",
+    "2-3",
+    "4-3"
+   ],
+   "scorep": [
+    5,
+    5,
+    4
+   ],
+   "goalie_h": {
+    "name": "Yaroslav Askarov",
+    "starts": 15,
+    "shots": 447,
+    "saves": 398,
+    "sv": "89,0 % d'arrêts",
+    "note": ""
+   },
+   "goalie_a": {
+    "name": "Devin Cooley",
+    "starts": 10,
+    "shots": 288,
+    "saves": 261,
+    "sv": "90,6 % d'arrêts",
+    "note": ""
+   },
+   "squad_h": [
+    {
+     "name": "Macklin Celebrini",
+     "pos": "Centre",
+     "cur": "9 buts, 18 passes en 21",
+     "new": false,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 9,
+     "assists": 18,
+     "gp": 21,
+     "pid": 8484801,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 8
+     },
+     "p_goal": 38,
+     "p_point": 72,
+     "p_assist": 55
+    },
+    {
+     "name": "Will Smith",
+     "pos": "Centre",
+     "cur": "8 buts, 10 passes en 23",
+     "new": false,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 8,
+     "assists": 10,
+     "gp": 23,
+     "pid": 8484227,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 6
+     },
+     "p_goal": 28,
+     "p_point": 56,
+     "p_assist": 38
+    },
+    {
+     "name": "Ivar Stenberg",
+     "pos": "Ailier",
+     "cur": "7 buts, 7 passes en 23",
+     "new": true,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 7,
+     "assists": 7,
+     "gp": 23,
+     "pid": 8486103,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 1
+     },
+     "p_goal": 23,
+     "p_point": 41,
+     "p_assist": 21
+    },
+    {
+     "name": "Tyler Toffoli",
+     "pos": "Centre",
+     "cur": "6 buts, 7 passes en 23",
+     "new": false,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 6,
+     "assists": 7,
+     "gp": 23,
+     "pid": 8475726,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 21,
+     "p_point": 44,
+     "p_assist": 29
+    },
+    {
+     "name": "Adam Gaudette",
+     "pos": "Ailier",
+     "cur": "1 but, 0 passe en 8",
+     "new": false,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 1,
+     "assists": 0,
+     "gp": 8,
+     "pid": 8478874,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 20,
+     "p_point": 30,
+     "p_assist": 12
+    },
+    {
+     "name": "Collin Graf",
+     "pos": "Ailier",
+     "cur": "3 buts, 2 passes en 23",
+     "new": false,
+     "side": "h",
+     "team": "San Jose Sharks",
+     "goals": 3,
+     "assists": 2,
+     "gp": 23,
+     "pid": 8484911,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 19,
+     "p_point": 38,
+     "p_assist": 22
+    }
+   ],
+   "squad_a": [
+    {
+     "name": "Joel Farabee",
+     "pos": "Ailier",
+     "cur": "7 buts, 10 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Calgary Flames",
+     "goals": 7,
+     "assists": 10,
+     "gp": 21,
+     "pid": 8480797,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 4,
+      "a": 2
+     },
+     "p_goal": 26,
+     "p_point": 47,
+     "p_assist": 27
+    },
+    {
+     "name": "Morgan Frost",
+     "pos": "Centre",
+     "cur": "5 buts, 8 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Calgary Flames",
+     "goals": 5,
+     "assists": 8,
+     "gp": 21,
+     "pid": 8480028,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 4
+     },
+     "p_goal": 25,
+     "p_point": 47,
+     "p_assist": 29
+    },
+    {
+     "name": "Matt Coronato",
+     "pos": "Ailier",
+     "cur": "4 buts, 11 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Calgary Flames",
+     "goals": 4,
+     "assists": 11,
+     "gp": 21,
+     "pid": 8482679,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 22,
+     "p_point": 49,
+     "p_assist": 34
+    },
+    {
+     "name": "Matvei Gridin",
+     "pos": "Ailier",
+     "cur": "6 buts, 7 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Calgary Flames",
+     "goals": 6,
+     "assists": 7,
+     "gp": 21,
+     "pid": 8484860,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 20,
+     "p_point": 47,
+     "p_assist": 32
+    },
+    {
+     "name": "Yegor Sharangovich",
+     "pos": "Centre",
+     "cur": "4 buts, 6 passes en 21",
+     "new": false,
+     "side": "a",
+     "team": "Calgary Flames",
+     "goals": 4,
+     "assists": 6,
+     "gp": 21,
+     "pid": 8481068,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 4
+     },
+     "p_goal": 20,
+     "p_point": 39,
+     "p_assist": 23
+    },
+    {
+     "name": "Mikael Backlund",
+     "pos": "Centre",
+     "cur": "3 buts, 3 passes en 19",
+     "new": false,
+     "side": "a",
+     "team": "Calgary Flames",
+     "goals": 3,
+     "assists": 3,
+     "gp": 19,
+     "pid": 8474150,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 19,
+     "p_point": 42,
+     "p_assist": 28
+    }
+   ],
+   "ctx": [
+    "San Jose Sharks : 63 buts marqués et 81 encaissés en 23 matchs.",
+    "Calgary Flames : 51 buts marqués et 74 encaissés en 21 matchs.",
+    "Aucune des deux équipes n'a joué hier.",
+    "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
+   ],
+   "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
+   "stakes": "Match de division (Pacific) : battre un rival direct compte double au classement. San Jose Sharks est hors des places en séries pour l'instant. Calgary Flames est hors des places en séries pour l'instant.",
+   "espn_id": "401892738",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5916,
+     "prob": 59,
+     "fair": 1.69,
+     "stars": 2,
+     "why": "10 derniers matchs : San Jose Sharks 4 victoires · Calgary Flames 4"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire San Jose Sharks",
+     "p": 0.5126,
+     "prob": 51,
+     "fair": 1.95,
+     "stars": 2
+    },
+    "fun": {
+     "market": "h2",
+     "label": "San Jose Sharks gagne par 2 buts d'écart ou plus",
+     "p": 0.3143,
+     "prob": 31,
+     "fair": 3.18,
+     "stars": 1
+    },
+    "fun_alt": [
+     {
+      "market": "wh_o55",
+      "label": "San Jose Sharks gagne et plus de 5,5 buts",
+      "p": 0.3038,
+      "prob": 30,
+      "fair": 3.29,
+      "stars": 1
+     },
+     {
+      "market": "wh_o65",
+      "label": "San Jose Sharks gagne et plus de 6,5 buts",
+      "p": 0.2474,
+      "prob": 25,
+      "fair": 4.04,
+      "stars": 1
+     }
+    ],
+    "player": {
+     "market": "point",
+     "label": "Macklin Celebrini : au moins 1 point",
+     "p": 0.72,
+     "prob": 72,
+     "fair": 1.39,
+     "stars": 4,
+     "player": "Macklin Celebrini",
+     "pid": 8484801,
+     "team": "San Jose Sharks",
+     "why": "9 buts et 18 passes en 21 matchs · 10 derniers matchs : 4 buts, 8 passes · San Jose Sharks favori (51 %) · 3,1 buts attendus pour San Jose Sharks"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Macklin Celebrini marque",
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1,
+     "player": "Macklin Celebrini",
+     "pid": 8484801,
+     "team": "San Jose Sharks",
+     "why": "9 buts et 18 passes en 21 matchs · 10 derniers matchs : 4 buts, 8 passes · San Jose Sharks favori (51 %) · 3,1 buts attendus pour San Jose Sharks"
+    }
+   },
+   "second": {
+    "src": "marché des paris",
+    "agree": true
+   },
+   "logo_h": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+   "logo_a": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+   "logo_h_dark": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg",
+   "logo_a_dark": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg"
   }
  ],
  "bilan": {
@@ -815,20 +4355,20 @@
    ]
   },
   "nhl": {
-   "n": 247,
+   "n": 249,
    "fav_rate": 63,
    "fav_expected": 59,
-   "brier": 0.457,
+   "brier": 0.46,
    "brier_naive": 0.5,
    "vs_mkt": {
-    "n": 144,
-    "model": 0.453,
-    "mkt": 0.452
+    "n": 146,
+    "model": 0.458,
+    "mkt": 0.457
    },
    "bins": [
     {
      "range": "50-60 %",
-     "n": 151,
+     "n": 152,
      "announced": 55,
      "actual": 58
     },
@@ -846,21 +4386,21 @@
     },
     {
      "range": "80-90 %",
-     "n": 1,
-     "announced": 83,
-     "actual": 100
+     "n": 2,
+     "announced": 81,
+     "actual": 50
     }
    ]
   },
   "picks": {
-   "n": 1658,
+   "n": 1665,
    "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1658,
-     "ok": 908,
+     "n": 1665,
+     "ok": 911,
      "rate": 55,
      "expected": 52
     },
@@ -871,17 +4411,17 @@
      "expected": 50
     },
     "nhl": {
-     "n": 690,
-     "ok": 398,
+     "n": 697,
+     "ok": 401,
      "rate": 58,
      "expected": 55
     }
    },
    "fun": {
     "all": {
-     "n": 653,
-     "ok": 186,
-     "rate": 28,
+     "n": 654,
+     "ok": 187,
+     "rate": 29,
      "expected": 28
     },
     "foot": {
@@ -891,13 +4431,50 @@
      "expected": 24
     },
     "nhl": {
-     "n": 191,
-     "ok": 84,
+     "n": 192,
+     "ok": 85,
      "rate": 44,
-     "expected": 39
+     "expected": 38
     }
    },
    "days": [
+    {
+     "date": "2026-11-17",
+     "all": {
+      "n": 7,
+      "ok": 3,
+      "rate": 43,
+      "expected": 58
+     },
+     "foot": {
+      "n": 0,
+      "ok": 0
+     },
+     "nhl": {
+      "n": 7,
+      "ok": 3,
+      "rate": 43,
+      "expected": 58
+     },
+     "fun": {
+      "all": {
+       "n": 1,
+       "ok": 1,
+       "rate": 100,
+       "expected": 36
+      },
+      "foot": {
+       "n": 0,
+       "ok": 0
+      },
+      "nhl": {
+       "n": 1,
+       "ok": 1,
+       "rate": 100,
+       "expected": 36
+      }
+     }
+    },
     {
      "date": "2026-11-16",
      "all": {
@@ -2155,8 +5732,8 @@
     {
      "sport": "nhl",
      "league": "NHL",
-     "n": 690,
-     "ok": 398,
+     "n": 697,
+     "ok": 401,
      "rate": 58,
      "expected": 55
     }
@@ -2164,36 +5741,140 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 721,
+     "n": 723,
      "announced": 35,
      "actual": 34
     },
     {
      "stars": 2,
-     "n": 286,
+     "n": 287,
      "announced": 55,
      "actual": 57
     },
     {
      "stars": 3,
-     "n": 374,
+     "n": 376,
      "announced": 65,
      "actual": 72
     },
     {
      "stars": 4,
-     "n": 182,
+     "n": 183,
      "announced": 74,
      "actual": 81
     },
     {
      "stars": 5,
-     "n": 95,
+     "n": 96,
      "announced": 86,
      "actual": 88
     }
    ],
    "details": [
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020332",
+     "score": "2-3",
+     "match": "Utah Mammoth – Vancouver Canucks",
+     "label": "Victoire Utah Mammoth",
+     "prob": 80,
+     "stars": 5,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020332",
+     "score": "2-3",
+     "match": "Utah Mammoth – Vancouver Canucks",
+     "label": "Clayton Keller : au moins 1 point",
+     "prob": 76,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020332",
+     "score": "2-3",
+     "match": "Utah Mammoth – Vancouver Canucks",
+     "label": "Clayton Keller marque",
+     "prob": 30,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020331",
+     "score": "3-1",
+     "match": "New York Rangers – Montréal Canadiens",
+     "label": "Plus de 5,5 buts",
+     "prob": 63,
+     "stars": 3,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020331",
+     "score": "3-1",
+     "match": "New York Rangers – Montréal Canadiens",
+     "label": "Victoire New York Rangers",
+     "prob": 56,
+     "stars": 2,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020331",
+     "score": "3-1",
+     "match": "New York Rangers – Montréal Canadiens",
+     "label": "Adam Fox : au moins 1 point",
+     "prob": 66,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020331",
+     "score": "3-1",
+     "match": "New York Rangers – Montréal Canadiens",
+     "label": "Mika Zibanejad marque",
+     "prob": 33,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-17",
+     "sport": "nhl",
+     "league": "NHL",
+     "mid": "nhl-2026020331",
+     "score": "3-1",
+     "match": "New York Rangers – Montréal Canadiens",
+     "label": "New York Rangers gagne par 2 buts d'écart ou plus",
+     "prob": 36,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
     {
      "date": "2026-11-16",
      "sport": "nhl",
@@ -31300,942 +34981,6 @@
      "stars": 3,
      "ok": false,
      "fun": true
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020134",
-     "score": "6-2",
-     "match": "Vegas Golden Knights – Pittsburgh Penguins",
-     "label": "Victoire Vegas Golden Knights",
-     "prob": 64,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020134",
-     "score": "6-2",
-     "match": "Vegas Golden Knights – Pittsburgh Penguins",
-     "label": "Jack Eichel : au moins 1 point",
-     "prob": 70,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020134",
-     "score": "6-2",
-     "match": "Vegas Golden Knights – Pittsburgh Penguins",
-     "label": "Mark Stone marque",
-     "prob": 36,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020133",
-     "score": "2-6",
-     "match": "Utah Mammoth – Edmonton Oilers",
-     "label": "Plus de 5,5 buts",
-     "prob": 60,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020133",
-     "score": "2-6",
-     "match": "Utah Mammoth – Edmonton Oilers",
-     "label": "Victoire Utah Mammoth",
-     "prob": 56,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020133",
-     "score": "2-6",
-     "match": "Utah Mammoth – Edmonton Oilers",
-     "label": "Connor McDavid : au moins 1 point",
-     "prob": 72,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020133",
-     "score": "2-6",
-     "match": "Utah Mammoth – Edmonton Oilers",
-     "label": "Dylan Guenther marque",
-     "prob": 35,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874771",
-     "score": "0-3",
-     "match": "Udinese – Lecce",
-     "label": "Udinese ou nul",
-     "prob": 79,
-     "stars": 4,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874771",
-     "score": "0-3",
-     "match": "Udinese – Lecce",
-     "label": "Victoire Udinese",
-     "prob": 52,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874771",
-     "score": "0-3",
-     "match": "Udinese – Lecce",
-     "label": "Jurgen Ekkelenkamp marque",
-     "prob": 27,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882839",
-     "score": "4-1",
-     "match": "Real Madrid – Sevilla",
-     "label": "Real Madrid ou nul",
-     "prob": 91,
-     "stars": 5,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882839",
-     "score": "4-1",
-     "match": "Real Madrid – Sevilla",
-     "label": "Victoire Real Madrid",
-     "prob": 77,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882839",
-     "score": "4-1",
-     "match": "Real Madrid – Sevilla",
-     "label": "Kylian Mbappé marque",
-     "prob": 60,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876433",
-     "score": "4-3",
-     "match": "Paris FC – Rennes",
-     "label": "Paris FC ou nul",
-     "prob": 72,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876433",
-     "score": "4-3",
-     "match": "Paris FC – Rennes",
-     "label": "Victoire Paris FC",
-     "prob": 46,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876433",
-     "score": "4-3",
-     "match": "Paris FC – Rennes",
-     "label": "Lassine Sinayoko marque",
-     "prob": 40,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882840",
-     "score": "2-0",
-     "match": "Osasuna – Racing",
-     "label": "Osasuna ou nul",
-     "prob": 74,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882840",
-     "score": "2-0",
-     "match": "Osasuna – Racing",
-     "label": "Victoire Osasuna",
-     "prob": 49,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882840",
-     "score": "2-0",
-     "match": "Osasuna – Racing",
-     "label": "Ante Budimir marque",
-     "prob": 51,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401878769",
-     "score": "0-1",
-     "match": "Nottm Forest – Arsenal",
-     "label": "Nul ou Arsenal",
-     "prob": 86,
-     "stars": 5,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401878769",
-     "score": "0-1",
-     "match": "Nottm Forest – Arsenal",
-     "label": "Victoire Arsenal",
-     "prob": 63,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401878769",
-     "score": "0-1",
-     "match": "Nottm Forest – Arsenal",
-     "label": "Bukayo Saka marque",
-     "prob": 36,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882841",
-     "score": "2-5",
-     "match": "Málaga – Real Sociedad",
-     "label": "Nul ou Real Sociedad",
-     "prob": 72,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882841",
-     "score": "2-5",
-     "match": "Málaga – Real Sociedad",
-     "label": "Victoire Real Sociedad",
-     "prob": 46,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882841",
-     "score": "2-5",
-     "match": "Málaga – Real Sociedad",
-     "label": "Luka Sucic marque",
-     "prob": 23,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020135",
-     "score": "2-1",
-     "match": "Minnesota Wild – Columbus Blue Jackets",
-     "label": "Victoire Minnesota Wild",
-     "prob": 63,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020135",
-     "score": "2-1",
-     "match": "Minnesota Wild – Columbus Blue Jackets",
-     "label": "Kirill Kaprizov : au moins 1 point",
-     "prob": 68,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020135",
-     "score": "2-1",
-     "match": "Minnesota Wild – Columbus Blue Jackets",
-     "label": "Kirill Kaprizov marque",
-     "prob": 44,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020135",
-     "score": "2-1",
-     "match": "Minnesota Wild – Columbus Blue Jackets",
-     "label": "Plus de 5,5 buts",
-     "prob": 60,
-     "stars": 3,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874978",
-     "score": "3-2",
-     "match": "Milan – Atalanta",
-     "label": "Milan ou nul",
-     "prob": 80,
-     "stars": 5,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874978",
-     "score": "3-2",
-     "match": "Milan – Atalanta",
-     "label": "Victoire Milan",
-     "prob": 56,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874978",
-     "score": "3-2",
-     "match": "Milan – Atalanta",
-     "label": "Diego Moreira marque",
-     "prob": 29,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876434",
-     "score": "2-1",
-     "match": "Lyon – Nice",
-     "label": "Lyon ou nul",
-     "prob": 76,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876434",
-     "score": "2-1",
-     "match": "Lyon – Nice",
-     "label": "Victoire Lyon",
-     "prob": 52,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876434",
-     "score": "2-1",
-     "match": "Lyon – Nice",
-     "label": "Ernest Nuamah marque",
-     "prob": 32,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020132",
-     "score": "1-4",
-     "match": "Los Angeles Kings – Boston Bruins",
-     "label": "Moins de 5,5 buts",
-     "prob": 56,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020132",
-     "score": "1-4",
-     "match": "Los Angeles Kings – Boston Bruins",
-     "label": "Victoire Los Angeles Kings",
-     "prob": 55,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020132",
-     "score": "1-4",
-     "match": "Los Angeles Kings – Boston Bruins",
-     "label": "David Pastrnak : au moins 1 point",
-     "prob": 57,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020132",
-     "score": "1-4",
-     "match": "Los Angeles Kings – Boston Bruins",
-     "label": "Adrian Kempe marque",
-     "prob": 32,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876435",
-     "score": "1-0",
-     "match": "Lorient – Monaco",
-     "label": "Nul ou Monaco",
-     "prob": 75,
-     "stars": 4,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876435",
-     "score": "1-0",
-     "match": "Lorient – Monaco",
-     "label": "Victoire Monaco",
-     "prob": 48,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876435",
-     "score": "1-0",
-     "match": "Lorient – Monaco",
-     "label": "Paris Brunner marque",
-     "prob": 35,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Bundesliga",
-     "mid": "foot-401884771",
-     "score": "2-1",
-     "match": "Leverkusen – Freiburg",
-     "label": "Leverkusen ou nul",
-     "prob": 80,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Bundesliga",
-     "mid": "foot-401884771",
-     "score": "2-1",
-     "match": "Leverkusen – Freiburg",
-     "label": "Victoire Leverkusen",
-     "prob": 58,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Bundesliga",
-     "mid": "foot-401884771",
-     "score": "2-1",
-     "match": "Leverkusen – Freiburg",
-     "label": "Patrik Schick marque",
-     "prob": 43,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879260",
-     "score": "1-1",
-     "match": "Leeds – Man United",
-     "label": "Leeds ou nul",
-     "prob": 67,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879260",
-     "score": "1-1",
-     "match": "Leeds – Man United",
-     "label": "Victoire Leeds",
-     "prob": 38,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879260",
-     "score": "1-1",
-     "match": "Leeds – Man United",
-     "label": "Bryan Mbeumo marque",
-     "prob": 28,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876438",
-     "score": "1-3",
-     "match": "Le Havre AC – Auxerre",
-     "label": "Le Havre AC ou nul",
-     "prob": 69,
-     "stars": 3,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876438",
-     "score": "1-3",
-     "match": "Le Havre AC – Auxerre",
-     "label": "Victoire Le Havre AC",
-     "prob": 42,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876438",
-     "score": "1-3",
-     "match": "Le Havre AC – Auxerre",
-     "label": "Mbwana Samatta marque",
-     "prob": 33,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874765",
-     "score": "0-3",
-     "match": "Juventus – Lazio",
-     "label": "Juventus ou nul",
-     "prob": 83,
-     "stars": 5,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874765",
-     "score": "0-3",
-     "match": "Juventus – Lazio",
-     "label": "Victoire Juventus",
-     "prob": 59,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874765",
-     "score": "0-3",
-     "match": "Juventus – Lazio",
-     "label": "Randal Kolo Muani marque",
-     "prob": 23,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Bundesliga",
-     "mid": "foot-401884768",
-     "score": "1-2",
-     "match": "Gladbach – Hoffenheim",
-     "label": "Nul ou Hoffenheim",
-     "prob": 68,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Bundesliga",
-     "mid": "foot-401884768",
-     "score": "1-2",
-     "match": "Gladbach – Hoffenheim",
-     "label": "Victoire Hoffenheim",
-     "prob": 44,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Bundesliga",
-     "mid": "foot-401884768",
-     "score": "1-2",
-     "match": "Gladbach – Hoffenheim",
-     "label": "Adam Daghim marque",
-     "prob": 31,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874774",
-     "score": "1-3",
-     "match": "Fiorentina – Como",
-     "label": "Nul ou Como",
-     "prob": 71,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874774",
-     "score": "1-3",
-     "match": "Fiorentina – Como",
-     "label": "Victoire Como",
-     "prob": 44,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874774",
-     "score": "1-3",
-     "match": "Fiorentina – Como",
-     "label": "Franco Mastantuono marque",
-     "prob": 30,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882845",
-     "score": "2-1",
-     "match": "Celta Vigo – Alavés",
-     "label": "Celta Vigo ou nul",
-     "prob": 72,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882845",
-     "score": "2-1",
-     "match": "Celta Vigo – Alavés",
-     "label": "Victoire Celta Vigo",
-     "prob": 42,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "LaLiga",
-     "mid": "foot-401882845",
-     "score": "2-1",
-     "match": "Celta Vigo – Alavés",
-     "label": "Lucas Boyé marque",
-     "prob": 24,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879261",
-     "score": "5-0",
-     "match": "Brighton – C Palace",
-     "label": "Brighton ou nul",
-     "prob": 86,
-     "stars": 5,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879261",
-     "score": "5-0",
-     "match": "Brighton – C Palace",
-     "label": "Victoire Brighton",
-     "prob": 67,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879261",
-     "score": "5-0",
-     "match": "Brighton – C Palace",
-     "label": "Pascal Gross marque",
-     "prob": 27,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879263",
-     "score": "2-0",
-     "match": "Bournemouth – Sunderland",
-     "label": "Bournemouth ou nul",
-     "prob": 76,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879263",
-     "score": "2-0",
-     "match": "Bournemouth – Sunderland",
-     "label": "Victoire Bournemouth",
-     "prob": 47,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Premier League",
-     "mid": "foot-401879263",
-     "score": "2-0",
-     "match": "Bournemouth – Sunderland",
-     "label": "Marcus Tavernier marque",
-     "prob": 28,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876439",
-     "score": "2-5",
-     "match": "Angers – Marseille",
-     "label": "Nul ou Marseille",
-     "prob": 76,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876439",
-     "score": "2-5",
-     "match": "Angers – Marseille",
-     "label": "Victoire Marseille",
-     "prob": 52,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-18",
-     "sport": "foot",
-     "league": "Ligue 1",
-     "mid": "foot-401876439",
-     "score": "2-5",
-     "match": "Angers – Marseille",
-     "label": "Amine Gouiri marque",
-     "prob": 42,
-     "stars": 1,
-     "ok": true,
-     "fun": false
     }
    ]
   }
@@ -32243,7 +34988,7 @@
  "notes": [],
  "form": {
   "foot": 0,
-  "nhl": 4
+  "nhl": 22
  },
  "second": {
   "foot": {
@@ -32253,10 +34998,10 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 2,
+   "ok": 11,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91427 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91428 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
