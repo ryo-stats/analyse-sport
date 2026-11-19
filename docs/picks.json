@@ -57308,7 +57308,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020344|win_h|": {
   "match": "nhl-2026020344",
@@ -57332,7 +57332,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020344|point|Lucas Raymond": {
   "match": "nhl-2026020344",
@@ -57356,7 +57356,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "nhl-2026020344|goal|Alex DeBrincat": {
   "match": "nhl-2026020344",
@@ -57380,7 +57380,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020344|h2|": {
   "match": "nhl-2026020344",
@@ -57404,7 +57404,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020345|o55|": {
   "match": "nhl-2026020345",
@@ -57428,7 +57428,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020345|win_h|": {
   "match": "nhl-2026020345",
@@ -57452,7 +57452,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020345|point|Jack Hughes": {
   "match": "nhl-2026020345",
@@ -57476,7 +57476,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020345|goal|Jack Hughes": {
   "match": "nhl-2026020345",
@@ -57500,7 +57500,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020345|h2|": {
   "match": "nhl-2026020345",
@@ -57524,7 +57524,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020346|o55|": {
   "match": "nhl-2026020346",
@@ -57548,7 +57548,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020346|win_a|": {
   "match": "nhl-2026020346",
@@ -57572,7 +57572,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020346|point|Martin Necas": {
   "match": "nhl-2026020346",
@@ -57596,7 +57596,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020346|goal|Martin Necas": {
   "match": "nhl-2026020346",
@@ -57620,7 +57620,7 @@
   "kinds": [
    "scorer"
   ],
-  "result": null
+  "result": false
  },
  "nhl-2026020346|a2|": {
   "match": "nhl-2026020346",
@@ -57632,6 +57632,1261 @@
   "market": "a2",
   "label": "Colorado Avalanche gagne par 2 buts d'écart ou plus",
   "p": 0.3669,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": false
+ },
+ "nhl-2026020347|win_a|": {
+  "match": "nhl-2026020347",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Toronto Maple Leafs",
+  "away": "Los Angeles Kings",
+  "market": "win_a",
+  "label": "Victoire Los Angeles Kings",
+  "p": 0.585,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020347|point|Adrian Kempe": {
+  "match": "nhl-2026020347",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Toronto Maple Leafs",
+  "away": "Los Angeles Kings",
+  "market": "point",
+  "label": "Adrian Kempe : au moins 1 point",
+  "p": 0.61,
+  "stars": 3,
+  "player": "Adrian Kempe",
+  "pid_player": 8477960,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020347|goal|Adrian Kempe": {
+  "match": "nhl-2026020347",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Toronto Maple Leafs",
+  "away": "Los Angeles Kings",
+  "market": "goal",
+  "label": "Adrian Kempe marque",
+  "p": 0.37,
+  "stars": 1,
+  "player": "Adrian Kempe",
+  "pid_player": 8477960,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020347|a2|": {
+  "match": "nhl-2026020347",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Toronto Maple Leafs",
+  "away": "Los Angeles Kings",
+  "market": "a2",
+  "label": "Los Angeles Kings gagne par 2 buts d'écart ou plus",
+  "p": 0.3862,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020348|win_h|": {
+  "match": "nhl-2026020348",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Ottawa Senators",
+  "away": "Philadelphia Flyers",
+  "market": "win_h",
+  "label": "Victoire Ottawa Senators",
+  "p": 0.6782,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020348|point|Tim Stützle": {
+  "match": "nhl-2026020348",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Ottawa Senators",
+  "away": "Philadelphia Flyers",
+  "market": "point",
+  "label": "Tim Stützle : au moins 1 point",
+  "p": 0.62,
+  "stars": 3,
+  "player": "Tim Stützle",
+  "pid_player": 8482116,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020348|goal|Tim Stützle": {
+  "match": "nhl-2026020348",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Ottawa Senators",
+  "away": "Philadelphia Flyers",
+  "market": "goal",
+  "label": "Tim Stützle marque",
+  "p": 0.32,
+  "stars": 1,
+  "player": "Tim Stützle",
+  "pid_player": 8482116,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020348|o65|": {
+  "match": "nhl-2026020348",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Ottawa Senators",
+  "away": "Philadelphia Flyers",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.3824,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020350|o55|": {
+  "match": "nhl-2026020350",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Pittsburgh Penguins",
+  "away": "St. Louis Blues",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.5966,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020350|win_h|": {
+  "match": "nhl-2026020350",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Pittsburgh Penguins",
+  "away": "St. Louis Blues",
+  "market": "win_h",
+  "label": "Victoire Pittsburgh Penguins",
+  "p": 0.5012,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020350|point|Evgeni Malkin": {
+  "match": "nhl-2026020350",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Pittsburgh Penguins",
+  "away": "St. Louis Blues",
+  "market": "point",
+  "label": "Evgeni Malkin : au moins 1 point",
+  "p": 0.57,
+  "stars": 2,
+  "player": "Evgeni Malkin",
+  "pid_player": 8471215,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020350|goal|Sidney Crosby": {
+  "match": "nhl-2026020350",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Pittsburgh Penguins",
+  "away": "St. Louis Blues",
+  "market": "goal",
+  "label": "Sidney Crosby marque",
+  "p": 0.26,
+  "stars": 1,
+  "player": "Sidney Crosby",
+  "pid_player": 8471675,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020350|reg_h|": {
+  "match": "nhl-2026020350",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Pittsburgh Penguins",
+  "away": "St. Louis Blues",
+  "market": "reg_h",
+  "label": "Pittsburgh Penguins gagne dans le temps réglementaire",
+  "p": 0.4164,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020351|o55|": {
+  "match": "nhl-2026020351",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Washington Capitals",
+  "away": "Buffalo Sabres",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6965,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020351|win_h|": {
+  "match": "nhl-2026020351",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Washington Capitals",
+  "away": "Buffalo Sabres",
+  "market": "win_h",
+  "label": "Victoire Washington Capitals",
+  "p": 0.5489,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020351|point|Dylan Strome": {
+  "match": "nhl-2026020351",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Washington Capitals",
+  "away": "Buffalo Sabres",
+  "market": "point",
+  "label": "Dylan Strome : au moins 1 point",
+  "p": 0.55,
+  "stars": 2,
+  "player": "Dylan Strome",
+  "pid_player": 8478440,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020351|goal|Jakob Chychrun": {
+  "match": "nhl-2026020351",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Washington Capitals",
+  "away": "Buffalo Sabres",
+  "market": "goal",
+  "label": "Jakob Chychrun marque",
+  "p": 0.24,
+  "stars": 1,
+  "player": "Jakob Chychrun",
+  "pid_player": 8479345,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020351|wh_o55|": {
+  "match": "nhl-2026020351",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Washington Capitals",
+  "away": "Buffalo Sabres",
+  "market": "wh_o55",
+  "label": "Washington Capitals gagne et plus de 5,5 buts",
+  "p": 0.3848,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020352|win_h|": {
+  "match": "nhl-2026020352",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Carolina Hurricanes",
+  "away": "Montréal Canadiens",
+  "market": "win_h",
+  "label": "Victoire Carolina Hurricanes",
+  "p": 0.7955,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020352|point|Sebastian Aho": {
+  "match": "nhl-2026020352",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Carolina Hurricanes",
+  "away": "Montréal Canadiens",
+  "market": "point",
+  "label": "Sebastian Aho : au moins 1 point",
+  "p": 0.71,
+  "stars": 4,
+  "player": "Sebastian Aho",
+  "pid_player": 8478427,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020352|goal|Andrei Svechnikov": {
+  "match": "nhl-2026020352",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Carolina Hurricanes",
+  "away": "Montréal Canadiens",
+  "market": "goal",
+  "label": "Andrei Svechnikov marque",
+  "p": 0.37,
+  "stars": 1,
+  "player": "Andrei Svechnikov",
+  "pid_player": 8480830,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020354|o55|": {
+  "match": "nhl-2026020354",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Winnipeg Jets",
+  "away": "New York Islanders",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.614,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020354|win_h|": {
+  "match": "nhl-2026020354",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Winnipeg Jets",
+  "away": "New York Islanders",
+  "market": "win_h",
+  "label": "Victoire Winnipeg Jets",
+  "p": 0.5187,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020354|point|Mark Scheifele": {
+  "match": "nhl-2026020354",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Winnipeg Jets",
+  "away": "New York Islanders",
+  "market": "point",
+  "label": "Mark Scheifele : au moins 1 point",
+  "p": 0.73,
+  "stars": 4,
+  "player": "Mark Scheifele",
+  "pid_player": 8476460,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020354|goal|Kyle Connor": {
+  "match": "nhl-2026020354",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Winnipeg Jets",
+  "away": "New York Islanders",
+  "market": "goal",
+  "label": "Kyle Connor marque",
+  "p": 0.43,
+  "stars": 1,
+  "player": "Kyle Connor",
+  "pid_player": 8478398,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020354|h2|": {
+  "match": "nhl-2026020354",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Winnipeg Jets",
+  "away": "New York Islanders",
+  "market": "h2",
+  "label": "Winnipeg Jets gagne par 2 buts d'écart ou plus",
+  "p": 0.3219,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020349|win_h|": {
+  "match": "nhl-2026020349",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Tampa Bay Lightning",
+  "away": "Edmonton Oilers",
+  "market": "win_h",
+  "label": "Victoire Tampa Bay Lightning",
+  "p": 0.5935,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020349|point|Nikita Kucherov": {
+  "match": "nhl-2026020349",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Tampa Bay Lightning",
+  "away": "Edmonton Oilers",
+  "market": "point",
+  "label": "Nikita Kucherov : au moins 1 point",
+  "p": 0.74,
+  "stars": 4,
+  "player": "Nikita Kucherov",
+  "pid_player": 8476453,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020349|goal|Nikita Kucherov": {
+  "match": "nhl-2026020349",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Tampa Bay Lightning",
+  "away": "Edmonton Oilers",
+  "market": "goal",
+  "label": "Nikita Kucherov marque",
+  "p": 0.35,
+  "stars": 1,
+  "player": "Nikita Kucherov",
+  "pid_player": 8476453,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020349|h2|": {
+  "match": "nhl-2026020349",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Tampa Bay Lightning",
+  "away": "Edmonton Oilers",
+  "market": "h2",
+  "label": "Tampa Bay Lightning gagne par 2 buts d'écart ou plus",
+  "p": 0.3867,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020353|o55|": {
+  "match": "nhl-2026020353",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Chicago Blackhawks",
+  "away": "Columbus Blue Jackets",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.5794,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020353|win_a|": {
+  "match": "nhl-2026020353",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Chicago Blackhawks",
+  "away": "Columbus Blue Jackets",
+  "market": "win_a",
+  "label": "Victoire Columbus Blue Jackets",
+  "p": 0.5478,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020353|point|Zach Werenski": {
+  "match": "nhl-2026020353",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Chicago Blackhawks",
+  "away": "Columbus Blue Jackets",
+  "market": "point",
+  "label": "Zach Werenski : au moins 1 point",
+  "p": 0.64,
+  "stars": 3,
+  "player": "Zach Werenski",
+  "pid_player": 8478460,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020353|goal|Adam Fantilli": {
+  "match": "nhl-2026020353",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Chicago Blackhawks",
+  "away": "Columbus Blue Jackets",
+  "market": "goal",
+  "label": "Adam Fantilli marque",
+  "p": 0.25,
+  "stars": 1,
+  "player": "Adam Fantilli",
+  "pid_player": 8484166,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020353|a2|": {
+  "match": "nhl-2026020353",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Chicago Blackhawks",
+  "away": "Columbus Blue Jackets",
+  "market": "a2",
+  "label": "Columbus Blue Jackets gagne par 2 buts d'écart ou plus",
+  "p": 0.3513,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020355|win_a|": {
+  "match": "nhl-2026020355",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Calgary Flames",
+  "away": "Minnesota Wild",
+  "market": "win_a",
+  "label": "Victoire Minnesota Wild",
+  "p": 0.7125,
+  "stars": 4,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020355|point|Kirill Kaprizov": {
+  "match": "nhl-2026020355",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Calgary Flames",
+  "away": "Minnesota Wild",
+  "market": "point",
+  "label": "Kirill Kaprizov : au moins 1 point",
+  "p": 0.74,
+  "stars": 4,
+  "player": "Kirill Kaprizov",
+  "pid_player": 8478864,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020355|goal|Kirill Kaprizov": {
+  "match": "nhl-2026020355",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Calgary Flames",
+  "away": "Minnesota Wild",
+  "market": "goal",
+  "label": "Kirill Kaprizov marque",
+  "p": 0.45,
+  "stars": 1,
+  "player": "Kirill Kaprizov",
+  "pid_player": 8478864,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020355|a3|": {
+  "match": "nhl-2026020355",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Calgary Flames",
+  "away": "Minnesota Wild",
+  "market": "a3",
+  "label": "Minnesota Wild gagne par 3 buts d'écart ou plus",
+  "p": 0.3404,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020356|o55|": {
+  "match": "nhl-2026020356",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Colorado Avalanche",
+  "away": "Anaheim Ducks",
+  "market": "o55",
+  "label": "Plus de 5,5 buts",
+  "p": 0.6901,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "nhl-2026020356|win_h|": {
+  "match": "nhl-2026020356",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Colorado Avalanche",
+  "away": "Anaheim Ducks",
+  "market": "win_h",
+  "label": "Victoire Colorado Avalanche",
+  "p": 0.6699,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020356|point|Martin Necas": {
+  "match": "nhl-2026020356",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Colorado Avalanche",
+  "away": "Anaheim Ducks",
+  "market": "point",
+  "label": "Martin Necas : au moins 1 point",
+  "p": 0.69,
+  "stars": 3,
+  "player": "Martin Necas",
+  "pid_player": 8480039,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020356|goal|Martin Necas": {
+  "match": "nhl-2026020356",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Colorado Avalanche",
+  "away": "Anaheim Ducks",
+  "market": "goal",
+  "label": "Martin Necas marque",
+  "p": 0.37,
+  "stars": 1,
+  "player": "Martin Necas",
+  "pid_player": 8480039,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020356|wh_o65|": {
+  "match": "nhl-2026020356",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Colorado Avalanche",
+  "away": "Anaheim Ducks",
+  "market": "wh_o65",
+  "label": "Colorado Avalanche gagne et plus de 6,5 buts",
+  "p": 0.3947,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020357|win_h|": {
+  "match": "nhl-2026020357",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Seattle Kraken",
+  "away": "Vancouver Canucks",
+  "market": "win_h",
+  "label": "Victoire Seattle Kraken",
+  "p": 0.6058,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020357|point|Jordan Eberle": {
+  "match": "nhl-2026020357",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Seattle Kraken",
+  "away": "Vancouver Canucks",
+  "market": "point",
+  "label": "Jordan Eberle : au moins 1 point",
+  "p": 0.52,
+  "stars": 2,
+  "player": "Jordan Eberle",
+  "pid_player": 8474586,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020357|goal|Jordan Eberle": {
+  "match": "nhl-2026020357",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Seattle Kraken",
+  "away": "Vancouver Canucks",
+  "market": "goal",
+  "label": "Jordan Eberle marque",
+  "p": 0.28,
+  "stars": 1,
+  "player": "Jordan Eberle",
+  "pid_player": 8474586,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020357|h2|": {
+  "match": "nhl-2026020357",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Seattle Kraken",
+  "away": "Vancouver Canucks",
+  "market": "h2",
+  "label": "Seattle Kraken gagne par 2 buts d'écart ou plus",
+  "p": 0.4005,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "nhl-2026020358|win_h|": {
+  "match": "nhl-2026020358",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Vegas Golden Knights",
+  "away": "Dallas Stars",
+  "market": "win_h",
+  "label": "Victoire Vegas Golden Knights",
+  "p": 0.5622,
+  "stars": 2,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main",
+   "winner"
+  ],
+  "result": null
+ },
+ "nhl-2026020358|point|Jack Eichel": {
+  "match": "nhl-2026020358",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Vegas Golden Knights",
+  "away": "Dallas Stars",
+  "market": "point",
+  "label": "Jack Eichel : au moins 1 point",
+  "p": 0.63,
+  "stars": 3,
+  "player": "Jack Eichel",
+  "pid_player": 8478403,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "nhl-2026020358|goal|Mark Stone": {
+  "match": "nhl-2026020358",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Vegas Golden Knights",
+  "away": "Dallas Stars",
+  "market": "goal",
+  "label": "Mark Stone marque",
+  "p": 0.3,
+  "stars": 1,
+  "player": "Mark Stone",
+  "pid_player": 8475913,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "scorer"
+  ],
+  "result": null
+ },
+ "nhl-2026020358|o65|": {
+  "match": "nhl-2026020358",
+  "sport": "nhl",
+  "league": "NHL",
+  "date": "2026-11-20",
+  "home": "Vegas Golden Knights",
+  "away": "Dallas Stars",
+  "market": "o65",
+  "label": "Plus de 6,5 buts",
+  "p": 0.3912,
   "stars": 1,
   "player": null,
   "pid_player": null,
