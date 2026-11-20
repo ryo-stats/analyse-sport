@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T00:35+01:00",
+ "generated": "2026-11-20T01:00+01:00",
  "date": "2026-11-20",
  "nhl_date": "2026-11-19",
  "foot": [
@@ -1465,15 +1465,6 @@
    "stakes": "Début de saison (19 matchs joués) : le classement bouge encore beaucoup.",
    "espn_id": "401892742",
    "picks": {
-    "main": {
-     "market": "win_a",
-     "label": "Victoire Los Angeles Kings",
-     "p": 0.585,
-     "prob": 59,
-     "fair": 1.71,
-     "stars": 2,
-     "why": "10 derniers matchs : Toronto Maple Leafs 1 victoire · Los Angeles Kings 4"
-    },
     "winner": {
      "market": "win_a",
      "label": "Victoire Los Angeles Kings",
@@ -1532,11 +1523,22 @@
      "pid": 8477960,
      "team": "Los Angeles Kings",
      "why": "6 buts et 7 passes en 18 matchs · 10 derniers matchs : 3 buts, 2 passes (joué 9 sur 10) · Los Angeles Kings favori (59 %) · 3,3 buts attendus pour Los Angeles Kings"
+    },
+    "held": {
+     "market": "win_a",
+     "label": "Victoire Los Angeles Kings",
+     "p": 0.585,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2,
+     "why": "10 derniers matchs : Toronto Maple Leafs 1 victoire · Los Angeles Kings 4",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
@@ -3483,7 +3485,7 @@
    "league": "NHL",
    "kickoff": "2026-11-20T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Tampa Bay Lightning",
    "away": "Edmonton Oilers",
