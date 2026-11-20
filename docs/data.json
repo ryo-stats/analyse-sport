@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T20:15+01:00",
+ "generated": "2026-11-20T20:40+01:00",
  "date": "2026-11-20",
  "nhl_date": "2026-11-20",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Bundesliga",
    "kickoff": "2026-11-20T19:30:00+00:00",
    "time": "20:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Bayern",
    "away": "Cologne",
    "form_h": "VVNVV",
@@ -296,8 +296,6 @@
     "Cologne : 15e, 9 points, 10 buts marqués et 14 encaissés en 9 matchs.",
     "Bayern : 29 buts marqués et 9 encaissés sur ses 9 derniers matchs de championnat.",
     "Cologne : 10 buts marqués et 14 encaissés sur ses 9 derniers matchs de championnat.",
-    "Bayern : attaque revue à la baisse (−12 %) d'après la compo officielle (Luis Díaz ne commence pas).",
-    "Cologne : attaque revue à la baisse (−7 %) d'après la compo officielle (Ísak Jóhannesson, Marius Bulter ne commencent pas).",
     "Compositions officielles prises en compte : Ismael Saibari (absent), Luis Díaz (absent) ne commencent pas le match."
    ],
    "reading": "Bayern est nettement favori (81 %).",
@@ -344,7 +342,7 @@
      {
       "market": "h3",
       "label": "Bayern gagne avec 3 buts d'écart ou plus",
-      "p": 0.3924,
+      "p": 0.3925,
       "prob": 39,
       "fair": 2.55,
       "stars": 1
@@ -30715,13 +30713,23 @@
  },
  "second": {
   "foot": {
-   "ok": 3,
+   "ok": 2,
    "elo": {
     "fra.1": 687,
     "esp.1": 853,
     "ger.1": 667
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 90
+    },
+    "esp.1": {
+     "2026": 119
+    },
+    "ger.1": {
+     "2026": 81
+    }
+   },
    "status": "ok"
   },
   "nhl": {
