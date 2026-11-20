@@ -542,7 +542,7 @@ class AppTest(unittest.TestCase):
         self.assertLess(hot[1], ea)
         # début de saison : 1 match à 5-0 ne fait pas un monstre (retour vers la moyenne)
         one = app.foot_model(dict(gp=1, gf=5, ga=0), dict(gp=1, gf=0, ga=5), None, None, mu)
-        self.assertLess(one[0], 3)
+        self.assertLess(one[0], 3.5)                              # (sans lissage : plus de 6 buts attendus)
         self.assertIsNone(app.foot_model(None, weak, None, None, mu))
         # coupe d'Europe : à statistiques égales, le club du championnat le plus relevé est favori
         eu = app.foot_model(dict(gp=10, gf=14, ga=14), dict(gp=10, gf=14, ga=14), None, None, mu, mu, "fra.1", "eng.1")

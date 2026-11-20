@@ -307,6 +307,8 @@ ELO_WEIGHT = 0.5         # part du classement Elo dans le verdict 1N2 (l'autre m
 SRC_NHL = "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés"
 B2B_FACTOR = 0.95        # NHL : une équipe qui a joué la veille marque environ 5 % de moins
 HOME_ADV = 1.12
+FOOT_GOALS = 1.08        # recalibrage du 20/11 : 401 buts réels pour 356 attendus sur 133 matchs (+13 %), trop de nuls
+                         # annoncés (25 % contre 16,5 %) ; +8 % retenu par prudence, meilleur sur les deux moitiés
 FORM_K = 6
 LEAGUE_STRENGTH = {"eng.1": 1.00, "esp.1": 0.97, "ita.1": 0.95, "ger.1": 0.94, "fra.1": 0.89}   # ordre de grandeur (UEFA)
 OTHER_STRENGTH = 0.80
@@ -466,7 +468,7 @@ def foot_model(st_h, st_a, rec_h, rec_a, mu_h, mu_a=None, code_h=None, code_a=No
     else:
         (ah, dh), (aa, da), mu = th, ta, mu_h
     clamp = lambda x: min(4.5, max(0.2, x))
-    return clamp(mu * ah * da * HOME_ADV), clamp(mu * aa * dh / HOME_ADV)
+    return clamp(mu * ah * da * HOME_ADV * FOOT_GOALS), clamp(mu * aa * dh / HOME_ADV * FOOT_GOALS)
 
 
 def table_lambdas(sh, sa, league_gpg):
@@ -1367,6 +1369,10 @@ def mp_rates(season):
     return SECOND[key]
 
 
+NHL_HOME = 1.015         # avantage de la glace ; recalibrage du 20/11 : 1,03 → 1,015 (domicile annoncé gagnant 53 %,
+                         # réel 45 % sur 172 matchs ; moitié de la baisse seulement, l'historique NHL est autour de 53 %)
+
+
 def nhl_model(H, A, season, b2b_h=False, b2b_a=False):
     """Analyse maison NHL : buts attendus de chaque équipe d'après les xG de la saison (MoneyPuck), ramenés vers
     la saison passée tant que peu de matchs sont joués ; avantage de la glace ; fatigue si l'équipe a joué la veille.
@@ -1403,7 +1409,7 @@ def nhl_xg(H, A, season):
     if not rh or not ra:
         SECOND_STATS["nhl"][1].extend(x for x, r in ((H, rh), (A, ra)) if not r)
         return None
-    return rh[0] * ra[1] / avg * 1.03, ra[0] * rh[1] / avg / 1.03
+    return rh[0] * ra[1] / avg * NHL_HOME, ra[0] * rh[1] / avg / NHL_HOME
 
 
 def concord(sport, picks, odds_p, second):
