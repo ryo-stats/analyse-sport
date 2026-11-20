@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T01:25+01:00",
+ "generated": "2026-11-20T01:50+01:00",
  "date": "2026-11-20",
  "nhl_date": "2026-11-19",
  "foot": [
@@ -1158,7 +1158,7 @@
    "kickoff": "2026-11-20T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "2-0",
    "home": "Toronto Maple Leafs",
    "away": "Los Angeles Kings",
    "rec_h": "8-13-2 · 8e Atlantic · 7 défaites de suite",
@@ -2332,7 +2332,7 @@
    "kickoff": "2026-11-20T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-1",
+   "score": "1-4",
    "home": "Washington Capitals",
    "away": "Buffalo Sabres",
    "rec_h": "10-9-0 · 5e Metropolitan · 3 défaites de suite",
@@ -3087,7 +3087,7 @@
    "kickoff": "2026-11-20T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-1",
+   "score": "2-2",
    "home": "Winnipeg Jets",
    "away": "New York Islanders",
    "rec_h": "10-9-3 · 6e Central · 1 défaite de suite",
@@ -3476,8 +3476,8 @@
    "league": "NHL",
    "kickoff": "2026-11-20T00:30:00+00:00",
    "time": "01:30",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Tampa Bay Lightning",
    "away": "Edmonton Oilers",
    "rec_h": "14-5-2 · 1e Atlantic · 1 victoire de suite",
@@ -3788,7 +3788,7 @@
      "label": "Victoire Tampa Bay Lightning",
      "p": 0.5935,
      "prob": 59,
-     "fair": 1.69,
+     "fair": 1.68,
      "stars": 2,
      "why": "10 derniers matchs : Tampa Bay Lightning 7 victoires · Edmonton Oilers 8"
     },
@@ -3797,14 +3797,14 @@
      "label": "Victoire Tampa Bay Lightning",
      "p": 0.5935,
      "prob": 59,
-     "fair": 1.69,
+     "fair": 1.68,
      "stars": 2,
      "why": "10 derniers matchs : Tampa Bay Lightning 7 victoires · Edmonton Oilers 8"
     },
     "fun": {
      "market": "h2",
      "label": "Tampa Bay Lightning gagne par 2 buts d'écart ou plus",
-     "p": 0.3866,
+     "p": 0.3867,
      "prob": 39,
      "fair": 2.59,
      "stars": 1
@@ -3813,7 +3813,7 @@
      {
       "market": "wh_o55",
       "label": "Tampa Bay Lightning gagne et plus de 5,5 buts",
-      "p": 0.3379,
+      "p": 0.338,
       "prob": 34,
       "fair": 2.96,
       "stars": 1
@@ -3821,7 +3821,7 @@
      {
       "market": "wh_o65",
       "label": "Tampa Bay Lightning gagne et plus de 6,5 buts",
-      "p": 0.2677,
+      "p": 0.2678,
       "prob": 27,
       "fair": 3.73,
       "stars": 1
@@ -3867,7 +3867,7 @@
    "league": "NHL",
    "kickoff": "2026-11-20T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Chicago Blackhawks",
    "away": "Columbus Blue Jackets",
@@ -4259,7 +4259,7 @@
    "league": "NHL",
    "kickoff": "2026-11-20T01:00:00+00:00",
    "time": "02:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Calgary Flames",
    "away": "Minnesota Wild",
@@ -35858,7 +35858,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 6,
+   "ok": 5,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91694 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
