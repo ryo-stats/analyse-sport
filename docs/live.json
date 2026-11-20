@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T19:25+01:00",
+ "generated": "2026-11-20T19:50+01:00",
  "date": "2026-11-20",
  "matches": [
   {
@@ -12,68 +12,72 @@
    "home": "Bayern",
    "away": "Cologne",
    "state": "pre",
-   "xgH": 3.22,
-   "xgA": 0.77,
-   "pH": 84,
-   "pD": 10,
-   "pA": 6,
+   "xgH": 2.82,
+   "xgA": 0.72,
+   "pH": 81,
+   "pD": 13,
+   "pA": 7,
    "edate": "20261120",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Bayern ou nul",
-     "p": 0.9443,
-     "prob": 94,
-     "fair": 1.06,
+     "p": 0.9321,
+     "prob": 93,
+     "fair": 1.07,
      "stars": 5,
      "why": "9 derniers matchs : Bayern 29 marqués / 9 encaissés · Cologne 10 / 14"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bayern",
-     "p": 0.842,
-     "prob": 84,
-     "fair": 1.19,
+     "p": 0.8067,
+     "prob": 81,
+     "fair": 1.24,
      "stars": 5
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 3-0",
-     "p": 0.1027,
-     "prob": 10,
-     "fair": 9.74,
+     "label": "Score exact 2-0",
+     "p": 0.1155,
+     "prob": 12,
+     "fair": 8.66,
      "stars": 1,
-     "value": "3-0"
+     "value": "2-0"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Bayern gagne et les deux équipes marquent",
-     "p": 0.3988,
-     "prob": 40,
-     "fair": 2.51,
-     "stars": 1
+     "market": "scw",
+     "label": "Michael Olise marque et Bayern gagne",
+     "p": 0.3944,
+     "prob": 39,
+     "fair": 2.54,
+     "stars": 1,
+     "player": "Michael Olise",
+     "team": "Bayern",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
      "label": "Michael Olise marque",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.43,
+     "prob": 43,
+     "fair": 2.33,
      "stars": 1,
      "player": "Michael Olise",
      "team": "Bayern",
+     "lineup": "start",
      "pid": "286831",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 9 matchs · Bayern favori (84 %) · 3,2 buts attendus pour Bayern"
+     "why": "6 buts et 3 passes en 9 matchs · titulaire · Bayern favori (81 %) · 2,8 buts attendus pour Bayern"
     },
     "decisive": {
      "market": "dec",
      "label": "Michael Olise buteur ou passeur",
-     "p": 0.63,
-     "prob": 63,
-     "fair": 1.59,
-     "stars": 3,
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
      "player": "Michael Olise",
      "team": "Bayern",
      "base": [
@@ -81,10 +85,11 @@
       6,
       3
      ],
+     "lineup": "start",
      "pid": "286831",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 9 matchs · Bayern favori (84 %) · 3,2 buts attendus pour Bayern"
+     "why": "6 buts et 3 passes en 9 matchs · titulaire · Bayern favori (81 %) · 2,8 buts attendus pour Bayern"
     }
    }
   },
@@ -98,79 +103,81 @@
    "home": "Troyes",
    "away": "Le Havre AC",
    "state": "pre",
-   "xgH": 1.5,
+   "xgH": 1.27,
    "xgA": 1.07,
-   "pH": 47,
-   "pD": 26,
-   "pA": 27,
+   "pH": 41,
+   "pD": 28,
+   "pA": 31,
    "edate": "20261120",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Troyes ou nul",
-     "p": 0.7286,
-     "prob": 73,
-     "fair": 1.37,
-     "stars": 4,
+     "p": 0.6884,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
      "why": "10 derniers matchs : Troyes 7 marqués / 17 encaissés · Le Havre AC 9 / 22"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Troyes",
-     "p": 0.4702,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.4098,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1145,
-     "prob": 11,
-     "fair": 8.73,
+     "p": 0.1219,
+     "prob": 12,
+     "fair": 8.2,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Troyes mène à la mi-temps et gagne le match",
-     "p": 0.2836,
-     "prob": 28,
-     "fair": 3.53,
+     "market": "wh_nil",
+     "label": "Troyes gagne sans encaisser de but",
+     "p": 0.2463,
+     "prob": 25,
+     "fair": 4.06,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Renaud Ripart marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
+     "label": "Antoine Mille marque",
+     "p": 0.14,
+     "prob": 14,
+     "fair": 7.14,
      "stars": 1,
-     "player": "Renaud Ripart",
+     "player": "Antoine Mille",
      "team": "Troyes",
-     "pid": "176406",
+     "lineup": "start",
+     "pid": "270173",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 10 matchs · Troyes favori (47 %) · 1,5 but attendu pour Troyes"
+     "why": "1 but et 1 passe en 10 matchs · titulaire · Troyes annoncé gagnant (41 %) · 1,3 but attendu pour Troyes"
     },
     "decisive": {
      "market": "dec",
-     "label": "Renaud Ripart buteur ou passeur",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
+     "label": "Antoine Mille buteur ou passeur",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
-     "player": "Renaud Ripart",
+     "player": "Antoine Mille",
      "team": "Troyes",
      "base": [
       10,
       1,
-      0
+      1
      ],
-     "pid": "176406",
+     "lineup": "start",
+     "pid": "270173",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 10 matchs · Troyes favori (47 %) · 1,5 but attendu pour Troyes"
+     "why": "1 but et 1 passe en 10 matchs · titulaire · Troyes annoncé gagnant (41 %) · 1,3 but attendu pour Troyes"
     }
    }
   },
@@ -272,7 +279,7 @@
   "top": [
    {
     "label": "Bayern ou nul",
-    "prob": 94,
+    "prob": 93,
     "time": "20:30",
     "match": "Bayern – Cologne"
    },
@@ -284,7 +291,7 @@
    },
    {
     "label": "Troyes ou nul",
-    "prob": 73,
+    "prob": 69,
     "time": "20:45",
     "match": "Troyes – Le Havre AC"
    }
