@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T14:46+01:00",
+ "generated": "2026-11-21T15:11+01:00",
  "date": "2026-11-21",
  "matches": [
   {
@@ -190,8 +190,8 @@
    "time": "15:00",
    "home": "Como",
    "away": "Cagliari",
-   "state": "pre",
-   "xgH": 1.69,
+   "state": "in",
+   "xgH": 1.7,
    "xgA": 0.62,
    "pH": 63,
    "pD": 23,
@@ -201,7 +201,7 @@
     "main": {
      "market": "1N",
      "label": "Como ou nul",
-     "p": 0.8673,
+     "p": 0.8672,
      "prob": 87,
      "fair": 1.15,
      "stars": 5,
@@ -278,7 +278,7 @@
    "time": "15:00",
    "home": "Lazio",
    "away": "Lecce",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.78,
    "xgA": 0.86,
    "pH": 77,
@@ -306,7 +306,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1013,
+     "p": 0.1012,
      "prob": 10,
      "fair": 9.88,
      "stars": 1,
@@ -315,7 +315,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Lazio gagne sans encaisser de but",
-     "p": 0.3962,
+     "p": 0.3961,
      "prob": 40,
      "fair": 2.52,
      "stars": 1
@@ -808,44 +808,44 @@
    "away": "Nottm Forest",
    "state": "pre",
    "xgH": 1.82,
-   "xgA": 0.97,
-   "pH": 57,
+   "xgA": 0.93,
+   "pH": 58,
    "pD": 23,
-   "pA": 20,
+   "pA": 19,
    "edate": "20261121",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Bournemouth ou nul",
-     "p": 0.8014,
-     "prob": 80,
-     "fair": 1.25,
+     "p": 0.81,
+     "prob": 81,
+     "fair": 1.23,
      "stars": 5,
      "why": "10 derniers matchs : Bournemouth 16 marqués / 14 encaissés · Nottm Forest 9 / 13"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bournemouth",
-     "p": 0.5728,
-     "prob": 57,
-     "fair": 1.75,
+     "p": 0.5821,
+     "prob": 58,
+     "fair": 1.72,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1122,
-     "prob": 11,
-     "fair": 8.91,
+     "p": 0.1165,
+     "prob": 12,
+     "fair": 8.58,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Bournemouth mène à la mi-temps et gagne le match",
-     "p": 0.3616,
-     "prob": 36,
-     "fair": 2.77,
+     "p": 0.3681,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1
     },
     "player": {
@@ -857,10 +857,11 @@
      "stars": 1,
      "player": "Evanilson",
      "team": "Bournemouth",
+     "lineup": "start",
      "pid": "102368",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 4 passes en 10 matchs · Bournemouth favori (57 %) · 1,8 buts attendus pour Bournemouth"
+     "why": "5 buts et 4 passes en 10 matchs · titulaire · Bournemouth favori (58 %) · 1,8 buts attendus pour Bournemouth"
     },
     "decisive": {
      "market": "dec",
@@ -876,10 +877,11 @@
       5,
       4
      ],
+     "lineup": "start",
      "pid": "102368",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 4 passes en 10 matchs · Bournemouth favori (57 %) · 1,8 buts attendus pour Bournemouth"
+     "why": "5 buts et 4 passes en 10 matchs · titulaire · Bournemouth favori (58 %) · 1,8 buts attendus pour Bournemouth"
     }
    }
   },
@@ -893,68 +895,72 @@
    "home": "Aston Villa",
    "away": "Sunderland",
    "state": "pre",
-   "xgH": 2.03,
-   "xgA": 1.03,
-   "pH": 60,
+   "xgH": 1.93,
+   "xgA": 0.79,
+   "pH": 64,
    "pD": 21,
-   "pA": 19,
+   "pA": 15,
    "edate": "20261121",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Aston Villa ou nul",
-     "p": 0.8143,
-     "prob": 81,
-     "fair": 1.23,
+     "p": 0.8533,
+     "prob": 85,
+     "fair": 1.17,
      "stars": 5,
      "why": "10 derniers matchs : Aston Villa 14 marqués / 17 encaissés · Sunderland 8 / 17"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Aston Villa",
-     "p": 0.6043,
-     "prob": 60,
-     "fair": 1.65,
+     "p": 0.641,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0995,
-     "prob": 10,
-     "fair": 10.05,
+     "label": "Score exact 1-0",
+     "p": 0.1272,
+     "prob": 13,
+     "fair": 7.86,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Aston Villa gagne et plus de 2,5 buts",
-     "p": 0.4124,
-     "prob": 41,
-     "fair": 2.43,
-     "stars": 1
+     "market": "scw",
+     "label": "Nicolas Jackson marque et Aston Villa gagne",
+     "p": 0.4157,
+     "prob": 42,
+     "fair": 2.41,
+     "stars": 1,
+     "player": "Nicolas Jackson",
+     "team": "Aston Villa",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
      "label": "Nicolas Jackson marque",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
+     "p": 0.51,
+     "prob": 51,
+     "fair": 1.96,
      "stars": 2,
      "player": "Nicolas Jackson",
      "team": "Aston Villa",
+     "lineup": "start",
      "pid": "308524",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 9 matchs · Aston Villa favori (60 %) · 2,0 buts attendus pour Aston Villa"
+     "why": "6 buts et 1 passe en 9 matchs · titulaire · Aston Villa favori (64 %) · 1,9 buts attendus pour Aston Villa"
     },
     "decisive": {
      "market": "dec",
      "label": "Nicolas Jackson buteur ou passeur",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
      "player": "Nicolas Jackson",
      "team": "Aston Villa",
      "base": [
@@ -962,10 +968,11 @@
       6,
       1
      ],
+     "lineup": "start",
      "pid": "308524",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 9 matchs · Aston Villa favori (60 %) · 2,0 buts attendus pour Aston Villa"
+     "why": "6 buts et 1 passe en 9 matchs · titulaire · Aston Villa favori (64 %) · 1,9 buts attendus pour Aston Villa"
     }
    }
   },
@@ -979,79 +986,81 @@
    "home": "Chelsea",
    "away": "Leeds",
    "state": "pre",
-   "xgH": 1.52,
-   "xgA": 1.12,
-   "pH": 46,
-   "pD": 26,
-   "pA": 28,
+   "xgH": 1.18,
+   "xgA": 1.08,
+   "pH": 38,
+   "pD": 29,
+   "pA": 33,
    "edate": "20261121",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Chelsea ou nul",
-     "p": 0.7189,
-     "prob": 72,
-     "fair": 1.39,
-     "stars": 4,
+     "p": 0.6677,
+     "prob": 67,
+     "fair": 1.5,
+     "stars": 3,
      "why": "10 derniers matchs : Chelsea 19 marqués / 16 encaissés · Leeds 10 / 8"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Chelsea",
-     "p": 0.4635,
-     "prob": 46,
-     "fair": 2.16,
+     "p": 0.3815,
+     "prob": 38,
+     "fair": 2.62,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.108,
-     "prob": 11,
-     "fair": 9.26,
+     "p": 0.1231,
+     "prob": 12,
+     "fair": 8.13,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Chelsea mène à la mi-temps et gagne le match",
-     "p": 0.2799,
-     "prob": 28,
-     "fair": 3.57,
+     "market": "wh_nil",
+     "label": "Chelsea gagne sans encaisser de but",
+     "p": 0.235,
+     "prob": 24,
+     "fair": 4.25,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "João Pedro marque",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "Morgan Rogers marque",
+     "p": 0.24,
+     "prob": 24,
+     "fair": 4.17,
      "stars": 1,
-     "player": "João Pedro",
+     "player": "Morgan Rogers",
      "team": "Chelsea",
-     "pid": "284960",
+     "lineup": "start",
+     "pid": "265653",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 6 matchs · Chelsea favori (46 %) · 1,5 buts attendus pour Chelsea"
+     "why": "5 buts et 1 passe en 10 matchs · titulaire · Chelsea annoncé gagnant (38 %) · 1,2 but attendu pour Chelsea"
     },
     "decisive": {
      "market": "dec",
-     "label": "João Pedro buteur ou passeur",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "label": "Morgan Rogers buteur ou passeur",
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
-     "player": "João Pedro",
+     "player": "Morgan Rogers",
      "team": "Chelsea",
      "base": [
-      6,
+      10,
       5,
-      3
+      1
      ],
-     "pid": "284960",
+     "lineup": "start",
+     "pid": "265653",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "5 buts et 3 passes en 6 matchs · Chelsea favori (46 %) · 1,5 buts attendus pour Chelsea"
+     "why": "5 buts et 1 passe en 10 matchs · titulaire · Chelsea annoncé gagnant (38 %) · 1,2 but attendu pour Chelsea"
     }
    }
   },
@@ -1065,67 +1074,68 @@
    "home": "Coventry",
    "away": "C Palace",
    "state": "pre",
-   "xgH": 1.97,
-   "xgA": 1.46,
-   "pH": 50,
-   "pD": 22,
-   "pA": 29,
+   "xgH": 1.83,
+   "xgA": 1.34,
+   "pH": 49,
+   "pD": 23,
+   "pA": 28,
    "edate": "20261121",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Coventry ou nul",
-     "p": 0.7137,
-     "prob": 71,
-     "fair": 1.4,
+     "p": 0.7171,
+     "prob": 72,
+     "fair": 1.39,
      "stars": 4,
      "why": "10 derniers matchs : Coventry 10 marqués / 19 encaissés · C Palace 10 / 24"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Coventry",
-     "p": 0.4952,
-     "prob": 50,
-     "fair": 2.02,
+     "p": 0.4888,
+     "prob": 49,
+     "fair": 2.05,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0918,
+     "p": 0.0941,
      "prob": 9,
-     "fair": 10.89,
+     "fair": 10.62,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Coventry gagne et plus de 2,5 buts",
-     "p": 0.3681,
-     "prob": 37,
-     "fair": 2.72,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3915,
+     "prob": 39,
+     "fair": 2.55,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Jack Rudoni marque",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
      "player": "Jack Rudoni",
      "team": "Coventry",
+     "lineup": "start",
      "pid": "286967",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Coventry favori (50 %) · 2,0 buts attendus pour Coventry"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Coventry favori (49 %) · 1,8 buts attendus pour Coventry"
     },
     "decisive": {
      "market": "dec",
      "label": "Jack Rudoni buteur ou passeur",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.39,
+     "prob": 39,
+     "fair": 2.56,
      "stars": 1,
      "player": "Jack Rudoni",
      "team": "Coventry",
@@ -1134,10 +1144,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "286967",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Coventry favori (50 %) · 2,0 buts attendus pour Coventry"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Coventry favori (49 %) · 1,8 buts attendus pour Coventry"
     }
    }
   },
@@ -1151,17 +1162,17 @@
    "home": "Spurs",
    "away": "Ipswich",
    "state": "pre",
-   "xgH": 1.86,
-   "xgA": 1.11,
-   "pH": 55,
-   "pD": 23,
+   "xgH": 1.62,
+   "xgA": 0.96,
+   "pH": 53,
+   "pD": 25,
    "pA": 22,
    "edate": "20261121",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Spurs ou nul",
-     "p": 0.7755,
+     "p": 0.7769,
      "prob": 78,
      "fair": 1.29,
      "stars": 4,
@@ -1170,60 +1181,62 @@
     "winner": {
      "market": "1",
      "label": "Victoire Spurs",
-     "p": 0.5497,
-     "prob": 55,
-     "fair": 1.82,
+     "p": 0.5283,
+     "prob": 53,
+     "fair": 1.89,
      "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0985,
-     "prob": 10,
-     "fair": 10.15,
+     "label": "Score exact 1-0",
+     "p": 0.1235,
+     "prob": 12,
+     "fair": 8.1,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Spurs gagne et plus de 2,5 buts",
-     "p": 0.366,
-     "prob": 37,
-     "fair": 2.73,
+     "market": "htft_h",
+     "label": "Spurs mène à la mi-temps et gagne le match",
+     "p": 0.3252,
+     "prob": 33,
+     "fair": 3.08,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Omar Marmoush marque",
-     "p": 0.21,
-     "prob": 21,
-     "fair": 4.76,
+     "label": "Jan Paul van Hecke marque",
+     "p": 0.23,
+     "prob": 23,
+     "fair": 4.35,
      "stars": 1,
-     "player": "Omar Marmoush",
+     "player": "Jan Paul van Hecke",
      "team": "Spurs",
-     "pid": "303745",
+     "lineup": "start",
+     "pid": "282583",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 9 matchs · Spurs favori (55 %) · 1,9 buts attendus pour Spurs"
+     "why": "2 buts et 0 passe en 10 matchs · titulaire · Spurs favori (53 %) · 1,6 buts attendus pour Spurs"
     },
     "decisive": {
      "market": "dec",
-     "label": "Omar Marmoush buteur ou passeur",
+     "label": "Jan Paul van Hecke buteur ou passeur",
      "p": 0.25,
      "prob": 25,
      "fair": 4.0,
      "stars": 1,
-     "player": "Omar Marmoush",
+     "player": "Jan Paul van Hecke",
      "team": "Spurs",
      "base": [
-      9,
-      1,
+      10,
+      2,
       0
      ],
-     "pid": "303745",
+     "lineup": "start",
+     "pid": "282583",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "1 but et 0 passe en 9 matchs · Spurs favori (55 %) · 1,9 buts attendus pour Spurs"
+     "why": "2 buts et 0 passe en 10 matchs · titulaire · Spurs favori (53 %) · 1,6 buts attendus pour Spurs"
     }
    }
   },
@@ -3232,22 +3245,22 @@
   "nhl": 14,
   "top": [
    {
-    "label": "Lazio ou nul",
-    "prob": 91,
-    "time": "15:00",
-    "match": "Lazio – Lecce"
-   },
-   {
     "label": "Real Madrid ou nul",
     "prob": 91,
     "time": "21:00",
     "match": "Real Madrid – Celta Vigo"
    },
    {
-    "label": "Como ou nul",
+    "label": "Nul ou AS Roma",
     "prob": 87,
-    "time": "15:00",
-    "match": "Como – Cagliari"
+    "time": "18:00",
+    "match": "Parma – AS Roma"
+   },
+   {
+    "label": "Aston Villa ou nul",
+    "prob": 85,
+    "time": "16:00",
+    "match": "Aston Villa – Sunderland"
    }
   ]
  }
