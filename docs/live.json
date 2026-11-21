@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T18:47+01:00",
+ "generated": "2026-11-21T19:41+01:00",
  "date": "2026-11-21",
  "matches": [
   {
@@ -1310,7 +1310,7 @@
    "time": "17:15",
    "home": "Nice",
    "away": "PSG",
-   "state": "in",
+   "state": "post",
    "xgH": 1.21,
    "xgA": 1.42,
    "pH": 32,
@@ -1354,38 +1354,36 @@
     },
     "player": {
      "market": "scorer",
-     "label": "Achraf Hakimi marque",
-     "p": 0.15,
-     "prob": 15,
-     "fair": 6.67,
+     "label": "Ferran Torres marque",
+     "p": 0.2,
+     "prob": 20,
+     "fair": 5.0,
      "stars": 1,
-     "player": "Achraf Hakimi",
+     "player": "Ferran Torres",
      "team": "PSG",
-     "lineup": "start",
-     "pid": "240233",
+     "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 8 matchs · titulaire · PSG annoncé gagnant (42 %) · 1,4 but attendu pour PSG"
+     "why": "4 buts et 1 passe en 10 matchs · 10 derniers matchs : 3 buts, 1 passe · PSG annoncé gagnant (42 %) · 1,4 but attendu pour PSG"
     },
     "decisive": {
      "market": "dec",
-     "label": "Achraf Hakimi buteur ou passeur",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Ferran Torres buteur ou passeur",
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
-     "player": "Achraf Hakimi",
+     "player": "Ferran Torres",
      "team": "PSG",
      "base": [
-      8,
-      3,
-      2
+      10,
+      4,
+      1
      ],
-     "lineup": "start",
-     "pid": "240233",
+     "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 8 matchs · titulaire · PSG annoncé gagnant (42 %) · 1,4 but attendu pour PSG"
+     "why": "4 buts et 1 passe en 10 matchs · 10 derniers matchs : 3 buts, 1 passe · PSG annoncé gagnant (42 %) · 1,4 but attendu pour PSG"
     }
    }
   },
@@ -1754,10 +1752,10 @@
    "home": "Monaco",
    "away": "Auxerre",
    "state": "pre",
-   "xgH": 2.34,
-   "xgA": 1.08,
+   "xgH": 2.33,
+   "xgA": 1.07,
    "pH": 65,
-   "pD": 18,
+   "pD": 19,
    "pA": 16,
    "edate": "20261121",
    "picks": {
@@ -1773,7 +1771,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Monaco",
-     "p": 0.6547,
+     "p": 0.6541,
      "prob": 65,
      "fair": 1.53,
      "stars": 3
@@ -1781,18 +1779,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0967,
+     "p": 0.0969,
      "prob": 10,
-     "fair": 10.34,
+     "fair": 10.32,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "scw",
      "label": "Paris Brunner marque et Monaco gagne",
-     "p": 0.3941,
+     "p": 0.3865,
      "prob": 39,
-     "fair": 2.54,
+     "fair": 2.59,
      "stars": 1,
      "player": "Paris Brunner",
      "team": "Monaco",
@@ -1801,9 +1799,9 @@
     "player": {
      "market": "scorer",
      "label": "Paris Brunner marque",
-     "p": 0.49,
-     "prob": 49,
-     "fair": 2.04,
+     "p": 0.48,
+     "prob": 48,
+     "fair": 2.08,
      "stars": 1,
      "player": "Paris Brunner",
      "team": "Monaco",
@@ -1843,8 +1841,8 @@
    "home": "Lens",
    "away": "Toulouse",
    "state": "pre",
-   "xgH": 2.01,
-   "xgA": 1.35,
+   "xgH": 2.0,
+   "xgA": 1.34,
    "pH": 53,
    "pD": 22,
    "pA": 26,
@@ -1853,7 +1851,7 @@
     "main": {
      "market": "1N",
      "label": "Lens ou nul",
-     "p": 0.7439,
+     "p": 0.7441,
      "prob": 74,
      "fair": 1.34,
      "stars": 4,
@@ -1862,26 +1860,26 @@
     "winner": {
      "market": "1",
      "label": "Victoire Lens",
-     "p": 0.5278,
+     "p": 0.5274,
      "prob": 53,
-     "fair": 1.89,
+     "fair": 1.9,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0948,
+     "p": 0.095,
      "prob": 9,
-     "fair": 10.55,
+     "fair": 10.53,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Lens gagne et plus de 2,5 buts",
-     "p": 0.387,
+     "p": 0.3856,
      "prob": 39,
-     "fair": 2.58,
+     "fair": 2.59,
      "stars": 1
     },
     "player": {
@@ -1939,7 +1937,7 @@
     "main": {
      "market": "1N",
      "label": "Lille ou nul",
-     "p": 0.7601,
+     "p": 0.7603,
      "prob": 76,
      "fair": 1.32,
      "stars": 4,
@@ -1948,7 +1946,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Lille",
-     "p": 0.4671,
+     "p": 0.4667,
      "prob": 47,
      "fair": 2.14,
      "stars": 1
@@ -1956,16 +1954,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1596,
+     "p": 0.1602,
      "prob": 16,
-     "fair": 6.26,
+     "fair": 6.24,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Lille gagne sans encaisser de but",
-     "p": 0.3182,
+     "p": 0.3186,
      "prob": 32,
      "fair": 3.14,
      "stars": 1
@@ -1982,14 +1980,14 @@
      "pid": "88965",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 9 matchs · Lille favori (47 %) · 1,3 but attendu pour Lille"
+     "why": "3 buts et 2 passes en 9 matchs · Lille favori (47 %) · 1,2 but attendu pour Lille"
     },
     "decisive": {
      "market": "dec",
      "label": "Olivier Giroud buteur ou passeur",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Olivier Giroud",
      "team": "Lille",
@@ -2001,7 +1999,7 @@
      "pid": "88965",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 9 matchs · Lille favori (47 %) · 1,3 but attendu pour Lille"
+     "why": "3 buts et 2 passes en 9 matchs · Lille favori (47 %) · 1,2 but attendu pour Lille"
     }
    }
   },
@@ -2015,8 +2013,8 @@
    "home": "Strasbourg",
    "away": "Brest",
    "state": "pre",
-   "xgH": 2.05,
-   "xgA": 2.0,
+   "xgH": 2.04,
+   "xgA": 1.99,
    "pH": 41,
    "pD": 21,
    "pA": 39,
@@ -2025,16 +2023,16 @@
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7683,
+     "p": 0.7658,
      "prob": 77,
-     "fair": 1.3,
+     "fair": 1.31,
      "stars": 4,
      "why": "10 derniers matchs : Strasbourg 18 marqués / 22 encaissés · Brest 18 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Strasbourg",
-     "p": 0.4067,
+     "p": 0.4068,
      "prob": 41,
      "fair": 2.46,
      "stars": 1
@@ -2042,18 +2040,18 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0733,
+     "p": 0.0737,
      "prob": 7,
-     "fair": 13.64,
+     "fair": 13.57,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Strasbourg gagne et plus de 2,5 buts",
-     "p": 0.3342,
+     "p": 0.3333,
      "prob": 33,
-     "fair": 2.99,
+     "fair": 3.0,
      "stars": 1
     },
     "player": {
@@ -2271,7 +2269,7 @@
    "time": "19:00",
    "home": "Carolina Hurricanes",
    "away": "Edmonton Oilers",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.57,
    "xgA": 2.36,
    "pH": 61,
@@ -3232,8 +3230,8 @@
  "summary": {
   "date": "2026-11-21",
   "yesterday": {
-   "n": 152,
-   "ok": 81
+   "n": 157,
+   "ok": 84
   },
   "foot": 26,
   "nhl": 14,
