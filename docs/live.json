@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T12:16+01:00",
+ "generated": "2026-11-21T12:41+01:00",
  "date": "2026-11-21",
  "matches": [
   {
@@ -12,68 +12,72 @@
    "home": "Man City",
    "away": "Fulham",
    "state": "pre",
-   "xgH": 2.19,
-   "xgA": 0.92,
-   "pH": 66,
-   "pD": 19,
-   "pA": 15,
+   "xgH": 1.83,
+   "xgA": 0.84,
+   "pH": 61,
+   "pD": 22,
+   "pA": 17,
    "edate": "20261121",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Man City ou nul",
-     "p": 0.855,
-     "prob": 85,
-     "fair": 1.17,
+     "p": 0.8331,
+     "prob": 83,
+     "fair": 1.2,
      "stars": 5,
      "why": "10 derniers matchs : Man City 21 marqués / 13 encaissés · Fulham 10 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Man City",
-     "p": 0.6642,
-     "prob": 66,
-     "fair": 1.51,
+     "p": 0.6093,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1071,
-     "prob": 11,
-     "fair": 9.34,
+     "label": "Score exact 1-0",
+     "p": 0.1267,
+     "prob": 13,
+     "fair": 7.89,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3781,
-     "prob": 38,
-     "fair": 2.64,
-     "stars": 1
+     "market": "scw",
+     "label": "Erling Haaland marque et Man City gagne",
+     "p": 0.4106,
+     "prob": 41,
+     "fair": 2.44,
+     "stars": 1,
+     "player": "Erling Haaland",
+     "team": "Man City",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
      "label": "Erling Haaland marque",
-     "p": 0.58,
-     "prob": 58,
-     "fair": 1.72,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Erling Haaland",
      "team": "Man City",
+     "lineup": "start",
      "pid": "253989",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 10 matchs · Man City favori (66 %) · 2,2 buts attendus pour Man City"
+     "why": "9 buts et 0 passe en 10 matchs · titulaire · Man City favori (61 %) · 1,8 buts attendus pour Man City"
     },
     "decisive": {
      "market": "dec",
      "label": "Erling Haaland buteur ou passeur",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
+     "p": 0.53,
+     "prob": 53,
+     "fair": 1.89,
+     "stars": 2,
      "player": "Erling Haaland",
      "team": "Man City",
      "base": [
@@ -81,10 +85,11 @@
       9,
       0
      ],
+     "lineup": "start",
      "pid": "253989",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 10 matchs · Man City favori (66 %) · 2,2 buts attendus pour Man City"
+     "why": "9 buts et 0 passe en 10 matchs · titulaire · Man City favori (61 %) · 1,8 buts attendus pour Man City"
     }
    }
   },

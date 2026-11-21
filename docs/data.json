@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T12:16+01:00",
+ "generated": "2026-11-21T12:41+01:00",
  "date": "2026-11-21",
  "nhl_date": "2026-11-21",
  "foot": [
@@ -17,24 +17,24 @@
    "form_a": "NNDVV",
    "rank_h": 3,
    "rank_a": 15,
-   "pH": 66,
-   "pD": 19,
-   "pA": 15,
+   "pH": 61,
+   "pD": 22,
+   "pA": 17,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.19,
-   "xgA": 0.92,
+   "xgH": 1.83,
+   "xgA": 0.84,
    "scores": [
+    "1-0",
     "2-0",
-    "2-1",
-    "1-0"
+    "1-1"
    ],
    "scorep": [
-    11,
-    10,
-    10
+    13,
+    12,
+    11
    ],
-   "over25": 60,
-   "btts": 53,
+   "over25": 50,
+   "btts": 48,
    "squad_h": [
     {
      "name": "Erling Haaland",
@@ -50,11 +50,12 @@
       "g": 9,
       "a": 0
      },
-     "p_goal": 58,
-     "p_dec": 60,
+     "p_goal": 52,
+     "p_dec": 53,
      "pid": "253989",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Rayan Cherki",
@@ -70,31 +71,12 @@
       "g": 5,
       "a": 2
      },
-     "p_goal": 37,
-     "p_dec": 49,
+     "p_goal": 11,
+     "p_dec": 16,
      "pid": "298008",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Antoine Semenyo",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Man City",
-     "goals": 2,
-     "assists": 3,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 2,
-      "a": 3
-     },
-     "p_goal": 20,
-     "p_dec": 40,
-     "pid": "273292",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Jérémy Doku",
@@ -110,51 +92,75 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 21,
+     "p_goal": 10,
+     "p_dec": 17,
      "pid": "283672",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Enzo Fernández",
+     "name": "Phil Foden",
      "pos": "Milieu",
      "side": "h",
      "team": "Man City",
      "goals": 1,
-     "assists": 0,
+     "assists": 2,
      "apps": 8,
      "l10": {
       "n": 10,
       "gp": 8,
       "g": 1,
-      "a": 0
+      "a": 2
      },
-     "p_goal": 10,
-     "p_dec": 14,
-     "pid": "285450",
+     "p_goal": 8,
+     "p_dec": 22,
+     "pid": "250787",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Josko Gvardiol",
+     "name": "Marc Guéhi",
      "pos": "Défenseur",
      "side": "h",
      "team": "Man City",
      "goals": 1,
-     "assists": 3,
-     "apps": 10,
+     "assists": 1,
+     "apps": 9,
      "l10": {
       "n": 10,
-      "gp": 10,
+      "gp": 9,
       "g": 1,
-      "a": 3
+      "a": 1
      },
-     "p_goal": 9,
-     "p_dec": 31,
-     "pid": "299910",
+     "p_goal": 8,
+     "p_dec": 15,
+     "pid": "265907",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Iliman Ndiaye",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Man City",
+     "goals": 0,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 4,
+     "p_dec": 19,
+     "pid": "268641",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -172,31 +178,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 16,
-     "p_dec": 26,
+     "p_goal": 15,
+     "p_dec": 24,
      "pid": "409541",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Gonzalo García",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Fulham",
-     "goals": 1,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 16,
-     "pid": "87297",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Alex Iwobi",
@@ -212,11 +199,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 16,
+     "p_goal": 12,
+     "p_dec": 15,
      "pid": "175063",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Oscar Bobb",
@@ -232,31 +220,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 13,
+     "p_goal": 8,
+     "p_dec": 12,
      "pid": "307111",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "César Palacios",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Fulham",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 10,
-     "pid": "12172",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ryan Sessegnon",
@@ -272,95 +241,145 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 9,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "241328",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Rodrigo Muniz",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Fulham",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "301525",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Gonzalo García",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Fulham",
+     "goals": 1,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 5,
+     "pid": "87297",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Man City : 3e, 21 points, 21 buts marqués et 13 encaissés en 10 matchs.",
     "Fulham : 15e, 10 points, 10 buts marqués et 12 encaissés en 10 matchs.",
     "Man City : 21 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Fulham : 10 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat."
+    "Fulham : 10 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
+    "Man City : attaque revue à la baisse (−16 %) d'après la compo officielle (Rayan Cherki ne commence pas).",
+    "Fulham : attaque revue à la baisse (−9 %) d'après la compo officielle (César Palacios, Gonzalo García ne commencent pas).",
+    "Compositions officielles prises en compte : Rayan Cherki (remplaçant), Antoine Semenyo (absent) ne commencent pas le match."
    ],
-   "reading": "Man City est nettement favori (66 %).",
+   "reading": "Man City est nettement favori (61 %).",
    "stakes": "Man City (3e) défend une place qualificative pour la Ligue des champions. Fulham (15e) lutte pour le maintien, 2 points d'avance sur la zone rouge.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Man City ou nul",
-     "p": 0.855,
-     "prob": 85,
-     "fair": 1.17,
+     "p": 0.8331,
+     "prob": 83,
+     "fair": 1.2,
      "stars": 5,
      "why": "10 derniers matchs : Man City 21 marqués / 13 encaissés · Fulham 10 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Man City",
-     "p": 0.6642,
-     "prob": 66,
-     "fair": 1.51,
+     "p": 0.6093,
+     "prob": 61,
+     "fair": 1.64,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-0",
-     "p": 0.1071,
-     "prob": 11,
-     "fair": 9.34,
+     "label": "Score exact 1-0",
+     "p": 0.1267,
+     "prob": 13,
+     "fair": 7.89,
      "stars": 1,
-     "value": "2-0"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3781,
-     "prob": 38,
-     "fair": 2.64,
-     "stars": 1
+     "market": "scw",
+     "label": "Erling Haaland marque et Man City gagne",
+     "p": 0.4106,
+     "prob": 41,
+     "fair": 2.44,
+     "stars": 1,
+     "player": "Erling Haaland",
+     "team": "Man City",
+     "side": "h"
     },
     "fun_alt": [
      {
-      "market": "wh_nil",
-      "label": "Man City gagne sans encaisser de but",
-      "p": 0.3547,
-      "prob": 35,
-      "fair": 2.82,
+      "market": "htft_h",
+      "label": "Man City mène à la mi-temps et gagne le match",
+      "p": 0.388,
+      "prob": 39,
+      "fair": 2.58,
       "stars": 1
      },
      {
-      "market": "wh_btts",
-      "label": "Man City gagne et les deux équipes marquent",
-      "p": 0.3096,
-      "prob": 31,
-      "fair": 3.23,
+      "market": "wh_o25",
+      "label": "Man City gagne et plus de 2,5 buts",
+      "p": 0.3664,
+      "prob": 37,
+      "fair": 2.73,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Erling Haaland marque",
-     "p": 0.58,
-     "prob": 58,
-     "fair": 1.72,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
      "stars": 2,
      "player": "Erling Haaland",
      "team": "Man City",
+     "lineup": "start",
      "pid": "253989",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 10 matchs · Man City favori (66 %) · 2,2 buts attendus pour Man City"
+     "why": "9 buts et 0 passe en 10 matchs · titulaire · Man City favori (61 %) · 1,8 buts attendus pour Man City"
     },
     "decisive": {
      "market": "dec",
      "label": "Erling Haaland buteur ou passeur",
-     "p": 0.6,
-     "prob": 60,
-     "fair": 1.67,
-     "stars": 3,
+     "p": 0.53,
+     "prob": 53,
+     "fair": 1.89,
+     "stars": 2,
      "player": "Erling Haaland",
      "team": "Man City",
      "base": [
@@ -368,10 +387,11 @@
       9,
       0
      ],
+     "lineup": "start",
      "pid": "253989",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 10 matchs · Man City favori (66 %) · 2,2 buts attendus pour Man City"
+     "why": "9 buts et 0 passe en 10 matchs · titulaire · Man City favori (61 %) · 1,8 buts attendus pour Man City"
     }
    },
    "second": {
