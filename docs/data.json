@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T12:41+01:00",
+ "generated": "2026-11-21T13:06+01:00",
  "date": "2026-11-21",
  "nhl_date": "2026-11-21",
  "foot": [
@@ -418,24 +418,24 @@
    "form_a": "NVVDN",
    "rank_h": 13,
    "rank_a": 9,
-   "pH": 42,
-   "pD": 26,
-   "pA": 31,
+   "pH": 40,
+   "pD": 28,
+   "pA": 32,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.41,
-   "xgA": 1.18,
+   "xgH": 1.25,
+   "xgA": 1.08,
    "scores": [
     "1-1",
     "1-0",
     "0-1"
    ],
    "scorep": [
+    13,
     12,
-    11,
-    9
+    11
    ],
-   "over25": 48,
-   "btts": 52,
+   "over25": 41,
+   "btts": 47,
    "squad_h": [
     {
      "name": "Lucas Boyé",
@@ -451,31 +451,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 38,
-     "p_dec": 40,
+     "p_goal": 34,
+     "p_dec": 36,
      "pid": "207236",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Mariano Díaz",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Alavés",
-     "goals": 4,
-     "assists": 4,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 25,
-     "p_dec": 42,
-     "pid": "198832",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pablo Ibáñez",
@@ -491,11 +472,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 15,
+     "p_goal": 9,
+     "p_dec": 13,
      "pid": "106326",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ville Koski",
@@ -511,51 +493,75 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 10,
+     "p_goal": 8,
+     "p_dec": 9,
      "pid": "149306",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Hugo Novoa",
+     "name": "Mariano Díaz",
      "pos": "Attaquant",
+     "side": "h",
+     "team": "Alavés",
+     "goals": 4,
+     "assists": 4,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 7,
+     "p_dec": 13,
+     "pid": "198832",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Abde Rebbach",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Alavés",
+     "goals": 0,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 8,
+     "pid": "345991",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Nahuel Tenaglia",
+     "pos": "Défenseur",
      "side": "h",
      "team": "Alavés",
      "goals": 1,
      "assists": 0,
-     "apps": 3,
+     "apps": 12,
      "l10": {
       "n": 10,
-      "gp": 3,
-      "g": 1,
+      "gp": 10,
+      "g": 0,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 9,
-     "pid": "305608",
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "262491",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Aitor Mañas",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Alavés",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 9,
-     "pid": "379231",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -573,31 +579,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 28,
-     "p_dec": 39,
+     "p_goal": 26,
+     "p_dec": 37,
      "pid": "122260",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Bil Nsongo",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Deportivo",
-     "goals": 2,
-     "assists": 0,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_dec": 20,
-     "pid": "414299",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mario Soriano Carreno",
@@ -613,11 +600,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 15,
-     "p_dec": 30,
+     "p_goal": 14,
+     "p_dec": 28,
      "pid": "297353",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Luismi Cruz",
@@ -633,11 +621,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 22,
+     "p_goal": 10,
+     "p_dec": 20,
      "pid": "324166",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Yeremay Hernández",
@@ -653,11 +642,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 18,
+     "p_goal": 9,
+     "p_dec": 17,
      "pid": "312392",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Bil Nsongo",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Deportivo",
+     "goals": 2,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 6,
+     "pid": "414299",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Diego Villares",
@@ -673,18 +684,22 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 9,
+     "p_goal": 2,
+     "p_dec": 3,
      "pid": "331742",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Alavés : 13e, 13 points, 15 buts marqués et 17 encaissés en 12 matchs.",
     "Deportivo : 9e, 15 points, 15 buts marqués et 14 encaissés en 12 matchs.",
     "Alavés : 11 buts marqués et 16 encaissés sur ses 10 derniers matchs de championnat.",
-    "Deportivo : 13 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat."
+    "Deportivo : 13 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
+    "Alavés : attaque revue à la baisse (−12 %) d'après la compo officielle (Mariano Díaz ne commence pas).",
+    "Deportivo : attaque revue à la baisse (−8 %) d'après la compo officielle (Bil Nsongo ne commence pas).",
+    "Compositions officielles prises en compte : Mariano Díaz (remplaçant), Bil Nsongo (remplaçant) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Match de milieu de tableau : enjeu modéré au classement. Adversaires directs au classement : 2 points d'écart.",
@@ -692,78 +707,76 @@
     "main": {
      "market": "1N",
      "label": "Alavés ou nul",
-     "p": 0.6864,
-     "prob": 69,
-     "fair": 1.46,
+     "p": 0.6809,
+     "prob": 68,
+     "fair": 1.47,
      "stars": 3,
      "why": "10 derniers matchs : Alavés 11 marqués / 16 encaissés · Deportivo 13 / 12"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Alavés",
-     "p": 0.424,
-     "prob": 42,
-     "fair": 2.36,
+     "p": 0.4005,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1061,
-     "prob": 11,
-     "fair": 9.42,
+     "p": 0.1216,
+     "prob": 12,
+     "fair": 8.23,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.2613,
-     "prob": 26,
-     "fair": 3.83,
+     "market": "wh_nil",
+     "label": "Alavés gagne sans encaisser de but",
+     "p": 0.2417,
+     "prob": 24,
+     "fair": 4.14,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Alavés mène à la mi-temps et gagne le match",
-      "p": 0.2519,
-      "prob": 25,
-      "fair": 3.97,
+      "p": 0.2331,
+      "prob": 23,
+      "fair": 4.29,
       "stars": 1
      },
      {
-      "market": "scw",
-      "label": "Lucas Boyé marque et Alavés gagne",
-      "p": 0.244,
-      "prob": 24,
-      "fair": 4.1,
-      "stars": 1,
-      "player": "Lucas Boyé",
-      "team": "Alavés",
-      "side": "h"
+      "market": "wh_by1",
+      "label": "Alavés gagne d'un seul but",
+      "p": 0.2241,
+      "prob": 22,
+      "fair": 4.46,
+      "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Lucas Boyé marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Lucas Boyé",
      "team": "Alavés",
+     "lineup": "start",
      "pid": "207236",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 5 buts, 0 passe · Alavés annoncé gagnant (42 %) · 1,4 but attendu pour Alavés"
+     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 5 buts, 0 passe · titulaire · Alavés annoncé gagnant (40 %) · 1,2 but attendu pour Alavés"
     },
     "decisive": {
      "market": "dec",
      "label": "Lucas Boyé buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
      "player": "Lucas Boyé",
      "team": "Alavés",
@@ -772,10 +785,11 @@
       5,
       0
      ],
+     "lineup": "start",
      "pid": "207236",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 5 buts, 0 passe · Alavés annoncé gagnant (42 %) · 1,4 but attendu pour Alavés"
+     "why": "5 buts et 0 passe en 11 matchs · 10 derniers matchs : 5 buts, 0 passe · titulaire · Alavés annoncé gagnant (40 %) · 1,2 but attendu pour Alavés"
     }
    },
    "second": {
