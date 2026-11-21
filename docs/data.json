@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T16:26+01:00",
+ "generated": "2026-11-21T16:51+01:00",
  "date": "2026-11-21",
  "nhl_date": "2026-11-21",
  "foot": [
@@ -1171,7 +1171,7 @@
    "kickoff": "2026-11-21T14:00:00+00:00",
    "time": "15:00",
    "state": "in",
-   "score": "2-0",
+   "score": "3-0",
    "home": "Lazio",
    "away": "Lecce",
    "form_h": "NVVVV",
@@ -1567,7 +1567,7 @@
    "kickoff": "2026-11-21T14:30:00+00:00",
    "time": "15:30",
    "state": "in",
-   "score": "1-1",
+   "score": "1-2",
    "home": "Union Berlin",
    "away": "RB Leipzig",
    "form_h": "DNDNN",
@@ -1966,7 +1966,7 @@
    "kickoff": "2026-11-21T14:30:00+00:00",
    "time": "15:30",
    "state": "in",
-   "score": "1-0",
+   "score": "4-0",
    "home": "Leverkusen",
    "away": "Paderborn",
    "form_h": "VDDVD",
@@ -3556,7 +3556,7 @@
    "kickoff": "2026-11-21T15:00:00+00:00",
    "time": "16:00",
    "state": "in",
-   "score": "1-0",
+   "score": "2-0",
    "home": "Bournemouth",
    "away": "Nottm Forest",
    "form_h": "NVVVV",
@@ -4354,7 +4354,7 @@
    "kickoff": "2026-11-21T15:00:00+00:00",
    "time": "16:00",
    "state": "in",
-   "score": "1-0",
+   "score": "1-1",
    "home": "Chelsea",
    "away": "Leeds",
    "form_h": "DVDDV",
@@ -4750,7 +4750,7 @@
    "kickoff": "2026-11-21T15:00:00+00:00",
    "time": "16:00",
    "state": "in",
-   "score": "1-1",
+   "score": "2-2",
    "home": "Coventry",
    "away": "C Palace",
    "form_h": "NVDDV",
@@ -12419,6 +12419,15 @@
    "stakes": "Toronto Maple Leafs est hors des places en séries pour l'instant. Columbus Blue Jackets est hors des places en séries pour l'instant.",
    "espn_id": "401892759",
    "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5848,
+     "prob": 58,
+     "fair": 1.71,
+     "stars": 2,
+     "why": "10 derniers matchs : Toronto Maple Leafs 1 victoire · Columbus Blue Jackets 3"
+    },
     "winner": {
      "market": "win_a",
      "label": "Victoire Columbus Blue Jackets",
@@ -12476,22 +12485,11 @@
      "pid": 8478460,
      "team": "Columbus Blue Jackets",
      "why": "4 buts et 14 passes en 20 matchs · 10 derniers matchs : 4 buts, 6 passes · Columbus Blue Jackets favori (55 %) · 3,3 buts attendus pour Columbus Blue Jackets"
-    },
-    "held": {
-     "market": "o55",
-     "label": "Plus de 5,5 buts",
-     "p": 0.5848,
-     "prob": 58,
-     "fair": 1.71,
-     "stars": 2,
-     "why": "10 derniers matchs : Toronto Maple Leafs 1 victoire · Columbus Blue Jackets 3",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+    "agree": true
    },
    "logo_h": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
    "logo_a": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
