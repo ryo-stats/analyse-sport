@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T13:06+01:00",
+ "generated": "2026-11-21T13:31+01:00",
  "date": "2026-11-21",
  "nhl_date": "2026-11-21",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Premier League",
    "kickoff": "2026-11-21T12:30:00+00:00",
    "time": "13:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Man City",
    "away": "Fulham",
    "form_h": "NVDVD",
@@ -296,8 +296,6 @@
     "Fulham : 15e, 10 points, 10 buts marqués et 12 encaissés en 10 matchs.",
     "Man City : 21 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Fulham : 10 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
-    "Man City : attaque revue à la baisse (−16 %) d'après la compo officielle (Rayan Cherki ne commence pas).",
-    "Fulham : attaque revue à la baisse (−9 %) d'après la compo officielle (César Palacios, Gonzalo García ne commencent pas).",
     "Compositions officielles prises en compte : Rayan Cherki (remplaçant), Antoine Semenyo (absent) ne commencent pas le match."
    ],
    "reading": "Man City est nettement favori (61 %).",
@@ -323,7 +321,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1267,
+     "p": 0.1268,
      "prob": 13,
      "fair": 7.89,
      "stars": 1,
@@ -352,7 +350,7 @@
      {
       "market": "wh_o25",
       "label": "Man City gagne et plus de 2,5 buts",
-      "p": 0.3664,
+      "p": 0.3663,
       "prob": 37,
       "fair": 2.73,
       "stars": 1
@@ -45185,7 +45183,7 @@
  },
  "second": {
   "foot": {
-   "ok": 26,
+   "ok": 25,
    "elo": {
     "fra.1": 688,
     "eng.1": 842,
@@ -45193,7 +45191,23 @@
     "ita.1": 862,
     "ger.1": 668
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 91
+    },
+    "eng.1": {
+     "2026": 100
+    },
+    "esp.1": {
+     "2026": 120
+    },
+    "ita.1": {
+     "2026": 110
+    },
+    "ger.1": {
+     "2026": 82
+    }
+   },
    "status": "ok"
   },
   "nhl": {
