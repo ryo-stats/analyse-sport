@@ -64710,7 +64710,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401875008|1|": {
   "match": "foot-401875008",
@@ -64734,7 +64734,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401875008|scorer|Edon Zhegrova": {
   "match": "foot-401875008",
@@ -64758,7 +64758,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401875008|dec|Edon Zhegrova": {
   "match": "foot-401875008",
@@ -64810,7 +64810,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882804|1N|": {
   "match": "foot-401882804",
@@ -64945,7 +64945,7 @@
   "away": "Angers",
   "market": "1N",
   "label": "Paris FC ou nul",
-  "p": 0.8876,
+  "p": 0.8899,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -64969,8 +64969,8 @@
   "away": "Angers",
   "market": "1",
   "label": "Victoire Paris FC",
-  "p": 0.7174,
-  "stars": 4,
+  "p": 0.6863,
+  "stars": 3,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -64984,82 +64984,6 @@
   ],
   "result": null
  },
- "foot-401876397|scorer|Lassine Sinayoko": {
-  "match": "foot-401876397",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-22",
-  "home": "Paris FC",
-  "away": "Angers",
-  "market": "scorer",
-  "label": "Lassine Sinayoko marque",
-  "p": 0.67,
-  "stars": 3,
-  "player": "Lassine Sinayoko",
-  "pid_player": "271137",
-  "value": null,
-  "stats_league": "fra.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401876397|dec|Lassine Sinayoko": {
-  "match": "foot-401876397",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-22",
-  "home": "Paris FC",
-  "away": "Angers",
-  "market": "dec",
-  "label": "Lassine Sinayoko buteur ou passeur",
-  "p": 0.82,
-  "stars": 5,
-  "player": "Lassine Sinayoko",
-  "pid_player": "271137",
-  "value": null,
-  "stats_league": "fra.1",
-  "season": 2026,
-  "base": [
-   10,
-   9,
-   5
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401876397|wh_nil|": {
-  "match": "foot-401876397",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-22",
-  "home": "Paris FC",
-  "away": "Angers",
-  "market": "wh_nil",
-  "label": "Paris FC gagne sans encaisser de but",
-  "p": 0.3984,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876397|exact|": {
   "match": "foot-401876397",
   "sport": "foot",
@@ -65068,12 +64992,12 @@
   "home": "Paris FC",
   "away": "Angers",
   "market": "exact",
-  "label": "Score exact 2-0",
-  "p": 0.1155,
+  "label": "Score exact 1-0",
+  "p": 0.1515,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-0",
+  "value": "1-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -65241,7 +65165,7 @@
   "away": "Udinese",
   "market": "1N",
   "label": "Bologna ou nul",
-  "p": 0.8559,
+  "p": 0.8325,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -65265,7 +65189,7 @@
   "away": "Udinese",
   "market": "1",
   "label": "Victoire Bologna",
-  "p": 0.6834,
+  "p": 0.641,
   "stars": 3,
   "player": null,
   "pid_player": null,
@@ -65289,7 +65213,7 @@
   "away": "Udinese",
   "market": "scorer",
   "label": "Federico Bernardeschi marque",
-  "p": 0.38,
+  "p": 0.36,
   "stars": 1,
   "player": "Federico Bernardeschi",
   "pid_player": "180956",
@@ -65313,7 +65237,7 @@
   "away": "Udinese",
   "market": "dec",
   "label": "Federico Bernardeschi buteur ou passeur",
-  "p": 0.42,
+  "p": 0.39,
   "stars": 1,
   "player": "Federico Bernardeschi",
   "pid_player": "180956",
@@ -65332,30 +65256,6 @@
   ],
   "result": null
  },
- "foot-401875047|wh_btts|": {
-  "match": "foot-401875047",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-22",
-  "home": "Bologna",
-  "away": "Udinese",
-  "market": "wh_btts",
-  "label": "Bologna gagne et les deux équipes marquent",
-  "p": 0.3688,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401875047|exact|": {
   "match": "foot-401875047",
   "sport": "foot",
@@ -65365,7 +65265,7 @@
   "away": "Udinese",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.0943,
+  "p": 0.0979,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -65380,130 +65280,6 @@
   ],
   "result": null
  },
- "foot-401874960|btts_y|": {
-  "match": "foot-401874960",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-22",
-  "home": "Sassuolo",
-  "away": "Genoa",
-  "market": "btts_y",
-  "label": "Les deux équipes marquent",
-  "p": 0.6711,
-  "stars": 3,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "main"
-  ],
-  "result": null
- },
- "foot-401874960|1|": {
-  "match": "foot-401874960",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-22",
-  "home": "Sassuolo",
-  "away": "Genoa",
-  "market": "1",
-  "label": "Victoire Sassuolo",
-  "p": 0.4051,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "winner"
-  ],
-  "result": null
- },
- "foot-401874960|scorer|Vasilije Adzic": {
-  "match": "foot-401874960",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-22",
-  "home": "Sassuolo",
-  "away": "Genoa",
-  "market": "scorer",
-  "label": "Vasilije Adzic marque",
-  "p": 0.25,
-  "stars": 1,
-  "player": "Vasilije Adzic",
-  "pid_player": "344917",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": null,
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "player"
-  ],
-  "result": null
- },
- "foot-401874960|dec|Vasilije Adzic": {
-  "match": "foot-401874960",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-22",
-  "home": "Sassuolo",
-  "away": "Genoa",
-  "market": "dec",
-  "label": "Vasilije Adzic buteur ou passeur",
-  "p": 0.34,
-  "stars": 1,
-  "player": "Vasilije Adzic",
-  "pid_player": "344917",
-  "value": null,
-  "stats_league": "ita.1",
-  "season": 2026,
-  "base": [
-   9,
-   3,
-   1
-  ],
-  "side": null,
-  "group": "safe",
-  "kinds": [
-   "decisive"
-  ],
-  "result": null
- },
- "foot-401874960|wh_o25|": {
-  "match": "foot-401874960",
-  "sport": "foot",
-  "league": "Serie A",
-  "date": "2026-11-22",
-  "home": "Sassuolo",
-  "away": "Genoa",
-  "market": "wh_o25",
-  "label": "Sassuolo gagne et plus de 2,5 buts",
-  "p": 0.2977,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401874960|exact|": {
   "match": "foot-401874960",
   "sport": "foot",
@@ -65512,12 +65288,12 @@
   "home": "Sassuolo",
   "away": "Genoa",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0838,
+  "label": "Score exact 1-2",
+  "p": 0.0879,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "1-2",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -66277,7 +66053,7 @@
   "away": "Frosinone",
   "market": "1",
   "label": "Victoire Milan",
-  "p": 0.5754,
+  "p": 0.5753,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -66353,7 +66129,7 @@
   "away": "Frosinone",
   "market": "htft_h",
   "label": "Milan mène à la mi-temps et gagne le match",
-  "p": 0.3766,
+  "p": 0.3765,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -66377,7 +66153,7 @@
   "away": "Frosinone",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.0888,
+  "p": 0.0889,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -66721,7 +66497,7 @@
   "away": "Inter Milan",
   "market": "2",
   "label": "Victoire Inter Milan",
-  "p": 0.5895,
+  "p": 0.5893,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -66797,7 +66573,7 @@
   "away": "Inter Milan",
   "market": "htft_a",
   "label": "Inter Milan mène à la mi-temps et gagne le match",
-  "p": 0.3895,
+  "p": 0.3893,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -66821,7 +66597,7 @@
   "away": "Inter Milan",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0854,
+  "p": 0.0855,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -67537,7 +67313,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401882804|h3|": {
   "match": "foot-401882804",
@@ -67549,6 +67325,230 @@
   "market": "h3",
   "label": "Barcelona gagne avec 3 buts d'écart ou plus",
   "p": 0.4177,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401876397|scorer|Pablo Pagis": {
+  "match": "foot-401876397",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-22",
+  "home": "Paris FC",
+  "away": "Angers",
+  "market": "scorer",
+  "label": "Pablo Pagis marque",
+  "p": 0.22,
+  "stars": 1,
+  "player": "Pablo Pagis",
+  "pid_player": "334359",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401876397|dec|Pablo Pagis": {
+  "match": "foot-401876397",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-22",
+  "home": "Paris FC",
+  "away": "Angers",
+  "market": "dec",
+  "label": "Pablo Pagis buteur ou passeur",
+  "p": 0.38,
+  "stars": 1,
+  "player": "Pablo Pagis",
+  "pid_player": "334359",
+  "value": null,
+  "stats_league": "fra.1",
+  "season": 2026,
+  "base": [
+   10,
+   2,
+   2
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401876397|wh_o25|": {
+  "match": "foot-401876397",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-22",
+  "home": "Paris FC",
+  "away": "Angers",
+  "market": "wh_o25",
+  "label": "Paris FC gagne et plus de 2,5 buts",
+  "p": 0.3888,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401875047|h2|": {
+  "match": "foot-401875047",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-22",
+  "home": "Bologna",
+  "away": "Udinese",
+  "market": "h2",
+  "label": "Bologna gagne avec 2 buts d'écart ou plus",
+  "p": 0.4137,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401874960|N2|": {
+  "match": "foot-401874960",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-22",
+  "home": "Sassuolo",
+  "away": "Genoa",
+  "market": "N2",
+  "label": "Nul ou Genoa",
+  "p": 0.6542,
+  "stars": 3,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "main"
+  ],
+  "result": null
+ },
+ "foot-401874960|2|": {
+  "match": "foot-401874960",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-22",
+  "home": "Sassuolo",
+  "away": "Genoa",
+  "market": "2",
+  "label": "Victoire Genoa",
+  "p": 0.4192,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "winner"
+  ],
+  "result": null
+ },
+ "foot-401874960|scorer|Milutin Osmajic": {
+  "match": "foot-401874960",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-22",
+  "home": "Sassuolo",
+  "away": "Genoa",
+  "market": "scorer",
+  "label": "Milutin Osmajic marque",
+  "p": 0.41,
+  "stars": 1,
+  "player": "Milutin Osmajic",
+  "pid_player": "275444",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": null,
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "player"
+  ],
+  "result": null
+ },
+ "foot-401874960|dec|Milutin Osmajic": {
+  "match": "foot-401874960",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-22",
+  "home": "Sassuolo",
+  "away": "Genoa",
+  "market": "dec",
+  "label": "Milutin Osmajic buteur ou passeur",
+  "p": 0.5,
+  "stars": 2,
+  "player": "Milutin Osmajic",
+  "pid_player": "275444",
+  "value": null,
+  "stats_league": "ita.1",
+  "season": 2026,
+  "base": [
+   10,
+   4,
+   1
+  ],
+  "side": null,
+  "group": "safe",
+  "kinds": [
+   "decisive"
+  ],
+  "result": null
+ },
+ "foot-401874960|o35|": {
+  "match": "foot-401874960",
+  "sport": "foot",
+  "league": "Serie A",
+  "date": "2026-11-22",
+  "home": "Sassuolo",
+  "away": "Genoa",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3889,
   "stars": 1,
   "player": null,
   "pid_player": null,
