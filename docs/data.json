@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T17:30+01:00",
+ "generated": "2026-11-22T17:55+01:00",
  "date": "2026-11-22",
  "nhl_date": "2026-11-22",
  "foot": [
@@ -2322,13 +2322,13 @@
      "assists": 0,
      "apps": 8,
      "l10": {
-      "n": 9,
-      "gp": 8,
-      "g": 5,
+      "n": 10,
+      "gp": 9,
+      "g": 7,
       "a": 0
      },
-     "p_goal": 46,
-     "p_dec": 48,
+     "p_goal": 50,
+     "p_dec": 52,
      "pid": "146804",
      "stats_league": "ger.1",
      "season": 2026
@@ -2342,13 +2342,13 @@
      "assists": 0,
      "apps": 9,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 10,
+      "gp": 10,
       "g": 3,
       "a": 0
      },
-     "p_goal": 31,
-     "p_dec": 35,
+     "p_goal": 29,
+     "p_dec": 33,
      "pid": "306928",
      "stats_league": "ger.1",
      "season": 2026
@@ -2362,13 +2362,13 @@
      "assists": 5,
      "apps": 9,
      "l10": {
-      "n": 9,
-      "gp": 9,
+      "n": 10,
+      "gp": 10,
       "g": 2,
       "a": 5
      },
-     "p_goal": 23,
-     "p_dec": 59,
+     "p_goal": 22,
+     "p_dec": 57,
      "pid": "308908",
      "stats_league": "ger.1",
      "season": 2026
@@ -2382,13 +2382,13 @@
      "assists": 0,
      "apps": 9,
      "l10": {
-      "n": 9,
+      "n": 10,
       "gp": 9,
       "g": 2,
       "a": 0
      },
-     "p_goal": 23,
-     "p_dec": 24,
+     "p_goal": 22,
+     "p_dec": 23,
      "pid": "332689",
      "stats_league": "ger.1",
      "season": 2026
@@ -2402,13 +2402,13 @@
      "assists": 1,
      "apps": 6,
      "l10": {
-      "n": 9,
-      "gp": 6,
+      "n": 10,
+      "gp": 7,
       "g": 2,
       "a": 1
      },
-     "p_goal": 22,
-     "p_dec": 33,
+     "p_goal": 20,
+     "p_dec": 31,
      "pid": "333837",
      "stats_league": "ger.1",
      "season": 2026
@@ -2422,13 +2422,13 @@
      "assists": 1,
      "apps": 9,
      "l10": {
-      "n": 9,
+      "n": 10,
       "gp": 9,
       "g": 1,
       "a": 1
      },
-     "p_goal": 14,
-     "p_dec": 28,
+     "p_goal": 13,
+     "p_dec": 26,
      "pid": "282885",
      "stats_league": "ger.1",
      "season": 2026
@@ -2559,7 +2559,7 @@
    "ctx": [
     "Augsburg : 10e, 12 points, 23 buts marqués et 21 encaissés en 10 matchs.",
     "Mainz : 13e, 10 points, 19 buts marqués et 22 encaissés en 10 matchs.",
-    "Augsburg : 20 buts marqués et 20 encaissés sur ses 9 derniers matchs de championnat.",
+    "Augsburg : 23 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
     "Mainz : 19 buts marqués et 22 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Augsburg est favori sans écraser le match (50 %).",
@@ -2600,35 +2600,38 @@
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Augsburg gagne avec 2 buts d'écart ou plus",
-      "p": 0.3123,
-      "prob": 31,
-      "fair": 3.2,
-      "stars": 1
+      "market": "scw",
+      "label": "Michael Gregoritsch marque et Augsburg gagne",
+      "p": 0.3159,
+      "prob": 32,
+      "fair": 3.17,
+      "stars": 1,
+      "player": "Michael Gregoritsch",
+      "team": "Augsburg",
+      "side": "h"
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Michael Gregoritsch marque",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
-     "stars": 1,
+     "p": 0.5,
+     "prob": 50,
+     "fair": 2.0,
+     "stars": 2,
      "player": "Michael Gregoritsch",
      "team": "Augsburg",
      "pid": "146804",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Augsburg favori (50 %) · 2,6 buts attendus pour Augsburg"
+     "why": "5 buts et 0 passe en 8 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 9 sur 10) · Augsburg favori (50 %) · 2,6 buts attendus pour Augsburg"
     },
     "decisive": {
      "market": "dec",
      "label": "Michael Gregoritsch buteur ou passeur",
-     "p": 0.48,
-     "prob": 48,
-     "fair": 2.08,
-     "stars": 1,
+     "p": 0.52,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2,
      "player": "Michael Gregoritsch",
      "team": "Augsburg",
      "base": [
@@ -2639,7 +2642,7 @@
      "pid": "146804",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 8 matchs · Augsburg favori (50 %) · 2,6 buts attendus pour Augsburg"
+     "why": "5 buts et 0 passe en 8 matchs · 10 derniers matchs : 7 buts, 0 passe (joué 9 sur 10) · Augsburg favori (50 %) · 2,6 buts attendus pour Augsburg"
     },
     "held": {
      "market": "o25",
@@ -2670,7 +2673,7 @@
    "kickoff": "2026-11-22T15:15:00+00:00",
    "time": "16:15",
    "state": "in",
-   "score": "2-1",
+   "score": "3-2",
    "home": "Racing",
    "away": "Real Sociedad",
    "form_h": "VDVVD",
@@ -3063,7 +3066,7 @@
    "kickoff": "2026-11-22T16:15:00+00:00",
    "time": "17:15",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Lorient",
    "away": "Rennes",
    "form_h": "VDNVV",
@@ -3460,8 +3463,8 @@
    "league": "Premier League",
    "kickoff": "2026-11-22T16:30:00+00:00",
    "time": "17:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "2-0",
    "home": "Liverpool",
    "away": "Man Utd",
    "form_h": "NDDVV",
@@ -3747,7 +3750,6 @@
     "Man Utd : 19e, 8 points, 14 buts marqués et 19 encaissés en 10 matchs.",
     "Liverpool : 14 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
     "Man Utd : 14 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
-    "Liverpool : attaque revue à la baisse (−9 %) d'après la compo officielle (Víctor Muñoz ne commence pas).",
     "Compositions officielles prises en compte : Cody Gakpo (absent), Víctor Muñoz (remplaçant) ne commencent pas le match."
    ],
    "reading": "Liverpool est favori sans écraser le match (56 %).",
@@ -3794,7 +3796,7 @@
      {
       "market": "wh_o25",
       "label": "Liverpool gagne et plus de 2,5 buts",
-      "p": 0.3814,
+      "p": 0.3815,
       "prob": 38,
       "fair": 2.62,
       "stars": 1
@@ -3860,8 +3862,8 @@
    "league": "Bundesliga",
    "kickoff": "2026-11-22T16:30:00+00:00",
    "time": "17:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Bremen",
    "away": "Hamburg",
    "form_h": "DVDVN",
@@ -3873,7 +3875,7 @@
    "pA": 17,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 2.25,
-   "xgA": 1.1,
+   "xgA": 1.09,
    "scores": [
     "2-1",
     "2-0",
@@ -4147,8 +4149,6 @@
     "Hamburg : 12e, 12 points, 10 buts marqués et 20 encaissés en 9 matchs.",
     "Bremen : 17 buts marqués et 15 encaissés sur ses 9 derniers matchs de championnat.",
     "Hamburg : 10 buts marqués et 20 encaissés sur ses 9 derniers matchs de championnat.",
-    "Bremen : attaque revue à la baisse (−11 %) d'après la compo officielle (Marco Grüll ne commence pas).",
-    "Hamburg : attaque revue à la baisse (−22 %) d'après la compo officielle (Shafiq Nandja, Yussuf Poulsen, Terem Moffi ne commencent pas).",
     "Compositions officielles prises en compte : Marco Grüll (absent), Yussuf Poulsen (absent), Terem Moffi (remplaçant) ne commencent pas le match."
    ],
    "reading": "Bremen est nettement favori (63 %).",
@@ -4192,9 +4192,9 @@
      {
       "market": "h2",
       "label": "Bremen gagne avec 2 buts d'écart ou plus",
-      "p": 0.4074,
+      "p": 0.4073,
       "prob": 41,
-      "fair": 2.45,
+      "fair": 2.46,
       "stars": 1
      },
      {
@@ -4661,12 +4661,12 @@
    "form_a": "DDVND",
    "rank_h": 16,
    "rank_a": 20,
-   "pH": 53,
+   "pH": 54,
    "pD": 24,
-   "pA": 24,
+   "pA": 23,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.76,
-   "xgA": 1.1,
+   "xgA": 1.06,
    "scores": [
     "1-1",
     "1-0",
@@ -4677,8 +4677,8 @@
     10,
     10
    ],
-   "over25": 55,
-   "btts": 55,
+   "over25": 54,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Ante Budimir",
@@ -4698,7 +4698,8 @@
      "p_dec": 64,
      "pid": "207288",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Raúl García",
@@ -4718,7 +4719,8 @@
      "p_dec": 22,
      "pid": "296163",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Alejandro Catena",
@@ -4738,27 +4740,8 @@
      "p_dec": 24,
      "pid": "264175",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Asier Osambela",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Osasuna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 15,
-     "pid": "381628",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Enrique Barja",
@@ -4778,7 +4761,8 @@
      "p_dec": 9,
      "pid": "209580",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Moi Gómez",
@@ -4798,7 +4782,29 @@
      "p_dec": 28,
      "pid": "169089",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Asier Osambela",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Osasuna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 5,
+     "pid": "381628",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -4816,11 +4822,12 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 38,
-     "p_dec": 44,
+     "p_goal": 37,
+     "p_dec": 43,
      "pid": "373542",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Carlos Dotor",
@@ -4836,11 +4843,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 22,
+     "p_goal": 17,
+     "p_dec": 21,
      "pid": "324098",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pablo Martínez",
@@ -4856,31 +4864,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 10,
-     "p_dec": 26,
+     "p_goal": 9,
+     "p_dec": 25,
      "pid": "271151",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Chupete",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Málaga",
-     "goals": 1,
-     "assists": 0,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 13,
-     "pid": "388602",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "David Larrubia",
@@ -4896,11 +4885,12 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 7,
+     "p_goal": 6,
      "p_dec": 10,
      "pid": "297828",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Joaquín Muñoz",
@@ -4920,67 +4910,91 @@
      "p_dec": 5,
      "pid": "180444",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Chupete",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Málaga",
+     "goals": 1,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 4,
+     "pid": "388602",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Osasuna : 16e, 12 points, 12 buts marqués et 23 encaissés en 12 matchs.",
     "Málaga : 20e, 5 points, 9 buts marqués et 23 encaissés en 12 matchs.",
     "Osasuna : 10 buts marqués et 22 encaissés sur ses 10 derniers matchs de championnat.",
-    "Málaga : 8 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat."
+    "Málaga : 8 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat.",
+    "Málaga : attaque revue à la baisse (−4 %) d'après la compo officielle (Chupete ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
-   "reading": "Osasuna est favori sans écraser le match (53 %).",
+   "reading": "Osasuna est favori sans écraser le match (54 %).",
    "stakes": "Osasuna (16e) lutte pour le maintien, 1 point d'avance sur la zone rouge. Málaga (20e) est en zone de relégation : match vital.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Osasuna ou nul",
-     "p": 0.7616,
-     "prob": 76,
-     "fair": 1.31,
+     "p": 0.7717,
+     "prob": 77,
+     "fair": 1.3,
      "stars": 4,
      "why": "10 derniers matchs : Osasuna 10 marqués / 22 encaissés · Málaga 8 / 20"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Osasuna",
-     "p": 0.5265,
-     "prob": 53,
-     "fair": 1.9,
+     "p": 0.5366,
+     "prob": 54,
+     "fair": 1.86,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1004,
+     "p": 0.1049,
      "prob": 10,
-     "fair": 9.96,
+     "fair": 9.54,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Osasuna gagne et plus de 2,5 buts",
-     "p": 0.3378,
+     "p": 0.3397,
      "prob": 34,
-     "fair": 2.96,
+     "fair": 2.94,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Osasuna mène à la mi-temps et gagne le match",
-      "p": 0.328,
+      "p": 0.3349,
       "prob": 33,
-      "fair": 3.05,
+      "fair": 2.99,
       "stars": 1
      },
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3218,
-      "prob": 32,
-      "fair": 3.11,
+      "p": 0.3122,
+      "prob": 31,
+      "fair": 3.2,
       "stars": 1
      }
     ],
@@ -4993,10 +5007,11 @@
      "stars": 3,
      "player": "Ante Budimir",
      "team": "Osasuna",
+     "lineup": "start",
      "pid": "207288",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 12 matchs · 10 derniers matchs : 7 buts, 0 passe · Osasuna favori (53 %) · 1,8 buts attendus pour Osasuna"
+     "why": "8 buts et 0 passe en 12 matchs · 10 derniers matchs : 7 buts, 0 passe · titulaire · Osasuna favori (54 %) · 1,8 buts attendus pour Osasuna"
     },
     "decisive": {
      "market": "dec",
@@ -5012,10 +5027,11 @@
       8,
       0
      ],
+     "lineup": "start",
      "pid": "207288",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 12 matchs · 10 derniers matchs : 7 buts, 0 passe · Osasuna favori (53 %) · 1,8 buts attendus pour Osasuna"
+     "why": "8 buts et 0 passe en 12 matchs · 10 derniers matchs : 7 buts, 0 passe · titulaire · Osasuna favori (54 %) · 1,8 buts attendus pour Osasuna"
     }
    },
    "second": {
@@ -38760,7 +38776,7 @@
  },
  "second": {
   "foot": {
-   "ok": 7,
+   "ok": 5,
    "elo": {
     "fra.1": 694,
     "eng.1": 850,
@@ -38768,23 +38784,7 @@
     "ita.1": 869,
     "ger.1": 675
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 97
-    },
-    "eng.1": {
-     "2026": 108
-    },
-    "esp.1": {
-     "2026": 125
-    },
-    "ita.1": {
-     "2026": 117
-    },
-    "ger.1": {
-     "2026": 89
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
