@@ -65970,7 +65970,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874989|1|": {
   "match": "foot-401874989",
@@ -65994,7 +65994,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401874989|scorer|Adrien Rabiot": {
   "match": "foot-401874989",
@@ -66018,7 +66018,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401874989|dec|Adrien Rabiot": {
   "match": "foot-401874989",
@@ -66070,7 +66070,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882801|1N|": {
   "match": "foot-401882801",
@@ -66229,7 +66229,7 @@
   "away": "Le Mans",
   "market": "1N",
   "label": "Marseille ou nul",
-  "p": 0.8767,
+  "p": 0.8899,
   "stars": 5,
   "player": null,
   "pid_player": null,
@@ -66253,7 +66253,7 @@
   "away": "Le Mans",
   "market": "1",
   "label": "Victoire Marseille",
-  "p": 0.7325,
+  "p": 0.7418,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -66277,7 +66277,7 @@
   "away": "Le Mans",
   "market": "scorer",
   "label": "Amine Gouiri marque",
-  "p": 0.59,
+  "p": 0.56,
   "stars": 2,
   "player": "Amine Gouiri",
   "pid_player": "259743",
@@ -66301,7 +66301,7 @@
   "away": "Le Mans",
   "market": "dec",
   "label": "Amine Gouiri buteur ou passeur",
-  "p": 0.73,
+  "p": 0.7,
   "stars": 4,
   "player": "Amine Gouiri",
   "pid_player": "259743",
@@ -66320,30 +66320,6 @@
   ],
   "result": null
  },
- "foot-401876400|h3|": {
-  "match": "foot-401876400",
-  "sport": "foot",
-  "league": "Ligue 1",
-  "date": "2026-11-22",
-  "home": "Marseille",
-  "away": "Le Mans",
-  "market": "h3",
-  "label": "Marseille gagne avec 3 buts d'écart ou plus",
-  "p": 0.3438,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401876400|exact|": {
   "match": "foot-401876400",
   "sport": "foot",
@@ -66352,12 +66328,12 @@
   "home": "Marseille",
   "away": "Le Mans",
   "market": "exact",
-  "label": "Score exact 2-1",
-  "p": 0.0818,
+  "label": "Score exact 2-0",
+  "p": 0.0888,
   "stars": 1,
   "player": null,
   "pid_player": null,
-  "value": "2-1",
+  "value": "2-0",
   "stats_league": null,
   "season": null,
   "base": null,
@@ -66377,7 +66353,7 @@
   "away": "Inter Milan",
   "market": "N2",
   "label": "Nul ou Inter Milan",
-  "p": 0.7757,
+  "p": 0.7601,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -66401,7 +66377,7 @@
   "away": "Inter Milan",
   "market": "2",
   "label": "Victoire Inter Milan",
-  "p": 0.5898,
+  "p": 0.5586,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -66425,7 +66401,7 @@
   "away": "Inter Milan",
   "market": "scorer",
   "label": "Marcus Thuram marque",
-  "p": 0.45,
+  "p": 0.41,
   "stars": 1,
   "player": "Marcus Thuram",
   "pid_player": "217331",
@@ -66449,7 +66425,7 @@
   "away": "Inter Milan",
   "market": "dec",
   "label": "Marcus Thuram buteur ou passeur",
-  "p": 0.55,
+  "p": 0.51,
   "stars": 2,
   "player": "Marcus Thuram",
   "pid_player": "217331",
@@ -66477,7 +66453,7 @@
   "away": "Inter Milan",
   "market": "htft_a",
   "label": "Inter Milan mène à la mi-temps et gagne le match",
-  "p": 0.3899,
+  "p": 0.3616,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -66501,7 +66477,7 @@
   "away": "Inter Milan",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0852,
+  "p": 0.0917,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -66525,8 +66501,8 @@
   "away": "Atlético",
   "market": "N2",
   "label": "Nul ou Atlético",
-  "p": 0.8264,
-  "stars": 5,
+  "p": 0.795,
+  "stars": 4,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -66549,7 +66525,7 @@
   "away": "Atlético",
   "market": "2",
   "label": "Victoire Atlético",
-  "p": 0.5861,
+  "p": 0.5258,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -66573,7 +66549,7 @@
   "away": "Atlético",
   "market": "scorer",
   "label": "Álex Baena marque",
-  "p": 0.27,
+  "p": 0.24,
   "stars": 1,
   "player": "Álex Baena",
   "pid_player": "297373",
@@ -66597,7 +66573,7 @@
   "away": "Atlético",
   "market": "dec",
   "label": "Álex Baena buteur ou passeur",
-  "p": 0.4,
+  "p": 0.36,
   "stars": 1,
   "player": "Álex Baena",
   "pid_player": "297373",
@@ -66625,7 +66601,7 @@
   "away": "Atlético",
   "market": "wa_nil",
   "label": "Atlético gagne sans encaisser de but",
-  "p": 0.3701,
+  "p": 0.3473,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -66649,7 +66625,7 @@
   "away": "Atlético",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.1426,
+  "p": 0.1552,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -67549,6 +67525,30 @@
   "market": "o35",
   "label": "Plus de 3,5 buts",
   "p": 0.4151,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": true
+ },
+ "foot-401876400|wh_btts|": {
+  "match": "foot-401876400",
+  "sport": "foot",
+  "league": "Ligue 1",
+  "date": "2026-11-22",
+  "home": "Marseille",
+  "away": "Le Mans",
+  "market": "wh_btts",
+  "label": "Marseille gagne et les deux équipes marquent",
+  "p": 0.3968,
   "stars": 1,
   "player": null,
   "pid_player": null,
