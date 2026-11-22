@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T01:52+01:00",
+ "generated": "2026-11-22T03:10+01:00",
  "date": "2026-11-22",
  "nhl_date": "2026-11-21",
  "foot": [
@@ -6889,12 +6889,12 @@
    "league": "NHL",
    "kickoff": "2026-11-21T23:00:00+00:00",
    "time": "00:00",
-   "state": "LIVE",
-   "score": "2-2",
+   "state": "OFF",
+   "score": "4-3",
    "home": "Florida Panthers",
    "away": "Buffalo Sabres",
-   "rec_h": "12-8-3 · 5e Atlantic · 1 défaite de suite",
-   "rec_a": "9-9-4 · 6e Atlantic · 1 victoire de suite",
+   "rec_h": "13-8-3 · 5e Atlantic · 1 victoire de suite",
+   "rec_a": "9-10-4 · 6e Atlantic · 1 défaite de suite",
    "winH": 59,
    "winA": 41,
    "pH": 51,
@@ -6916,17 +6916,17 @@
    ],
    "goalie_h": {
     "name": "Jacob Markstrom",
-    "starts": 12,
-    "shots": 283,
-    "saves": 254,
-    "sv": "89,8 % d'arrêts",
+    "starts": 13,
+    "shots": 302,
+    "saves": 270,
+    "sv": "89,4 % d'arrêts",
     "note": ""
    },
    "goalie_a": {
-    "name": "Ukko-Pekka Luukkonen",
-    "starts": 12,
-    "shots": 338,
-    "saves": 295,
+    "name": "Colten Ellis",
+    "starts": 7,
+    "shots": 181,
+    "saves": 158,
     "sv": "87,3 % d'arrêts",
     "note": ""
    },
@@ -6934,34 +6934,76 @@
     {
      "name": "Sam Reinhart",
      "pos": "Centre",
-     "cur": "12 buts, 10 passes en 23",
+     "cur": "12 buts, 11 passes en 24",
      "new": false,
      "side": "h",
      "team": "Florida Panthers",
      "goals": 12,
-     "assists": 10,
-     "gp": 23,
+     "assists": 11,
+     "gp": 24,
      "pid": 8477933,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 6,
+      "g": 5,
       "a": 6
      },
-     "p_goal": 39,
+     "p_goal": 38,
      "p_point": 64,
      "p_assist": 41
     },
     {
+     "name": "Sam Bennett",
+     "pos": "Centre",
+     "cur": "10 buts, 6 passes en 24",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 10,
+     "assists": 6,
+     "gp": 24,
+     "pid": 8477935,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 7,
+      "a": 3
+     },
+     "p_goal": 33,
+     "p_point": 56,
+     "p_assist": 33
+    },
+    {
+     "name": "Carter Verhaeghe",
+     "pos": "Centre",
+     "cur": "10 buts, 11 passes en 24",
+     "new": false,
+     "side": "h",
+     "team": "Florida Panthers",
+     "goals": 10,
+     "assists": 11,
+     "gp": 24,
+     "pid": 8477409,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 7
+     },
+     "p_goal": 30,
+     "p_point": 56,
+     "p_assist": 37
+    },
+    {
      "name": "Matthew Tkachuk",
      "pos": "Ailier",
-     "cur": "7 buts, 25 passes en 23",
+     "cur": "7 buts, 25 passes en 24",
      "new": false,
      "side": "h",
      "team": "Florida Panthers",
      "goals": 7,
      "assists": 25,
-     "gp": 23,
+     "gp": 24,
      "pid": 8479314,
      "l10": {
       "n": 10,
@@ -6969,20 +7011,20 @@
       "g": 3,
       "a": 9
      },
-     "p_goal": 30,
-     "p_point": 70,
+     "p_goal": 29,
+     "p_point": 69,
      "p_assist": 56
     },
     {
      "name": "Brady Tkachuk",
      "pos": "Ailier",
-     "cur": "11 buts, 13 passes en 23",
+     "cur": "11 buts, 13 passes en 24",
      "new": true,
      "side": "h",
      "team": "Florida Panthers",
      "goals": 11,
      "assists": 13,
-     "gp": 23,
+     "gp": 24,
      "pid": 8480801,
      "l10": {
       "n": 10,
@@ -6990,71 +7032,29 @@
       "g": 3,
       "a": 6
      },
-     "p_goal": 30,
-     "p_point": 59,
-     "p_assist": 40
-    },
-    {
-     "name": "Carter Verhaeghe",
-     "pos": "Centre",
-     "cur": "10 buts, 11 passes en 23",
-     "new": false,
-     "side": "h",
-     "team": "Florida Panthers",
-     "goals": 10,
-     "assists": 11,
-     "gp": 23,
-     "pid": 8477409,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 8
-     },
-     "p_goal": 30,
-     "p_point": 57,
-     "p_assist": 38
-    },
-    {
-     "name": "Sam Bennett",
-     "pos": "Centre",
-     "cur": "7 buts, 5 passes en 23",
-     "new": false,
-     "side": "h",
-     "team": "Florida Panthers",
-     "goals": 7,
-     "assists": 5,
-     "gp": 23,
-     "pid": 8477935,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 2
-     },
-     "p_goal": 30,
-     "p_point": 53,
-     "p_assist": 32
+     "p_goal": 29,
+     "p_point": 58,
+     "p_assist": 39
     },
     {
      "name": "Anton Lundell",
      "pos": "Centre",
-     "cur": "7 buts, 4 passes en 22",
+     "cur": "7 buts, 4 passes en 23",
      "new": false,
      "side": "h",
      "team": "Florida Panthers",
      "goals": 7,
      "assists": 4,
-     "gp": 22,
+     "gp": 23,
      "pid": 8482113,
      "l10": {
       "n": 10,
       "gp": 9,
-      "g": 6,
+      "g": 3,
       "a": 2
      },
-     "p_goal": 29,
-     "p_point": 51,
+     "p_goal": 26,
+     "p_point": 49,
      "p_assist": 31
     }
    ],
@@ -7062,19 +7062,19 @@
     {
      "name": "Tage Thompson",
      "pos": "Centre",
-     "cur": "14 buts, 10 passes en 22",
+     "cur": "15 buts, 11 passes en 23",
      "new": false,
      "side": "a",
      "team": "Buffalo Sabres",
-     "goals": 14,
-     "assists": 10,
-     "gp": 22,
+     "goals": 15,
+     "assists": 11,
+     "gp": 23,
      "pid": 8479420,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 9,
-      "a": 5
+      "g": 7,
+      "a": 4
      },
      "p_goal": 35,
      "p_point": 57,
@@ -7083,13 +7083,13 @@
     {
      "name": "Jack Quinn",
      "pos": "Ailier",
-     "cur": "11 buts, 11 passes en 22",
+     "cur": "12 buts, 11 passes en 23",
      "new": false,
      "side": "a",
      "team": "Buffalo Sabres",
-     "goals": 11,
+     "goals": 12,
      "assists": 11,
-     "gp": 22,
+     "gp": 23,
      "pid": 8482097,
      "l10": {
       "n": 10,
@@ -7097,20 +7097,20 @@
       "g": 5,
       "a": 6
      },
-     "p_goal": 22,
-     "p_point": 45,
+     "p_goal": 23,
+     "p_point": 46,
      "p_assist": 29
     },
     {
      "name": "Jason Zucker",
      "pos": "Ailier",
-     "cur": "2 buts, 0 passe en 13",
+     "cur": "2 buts, 0 passe en 14",
      "new": false,
      "side": "a",
      "team": "Buffalo Sabres",
      "goals": 2,
      "assists": 0,
-     "gp": 13,
+     "gp": 14,
      "pid": 8475722,
      "l10": {
       "n": 10,
@@ -7125,13 +7125,13 @@
     {
      "name": "Josh Doan",
      "pos": "Ailier",
-     "cur": "4 buts, 3 passes en 22",
+     "cur": "4 buts, 3 passes en 23",
      "new": false,
      "side": "a",
      "team": "Buffalo Sabres",
      "goals": 4,
      "assists": 3,
-     "gp": 22,
+     "gp": 23,
      "pid": 8482659,
      "l10": {
       "n": 10,
@@ -7146,13 +7146,13 @@
     {
      "name": "Josh Norris",
      "pos": "Centre",
-     "cur": "4 buts, 3 passes en 22",
+     "cur": "4 buts, 3 passes en 23",
      "new": false,
      "side": "a",
      "team": "Buffalo Sabres",
      "goals": 4,
      "assists": 3,
-     "gp": 22,
+     "gp": 23,
      "pid": 8480064,
      "l10": {
       "n": 10,
@@ -7167,28 +7167,28 @@
     {
      "name": "Rasmus Dahlin",
      "pos": "Défenseur",
-     "cur": "4 buts, 10 passes en 19",
+     "cur": "4 buts, 10 passes en 20",
      "new": false,
      "side": "a",
      "team": "Buffalo Sabres",
      "goals": 4,
      "assists": 10,
-     "gp": 19,
+     "gp": 20,
      "pid": 8480839,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 2,
-      "a": 7
+      "a": 5
      },
      "p_goal": 17,
-     "p_point": 52,
-     "p_assist": 42
+     "p_point": 51,
+     "p_assist": 41
     }
    ],
    "ctx": [
-    "Florida Panthers : 72 buts marqués et 68 encaissés en 23 matchs.",
-    "Buffalo Sabres : 64 buts marqués et 77 encaissés en 22 matchs.",
+    "Florida Panthers : 76 buts marqués et 71 encaissés en 24 matchs.",
+    "Buffalo Sabres : 67 buts marqués et 81 encaissés en 23 matchs.",
     "Aucune des deux équipes n'a joué hier.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
@@ -7242,26 +7242,26 @@
     "player": {
      "market": "point",
      "label": "Matthew Tkachuk : au moins 1 point",
-     "p": 0.7,
-     "prob": 70,
-     "fair": 1.43,
-     "stars": 4,
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
      "player": "Matthew Tkachuk",
      "pid": 8479314,
      "team": "Florida Panthers",
-     "why": "7 buts et 25 passes en 23 matchs · 10 derniers matchs : 3 buts, 9 passes · Florida Panthers favori (59 %) · 3,6 buts attendus pour Florida Panthers"
+     "why": "7 buts et 25 passes en 24 matchs · 10 derniers matchs : 3 buts, 9 passes · Florida Panthers favori (59 %) · 3,6 buts attendus pour Florida Panthers"
     },
     "scorer": {
      "market": "goal",
      "label": "Sam Reinhart marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Sam Reinhart",
      "pid": 8477933,
      "team": "Florida Panthers",
-     "why": "12 buts et 10 passes en 23 matchs · 10 derniers matchs : 6 buts, 6 passes · Florida Panthers favori (59 %) · 3,6 buts attendus pour Florida Panthers"
+     "why": "12 buts et 11 passes en 24 matchs · 10 derniers matchs : 5 buts, 6 passes · Florida Panthers favori (59 %) · 3,6 buts attendus pour Florida Panthers"
     }
    },
    "second": {
@@ -7279,12 +7279,12 @@
    "league": "NHL",
    "kickoff": "2026-11-21T23:00:00+00:00",
    "time": "00:00",
-   "state": "LIVE",
-   "score": "3-3",
+   "state": "OFF",
+   "score": "4-3",
    "home": "Nashville Predators",
    "away": "Pittsburgh Penguins",
-   "rec_h": "11-6-5 · 4e Central · 2 défaites de suite",
-   "rec_a": "7-12-2 · 8e Metropolitan · 2 défaites de suite",
+   "rec_h": "12-6-5 · 4e Central · 1 victoire de suite",
+   "rec_a": "7-13-2 · 8e Metropolitan · 3 défaites de suite",
    "winH": 56,
    "winA": 44,
    "pH": 48,
@@ -7306,11 +7306,11 @@
    ],
    "goalie_h": {
     "name": "Juuse Saros",
-    "starts": 15,
-    "shots": 477,
-    "saves": 438,
-    "sv": "91,8 % d'arrêts",
-    "note": "le titulaire a été remplacé en cours de match la dernière fois (blessure possible)"
+    "starts": 16,
+    "shots": 501,
+    "saves": 459,
+    "sv": "91,6 % d'arrêts",
+    "note": ""
    },
    "goalie_a": {
     "name": "Arturs Silovs",
@@ -7324,39 +7324,39 @@
     {
      "name": "Steven Stamkos",
      "pos": "Centre",
-     "cur": "12 buts, 11 passes en 22",
+     "cur": "12 buts, 12 passes en 23",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 12,
-     "assists": 11,
-     "gp": 22,
+     "assists": 12,
+     "gp": 23,
      "pid": 8474564,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 5,
-      "a": 3
+      "a": 4
      },
-     "p_goal": 42,
+     "p_goal": 41,
      "p_point": 60,
-     "p_assist": 31
+     "p_assist": 32
     },
     {
      "name": "Filip Forsberg",
      "pos": "Ailier",
-     "cur": "8 buts, 16 passes en 22",
+     "cur": "9 buts, 16 passes en 23",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
-     "goals": 8,
+     "goals": 9,
      "assists": 16,
-     "gp": 22,
+     "gp": 23,
      "pid": 8476887,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 5,
+      "g": 4,
       "a": 5
      },
      "p_goal": 38,
@@ -7366,13 +7366,13 @@
     {
      "name": "Ryan O'Reilly",
      "pos": "Centre",
-     "cur": "9 buts, 11 passes en 22",
+     "cur": "9 buts, 12 passes en 23",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 9,
-     "assists": 11,
-     "gp": 22,
+     "assists": 12,
+     "gp": 23,
      "pid": 8475158,
      "l10": {
       "n": 10,
@@ -7380,106 +7380,106 @@
       "g": 2,
       "a": 5
      },
-     "p_goal": 29,
+     "p_goal": 28,
      "p_point": 62,
      "p_assist": 46
     },
     {
+     "name": "Jonathan Marchessault",
+     "pos": "Ailier",
+     "cur": "4 buts, 4 passes en 16",
+     "new": false,
+     "side": "h",
+     "team": "Nashville Predators",
+     "goals": 4,
+     "assists": 4,
+     "gp": 16,
+     "pid": 8476539,
+     "l10": {
+      "n": 10,
+      "gp": 3,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 21,
+     "p_point": 44,
+     "p_assist": 28
+    },
+    {
      "name": "Ross Colton",
      "pos": "Centre",
-     "cur": "5 buts, 3 passes en 22",
+     "cur": "5 buts, 3 passes en 23",
      "new": true,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 5,
      "assists": 3,
-     "gp": 22,
+     "gp": 23,
      "pid": 8479525,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 4,
+      "g": 3,
       "a": 1
      },
-     "p_goal": 22,
-     "p_point": 37,
-     "p_assist": 17
+     "p_goal": 20,
+     "p_point": 34,
+     "p_assist": 16
     },
     {
      "name": "Adam Edstrom",
      "pos": "Centre",
-     "cur": "6 buts, 1 passe en 22",
+     "cur": "6 buts, 1 passe en 23",
      "new": true,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 6,
      "assists": 1,
-     "gp": 22,
+     "gp": 23,
      "pid": 8481726,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 2,
-      "a": 1
-     },
-     "p_goal": 20,
-     "p_point": 32,
-     "p_assist": 13
-    },
-    {
-     "name": "Jonathan Marchessault",
-     "pos": "Ailier",
-     "cur": "3 buts, 3 passes en 15",
-     "new": false,
-     "side": "h",
-     "team": "Nashville Predators",
-     "goals": 3,
-     "assists": 3,
-     "gp": 15,
-     "pid": 8476539,
-     "l10": {
-      "n": 10,
-      "gp": 3,
-      "g": 1,
       "a": 0
      },
-     "p_goal": 19,
-     "p_point": 41,
-     "p_assist": 26
+     "p_goal": 20,
+     "p_point": 30,
+     "p_assist": 11
     }
    ],
    "squad_a": [
     {
      "name": "Rickard Rakell",
      "pos": "Ailier",
-     "cur": "8 buts, 5 passes en 21",
+     "cur": "8 buts, 5 passes en 22",
      "new": false,
      "side": "a",
      "team": "Pittsburgh Penguins",
      "goals": 8,
      "assists": 5,
-     "gp": 21,
+     "gp": 22,
      "pid": 8476483,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 7,
+      "g": 6,
       "a": 2
      },
-     "p_goal": 29,
-     "p_point": 47,
+     "p_goal": 28,
+     "p_point": 46,
      "p_assist": 25
     },
     {
      "name": "Sidney Crosby",
      "pos": "Centre",
-     "cur": "6 buts, 8 passes en 21",
+     "cur": "6 buts, 9 passes en 22",
      "new": false,
      "side": "a",
      "team": "Pittsburgh Penguins",
      "goals": 6,
-     "assists": 8,
-     "gp": 21,
+     "assists": 9,
+     "gp": 22,
      "pid": 8471675,
      "l10": {
       "n": 10,
@@ -7494,91 +7494,91 @@
     {
      "name": "Egor Chinakhov",
      "pos": "Ailier",
-     "cur": "3 buts, 3 passes en 17",
+     "cur": "3 buts, 4 passes en 18",
      "new": false,
      "side": "a",
      "team": "Pittsburgh Penguins",
      "goals": 3,
-     "assists": 3,
-     "gp": 17,
+     "assists": 4,
+     "gp": 18,
      "pid": 8482475,
      "l10": {
       "n": 10,
-      "gp": 9,
+      "gp": 10,
       "g": 1,
-      "a": 2
-     },
-     "p_goal": 22,
-     "p_point": 41,
-     "p_assist": 24
-    },
-    {
-     "name": "Evgeni Malkin",
-     "pos": "Centre",
-     "cur": "6 buts, 12 passes en 19",
-     "new": false,
-     "side": "a",
-     "team": "Pittsburgh Penguins",
-     "goals": 6,
-     "assists": 12,
-     "gp": 19,
-     "pid": 8471215,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 0,
-      "a": 9
+      "a": 3
      },
      "p_goal": 21,
-     "p_point": 57,
-     "p_assist": 45
+     "p_point": 42,
+     "p_assist": 25
     },
     {
      "name": "Tommy Novak",
      "pos": "Centre",
-     "cur": "8 buts, 7 passes en 21",
+     "cur": "8 buts, 8 passes en 22",
      "new": false,
      "side": "a",
      "team": "Pittsburgh Penguins",
      "goals": 8,
-     "assists": 7,
-     "gp": 21,
+     "assists": 8,
+     "gp": 22,
      "pid": 8478438,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 5,
-      "a": 2
+      "a": 3
      },
      "p_goal": 19,
      "p_point": 39,
      "p_assist": 24
     },
     {
-     "name": "Justin Brazeau",
-     "pos": "Ailier",
-     "cur": "1 but, 0 passe en 7",
+     "name": "Ben Kindel",
+     "pos": "Centre",
+     "cur": "4 buts, 6 passes en 19",
      "new": false,
      "side": "a",
      "team": "Pittsburgh Penguins",
-     "goals": 1,
-     "assists": 0,
-     "gp": 7,
-     "pid": 8479638,
+     "goals": 4,
+     "assists": 6,
+     "gp": 19,
+     "pid": 8485414,
      "l10": {
       "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
+      "gp": 10,
+      "g": 2,
+      "a": 4
      },
-     "p_goal": 18,
-     "p_point": 33,
-     "p_assist": 18
+     "p_goal": 17,
+     "p_point": 34,
+     "p_assist": 21
+    },
+    {
+     "name": "Erik Karlsson",
+     "pos": "Défenseur",
+     "cur": "3 buts, 16 passes en 22",
+     "new": false,
+     "side": "a",
+     "team": "Pittsburgh Penguins",
+     "goals": 3,
+     "assists": 16,
+     "gp": 22,
+     "pid": 8474578,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 5
+     },
+     "p_goal": 15,
+     "p_point": 51,
+     "p_assist": 42
     }
    ],
    "ctx": [
-    "Nashville Predators : 67 buts marqués et 66 encaissés en 22 matchs.",
-    "Pittsburgh Penguins : 64 buts marqués et 76 encaissés en 21 matchs.",
+    "Nashville Predators : 71 buts marqués et 69 encaissés en 23 matchs.",
+    "Pittsburgh Penguins : 67 buts marqués et 80 encaissés en 22 matchs.",
     "Aucune des deux équipes n'a joué hier.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
@@ -7639,19 +7639,19 @@
      "player": "Filip Forsberg",
      "pid": 8476887,
      "team": "Nashville Predators",
-     "why": "8 buts et 16 passes en 22 matchs · 10 derniers matchs : 5 buts, 5 passes · Nashville Predators favori (56 %) · 3,5 buts attendus pour Nashville Predators"
+     "why": "9 buts et 16 passes en 23 matchs · 10 derniers matchs : 4 buts, 5 passes · Nashville Predators favori (56 %) · 3,5 buts attendus pour Nashville Predators"
     },
     "scorer": {
      "market": "goal",
-     "label": "Filip Forsberg marque",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "label": "Steven Stamkos marque",
+     "p": 0.41,
+     "prob": 41,
+     "fair": 2.44,
      "stars": 1,
-     "player": "Filip Forsberg",
-     "pid": 8476887,
+     "player": "Steven Stamkos",
+     "pid": 8474564,
      "team": "Nashville Predators",
-     "why": "8 buts et 16 passes en 22 matchs · 10 derniers matchs : 5 buts, 5 passes · Nashville Predators favori (56 %) · 3,5 buts attendus pour Nashville Predators"
+     "why": "12 buts et 12 passes en 23 matchs · 10 derniers matchs : 5 buts, 4 passes · Nashville Predators favori (56 %) · 3,5 buts attendus pour Nashville Predators"
     }
    },
    "second": {
@@ -7670,7 +7670,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-2",
+   "score": "5-4",
    "home": "Boston Bruins",
    "away": "Washington Capitals",
    "rec_h": "14-7-1 · 4e Atlantic · 1 victoire de suite",
@@ -8060,7 +8060,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "3-2",
    "home": "Toronto Maple Leafs",
    "away": "Columbus Blue Jackets",
    "rec_h": "8-13-3 · 8e Atlantic · 1 défaite en prolongation de suite",
@@ -8450,7 +8450,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-1",
+   "score": "2-3",
    "home": "Montréal Canadiens",
    "away": "Philadelphia Flyers",
    "rec_h": "14-5-4 · 2e Atlantic · 2 victoires de suite",
@@ -8841,7 +8841,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "0-1",
+   "score": "2-1",
    "home": "Ottawa Senators",
    "away": "Los Angeles Kings",
    "rec_h": "14-6-3 · 3e Atlantic · 1 défaite en prolongation de suite",
@@ -9232,7 +9232,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "1-2",
    "home": "Detroit Red Wings",
    "away": "New York Islanders",
    "rec_h": "8-11-3 · 7e Atlantic · 1 défaite de suite",
@@ -9622,7 +9622,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "4-3",
+   "score": "8-5",
    "home": "St. Louis Blues",
    "away": "New Jersey Devils",
    "rec_h": "11-9-2 · 7e Central · 2 victoires de suite",
@@ -10013,7 +10013,7 @@
    "kickoff": "2026-11-22T00:00:00+00:00",
    "time": "01:00",
    "state": "LIVE",
-   "score": "2-2",
+   "score": "3-3",
    "home": "Winnipeg Jets",
    "away": "Vegas Golden Knights",
    "rec_h": "11-9-3 · 6e Central · 1 victoire de suite",
@@ -10403,8 +10403,8 @@
    "league": "NHL",
    "kickoff": "2026-11-22T02:00:00+00:00",
    "time": "03:00",
-   "state": "FUT",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Utah Mammoth",
    "away": "Anaheim Ducks",
    "rec_h": "11-9-3 · 5e Central · 1 victoire de suite",
@@ -10704,8 +10704,6 @@
     "Utah Mammoth : 77 buts marqués et 79 encaissés en 23 matchs.",
     "Anaheim Ducks : 85 buts marqués et 89 encaissés en 23 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Utah Mammoth : Karel Vejmelka (87,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
-    "Gardien probable de Anaheim Ducks : Lukas Dostal (85,7 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 7 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Utah Mammoth est favori (62 % en comptant la prolongation).",
@@ -10734,14 +10732,14 @@
      "label": "Utah Mammoth gagne et plus de 6,5 buts",
      "p": 0.3929,
      "prob": 39,
-     "fair": 2.54,
+     "fair": 2.55,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "h3",
       "label": "Utah Mammoth gagne par 3 buts d'écart ou plus",
-      "p": 0.2734,
+      "p": 0.2735,
       "prob": 27,
       "fair": 3.66,
       "stars": 1
@@ -41347,27 +41345,11 @@
     "ita.1": 866,
     "ger.1": 674
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 96
-    },
-    "eng.1": {
-     "2026": 107
-    },
-    "esp.1": {
-     "2026": 124
-    },
-    "ita.1": {
-     "2026": 114
-    },
-    "ger.1": {
-     "2026": 88
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
-   "ok": 3,
+   "ok": 2,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 91886 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
