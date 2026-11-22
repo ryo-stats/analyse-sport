@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T13:45+01:00",
+ "generated": "2026-11-22T14:10+01:00",
  "date": "2026-11-22",
  "nhl_date": "2026-11-22",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-22T11:30:00+00:00",
    "time": "12:30",
    "state": "in",
-   "score": "1-0",
+   "score": "4-0",
    "home": "Juventus",
    "away": "Venezia",
    "form_h": "NVVDV",
@@ -402,8 +402,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-22T13:00:00+00:00",
    "time": "14:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-1",
    "home": "Barcelona",
    "away": "Villarreal",
    "form_h": "VVVDD",
@@ -689,8 +689,6 @@
     "Villarreal : 9e, 15 points, 17 buts marqués et 15 encaissés en 12 matchs.",
     "Barcelona : 41 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Villarreal : 13 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat.",
-    "Barcelona : attaque revue à la baisse (−7 %) d'après la compo officielle.",
-    "Villarreal : attaque revue à la baisse (−13 %) d'après la compo officielle (Gerard Moreno, Nicolas Pépé ne commencent pas).",
     "Compositions officielles prises en compte : Gabriel Jesus (remplaçant), Anthony Gordon (remplaçant) ne commencent pas le match."
    ],
    "reading": "Barcelona est nettement favori (79 %).",
@@ -734,9 +732,9 @@
      {
       "market": "wh_nil",
       "label": "Barcelona gagne sans encaisser de but",
-      "p": 0.3221,
+      "p": 0.322,
       "prob": 32,
-      "fair": 3.1,
+      "fair": 3.11,
       "stars": 1
      },
      {
@@ -1192,24 +1190,24 @@
    "form_a": "NVVDD",
    "rank_h": 14,
    "rank_a": 2,
-   "pH": 20,
-   "pD": 23,
-   "pA": 57,
+   "pH": 22,
+   "pD": 25,
+   "pA": 52,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 0.97,
-   "xgA": 1.8,
+   "xgH": 0.92,
+   "xgA": 1.56,
    "scores": [
     "0-1",
     "1-1",
     "0-2"
    ],
    "scorep": [
-    11,
-    11,
+    13,
+    12,
     10
    ],
-   "over25": 52,
-   "btts": 52,
+   "over25": 45,
+   "btts": 47,
    "squad_h": [
     {
      "name": "Mohamed Belloumi",
@@ -1225,11 +1223,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 22,
-     "p_dec": 33,
+     "p_goal": 21,
+     "p_dec": 32,
      "pid": "320417",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Oliver McBurnie",
@@ -1246,50 +1245,11 @@
       "a": 2
      },
      "p_goal": 17,
-     "p_dec": 30,
+     "p_dec": 29,
      "pid": "193010",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Mohamed-Ali Cho",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Hull",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 8,
-     "pid": "306557",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Tim Iroegbunam",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Hull",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 9,
-     "pid": "310599",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Semi Ajayi",
@@ -1309,7 +1269,50 @@
      "p_dec": 8,
      "pid": "178051",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Tim Iroegbunam",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Hull",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "310599",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Mohamed-Ali Cho",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Hull",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "306557",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nobel Mendy",
@@ -1326,10 +1329,11 @@
       "a": 0
      },
      "p_goal": 7,
-     "p_dec": 8,
+     "p_dec": 7,
      "pid": "356212",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1347,31 +1351,12 @@
       "g": 4,
       "a": 4
      },
-     "p_goal": 25,
-     "p_dec": 45,
+     "p_goal": 22,
+     "p_dec": 40,
      "pid": "132659",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Charalambos Kostoulas",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Brighton",
-     "goals": 3,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 2
-     },
-     "p_goal": 22,
-     "p_dec": 34,
-     "pid": "387655",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Yasin Ayari",
@@ -1387,31 +1372,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 23,
+     "p_goal": 17,
+     "p_dec": 20,
      "pid": "304242",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Jack Hinshelwood",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Brighton",
-     "goals": 3,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_dec": 19,
-     "pid": "328011",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Diego Gómez",
@@ -1427,11 +1393,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 14,
-     "p_dec": 28,
+     "p_goal": 12,
+     "p_dec": 25,
      "pid": "192278",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maxim De Cuyper",
@@ -1447,94 +1414,141 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 13,
-     "p_dec": 30,
+     "p_goal": 11,
+     "p_dec": 26,
      "pid": "301327",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Chema Andrés",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Brighton",
+     "goals": 1,
+     "assists": 1,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 6,
+     "p_dec": 13,
+     "pid": "387489",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Charalambos Kostoulas",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Brighton",
+     "goals": 3,
+     "assists": 2,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 2
+     },
+     "p_goal": 6,
+     "p_dec": 10,
+     "pid": "387655",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Hull : 14e, 11 points, 11 buts marqués et 11 encaissés en 10 matchs.",
     "Brighton : 2e, 22 points, 26 buts marqués et 7 encaissés en 10 matchs.",
     "Hull : 11 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat.",
-    "Brighton : 26 buts marqués et 7 encaissés sur ses 10 derniers matchs de championnat."
+    "Brighton : 26 buts marqués et 7 encaissés sur ses 10 derniers matchs de championnat.",
+    "Hull : attaque revue à la baisse (−5 %) d'après la compo officielle (Joe Gelhardt ne commence pas).",
+    "Brighton : attaque revue à la baisse (−13 %) d'après la compo officielle (Jack Hinshelwood, Charalambos Kostoulas ne commencent pas).",
+    "Compositions officielles prises en compte : Jack Hinshelwood (remplaçant), Charalambos Kostoulas (remplaçant) ne commencent pas le match."
    ],
-   "reading": "Brighton est favori sans écraser le match (57 %).",
+   "reading": "Brighton est favori sans écraser le match (52 %).",
    "stakes": "Brighton (2e) défend une place qualificative pour la Ligue des champions.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Brighton",
-     "p": 0.7998,
-     "prob": 80,
-     "fair": 1.25,
+     "p": 0.7777,
+     "prob": 78,
+     "fair": 1.29,
      "stars": 4,
      "why": "10 derniers matchs : Hull 11 marqués / 11 encaissés · Brighton 26 / 7"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Brighton",
-     "p": 0.5696,
-     "prob": 57,
-     "fair": 1.76,
+     "p": 0.5228,
+     "prob": 52,
+     "fair": 1.91,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1132,
-     "prob": 11,
-     "fair": 8.83,
+     "p": 0.131,
+     "prob": 13,
+     "fair": 7.63,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "htft_a",
      "label": "Brighton mène à la mi-temps et gagne le match",
-     "p": 0.3589,
-     "prob": 36,
-     "fair": 2.79,
+     "p": 0.3197,
+     "prob": 32,
+     "fair": 3.13,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_o25",
-      "label": "Brighton gagne et plus de 2,5 buts",
-      "p": 0.3546,
-      "prob": 35,
-      "fair": 2.82,
+      "market": "wa_nil",
+      "label": "Brighton gagne sans encaisser de but",
+      "p": 0.3151,
+      "prob": 32,
+      "fair": 3.17,
       "stars": 1
      },
      {
-      "market": "a2",
-      "label": "Brighton gagne avec 2 buts d'écart ou plus",
-      "p": 0.3249,
-      "prob": 32,
-      "fair": 3.08,
+      "market": "wa_o25",
+      "label": "Brighton gagne et plus de 2,5 buts",
+      "p": 0.2898,
+      "prob": 29,
+      "fair": 3.45,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Pascal Gross marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
      "player": "Pascal Gross",
      "team": "Brighton",
+     "lineup": "start",
      "pid": "132659",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 4 passes en 10 matchs · Brighton favori (57 %) · 1,8 buts attendus pour Brighton"
+     "why": "4 buts et 4 passes en 10 matchs · titulaire · Brighton favori (52 %) · 1,6 buts attendus pour Brighton"
     },
     "decisive": {
      "market": "dec",
      "label": "Pascal Gross buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
      "player": "Pascal Gross",
      "team": "Brighton",
@@ -1543,10 +1557,11 @@
       4,
       4
      ],
+     "lineup": "start",
      "pid": "132659",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 4 passes en 10 matchs · Brighton favori (57 %) · 1,8 buts attendus pour Brighton"
+     "why": "4 buts et 4 passes en 10 matchs · titulaire · Brighton favori (52 %) · 1,6 buts attendus pour Brighton"
     }
    },
    "second": {
@@ -38239,7 +38254,7 @@
  },
  "second": {
   "foot": {
-   "ok": 15,
+   "ok": 14,
    "elo": {
     "fra.1": 693,
     "eng.1": 849,

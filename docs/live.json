@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T13:45+01:00",
+ "generated": "2026-11-22T14:10+01:00",
  "date": "2026-11-22",
  "matches": [
   {
@@ -99,7 +99,7 @@
    "time": "14:00",
    "home": "Barcelona",
    "away": "Villarreal",
-   "state": "pre",
+   "state": "in",
    "xgH": 3.26,
    "xgA": 1.09,
    "pH": 79,
@@ -274,67 +274,68 @@
    "home": "Hull",
    "away": "Brighton",
    "state": "pre",
-   "xgH": 0.97,
-   "xgA": 1.8,
-   "pH": 20,
-   "pD": 23,
-   "pA": 57,
+   "xgH": 0.92,
+   "xgA": 1.56,
+   "pH": 22,
+   "pD": 25,
+   "pA": 52,
    "edate": "20261122",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Brighton",
-     "p": 0.7998,
-     "prob": 80,
-     "fair": 1.25,
+     "p": 0.7777,
+     "prob": 78,
+     "fair": 1.29,
      "stars": 4,
      "why": "10 derniers matchs : Hull 11 marqués / 11 encaissés · Brighton 26 / 7"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Brighton",
-     "p": 0.5696,
-     "prob": 57,
-     "fair": 1.76,
+     "p": 0.5228,
+     "prob": 52,
+     "fair": 1.91,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1132,
-     "prob": 11,
-     "fair": 8.83,
+     "p": 0.131,
+     "prob": 13,
+     "fair": 7.63,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "htft_a",
      "label": "Brighton mène à la mi-temps et gagne le match",
-     "p": 0.3589,
-     "prob": 36,
-     "fair": 2.79,
+     "p": 0.3197,
+     "prob": 32,
+     "fair": 3.13,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Pascal Gross marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
      "player": "Pascal Gross",
      "team": "Brighton",
+     "lineup": "start",
      "pid": "132659",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 4 passes en 10 matchs · Brighton favori (57 %) · 1,8 buts attendus pour Brighton"
+     "why": "4 buts et 4 passes en 10 matchs · titulaire · Brighton favori (52 %) · 1,6 buts attendus pour Brighton"
     },
     "decisive": {
      "market": "dec",
      "label": "Pascal Gross buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
      "stars": 1,
      "player": "Pascal Gross",
      "team": "Brighton",
@@ -343,10 +344,11 @@
       4,
       4
      ],
+     "lineup": "start",
      "pid": "132659",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 4 passes en 10 matchs · Brighton favori (57 %) · 1,8 buts attendus pour Brighton"
+     "why": "4 buts et 4 passes en 10 matchs · titulaire · Brighton favori (52 %) · 1,6 buts attendus pour Brighton"
     }
    }
   },
@@ -1723,12 +1725,6 @@
   "nhl": 5,
   "top": [
    {
-    "label": "Barcelona ou nul",
-    "prob": 91,
-    "time": "14:00",
-    "match": "Barcelona – Villarreal"
-   },
-   {
     "label": "Paris FC ou nul",
     "prob": 89,
     "time": "15:00",
@@ -1739,6 +1735,12 @@
     "prob": 88,
     "time": "20:45",
     "match": "Marseille – Le Mans"
+   },
+   {
+    "label": "Bologna ou nul",
+    "prob": 86,
+    "time": "15:00",
+    "match": "Bologna – Udinese"
    }
   ]
  }
