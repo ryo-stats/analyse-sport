@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T07:27+01:00",
+ "generated": "2026-11-22T11:15+01:00",
  "date": "2026-11-22",
  "nhl_date": "2026-11-22",
  "foot": [
@@ -2572,15 +2572,6 @@
    "reading": "Augsburg est favori sans écraser le match (51 %).",
    "stakes": "Augsburg (15e) lutte pour le maintien, 2 points d'avance sur la zone rouge. Adversaires directs au classement : 1 point d'écart.",
    "picks": {
-    "main": {
-     "market": "o25",
-     "label": "Plus de 2,5 buts",
-     "p": 0.8923,
-     "prob": 89,
-     "fair": 1.12,
-     "stars": 5,
-     "why": "9 derniers matchs : Augsburg 20 marqués / 20 encaissés · Mainz 18 / 19"
-    },
     "winner": {
      "market": "1",
      "label": "Victoire Augsburg",
@@ -2656,11 +2647,22 @@
      "stats_league": "ger.1",
      "season": 2026,
      "why": "5 buts et 0 passe en 8 matchs · Augsburg favori (51 %) · 2,9 buts attendus pour Augsburg"
+    },
+    "held": {
+     "market": "o25",
+     "label": "Plus de 2,5 buts",
+     "p": 0.8923,
+     "prob": 89,
+     "fair": 1.12,
+     "stars": 5,
+     "why": "9 derniers matchs : Augsburg 20 marqués / 20 encaissés · Mainz 18 / 19",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "country": "Allemagne",
    "code": "ger.1",
@@ -8136,20 +8138,20 @@
    ]
   },
   "picks": {
-   "n": 1905,
+   "n": 1923,
    "rate": 55,
-   "expected": 53,
+   "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 1905,
-     "ok": 1046,
+     "n": 1923,
+     "ok": 1051,
      "rate": 55,
-     "expected": 53
+     "expected": 52
     },
     "foot": {
-     "n": 1066,
-     "ok": 569,
+     "n": 1084,
+     "ok": 574,
      "rate": 53,
      "expected": 51
     },
@@ -8221,16 +8223,16 @@
     {
      "date": "2026-11-21",
      "all": {
-      "n": 100,
-      "ok": 63,
-      "rate": 63,
-      "expected": 55
+      "n": 118,
+      "ok": 68,
+      "rate": 58,
+      "expected": 53
      },
      "foot": {
-      "n": 86,
-      "ok": 54,
-      "rate": 63,
-      "expected": 56
+      "n": 104,
+      "ok": 59,
+      "rate": 57,
+      "expected": 53
      },
      "nhl": {
       "n": 14,
@@ -9612,34 +9614,42 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 192,
+     "n": 194,
      "ok": 108,
      "rate": 56,
      "expected": 50
     },
     {
      "sport": "foot",
-     "league": "LaLiga",
-     "n": 157,
-     "ok": 79,
-     "rate": 50,
-     "expected": 52
-    },
-    {
-     "sport": "foot",
      "league": "Premier League",
-     "n": 156,
-     "ok": 76,
+     "n": 162,
+     "ok": 79,
      "rate": 49,
      "expected": 50
     },
     {
      "sport": "foot",
+     "league": "LaLiga",
+     "n": 160,
+     "ok": 80,
+     "rate": 50,
+     "expected": 52
+    },
+    {
+     "sport": "foot",
      "league": "Ligue 1",
-     "n": 142,
-     "ok": 83,
-     "rate": 58,
+     "n": 147,
+     "ok": 84,
+     "rate": 57,
      "expected": 49
+    },
+    {
+     "sport": "foot",
+     "league": "Bundesliga",
+     "n": 142,
+     "ok": 85,
+     "rate": 60,
+     "expected": 52
     },
     {
      "sport": "foot",
@@ -9648,14 +9658,6 @@
      "ok": 85,
      "rate": 60,
      "expected": 53
-    },
-    {
-     "sport": "foot",
-     "league": "Bundesliga",
-     "n": 140,
-     "ok": 85,
-     "rate": 61,
-     "expected": 52
     },
     {
      "sport": "foot",
@@ -9677,20 +9679,20 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 806,
+     "n": 818,
      "announced": 35,
      "actual": 35
     },
     {
      "stars": 2,
-     "n": 342,
+     "n": 344,
      "announced": 55,
      "actual": 55
     },
     {
      "stars": 3,
-     "n": 434,
-     "announced": 65,
+     "n": 438,
+     "announced": 64,
      "actual": 72
     },
     {
@@ -10416,6 +10418,19 @@
      "mid": "foot-401876396",
      "score": "0-1",
      "match": "Strasbourg – Brest",
+     "label": "Ludovic Ajorque buteur ou passeur",
+     "prob": 44,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876396",
+     "score": "0-1",
+     "match": "Strasbourg – Brest",
      "label": "Plus de 3,5 buts",
      "prob": 42,
      "stars": 1,
@@ -10481,6 +10496,19 @@
      "mid": "foot-401878754",
      "score": "2-0",
      "match": "Spurs – Ipswich",
+     "label": "Jan Paul van Hecke buteur ou passeur",
+     "prob": 25,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401878754",
+     "score": "2-0",
+     "match": "Spurs – Ipswich",
      "label": "Spurs mène à la mi-temps et gagne le match",
      "prob": 33,
      "stars": 1,
@@ -10522,6 +10550,19 @@
      "match": "Sevilla – Betis",
      "label": "Abde Ezzalzouli marque",
      "prob": 23,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882797",
+     "score": "1-1",
+     "match": "Sevilla – Betis",
+     "label": "Abde Ezzalzouli buteur ou passeur",
+     "prob": 25,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -10598,6 +10639,19 @@
      "mid": "foot-401884729",
      "score": "0-0",
      "match": "Schalke – Stuttgart",
+     "label": "Ermedin Demirovic buteur ou passeur",
+     "prob": 32,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884729",
+     "score": "0-0",
+     "match": "Schalke – Stuttgart",
      "label": "Stuttgart gagne sans encaisser de but",
      "prob": 33,
      "stars": 1,
@@ -10663,6 +10717,19 @@
      "mid": "foot-401882798",
      "score": "2-1",
      "match": "Real Madrid – Celta Vigo",
+     "label": "Kylian Mbappé buteur ou passeur",
+     "prob": 60,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882798",
+     "score": "2-1",
+     "match": "Real Madrid – Celta Vigo",
      "label": "Real Madrid gagne et plus de 2,5 buts",
      "prob": 35,
      "stars": 1,
@@ -10718,6 +10785,19 @@
      "label": "Sergio Camello marque",
      "prob": 51,
      "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882799",
+     "score": "0-1",
+     "match": "Rayo – Valencia",
+     "label": "Sergio Camello buteur ou passeur",
+     "prob": 61,
+     "stars": 3,
      "ok": false,
      "fun": false
     },
@@ -10893,6 +10973,19 @@
     {
      "date": "2026-11-21",
      "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876398",
+     "score": "2-3",
+     "match": "Nice – PSG",
+     "label": "Achraf Hakimi buteur ou passeur",
+     "prob": 25,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
      "league": "Premier League",
      "mid": "foot-401879232",
      "score": "2-2",
@@ -10927,6 +11020,19 @@
      "prob": 25,
      "stars": 1,
      "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879232",
+     "score": "2-2",
+     "match": "Newcastle – Arsenal",
+     "label": "Kai Havertz buteur ou passeur",
+     "prob": 27,
+     "stars": 1,
+     "ok": true,
      "fun": false
     },
     {
@@ -11079,6 +11185,19 @@
      "mid": "foot-401875067",
      "score": "1-0",
      "match": "Napoli – Torino",
+     "label": "Rasmus Højlund buteur ou passeur",
+     "prob": 30,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875067",
+     "score": "1-0",
+     "match": "Napoli – Torino",
      "label": "Napoli mène à la mi-temps et gagne le match",
      "prob": 36,
      "stars": 1,
@@ -11120,6 +11239,19 @@
      "match": "Monaco – Auxerre",
      "label": "Paris Brunner marque",
      "prob": 43,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876399",
+     "score": "1-1",
+     "match": "Monaco – Auxerre",
+     "label": "Paris Brunner buteur ou passeur",
+     "prob": 45,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -11185,6 +11317,19 @@
      "match": "Man City – Fulham",
      "label": "Erling Haaland marque",
      "prob": 52,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879233",
+     "score": "1-1",
+     "match": "Man City – Fulham",
+     "label": "Erling Haaland buteur ou passeur",
+     "prob": 53,
      "stars": 2,
      "ok": false,
      "fun": false
@@ -11276,6 +11421,19 @@
      "match": "Lille – Lyon",
      "label": "Dilane Bakwa marque",
      "prob": 12,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876402",
+     "score": "0-1",
+     "match": "Lille – Lyon",
+     "label": "Dilane Bakwa buteur ou passeur",
+     "prob": 18,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -11394,6 +11552,19 @@
      "label": "Florian Thauvin marque",
      "prob": 38,
      "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876403",
+     "score": "1-1",
+     "match": "Lens – Toulouse",
+     "label": "Florian Thauvin buteur ou passeur",
+     "prob": 66,
+     "stars": 3,
      "ok": false,
      "fun": false
     },
@@ -11625,6 +11796,19 @@
      "mid": "foot-401884734",
      "score": "1-0",
      "match": "Frankfurt – Hoffenheim",
+     "label": "Younes Ebnoutalib buteur ou passeur",
+     "prob": 60,
+     "stars": 3,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884734",
+     "score": "1-0",
+     "match": "Frankfurt – Hoffenheim",
      "label": "Frankfurt gagne et plus de 2,5 buts",
      "prob": 37,
      "stars": 1,
@@ -11833,6 +12017,19 @@
      "mid": "foot-401879235",
      "score": "3-2",
      "match": "Coventry – C Palace",
+     "label": "Jack Rudoni buteur ou passeur",
+     "prob": 39,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879235",
+     "score": "3-2",
+     "match": "Coventry – C Palace",
      "label": "Score exact 2-1",
      "prob": 9,
      "stars": 1,
@@ -11887,6 +12084,19 @@
      "match": "Como – Cagliari",
      "label": "Tasos Douvikas marque",
      "prob": 34,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875056",
+     "score": "2-0",
+     "match": "Como – Cagliari",
+     "label": "Tasos Douvikas buteur ou passeur",
+     "prob": 36,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -11967,6 +12177,19 @@
      "prob": 24,
      "stars": 1,
      "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879236",
+     "score": "1-4",
+     "match": "Chelsea – Leeds",
+     "label": "Morgan Rogers buteur ou passeur",
+     "prob": 30,
+     "stars": 1,
+     "ok": true,
      "fun": false
     },
     {
@@ -12199,6 +12422,19 @@
      "match": "Aston Villa – Sunderland",
      "label": "Nicolas Jackson marque",
      "prob": 51,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-21",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401878756",
+     "score": "0-0",
+     "match": "Aston Villa – Sunderland",
+     "label": "Nicolas Jackson buteur ou passeur",
+     "prob": 58,
      "stars": 2,
      "ok": false,
      "fun": false
@@ -37974,7 +38210,23 @@
     "ita.1": 866,
     "ger.1": 674
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 96
+    },
+    "eng.1": {
+     "2026": 107
+    },
+    "esp.1": {
+     "2026": 124
+    },
+    "ita.1": {
+     "2026": 114
+    },
+    "ger.1": {
+     "2026": 88
+    }
+   },
    "status": "ok"
   },
   "nhl": {
