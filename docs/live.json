@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T16:15+01:00",
+ "generated": "2026-11-22T16:40+01:00",
  "date": "2026-11-22",
  "matches": [
   {
@@ -614,7 +614,7 @@
    "time": "16:15",
    "home": "Racing",
    "away": "Real Sociedad",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.94,
    "xgA": 2.24,
    "pH": 34,
@@ -651,7 +651,7 @@
     "fun": {
      "market": "wa_o25",
      "label": "Real Sociedad gagne et plus de 2,5 buts",
-     "p": 0.383,
+     "p": 0.3831,
      "prob": 38,
      "fair": 2.61,
      "stars": 1
@@ -703,58 +703,59 @@
    "home": "Lorient",
    "away": "Rennes",
    "state": "pre",
-   "xgH": 1.57,
-   "xgA": 1.32,
-   "pH": 43,
-   "pD": 25,
-   "pA": 32,
+   "xgH": 1.3,
+   "xgA": 1.08,
+   "pH": 42,
+   "pD": 28,
+   "pA": 31,
    "edate": "20261122",
    "picks": {
     "winner": {
      "market": "1",
      "label": "Victoire Lorient",
-     "p": 0.4327,
-     "prob": 43,
-     "fair": 2.31,
+     "p": 0.4156,
+     "prob": 42,
+     "fair": 2.41,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0904,
-     "prob": 9,
-     "fair": 11.06,
+     "label": "Score exact 1-0",
+     "p": 0.1209,
+     "prob": 12,
+     "fair": 8.27,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3265,
-     "prob": 33,
-     "fair": 3.06,
+     "market": "wh_nil",
+     "label": "Lorient gagne sans encaisser de but",
+     "p": 0.2478,
+     "prob": 25,
+     "fair": 4.04,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Jean-Victor Makengo marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
      "stars": 1,
      "player": "Jean-Victor Makengo",
      "team": "Lorient",
+     "lineup": "start",
      "pid": "225557",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 10 matchs · Lorient annoncé gagnant (43 %) · 1,6 buts attendus pour Lorient"
+     "why": "2 buts et 1 passe en 10 matchs · titulaire · Lorient annoncé gagnant (42 %) · 1,3 but attendu pour Lorient"
     },
     "decisive": {
      "market": "dec",
      "label": "Jean-Victor Makengo buteur ou passeur",
-     "p": 0.38,
-     "prob": 38,
-     "fair": 2.63,
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
      "player": "Jean-Victor Makengo",
      "team": "Lorient",
@@ -763,10 +764,11 @@
       2,
       1
      ],
+     "lineup": "start",
      "pid": "225557",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 1 passe en 10 matchs · Lorient annoncé gagnant (43 %) · 1,6 buts attendus pour Lorient"
+     "why": "2 buts et 1 passe en 10 matchs · titulaire · Lorient annoncé gagnant (42 %) · 1,3 but attendu pour Lorient"
     }
    }
   },
@@ -780,67 +782,71 @@
    "home": "Liverpool",
    "away": "Man Utd",
    "state": "pre",
-   "xgH": 2.12,
+   "xgH": 1.92,
    "xgA": 1.12,
-   "pH": 60,
-   "pD": 20,
-   "pA": 19,
+   "pH": 56,
+   "pD": 22,
+   "pA": 22,
    "edate": "20261122",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Liverpool ou nul",
-     "p": 0.8065,
-     "prob": 81,
-     "fair": 1.24,
-     "stars": 5,
+     "p": 0.7814,
+     "prob": 78,
+     "fair": 1.28,
+     "stars": 4,
      "why": "10 derniers matchs : Liverpool 14 marqués / 10 encaissés · Man Utd 14 / 19"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Liverpool",
-     "p": 0.6021,
-     "prob": 60,
-     "fair": 1.66,
-     "stars": 3
+     "p": 0.5605,
+     "prob": 56,
+     "fair": 1.78,
+     "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0986,
+     "p": 0.0987,
      "prob": 10,
-     "fair": 10.15,
+     "fair": 10.13,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.4064,
-     "prob": 41,
-     "fair": 2.46,
-     "stars": 1
+     "market": "scw",
+     "label": "Alexander Isak marque et Liverpool gagne",
+     "p": 0.419,
+     "prob": 42,
+     "fair": 2.39,
+     "stars": 1,
+     "player": "Alexander Isak",
+     "team": "Liverpool",
+     "side": "h"
     },
     "player": {
      "market": "scorer",
      "label": "Alexander Isak marque",
-     "p": 0.62,
-     "prob": 62,
-     "fair": 1.61,
-     "stars": 3,
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
      "player": "Alexander Isak",
      "team": "Liverpool",
+     "lineup": "start",
      "pid": "235662",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 9 matchs · Liverpool favori (60 %) · 2,1 buts attendus pour Liverpool"
+     "why": "7 buts et 0 passe en 9 matchs · titulaire · Liverpool favori (56 %) · 1,9 buts attendus pour Liverpool"
     },
     "decisive": {
      "market": "dec",
      "label": "Alexander Isak buteur ou passeur",
-     "p": 0.64,
-     "prob": 64,
-     "fair": 1.56,
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
      "stars": 3,
      "player": "Alexander Isak",
      "team": "Liverpool",
@@ -849,10 +855,11 @@
       7,
       0
      ],
+     "lineup": "start",
      "pid": "235662",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 9 matchs · Liverpool favori (60 %) · 2,1 buts attendus pour Liverpool"
+     "why": "7 buts et 0 passe en 9 matchs · titulaire · Liverpool favori (56 %) · 1,9 buts attendus pour Liverpool"
     }
    }
   },
@@ -866,68 +873,69 @@
    "home": "Bremen",
    "away": "Hamburg",
    "state": "pre",
-   "xgH": 2.53,
+   "xgH": 2.25,
    "xgA": 1.41,
-   "pH": 62,
-   "pD": 18,
-   "pA": 20,
+   "pH": 57,
+   "pD": 20,
+   "pA": 23,
    "edate": "20261122",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Bremen ou nul",
-     "p": 0.8001,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 5,
+     "p": 0.7659,
+     "prob": 77,
+     "fair": 1.31,
+     "stars": 4,
      "why": "9 derniers matchs : Bremen 17 marqués / 15 encaissés · Hamburg 10 / 20"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bremen",
-     "p": 0.6184,
-     "prob": 62,
-     "fair": 1.62,
-     "stars": 3
+     "p": 0.566,
+     "prob": 57,
+     "fair": 1.77,
+     "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0879,
+     "p": 0.0919,
      "prob": 9,
-     "fair": 11.37,
+     "fair": 10.88,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "htft_h",
      "label": "Bremen mène à la mi-temps et gagne le match",
-     "p": 0.4123,
-     "prob": 41,
-     "fair": 2.43,
+     "p": 0.3674,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Niclas Füllkrug marque",
-     "p": 0.69,
-     "prob": 69,
-     "fair": 1.45,
+     "p": 0.65,
+     "prob": 65,
+     "fair": 1.54,
      "stars": 3,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
+     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 9 matchs · Bremen favori (62 %) · 2,5 buts attendus pour Bremen"
+     "why": "9 buts et 0 passe en 9 matchs · titulaire · Bremen favori (57 %) · 2,3 buts attendus pour Bremen"
     },
     "decisive": {
      "market": "dec",
      "label": "Niclas Füllkrug buteur ou passeur",
-     "p": 0.71,
-     "prob": 71,
-     "fair": 1.41,
-     "stars": 4,
+     "p": 0.67,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
      "base": [
@@ -935,10 +943,11 @@
       9,
       0
      ],
+     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 9 matchs · Bremen favori (62 %) · 2,5 buts attendus pour Bremen"
+     "why": "9 buts et 0 passe en 9 matchs · titulaire · Bremen favori (57 %) · 2,3 buts attendus pour Bremen"
     }
    }
   },
@@ -1743,10 +1752,10 @@
     "match": "Getafe – Atlético"
    },
    {
-    "label": "Liverpool ou nul",
-    "prob": 81,
-    "time": "17:30",
-    "match": "Liverpool – Man Utd"
+    "label": "Nikita Kucherov : au moins 1 point",
+    "prob": 79,
+    "time": "23:00",
+    "match": "Tampa Bay Lightning – Buffalo Sabres"
    }
   ]
  }
