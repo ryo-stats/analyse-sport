@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T20:33+01:00",
+ "generated": "2026-11-22T21:56+01:00",
  "date": "2026-11-22",
  "matches": [
   {
@@ -1114,7 +1114,7 @@
    "time": "20:45",
    "home": "Marseille",
    "away": "Le Mans",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.76,
    "xgA": 1.0,
    "pH": 74,
@@ -1142,16 +1142,16 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.0888,
+     "p": 0.0887,
      "prob": 9,
-     "fair": 11.26,
+     "fair": 11.27,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "wh_btts",
      "label": "Marseille gagne et les deux équipes marquent",
-     "p": 0.3968,
+     "p": 0.3969,
      "prob": 40,
      "fair": 2.52,
      "stars": 1
@@ -1202,7 +1202,7 @@
    "time": "20:45",
    "home": "Atalanta",
    "away": "Inter Milan",
-   "state": "pre",
+   "state": "in",
    "xgH": 1.42,
    "xgA": 2.23,
    "pH": 24,
@@ -1290,9 +1290,9 @@
    "time": "21:00",
    "home": "Getafe",
    "away": "Atlético",
-   "state": "pre",
+   "state": "in",
    "xgH": 0.69,
-   "xgA": 1.44,
+   "xgA": 1.45,
    "pH": 18,
    "pD": 27,
    "pA": 55,
@@ -1318,7 +1318,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1716,
+     "p": 0.1715,
      "prob": 17,
      "fair": 5.83,
      "stars": 1,
@@ -1377,7 +1377,7 @@
    "time": "18:30",
    "home": "New York Rangers",
    "away": "Carolina Hurricanes",
-   "state": "LIVE",
+   "state": "OFF",
    "xgH": 2.71,
    "xgA": 3.43,
    "pH": 31,
@@ -1423,7 +1423,7 @@
      "player": "Sebastian Aho",
      "pid": 8478427,
      "team": "Carolina Hurricanes",
-     "why": "13 buts et 19 passes en 23 matchs · 10 derniers matchs : 6 buts, 8 passes · Carolina Hurricanes favori (61 %) · 3,4 buts attendus pour Carolina Hurricanes"
+     "why": "13 buts et 20 passes en 24 matchs · 10 derniers matchs : 5 buts, 9 passes · Carolina Hurricanes favori (61 %) · 3,4 buts attendus pour Carolina Hurricanes"
     },
     "scorer": {
      "market": "goal",
@@ -1435,7 +1435,7 @@
      "player": "Andrei Svechnikov",
      "pid": 8480830,
      "team": "Carolina Hurricanes",
-     "why": "13 buts et 10 passes en 23 matchs · 10 derniers matchs : 7 buts, 4 passes · Carolina Hurricanes favori (61 %) · 3,4 buts attendus pour Carolina Hurricanes"
+     "why": "13 buts et 10 passes en 24 matchs · 10 derniers matchs : 7 buts, 3 passes · Carolina Hurricanes favori (61 %) · 3,4 buts attendus pour Carolina Hurricanes"
     }
    }
   },
@@ -1728,20 +1728,20 @@
   "nhl": 5,
   "top": [
    {
-    "label": "Marseille ou nul",
-    "prob": 89,
-    "time": "20:45",
-    "match": "Marseille – Le Mans"
-   },
-   {
-    "label": "Nul ou Atlético",
-    "prob": 82,
-    "time": "21:00",
-    "match": "Getafe – Atlético"
-   },
-   {
     "label": "Nikita Kucherov : au moins 1 point",
     "prob": 79,
+    "time": "23:00",
+    "match": "Tampa Bay Lightning – Buffalo Sabres"
+   },
+   {
+    "label": "Jason Robertson : au moins 1 point",
+    "prob": 68,
+    "time": "01:00",
+    "match": "Dallas Stars – Pittsburgh Penguins"
+   },
+   {
+    "label": "Victoire Tampa Bay Lightning",
+    "prob": 67,
     "time": "23:00",
     "match": "Tampa Bay Lightning – Buffalo Sabres"
    }
