@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T12:30+01:00",
+ "generated": "2026-11-22T12:55+01:00",
  "date": "2026-11-22",
  "nhl_date": "2026-11-22",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Serie A",
    "kickoff": "2026-11-22T11:30:00+00:00",
    "time": "12:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Juventus",
    "away": "Venezia",
    "form_h": "NVVDV",
@@ -296,8 +296,6 @@
     "Venezia : 19e, 6 points, 8 buts marqués et 21 encaissés en 11 matchs.",
     "Juventus : 14 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
     "Venezia : 8 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
-    "Juventus : attaque revue à la baisse (−13 %) d'après la compo officielle.",
-    "Venezia : attaque revue à la baisse (−15 %) d'après la compo officielle (Richie Sagrado, Toma Basic, John Yeboah ne commencent pas).",
     "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Juventus est nettement favori (68 %).",
@@ -6136,7 +6134,7 @@
    "pA": 53,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
    "xgH": 2.71,
-   "xgA": 3.42,
+   "xgA": 3.43,
    "total": 6.1,
    "scores": [
     "2-3",
@@ -6434,7 +6432,7 @@
     "main": {
      "market": "win_a",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.6084,
+     "p": 0.6087,
      "prob": 61,
      "fair": 1.64,
      "stars": 3,
@@ -6443,7 +6441,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Carolina Hurricanes",
-     "p": 0.6084,
+     "p": 0.6087,
      "prob": 61,
      "fair": 1.64,
      "stars": 3,
@@ -6452,7 +6450,7 @@
     "fun": {
      "market": "a2",
      "label": "Carolina Hurricanes gagne par 2 buts d'écart ou plus",
-     "p": 0.4096,
+     "p": 0.41,
      "prob": 41,
      "fair": 2.44,
      "stars": 1
@@ -6461,7 +6459,7 @@
      {
       "market": "wa_o55",
       "label": "Carolina Hurricanes gagne et plus de 5,5 buts",
-      "p": 0.3581,
+      "p": 0.359,
       "prob": 36,
       "fair": 2.79,
       "stars": 1
@@ -6469,9 +6467,9 @@
      {
       "market": "wa_o65",
       "label": "Carolina Hurricanes gagne et plus de 6,5 buts",
-      "p": 0.2845,
-      "prob": 28,
-      "fair": 3.52,
+      "p": 0.2853,
+      "prob": 29,
+      "fair": 3.5,
       "stars": 1
      }
     ],
@@ -6527,8 +6525,8 @@
    "pD": 15,
    "pA": 26,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.78,
-   "xgA": 2.64,
+   "xgH": 3.79,
+   "xgA": 2.65,
    "total": 6.4,
    "scores": [
     "3-2",
@@ -6575,7 +6573,7 @@
       "a": 11
      },
      "p_goal": 39,
-     "p_point": 78,
+     "p_point": 79,
      "p_assist": 64
     },
     {
@@ -6596,7 +6594,7 @@
       "a": 8
      },
      "p_goal": 38,
-     "p_point": 66,
+     "p_point": 67,
      "p_assist": 46
     },
     {
@@ -6723,7 +6721,7 @@
       "g": 5,
       "a": 6
      },
-     "p_goal": 20,
+     "p_goal": 21,
      "p_point": 42,
      "p_assist": 26
     },
@@ -6826,7 +6824,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Tampa Bay Lightning",
-     "p": 0.6731,
+     "p": 0.673,
      "prob": 67,
      "fair": 1.49,
      "stars": 3,
@@ -6835,7 +6833,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Tampa Bay Lightning",
-     "p": 0.6731,
+     "p": 0.673,
      "prob": 67,
      "fair": 1.49,
      "stars": 3,
@@ -6844,16 +6842,16 @@
     "fun": {
      "market": "wh_o65",
      "label": "Tampa Bay Lightning gagne et plus de 6,5 buts",
-     "p": 0.346,
+     "p": 0.3474,
      "prob": 35,
-     "fair": 2.89,
+     "fair": 2.88,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "h3",
       "label": "Tampa Bay Lightning gagne par 3 buts d'écart ou plus",
-      "p": 0.3011,
+      "p": 0.3014,
       "prob": 30,
       "fair": 3.32,
       "stars": 1
@@ -6861,18 +6859,18 @@
      {
       "market": "wh_by1",
       "label": "Tampa Bay Lightning gagne d'un seul but (prolongation comprise)",
-      "p": 0.1971,
+      "p": 0.1969,
       "prob": 20,
-      "fair": 5.07,
+      "fair": 5.08,
       "stars": 1
      }
     ],
     "player": {
      "market": "point",
      "label": "Nikita Kucherov : au moins 1 point",
-     "p": 0.78,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.79,
+     "prob": 79,
+     "fair": 1.27,
      "stars": 4,
      "player": "Nikita Kucherov",
      "pid": 8476453,
@@ -6989,7 +6987,7 @@
      },
      "p_goal": 24,
      "p_point": 56,
-     "p_assist": 42
+     "p_assist": 43
     },
     {
      "name": "Dylan Holloway",
@@ -7219,7 +7217,7 @@
     "main": {
      "market": "u55",
      "label": "Moins de 5,5 buts",
-     "p": 0.5697,
+     "p": 0.5685,
      "prob": 57,
      "fair": 1.76,
      "stars": 2,
@@ -7236,9 +7234,9 @@
     "fun": {
      "market": "wh_by1",
      "label": "St. Louis Blues gagne d'un seul but (prolongation comprise)",
-     "p": 0.2131,
+     "p": 0.213,
      "prob": 21,
-     "fair": 4.69,
+     "fair": 4.7,
      "stars": 1
     },
     "fun_alt": [],
@@ -7294,9 +7292,9 @@
    "pD": 16,
    "pA": 31,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 3.44,
+   "xgH": 3.45,
    "xgA": 2.7,
-   "total": 6.1,
+   "total": 6.2,
    "scores": [
     "3-2",
     "4-2",
@@ -7427,7 +7425,7 @@
      },
      "p_goal": 20,
      "p_point": 41,
-     "p_assist": 25
+     "p_assist": 26
     },
     {
      "name": "Arttu Hyry",
@@ -7469,7 +7467,7 @@
       "g": 6,
       "a": 2
      },
-     "p_goal": 24,
+     "p_goal": 25,
      "p_point": 41,
      "p_assist": 22
     },
@@ -7593,7 +7591,7 @@
     "main": {
      "market": "win_h",
      "label": "Victoire Dallas Stars",
-     "p": 0.6187,
+     "p": 0.6188,
      "prob": 62,
      "fair": 1.62,
      "stars": 3,
@@ -7602,7 +7600,7 @@
     "winner": {
      "market": "win_h",
      "label": "Victoire Dallas Stars",
-     "p": 0.6187,
+     "p": 0.6188,
      "prob": 62,
      "fair": 1.62,
      "stars": 3,
@@ -7611,7 +7609,7 @@
     "fun": {
      "market": "h2",
      "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
-     "p": 0.4137,
+     "p": 0.414,
      "prob": 41,
      "fair": 2.42,
      "stars": 1
@@ -7620,17 +7618,17 @@
      {
       "market": "wh_o55",
       "label": "Dallas Stars gagne et plus de 5,5 buts",
-      "p": 0.3652,
+      "p": 0.3663,
       "prob": 37,
-      "fair": 2.74,
+      "fair": 2.73,
       "stars": 1
      },
      {
       "market": "wh_o65",
       "label": "Dallas Stars gagne et plus de 6,5 buts",
-      "p": 0.2909,
+      "p": 0.2921,
       "prob": 29,
-      "fair": 3.44,
+      "fair": 3.42,
       "stars": 1
      }
     ],
@@ -7686,8 +7684,8 @@
    "pD": 16,
    "pA": 49,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 2.89,
-   "xgA": 3.36,
+   "xgH": 2.87,
+   "xgA": 3.33,
    "total": 6.2,
    "scores": [
     "2-3",
@@ -7754,7 +7752,7 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 26,
+     "p_goal": 25,
      "p_point": 42,
      "p_assist": 22
     },
@@ -7796,8 +7794,8 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 20,
-     "p_point": 42,
+     "p_goal": 19,
+     "p_point": 41,
      "p_assist": 26
     },
     {
@@ -7924,8 +7922,8 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 22,
-     "p_point": 48,
+     "p_goal": 21,
+     "p_point": 47,
      "p_assist": 32
     },
     {
@@ -7987,16 +7985,16 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5926,
+     "p": 0.5862,
      "prob": 59,
-     "fair": 1.69,
+     "fair": 1.71,
      "stars": 2,
      "why": "10 derniers matchs : Vancouver Canucks 3 victoires · Chicago Blackhawks 3"
     },
     "winner": {
      "market": "win_a",
      "label": "Victoire Chicago Blackhawks",
-     "p": 0.5695,
+     "p": 0.5684,
      "prob": 57,
      "fair": 1.76,
      "stars": 2
@@ -8004,26 +8002,26 @@
     "fun": {
      "market": "a2",
      "label": "Chicago Blackhawks gagne par 2 buts d'écart ou plus",
-     "p": 0.3732,
+     "p": 0.3714,
      "prob": 37,
-     "fair": 2.68,
+     "fair": 2.69,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o55",
       "label": "Chicago Blackhawks gagne et plus de 5,5 buts",
-      "p": 0.3428,
+      "p": 0.3384,
       "prob": 34,
-      "fair": 2.92,
+      "fair": 2.95,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Chicago Blackhawks gagne et plus de 6,5 buts",
-      "p": 0.2762,
-      "prob": 28,
-      "fair": 3.62,
+      "p": 0.2719,
+      "prob": 27,
+      "fair": 3.68,
       "stars": 1
      }
     ],
@@ -8037,7 +8035,7 @@
      "player": "Tyler Bertuzzi",
      "pid": 8477479,
      "team": "Chicago Blackhawks",
-     "why": "5 buts et 6 passes en 23 matchs · 10 derniers matchs : 3 buts, 3 passes · Chicago Blackhawks favori (57 %) · 3,4 buts attendus pour Chicago Blackhawks"
+     "why": "5 buts et 6 passes en 23 matchs · 10 derniers matchs : 3 buts, 3 passes · Chicago Blackhawks favori (57 %) · 3,3 buts attendus pour Chicago Blackhawks"
     },
     "scorer": {
      "market": "goal",
@@ -8049,7 +8047,7 @@
      "player": "Tyler Bertuzzi",
      "pid": 8477479,
      "team": "Chicago Blackhawks",
-     "why": "5 buts et 6 passes en 23 matchs · 10 derniers matchs : 3 buts, 3 passes · Chicago Blackhawks favori (57 %) · 3,4 buts attendus pour Chicago Blackhawks"
+     "why": "5 buts et 6 passes en 23 matchs · 10 derniers matchs : 3 buts, 3 passes · Chicago Blackhawks favori (57 %) · 3,3 buts attendus pour Chicago Blackhawks"
     }
    },
    "second": {
@@ -38216,7 +38214,7 @@
  },
  "second": {
   "foot": {
-   "ok": 16,
+   "ok": 15,
    "elo": {
     "fra.1": 693,
     "eng.1": 849,
@@ -38231,7 +38229,7 @@
    "ok": 5,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92077 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92084 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
