@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T12:55+01:00",
+ "generated": "2026-11-22T13:20+01:00",
  "date": "2026-11-22",
  "matches": [
   {
@@ -100,8 +100,8 @@
    "home": "Barcelona",
    "away": "Villarreal",
    "state": "pre",
-   "xgH": 3.5,
-   "xgA": 1.25,
+   "xgH": 3.26,
+   "xgA": 1.09,
    "pH": 79,
    "pD": 12,
    "pA": 9,
@@ -110,7 +110,7 @@
     "main": {
      "market": "1N",
      "label": "Barcelona ou nul",
-     "p": 0.9056,
+     "p": 0.9104,
      "prob": 91,
      "fair": 1.1,
      "stars": 5,
@@ -119,7 +119,7 @@
     "winner": {
      "market": "1",
      "label": "Victoire Barcelona",
-     "p": 0.7896,
+     "p": 0.79,
      "prob": 79,
      "fair": 1.27,
      "stars": 4
@@ -127,43 +127,41 @@
     "score": {
      "market": "exact",
      "label": "Score exact 3-1",
-     "p": 0.0772,
+     "p": 0.0812,
      "prob": 8,
-     "fair": 12.95,
+     "fair": 12.32,
      "stars": 1,
      "value": "3-1"
     },
     "fun": {
-     "market": "sc2",
-     "label": "Raphinha marque au moins 2 buts",
-     "p": 0.2932,
-     "prob": 29,
-     "fair": 3.41,
-     "stars": 1,
-     "player": "Raphinha",
-     "team": "Barcelona",
-     "side": "h"
+     "market": "h3",
+     "label": "Barcelona gagne avec 3 buts d'écart ou plus",
+     "p": 0.4177,
+     "prob": 42,
+     "fair": 2.39,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Raphinha marque",
-     "p": 0.66,
-     "prob": 66,
-     "fair": 1.52,
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
      "stars": 3,
      "player": "Raphinha",
      "team": "Barcelona",
+     "lineup": "start",
      "pid": "231050",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "15 buts et 3 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes (joué 9 sur 10) · Barcelona favori (79 %) · 3,5 buts attendus pour Barcelona"
+     "why": "15 buts et 3 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes (joué 9 sur 10) · titulaire · Barcelona favori (79 %) · 3,3 buts attendus pour Barcelona"
     },
     "decisive": {
      "market": "dec",
      "label": "Raphinha buteur ou passeur",
-     "p": 0.72,
-     "prob": 72,
-     "fair": 1.39,
+     "p": 0.7,
+     "prob": 70,
+     "fair": 1.43,
      "stars": 4,
      "player": "Raphinha",
      "team": "Barcelona",
@@ -172,10 +170,11 @@
       15,
       3
      ],
+     "lineup": "start",
      "pid": "231050",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "15 buts et 3 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes (joué 9 sur 10) · Barcelona favori (79 %) · 3,5 buts attendus pour Barcelona"
+     "why": "15 buts et 3 passes en 11 matchs · 10 derniers matchs : 12 buts, 2 passes (joué 9 sur 10) · titulaire · Barcelona favori (79 %) · 3,3 buts attendus pour Barcelona"
     }
    }
   },
