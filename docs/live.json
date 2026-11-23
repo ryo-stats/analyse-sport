@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T01:34+01:00",
+ "generated": "2026-11-23T07:27+01:00",
  "date": "2026-11-23",
  "matches": [
   {
@@ -261,350 +261,489 @@
    }
   },
   {
-   "id": "nhl-2026020373",
+   "id": "nhl-2026020378",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-11-22T17:30:00+00:00",
-   "time": "18:30",
-   "home": "New York Rangers",
-   "away": "Carolina Hurricanes",
-   "state": "OFF",
-   "xgH": 2.71,
-   "xgA": 3.43,
-   "pH": 31,
-   "pD": 16,
-   "pA": 53,
-   "winH": 39,
-   "espn_id": "401892768",
-   "edate": "20261122",
+   "kickoff": "2026-11-24T00:00:00+00:00",
+   "time": "01:00",
+   "home": "New Jersey Devils",
+   "away": "Columbus Blue Jackets",
+   "state": "FUT",
+   "xgH": 3.59,
+   "xgA": 2.72,
+   "pH": 56,
+   "pD": 15,
+   "pA": 29,
+   "winH": 64,
+   "espn_id": "401892773",
+   "edate": "20261123",
    "picks": {
     "main": {
-     "market": "win_a",
-     "label": "Victoire Carolina Hurricanes",
-     "p": 0.6087,
-     "prob": 61,
-     "fair": 1.64,
+     "market": "win_h",
+     "label": "Victoire New Jersey Devils",
+     "p": 0.6351,
+     "prob": 64,
+     "fair": 1.57,
      "stars": 3,
-     "why": "10 derniers matchs : New York Rangers 6 victoires · Carolina Hurricanes 8"
+     "why": "10 derniers matchs : New Jersey Devils 7 victoires · Columbus Blue Jackets 4"
     },
     "winner": {
-     "market": "win_a",
-     "label": "Victoire Carolina Hurricanes",
-     "p": 0.6087,
-     "prob": 61,
-     "fair": 1.64,
+     "market": "win_h",
+     "label": "Victoire New Jersey Devils",
+     "p": 0.6351,
+     "prob": 64,
+     "fair": 1.57,
      "stars": 3,
-     "why": "10 derniers matchs : New York Rangers 6 victoires · Carolina Hurricanes 8"
+     "why": "10 derniers matchs : New Jersey Devils 7 victoires · Columbus Blue Jackets 4"
     },
     "fun": {
-     "market": "a2",
-     "label": "Carolina Hurricanes gagne par 2 buts d'écart ou plus",
-     "p": 0.41,
+     "market": "wh_o55",
+     "label": "New Jersey Devils gagne et plus de 5,5 buts",
+     "p": 0.3919,
+     "prob": 39,
+     "fair": 2.55,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Jack Hughes : au moins 1 point",
+     "p": 0.74,
+     "prob": 74,
+     "fair": 1.35,
+     "stars": 4,
+     "player": "Jack Hughes",
+     "pid": 8481559,
+     "team": "New Jersey Devils",
+     "why": "10 buts et 19 passes en 23 matchs · 10 derniers matchs : 6 buts, 9 passes · New Jersey Devils favori (64 %) · 3,6 buts attendus pour New Jersey Devils"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Jack Hughes marque",
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1,
+     "player": "Jack Hughes",
+     "pid": 8481559,
+     "team": "New Jersey Devils",
+     "why": "10 buts et 19 passes en 23 matchs · 10 derniers matchs : 6 buts, 9 passes · New Jersey Devils favori (64 %) · 3,6 buts attendus pour New Jersey Devils"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020379",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-24T00:30:00+00:00",
+   "time": "01:30",
+   "home": "Montréal Canadiens",
+   "away": "Los Angeles Kings",
+   "state": "FUT",
+   "xgH": 3.17,
+   "xgA": 3.03,
+   "pH": 44,
+   "pD": 16,
+   "pA": 40,
+   "winH": 53,
+   "espn_id": "401892774",
+   "edate": "20261123",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.5857,
+     "prob": 59,
+     "fair": 1.71,
+     "stars": 2,
+     "why": "10 derniers matchs : Montréal Canadiens 5 victoires · Los Angeles Kings 4"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Montréal Canadiens",
+     "p": 0.5259,
+     "prob": 53,
+     "fair": 1.9,
+     "stars": 2
+    },
+    "fun": {
+     "market": "h2",
+     "label": "Montréal Canadiens gagne par 2 buts d'écart ou plus",
+     "p": 0.3257,
+     "prob": 33,
+     "fair": 3.07,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Nick Suzuki : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Nick Suzuki",
+     "pid": 8480018,
+     "team": "Montréal Canadiens",
+     "why": "9 buts et 11 passes en 18 matchs · 10 derniers matchs : 4 buts, 4 passes (joué 9 sur 10) · Montréal Canadiens favori (53 %) · 3,2 buts attendus pour Montréal Canadiens"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Cole Caufield marque",
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
+     "stars": 1,
+     "player": "Cole Caufield",
+     "pid": 8481540,
+     "team": "Montréal Canadiens",
+     "why": "12 buts et 8 passes en 24 matchs · 10 derniers matchs : 4 buts, 4 passes · Montréal Canadiens favori (53 %) · 3,2 buts attendus pour Montréal Canadiens"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020380",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-24T00:30:00+00:00",
+   "time": "01:30",
+   "home": "Ottawa Senators",
+   "away": "Calgary Flames",
+   "state": "FUT",
+   "xgH": 3.64,
+   "xgA": 2.2,
+   "pH": 65,
+   "pD": 14,
+   "pA": 21,
+   "winH": 72,
+   "espn_id": "401892775",
+   "edate": "20261123",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire Ottawa Senators",
+     "p": 0.7238,
+     "prob": 72,
+     "fair": 1.38,
+     "stars": 4,
+     "why": "10 derniers matchs : Ottawa Senators 7 victoires · Calgary Flames 4"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire Ottawa Senators",
+     "p": 0.7238,
+     "prob": 72,
+     "fair": 1.38,
+     "stars": 4,
+     "why": "10 derniers matchs : Ottawa Senators 7 victoires · Calgary Flames 4"
+    },
+    "fun": {
+     "market": "o65",
+     "label": "Plus de 6,5 buts",
+     "p": 0.4095,
      "prob": 41,
      "fair": 2.44,
      "stars": 1
     },
     "player": {
      "market": "point",
-     "label": "Sebastian Aho : au moins 1 point",
+     "label": "Tim Stützle : au moins 1 point",
+     "p": 0.66,
+     "prob": 66,
+     "fair": 1.52,
+     "stars": 3,
+     "player": "Tim Stützle",
+     "pid": 8482116,
+     "team": "Ottawa Senators",
+     "why": "13 buts et 18 passes en 24 matchs · 10 derniers matchs : 5 buts, 7 passes · Ottawa Senators favori (72 %) · 3,6 buts attendus pour Ottawa Senators"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Tim Stützle marque",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
+     "stars": 1,
+     "player": "Tim Stützle",
+     "pid": 8482116,
+     "team": "Ottawa Senators",
+     "why": "13 buts et 18 passes en 24 matchs · 10 derniers matchs : 5 buts, 7 passes · Ottawa Senators favori (72 %) · 3,6 buts attendus pour Ottawa Senators"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020381",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-24T00:30:00+00:00",
+   "time": "01:30",
+   "home": "New York Islanders",
+   "away": "Toronto Maple Leafs",
+   "state": "FUT",
+   "xgH": 3.42,
+   "xgA": 2.82,
+   "pH": 51,
+   "pD": 16,
+   "pA": 33,
+   "winH": 60,
+   "espn_id": "401892776",
+   "edate": "20261123",
+   "picks": {
+    "main": {
+     "market": "win_h",
+     "label": "Victoire New York Islanders",
+     "p": 0.5959,
+     "prob": 60,
+     "fair": 1.68,
+     "stars": 2,
+     "why": "10 derniers matchs : New York Islanders 5 victoires · Toronto Maple Leafs 1"
+    },
+    "winner": {
+     "market": "win_h",
+     "label": "Victoire New York Islanders",
+     "p": 0.5959,
+     "prob": 60,
+     "fair": 1.68,
+     "stars": 2,
+     "why": "10 derniers matchs : New York Islanders 5 victoires · Toronto Maple Leafs 1"
+    },
+    "fun": {
+     "market": "h2",
+     "label": "New York Islanders gagne par 2 buts d'écart ou plus",
+     "p": 0.3926,
+     "prob": 39,
+     "fair": 2.55,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Matthew Schaefer : au moins 1 point",
      "p": 0.61,
      "prob": 61,
      "fair": 1.64,
      "stars": 3,
-     "player": "Sebastian Aho",
-     "pid": 8478427,
-     "team": "Carolina Hurricanes",
-     "why": "13 buts et 20 passes en 24 matchs · 10 derniers matchs : 5 buts, 9 passes · Carolina Hurricanes favori (61 %) · 3,4 buts attendus pour Carolina Hurricanes"
+     "player": "Matthew Schaefer",
+     "pid": 8485366,
+     "team": "New York Islanders",
+     "why": "9 buts et 17 passes en 22 matchs · 10 derniers matchs : 7 buts, 8 passes · New York Islanders favori (60 %) · 3,4 buts attendus pour New York Islanders"
     },
     "scorer": {
      "market": "goal",
-     "label": "Andrei Svechnikov marque",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "Bo Horvat marque",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
-     "player": "Andrei Svechnikov",
-     "pid": 8480830,
-     "team": "Carolina Hurricanes",
-     "why": "13 buts et 10 passes en 24 matchs · 10 derniers matchs : 7 buts, 3 passes · Carolina Hurricanes favori (61 %) · 3,4 buts attendus pour Carolina Hurricanes"
+     "player": "Bo Horvat",
+     "pid": 8477500,
+     "team": "New York Islanders",
+     "why": "9 buts et 12 passes en 22 matchs · 10 derniers matchs : 3 buts, 5 passes · New York Islanders favori (60 %) · 3,4 buts attendus pour New York Islanders"
     }
    }
   },
   {
-   "id": "nhl-2026020374",
+   "id": "nhl-2026020382",
    "sport": "nhl",
    "league": "NHL",
-   "kickoff": "2026-11-22T22:00:00+00:00",
-   "time": "23:00",
-   "home": "Tampa Bay Lightning",
-   "away": "Buffalo Sabres",
-   "state": "CRIT",
-   "xgH": 3.79,
-   "xgA": 2.65,
-   "pH": 60,
+   "kickoff": "2026-11-24T00:30:00+00:00",
+   "time": "01:30",
+   "home": "Winnipeg Jets",
+   "away": "Utah Mammoth",
+   "state": "FUT",
+   "xgH": 3.05,
+   "xgA": 3.65,
+   "pH": 33,
    "pD": 15,
-   "pA": 26,
-   "winH": 67,
-   "espn_id": "401892769",
-   "edate": "20261122",
-   "picks": {
-    "main": {
-     "market": "win_h",
-     "label": "Victoire Tampa Bay Lightning",
-     "p": 0.673,
-     "prob": 67,
-     "fair": 1.49,
-     "stars": 3,
-     "why": "10 derniers matchs : Tampa Bay Lightning 7 victoires · Buffalo Sabres 3"
-    },
-    "winner": {
-     "market": "win_h",
-     "label": "Victoire Tampa Bay Lightning",
-     "p": 0.673,
-     "prob": 67,
-     "fair": 1.49,
-     "stars": 3,
-     "why": "10 derniers matchs : Tampa Bay Lightning 7 victoires · Buffalo Sabres 3"
-    },
-    "fun": {
-     "market": "wh_o65",
-     "label": "Tampa Bay Lightning gagne et plus de 6,5 buts",
-     "p": 0.347,
-     "prob": 35,
-     "fair": 2.88,
-     "stars": 1
-    },
-    "player": {
-     "market": "point",
-     "label": "Nikita Kucherov : au moins 1 point",
-     "p": 0.79,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
-     "player": "Nikita Kucherov",
-     "pid": 8476453,
-     "team": "Tampa Bay Lightning",
-     "why": "9 buts et 22 passes en 22 matchs · 10 derniers matchs : 5 buts, 11 passes · Tampa Bay Lightning favori (67 %) · 3,8 buts attendus pour Tampa Bay Lightning"
-    },
-    "scorer": {
-     "market": "goal",
-     "label": "Nikita Kucherov marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1,
-     "player": "Nikita Kucherov",
-     "pid": 8476453,
-     "team": "Tampa Bay Lightning",
-     "why": "9 buts et 22 passes en 22 matchs · 10 derniers matchs : 5 buts, 11 passes · Tampa Bay Lightning favori (67 %) · 3,8 buts attendus pour Tampa Bay Lightning"
-    }
-   }
-  },
-  {
-   "id": "nhl-2026020375",
-   "sport": "nhl",
-   "league": "NHL",
-   "kickoff": "2026-11-23T00:00:00+00:00",
-   "time": "01:00",
-   "home": "St. Louis Blues",
-   "away": "Edmonton Oilers",
-   "state": "LIVE",
-   "xgH": 2.63,
-   "xgA": 2.64,
-   "pH": 41,
-   "pD": 18,
-   "pA": 41,
-   "winH": 50,
-   "espn_id": "401892770",
-   "edate": "20261122",
-   "picks": {
-    "main": {
-     "market": "u55",
-     "label": "Moins de 5,5 buts",
-     "p": 0.5689,
-     "prob": 57,
-     "fair": 1.76,
-     "stars": 2,
-     "why": "10 derniers matchs : St. Louis Blues 6 victoires · Edmonton Oilers 6"
-    },
-    "winner": {
-     "market": "win_h",
-     "label": "Victoire St. Louis Blues",
-     "p": 0.502,
-     "prob": 50,
-     "fair": 1.99,
-     "stars": 2
-    },
-    "fun": {
-     "market": "wh_by1",
-     "label": "St. Louis Blues gagne d'un seul but (prolongation comprise)",
-     "p": 0.213,
-     "prob": 21,
-     "fair": 4.69,
-     "stars": 1
-    },
-    "player": {
-     "market": "point",
-     "label": "Robert Thomas : au moins 1 point",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
-     "stars": 2,
-     "player": "Robert Thomas",
-     "pid": 8480023,
-     "team": "St. Louis Blues",
-     "why": "5 buts et 18 passes en 23 matchs · 10 derniers matchs : 3 buts, 11 passes · St. Louis Blues favori (50 %) · 2,6 buts attendus pour St. Louis Blues"
-    },
-    "scorer": {
-     "market": "goal",
-     "label": "Jimmy Snuggerud marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
-     "stars": 1,
-     "player": "Jimmy Snuggerud",
-     "pid": 8483516,
-     "team": "St. Louis Blues",
-     "why": "13 buts et 5 passes en 23 matchs · 10 derniers matchs : 6 buts, 3 passes · St. Louis Blues favori (50 %) · 2,6 buts attendus pour St. Louis Blues"
-    }
-   }
-  },
-  {
-   "id": "nhl-2026020376",
-   "sport": "nhl",
-   "league": "NHL",
-   "kickoff": "2026-11-23T00:00:00+00:00",
-   "time": "01:00",
-   "home": "Dallas Stars",
-   "away": "Pittsburgh Penguins",
-   "state": "LIVE",
-   "xgH": 3.45,
-   "xgA": 2.7,
-   "pH": 54,
-   "pD": 16,
-   "pA": 31,
-   "winH": 62,
-   "espn_id": "401892771",
-   "edate": "20261122",
-   "picks": {
-    "main": {
-     "market": "win_h",
-     "label": "Victoire Dallas Stars",
-     "p": 0.6188,
-     "prob": 62,
-     "fair": 1.62,
-     "stars": 3,
-     "why": "10 derniers matchs : Dallas Stars 7 victoires · Pittsburgh Penguins 2"
-    },
-    "winner": {
-     "market": "win_h",
-     "label": "Victoire Dallas Stars",
-     "p": 0.6188,
-     "prob": 62,
-     "fair": 1.62,
-     "stars": 3,
-     "why": "10 derniers matchs : Dallas Stars 7 victoires · Pittsburgh Penguins 2"
-    },
-    "fun": {
-     "market": "h2",
-     "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
-     "p": 0.4139,
-     "prob": 41,
-     "fair": 2.42,
-     "stars": 1
-    },
-    "player": {
-     "market": "point",
-     "label": "Jason Robertson : au moins 1 point",
-     "p": 0.68,
-     "prob": 68,
-     "fair": 1.47,
-     "stars": 3,
-     "player": "Jason Robertson",
-     "pid": 8480027,
-     "team": "Dallas Stars",
-     "why": "10 buts et 16 passes en 22 matchs · 10 derniers matchs : 5 buts, 8 passes · Dallas Stars favori (62 %) · 3,4 buts attendus pour Dallas Stars"
-    },
-    "scorer": {
-     "market": "goal",
-     "label": "Jason Robertson marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
-     "stars": 1,
-     "player": "Jason Robertson",
-     "pid": 8480027,
-     "team": "Dallas Stars",
-     "why": "10 buts et 16 passes en 22 matchs · 10 derniers matchs : 5 buts, 8 passes · Dallas Stars favori (62 %) · 3,4 buts attendus pour Dallas Stars"
-    }
-   }
-  },
-  {
-   "id": "nhl-2026020377",
-   "sport": "nhl",
-   "league": "NHL",
-   "kickoff": "2026-11-23T01:00:00+00:00",
-   "time": "02:00",
-   "home": "Vancouver Canucks",
-   "away": "Chicago Blackhawks",
-   "state": "PRE",
-   "xgH": 2.87,
-   "xgA": 3.33,
-   "pH": 35,
-   "pD": 16,
-   "pA": 49,
-   "winH": 43,
-   "espn_id": "401892772",
-   "edate": "20261122",
+   "pA": 51,
+   "winH": 41,
+   "espn_id": "401892777",
+   "edate": "20261123",
    "picks": {
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5858,
-     "prob": 59,
-     "fair": 1.71,
-     "stars": 2,
-     "why": "10 derniers matchs : Vancouver Canucks 3 victoires · Chicago Blackhawks 3"
+     "p": 0.6593,
+     "prob": 66,
+     "fair": 1.52,
+     "stars": 3,
+     "why": "10 derniers matchs : Winnipeg Jets 7 victoires · Utah Mammoth 3"
     },
     "winner": {
      "market": "win_a",
-     "label": "Victoire Chicago Blackhawks",
-     "p": 0.5683,
-     "prob": 57,
-     "fair": 1.76,
+     "label": "Victoire Utah Mammoth",
+     "p": 0.5866,
+     "prob": 59,
+     "fair": 1.7,
      "stars": 2
     },
     "fun": {
      "market": "a2",
-     "label": "Chicago Blackhawks gagne par 2 buts d'écart ou plus",
-     "p": 0.3714,
-     "prob": 37,
-     "fair": 2.69,
+     "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
+     "p": 0.3962,
+     "prob": 40,
+     "fair": 2.52,
      "stars": 1
     },
     "player": {
      "market": "point",
-     "label": "Tyler Bertuzzi : au moins 1 point",
-     "p": 0.56,
-     "prob": 56,
-     "fair": 1.79,
-     "stars": 2,
-     "player": "Tyler Bertuzzi",
-     "pid": 8477479,
-     "team": "Chicago Blackhawks",
-     "why": "5 buts et 6 passes en 23 matchs · 10 derniers matchs : 3 buts, 3 passes · Chicago Blackhawks favori (57 %) · 3,3 buts attendus pour Chicago Blackhawks"
+     "label": "Logan Cooley : au moins 1 point",
+     "p": 0.6,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 3,
+     "player": "Logan Cooley",
+     "pid": 8483431,
+     "team": "Utah Mammoth",
+     "why": "12 buts et 13 passes en 21 matchs · 10 derniers matchs : 5 buts, 5 passes (joué 7 sur 10) · Utah Mammoth favori (59 %) · 3,6 buts attendus pour Utah Mammoth"
     },
     "scorer": {
      "market": "goal",
-     "label": "Tyler Bertuzzi marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "label": "Logan Cooley marque",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Tyler Bertuzzi",
-     "pid": 8477479,
-     "team": "Chicago Blackhawks",
-     "why": "5 buts et 6 passes en 23 matchs · 10 derniers matchs : 3 buts, 3 passes · Chicago Blackhawks favori (57 %) · 3,3 buts attendus pour Chicago Blackhawks"
+     "player": "Logan Cooley",
+     "pid": 8483431,
+     "team": "Utah Mammoth",
+     "why": "12 buts et 13 passes en 21 matchs · 10 derniers matchs : 5 buts, 5 passes (joué 7 sur 10) · Utah Mammoth favori (59 %) · 3,6 buts attendus pour Utah Mammoth"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020383",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-24T02:40:00+00:00",
+   "time": "03:40",
+   "home": "Seattle Kraken",
+   "away": "Anaheim Ducks",
+   "state": "FUT",
+   "xgH": 3.23,
+   "xgA": 3.44,
+   "pH": 39,
+   "pD": 16,
+   "pA": 45,
+   "winH": 47,
+   "espn_id": "401892778",
+   "edate": "20261123",
+   "picks": {
+    "main": {
+     "market": "o55",
+     "label": "Plus de 5,5 buts",
+     "p": 0.6557,
+     "prob": 66,
+     "fair": 1.53,
+     "stars": 3,
+     "why": "10 derniers matchs : Seattle Kraken 4 victoires · Anaheim Ducks 5"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Anaheim Ducks",
+     "p": 0.5287,
+     "prob": 53,
+     "fair": 1.89,
+     "stars": 2
+    },
+    "fun": {
+     "market": "wa_o55",
+     "label": "Anaheim Ducks gagne et plus de 5,5 buts",
+     "p": 0.3486,
+     "prob": 35,
+     "fair": 2.87,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Cutter Gauthier : au moins 1 point",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Cutter Gauthier",
+     "pid": 8483445,
+     "team": "Anaheim Ducks",
+     "why": "21 buts et 9 passes en 23 matchs · 10 derniers matchs : 14 buts, 4 passes · Anaheim Ducks favori (53 %) · 3,4 buts attendus pour Anaheim Ducks"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Cutter Gauthier marque",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Cutter Gauthier",
+     "pid": 8483445,
+     "team": "Anaheim Ducks",
+     "why": "21 buts et 9 passes en 23 matchs · 10 derniers matchs : 14 buts, 4 passes · Anaheim Ducks favori (53 %) · 3,4 buts attendus pour Anaheim Ducks"
+    }
+   }
+  },
+  {
+   "id": "nhl-2026020384",
+   "sport": "nhl",
+   "league": "NHL",
+   "kickoff": "2026-11-24T03:00:00+00:00",
+   "time": "04:00",
+   "home": "San Jose Sharks",
+   "away": "Minnesota Wild",
+   "state": "FUT",
+   "xgH": 2.46,
+   "xgA": 4.06,
+   "pH": 20,
+   "pD": 13,
+   "pA": 67,
+   "winH": 27,
+   "espn_id": "401892779",
+   "edate": "20261123",
+   "picks": {
+    "main": {
+     "market": "win_a",
+     "label": "Victoire Minnesota Wild",
+     "p": 0.7291,
+     "prob": 73,
+     "fair": 1.37,
+     "stars": 4,
+     "why": "10 derniers matchs : San Jose Sharks 4 victoires · Minnesota Wild 8"
+    },
+    "winner": {
+     "market": "win_a",
+     "label": "Victoire Minnesota Wild",
+     "p": 0.7291,
+     "prob": 73,
+     "fair": 1.37,
+     "stars": 4,
+     "why": "10 derniers matchs : San Jose Sharks 4 victoires · Minnesota Wild 8"
+    },
+    "fun": {
+     "market": "wa_o65",
+     "label": "Minnesota Wild gagne et plus de 6,5 buts",
+     "p": 0.3823,
+     "prob": 38,
+     "fair": 2.62,
+     "stars": 1
+    },
+    "player": {
+     "market": "point",
+     "label": "Kirill Kaprizov : au moins 1 point",
+     "p": 0.77,
+     "prob": 77,
+     "fair": 1.3,
+     "stars": 4,
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild",
+     "why": "18 buts et 27 passes en 25 matchs · 10 derniers matchs : 4 buts, 17 passes · Minnesota Wild favori (73 %) · 4,1 buts attendus pour Minnesota Wild"
+    },
+    "scorer": {
+     "market": "goal",
+     "label": "Kirill Kaprizov marque",
+     "p": 0.47,
+     "prob": 47,
+     "fair": 2.13,
+     "stars": 1,
+     "player": "Kirill Kaprizov",
+     "pid": 8478864,
+     "team": "Minnesota Wild",
+     "why": "18 buts et 27 passes en 25 matchs · 10 derniers matchs : 4 buts, 17 passes · Minnesota Wild favori (73 %) · 4,1 buts attendus pour Minnesota Wild"
     }
    }
   }
@@ -612,11 +751,11 @@
  "summary": {
   "date": "2026-11-23",
   "yesterday": {
-   "n": 129,
-   "ok": 64
+   "n": 151,
+   "ok": 79
   },
   "foot": 3,
-  "nhl": 5,
+  "nhl": 7,
   "top": [
    {
     "label": "Plus de 2,5 buts",
@@ -625,16 +764,16 @@
     "match": "Monza – Fiorentina"
    },
    {
+    "label": "Kirill Kaprizov : au moins 1 point",
+    "prob": 77,
+    "time": "04:00",
+    "match": "San Jose Sharks – Minnesota Wild"
+   },
+   {
     "label": "Brentford ou nul",
     "prob": 75,
     "time": "21:00",
     "match": "Brentford – Everton"
-   },
-   {
-    "label": "Levante ou nul",
-    "prob": 71,
-    "time": "21:00",
-    "match": "Levante – Elche"
    }
   ]
  }
