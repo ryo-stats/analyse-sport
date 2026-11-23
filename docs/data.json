@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T12:29+01:00",
+ "generated": "2026-11-23T14:22+01:00",
  "date": "2026-11-23",
  "nhl_date": "2026-11-23",
  "foot": [
@@ -1483,7 +1483,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "New Jersey Devils gagne et plus de 5,5 buts",
-     "p": 0.3919,
+     "p": 0.392,
      "prob": 39,
      "fair": 2.55,
      "stars": 1
@@ -1500,7 +1500,7 @@
      {
       "market": "h3",
       "label": "New Jersey Devils gagne par 3 buts d'écart ou plus",
-      "p": 0.2638,
+      "p": 0.2639,
       "prob": 26,
       "fair": 3.79,
       "stars": 1
@@ -1891,7 +1891,7 @@
      {
       "market": "wh_o65",
       "label": "Montréal Canadiens gagne et plus de 6,5 buts",
-      "p": 0.2509,
+      "p": 0.251,
       "prob": 25,
       "fair": 3.98,
       "stars": 1
@@ -2267,7 +2267,7 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4095,
+     "p": 0.4096,
      "prob": 41,
      "fair": 2.44,
      "stars": 1
@@ -2276,7 +2276,7 @@
      {
       "market": "wh_o55",
       "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.3986,
+      "p": 0.3987,
       "prob": 40,
       "fair": 2.51,
       "stars": 1
@@ -2677,7 +2677,7 @@
      {
       "market": "wh_o65",
       "label": "New York Islanders gagne et plus de 6,5 buts",
-      "p": 0.2897,
+      "p": 0.2898,
       "prob": 29,
       "fair": 3.45,
       "stars": 1
@@ -3035,7 +3035,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6593,
+     "p": 0.6594,
      "prob": 66,
      "fair": 1.52,
      "stars": 3,
@@ -3061,7 +3061,7 @@
      {
       "market": "wa_o55",
       "label": "Utah Mammoth gagne et plus de 5,5 buts",
-      "p": 0.3924,
+      "p": 0.3925,
       "prob": 39,
       "fair": 2.55,
       "stars": 1
@@ -3069,7 +3069,7 @@
      {
       "market": "wa_o65",
       "label": "Utah Mammoth gagne et plus de 6,5 buts",
-      "p": 0.3257,
+      "p": 0.3258,
       "prob": 33,
       "fair": 3.07,
       "stars": 1
@@ -3426,9 +3426,9 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.6557,
+     "p": 0.6558,
      "prob": 66,
-     "fair": 1.53,
+     "fair": 1.52,
      "stars": 3,
      "why": "10 derniers matchs : Seattle Kraken 4 victoires · Anaheim Ducks 5"
     },
@@ -3460,7 +3460,7 @@
      {
       "market": "wa_o65",
       "label": "Anaheim Ducks gagne et plus de 6,5 buts",
-      "p": 0.2905,
+      "p": 0.2906,
       "prob": 29,
       "fair": 3.44,
       "stars": 1
@@ -3835,7 +3835,7 @@
     "fun": {
      "market": "wa_o65",
      "label": "Minnesota Wild gagne et plus de 6,5 buts",
-     "p": 0.3823,
+     "p": 0.3824,
      "prob": 38,
      "fair": 2.62,
      "stars": 1
@@ -33457,14 +33457,24 @@
     "esp.1": 862,
     "ita.1": 871
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "eng.1": {
+     "2026": 109
+    },
+    "esp.1": {
+     "2026": 128
+    },
+    "ita.1": {
+     "2026": 119
+    }
+   },
    "status": "ok"
   },
   "nhl": {
    "ok": 7,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92155 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92168 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
