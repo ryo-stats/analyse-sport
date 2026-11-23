@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T00:44+01:00",
+ "generated": "2026-11-23T01:09+01:00",
  "date": "2026-11-23",
  "nhl_date": "2026-11-22",
  "foot": [
@@ -1936,8 +1936,8 @@
    "league": "NHL",
    "kickoff": "2026-11-23T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "St. Louis Blues",
    "away": "Edmonton Oilers",
    "rec_h": "12-9-2 · 6e Central · 3 victoires de suite",
@@ -2238,7 +2238,6 @@
     "St. Louis Blues a joué hier soir : deuxième match en deux soirs, fatigue probable.",
     "Edmonton Oilers : 97 buts marqués et 72 encaissés en 25 matchs.",
     "Edmonton Oilers a joué hier soir : deuxième match en deux soirs, fatigue probable.",
-    "Gardien probable de St. Louis Blues : Joel Hofer (92,3 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 5 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -2248,7 +2247,7 @@
     "main": {
      "market": "u55",
      "label": "Moins de 5,5 buts",
-     "p": 0.5688,
+     "p": 0.5689,
      "prob": 57,
      "fair": 1.76,
      "stars": 2,
@@ -2311,8 +2310,8 @@
    "league": "NHL",
    "kickoff": "2026-11-23T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Dallas Stars",
    "away": "Pittsburgh Penguins",
    "rec_h": "14-6-2 · 2e Central · 4 victoires de suite",
@@ -2456,7 +2455,7 @@
      },
      "p_goal": 20,
      "p_point": 41,
-     "p_assist": 26
+     "p_assist": 25
     },
     {
      "name": "Arttu Hyry",
@@ -2612,7 +2611,6 @@
     "Dallas Stars : 64 buts marqués et 56 encaissés en 22 matchs.",
     "Pittsburgh Penguins : 67 buts marqués et 80 encaissés en 22 matchs.",
     "Pittsburgh Penguins a joué hier soir : deuxième match en deux soirs, fatigue probable.",
-    "Gardien probable de Pittsburgh Penguins : Arturs Silovs (87,3 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Dallas Stars est favori (62 % en comptant la prolongation).",
@@ -2640,7 +2638,7 @@
     "fun": {
      "market": "h2",
      "label": "Dallas Stars gagne par 2 buts d'écart ou plus",
-     "p": 0.414,
+     "p": 0.4139,
      "prob": 41,
      "fair": 2.42,
      "stars": 1
@@ -34364,7 +34362,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 3,
+   "ok": 1,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92097 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
