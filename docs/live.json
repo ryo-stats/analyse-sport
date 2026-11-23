@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T20:09+01:00",
+ "generated": "2026-11-23T20:34+01:00",
  "date": "2026-11-23",
  "matches": [
   {
@@ -12,79 +12,81 @@
    "home": "Monza",
    "away": "Fiorentina",
    "state": "pre",
-   "xgH": 2.2,
-   "xgA": 2.26,
-   "pH": 39,
+   "xgH": 2.11,
+   "xgA": 1.99,
+   "pH": 42,
    "pD": 20,
-   "pA": 41,
+   "pA": 38,
    "edate": "20261123",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.8219,
-     "prob": 82,
-     "fair": 1.22,
-     "stars": 5,
+     "p": 0.7757,
+     "prob": 78,
+     "fair": 1.29,
+     "stars": 4,
      "why": "10 derniers matchs : Monza 16 marqués / 21 encaissés · Fiorentina 17 / 21"
     },
     "winner": {
-     "market": "2",
-     "label": "Victoire Fiorentina",
-     "p": 0.4122,
-     "prob": 41,
-     "fair": 2.43,
+     "market": "1",
+     "label": "Victoire Monza",
+     "p": 0.4205,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0649,
-     "prob": 6,
-     "fair": 15.42,
+     "label": "Score exact 2-1",
+     "p": 0.0735,
+     "prob": 7,
+     "fair": 13.61,
      "stars": 1,
-     "value": "1-2"
+     "value": "2-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Fiorentina gagne et plus de 2,5 buts",
-     "p": 0.3567,
-     "prob": 36,
-     "fair": 2.8,
+     "market": "wh_o25",
+     "label": "Monza gagne et plus de 2,5 buts",
+     "p": 0.3486,
+     "prob": 35,
+     "fair": 2.87,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Franco Mastantuono marque",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
-     "stars": 1,
-     "player": "Franco Mastantuono",
-     "team": "Fiorentina",
-     "pid": "376473",
+     "label": "Gustavo Varela marque",
+     "p": 0.63,
+     "prob": 63,
+     "fair": 1.59,
+     "stars": 3,
+     "player": "Gustavo Varela",
+     "team": "Monza",
+     "lineup": "start",
+     "pid": "384482",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · Fiorentina annoncé gagnant (41 %) · 2,3 buts attendus pour Fiorentina"
+     "why": "9 buts et 1 passe en 10 matchs · 10 derniers matchs : 8 buts, 1 passe (joué 9 sur 10) · titulaire · Monza annoncé gagnant (42 %) · 2,1 buts attendus pour Monza"
     },
     "decisive": {
      "market": "dec",
-     "label": "Franco Mastantuono buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
-     "stars": 1,
-     "player": "Franco Mastantuono",
-     "team": "Fiorentina",
+     "label": "Gustavo Varela buteur ou passeur",
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
+     "player": "Gustavo Varela",
+     "team": "Monza",
      "base": [
-      11,
-      4,
-      0
+      10,
+      9,
+      1
      ],
-     "pid": "376473",
+     "lineup": "start",
+     "pid": "384482",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "4 buts et 0 passe en 11 matchs · 10 derniers matchs : 4 buts, 0 passe · Fiorentina annoncé gagnant (41 %) · 2,3 buts attendus pour Fiorentina"
+     "why": "9 buts et 1 passe en 10 matchs · 10 derniers matchs : 8 buts, 1 passe (joué 9 sur 10) · titulaire · Monza annoncé gagnant (42 %) · 2,1 buts attendus pour Monza"
     }
    }
   },
@@ -763,7 +765,7 @@
   "top": [
    {
     "label": "Plus de 2,5 buts",
-    "prob": 82,
+    "prob": 78,
     "time": "20:45",
     "match": "Monza – Fiorentina"
    },
