@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T19:44+01:00",
+ "generated": "2026-11-23T20:09+01:00",
  "date": "2026-11-23",
  "matches": [
   {
@@ -98,79 +98,81 @@
    "home": "Brentford",
    "away": "Everton",
    "state": "pre",
-   "xgH": 1.5,
+   "xgH": 1.29,
    "xgA": 0.99,
-   "pH": 49,
-   "pD": 26,
-   "pA": 25,
+   "pH": 43,
+   "pD": 28,
+   "pA": 29,
    "edate": "20261123",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Brentford ou nul",
-     "p": 0.7488,
-     "prob": 75,
-     "fair": 1.34,
+     "p": 0.7139,
+     "prob": 71,
+     "fair": 1.4,
      "stars": 4,
      "why": "10 derniers matchs : Brentford 16 marqués / 11 encaissés · Everton 12 / 10"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Brentford",
-     "p": 0.4886,
-     "prob": 49,
-     "fair": 2.05,
+     "p": 0.4333,
+     "prob": 43,
+     "fair": 2.31,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.124,
-     "prob": 12,
-     "fair": 8.07,
+     "p": 0.1313,
+     "prob": 13,
+     "fair": 7.62,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "htft_h",
-     "label": "Brentford mène à la mi-temps et gagne le match",
-     "p": 0.2955,
-     "prob": 30,
-     "fair": 3.38,
+     "market": "wh_nil",
+     "label": "Brentford gagne sans encaisser de but",
+     "p": 0.2684,
+     "prob": 27,
+     "fair": 3.73,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Kevin Schade marque",
-     "p": 0.23,
-     "prob": 23,
-     "fair": 4.35,
+     "label": "Keane Lewis-Potter marque",
+     "p": 0.17,
+     "prob": 17,
+     "fair": 5.88,
      "stars": 1,
-     "player": "Kevin Schade",
+     "player": "Keane Lewis-Potter",
      "team": "Brentford",
-     "pid": "310958",
+     "lineup": "start",
+     "pid": "284490",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Brentford favori (49 %) · 1,5 but attendu pour Brentford"
+     "why": "2 buts et 1 passe en 10 matchs · titulaire · Brentford annoncé gagnant (43 %) · 1,3 but attendu pour Brentford"
     },
     "decisive": {
      "market": "dec",
-     "label": "Kevin Schade buteur ou passeur",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "label": "Keane Lewis-Potter buteur ou passeur",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
-     "player": "Kevin Schade",
+     "player": "Keane Lewis-Potter",
      "team": "Brentford",
      "base": [
       10,
-      3,
-      0
+      2,
+      1
      ],
-     "pid": "310958",
+     "lineup": "start",
+     "pid": "284490",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Brentford favori (49 %) · 1,5 but attendu pour Brentford"
+     "why": "2 buts et 1 passe en 10 matchs · titulaire · Brentford annoncé gagnant (43 %) · 1,3 but attendu pour Brentford"
     }
    }
   },
@@ -184,67 +186,68 @@
    "home": "Levante",
    "away": "Elche",
    "state": "pre",
-   "xgH": 1.87,
-   "xgA": 1.42,
-   "pH": 48,
-   "pD": 22,
-   "pA": 29,
+   "xgH": 1.71,
+   "xgA": 1.35,
+   "pH": 46,
+   "pD": 24,
+   "pA": 30,
    "edate": "20261123",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Levante ou nul",
-     "p": 0.7063,
-     "prob": 71,
-     "fair": 1.42,
-     "stars": 4,
+     "p": 0.6954,
+     "prob": 70,
+     "fair": 1.44,
+     "stars": 3,
      "why": "10 derniers matchs : Levante 16 marqués / 18 encaissés · Elche 13 / 14"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Levante",
-     "p": 0.4815,
-     "prob": 48,
-     "fair": 2.08,
+     "p": 0.4591,
+     "prob": 46,
+     "fair": 2.18,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0924,
+     "p": 0.0925,
      "prob": 9,
-     "fair": 10.82,
+     "fair": 10.81,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4181,
-     "prob": 42,
-     "fair": 2.39,
+     "p": 0.3657,
+     "prob": 37,
+     "fair": 2.73,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Roger Brugué marque",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
      "player": "Roger Brugué",
      "team": "Levante",
+     "lineup": "start",
      "pid": "267591",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Levante favori (48 %) · 1,9 buts attendus pour Levante"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Levante favori (46 %) · 1,7 buts attendus pour Levante"
     },
     "decisive": {
      "market": "dec",
      "label": "Roger Brugué buteur ou passeur",
-     "p": 0.47,
-     "prob": 47,
-     "fair": 2.13,
+     "p": 0.44,
+     "prob": 44,
+     "fair": 2.27,
      "stars": 1,
      "player": "Roger Brugué",
      "team": "Levante",
@@ -253,10 +256,11 @@
       5,
       1
      ],
+     "lineup": "start",
      "pid": "267591",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Levante favori (48 %) · 1,9 buts attendus pour Levante"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Levante favori (46 %) · 1,7 buts attendus pour Levante"
     }
    }
   },
@@ -770,10 +774,10 @@
     "match": "San Jose Sharks – Minnesota Wild"
    },
    {
-    "label": "Brentford ou nul",
-    "prob": 75,
-    "time": "21:00",
-    "match": "Brentford – Everton"
+    "label": "Jack Hughes : au moins 1 point",
+    "prob": 74,
+    "time": "01:00",
+    "match": "New Jersey Devils – Columbus Blue Jackets"
    }
   ]
  }
