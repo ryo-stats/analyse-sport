@@ -1,772 +1,766 @@
 {
- "generated": "2026-11-24T23:58+01:00",
- "date": "2026-11-24",
+ "generated": "2026-11-25T00:52+01:00",
+ "date": "2026-11-25",
  "matches": [
   {
-   "id": "foot-401915380",
+   "id": "foot-401915378",
    "sport": "foot",
    "league": "Ligue des champions",
    "code": "uefa.champions",
-   "kickoff": "2026-11-24T17:45:00+00:00",
+   "kickoff": "2026-11-25T17:45:00+00:00",
    "time": "18:45",
-   "home": "Bodo/Glimt",
-   "away": "LASK Linz",
-   "state": "post",
-   "xgH": 1.98,
-   "xgA": 1.09,
-   "pH": 58,
-   "pD": 22,
-   "pA": 20,
-   "edate": "20261124",
+   "home": "Sabah",
+   "away": "Barcelona",
+   "state": "pre",
+   "xgH": 1.18,
+   "xgA": 4.1,
+   "pH": 6,
+   "pD": 8,
+   "pA": 86,
+   "edate": "20261125",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "Bodo/Glimt ou nul",
-     "p": 0.7951,
-     "prob": 80,
-     "fair": 1.26,
-     "stars": 4,
-     "why": "10 derniers matchs : Bodo/Glimt 24 marqués / 13 encaissés · LASK Linz 23 / 15"
+     "market": "N2",
+     "label": "Nul ou Barcelona",
+     "p": 0.9423,
+     "prob": 94,
+     "fair": 1.06,
+     "stars": 5,
+     "why": "Derniers matchs : Sabah 4 marqués / 10 encaissés · Barcelona 39 / 13"
     },
     "winner": {
-     "market": "1",
-     "label": "Victoire Bodo/Glimt",
-     "p": 0.5797,
+     "market": "2",
+     "label": "Victoire Barcelona",
+     "p": 0.8575,
+     "prob": 86,
+     "fair": 1.17,
+     "stars": 5
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-4",
+     "p": 0.0708,
+     "prob": 7,
+     "fair": 14.13,
+     "stars": 1,
+     "value": "1-4"
+    },
+    "fun": {
+     "market": "sc2",
+     "label": "Raphinha marque au moins 2 buts",
+     "p": 0.3269,
+     "prob": 33,
+     "fair": 3.06,
+     "stars": 1,
+     "player": "Raphinha",
+     "team": "Barcelona",
+     "side": "a"
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Raphinha marque",
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
+     "player": "Raphinha",
+     "team": "Barcelona",
+     "pid": "231050",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "15 buts et 3 passes en 12 matchs · 10 derniers matchs : 10 buts, 2 passes (joué 9 sur 10) · Barcelona favori (86 %) · 4,1 buts attendus pour Barcelona"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Raphinha buteur ou passeur",
+     "p": 0.76,
+     "prob": 76,
+     "fair": 1.32,
+     "stars": 4,
+     "player": "Raphinha",
+     "team": "Barcelona",
+     "base": [
+      12,
+      15,
+      3
+     ],
+     "pid": "231050",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "15 buts et 3 passes en 12 matchs · 10 derniers matchs : 10 buts, 2 passes (joué 9 sur 10) · Barcelona favori (86 %) · 4,1 buts attendus pour Barcelona"
+    }
+   }
+  },
+  {
+   "id": "foot-401915293",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T17:45:00+00:00",
+   "time": "18:45",
+   "home": "Slavia Prague",
+   "away": "Villarreal",
+   "state": "pre",
+   "xgH": 1.04,
+   "xgA": 1.91,
+   "pH": 20,
+   "pD": 22,
+   "pA": 58,
+   "edate": "20261125",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Villarreal",
+     "p": 0.7986,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 4,
+     "why": "Derniers matchs : Slavia Prague 5 marqués / 9 encaissés · Villarreal 15 / 13"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Villarreal",
+     "p": 0.5777,
      "prob": 58,
      "fair": 1.73,
      "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0991,
+     "label": "Score exact 0-1",
+     "p": 0.1005,
      "prob": 10,
-     "fair": 10.09,
+     "fair": 9.95,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "wa_o25",
+     "label": "Villarreal gagne et plus de 2,5 buts",
+     "p": 0.3813,
+     "prob": 38,
+     "fair": 2.62,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Georges Mikautadze marque",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
+     "stars": 1,
+     "player": "Georges Mikautadze",
+     "team": "Villarreal",
+     "pid": "300002",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Georges Mikautadze buteur ou passeur",
+     "p": 0.31,
+     "prob": 31,
+     "fair": 3.23,
+     "stars": 1,
+     "player": "Georges Mikautadze",
+     "team": "Villarreal",
+     "base": [
+      13,
+      3,
+      1
+     ],
+     "pid": "300002",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+    }
+   }
+  },
+  {
+   "id": "foot-401915291",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Atlético",
+   "away": "Viking FK",
+   "state": "pre",
+   "xgH": 1.86,
+   "xgA": 1.24,
+   "pH": 52,
+   "pD": 23,
+   "pA": 25,
+   "edate": "20261125",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Atlético ou nul",
+     "p": 0.7463,
+     "prob": 75,
+     "fair": 1.34,
+     "stars": 4,
+     "why": "10 derniers matchs : Atlético 19 marqués / 7 encaissés · Viking FK 31 / 13"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Atlético",
+     "p": 0.5196,
+     "prob": 52,
+     "fair": 1.92,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0967,
+     "prob": 10,
+     "fair": 10.34,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3742,
+     "prob": 37,
+     "fair": 2.67,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Álex Baena marque",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
+     "stars": 1,
+     "player": "Álex Baena",
+     "team": "Atlético",
+     "pid": "297373",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 3 buts, 2 passes · Atlético favori (52 %) · 1,9 buts attendus pour Atlético"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Álex Baena buteur ou passeur",
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
+     "stars": 1,
+     "player": "Álex Baena",
+     "team": "Atlético",
+     "base": [
+      13,
+      6,
+      3
+     ],
+     "pid": "297373",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 3 buts, 2 passes · Atlético favori (52 %) · 1,9 buts attendus pour Atlético"
+    }
+   }
+  },
+  {
+   "id": "foot-401915292",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Club Brugge",
+   "away": "Liverpool",
+   "state": "pre",
+   "xgH": 1.69,
+   "xgA": 1.16,
+   "pH": 50,
+   "pD": 24,
+   "pA": 26,
+   "edate": "20261125",
+   "picks": {
+    "winner": {
+     "market": "1",
+     "label": "Victoire Club Brugge",
+     "p": 0.4972,
+     "prob": 50,
+     "fair": 2.01,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 1-0",
+     "p": 0.0973,
+     "prob": 10,
+     "fair": 10.28,
+     "stars": 1,
+     "value": "1-0"
+    },
+    "fun": {
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3205,
+     "prob": 32,
+     "fair": 3.12,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Nicolo Tresoldi marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1,
+     "player": "Nicolo Tresoldi",
+     "team": "Club Brugge",
+     "pid": "335201",
+     "stats_league": "bel.1",
+     "season": 2026,
+     "why": "10 buts et 1 passe en 12 matchs · 10 derniers matchs : 8 buts, 1 passe · Club Brugge favori (50 %) · 1,7 buts attendus pour Club Brugge"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Nicolo Tresoldi buteur ou passeur",
+     "p": 0.45,
+     "prob": 45,
+     "fair": 2.22,
+     "stars": 1,
+     "player": "Nicolo Tresoldi",
+     "team": "Club Brugge",
+     "base": [
+      12,
+      10,
+      1
+     ],
+     "pid": "335201",
+     "stats_league": "bel.1",
+     "season": 2026,
+     "why": "10 buts et 1 passe en 12 matchs · 10 derniers matchs : 8 buts, 1 passe · Club Brugge favori (50 %) · 1,7 buts attendus pour Club Brugge"
+    }
+   }
+  },
+  {
+   "id": "foot-401915376",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Inter Milan",
+   "away": "Stuttgart",
+   "state": "pre",
+   "xgH": 2.43,
+   "xgA": 1.22,
+   "pH": 64,
+   "pD": 18,
+   "pA": 18,
+   "edate": "20261125",
+   "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Inter Milan ou nul",
+     "p": 0.8234,
+     "prob": 82,
+     "fair": 1.21,
+     "stars": 5,
+     "why": "10 derniers matchs : Inter Milan 27 marqués / 16 encaissés · Stuttgart 15 / 15"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire Inter Milan",
+     "p": 0.6404,
+     "prob": 64,
+     "fair": 1.56,
+     "stars": 3
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0937,
+     "prob": 9,
+     "fair": 10.67,
+     "stars": 1,
+     "value": "2-1"
+    },
+    "fun": {
+     "market": "wh_btts",
+     "label": "Inter Milan gagne et les deux équipes marquent",
+     "p": 0.3704,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Marcus Thuram marque",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 11 matchs · 10 derniers matchs : 6 buts, 3 passes · Inter Milan favori (64 %) · 2,4 buts attendus pour Inter Milan"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Marcus Thuram buteur ou passeur",
+     "p": 0.54,
+     "prob": 54,
+     "fair": 1.85,
+     "stars": 2,
+     "player": "Marcus Thuram",
+     "team": "Inter Milan",
+     "base": [
+      11,
+      6,
+      3
+     ],
+     "pid": "217331",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 11 matchs · 10 derniers matchs : 6 buts, 3 passes · Inter Milan favori (64 %) · 2,4 buts attendus pour Inter Milan"
+    }
+   }
+  },
+  {
+   "id": "foot-401915377",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Lille",
+   "away": "Bayern",
+   "state": "pre",
+   "xgH": 0.92,
+   "xgA": 1.54,
+   "pH": 23,
+   "pD": 26,
+   "pA": 52,
+   "edate": "20261125",
+   "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Bayern",
+     "p": 0.7748,
+     "prob": 77,
+     "fair": 1.29,
+     "stars": 4,
+     "why": "10 derniers matchs : Lille 12 marqués / 8 encaissés · Bayern 30 / 10"
+    },
+    "winner": {
+     "market": "2",
+     "label": "Victoire Bayern",
+     "p": 0.518,
+     "prob": 52,
+     "fair": 1.93,
+     "stars": 2
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 0-1",
+     "p": 0.1317,
+     "prob": 13,
+     "fair": 7.6,
+     "stars": 1,
+     "value": "0-1"
+    },
+    "fun": {
+     "market": "htft_a",
+     "label": "Bayern mène à la mi-temps et gagne le match",
+     "p": 0.316,
+     "prob": 32,
+     "fair": 3.16,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Michael Olise marque",
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
+     "stars": 1,
+     "player": "Michael Olise",
+     "team": "Bayern",
+     "pid": "286831",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 10 matchs · Bayern favori (52 %) · 1,5 buts attendus pour Bayern"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Michael Olise buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Michael Olise",
+     "team": "Bayern",
+     "base": [
+      10,
+      6,
+      3
+     ],
+     "pid": "286831",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "why": "6 buts et 3 passes en 10 matchs · Bayern favori (52 %) · 1,5 buts attendus pour Bayern"
+    }
+   }
+  },
+  {
+   "id": "foot-401915374",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "PSG",
+   "away": "AS Roma",
+   "state": "pre",
+   "xgH": 1.82,
+   "xgA": 1.76,
+   "pH": 40,
+   "pD": 22,
+   "pA": 38,
+   "edate": "20261125",
+   "picks": {
+    "main": {
+     "market": "btts_y",
+     "label": "Les deux équipes marquent",
+     "p": 0.6933,
+     "prob": 69,
+     "fair": 1.44,
+     "stars": 3,
+     "why": "10 derniers matchs : PSG 23 marqués / 10 encaissés · AS Roma 28 / 11"
+    },
+    "winner": {
+     "market": "1",
+     "label": "Victoire PSG",
+     "p": 0.4012,
+     "prob": 40,
+     "fair": 2.49,
+     "stars": 1
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 2-1",
+     "p": 0.0812,
+     "prob": 8,
+     "fair": 12.31,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
      "market": "wh_o25",
-     "label": "Bodo/Glimt gagne et plus de 2,5 buts",
-     "p": 0.3978,
-     "prob": 40,
-     "fair": 2.51,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Andreas Helmersen marque",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
-     "stars": 1,
-     "player": "Andreas Helmersen",
-     "team": "Bodo/Glimt",
-     "pid": "218561",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "why": "14 buts et 2 passes en 24 matchs · 10 derniers matchs : 8 buts, 1 passe · Bodo/Glimt favori (58 %) · 2,0 buts attendus pour Bodo/Glimt"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Andreas Helmersen buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
-     "stars": 1,
-     "player": "Andreas Helmersen",
-     "team": "Bodo/Glimt",
-     "base": [
-      24,
-      14,
-      2
-     ],
-     "pid": "218561",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "why": "14 buts et 2 passes en 24 matchs · 10 derniers matchs : 8 buts, 1 passe · Bodo/Glimt favori (58 %) · 2,0 buts attendus pour Bodo/Glimt"
-    }
-   }
-  },
-  {
-   "id": "foot-401915300",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T17:45:00+00:00",
-   "time": "18:45",
-   "home": "Galatasaray",
-   "away": "Aston Villa",
-   "state": "post",
-   "xgH": 1.71,
-   "xgA": 1.34,
-   "pH": 46,
-   "pD": 24,
-   "pA": 30,
-   "edate": "20261124",
-   "picks": {
-    "winner": {
-     "market": "1",
-     "label": "Victoire Galatasaray",
-     "p": 0.4638,
-     "prob": 46,
-     "fair": 2.16,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0929,
-     "prob": 9,
-     "fair": 10.76,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3637,
-     "prob": 36,
-     "fair": 2.75,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Victor Osimhen marque",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
-     "stars": 1,
-     "player": "Victor Osimhen",
-     "team": "Galatasaray",
-     "pid": "228296",
-     "stats_league": "tur.1",
-     "season": 2026,
-     "why": "9 buts et 3 passes en 8 matchs · 10 derniers matchs : 5 buts, 2 passes (joué 6 sur 10) · Galatasaray favori (46 %) · 1,7 buts attendus pour Galatasaray"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Victor Osimhen buteur ou passeur",
-     "p": 0.46,
-     "prob": 46,
-     "fair": 2.17,
-     "stars": 1,
-     "player": "Victor Osimhen",
-     "team": "Galatasaray",
-     "base": [
-      8,
-      9,
-      3
-     ],
-     "pid": "228296",
-     "stats_league": "tur.1",
-     "season": 2026,
-     "why": "9 buts et 3 passes en 8 matchs · 10 derniers matchs : 5 buts, 2 passes (joué 6 sur 10) · Galatasaray favori (46 %) · 1,7 buts attendus pour Galatasaray"
-    }
-   }
-  },
-  {
-   "id": "foot-401915295",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Arsenal",
-   "away": "Dortmund",
-   "state": "post",
-   "xgH": 0.89,
-   "xgA": 0.67,
-   "pH": 38,
-   "pD": 36,
-   "pA": 26,
-   "edate": "20261124",
-   "picks": {
-    "main": {
-     "market": "u25",
-     "label": "Moins de 2,5 buts",
-     "p": 0.7934,
-     "prob": 79,
-     "fair": 1.26,
-     "stars": 4,
-     "why": "10 derniers matchs : Arsenal 14 marqués / 7 encaissés · Dortmund 17 / 7"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Arsenal",
-     "p": 0.385,
-     "prob": 38,
-     "fair": 2.6,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1866,
-     "prob": 19,
-     "fair": 5.36,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Arsenal gagne sans encaisser de but",
-     "p": 0.3008,
+     "label": "PSG gagne et plus de 2,5 buts",
+     "p": 0.3043,
      "prob": 30,
-     "fair": 3.32,
+     "fair": 3.29,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Kai Havertz marque",
-     "p": 0.14,
-     "prob": 14,
-     "fair": 7.14,
-     "stars": 1,
-     "player": "Kai Havertz",
-     "team": "Arsenal",
-     "pid": "231182",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 11 matchs · 10 derniers matchs : 2 buts, 1 passe · Arsenal annoncé gagnant (38 %) · 0,9 but attendu pour Arsenal"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Kai Havertz buteur ou passeur",
-     "p": 0.19,
-     "prob": 19,
-     "fair": 5.26,
-     "stars": 1,
-     "player": "Kai Havertz",
-     "team": "Arsenal",
-     "base": [
-      11,
-      3,
-      1
-     ],
-     "pid": "231182",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "why": "3 buts et 1 passe en 11 matchs · 10 derniers matchs : 2 buts, 1 passe · Arsenal annoncé gagnant (38 %) · 0,9 but attendu pour Arsenal"
-    }
-   }
-  },
-  {
-   "id": "foot-401915296",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Como",
-   "away": "AEK Athens",
-   "state": "post",
-   "xgH": 1.29,
-   "xgA": 0.82,
-   "pH": 48,
-   "pD": 29,
-   "pA": 24,
-   "edate": "20261124",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Como ou nul",
-     "p": 0.7631,
-     "prob": 76,
-     "fair": 1.31,
-     "stars": 4,
-     "why": "10 derniers matchs : Como 17 marqués / 8 encaissés · AEK Athens 24 / 6"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Como",
-     "p": 0.4754,
-     "prob": 48,
-     "fair": 2.1,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 1-0",
-     "p": 0.1564,
-     "prob": 16,
-     "fair": 6.39,
-     "stars": 1,
-     "value": "1-0"
-    },
-    "fun": {
-     "market": "wh_nil",
-     "label": "Como gagne sans encaisser de but",
-     "p": 0.3192,
-     "prob": 32,
-     "fair": 3.13,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Tasos Douvikas marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
-     "stars": 1,
-     "player": "Tasos Douvikas",
-     "team": "Como",
-     "pid": "262071",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "why": "5 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Como favori (48 %) · 1,3 but attendu pour Como"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Tasos Douvikas buteur ou passeur",
+     "label": "Ferran Torres marque",
      "p": 0.26,
      "prob": 26,
      "fair": 3.85,
      "stars": 1,
-     "player": "Tasos Douvikas",
-     "team": "Como",
-     "base": [
-      12,
-      5,
-      0
-     ],
-     "pid": "262071",
-     "stats_league": "ita.1",
+     "player": "Ferran Torres",
+     "team": "PSG",
+     "pid": "265869",
+     "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Como favori (48 %) · 1,3 but attendu pour Como"
-    }
-   }
-  },
-  {
-   "id": "foot-401915294",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Feyenoord",
-   "away": "FC Porto",
-   "state": "post",
-   "xgH": 1.18,
-   "xgA": 1.52,
-   "pH": 30,
-   "pD": 25,
-   "pA": 45,
-   "edate": "20261124",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou FC Porto",
-     "p": 0.7047,
-     "prob": 70,
-     "fair": 1.42,
-     "stars": 4,
-     "why": "10 derniers matchs : Feyenoord 30 marqués / 16 encaissés · FC Porto 25 / 5"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire FC Porto",
-     "p": 0.4506,
-     "prob": 45,
-     "fair": 2.22,
-     "stars": 1
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-1",
-     "p": 0.1024,
-     "prob": 10,
-     "fair": 9.77,
-     "stars": 1,
-     "value": "0-1"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.285,
-     "prob": 29,
-     "fair": 3.51,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Borja Sainz marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
-     "stars": 1,
-     "player": "Borja Sainz",
-     "team": "FC Porto",
-     "pid": "292268",
-     "stats_league": "por.1",
-     "season": 2026,
-     "why": "6 buts et 1 passe en 11 matchs · 10 derniers matchs : 6 buts, 1 passe · FC Porto favori (45 %) · 1,5 buts attendus pour FC Porto"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · PSG annoncé gagnant (40 %) · 1,8 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
-     "label": "Borja Sainz buteur ou passeur",
+     "label": "Ferran Torres buteur ou passeur",
      "p": 0.32,
      "prob": 32,
      "fair": 3.12,
      "stars": 1,
-     "player": "Borja Sainz",
-     "team": "FC Porto",
+     "player": "Ferran Torres",
+     "team": "PSG",
      "base": [
       11,
-      6,
+      5,
       1
      ],
-     "pid": "292268",
-     "stats_league": "por.1",
+     "pid": "265869",
+     "stats_league": "fra.1",
      "season": 2026,
-     "why": "6 buts et 1 passe en 11 matchs · 10 derniers matchs : 6 buts, 1 passe · FC Porto favori (45 %) · 1,5 buts attendus pour FC Porto"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · PSG annoncé gagnant (40 %) · 1,8 buts attendus pour PSG"
     }
    }
   },
   {
-   "id": "foot-401915379",
+   "id": "foot-401915375",
    "sport": "foot",
    "league": "Ligue des champions",
    "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
+   "kickoff": "2026-11-25T20:00:00+00:00",
    "time": "21:00",
-   "home": "Man City",
-   "away": "Napoli",
-   "state": "post",
-   "xgH": 1.87,
-   "xgA": 1.1,
-   "pH": 55,
+   "home": "Shakhtar",
+   "away": "Fenerbahce",
+   "state": "pre",
+   "xgH": 1.07,
+   "xgA": 1.94,
+   "pH": 21,
    "pD": 22,
-   "pA": 22,
-   "edate": "20261124",
+   "pA": 58,
+   "edate": "20261125",
    "picks": {
     "main": {
-     "market": "1N",
-     "label": "Man City ou nul",
-     "p": 0.7788,
-     "prob": 78,
-     "fair": 1.28,
+     "market": "N2",
+     "label": "Nul ou Fenerbahce",
+     "p": 0.7949,
+     "prob": 79,
+     "fair": 1.26,
      "stars": 4,
-     "why": "10 derniers matchs : Man City 20 marqués / 13 encaissés · Napoli 16 / 12"
+     "why": "Derniers matchs : Shakhtar 4 marqués / 4 encaissés · Fenerbahce 26 / 8"
     },
     "winner": {
-     "market": "1",
-     "label": "Victoire Man City",
-     "p": 0.5538,
-     "prob": 55,
-     "fair": 1.81,
+     "market": "2",
+     "label": "Victoire Fenerbahce",
+     "p": 0.5763,
+     "prob": 58,
+     "fair": 1.74,
      "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0987,
+     "label": "Score exact 1-2",
+     "p": 0.0993,
      "prob": 10,
-     "fair": 10.13,
+     "fair": 10.08,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-2"
     },
     "fun": {
-     "market": "scw",
-     "label": "Erling Haaland marque et Man City gagne",
-     "p": 0.3785,
-     "prob": 38,
-     "fair": 2.64,
+     "market": "wa_o25",
+     "label": "Fenerbahce gagne et plus de 2,5 buts",
+     "p": 0.388,
+     "prob": 39,
+     "fair": 2.58,
+     "stars": 1
+    },
+    "player": {
+     "market": "scorer",
+     "label": "Vedat Muriqi marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
-     "player": "Erling Haaland",
-     "team": "Man City",
+     "player": "Vedat Muriqi",
+     "team": "Fenerbahce",
+     "pid": "240209",
+     "stats_league": "tur.1",
+     "season": 2026,
+     "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · Fenerbahce favori (58 %) · 1,9 buts attendus pour Fenerbahce"
+    },
+    "decisive": {
+     "market": "dec",
+     "label": "Vedat Muriqi buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Vedat Muriqi",
+     "team": "Fenerbahce",
+     "base": [
+      12,
+      7,
+      1
+     ],
+     "pid": "240209",
+     "stats_league": "tur.1",
+     "season": 2026,
+     "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · Fenerbahce favori (58 %) · 1,9 buts attendus pour Fenerbahce"
+    }
+   }
+  },
+  {
+   "id": "foot-401915373",
+   "sport": "foot",
+   "league": "Ligue des champions",
+   "code": "uefa.champions",
+   "kickoff": "2026-11-25T20:00:00+00:00",
+   "time": "21:00",
+   "home": "Sporting",
+   "away": "Man Utd",
+   "state": "pre",
+   "xgH": 3.0,
+   "xgA": 1.36,
+   "pH": 71,
+   "pD": 15,
+   "pA": 14,
+   "edate": "20261125",
+   "picks": {
+    "winner": {
+     "market": "1",
+     "label": "Victoire Sporting",
+     "p": 0.7053,
+     "prob": 71,
+     "fair": 1.42,
+     "stars": 4
+    },
+    "score": {
+     "market": "exact",
+     "label": "Score exact 3-1",
+     "p": 0.0782,
+     "prob": 8,
+     "fair": 12.8,
+     "stars": 1,
+     "value": "3-1"
+    },
+    "fun": {
+     "market": "sc2",
+     "label": "Luis Suárez marque au moins 2 buts",
+     "p": 0.3269,
+     "prob": 33,
+     "fair": 3.06,
+     "stars": 1,
+     "player": "Luis Suárez",
+     "team": "Sporting",
      "side": "h"
     },
     "player": {
      "market": "scorer",
-     "label": "Erling Haaland marque",
-     "p": 0.52,
-     "prob": 52,
-     "fair": 1.92,
-     "stars": 2,
-     "player": "Erling Haaland",
-     "team": "Man City",
-     "pid": "253989",
-     "stats_league": "eng.1",
+     "label": "Luis Suárez marque",
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
+     "player": "Luis Suárez",
+     "team": "Sporting",
+     "pid": "272722",
+     "stats_league": "por.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 11 matchs · 10 derniers matchs : 9 buts, 0 passe · Man City favori (55 %) · 1,9 buts attendus pour Man City"
+     "why": "9 buts et 1 passe en 11 matchs · 10 derniers matchs : 9 buts, 1 passe · Sporting favori (71 %) · 3,0 buts attendus pour Sporting"
     },
     "decisive": {
      "market": "dec",
-     "label": "Erling Haaland buteur ou passeur",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2,
-     "player": "Erling Haaland",
-     "team": "Man City",
+     "label": "Luis Suárez buteur ou passeur",
+     "p": 0.73,
+     "prob": 73,
+     "fair": 1.37,
+     "stars": 4,
+     "player": "Luis Suárez",
+     "team": "Sporting",
      "base": [
       11,
       9,
-      0
+      1
      ],
-     "pid": "253989",
-     "stats_league": "eng.1",
+     "pid": "272722",
+     "stats_league": "por.1",
      "season": 2026,
-     "why": "9 buts et 0 passe en 11 matchs · 10 derniers matchs : 9 buts, 0 passe · Man City favori (55 %) · 1,9 buts attendus pour Man City"
-    }
-   }
-  },
-  {
-   "id": "foot-401915299",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
-   "time": "21:00",
-   "home": "RB Leipzig",
-   "away": "Lens",
-   "state": "post",
-   "xgH": 2.35,
-   "xgA": 1.18,
-   "pH": 63,
-   "pD": 19,
-   "pA": 18,
-   "edate": "20261124",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "RB Leipzig ou nul",
-     "p": 0.8217,
-     "prob": 82,
-     "fair": 1.22,
-     "stars": 5,
-     "why": "10 derniers matchs : RB Leipzig 32 marqués / 14 encaissés · Lens 13 / 14"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire RB Leipzig",
-     "p": 0.6342,
-     "prob": 63,
-     "fair": 1.58,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0954,
-     "prob": 10,
-     "fair": 10.48,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "h2",
-     "label": "RB Leipzig gagne avec 2 buts d'écart ou plus",
-     "p": 0.414,
-     "prob": 41,
-     "fair": 2.42,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Rômulo marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
-     "stars": 1,
-     "player": "Rômulo",
-     "team": "RB Leipzig",
-     "pid": "324766",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "6 buts et 0 passe en 8 matchs · RB Leipzig favori (63 %) · 2,4 buts attendus pour RB Leipzig"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Rômulo buteur ou passeur",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
-     "stars": 1,
-     "player": "Rômulo",
-     "team": "RB Leipzig",
-     "base": [
-      8,
-      6,
-      0
-     ],
-     "pid": "324766",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "why": "6 buts et 0 passe en 8 matchs · RB Leipzig favori (63 %) · 2,4 buts attendus pour RB Leipzig"
-    }
-   }
-  },
-  {
-   "id": "foot-401915298",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
-   "time": "21:00",
-   "home": "Real Madrid",
-   "away": "PSV",
-   "state": "post",
-   "xgH": 2.0,
-   "xgA": 1.21,
-   "pH": 56,
-   "pD": 22,
-   "pA": 23,
-   "edate": "20261124",
-   "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Real Madrid ou nul",
-     "p": 0.7725,
-     "prob": 77,
-     "fair": 1.29,
-     "stars": 4,
-     "why": "10 derniers matchs : Real Madrid 23 marqués / 9 encaissés · PSV 35 / 12"
-    },
-    "winner": {
-     "market": "1",
-     "label": "Victoire Real Madrid",
-     "p": 0.5568,
-     "prob": 56,
-     "fair": 1.8,
-     "stars": 2
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0977,
-     "prob": 10,
-     "fair": 10.24,
-     "stars": 1,
-     "value": "2-1"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3993,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Kylian Mbappé marque",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2,
-     "player": "Kylian Mbappé",
-     "team": "Real Madrid",
-     "pid": "231388",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "13 buts et 3 passes en 13 matchs · 10 derniers matchs : 9 buts, 3 passes · Real Madrid favori (56 %) · 2,0 buts attendus pour Real Madrid"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Kylian Mbappé buteur ou passeur",
-     "p": 0.64,
-     "prob": 64,
-     "fair": 1.56,
-     "stars": 3,
-     "player": "Kylian Mbappé",
-     "team": "Real Madrid",
-     "base": [
-      13,
-      13,
-      3
-     ],
-     "pid": "231388",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "13 buts et 3 passes en 13 matchs · 10 derniers matchs : 9 buts, 3 passes · Real Madrid favori (56 %) · 2,0 buts attendus pour Real Madrid"
-    }
-   }
-  },
-  {
-   "id": "foot-401915297",
-   "sport": "foot",
-   "league": "Ligue des champions",
-   "code": "uefa.champions",
-   "kickoff": "2026-11-24T20:00:00+00:00",
-   "time": "21:00",
-   "home": "S Bratislava",
-   "away": "Betis",
-   "state": "post",
-   "xgH": 0.9,
-   "xgA": 2.29,
-   "pH": 13,
-   "pD": 18,
-   "pA": 69,
-   "edate": "20261124",
-   "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Betis",
-     "p": 0.8677,
-     "prob": 87,
-     "fair": 1.15,
-     "stars": 5,
-     "why": "Derniers matchs : S Bratislava 1 marqués / 17 encaissés · Betis 17 / 11"
-    },
-    "winner": {
-     "market": "2",
-     "label": "Victoire Betis",
-     "p": 0.6865,
-     "prob": 69,
-     "fair": 1.46,
-     "stars": 3
-    },
-    "score": {
-     "market": "exact",
-     "label": "Score exact 0-2",
-     "p": 0.1083,
-     "prob": 11,
-     "fair": 9.23,
-     "stars": 1,
-     "value": "0-2"
-    },
-    "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3941,
-     "prob": 39,
-     "fair": 2.54,
-     "stars": 1
-    },
-    "player": {
-     "market": "scorer",
-     "label": "Abde Ezzalzouli marque",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
-     "stars": 1,
-     "player": "Abde Ezzalzouli",
-     "team": "Betis",
-     "pid": "300912",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 9 sur 10) · Betis favori (69 %) · 2,3 buts attendus pour Betis"
-    },
-    "decisive": {
-     "market": "dec",
-     "label": "Abde Ezzalzouli buteur ou passeur",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
-     "stars": 1,
-     "player": "Abde Ezzalzouli",
-     "team": "Betis",
-     "base": [
-      10,
-      3,
-      0
-     ],
-     "pid": "300912",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 9 sur 10) · Betis favori (69 %) · 2,3 buts attendus pour Betis"
+     "why": "9 buts et 1 passe en 11 matchs · 10 derniers matchs : 9 buts, 1 passe · Sporting favori (71 %) · 3,0 buts attendus pour Sporting"
     }
    }
   },
@@ -842,25 +836,31 @@
   }
  ],
  "summary": {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "yesterday": {
-   "n": 109,
-   "ok": 57
+   "n": 77,
+   "ok": 36
   },
   "foot": 9,
   "nhl": 1,
   "top": [
    {
-    "label": "Jack Eichel : au moins 1 point",
-    "prob": 64,
-    "time": "02:00",
-    "match": "Edmonton Oilers – Vegas Golden Knights"
+    "label": "Nul ou Barcelona",
+    "prob": 94,
+    "time": "18:45",
+    "match": "Sabah – Barcelona"
    },
    {
-    "label": "Victoire Vegas Golden Knights",
-    "prob": 55,
-    "time": "02:00",
-    "match": "Edmonton Oilers – Vegas Golden Knights"
+    "label": "Inter Milan ou nul",
+    "prob": 82,
+    "time": "21:00",
+    "match": "Inter Milan – Stuttgart"
+   },
+   {
+    "label": "Nul ou Villarreal",
+    "prob": 80,
+    "time": "18:45",
+    "match": "Slavia Prague – Villarreal"
    }
   ]
  }
