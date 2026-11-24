@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T07:28+01:00",
+ "generated": "2026-11-24T12:29+01:00",
  "date": "2026-11-24",
  "nhl_date": "2026-11-24",
  "foot": [
@@ -3528,7 +3528,7 @@
      },
      "p_goal": 36,
      "p_point": 66,
-     "p_assist": 46
+     "p_assist": 47
     },
     {
      "name": "Connor McDavid",
@@ -3719,7 +3719,7 @@
      },
      "p_goal": 25,
      "p_point": 49,
-     "p_assist": 31
+     "p_assist": 32
     },
     {
      "name": "Mitch Marner",
@@ -3760,7 +3760,7 @@
       "a": 3
      },
      "p_goal": 20,
-     "p_point": 46,
+     "p_point": 47,
      "p_assist": 32
     }
    ],
@@ -3795,26 +3795,26 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4116,
+     "p": 0.4138,
      "prob": 41,
-     "fair": 2.43,
+     "fair": 2.42,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "a2",
       "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-      "p": 0.3476,
+      "p": 0.3479,
       "prob": 35,
-      "fair": 2.88,
+      "fair": 2.87,
       "stars": 1
      },
      {
       "market": "wa_o55",
       "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
-      "p": 0.2916,
+      "p": 0.2928,
       "prob": 29,
-      "fair": 3.43,
+      "fair": 3.42,
       "stars": 1
      }
     ],
@@ -3943,19 +3943,19 @@
    ]
   },
   "picks": {
-   "n": 2038,
+   "n": 2039,
    "rate": 55,
    "expected": 53,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 2038,
+     "n": 2039,
      "ok": 1121,
      "rate": 55,
      "expected": 53
     },
     "foot": {
-     "n": 1158,
+     "n": 1159,
      "ok": 622,
      "rate": 54,
      "expected": 51
@@ -4028,16 +4028,16 @@
     {
      "date": "2026-11-23",
      "all": {
-      "n": 22,
+      "n": 23,
       "ok": 17,
-      "rate": 77,
+      "rate": 74,
       "expected": 51
      },
      "foot": {
-      "n": 11,
+      "n": 12,
       "ok": 9,
-      "rate": 82,
-      "expected": 51
+      "rate": 75,
+      "expected": 50
      },
      "nhl": {
       "n": 11,
@@ -5509,7 +5509,7 @@
     {
      "sport": "foot",
      "league": "LaLiga",
-     "n": 179,
+     "n": 180,
      "ok": 92,
      "rate": 51,
      "expected": 52
@@ -5566,7 +5566,7 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 859,
+     "n": 860,
      "announced": 35,
      "actual": 35
     },
@@ -6242,6 +6242,19 @@
      "match": "Levante – Elche",
      "label": "Roger Brugué marque",
      "prob": 36,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-23",
+     "sport": "foot",
+     "league": "LaLiga",
+     "mid": "foot-401882802",
+     "score": "1-1",
+     "match": "Levante – Elche",
+     "label": "Roger Brugué buteur ou passeur",
+     "prob": 44,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -32024,51 +32037,14 @@
     "esp.1": 863,
     "uefa.champions": 381
    },
-   "elo_fetch": {
-    "nor.1": {
-     "2026": 216
-    },
-    "aut.1": {
-     "2026": 78
-    },
-    "tur.1": {
-     "2026": 108
-    },
-    "eng.1": {
-     "2026": 110
-    },
-    "ger.1": {
-     "2026": 90
-    },
-    "ita.1": {
-     "2026": 120
-    },
-    "gre.1": {
-     "2026": 76
-    },
-    "ned.1": {
-     "2026": 117
-    },
-    "por.1": {
-     "2026": 98
-    },
-    "fra.1": {
-     "2026": 99
-    },
-    "esp.1": {
-     "2026": 129
-    },
-    "uefa.champions": {
-     "2026": 72
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
    "ok": 1,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92168 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92225 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
