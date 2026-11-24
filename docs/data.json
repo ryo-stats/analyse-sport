@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T12:29+01:00",
+ "generated": "2026-11-24T14:21+01:00",
  "date": "2026-11-24",
  "nhl_date": "2026-11-24",
  "foot": [
@@ -3479,8 +3479,8 @@
    "pD": 17,
    "pA": 47,
    "source": "Analyse maison : buts attendus (xG) de chaque équipe, données MoneyPuck.com, fatigue des matchs rapprochés",
-   "xgH": 2.74,
-   "xgA": 3.07,
+   "xgH": 2.75,
+   "xgA": 3.08,
    "total": 5.8,
    "scores": [
     "2-3",
@@ -3777,7 +3777,7 @@
     "main": {
      "market": "win_a",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.5499,
+     "p": 0.55,
      "prob": 55,
      "fair": 1.82,
      "stars": 2,
@@ -3786,7 +3786,7 @@
     "winner": {
      "market": "win_a",
      "label": "Victoire Vegas Golden Knights",
-     "p": 0.5499,
+     "p": 0.55,
      "prob": 55,
      "fair": 1.82,
      "stars": 2,
@@ -3795,16 +3795,16 @@
     "fun": {
      "market": "o65",
      "label": "Plus de 6,5 buts",
-     "p": 0.4138,
+     "p": 0.4143,
      "prob": 41,
-     "fair": 2.42,
+     "fair": 2.41,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "a2",
       "label": "Vegas Golden Knights gagne par 2 buts d'écart ou plus",
-      "p": 0.3479,
+      "p": 0.348,
       "prob": 35,
       "fair": 2.87,
       "stars": 1
@@ -3812,9 +3812,9 @@
      {
       "market": "wa_o55",
       "label": "Vegas Golden Knights gagne et plus de 5,5 buts",
-      "p": 0.2928,
+      "p": 0.2931,
       "prob": 29,
-      "fair": 3.42,
+      "fair": 3.41,
       "stars": 1
      }
     ],
@@ -32037,14 +32037,51 @@
     "esp.1": 863,
     "uefa.champions": 381
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "nor.1": {
+     "2026": 216
+    },
+    "aut.1": {
+     "2026": 78
+    },
+    "tur.1": {
+     "2026": 108
+    },
+    "eng.1": {
+     "2026": 110
+    },
+    "ger.1": {
+     "2026": 90
+    },
+    "ita.1": {
+     "2026": 120
+    },
+    "gre.1": {
+     "2026": 76
+    },
+    "ned.1": {
+     "2026": 117
+    },
+    "por.1": {
+     "2026": 98
+    },
+    "fra.1": {
+     "2026": 99
+    },
+    "esp.1": {
+     "2026": 129
+    },
+    "uefa.champions": {
+     "2026": 72
+    }
+   },
    "status": "ok"
   },
   "nhl": {
    "ok": 1,
    "missing": [],
    "fetch": {
-    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92225 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
+    "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92251 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2025/regular/teams.csv": "HTTP 200, 99689 car., début : 'team,season,name,team,position,situation,games_played,xGoals'"
    }
   }
