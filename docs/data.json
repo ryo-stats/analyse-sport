@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T07:28+01:00",
+ "generated": "2026-11-25T12:27+01:00",
  "date": "2026-11-25",
  "nhl_date": "2026-11-25",
  "foot": [
@@ -2716,17 +2716,6 @@
    "btts": 56,
    "squad_h": [
     {
-     "name": "Gleiker Mendoza",
-     "goals": 2,
-     "assists": 0,
-     "pos": "",
-     "apps": 4,
-     "p_goal": 23,
-     "p_dec": 28,
-     "side": "h",
-     "team": "Shakhtar"
-    },
-    {
      "name": "Isaque",
      "goals": 0,
      "assists": 2,
@@ -2734,17 +2723,6 @@
      "apps": 4,
      "p_goal": 6,
      "p_dec": 28,
-     "side": "h",
-     "team": "Shakhtar"
-    },
-    {
-     "name": "Alisson Santana",
-     "goals": 0,
-     "assists": 1,
-     "pos": "",
-     "apps": 4,
-     "p_goal": 6,
-     "p_dec": 20,
      "side": "h",
      "team": "Shakhtar"
     }
@@ -2881,15 +2859,6 @@
    "reading": "Fenerbahce est favori sans écraser le match (58 %).",
    "stakes": "Shakhtar (24e) : place de barrage. Fenerbahce (22e) : place de barrage.",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Fenerbahce",
-     "p": 0.7949,
-     "prob": 79,
-     "fair": 1.26,
-     "stars": 4,
-     "why": "Derniers matchs : Shakhtar 4 marqués / 4 encaissés · Fenerbahce 26 / 8"
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Fenerbahce",
@@ -2965,11 +2934,22 @@
      "stats_league": "tur.1",
      "season": 2026,
      "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · Fenerbahce favori (58 %) · 1,9 buts attendus pour Fenerbahce"
+    },
+    "held": {
+     "market": "N2",
+     "label": "Nul ou Fenerbahce",
+     "p": 0.7949,
+     "prob": 79,
+     "fair": 1.26,
+     "stars": 4,
+     "why": "Derniers matchs : Shakhtar 4 marqués / 4 encaissés · Fenerbahce 26 / 8",
+     "note": "« Nul ou Fenerbahce » : 79 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "« Nul ou Fenerbahce » : 79 % selon l'analyse, le marché des paris est nettement moins confiant"
    },
    "country": "Europe",
    "code": "uefa.champions",
@@ -37399,35 +37379,7 @@
     "fra.1": 696,
     "por.1": 702
    },
-   "elo_fetch": {
-    "uefa.champions": {
-     "2026": 81
-    },
-    "esp.1": {
-     "2026": 129
-    },
-    "nor.1": {
-     "2026": 216
-    },
-    "bel.1": {
-     "2026": 108
-    },
-    "eng.1": {
-     "2026": 110
-    },
-    "ita.1": {
-     "2026": 120
-    },
-    "ger.1": {
-     "2026": 90
-    },
-    "fra.1": {
-     "2026": 99
-    },
-    "por.1": {
-     "2026": 98
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
