@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T17:44+01:00",
+ "generated": "2026-11-25T18:09+01:00",
  "date": "2026-11-25",
  "nhl_date": "2026-11-25",
  "foot": [
@@ -17,24 +17,24 @@
    "form_a": "VVVVD",
    "rank_h": 30,
    "rank_a": 8,
-   "pH": 6,
-   "pD": 8,
-   "pA": 86,
+   "pH": 11,
+   "pD": 14,
+   "pA": 75,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.18,
-   "xgA": 4.1,
+   "xgA": 3.08,
    "scores": [
-    "1-4",
     "1-3",
-    "0-4"
+    "1-2",
+    "0-3"
    ],
    "scorep": [
-    7,
-    7,
-    6
+    8,
+    8,
+    7
    ],
-   "over25": 90,
-   "btts": 68,
+   "over25": 80,
+   "btts": 66,
    "squad_h": [
     {
      "name": "Joy-Lance Mickels",
@@ -50,11 +50,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 23,
-     "p_dec": 28,
+     "p_goal": 8,
+     "p_dec": 9,
      "pid": "291791",
      "stats_league": "uefa.champions",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Orphé Mbina",
@@ -70,71 +71,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 18,
-     "p_dec": 32,
+     "p_goal": 6,
+     "p_dec": 11,
      "pid": "308907",
      "stats_league": "uefa.champions",
-     "season": 2026
-    },
-    {
-     "name": "Kaheem Parris",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Sabah",
-     "goals": 1,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 20,
-     "pid": "268529",
-     "stats_league": "uefa.champions",
-     "season": 2026
-    },
-    {
-     "name": "Aden McCarthy",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Sabah",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 15,
-     "p_dec": 18,
-     "pid": "332563",
-     "stats_league": "uefa.champions",
-     "season": 2026
-    },
-    {
-     "name": "Veljko Simic",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sabah",
-     "goals": 0,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 15,
-     "pid": "193291",
-     "stats_league": "uefa.champions",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Ivan Lepinjica",
@@ -154,50 +96,74 @@
      "p_dec": 25,
      "pid": "260848",
      "stats_league": "uefa.champions",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Christian Nwachukwu",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sabah",
+     "goals": 0,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 4,
+      "gp": 4,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 8,
+     "pid": "385377",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kaheem Parris",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Sabah",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 4,
+      "gp": 3,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 6,
+     "pid": "268529",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Umarali Rakhmonaliev",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Sabah",
+     "goals": 0,
+     "assists": 1,
+     "apps": 4,
+     "l10": {
+      "n": 4,
+      "gp": 4,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 24,
+     "pid": "362336",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
-    {
-     "name": "Raphinha",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Barcelona",
-     "goals": 15,
-     "assists": 3,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 10,
-      "a": 2
-     },
-     "p_goal": 69,
-     "p_dec": 76,
-     "pid": "231050",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Lamine Yamal",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Barcelona",
-     "goals": 10,
-     "assists": 9,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 8,
-      "a": 9
-     },
-     "p_goal": 58,
-     "p_dec": 82,
-     "pid": "362150",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
     {
      "name": "Fermín López",
      "pos": "Milieu",
@@ -212,11 +178,33 @@
       "g": 5,
       "a": 5
      },
-     "p_goal": 45,
-     "p_dec": 66,
+     "p_goal": 36,
+     "p_dec": 55,
      "pid": "354334",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Raphinha",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Barcelona",
+     "goals": 15,
+     "assists": 3,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 10,
+      "a": 2
+     },
+     "p_goal": 23,
+     "p_dec": 27,
+     "pid": "231050",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Gabriel Jesus",
@@ -232,11 +220,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 24,
-     "p_dec": 31,
+     "p_goal": 19,
+     "p_dec": 25,
      "pid": "217289",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Anthony Gordon",
@@ -252,11 +241,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 20,
-     "p_dec": 38,
+     "p_goal": 15,
+     "p_dec": 30,
      "pid": "268782",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Karim Adeyemi",
@@ -272,11 +262,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 27,
+     "p_goal": 12,
+     "p_dec": 21,
      "pid": "274913",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Pedri",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Barcelona",
+     "goals": 1,
+     "assists": 3,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 8,
+     "p_dec": 25,
+     "pid": "250465",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -285,90 +297,102 @@
     "Sabah : 4 buts marqués et 10 encaissés sur ses 4 derniers matchs de championnat.",
     "Barcelona : 39 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Barcelona a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Barcelona : attaque revue à la baisse (−25 %) d'après la compo officielle (Raphinha, Lamine Yamal ne commencent pas).",
+    "Compositions officielles prises en compte : Aden McCarthy (absent), Kaheem Parris (remplaçant), Joy-Lance Mickels (remplaçant), Orphé Mbina (remplaçant), Raphinha (remplaçant), Lamine Yamal (absent) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Barcelona est nettement favori (86 %).",
+   "reading": "Barcelona est nettement favori (75 %).",
    "stakes": "Sabah (30e) : zone d'élimination. Barcelona (8e) : top 8, qualification directe pour les 8es.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Barcelona",
-     "p": 0.9423,
-     "prob": 94,
-     "fair": 1.06,
+     "p": 0.8878,
+     "prob": 89,
+     "fair": 1.13,
      "stars": 5,
      "why": "Derniers matchs : Sabah 4 marqués / 10 encaissés · Barcelona 39 / 13"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Barcelona",
-     "p": 0.8575,
-     "prob": 86,
-     "fair": 1.17,
-     "stars": 5
+     "p": 0.7515,
+     "prob": 75,
+     "fair": 1.33,
+     "stars": 4
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-4",
-     "p": 0.0708,
-     "prob": 7,
-     "fair": 14.13,
+     "label": "Score exact 1-3",
+     "p": 0.0812,
+     "prob": 8,
+     "fair": 12.32,
      "stars": 1,
-     "value": "1-4"
+     "value": "1-3"
     },
     "fun": {
-     "market": "sc2",
-     "label": "Raphinha marque au moins 2 buts",
-     "p": 0.3269,
-     "prob": 33,
-     "fair": 3.06,
-     "stars": 1,
-     "player": "Raphinha",
-     "team": "Barcelona",
-     "side": "a"
+     "market": "a3",
+     "label": "Barcelona gagne avec 3 buts d'écart ou plus",
+     "p": 0.368,
+     "prob": 37,
+     "fair": 2.72,
+     "stars": 1
     },
     "fun_alt": [
      {
+      "market": "scw",
+      "label": "Fermín López marque et Barcelona gagne",
+      "p": 0.3136,
+      "prob": 31,
+      "fair": 3.19,
+      "stars": 1,
+      "player": "Fermín López",
+      "team": "Barcelona",
+      "side": "a"
+     },
+     {
       "market": "wa_nil",
       "label": "Barcelona gagne sans encaisser de but",
-      "p": 0.3031,
-      "prob": 30,
-      "fair": 3.3,
+      "p": 0.2941,
+      "prob": 29,
+      "fair": 3.4,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Raphinha marque",
-     "p": 0.69,
-     "prob": 69,
-     "fair": 1.45,
-     "stars": 3,
-     "player": "Raphinha",
+     "label": "Fermín López marque",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
+     "stars": 1,
+     "player": "Fermín López",
      "team": "Barcelona",
-     "pid": "231050",
+     "lineup": "start",
+     "pid": "354334",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "15 buts et 3 passes en 12 matchs · 10 derniers matchs : 10 buts, 2 passes (joué 9 sur 10) · Barcelona favori (86 %) · 4,1 buts attendus pour Barcelona"
+     "why": "8 buts et 5 passes en 12 matchs · 10 derniers matchs : 5 buts, 5 passes (joué 9 sur 10) · titulaire · Barcelona favori (75 %) · 3,1 buts attendus pour Barcelona"
     },
     "decisive": {
      "market": "dec",
-     "label": "Raphinha buteur ou passeur",
-     "p": 0.76,
-     "prob": 76,
-     "fair": 1.32,
-     "stars": 4,
-     "player": "Raphinha",
+     "label": "Fermín López buteur ou passeur",
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
+     "stars": 2,
+     "player": "Fermín López",
      "team": "Barcelona",
      "base": [
       12,
-      15,
-      3
+      8,
+      5
      ],
-     "pid": "231050",
+     "lineup": "start",
+     "pid": "354334",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "15 buts et 3 passes en 12 matchs · 10 derniers matchs : 10 buts, 2 passes (joué 9 sur 10) · Barcelona favori (86 %) · 4,1 buts attendus pour Barcelona"
+     "why": "8 buts et 5 passes en 12 matchs · 10 derniers matchs : 5 buts, 5 passes (joué 9 sur 10) · titulaire · Barcelona favori (75 %) · 3,1 buts attendus pour Barcelona"
     }
    },
    "second": {
@@ -395,45 +419,25 @@
    "form_a": "DVDDV",
    "rank_h": 34,
    "rank_a": 29,
-   "pH": 20,
-   "pD": 22,
-   "pA": 58,
+   "pH": 19,
+   "pD": 26,
+   "pA": 56,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.04,
-   "xgA": 1.91,
+   "xgH": 0.78,
+   "xgA": 1.54,
    "scores": [
-    "1-1",
     "0-1",
-    "1-2"
+    "1-1",
+    "0-2"
    ],
    "scorep": [
-    10,
-    10,
-    10
+    15,
+    12,
+    12
    ],
-   "over25": 56,
-   "btts": 55,
+   "over25": 41,
+   "btts": 42,
    "squad_h": [
-    {
-     "name": "Danijel Sturm",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Slavia Prague",
-     "goals": 2,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 27,
-     "p_dec": 30,
-     "pid": "322169",
-     "stats_league": "uefa.champions",
-     "season": 2026
-    },
     {
      "name": "Wiktor Nowak",
      "pos": "Milieu",
@@ -448,71 +452,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 19,
+     "p_goal": 10,
+     "p_dec": 14,
      "pid": "410093",
      "stats_league": "uefa.champions",
-     "season": 2026
-    },
-    {
-     "name": "Lukás Provod",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Slavia Prague",
-     "goals": 1,
-     "assists": 0,
-     "apps": 2,
-     "l10": {
-      "n": 4,
-      "gp": 2,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 16,
-     "pid": "294618",
-     "stats_league": "uefa.champions",
-     "season": 2026
-    },
-    {
-     "name": "Pavel Kacor",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Slavia Prague",
-     "goals": 1,
-     "assists": 0,
-     "apps": 1,
-     "l10": {
-      "n": 4,
-      "gp": 1,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 11,
-     "p_dec": 11,
-     "pid": "420913",
-     "stats_league": "uefa.champions",
-     "season": 2026
-    },
-    {
-     "name": "Mojmír Chytil",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Slavia Prague",
-     "goals": 0,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 5,
-     "p_dec": 7,
-     "pid": "343733",
-     "stats_league": "uefa.champions",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Emmanuel Dennis Ayaosi",
@@ -529,33 +474,98 @@
       "a": 1
      },
      "p_goal": 3,
-     "p_dec": 20,
+     "p_dec": 15,
      "pid": "3098601",
      "stats_league": "uefa.champions",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Mojmír Chytil",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Slavia Prague",
+     "goals": 0,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 4,
+      "gp": 4,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 3,
+     "p_dec": 5,
+     "pid": "343733",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Michal Sadílek",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Slavia Prague",
+     "goals": 0,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 4,
+      "gp": 4,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 6,
+     "pid": "249525",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Pavel Kacor",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Slavia Prague",
+     "goals": 1,
+     "assists": 0,
+     "apps": 1,
+     "l10": {
+      "n": 4,
+      "gp": 1,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 2,
+     "pid": "420913",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Mubarak Suleiman",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Slavia Prague",
+     "goals": 0,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 4,
+      "gp": 3,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 1,
+     "p_dec": 4,
+     "pid": "418535",
+     "stats_league": "uefa.champions",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
-    {
-     "name": "Georges Mikautadze",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Villarreal",
-     "goals": 3,
-     "assists": 1,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 25,
-     "p_dec": 31,
-     "pid": "300002",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
     {
      "name": "Pape Gueye",
      "pos": "Milieu",
@@ -570,11 +580,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 23,
-     "p_dec": 27,
+     "p_goal": 19,
+     "p_dec": 22,
      "pid": "255889",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tajon Buchanan",
@@ -590,11 +601,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 24,
+     "p_goal": 18,
+     "p_dec": 20,
      "pid": "284769",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Alberto Moleiro",
@@ -610,51 +622,75 @@
       "g": 2,
       "a": 4
      },
-     "p_goal": 19,
-     "p_dec": 50,
+     "p_goal": 16,
+     "p_dec": 43,
      "pid": "307390",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Nicolas Pépé",
+     "name": "Ayoze Pérez",
      "pos": "Attaquant",
      "side": "a",
      "team": "Villarreal",
-     "goals": 2,
-     "assists": 1,
-     "apps": 9,
+     "goals": 1,
+     "assists": 3,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 11,
+     "p_dec": 31,
+     "pid": "192133",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Tani Oluwaseyi",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Villarreal",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
      "l10": {
       "n": 10,
       "gp": 6,
       "g": 1,
-      "a": 1
+      "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 26,
-     "pid": "210397",
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "294039",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Gerard Moreno",
+     "name": "Georges Mikautadze",
      "pos": "Attaquant",
      "side": "a",
      "team": "Villarreal",
-     "goals": 2,
-     "assists": 0,
-     "apps": 10,
+     "goals": 3,
+     "assists": 1,
+     "apps": 13,
      "l10": {
       "n": 10,
-      "gp": 7,
-      "g": 1,
+      "gp": 10,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 16,
-     "p_dec": 18,
-     "pid": "156172",
+     "p_goal": 7,
+     "p_dec": 9,
+     "pid": "300002",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -663,102 +699,107 @@
     "Slavia Prague : 5 buts marqués et 9 encaissés sur ses 4 derniers matchs de championnat.",
     "Villarreal : 15 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Villarreal a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Slavia Prague : attaque revue à la baisse (−25 %) d'après la compo officielle (Lukás Provod, Danijel Sturm ne commencent pas).",
+    "Villarreal : attaque revue à la baisse (−19 %) d'après la compo officielle (Gerard Moreno, Nicolas Pépé, Georges Mikautadze ne commencent pas).",
+    "Compositions officielles prises en compte : Danijel Sturm (absent), Georges Mikautadze (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Villarreal est favori sans écraser le match (58 %).",
+   "reading": "Villarreal est favori sans écraser le match (56 %).",
    "stakes": "Slavia Prague (34e) : zone d'élimination. Villarreal (29e) : zone d'élimination.",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire Villarreal",
-     "p": 0.5777,
-     "prob": 58,
-     "fair": 1.73,
+     "p": 0.5556,
+     "prob": 56,
+     "fair": 1.8,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1005,
-     "prob": 10,
-     "fair": 9.95,
+     "p": 0.1517,
+     "prob": 15,
+     "fair": 6.59,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Villarreal gagne et plus de 2,5 buts",
-     "p": 0.3813,
-     "prob": 38,
-     "fair": 2.62,
+     "market": "wa_nil",
+     "label": "Villarreal gagne sans encaisser de but",
+     "p": 0.3618,
+     "prob": 36,
+     "fair": 2.76,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_a",
       "label": "Villarreal mène à la mi-temps et gagne le match",
-      "p": 0.3678,
-      "prob": 37,
-      "fair": 2.72,
+      "p": 0.3411,
+      "prob": 34,
+      "fair": 2.93,
       "stars": 1
      },
      {
-      "market": "o35",
-      "label": "Plus de 3,5 buts",
-      "p": 0.3404,
-      "prob": 34,
-      "fair": 2.94,
+      "market": "a2",
+      "label": "Villarreal gagne avec 2 buts d'écart ou plus",
+      "p": 0.2929,
+      "prob": 29,
+      "fair": 3.41,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Georges Mikautadze marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Pape Gueye marque",
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
      "stars": 1,
-     "player": "Georges Mikautadze",
+     "player": "Pape Gueye",
      "team": "Villarreal",
-     "pid": "300002",
+     "lineup": "start",
+     "pid": "255889",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 2 buts, 0 passe (joué 9 sur 10) · titulaire · Villarreal favori (56 %) · 1,5 buts attendus pour Villarreal"
     },
     "decisive": {
      "market": "dec",
-     "label": "Georges Mikautadze buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "Pape Gueye buteur ou passeur",
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
-     "player": "Georges Mikautadze",
+     "player": "Pape Gueye",
      "team": "Villarreal",
      "base": [
-      13,
+      12,
       3,
-      1
+      0
      ],
-     "pid": "300002",
+     "lineup": "start",
+     "pid": "255889",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 2 buts, 0 passe (joué 9 sur 10) · titulaire · Villarreal favori (56 %) · 1,5 buts attendus pour Villarreal"
     },
     "held": {
      "market": "N2",
      "label": "Nul ou Villarreal",
-     "p": 0.7986,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 4,
+     "p": 0.812,
+     "prob": 81,
+     "fair": 1.23,
+     "stars": 5,
      "why": "Derniers matchs : Slavia Prague 5 marqués / 9 encaissés · Villarreal 15 / 13",
-     "note": "« Nul ou Villarreal » : 80 % selon l'analyse, le marché des paris est nettement moins confiant"
+     "note": "« Nul ou Villarreal » : 81 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
    "second": {
     "src": "marché des paris",
     "agree": false,
-    "note": "« Nul ou Villarreal » : 80 % selon l'analyse, le marché des paris est nettement moins confiant"
+    "note": "« Nul ou Villarreal » : 81 % selon l'analyse, le marché des paris est nettement moins confiant"
    },
    "country": "Europe",
    "code": "uefa.champions",

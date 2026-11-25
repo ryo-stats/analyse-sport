@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T17:44+01:00",
+ "generated": "2026-11-25T18:09+01:00",
  "date": "2026-11-25",
  "matches": [
   {
@@ -13,81 +13,80 @@
    "away": "Barcelona",
    "state": "pre",
    "xgH": 1.18,
-   "xgA": 4.1,
-   "pH": 6,
-   "pD": 8,
-   "pA": 86,
+   "xgA": 3.08,
+   "pH": 11,
+   "pD": 14,
+   "pA": 75,
    "edate": "20261125",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Barcelona",
-     "p": 0.9423,
-     "prob": 94,
-     "fair": 1.06,
+     "p": 0.8878,
+     "prob": 89,
+     "fair": 1.13,
      "stars": 5,
      "why": "Derniers matchs : Sabah 4 marqués / 10 encaissés · Barcelona 39 / 13"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Barcelona",
-     "p": 0.8575,
-     "prob": 86,
-     "fair": 1.17,
-     "stars": 5
+     "p": 0.7515,
+     "prob": 75,
+     "fair": 1.33,
+     "stars": 4
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-4",
-     "p": 0.0708,
-     "prob": 7,
-     "fair": 14.13,
+     "label": "Score exact 1-3",
+     "p": 0.0812,
+     "prob": 8,
+     "fair": 12.32,
      "stars": 1,
-     "value": "1-4"
+     "value": "1-3"
     },
     "fun": {
-     "market": "sc2",
-     "label": "Raphinha marque au moins 2 buts",
-     "p": 0.3269,
-     "prob": 33,
-     "fair": 3.06,
-     "stars": 1,
-     "player": "Raphinha",
-     "team": "Barcelona",
-     "side": "a"
+     "market": "a3",
+     "label": "Barcelona gagne avec 3 buts d'écart ou plus",
+     "p": 0.368,
+     "prob": 37,
+     "fair": 2.72,
+     "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Raphinha marque",
-     "p": 0.69,
-     "prob": 69,
-     "fair": 1.45,
-     "stars": 3,
-     "player": "Raphinha",
+     "label": "Fermín López marque",
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
+     "stars": 1,
+     "player": "Fermín López",
      "team": "Barcelona",
-     "pid": "231050",
+     "lineup": "start",
+     "pid": "354334",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "15 buts et 3 passes en 12 matchs · 10 derniers matchs : 10 buts, 2 passes (joué 9 sur 10) · Barcelona favori (86 %) · 4,1 buts attendus pour Barcelona"
+     "why": "8 buts et 5 passes en 12 matchs · 10 derniers matchs : 5 buts, 5 passes (joué 9 sur 10) · titulaire · Barcelona favori (75 %) · 3,1 buts attendus pour Barcelona"
     },
     "decisive": {
      "market": "dec",
-     "label": "Raphinha buteur ou passeur",
-     "p": 0.76,
-     "prob": 76,
-     "fair": 1.32,
-     "stars": 4,
-     "player": "Raphinha",
+     "label": "Fermín López buteur ou passeur",
+     "p": 0.55,
+     "prob": 55,
+     "fair": 1.82,
+     "stars": 2,
+     "player": "Fermín López",
      "team": "Barcelona",
      "base": [
       12,
-      15,
-      3
+      8,
+      5
      ],
-     "pid": "231050",
+     "lineup": "start",
+     "pid": "354334",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "15 buts et 3 passes en 12 matchs · 10 derniers matchs : 10 buts, 2 passes (joué 9 sur 10) · Barcelona favori (86 %) · 4,1 buts attendus pour Barcelona"
+     "why": "8 buts et 5 passes en 12 matchs · 10 derniers matchs : 5 buts, 5 passes (joué 9 sur 10) · titulaire · Barcelona favori (75 %) · 3,1 buts attendus pour Barcelona"
     }
    }
   },
@@ -101,70 +100,72 @@
    "home": "Slavia Prague",
    "away": "Villarreal",
    "state": "pre",
-   "xgH": 1.04,
-   "xgA": 1.91,
-   "pH": 20,
-   "pD": 22,
-   "pA": 58,
+   "xgH": 0.78,
+   "xgA": 1.54,
+   "pH": 19,
+   "pD": 26,
+   "pA": 56,
    "edate": "20261125",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire Villarreal",
-     "p": 0.5777,
-     "prob": 58,
-     "fair": 1.73,
+     "p": 0.5556,
+     "prob": 56,
+     "fair": 1.8,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1005,
-     "prob": 10,
-     "fair": 9.95,
+     "p": 0.1517,
+     "prob": 15,
+     "fair": 6.59,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Villarreal gagne et plus de 2,5 buts",
-     "p": 0.3813,
-     "prob": 38,
-     "fair": 2.62,
+     "market": "wa_nil",
+     "label": "Villarreal gagne sans encaisser de but",
+     "p": 0.3618,
+     "prob": 36,
+     "fair": 2.76,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Georges Mikautadze marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Pape Gueye marque",
+     "p": 0.19,
+     "prob": 19,
+     "fair": 5.26,
      "stars": 1,
-     "player": "Georges Mikautadze",
+     "player": "Pape Gueye",
      "team": "Villarreal",
-     "pid": "300002",
+     "lineup": "start",
+     "pid": "255889",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 2 buts, 0 passe (joué 9 sur 10) · titulaire · Villarreal favori (56 %) · 1,5 buts attendus pour Villarreal"
     },
     "decisive": {
      "market": "dec",
-     "label": "Georges Mikautadze buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "label": "Pape Gueye buteur ou passeur",
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
-     "player": "Georges Mikautadze",
+     "player": "Pape Gueye",
      "team": "Villarreal",
      "base": [
-      13,
+      12,
       3,
-      1
+      0
      ],
-     "pid": "300002",
+     "lineup": "start",
+     "pid": "255889",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 2 buts, 0 passe (joué 9 sur 10) · titulaire · Villarreal favori (56 %) · 1,5 buts attendus pour Villarreal"
     }
    }
   },
@@ -1712,7 +1713,7 @@
   "top": [
    {
     "label": "Nul ou Barcelona",
-    "prob": 94,
+    "prob": 89,
     "time": "18:45",
     "match": "Sabah – Barcelona"
    },
