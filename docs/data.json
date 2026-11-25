@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T19:58+01:00",
+ "generated": "2026-11-25T20:23+01:00",
  "date": "2026-11-25",
  "nhl_date": "2026-11-25",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-25T17:45:00+00:00",
    "time": "18:45",
    "state": "in",
-   "score": "0-3",
+   "score": "1-4",
    "home": "Sabah",
    "away": "Barcelona",
    "form_h": "DDVDV",
@@ -410,7 +410,7 @@
    "kickoff": "2026-11-25T17:45:00+00:00",
    "time": "18:45",
    "state": "in",
-   "score": "0-0",
+   "score": "0-1",
    "home": "Slavia Prague",
    "away": "Villarreal",
    "form_h": "DNDDD",
@@ -816,24 +816,24 @@
    "form_a": "NVVDV",
    "rank_h": 26,
    "rank_a": 25,
-   "pH": 52,
-   "pD": 23,
-   "pA": 25,
+   "pH": 49,
+   "pD": 25,
+   "pA": 26,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.86,
-   "xgA": 1.24,
+   "xgH": 1.59,
+   "xgA": 1.09,
    "scores": [
     "1-1",
-    "2-1",
-    "1-0"
+    "1-0",
+    "2-1"
    ],
    "scorep": [
-    10,
-    10,
-    8
+    12,
+    11,
+    9
    ],
-   "over25": 60,
-   "btts": 60,
+   "over25": 50,
+   "btts": 53,
    "squad_h": [
     {
      "name": "Alejandro Grimaldo",
@@ -849,11 +849,12 @@
       "g": 5,
       "a": 2
      },
-     "p_goal": 30,
-     "p_dec": 40,
+     "p_goal": 26,
+     "p_dec": 35,
      "pid": "166396",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Álex Baena",
@@ -869,51 +870,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 28,
-     "p_dec": 42,
+     "p_goal": 25,
+     "p_dec": 37,
      "pid": "297373",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Giuliano Simeone",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Atlético",
-     "goals": 4,
-     "assists": 2,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 26,
-     "p_dec": 35,
-     "pid": "323838",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Jonathan David",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Atlético",
-     "goals": 3,
-     "assists": 2,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 3,
-      "a": 2
-     },
-     "p_goal": 20,
-     "p_dec": 32,
-     "pid": "273499",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lee Kang-In",
@@ -929,11 +891,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 17,
+     "p_goal": 10,
+     "p_dec": 15,
      "pid": "274197",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Julián Álvarez",
@@ -949,34 +912,57 @@
       "g": 1,
       "a": 4
      },
-     "p_goal": 9,
-     "p_dec": 32,
+     "p_goal": 8,
+     "p_dec": 28,
      "pid": "277206",
      "stats_league": "esp.1",
-     "season": 2026
-    }
-   ],
-   "squad_a": [
+     "season": 2026,
+     "lineup": "start"
+    },
     {
-     "name": "Peter Christiansen",
+     "name": "Giuliano Simeone",
      "pos": "Attaquant",
-     "side": "a",
-     "team": "Viking FK",
-     "goals": 19,
-     "assists": 7,
-     "apps": 26,
+     "side": "h",
+     "team": "Atlético",
+     "goals": 4,
+     "assists": 2,
+     "apps": 13,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 10,
-      "a": 3
+      "g": 3,
+      "a": 1
      },
-     "p_goal": 30,
-     "p_dec": 38,
-     "pid": "9167",
-     "stats_league": "nor.1",
-     "season": 2026
+     "p_goal": 7,
+     "p_dec": 11,
+     "pid": "323838",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     },
+    {
+     "name": "Johnny Cardoso",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Atlético",
+     "goals": 1,
+     "assists": 1,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 6,
+     "p_dec": 13,
+     "pid": "290802",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
+    }
+   ],
+   "squad_a": [
     {
      "name": "Simen Kvia-Egeskog",
      "pos": "Milieu",
@@ -991,11 +977,12 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 19,
+     "p_goal": 13,
+     "p_dec": 17,
      "pid": "320678",
      "stats_league": "nor.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Henrik Heggheim",
@@ -1011,11 +998,33 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 16,
+     "p_goal": 10,
+     "p_dec": 14,
      "pid": "303977",
      "stats_league": "nor.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Peter Christiansen",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Viking FK",
+     "goals": 19,
+     "assists": 7,
+     "apps": 26,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 10,
+      "a": 3
+     },
+     "p_goal": 9,
+     "p_dec": 12,
+     "pid": "9167",
+     "stats_league": "nor.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Erik Botheim",
@@ -1031,11 +1040,12 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 9,
-     "p_dec": 14,
+     "p_goal": 8,
+     "p_dec": 12,
      "pid": "239925",
      "stats_league": "nor.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Zlatko Tripic",
@@ -1051,11 +1061,12 @@
       "g": 0,
       "a": 6
      },
-     "p_goal": 8,
-     "p_dec": 33,
+     "p_goal": 7,
+     "p_dec": 30,
      "pid": "164279",
      "stats_league": "nor.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kristoffer Haugen",
@@ -1071,11 +1082,12 @@
       "g": 3,
       "a": 3
      },
-     "p_goal": 8,
-     "p_dec": 15,
+     "p_goal": 7,
+     "p_dec": 14,
      "pid": "173356",
      "stats_league": "nor.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -1084,83 +1096,87 @@
     "Atlético : 19 buts marqués et 7 encaissés sur ses 10 derniers matchs de championnat.",
     "Viking FK : 31 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Atlético a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Atlético : attaque revue à la baisse (−15 %) d'après la compo officielle (Jonathan David, Giuliano Simeone ne commencent pas).",
+    "Viking FK : attaque revue à la baisse (−12 %) d'après la compo officielle (Peter Christiansen ne commence pas).",
+    "Compositions officielles prises en compte : Jonathan David (remplaçant), Giuliano Simeone (remplaçant), Peter Christiansen (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Atlético est favori sans écraser le match (52 %).",
+   "reading": "Atlético est favori sans écraser le match (49 %).",
    "stakes": "Atlético (26e) : zone d'élimination. Viking FK (25e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Atlético ou nul",
-     "p": 0.7463,
-     "prob": 75,
-     "fair": 1.34,
+     "p": 0.7389,
+     "prob": 74,
+     "fair": 1.35,
      "stars": 4,
      "why": "10 derniers matchs : Atlético 19 marqués / 7 encaissés · Viking FK 31 / 13"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Atlético",
-     "p": 0.5196,
-     "prob": 52,
-     "fair": 1.92,
-     "stars": 2
+     "p": 0.4887,
+     "prob": 49,
+     "fair": 2.05,
+     "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0967,
-     "prob": 10,
-     "fair": 10.34,
+     "label": "Score exact 1-0",
+     "p": 0.1091,
+     "prob": 11,
+     "fair": 9.17,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3742,
-     "prob": 37,
-     "fair": 2.67,
+     "market": "htft_h",
+     "label": "Atlético mène à la mi-temps et gagne le match",
+     "p": 0.2981,
+     "prob": 30,
+     "fair": 3.35,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o25",
       "label": "Atlético gagne et plus de 2,5 buts",
-      "p": 0.3573,
-      "prob": 36,
-      "fair": 2.8,
+      "p": 0.293,
+      "prob": 29,
+      "fair": 3.41,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Atlético mène à la mi-temps et gagne le match",
-      "p": 0.3258,
-      "prob": 33,
-      "fair": 3.07,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.281,
+      "prob": 28,
+      "fair": 3.56,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Álex Baena marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.25,
+     "prob": 25,
+     "fair": 4.0,
      "stars": 1,
      "player": "Álex Baena",
      "team": "Atlético",
+     "lineup": "start",
      "pid": "297373",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 3 buts, 2 passes · Atlético favori (52 %) · 1,9 buts attendus pour Atlético"
+     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 3 buts, 2 passes · titulaire · Atlético favori (49 %) · 1,6 buts attendus pour Atlético"
     },
     "decisive": {
      "market": "dec",
      "label": "Álex Baena buteur ou passeur",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Álex Baena",
      "team": "Atlético",
@@ -1169,10 +1185,11 @@
       6,
       3
      ],
+     "lineup": "start",
      "pid": "297373",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 3 buts, 2 passes · Atlético favori (52 %) · 1,9 buts attendus pour Atlético"
+     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 3 buts, 2 passes · titulaire · Atlético favori (49 %) · 1,6 buts attendus pour Atlético"
     }
    },
    "second": {
@@ -1199,24 +1216,24 @@
    "form_a": "VVDDV",
    "rank_h": 11,
    "rank_a": 10,
-   "pH": 50,
-   "pD": 24,
+   "pH": 49,
+   "pD": 25,
    "pA": 26,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.69,
-   "xgA": 1.16,
+   "xgH": 1.58,
+   "xgA": 1.08,
    "scores": [
     "1-1",
     "1-0",
     "2-1"
    ],
    "scorep": [
+    12,
     11,
-    10,
-    10
+    9
    ],
-   "over25": 54,
-   "btts": 56,
+   "over25": 50,
+   "btts": 52,
    "squad_h": [
     {
      "name": "Nicolo Tresoldi",
@@ -1232,11 +1249,12 @@
       "g": 8,
       "a": 1
      },
-     "p_goal": 40,
-     "p_dec": 45,
+     "p_goal": 38,
+     "p_dec": 42,
      "pid": "335201",
      "stats_league": "bel.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Hugo Vetlesen",
@@ -1252,11 +1270,12 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 22,
-     "p_dec": 32,
+     "p_goal": 21,
+     "p_dec": 30,
      "pid": "255261",
      "stats_league": "bel.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Carlos Forbs",
@@ -1272,11 +1291,12 @@
       "g": 2,
       "a": 4
      },
-     "p_goal": 16,
-     "p_dec": 35,
+     "p_goal": 15,
+     "p_dec": 33,
      "pid": "78836",
      "stats_league": "bel.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Hans Vanaken",
@@ -1292,31 +1312,12 @@
       "g": 3,
       "a": 3
      },
-     "p_goal": 16,
-     "p_dec": 31,
+     "p_goal": 15,
+     "p_dec": 29,
      "pid": "193849",
      "stats_league": "bel.1",
-     "season": 2026
-    },
-    {
-     "name": "Jan Virgili",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Club Brugge",
-     "goals": 2,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 12,
-     "p_dec": 17,
-     "pid": "403592",
-     "stats_league": "bel.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Felix Lemarechal",
@@ -1332,11 +1333,33 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 14,
+     "p_goal": 10,
+     "p_dec": 13,
      "pid": "324419",
      "stats_league": "bel.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Brandon Mechele",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Club Brugge",
+     "goals": 2,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "191222",
+     "stats_league": "bel.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1354,11 +1377,12 @@
       "g": 7,
       "a": 0
      },
-     "p_goal": 36,
-     "p_dec": 38,
+     "p_goal": 34,
+     "p_dec": 36,
      "pid": "235662",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Víctor Muñoz",
@@ -1374,11 +1398,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 19,
+     "p_goal": 17,
+     "p_dec": 18,
      "pid": "397545",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Florian Wirtz",
@@ -1395,10 +1420,11 @@
       "a": 4
      },
      "p_goal": 12,
-     "p_dec": 33,
+     "p_dec": 31,
      "pid": "303748",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Dominik Szoboszlai",
@@ -1415,10 +1441,32 @@
       "a": 1
      },
      "p_goal": 9,
-     "p_dec": 17,
+     "p_dec": 16,
      "pid": "257206",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Bradley Barcola",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Liverpool",
+     "goals": 0,
+     "assists": 4,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 0,
+      "a": 4
+     },
+     "p_goal": 3,
+     "p_dec": 23,
+     "pid": "328238",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Rio Ngumoha",
@@ -1434,31 +1482,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 7,
-     "p_dec": 13,
+     "p_goal": 2,
+     "p_dec": 4,
      "pid": "379588",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Alexis Mac Allister",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Liverpool",
-     "goals": 1,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 10,
-     "pid": "249299",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -1467,74 +1496,78 @@
     "Club Brugge : 26 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
     "Liverpool : 16 buts marqués et 8 encaissés sur ses 10 derniers matchs de championnat.",
     "Liverpool a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Club Brugge : attaque revue à la baisse (−7 %) d'après la compo officielle.",
+    "Liverpool : attaque revue à la baisse (−7 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Club Brugge est favori sans écraser le match (50 %).",
+   "reading": "Club Brugge est favori sans écraser le match (49 %).",
    "stakes": "Club Brugge (11e) : place de barrage. Liverpool (10e) : place de barrage.",
    "picks": {
     "winner": {
      "market": "1",
      "label": "Victoire Club Brugge",
-     "p": 0.4972,
-     "prob": 50,
-     "fair": 2.01,
+     "p": 0.4881,
+     "prob": 49,
+     "fair": 2.05,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.0973,
-     "prob": 10,
-     "fair": 10.28,
+     "p": 0.1104,
+     "prob": 11,
+     "fair": 9.05,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
-     "market": "o35",
-     "label": "Plus de 3,5 buts",
-     "p": 0.3205,
-     "prob": 32,
-     "fair": 3.12,
+     "market": "htft_h",
+     "label": "Club Brugge mène à la mi-temps et gagne le match",
+     "p": 0.2975,
+     "prob": 30,
+     "fair": 3.36,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_o25",
       "label": "Club Brugge gagne et plus de 2,5 buts",
-      "p": 0.3175,
-      "prob": 32,
-      "fair": 3.15,
+      "p": 0.2906,
+      "prob": 29,
+      "fair": 3.44,
       "stars": 1
      },
      {
-      "market": "htft_h",
-      "label": "Club Brugge mène à la mi-temps et gagne le match",
-      "p": 0.3065,
-      "prob": 31,
-      "fair": 3.26,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.2769,
+      "prob": 28,
+      "fair": 3.61,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Nicolo Tresoldi marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Nicolo Tresoldi",
      "team": "Club Brugge",
+     "lineup": "start",
      "pid": "335201",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "10 buts et 1 passe en 12 matchs · 10 derniers matchs : 8 buts, 1 passe · Club Brugge favori (50 %) · 1,7 buts attendus pour Club Brugge"
+     "why": "10 buts et 1 passe en 12 matchs · 10 derniers matchs : 8 buts, 1 passe · titulaire · Club Brugge favori (49 %) · 1,6 buts attendus pour Club Brugge"
     },
     "decisive": {
      "market": "dec",
      "label": "Nicolo Tresoldi buteur ou passeur",
-     "p": 0.45,
-     "prob": 45,
-     "fair": 2.22,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Nicolo Tresoldi",
      "team": "Club Brugge",
@@ -1543,17 +1576,18 @@
       10,
       1
      ],
+     "lineup": "start",
      "pid": "335201",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "10 buts et 1 passe en 12 matchs · 10 derniers matchs : 8 buts, 1 passe · Club Brugge favori (50 %) · 1,7 buts attendus pour Club Brugge"
+     "why": "10 buts et 1 passe en 12 matchs · 10 derniers matchs : 8 buts, 1 passe · titulaire · Club Brugge favori (49 %) · 1,6 buts attendus pour Club Brugge"
     },
     "held": {
      "market": "1N",
      "label": "Club Brugge ou nul",
-     "p": 0.7375,
+     "p": 0.7394,
      "prob": 74,
-     "fair": 1.36,
+     "fair": 1.35,
      "stars": 4,
      "why": "10 derniers matchs : Club Brugge 26 marqués / 10 encaissés · Liverpool 16 / 8",
      "note": "l'analyse et le marché des paris ne désignent pas le même favori"
@@ -1584,24 +1618,24 @@
    "form_a": "NVDVV",
    "rank_h": 17,
    "rank_a": 15,
-   "pH": 64,
-   "pD": 18,
-   "pA": 18,
+   "pH": 60,
+   "pD": 20,
+   "pA": 20,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.43,
-   "xgA": 1.22,
+   "xgH": 2.14,
+   "xgA": 1.16,
    "scores": [
     "2-1",
     "1-1",
     "2-0"
    ],
    "scorep": [
+    10,
     9,
-    8,
     8
    ],
-   "over25": 70,
-   "btts": 64,
+   "over25": 64,
+   "btts": 61,
    "squad_h": [
     {
      "name": "Marcus Thuram",
@@ -1617,11 +1651,12 @@
       "g": 6,
       "a": 3
      },
-     "p_goal": 40,
-     "p_dec": 54,
+     "p_goal": 36,
+     "p_dec": 50,
      "pid": "217331",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pio Esposito",
@@ -1637,11 +1672,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 37,
-     "p_dec": 41,
+     "p_goal": 34,
+     "p_dec": 37,
      "pid": "362674",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lautaro Martínez",
@@ -1657,51 +1693,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 28,
-     "p_dec": 29,
+     "p_goal": 25,
+     "p_dec": 26,
      "pid": "219713",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Ange-Yoan Bonny",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Inter Milan",
-     "goals": 2,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 16,
-     "pid": "309185",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Carlos Augusto",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Inter Milan",
-     "goals": 2,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 15,
-     "p_dec": 28,
-     "pid": "271769",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Petar Sucic",
@@ -1717,11 +1714,54 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 15,
-     "p_dec": 18,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "341494",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Carlos Augusto",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Inter Milan",
+     "goals": 2,
+     "assists": 2,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 13,
+     "p_dec": 25,
+     "pid": "271769",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Nicolò Barella",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Inter Milan",
+     "goals": 1,
+     "assists": 2,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 8,
+     "p_dec": 20,
+     "pid": "204441",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1739,11 +1779,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 30,
-     "p_dec": 32,
+     "p_goal": 29,
+     "p_dec": 30,
      "pid": "269136",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maximilian Mittelstädt",
@@ -1759,31 +1800,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 19,
+     "p_goal": 12,
+     "p_dec": 18,
      "pid": "216225",
      "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Bilal El Khannouss",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Stuttgart",
-     "goals": 2,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 15,
-     "pid": "336595",
-     "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Josha Vagnoman",
@@ -1803,47 +1825,71 @@
      "p_dec": 18,
      "pid": "266839",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Jamie Leweling",
-     "pos": "Attaquant",
+     "name": "Bilal El Khannouss",
+     "pos": "Milieu",
      "side": "a",
      "team": "Stuttgart",
-     "goals": 1,
-     "assists": 1,
+     "goals": 2,
+     "assists": 0,
      "apps": 10,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 1,
-      "a": 1
+      "g": 2,
+      "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 16,
-     "pid": "290811",
+     "p_goal": 12,
+     "p_dec": 14,
+     "pid": "336595",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Grischa Prömel",
+     "name": "Chris Führich",
      "pos": "Milieu",
      "side": "a",
      "team": "Stuttgart",
      "goals": 1,
      "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 7,
+     "p_dec": 15,
+     "pid": "268951",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jeff Chabot",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Stuttgart",
+     "goals": 1,
+     "assists": 0,
      "apps": 10,
      "l10": {
       "n": 10,
       "gp": 10,
       "g": 1,
-      "a": 1
+      "a": 0
      },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "218714",
+     "p_goal": 7,
+     "p_dec": 7,
+     "pid": "258909",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -1852,86 +1898,87 @@
     "Inter Milan : 27 buts marqués et 16 encaissés sur ses 10 derniers matchs de championnat.",
     "Stuttgart : 15 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
     "Inter Milan a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Inter Milan : attaque revue à la baisse (−12 %) d'après la compo officielle (Hakan Çalhanoglu ne commence pas).",
+    "Stuttgart : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Inter Milan est nettement favori (64 %).",
+   "reading": "Inter Milan est favori sans écraser le match (60 %).",
    "stakes": "Inter Milan (17e) : place de barrage. Stuttgart (15e) : place de barrage.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Inter Milan ou nul",
-     "p": 0.8234,
-     "prob": 82,
-     "fair": 1.21,
+     "p": 0.8017,
+     "prob": 80,
+     "fair": 1.25,
      "stars": 5,
      "why": "10 derniers matchs : Inter Milan 27 marqués / 16 encaissés · Stuttgart 15 / 15"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Inter Milan",
-     "p": 0.6404,
-     "prob": 64,
-     "fair": 1.56,
-     "stars": 3
+     "p": 0.5984,
+     "prob": 60,
+     "fair": 1.67,
+     "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0937,
-     "prob": 9,
-     "fair": 10.67,
+     "p": 0.0979,
+     "prob": 10,
+     "fair": 10.21,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Inter Milan gagne et les deux équipes marquent",
-     "p": 0.3704,
-     "prob": 37,
-     "fair": 2.7,
+     "market": "htft_h",
+     "label": "Inter Milan mène à la mi-temps et gagne le match",
+     "p": 0.3889,
+     "prob": 39,
+     "fair": 2.57,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "scw",
-      "label": "Marcus Thuram marque et Inter Milan gagne",
-      "p": 0.3182,
-      "prob": 32,
-      "fair": 3.14,
-      "stars": 1,
-      "player": "Marcus Thuram",
-      "team": "Inter Milan",
-      "side": "h"
+      "market": "h2",
+      "label": "Inter Milan gagne avec 2 buts d'écart ou plus",
+      "p": 0.3715,
+      "prob": 37,
+      "fair": 2.69,
+      "stars": 1
      },
      {
-      "market": "wh_nil",
-      "label": "Inter Milan gagne sans encaisser de but",
-      "p": 0.2701,
-      "prob": 27,
-      "fair": 3.7,
+      "market": "wh_btts",
+      "label": "Inter Milan gagne et les deux équipes marquent",
+      "p": 0.3216,
+      "prob": 32,
+      "fair": 3.11,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Marcus Thuram marque",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.36,
+     "prob": 36,
+     "fair": 2.78,
      "stars": 1,
      "player": "Marcus Thuram",
      "team": "Inter Milan",
+     "lineup": "start",
      "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 11 matchs · 10 derniers matchs : 6 buts, 3 passes · Inter Milan favori (64 %) · 2,4 buts attendus pour Inter Milan"
+     "why": "6 buts et 3 passes en 11 matchs · 10 derniers matchs : 6 buts, 3 passes · titulaire · Inter Milan favori (60 %) · 2,1 buts attendus pour Inter Milan"
     },
     "decisive": {
      "market": "dec",
      "label": "Marcus Thuram buteur ou passeur",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
+     "p": 0.5,
+     "prob": 50,
+     "fair": 2.0,
      "stars": 2,
      "player": "Marcus Thuram",
      "team": "Inter Milan",
@@ -1940,10 +1987,11 @@
       6,
       3
      ],
+     "lineup": "start",
      "pid": "217331",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 11 matchs · 10 derniers matchs : 6 buts, 3 passes · Inter Milan favori (64 %) · 2,4 buts attendus pour Inter Milan"
+     "why": "6 buts et 3 passes en 11 matchs · 10 derniers matchs : 6 buts, 3 passes · titulaire · Inter Milan favori (60 %) · 2,1 buts attendus pour Inter Milan"
     }
    },
    "second": {
@@ -1971,64 +2019,24 @@
    "rank_h": 35,
    "rank_a": 14,
    "pH": 23,
-   "pD": 26,
-   "pA": 52,
+   "pD": 31,
+   "pA": 46,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 0.92,
-   "xgA": 1.54,
+   "xgH": 0.72,
+   "xgA": 1.15,
    "scores": [
     "0-1",
-    "1-1",
-    "0-2"
+    "0-0",
+    "1-1"
    ],
    "scorep": [
-    13,
-    12,
-    10
+    18,
+    15,
+    13
    ],
-   "over25": 45,
-   "btts": 47,
+   "over25": 29,
+   "btts": 35,
    "squad_h": [
-    {
-     "name": "Olivier Giroud",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Lille",
-     "goals": 3,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 14,
-     "p_dec": 24,
-     "pid": "88965",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Dilane Bakwa",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Lille",
-     "goals": 2,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 12,
-     "p_dec": 18,
-     "pid": "297157",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
     {
      "name": "Ethan Mbappé",
      "pos": "Milieu",
@@ -2043,11 +2051,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 13,
+     "p_goal": 9,
+     "p_dec": 10,
      "pid": "355971",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Ayase Ueda",
@@ -2063,114 +2072,99 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 12,
+     "p_goal": 9,
+     "p_dec": 10,
      "pid": "274277",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Tiago Santos",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Lille",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 9,
-     "pid": "346844",
-     "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Soriba Diaoune",
-     "pos": "Attaquant",
+     "name": "Hákon Haraldsson",
+     "pos": "Milieu",
      "side": "h",
      "team": "Lille",
      "goals": 1,
-     "assists": 2,
-     "apps": 5,
+     "assists": 0,
+     "apps": 11,
      "l10": {
       "n": 10,
-      "gp": 5,
+      "gp": 10,
       "g": 1,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 7,
+     "pid": "318779",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Nathan Ngoy",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Lille",
+     "goals": 1,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 5,
+     "pid": "318577",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Olivier Giroud",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Lille",
+     "goals": 3,
+     "assists": 2,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
       "a": 2
      },
-     "p_goal": 7,
-     "p_dec": 17,
-     "pid": "400352",
+     "p_goal": 3,
+     "p_dec": 6,
+     "pid": "88965",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Dilane Bakwa",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Lille",
+     "goals": 2,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 3,
+     "p_dec": 4,
+     "pid": "297157",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
-    {
-     "name": "Michael Olise",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Bayern",
-     "goals": 6,
-     "assists": 3,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 6,
-      "a": 3
-     },
-     "p_goal": 25,
-     "p_dec": 37,
-     "pid": "286831",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Harry Kane",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Bayern",
-     "goals": 4,
-     "assists": 8,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 8
-     },
-     "p_goal": 20,
-     "p_dec": 46,
-     "pid": "142200",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
-    {
-     "name": "Luis Díaz",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Bayern",
-     "goals": 4,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 4,
-      "a": 1
-     },
-     "p_goal": 19,
-     "p_dec": 23,
-     "pid": "257390",
-     "stats_league": "ger.1",
-     "season": 2026
-    },
     {
      "name": "Dayot Upamecano",
      "pos": "Défenseur",
@@ -2185,11 +2179,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 14,
+     "p_goal": 10,
+     "p_dec": 11,
      "pid": "222793",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Aleksandar Pavlovic",
@@ -2205,11 +2200,33 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 10,
-     "p_dec": 16,
+     "p_goal": 8,
+     "p_dec": 12,
      "pid": "359370",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Nathaniel Brown",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Bayern",
+     "goals": 2,
+     "assists": 2,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 7,
+     "p_dec": 14,
+     "pid": "120829",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lennart Karl",
@@ -2225,11 +2242,54 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 11,
+     "p_goal": 7,
+     "p_dec": 8,
      "pid": "402841",
      "stats_league": "ger.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Joshua Kimmich",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Bayern",
+     "goals": 1,
+     "assists": 3,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 3
+     },
+     "p_goal": 4,
+     "p_dec": 16,
+     "pid": "190161",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Konrad Laimer",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Bayern",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "169189",
+     "stats_league": "ger.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -2237,95 +2297,100 @@
     "Bayern : 14e, 8 points, 12 buts marqués et 5 encaissés en 4 matchs.",
     "Lille : 12 buts marqués et 8 encaissés sur ses 10 derniers matchs de championnat.",
     "Bayern : 30 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
+    "Lille : attaque revue à la baisse (−22 %) d'après la compo officielle (Tiago Santos, Olivier Giroud, Dilane Bakwa ne commencent pas).",
+    "Bayern : attaque revue à la baisse (−25 %) d'après la compo officielle (Michael Olise, Harry Kane, Luis Díaz ne commencent pas).",
+    "Compositions officielles prises en compte : Michael Olise (absent), Harry Kane (absent) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Bayern est favori sans écraser le match (52 %).",
+   "reading": "Bayern est favori sans écraser le match (46 %). Le nul est une issue sérieuse (31 %).",
    "stakes": "Lille (35e) : zone d'élimination. Bayern (14e) : place de barrage.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Bayern",
-     "p": 0.7748,
+     "p": 0.7721,
      "prob": 77,
-     "fair": 1.29,
+     "fair": 1.3,
      "stars": 4,
      "why": "10 derniers matchs : Lille 12 marqués / 8 encaissés · Bayern 30 / 10"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Bayern",
-     "p": 0.518,
-     "prob": 52,
-     "fair": 1.93,
-     "stars": 2
+     "p": 0.4619,
+     "prob": 46,
+     "fair": 2.17,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1317,
-     "prob": 13,
-     "fair": 7.6,
+     "p": 0.1779,
+     "prob": 18,
+     "fair": 5.62,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "htft_a",
-     "label": "Bayern mène à la mi-temps et gagne le match",
-     "p": 0.316,
-     "prob": 32,
-     "fair": 3.16,
+     "market": "wa_nil",
+     "label": "Bayern gagne sans encaisser de but",
+     "p": 0.3348,
+     "prob": 33,
+     "fair": 2.99,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wa_nil",
-      "label": "Bayern gagne sans encaisser de but",
-      "p": 0.3132,
-      "prob": 31,
-      "fair": 3.19,
+      "market": "htft_a",
+      "label": "Bayern mène à la mi-temps et gagne le match",
+      "p": 0.2675,
+      "prob": 27,
+      "fair": 3.74,
       "stars": 1
      },
      {
-      "market": "wa_o25",
-      "label": "Bayern gagne et plus de 2,5 buts",
-      "p": 0.285,
-      "prob": 28,
-      "fair": 3.51,
+      "market": "wa_by1",
+      "label": "Bayern gagne d'un seul but",
+      "p": 0.2622,
+      "prob": 26,
+      "fair": 3.81,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Michael Olise marque",
-     "p": 0.25,
-     "prob": 25,
-     "fair": 4.0,
+     "label": "Aleksandar Pavlovic marque",
+     "p": 0.08,
+     "prob": 8,
+     "fair": 12.5,
      "stars": 1,
-     "player": "Michael Olise",
+     "player": "Aleksandar Pavlovic",
      "team": "Bayern",
-     "pid": "286831",
+     "lineup": "start",
+     "pid": "359370",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 10 matchs · Bayern favori (52 %) · 1,5 buts attendus pour Bayern"
+     "why": "2 buts et 1 passe en 9 matchs · titulaire · Bayern favori (46 %) · 1,2 but attendu pour Bayern"
     },
     "decisive": {
      "market": "dec",
-     "label": "Michael Olise buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "label": "Aleksandar Pavlovic buteur ou passeur",
+     "p": 0.12,
+     "prob": 12,
+     "fair": 8.33,
      "stars": 1,
-     "player": "Michael Olise",
+     "player": "Aleksandar Pavlovic",
      "team": "Bayern",
      "base": [
-      10,
-      6,
-      3
+      9,
+      2,
+      1
      ],
-     "pid": "286831",
+     "lineup": "start",
+     "pid": "359370",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "6 buts et 3 passes en 10 matchs · Bayern favori (52 %) · 1,5 buts attendus pour Bayern"
+     "why": "2 buts et 1 passe en 9 matchs · titulaire · Bayern favori (46 %) · 1,2 but attendu pour Bayern"
     }
    },
    "second": {
@@ -2352,24 +2417,24 @@
    "form_a": "VVDVV",
    "rank_h": 2,
    "rank_a": 23,
-   "pH": 40,
-   "pD": 22,
-   "pA": 38,
+   "pH": 41,
+   "pD": 25,
+   "pA": 34,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.82,
-   "xgA": 1.76,
+   "xgH": 1.53,
+   "xgA": 1.36,
    "scores": [
     "1-1",
     "2-1",
-    "1-2"
+    "1-0"
    ],
    "scorep": [
+    12,
     9,
-    8,
-    8
+    9
    ],
-   "over25": 69,
-   "btts": 69,
+   "over25": 55,
+   "btts": 58,
    "squad_h": [
     {
      "name": "Ferran Torres",
@@ -2385,31 +2450,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 26,
-     "p_dec": 32,
+     "p_goal": 22,
+     "p_dec": 28,
      "pid": "265869",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Achraf Hakimi",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "PSG",
-     "goals": 3,
-     "assists": 3,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 3,
-      "a": 3
-     },
-     "p_goal": 18,
-     "p_dec": 33,
-     "pid": "240233",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Senny Mayulu",
@@ -2425,114 +2471,99 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 18,
-     "p_dec": 29,
+     "p_goal": 16,
+     "p_dec": 25,
      "pid": "379088",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Marquinhos",
+     "name": "Achraf Hakimi",
      "pos": "Défenseur",
      "side": "h",
      "team": "PSG",
      "goals": 3,
+     "assists": 3,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 15,
+     "p_dec": 29,
+     "pid": "240233",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Illia Zabarnyi",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "PSG",
+     "goals": 2,
      "assists": 0,
      "apps": 6,
      "l10": {
       "n": 10,
-      "gp": 5,
-      "g": 3,
+      "gp": 6,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 18,
-     "pid": "159047",
+     "p_goal": 11,
+     "p_dec": 11,
+     "pid": "304503",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Désiré Doué",
-     "pos": "Attaquant",
+     "name": "Vitinha",
+     "pos": "Milieu",
      "side": "h",
      "team": "PSG",
-     "goals": 2,
+     "goals": 1,
      "assists": 1,
-     "apps": 10,
+     "apps": 9,
      "l10": {
       "n": 10,
-      "gp": 9,
-      "g": 2,
+      "gp": 8,
+      "g": 1,
       "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 22,
-     "pid": "336388",
+     "p_goal": 6,
+     "p_dec": 14,
+     "pid": "288897",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Mika Godts",
-     "pos": "Attaquant",
+     "name": "Maghnes Akliouche",
+     "pos": "Milieu",
      "side": "h",
      "team": "PSG",
-     "goals": 2,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 14,
-     "p_dec": 25,
-     "pid": "353363",
-     "stats_league": "fra.1",
-     "season": 2026
-    }
-   ],
-   "squad_a": [
-    {
-     "name": "Donyell Malen",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "AS Roma",
-     "goals": 12,
-     "assists": 2,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 7,
-      "a": 2
-     },
-     "p_goal": 40,
-     "p_dec": 47,
-     "pid": "259481",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Rodrigo Mora",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "AS Roma",
-     "goals": 5,
+     "goals": 1,
      "assists": 0,
      "apps": 10,
      "l10": {
       "n": 10,
-      "gp": 8,
-      "g": 4,
+      "gp": 9,
+      "g": 1,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 22,
-     "pid": "387204",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
+     "p_goal": 6,
+     "p_dec": 8,
+     "pid": "329690",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
+    }
+   ],
+   "squad_a": [
     {
      "name": "Matìas Soulè",
      "pos": "Attaquant",
@@ -2547,11 +2578,33 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 15,
-     "p_dec": 28,
+     "p_goal": 11,
+     "p_dec": 22,
      "pid": "323974",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Donyell Malen",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "AS Roma",
+     "goals": 12,
+     "assists": 2,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 7,
+      "a": 2
+     },
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "259481",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Niccolò Pisilli",
@@ -2567,31 +2620,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 10,
+     "p_dec": 11,
      "pid": "360235",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Emanuele Lulli",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "AS Roma",
-     "goals": 2,
-     "assists": 2,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 10,
-     "p_dec": 19,
-     "pid": "409371",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Manu Koné",
@@ -2607,11 +2641,54 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 12,
+     "p_goal": 8,
+     "p_dec": 9,
      "pid": "285226",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Mario Hermoso",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "AS Roma",
+     "goals": 2,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 8,
+     "pid": "222529",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Santiago Castro",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "AS Roma",
+     "goals": 1,
+     "assists": 2,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 5,
+     "p_dec": 12,
+     "pid": "250284",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
@@ -2619,83 +2696,87 @@
     "AS Roma : 23e, 4 points, 10 buts marqués et 8 encaissés en 4 matchs.",
     "PSG : 23 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
     "AS Roma : 28 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat.",
+    "PSG : attaque revue à la baisse (−16 %) d'après la compo officielle (Marquinhos ne commence pas).",
+    "AS Roma : attaque revue à la baisse (−23 %) d'après la compo officielle (Rodrigo Mora, Donyell Malen ne commencent pas).",
+    "Compositions officielles prises en compte : Marquinhos (remplaçant), Rodrigo Mora (remplaçant), Donyell Malen (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "PSG (2e) : top 8, qualification directe pour les 8es. AS Roma (23e) : place de barrage.",
    "picks": {
     "main": {
-     "market": "btts_y",
-     "label": "Les deux équipes marquent",
-     "p": 0.6933,
-     "prob": 69,
-     "fair": 1.44,
+     "market": "1N",
+     "label": "PSG ou nul",
+     "p": 0.6625,
+     "prob": 66,
+     "fair": 1.51,
      "stars": 3,
      "why": "10 derniers matchs : PSG 23 marqués / 10 encaissés · AS Roma 28 / 11"
     },
     "winner": {
      "market": "1",
      "label": "Victoire PSG",
-     "p": 0.4012,
-     "prob": 40,
-     "fair": 2.49,
+     "p": 0.415,
+     "prob": 41,
+     "fair": 2.41,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0812,
-     "prob": 8,
-     "fair": 12.31,
+     "p": 0.0885,
+     "prob": 9,
+     "fair": 11.29,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "PSG gagne et plus de 2,5 buts",
-     "p": 0.3043,
-     "prob": 30,
-     "fair": 3.29,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3269,
+     "prob": 33,
+     "fair": 3.06,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_btts",
-      "label": "PSG gagne et les deux équipes marquent",
-      "p": 0.2572,
+      "market": "wh_o25",
+      "label": "PSG gagne et plus de 2,5 buts",
+      "p": 0.2642,
       "prob": 26,
-      "fair": 3.89,
+      "fair": 3.78,
       "stars": 1
      },
      {
-      "market": "wh_by1",
-      "label": "PSG gagne d'un seul but",
-      "p": 0.1888,
-      "prob": 19,
-      "fair": 5.3,
+      "market": "htft_h",
+      "label": "PSG mène à la mi-temps et gagne le match",
+      "p": 0.249,
+      "prob": 25,
+      "fair": 4.02,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Ferran Torres marque",
-     "p": 0.26,
-     "prob": 26,
-     "fair": 3.85,
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · PSG annoncé gagnant (40 %) · 1,8 buts attendus pour PSG"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · PSG annoncé gagnant (41 %) · 1,5 buts attendus pour PSG"
     },
     "decisive": {
      "market": "dec",
      "label": "Ferran Torres buteur ou passeur",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
      "player": "Ferran Torres",
      "team": "PSG",
@@ -2704,10 +2785,11 @@
       5,
       1
      ],
+     "lineup": "start",
      "pid": "265869",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · PSG annoncé gagnant (40 %) · 1,8 buts attendus pour PSG"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · PSG annoncé gagnant (41 %) · 1,5 buts attendus pour PSG"
     }
    },
    "second": {
@@ -2734,24 +2816,24 @@
    "form_a": "NVVDD",
    "rank_h": 24,
    "rank_a": 22,
-   "pH": 21,
-   "pD": 22,
-   "pA": 58,
+   "pH": 23,
+   "pD": 23,
+   "pA": 54,
    "source": "Analyse maison : buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
    "xgH": 1.07,
-   "xgA": 1.94,
+   "xgA": 1.76,
    "scores": [
     "1-1",
-    "1-2",
-    "0-1"
+    "0-1",
+    "1-2"
    ],
    "scorep": [
-    10,
+    11,
     10,
     10
    ],
-   "over25": 58,
-   "btts": 56,
+   "over25": 54,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Isaque",
@@ -2759,10 +2841,11 @@
      "assists": 2,
      "pos": "",
      "apps": 4,
-     "p_goal": 6,
-     "p_dec": 28,
+     "p_goal": 2,
+     "p_dec": 9,
      "side": "h",
-     "team": "Shakhtar"
+     "team": "Shakhtar",
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -2780,11 +2863,12 @@
       "g": 6,
       "a": 0
      },
-     "p_goal": 34,
-     "p_dec": 37,
+     "p_goal": 32,
+     "p_dec": 34,
      "pid": "240209",
      "stats_league": "tur.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Mason Greenwood",
@@ -2800,31 +2884,12 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 33,
-     "p_dec": 40,
+     "p_goal": 31,
+     "p_dec": 37,
      "pid": "276221",
      "stats_league": "tur.1",
-     "season": 2026
-    },
-    {
-     "name": "Irfan Can Kahveci",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Fenerbahce",
-     "goals": 5,
-     "assists": 3,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 5,
-      "a": 3
-     },
-     "p_goal": 27,
-     "p_dec": 41,
-     "pid": "211923",
-     "stats_league": "tur.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Oguz Aydin",
@@ -2840,31 +2905,12 @@
       "g": 3,
       "a": 5
      },
-     "p_goal": 20,
-     "p_dec": 42,
+     "p_goal": 18,
+     "p_dec": 39,
      "pid": "322813",
      "stats_league": "tur.1",
-     "season": 2026
-    },
-    {
-     "name": "Matteo Guendouzi",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Fenerbahce",
-     "goals": 2,
-     "assists": 1,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 13,
-     "p_dec": 21,
-     "pid": "248676",
-     "stats_league": "tur.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Milan Skriniar",
@@ -2880,11 +2926,54 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 13,
+     "p_goal": 11,
+     "p_dec": 12,
      "pid": "175195",
      "stats_league": "tur.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kerem Aktürkoglu",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Fenerbahce",
+     "goals": 1,
+     "assists": 5,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 5
+     },
+     "p_goal": 8,
+     "p_dec": 31,
+     "pid": "306789",
+     "stats_league": "tur.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Irfan Can Kahveci",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Fenerbahce",
+     "goals": 5,
+     "assists": 3,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 8,
+     "p_dec": 13,
+     "pid": "211923",
+     "stats_league": "tur.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -2892,74 +2981,77 @@
     "Fenerbahce : 22e, 5 points, 6 buts marqués et 11 encaissés en 4 matchs.",
     "Shakhtar : 4 buts marqués et 4 encaissés sur ses 4 derniers matchs de championnat.",
     "Fenerbahce : 26 buts marqués et 8 encaissés sur ses 10 derniers matchs de championnat.",
+    "Fenerbahce : attaque revue à la baisse (−9 %) d'après la compo officielle (Irfan Can Kahveci ne commence pas).",
+    "Compositions officielles prises en compte : Irfan Can Kahveci (remplaçant) ne commence pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Fenerbahce est favori sans écraser le match (58 %).",
+   "reading": "Fenerbahce est favori sans écraser le match (54 %).",
    "stakes": "Shakhtar (24e) : place de barrage. Fenerbahce (22e) : place de barrage.",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire Fenerbahce",
-     "p": 0.5763,
-     "prob": 58,
-     "fair": 1.74,
+     "p": 0.5352,
+     "prob": 54,
+     "fair": 1.87,
      "stars": 2
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 1-2",
-     "p": 0.0993,
+     "label": "Score exact 0-1",
+     "p": 0.1038,
      "prob": 10,
-     "fair": 10.08,
+     "fair": 9.63,
      "stars": 1,
-     "value": "1-2"
+     "value": "0-1"
     },
     "fun": {
      "market": "wa_o25",
      "label": "Fenerbahce gagne et plus de 2,5 buts",
-     "p": 0.388,
-     "prob": 39,
-     "fair": 2.58,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_a",
       "label": "Fenerbahce mène à la mi-temps et gagne le match",
-      "p": 0.3676,
-      "prob": 37,
-      "fair": 2.72,
+      "p": 0.334,
+      "prob": 33,
+      "fair": 2.99,
       "stars": 1
      },
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3553,
-      "prob": 36,
-      "fair": 2.81,
+      "p": 0.3148,
+      "prob": 31,
+      "fair": 3.18,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Vedat Muriqi marque",
-     "p": 0.34,
-     "prob": 34,
-     "fair": 2.94,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Vedat Muriqi",
      "team": "Fenerbahce",
+     "lineup": "start",
      "pid": "240209",
      "stats_league": "tur.1",
      "season": 2026,
-     "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · Fenerbahce favori (58 %) · 1,9 buts attendus pour Fenerbahce"
+     "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · titulaire · Fenerbahce favori (54 %) · 1,8 buts attendus pour Fenerbahce"
     },
     "decisive": {
      "market": "dec",
      "label": "Vedat Muriqi buteur ou passeur",
-     "p": 0.37,
-     "prob": 37,
-     "fair": 2.7,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Vedat Muriqi",
      "team": "Fenerbahce",
@@ -2968,26 +3060,27 @@
       7,
       1
      ],
+     "lineup": "start",
      "pid": "240209",
      "stats_league": "tur.1",
      "season": 2026,
-     "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · Fenerbahce favori (58 %) · 1,9 buts attendus pour Fenerbahce"
+     "why": "7 buts et 1 passe en 12 matchs · 10 derniers matchs : 6 buts, 0 passe · titulaire · Fenerbahce favori (54 %) · 1,8 buts attendus pour Fenerbahce"
     },
     "held": {
      "market": "N2",
      "label": "Nul ou Fenerbahce",
-     "p": 0.7949,
-     "prob": 79,
-     "fair": 1.26,
+     "p": 0.7701,
+     "prob": 77,
+     "fair": 1.3,
      "stars": 4,
      "why": "Derniers matchs : Shakhtar 4 marqués / 4 encaissés · Fenerbahce 26 / 8",
-     "note": "« Nul ou Fenerbahce » : 79 % selon l'analyse, le marché des paris est nettement moins confiant"
+     "note": "« Nul ou Fenerbahce » : 77 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
    "second": {
     "src": "marché des paris",
     "agree": false,
-    "note": "« Nul ou Fenerbahce » : 79 % selon l'analyse, le marché des paris est nettement moins confiant"
+    "note": "« Nul ou Fenerbahce » : 77 % selon l'analyse, le marché des paris est nettement moins confiant"
    },
    "country": "Europe",
    "code": "uefa.champions",
@@ -3009,24 +3102,24 @@
    "form_a": "DNVDD",
    "rank_h": 12,
    "rank_a": 19,
-   "pH": 71,
-   "pD": 15,
-   "pA": 14,
+   "pH": 67,
+   "pD": 17,
+   "pA": 16,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 3.0,
-   "xgA": 1.36,
+   "xgH": 2.67,
+   "xgA": 1.27,
    "scores": [
-    "3-1",
     "2-1",
-    "4-1"
+    "3-1",
+    "2-0"
    ],
    "scorep": [
+    9,
     8,
-    8,
-    6
+    7
    ],
-   "over25": 81,
-   "btts": 71,
+   "over25": 75,
+   "btts": 67,
    "squad_h": [
     {
      "name": "Luis Suárez",
@@ -3042,31 +3135,12 @@
       "g": 9,
       "a": 1
      },
-     "p_goal": 69,
-     "p_dec": 73,
+     "p_goal": 64,
+     "p_dec": 69,
      "pid": "272722",
      "stats_league": "por.1",
-     "season": 2026
-    },
-    {
-     "name": "Flávio Gonçalves",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sporting",
-     "goals": 3,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 34,
-     "p_dec": 44,
-     "pid": "414123",
-     "stats_league": "por.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Geny Catamo",
@@ -3082,51 +3156,33 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 23,
-     "p_dec": 52,
+     "p_goal": 21,
+     "p_dec": 48,
      "pid": "296969",
      "stats_league": "por.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Fotis Ioannidis",
-     "pos": "Attaquant",
+     "name": "Maxi Araújo",
+     "pos": "Milieu",
      "side": "h",
      "team": "Sporting",
-     "goals": 2,
+     "goals": 1,
      "assists": 2,
      "apps": 10,
      "l10": {
       "n": 10,
-      "gp": 9,
+      "gp": 10,
       "g": 1,
       "a": 2
      },
-     "p_goal": 19,
-     "p_dec": 38,
-     "pid": "266318",
+     "p_goal": 13,
+     "p_dec": 34,
+     "pid": "287025",
      "stats_league": "por.1",
-     "season": 2026
-    },
-    {
-     "name": "Rodrigo Zalazar",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Sporting",
-     "goals": 2,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_dec": 27,
-     "pid": "287494",
-     "stats_league": "por.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Sergi Altimira",
@@ -3142,11 +3198,54 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 15,
-     "p_dec": 21,
+     "p_goal": 13,
+     "p_dec": 19,
      "pid": "331426",
      "stats_league": "por.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Flávio Gonçalves",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sporting",
+     "goals": 3,
+     "assists": 1,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 11,
+     "p_dec": 14,
+     "pid": "414123",
+     "stats_league": "por.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Gonçalo Inácio",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Sporting",
+     "goals": 1,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "304106",
+     "stats_league": "por.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -3164,11 +3263,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 32,
-     "p_dec": 35,
+     "p_goal": 30,
+     "p_dec": 33,
      "pid": "271170",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Bruno Fernandes",
@@ -3184,31 +3284,12 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 29,
-     "p_dec": 43,
+     "p_goal": 27,
+     "p_dec": 40,
      "pid": "124091",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Matheus Cunha",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Man Utd",
-     "goals": 1,
-     "assists": 2,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 13,
-     "p_dec": 28,
-     "pid": "259902",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Youri Tielemans",
@@ -3225,10 +3306,11 @@
       "a": 1
      },
      "p_goal": 9,
-     "p_dec": 20,
+     "p_dec": 18,
      "pid": "193297",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Joshua Zirkzee",
@@ -3244,11 +3326,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
+     "p_goal": 8,
      "p_dec": 9,
      "pid": "276327",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kobbie Mainoo",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Man Utd",
+     "goals": 0,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 2,
+     "p_dec": 12,
+     "pid": "328466",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Patrick Dorgu",
@@ -3264,11 +3368,12 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 8,
-     "p_dec": 22,
+     "p_goal": 2,
+     "p_dec": 7,
      "pid": "366781",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -3277,78 +3382,82 @@
     "Sporting : 22 buts marqués et 9 encaissés sur ses 10 derniers matchs de championnat.",
     "Man Utd : 14 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
     "Man Utd a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Sporting : attaque revue à la baisse (−11 %) d'après la compo officielle (Flávio Gonçalves ne commence pas).",
+    "Man Utd : attaque revue à la baisse (−7 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : Rodrigo Zalazar (remplaçant), Fotis Ioannidis (remplaçant), Flávio Gonçalves (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Ligue des champions)."
    ],
-   "reading": "Sporting est nettement favori (71 %).",
+   "reading": "Sporting est nettement favori (67 %).",
    "stakes": "Sporting (12e) : place de barrage. Man Utd (19e) : place de barrage.",
    "picks": {
     "winner": {
      "market": "1",
      "label": "Victoire Sporting",
-     "p": 0.7053,
-     "prob": 71,
-     "fair": 1.42,
-     "stars": 4
+     "p": 0.6702,
+     "prob": 67,
+     "fair": 1.49,
+     "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 3-1",
-     "p": 0.0782,
-     "prob": 8,
-     "fair": 12.8,
+     "label": "Score exact 2-1",
+     "p": 0.0881,
+     "prob": 9,
+     "fair": 11.36,
      "stars": 1,
-     "value": "3-1"
+     "value": "2-1"
     },
     "fun": {
-     "market": "sc2",
-     "label": "Luis Suárez marque au moins 2 buts",
-     "p": 0.3269,
-     "prob": 33,
-     "fair": 3.06,
-     "stars": 1,
-     "player": "Luis Suárez",
-     "team": "Sporting",
-     "side": "h"
+     "market": "wh_btts",
+     "label": "Sporting gagne et les deux équipes marquent",
+     "p": 0.4099,
+     "prob": 41,
+     "fair": 2.44,
+     "stars": 1
     },
     "fun_alt": [
      {
       "market": "h3",
       "label": "Sporting gagne avec 3 buts d'écart ou plus",
-      "p": 0.3249,
-      "prob": 32,
-      "fair": 3.08,
+      "p": 0.2744,
+      "prob": 27,
+      "fair": 3.64,
       "stars": 1
      },
      {
-      "market": "wh_nil",
-      "label": "Sporting gagne sans encaisser de but",
-      "p": 0.2433,
-      "prob": 24,
-      "fair": 4.11,
-      "stars": 1
+      "market": "sc2",
+      "label": "Luis Suárez marque au moins 2 buts",
+      "p": 0.2722,
+      "prob": 27,
+      "fair": 3.67,
+      "stars": 1,
+      "player": "Luis Suárez",
+      "team": "Sporting",
+      "side": "h"
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Luis Suárez marque",
-     "p": 0.69,
-     "prob": 69,
-     "fair": 1.45,
+     "p": 0.64,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3,
      "player": "Luis Suárez",
      "team": "Sporting",
+     "lineup": "start",
      "pid": "272722",
      "stats_league": "por.1",
      "season": 2026,
-     "why": "9 buts et 1 passe en 11 matchs · 10 derniers matchs : 9 buts, 1 passe · Sporting favori (71 %) · 3,0 buts attendus pour Sporting"
+     "why": "9 buts et 1 passe en 11 matchs · 10 derniers matchs : 9 buts, 1 passe · titulaire · Sporting favori (67 %) · 2,7 buts attendus pour Sporting"
     },
     "decisive": {
      "market": "dec",
      "label": "Luis Suárez buteur ou passeur",
-     "p": 0.73,
-     "prob": 73,
-     "fair": 1.37,
-     "stars": 4,
+     "p": 0.69,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
      "player": "Luis Suárez",
      "team": "Sporting",
      "base": [
@@ -3356,26 +3465,27 @@
       9,
       1
      ],
+     "lineup": "start",
      "pid": "272722",
      "stats_league": "por.1",
      "season": 2026,
-     "why": "9 buts et 1 passe en 11 matchs · 10 derniers matchs : 9 buts, 1 passe · Sporting favori (71 %) · 3,0 buts attendus pour Sporting"
+     "why": "9 buts et 1 passe en 11 matchs · 10 derniers matchs : 9 buts, 1 passe · titulaire · Sporting favori (67 %) · 2,7 buts attendus pour Sporting"
     },
     "held": {
      "market": "1N",
      "label": "Sporting ou nul",
-     "p": 0.8551,
-     "prob": 86,
-     "fair": 1.17,
+     "p": 0.8382,
+     "prob": 84,
+     "fair": 1.19,
      "stars": 5,
      "why": "10 derniers matchs : Sporting 22 marqués / 9 encaissés · Man Utd 14 / 21",
-     "note": "« Sporting ou nul » : 86 % selon l'analyse, le marché des paris est nettement moins confiant"
+     "note": "« Sporting ou nul » : 84 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
    "second": {
     "src": "marché des paris",
     "agree": false,
-    "note": "« Sporting ou nul » : 86 % selon l'analyse, le marché des paris est nettement moins confiant"
+    "note": "« Sporting ou nul » : 84 % selon l'analyse, le marché des paris est nettement moins confiant"
    },
    "country": "Europe",
    "code": "uefa.champions",
