@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T16:20+01:00",
+ "generated": "2026-11-25T17:44+01:00",
  "date": "2026-11-25",
  "nhl_date": "2026-11-25",
  "foot": [
@@ -668,15 +668,6 @@
    "reading": "Villarreal est favori sans écraser le match (58 %).",
    "stakes": "Slavia Prague (34e) : zone d'élimination. Villarreal (29e) : zone d'élimination.",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Villarreal",
-     "p": 0.7986,
-     "prob": 80,
-     "fair": 1.25,
-     "stars": 4,
-     "why": "Derniers matchs : Slavia Prague 5 marqués / 9 encaissés · Villarreal 15 / 13"
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Villarreal",
@@ -752,11 +743,22 @@
      "stats_league": "esp.1",
      "season": 2026,
      "why": "3 buts et 1 passe en 13 matchs · 10 derniers matchs : 2 buts, 0 passe · Villarreal favori (58 %) · 1,9 buts attendus pour Villarreal"
+    },
+    "held": {
+     "market": "N2",
+     "label": "Nul ou Villarreal",
+     "p": 0.7986,
+     "prob": 80,
+     "fair": 1.25,
+     "stars": 4,
+     "why": "Derniers matchs : Slavia Prague 5 marqués / 9 encaissés · Villarreal 15 / 13",
+     "note": "« Nul ou Villarreal » : 80 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "« Nul ou Villarreal » : 80 % selon l'analyse, le marché des paris est nettement moins confiant"
    },
    "country": "Europe",
    "code": "uefa.champions",
