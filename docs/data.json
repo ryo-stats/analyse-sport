@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T07:29+01:00",
+ "generated": "2026-11-26T12:31+01:00",
  "date": "2026-11-26",
  "nhl_date": "2026-11-26",
  "foot": [
@@ -3435,7 +3435,7 @@
    "pD": 17,
    "pA": 13,
    "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
-   "xgH": 2.35,
+   "xgH": 2.34,
    "xgA": 0.89,
    "scores": [
     "2-0",
@@ -3460,7 +3460,7 @@
      "apps": 4,
      "l10": null,
      "p_goal": 1,
-     "p_dec": 4,
+     "p_dec": 3,
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026
@@ -3481,7 +3481,7 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 21,
+     "p_goal": 20,
      "p_dec": 33,
      "pid": "306199",
      "stats_league": "uefa.europa",
@@ -3568,22 +3568,22 @@
      "season": 2026
     },
     {
-     "name": "Veton Tusha",
-     "pos": "Attaquant",
+     "name": "Milot Avdyli",
+     "pos": "Milieu",
      "side": "a",
      "team": "NK Celje",
      "goals": 0,
-     "assists": 0,
-     "apps": 3,
+     "assists": 1,
+     "apps": 4,
      "l10": {
       "n": 4,
-      "gp": 3,
+      "gp": 4,
       "g": 0,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 4,
-     "p_dec": 6,
-     "pid": "312664",
+     "p_goal": 3,
+     "p_dec": 18,
+     "pid": "363569",
      "stats_league": "uefa.europa",
      "season": 2026
     }
@@ -3617,35 +3617,35 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1078,
+     "p": 0.1085,
      "prob": 11,
-     "fair": 9.27,
+     "fair": 9.22,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4061,
-     "prob": 41,
-     "fair": 2.46,
+     "p": 0.4034,
+     "prob": 40,
+     "fair": 2.48,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_nil",
       "label": "Ferencvaros gagne sans encaisser de but",
-      "p": 0.37,
+      "p": 0.3715,
       "prob": 37,
-      "fair": 2.7,
+      "fair": 2.69,
       "stars": 1
      },
      {
       "market": "wh_btts",
       "label": "Ferencvaros gagne et les deux équipes marquent",
-      "p": 0.3276,
+      "p": 0.326,
       "prob": 33,
-      "fair": 3.05,
+      "fair": 3.07,
       "stars": 1
      }
     ],
@@ -3666,9 +3666,9 @@
     "decisive": {
      "market": "dec",
      "label": "Jonathan Levin buteur ou passeur",
-     "p": 0.04,
-     "prob": 4,
-     "fair": 25.0,
+     "p": 0.03,
+     "prob": 3,
+     "fair": 33.33,
      "stars": 1,
      "player": "Jonathan Levin",
      "team": "Ferencvaros",
@@ -36434,53 +36434,7 @@
     "ned.1": 717,
     "sco.1": 539
    },
-   "elo_fetch": {
-    "tur.1": {
-     "2026": 108
-    },
-    "uefa.europa": {
-     "2026": 72
-    },
-    "esp.1": {
-     "2026": 129
-    },
-    "eng.1": {
-     "2026": 110
-    },
-    "ger.1": {
-     "2026": 90
-    },
-    "fra.1": {
-     "2026": 99
-    },
-    "gre.1": {
-     "2026": 76
-    },
-    "ita.1": {
-     "2026": 120
-    },
-    "aut.1": {
-     "2026": 78
-    },
-    "bel.1": {
-     "2026": 108
-    },
-    "por.1": {
-     "2026": 98
-    },
-    "usa.usl.1": {
-     "2026": 390
-    },
-    "nor.1": {
-     "2026": 216
-    },
-    "ned.1": {
-     "2026": 117
-    },
-    "sco.1": {
-     "2026": 83
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
