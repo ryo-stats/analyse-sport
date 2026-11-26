@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T20:43+01:00",
+ "generated": "2026-11-26T23:55+01:00",
  "date": "2026-11-26",
  "nhl_date": "2026-11-26",
  "foot": [
@@ -9,14 +9,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T17:45:00+00:00",
    "time": "18:45",
-   "state": "in",
-   "score": "0-0",
+   "state": "post",
+   "score": "2-1",
    "home": "Besiktas",
    "away": "Hapoel Be'er",
-   "form_h": "VVDNV",
-   "form_a": "NDDND",
-   "rank_h": 8,
-   "rank_a": 34,
+   "form_h": "NVVDN",
+   "form_a": "NDDDN",
+   "rank_h": 7,
+   "rank_a": 35,
    "pH": 67,
    "pD": 19,
    "pA": 14,
@@ -50,12 +50,31 @@
       "g": 11,
       "a": 0
      },
-     "p_goal": 22,
-     "p_dec": 23,
+     "p_goal": 57,
+     "p_dec": 58,
      "pid": "235677",
      "stats_league": "tur.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
+    },
+    {
+     "name": "Leandro Trossard",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Besiktas",
+     "goals": 3,
+     "assists": 4,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 4
+     },
+     "p_goal": 24,
+     "p_dec": 45,
+     "pid": "174980",
+     "stats_league": "tur.1",
+     "season": 2026
     },
     {
      "name": "Václav Cerný",
@@ -75,8 +94,7 @@
      "p_dec": 27,
      "pid": "217476",
      "stats_league": "tur.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Orkun Kökçü",
@@ -96,8 +114,27 @@
      "p_dec": 29,
      "pid": "272700",
      "stats_league": "tur.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Junior Olaitan",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Besiktas",
+     "goals": 1,
+     "assists": 2,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 21,
+     "pid": "319985",
+     "stats_league": "tur.1",
+     "season": 2026
     },
     {
      "name": "Ilhan Fakili",
@@ -117,50 +154,7 @@
      "p_dec": 17,
      "pid": "384290",
      "stats_league": "tur.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Oh Hyeon-Gyu",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Besiktas",
-     "goals": 1,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 9,
-     "p_dec": 16,
-     "pid": "302434",
-     "stats_league": "tur.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Leandro Trossard",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Besiktas",
-     "goals": 3,
-     "assists": 4,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 3,
-      "a": 4
-     },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "174980",
-     "stats_league": "tur.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -173,17 +167,36 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 27,
+     "p_goal": 18,
+     "p_dec": 25,
      "pid": "324191",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Javon East",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Hapoel Be'er",
+     "goals": 0,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 15,
+     "p_dec": 19,
+     "pid": "229655",
+     "stats_league": "uefa.europa",
+     "season": 2026
     },
     {
      "name": "Zahi Ahmed",
@@ -194,17 +207,16 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 1
      },
-     "p_goal": 14,
-     "p_dec": 34,
+     "p_goal": 13,
+     "p_dec": 31,
      "pid": "365734",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Igor Zlatanovic",
@@ -215,17 +227,16 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 16,
+     "p_goal": 10,
+     "p_dec": 15,
      "pid": "272185",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Yonas Malede",
@@ -236,17 +247,16 @@
      "assists": 0,
      "apps": 2,
      "l10": {
-      "n": 4,
-      "gp": 2,
+      "n": 5,
+      "gp": 3,
       "g": 0,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 9,
+     "p_goal": 5,
+     "p_dec": 8,
      "pid": "312660",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Mohamad Abu Rumi",
@@ -257,50 +267,27 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 6,
-     "p_dec": 9,
-     "pid": "363454",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Niv Yehoshua",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Hapoel Be'er",
-     "goals": 0,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 4,
       "g": 0,
       "a": 0
      },
      "p_goal": 5,
-     "p_dec": 13,
-     "pid": "385090",
+     "p_dec": 8,
+     "pid": "363454",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Besiktas : 8e, 7 points, 11 buts marqués et 8 encaissés en 4 matchs.",
-    "Hapoel Be'er : 34e, 1 point, 1 but marqué et 8 encaissés en 4 matchs.",
+    "Besiktas : 7e, 10 points, 13 buts marqués et 9 encaissés en 5 matchs.",
+    "Hapoel Be'er : 35e, 1 point, 2 buts marqués et 10 encaissés en 5 matchs.",
     "Besiktas : 26 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Hapoel Be'er : 1 but marqué et 8 encaissés sur ses 4 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Leandro Trossard (remplaçant), Dusan Vlahovic (remplaçant) ne commencent pas le match.",
+    "Hapoel Be'er : 2 buts marqués et 10 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Besiktas est nettement favori (67 %).",
-   "stakes": "Besiktas (8e) : top 8, qualification directe pour les 8es. Hapoel Be'er (34e) : zone d'élimination.",
+   "stakes": "Besiktas (7e) : top 8, qualification directe pour les 8es. Hapoel Be'er (35e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
@@ -356,38 +343,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Václav Cerný marque",
-     "p": 0.2,
-     "prob": 20,
-     "fair": 5.0,
-     "stars": 1,
-     "player": "Václav Cerný",
+     "label": "Dusan Vlahovic marque",
+     "p": 0.57,
+     "prob": 57,
+     "fair": 1.75,
+     "stars": 2,
+     "player": "Dusan Vlahovic",
      "team": "Besiktas",
-     "lineup": "start",
-     "pid": "217476",
+     "pid": "235677",
      "stats_league": "tur.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 11 matchs · 10 derniers matchs : 2 buts, 1 passe (joué 9 sur 10) · titulaire · Besiktas favori (67 %) · 2,1 buts attendus pour Besiktas"
+     "why": "11 buts et 0 passe en 10 matchs · 10 derniers matchs : 11 buts, 0 passe (joué 9 sur 10) · Besiktas favori (67 %) · 2,1 buts attendus pour Besiktas"
     },
     "decisive": {
      "market": "dec",
-     "label": "Václav Cerný buteur ou passeur",
-     "p": 0.27,
-     "prob": 27,
-     "fair": 3.7,
-     "stars": 1,
-     "player": "Václav Cerný",
+     "label": "Dusan Vlahovic buteur ou passeur",
+     "p": 0.58,
+     "prob": 58,
+     "fair": 1.72,
+     "stars": 2,
+     "player": "Dusan Vlahovic",
      "team": "Besiktas",
      "base": [
+      10,
       11,
-      3,
-      1
+      0
      ],
-     "lineup": "start",
-     "pid": "217476",
+     "pid": "235677",
      "stats_league": "tur.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 11 matchs · 10 derniers matchs : 2 buts, 1 passe (joué 9 sur 10) · titulaire · Besiktas favori (67 %) · 2,1 buts attendus pour Besiktas"
+     "why": "11 buts et 0 passe en 10 matchs · 10 derniers matchs : 11 buts, 0 passe (joué 9 sur 10) · Besiktas favori (67 %) · 2,1 buts attendus pour Besiktas"
     }
    },
    "second": {
@@ -412,7 +397,7 @@
    "away": "Bournemouth",
    "form_h": "DDVND",
    "form_a": "VVVVV",
-   "rank_h": 30,
+   "rank_h": 32,
    "rank_a": 1,
    "pH": 34,
    "pD": 33,
@@ -677,14 +662,14 @@
     }
    ],
    "ctx": [
-    "Celta Vigo : 30e, 3 points, 5 buts marqués et 8 encaissés en 5 matchs.",
+    "Celta Vigo : 32e, 3 points, 5 buts marqués et 8 encaissés en 5 matchs.",
     "Bournemouth : 1er, 15 points, 13 buts marqués et 3 encaissés en 5 matchs.",
     "Celta Vigo : 10 buts marqués et 8 encaissés sur ses 10 derniers matchs de championnat.",
     "Bournemouth : 17 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (33 %).",
-   "stakes": "Celta Vigo (30e) : zone d'élimination. Bournemouth (1er) : top 8, qualification directe pour les 8es.",
+   "stakes": "Celta Vigo (32e) : zone d'élimination. Bournemouth (1er) : top 8, qualification directe pour les 8es.",
    "picks": {
     "main": {
      "market": "u25",
@@ -777,8 +762,8 @@
    "away": "Leverkusen",
    "form_h": "DVDVN",
    "form_a": "VVVDD",
-   "rank_h": 13,
-   "rank_a": 2,
+   "rank_h": 17,
+   "rank_a": 4,
    "pH": 29,
    "pD": 24,
    "pA": 47,
@@ -807,8 +792,8 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 4,
       "a": 0
      },
@@ -827,8 +812,8 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 1
      },
@@ -847,8 +832,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 0
      },
@@ -867,8 +852,8 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 0,
       "a": 0
      },
@@ -887,8 +872,8 @@
      "assists": 0,
      "apps": 2,
      "l10": {
-      "n": 4,
-      "gp": 2,
+      "n": 5,
+      "gp": 3,
       "g": 0,
       "a": 0
      },
@@ -907,7 +892,7 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 3,
       "g": 0,
       "a": 0
@@ -1042,14 +1027,14 @@
     }
    ],
    "ctx": [
-    "Dinamo Zagreb : 13e, 7 points, 5 buts marqués et 6 encaissés en 5 matchs.",
-    "Leverkusen : 2e, 12 points, 10 buts marqués et 1 encaissé en 5 matchs.",
-    "Dinamo Zagreb : 5 buts marqués et 4 encaissés sur ses 4 derniers matchs de championnat.",
+    "Dinamo Zagreb : 17e, 7 points, 5 buts marqués et 6 encaissés en 5 matchs.",
+    "Leverkusen : 4e, 12 points, 10 buts marqués et 1 encaissé en 5 matchs.",
+    "Dinamo Zagreb : 5 buts marqués et 6 encaissés sur ses 5 derniers matchs de championnat.",
     "Leverkusen : 24 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Leverkusen est favori sans écraser le match (47 %).",
-   "stakes": "Dinamo Zagreb (13e) : place de barrage. Leverkusen (2e) : top 8, qualification directe pour les 8es.",
+   "stakes": "Dinamo Zagreb (17e) : place de barrage. Leverkusen (4e) : top 8, qualification directe pour les 8es.",
    "picks": {
     "main": {
      "market": "N2",
@@ -1162,8 +1147,8 @@
    "away": "Levski Sofia",
    "form_h": "NDVVV",
    "form_a": "NVVND",
-   "rank_h": 23,
-   "rank_a": 9,
+   "rank_h": 24,
+   "rank_a": 16,
    "pH": 57,
    "pD": 23,
    "pA": 20,
@@ -1314,8 +1299,8 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 2,
       "a": 1
      },
@@ -1334,8 +1319,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
@@ -1354,7 +1339,7 @@
      "assists": 0,
      "apps": 2,
      "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 2,
       "g": 1,
       "a": 0
@@ -1374,8 +1359,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 0
      },
@@ -1394,8 +1379,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 0
      },
@@ -1414,8 +1399,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 0
      },
@@ -1427,14 +1412,14 @@
     }
    ],
    "ctx": [
-    "Marseille : 23e, 6 points, 3 buts marqués et 6 encaissés en 5 matchs.",
-    "Levski Sofia : 9e, 7 points, 4 buts marqués et 4 encaissés en 5 matchs.",
+    "Marseille : 24e, 6 points, 3 buts marqués et 6 encaissés en 5 matchs.",
+    "Levski Sofia : 16e, 7 points, 4 buts marqués et 4 encaissés en 5 matchs.",
     "Marseille : 20 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
-    "Levski Sofia : 4 buts marqués et 3 encaissés sur ses 4 derniers matchs de championnat.",
+    "Levski Sofia : 4 buts marqués et 4 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Marseille est favori sans écraser le match (57 %).",
-   "stakes": "Marseille (23e) : place de barrage. Levski Sofia (9e) : place de barrage.",
+   "stakes": "Marseille (24e) : place de barrage. Levski Sofia (16e) : place de barrage.",
    "picks": {
     "main": {
      "market": "1N",
@@ -1544,7 +1529,7 @@
    "away": "Milan",
    "form_h": "DVNNV",
    "form_a": "VVVDV",
-   "rank_h": 7,
+   "rank_h": 9,
    "rank_a": 20,
    "pH": 41,
    "pD": 26,
@@ -1809,14 +1794,14 @@
     }
    ],
    "ctx": [
-    "Olympiacos : 7e, 10 points, 6 buts marqués et 5 encaissés en 5 matchs.",
+    "Olympiacos : 9e, 10 points, 6 buts marqués et 5 encaissés en 5 matchs.",
     "Milan : 20e, 6 points, 8 buts marqués et 9 encaissés en 5 matchs.",
     "Olympiacos : 21 buts marqués et 7 encaissés sur ses 10 derniers matchs de championnat.",
     "Milan : 24 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Olympiacos (7e) : top 8, qualification directe pour les 8es. Milan (20e) : place de barrage.",
+   "stakes": "Olympiacos (9e) : place de barrage. Milan (20e) : place de barrage.",
    "picks": {
     "winner": {
      "market": "1",
@@ -1928,7 +1913,7 @@
    "away": "Ararat-Armenia",
    "form_h": "NDVDV",
    "form_a": "NDDDD",
-   "rank_h": 14,
+   "rank_h": 18,
    "rank_a": 36,
    "pH": 73,
    "pD": 14,
@@ -2080,8 +2065,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 2,
       "a": 0
      },
@@ -2100,8 +2085,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
@@ -2120,8 +2105,8 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 1,
       "a": 0
      },
@@ -2140,7 +2125,7 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 4,
       "g": 0,
       "a": 1
@@ -2160,8 +2145,8 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 1
      },
@@ -2180,8 +2165,8 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 1
      },
@@ -2193,14 +2178,14 @@
     }
    ],
    "ctx": [
-    "RB Salzburg : 14e, 7 points, 5 buts marqués et 8 encaissés en 5 matchs.",
+    "RB Salzburg : 18e, 7 points, 5 buts marqués et 8 encaissés en 5 matchs.",
     "Ararat-Armenia : 36e, 0 point, 4 buts marqués et 16 encaissés en 5 matchs.",
     "RB Salzburg : 28 buts marqués et 9 encaissés sur ses 10 derniers matchs de championnat.",
-    "Ararat-Armenia : 4 buts marqués et 14 encaissés sur ses 4 derniers matchs de championnat.",
+    "Ararat-Armenia : 4 buts marqués et 16 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "RB Salzburg est nettement favori (73 %).",
-   "stakes": "RB Salzburg (14e) : place de barrage. Ararat-Armenia (36e) : zone d'élimination.",
+   "stakes": "RB Salzburg (18e) : place de barrage. Ararat-Armenia (36e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
@@ -2310,8 +2295,8 @@
    "away": "Lech Poznan",
    "form_h": "NVVVV",
    "form_a": "NDNDD",
-   "rank_h": 5,
-   "rank_a": 33,
+   "rank_h": 6,
+   "rank_a": 34,
    "pH": 86,
    "pD": 9,
    "pA": 5,
@@ -2462,34 +2447,14 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 2,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 27,
+     "p_goal": 22,
+     "p_dec": 24,
      "pid": "245553",
-     "stats_league": "uefa.europa",
-     "season": 2026
-    },
-    {
-     "name": "Mikael Ishak",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Lech Poznan",
-     "goals": 0,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 10,
-     "pid": "169583",
      "stats_league": "uefa.europa",
      "season": 2026
     },
@@ -2502,14 +2467,54 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 12,
+     "pid": "329971",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Luis Palma",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Lech Poznan",
+     "goals": 0,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 6,
+     "p_dec": 13,
+     "pid": "133852",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Mikael Ishak",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lech Poznan",
+     "goals": 0,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 5,
+      "gp": 3,
       "g": 0,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 8,
-     "pid": "329971",
+     "p_goal": 6,
+     "p_dec": 9,
+     "pid": "169583",
      "stats_league": "uefa.europa",
      "season": 2026
     },
@@ -2522,13 +2527,13 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 4,
       "g": 0,
       "a": 0
      },
      "p_goal": 3,
-     "p_dec": 10,
+     "p_dec": 9,
      "pid": "301364",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -2542,47 +2547,27 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 0,
       "a": 0
      },
      "p_goal": 3,
-     "p_dec": 9,
+     "p_dec": 8,
      "pid": "239148",
-     "stats_league": "uefa.europa",
-     "season": 2026
-    },
-    {
-     "name": "Antoni Kozubal",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Lech Poznan",
-     "goals": 0,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 9,
-     "pid": "313256",
      "stats_league": "uefa.europa",
      "season": 2026
     }
    ],
    "ctx": [
-    "Union SG : 5e, 11 points, 12 buts marqués et 4 encaissés en 5 matchs.",
-    "Lech Poznan : 33e, 2 points, 4 buts marqués et 14 encaissés en 5 matchs.",
+    "Union SG : 6e, 11 points, 12 buts marqués et 4 encaissés en 5 matchs.",
+    "Lech Poznan : 34e, 2 points, 4 buts marqués et 14 encaissés en 5 matchs.",
     "Union SG : 26 buts marqués et 6 encaissés sur ses 10 derniers matchs de championnat.",
-    "Lech Poznan : 2 buts marqués et 12 encaissés sur ses 4 derniers matchs de championnat.",
+    "Lech Poznan : 4 buts marqués et 14 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Union SG est nettement favori (86 %).",
-   "stakes": "Union SG (5e) : top 8, qualification directe pour les 8es. Lech Poznan (33e) : zone d'élimination.",
+   "stakes": "Union SG (6e) : top 8, qualification directe pour les 8es. Lech Poznan (34e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
@@ -2679,7 +2664,7 @@
    "form_h": "VVDDD",
    "form_a": "DVVVV",
    "rank_h": 19,
-   "rank_a": 4,
+   "rank_a": 5,
    "pH": 23,
    "pD": 22,
    "pA": 55,
@@ -2708,13 +2693,13 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 1,
-      "a": 0
+      "n": 5,
+      "gp": 4,
+      "g": 3,
+      "a": 1
      },
-     "p_goal": 21,
-     "p_dec": 24,
+     "p_goal": 27,
+     "p_dec": 34,
      "pid": "370742",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -2728,12 +2713,12 @@
      "assists": 0,
      "apps": 2,
      "l10": {
-      "n": 4,
-      "gp": 2,
-      "g": 1,
+      "n": 5,
+      "gp": 3,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 20,
+     "p_goal": 21,
      "p_dec": 23,
      "pid": "387861",
      "stats_league": "uefa.europa",
@@ -2748,14 +2733,34 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 1,
       "a": 0
      },
-     "p_goal": 17,
-     "p_dec": 20,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "310027",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Patrik Hrosovský",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Viktoria Plzen",
+     "goals": 0,
+     "assists": 1,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 9,
+     "p_dec": 30,
+     "pid": "169214",
      "stats_league": "uefa.europa",
      "season": 2026
     },
@@ -2768,13 +2773,13 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 14,
+     "p_goal": 4,
+     "p_dec": 11,
      "pid": "338199",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -2788,34 +2793,14 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 0,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 7,
-     "pid": "290630",
-     "stats_league": "uefa.europa",
-     "season": 2026
-    },
-    {
-     "name": "Patrik Hrosovský",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Viktoria Plzen",
-     "goals": 0,
-     "assists": 1,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 0,
-      "a": 1
-     },
      "p_goal": 4,
-     "p_dec": 25,
-     "pid": "169214",
+     "p_dec": 6,
+     "pid": "290630",
      "stats_league": "uefa.europa",
      "season": 2026
     }
@@ -2944,13 +2929,13 @@
    ],
    "ctx": [
     "Viktoria Plzen : 19e, 6 points, 7 buts marqués et 7 encaissés en 5 matchs.",
-    "Benfica : 4e, 12 points, 13 buts marqués et 7 encaissés en 5 matchs.",
-    "Viktoria Plzen : 3 buts marqués et 7 encaissés sur ses 4 derniers matchs de championnat.",
+    "Benfica : 5e, 12 points, 13 buts marqués et 7 encaissés en 5 matchs.",
+    "Viktoria Plzen : 7 buts marqués et 7 encaissés sur ses 5 derniers matchs de championnat.",
     "Benfica : 28 buts marqués et 8 encaissés sur ses 10 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Benfica est favori sans écraser le match (55 %).",
-   "stakes": "Viktoria Plzen (19e) : place de barrage. Benfica (4e) : top 8, qualification directe pour les 8es.",
+   "stakes": "Viktoria Plzen (19e) : place de barrage. Benfica (5e) : top 8, qualification directe pour les 8es.",
    "picks": {
     "main": {
      "market": "N2",
@@ -3057,14 +3042,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "2-1",
    "home": "C Palace",
    "away": "Real Sociedad",
-   "form_h": "DDNDV",
-   "form_a": "DVNDV",
-   "rank_h": 25,
-   "rank_a": 24,
+   "form_h": "VDDND",
+   "form_a": "DDVND",
+   "rank_h": 12,
+   "rank_a": 27,
    "pH": 32,
    "pD": 22,
    "pA": 46,
@@ -3085,6 +3070,26 @@
    "btts": 69,
    "squad_h": [
     {
+     "name": "Jørgen Strand Larsen",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "C Palace",
+     "goals": 2,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 24,
+     "p_dec": 34,
+     "pid": "252747",
+     "stats_league": "eng.1",
+     "season": 2026
+    },
+    {
      "name": "Yéremy Pino",
      "pos": "Milieu",
      "side": "h",
@@ -3102,8 +3107,27 @@
      "p_dec": 33,
      "pid": "297370",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Tyrick Mitchell",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "C Palace",
+     "goals": 2,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 20,
+     "p_dec": 22,
+     "pid": "300853",
+     "stats_league": "eng.1",
+     "season": 2026
     },
     {
      "name": "Daichi Kamada",
@@ -3123,8 +3147,7 @@
      "p_dec": 41,
      "pid": "219362",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Eddie Nketiah",
@@ -3144,74 +3167,70 @@
      "p_dec": 23,
      "pid": "259486",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Ben Chilwell",
-     "pos": "Défenseur",
+     "name": "Jefferson Lerma",
+     "pos": "Milieu",
      "side": "h",
      "team": "C Palace",
      "goals": 1,
      "assists": 0,
-     "apps": 2,
+     "apps": 7,
      "l10": {
       "n": 10,
-      "gp": 2,
+      "gp": 7,
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 10,
-     "pid": "225426",
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "197399",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
-    },
+     "season": 2026
+    }
+   ],
+   "squad_a": [
     {
-     "name": "Jørgen Strand Larsen",
+     "name": "Orri Óskarsson",
      "pos": "Attaquant",
-     "side": "h",
-     "team": "C Palace",
-     "goals": 2,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 12,
-     "pid": "252747",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Tyrick Mitchell",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "C Palace",
-     "goals": 2,
+     "side": "a",
+     "team": "Real Sociedad",
+     "goals": 4,
      "assists": 0,
      "apps": 11,
      "l10": {
       "n": 10,
-      "gp": 10,
-      "g": 2,
+      "gp": 8,
+      "g": 3,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 7,
-     "pid": "300853",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "bench"
-    }
-   ],
-   "squad_a": [
+     "p_goal": 26,
+     "p_dec": 28,
+     "pid": "341367",
+     "stats_league": "esp.1",
+     "season": 2026
+    },
+    {
+     "name": "Luka Sucic",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Real Sociedad",
+     "goals": 4,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 25,
+     "p_dec": 28,
+     "pid": "306263",
+     "stats_league": "esp.1",
+     "season": 2026
+    },
     {
      "name": "Mikel Oyarzabal",
      "pos": "Attaquant",
@@ -3230,8 +3249,7 @@
      "p_dec": 32,
      "pid": "229018",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Gonçalo Guedes",
@@ -3251,106 +3269,58 @@
      "p_dec": 31,
      "pid": "213141",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Job Ochieng",
+     "name": "Ander Barrenetxea",
      "pos": "Attaquant",
      "side": "a",
      "team": "Real Sociedad",
-     "goals": 1,
-     "assists": 3,
-     "apps": 9,
+     "goals": 2,
+     "assists": 2,
+     "apps": 11,
      "l10": {
       "n": 10,
       "gp": 8,
       "g": 1,
-      "a": 3
+      "a": 2
      },
-     "p_goal": 9,
+     "p_goal": 14,
      "p_dec": 28,
-     "pid": "406379",
+     "pid": "283941",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Orri Óskarsson",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Real Sociedad",
-     "goals": 4,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 9,
-     "pid": "341367",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Jon Martín",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Real Sociedad",
-     "goals": 1,
-     "assists": 1,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "366885",
-     "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Beñat Turrientes",
+     "name": "Carlos Soler",
      "pos": "Milieu",
      "side": "a",
      "team": "Real Sociedad",
      "goals": 1,
-     "assists": 0,
-     "apps": 8,
+     "assists": 3,
+     "apps": 12,
      "l10": {
       "n": 10,
-      "gp": 5,
+      "gp": 9,
       "g": 1,
-      "a": 0
+      "a": 3
      },
-     "p_goal": 8,
-     "p_dec": 10,
-     "pid": "297371",
+     "p_goal": 9,
+     "p_dec": 30,
+     "pid": "235072",
      "stats_league": "esp.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "C Palace : 25e, 5 points, 9 buts marqués et 6 encaissés en 4 matchs.",
-    "Real Sociedad : 24e, 5 points, 9 buts marqués et 4 encaissés en 4 matchs.",
+    "C Palace : 12e, 8 points, 11 buts marqués et 7 encaissés en 5 matchs.",
+    "Real Sociedad : 27e, 5 points, 10 buts marqués et 6 encaissés en 5 matchs.",
     "C Palace : 12 buts marqués et 25 encaissés sur ses 10 derniers matchs de championnat.",
     "Real Sociedad : 20 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
-    "C Palace : attaque revue à la baisse (−20 %) d'après la compo officielle (Tyrick Mitchell, Jørgen Strand Larsen ne commencent pas).",
-    "Real Sociedad : attaque revue à la baisse (−22 %) d'après la compo officielle (Luka Sucic, Orri Óskarsson ne commencent pas).",
-    "Compositions officielles prises en compte : Tyrick Mitchell (remplaçant), Jørgen Strand Larsen (remplaçant), Luka Sucic (remplaçant), Orri Óskarsson (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Real Sociedad est favori sans écraser le match (46 %).",
-   "stakes": "C Palace (25e) : zone d'élimination. Real Sociedad (24e) : place de barrage.",
+   "stakes": "C Palace (12e) : place de barrage. Real Sociedad (27e) : zone d'élimination.",
    "picks": {
     "winner": {
      "market": "2",
@@ -3381,7 +3351,7 @@
      {
       "market": "wa_btts",
       "label": "Real Sociedad gagne et les deux équipes marquent",
-      "p": 0.2896,
+      "p": 0.2895,
       "prob": 29,
       "fair": 3.45,
       "stars": 1
@@ -3389,7 +3359,7 @@
      {
       "market": "htft_a",
       "label": "Real Sociedad mène à la mi-temps et gagne le match",
-      "p": 0.2884,
+      "p": 0.2883,
       "prob": 29,
       "fair": 3.47,
       "stars": 1
@@ -3397,38 +3367,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Mikel Oyarzabal marque",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
+     "label": "Orri Óskarsson marque",
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
-     "player": "Mikel Oyarzabal",
+     "player": "Orri Óskarsson",
      "team": "Real Sociedad",
-     "lineup": "start",
-     "pid": "229018",
+     "pid": "341367",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 12 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 9 sur 10) · titulaire · Real Sociedad favori (46 %) · 2,0 buts attendus pour Real Sociedad"
+     "why": "4 buts et 0 passe en 11 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 8 sur 10) · Real Sociedad favori (46 %) · 2,0 buts attendus pour Real Sociedad"
     },
     "decisive": {
      "market": "dec",
-     "label": "Mikel Oyarzabal buteur ou passeur",
-     "p": 0.32,
-     "prob": 32,
-     "fair": 3.12,
+     "label": "Orri Óskarsson buteur ou passeur",
+     "p": 0.28,
+     "prob": 28,
+     "fair": 3.57,
      "stars": 1,
-     "player": "Mikel Oyarzabal",
+     "player": "Orri Óskarsson",
      "team": "Real Sociedad",
      "base": [
-      12,
-      3,
-      2
+      11,
+      4,
+      0
      ],
-     "lineup": "start",
-     "pid": "229018",
+     "pid": "341367",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "3 buts et 2 passes en 12 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 9 sur 10) · titulaire · Real Sociedad favori (46 %) · 2,0 buts attendus pour Real Sociedad"
+     "why": "4 buts et 0 passe en 11 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 8 sur 10) · Real Sociedad favori (46 %) · 2,0 buts attendus pour Real Sociedad"
     },
     "held": {
      "market": "o25",
@@ -3458,20 +3426,20 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "0-0",
    "home": "Ferencvaros",
    "away": "NK Celje",
-   "form_h": "VVVVV",
-   "form_a": "VNDDD",
+   "form_h": "NVVVV",
+   "form_a": "NVNDD",
    "rank_h": 3,
-   "rank_a": 29,
+   "rank_a": 28,
    "pH": 70,
    "pD": 17,
    "pA": 13,
    "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
    "xgH": 2.44,
-   "xgA": 0.96,
+   "xgA": 0.95,
    "scores": [
     "2-0",
     "2-1",
@@ -3494,12 +3462,11 @@
      "assists": 0,
      "apps": 4,
      "l10": null,
-     "p_goal": 0,
-     "p_dec": 1,
+     "p_goal": 1,
+     "p_dec": 4,
      "pid": "206847",
      "stats_league": "usa.usl.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -3512,8 +3479,8 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 2,
       "a": 1
      },
@@ -3521,8 +3488,7 @@
      "p_dec": 35,
      "pid": "306199",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Blaz Kramer",
@@ -3533,8 +3499,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
@@ -3542,50 +3508,7 @@
      "p_dec": 18,
      "pid": "290216",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Benjamin Verbic",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "NK Celje",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 16,
-     "pid": "189386",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Veton Tusha",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "NK Celje",
-     "goals": 0,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 4,
-     "p_dec": 6,
-     "pid": "312664",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Armandas Kucys",
@@ -3596,49 +3519,86 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
-     "p_goal": 4,
-     "p_dec": 5,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "330626",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
-     "name": "Milot Avdyli",
+     "name": "Benjamin Verbic",
      "pos": "Milieu",
+     "side": "a",
+     "team": "NK Celje",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 12,
+     "p_dec": 16,
+     "pid": "189386",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Yaya Dukuly",
+     "pos": "Attaquant",
      "side": "a",
      "team": "NK Celje",
      "goals": 0,
      "assists": 1,
-     "apps": 4,
+     "apps": 3,
      "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 4,
       "g": 0,
       "a": 1
      },
-     "p_goal": 3,
-     "p_dec": 19,
-     "pid": "363569",
+     "p_goal": 4,
+     "p_dec": 16,
+     "pid": "286984",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Veton Tusha",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "NK Celje",
+     "goals": 0,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 5,
+      "gp": 4,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "312664",
+     "stats_league": "uefa.europa",
+     "season": 2026
     }
    ],
    "ctx": [
-    "Ferencvaros : 3e, 12 points, 11 buts marqués et 3 encaissés en 4 matchs.",
-    "NK Celje : 29e, 4 points, 5 buts marqués et 9 encaissés en 4 matchs.",
-    "NK Celje : 5 buts marqués et 9 encaissés sur ses 4 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : les joueurs clés sont titulaires.",
+    "Ferencvaros : 3e, 13 points, 11 buts marqués et 3 encaissés en 5 matchs.",
+    "NK Celje : 28e, 5 points, 5 buts marqués et 9 encaissés en 5 matchs.",
+    "NK Celje : 5 buts marqués et 9 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Ferencvaros est nettement favori (70 %).",
-   "stakes": "Ferencvaros (3e) : top 8, qualification directe pour les 8es. NK Celje (29e) : zone d'élimination.",
+   "stakes": "Ferencvaros (3e) : top 8, qualification directe pour les 8es. NK Celje (28e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
@@ -3669,7 +3629,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Ferencvaros gagne sans encaisser de but",
-     "p": 0.351,
+     "p": 0.3512,
      "prob": 35,
      "fair": 2.85,
      "stars": 1
@@ -3686,7 +3646,7 @@
      {
       "market": "h3",
       "label": "Ferencvaros gagne avec 3 buts d'écart ou plus",
-      "p": 0.2732,
+      "p": 0.2734,
       "prob": 27,
       "fair": 3.66,
       "stars": 1
@@ -3695,13 +3655,12 @@
     "player": {
      "market": "scorer",
      "label": "Jonathan Levin marque",
-     "p": 0.0,
-     "prob": 0,
+     "p": 0.01,
+     "prob": 1,
      "fair": 100.0,
      "stars": 1,
      "player": "Jonathan Levin",
      "team": "Ferencvaros",
-     "lineup": "bench",
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026,
@@ -3710,9 +3669,9 @@
     "decisive": {
      "market": "dec",
      "label": "Jonathan Levin buteur ou passeur",
-     "p": 0.01,
-     "prob": 1,
-     "fair": 100.0,
+     "p": 0.04,
+     "prob": 4,
+     "fair": 25.0,
      "stars": 1,
      "player": "Jonathan Levin",
      "team": "Ferencvaros",
@@ -3721,7 +3680,6 @@
       0,
       0
      ],
-     "lineup": "bench",
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026,
@@ -3741,14 +3699,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "4-1",
    "home": "Juventus",
    "away": "Omonia",
-   "form_h": "VNVVD",
-   "form_a": "DDVVV",
-   "rank_h": 6,
-   "rank_a": 21,
+   "form_h": "NVNVV",
+   "form_a": "NDDVV",
+   "rank_h": 2,
+   "rank_a": 26,
    "pH": 62,
    "pD": 23,
    "pA": 15,
@@ -3769,111 +3727,6 @@
    "btts": 43,
    "squad_h": [
     {
-     "name": "Douglas Luiz",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Juventus",
-     "goals": 1,
-     "assists": 2,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 10,
-     "p_dec": 27,
-     "pid": "320074",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Francisco Conceição",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Juventus",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 15,
-     "pid": "312659",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Jérémie Boga",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Juventus",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 10,
-     "pid": "206153",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Federico Gatti",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Juventus",
-     "goals": 1,
-     "assists": 1,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 15,
-     "pid": "323147",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Juan Cabal",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Juventus",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 8,
-     "pid": "24412",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
      "name": "Randal Kolo Muani",
      "pos": "Attaquant",
      "side": "h",
@@ -3887,12 +3740,111 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 7,
-     "p_dec": 12,
+     "p_goal": 21,
+     "p_dec": 35,
      "pid": "252971",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
+    },
+    {
+     "name": "Bremer",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Juventus",
+     "goals": 3,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 19,
+     "p_dec": 21,
+     "pid": "258307",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Nick Woltemade",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Juventus",
+     "goals": 2,
+     "assists": 1,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 18,
+     "p_dec": 25,
+     "pid": "298349",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Edon Zhegrova",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Juventus",
+     "goals": 2,
+     "assists": 3,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 3
+     },
+     "p_goal": 17,
+     "p_dec": 36,
+     "pid": "260300",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Teun Koopmeiners",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Juventus",
+     "goals": 2,
+     "assists": 1,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 13,
+     "p_dec": 22,
+     "pid": "258968",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "Kerim Alajbegovic",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Juventus",
+     "goals": 1,
+     "assists": 1,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 11,
+     "p_dec": 20,
+     "pid": "391034",
+     "stats_league": "ita.1",
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -3905,80 +3857,16 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 1
      },
-     "p_goal": 13,
-     "p_dec": 22,
+     "p_goal": 12,
+     "p_dec": 21,
      "pid": "366131",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Muamer Tankovic",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Omonia",
-     "goals": 1,
-     "assists": 0,
-     "apps": 2,
-     "l10": {
-      "n": 4,
-      "gp": 2,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 11,
-     "pid": "162424",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Andronikos Kakoulis",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Omonia",
-     "goals": 1,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 10,
-     "pid": "305500",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Senou Coulibaly",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Omonia",
-     "goals": 1,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 9,
-     "pid": "274954",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Loïs Diony",
@@ -3989,52 +3877,107 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "181007",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Muamer Tankovic",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Omonia",
+     "goals": 1,
+     "assists": 0,
+     "apps": 2,
+     "l10": {
+      "n": 5,
+      "gp": 3,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 13,
+     "pid": "162424",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Andronikos Kakoulis",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Omonia",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 5,
       "gp": 4,
       "g": 1,
       "a": 0
      },
-     "p_goal": 3,
-     "p_dec": 4,
-     "pid": "181007",
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "305500",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
-     "name": "Panagiotis Andreou",
-     "pos": "Milieu",
+     "name": "Jure Balkovec",
+     "pos": "Défenseur",
      "side": "a",
      "team": "Omonia",
-     "goals": 0,
-     "assists": 1,
-     "apps": 4,
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
      "l10": {
-      "n": 4,
+      "n": 5,
       "gp": 4,
-      "g": 0,
-      "a": 1
+      "g": 1,
+      "a": 0
      },
-     "p_goal": 2,
-     "p_dec": 13,
-     "pid": "366462",
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "188962",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Senou Coulibaly",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Omonia",
+     "goals": 1,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 5,
+      "gp": 4,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 7,
+     "p_dec": 8,
+     "pid": "274954",
+     "stats_league": "uefa.europa",
+     "season": 2026
     }
    ],
    "ctx": [
-    "Juventus : 6e, 10 points, 11 buts marqués et 4 encaissés en 4 matchs.",
-    "Omonia : 21e, 6 points, 6 buts marqués et 7 encaissés en 4 matchs.",
+    "Juventus : 2e, 13 points, 15 buts marqués et 5 encaissés en 5 matchs.",
+    "Omonia : 26e, 6 points, 7 buts marqués et 11 encaissés en 5 matchs.",
     "Juventus : 16 buts marqués et 12 encaissés sur ses 10 derniers matchs de championnat.",
-    "Omonia : 6 buts marqués et 7 encaissés sur ses 4 derniers matchs de championnat.",
-    "Juventus : attaque revue à la baisse (−25 %) d'après la compo officielle (Bremer, Teun Koopmeiners, Randal Kolo Muani, Edon Zhegrova, Nick Woltemade ne commencent pas).",
-    "Omonia : attaque revue à la baisse (−12 %) d'après la compo officielle (Jure Balkovec, Loïs Diony ne commencent pas).",
-    "Compositions officielles prises en compte : Bremer (remplaçant), Randal Kolo Muani (remplaçant), Edon Zhegrova (absent), Nick Woltemade (remplaçant) ne commencent pas le match.",
+    "Omonia : 7 buts marqués et 11 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Juventus est nettement favori (62 %).",
-   "stakes": "Juventus (6e) : top 8, qualification directe pour les 8es. Omonia (21e) : place de barrage.",
+   "stakes": "Juventus (2e) : top 8, qualification directe pour les 8es. Omonia (26e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
@@ -4065,7 +4008,7 @@
     "fun": {
      "market": "wh_nil",
      "label": "Juventus gagne sans encaisser de but",
-     "p": 0.3936,
+     "p": 0.3935,
      "prob": 39,
      "fair": 2.54,
      "stars": 1
@@ -4082,7 +4025,7 @@
      {
       "market": "h2",
       "label": "Juventus gagne avec 2 buts d'écart ou plus",
-      "p": 0.3547,
+      "p": 0.3548,
       "prob": 35,
       "fair": 2.82,
       "stars": 1
@@ -4090,38 +4033,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Douglas Luiz marque",
-     "p": 0.1,
-     "prob": 10,
-     "fair": 10.0,
+     "label": "Randal Kolo Muani marque",
+     "p": 0.21,
+     "prob": 21,
+     "fair": 4.76,
      "stars": 1,
-     "player": "Douglas Luiz",
+     "player": "Randal Kolo Muani",
      "team": "Juventus",
-     "lineup": "start",
-     "pid": "320074",
+     "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "1 but et 2 passes en 12 matchs · 10 derniers matchs : 1 but, 2 passes · titulaire · Juventus favori (62 %) · 1,8 buts attendus pour Juventus"
+     "why": "2 buts et 2 passes en 12 matchs · 10 derniers matchs : 2 buts, 2 passes · Juventus favori (62 %) · 1,8 buts attendus pour Juventus"
     },
     "decisive": {
      "market": "dec",
-     "label": "Douglas Luiz buteur ou passeur",
-     "p": 0.27,
-     "prob": 27,
-     "fair": 3.7,
+     "label": "Randal Kolo Muani buteur ou passeur",
+     "p": 0.35,
+     "prob": 35,
+     "fair": 2.86,
      "stars": 1,
-     "player": "Douglas Luiz",
+     "player": "Randal Kolo Muani",
      "team": "Juventus",
      "base": [
       12,
-      1,
+      2,
       2
      ],
-     "lineup": "start",
-     "pid": "320074",
+     "pid": "252971",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "1 but et 2 passes en 12 matchs · 10 derniers matchs : 1 but, 2 passes · titulaire · Juventus favori (62 %) · 1,8 buts attendus pour Juventus"
+     "why": "2 buts et 2 passes en 12 matchs · 10 derniers matchs : 2 buts, 2 passes · Juventus favori (62 %) · 1,8 buts attendus pour Juventus"
     }
    },
    "second": {
@@ -4140,14 +4081,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "0-0",
    "home": "Lyon",
    "away": "Lillestrom",
-   "form_h": "VDNVD",
-   "form_a": "VVDVV",
-   "rank_h": 12,
-   "rank_a": 35,
+   "form_h": "NVDNV",
+   "form_a": "NVVDV",
+   "rank_h": 14,
+   "rank_a": 33,
    "pH": 50,
    "pD": 30,
    "pA": 20,
@@ -4168,6 +4109,26 @@
    "btts": 34,
    "squad_h": [
     {
+     "name": "Ernest Nuamah",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Lyon",
+     "goals": 4,
+     "assists": 1,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 4,
+      "a": 1
+     },
+     "p_goal": 26,
+     "p_dec": 33,
+     "pid": "333310",
+     "stats_league": "fra.1",
+     "season": 2026
+    },
+    {
      "name": "Corentin Tolisso",
      "pos": "Milieu",
      "side": "h",
@@ -4185,71 +4146,7 @@
      "p_dec": 30,
      "pid": "192060",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Ernest Nuamah",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Lyon",
-     "goals": 4,
-     "assists": 1,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 4,
-      "a": 1
-     },
-     "p_goal": 9,
-     "p_dec": 11,
-     "pid": "333310",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Felix Bacher",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Lyon",
-     "goals": 1,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 7,
-     "p_dec": 14,
-     "pid": "320945",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Khalis Merah",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Lyon",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 8,
-     "pid": "408345",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Zachary Athekame",
@@ -4265,15 +4162,34 @@
       "g": 2,
       "a": 3
      },
-     "p_goal": 4,
-     "p_dec": 10,
+     "p_goal": 13,
+     "p_dec": 30,
      "pid": "370758",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
-     "name": "Noah Nartey",
+     "name": "Loïs Openda",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Lyon",
+     "goals": 1,
+     "assists": 1,
+     "apps": 5,
+     "l10": {
+      "n": 10,
+      "gp": 5,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 16,
+     "pid": "276265",
+     "stats_league": "fra.1",
+     "season": 2026
+    },
+    {
+     "name": "Mads Bidstrup",
      "pos": "Milieu",
      "side": "h",
      "team": "Lyon",
@@ -4283,15 +4199,34 @@
      "l10": {
       "n": 10,
       "gp": 9,
-      "g": 0,
+      "g": 1,
       "a": 0
      },
-     "p_goal": 4,
-     "p_dec": 5,
-     "pid": "365562",
+     "p_goal": 8,
+     "p_dec": 11,
+     "pid": "290401",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Pavel Sulc",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Lyon",
+     "goals": 1,
+     "assists": 3,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 7,
+     "p_dec": 23,
+     "pid": "305545",
+     "stats_league": "fra.1",
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -4313,8 +4248,27 @@
      "p_dec": 21,
      "pid": "255219",
      "stats_league": "nor.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Thomas Lehne Olsen",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lillestrom",
+     "goals": 6,
+     "assists": 1,
+     "apps": 20,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 11,
+     "pid": "221124",
+     "stats_league": "nor.1",
+     "season": 2026
     },
     {
      "name": "Gustav Nyheim",
@@ -4334,8 +4288,47 @@
      "p_dec": 14,
      "pid": "363001",
      "stats_league": "nor.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Fredrik Gulbrandsen",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Lillestrom",
+     "goals": 3,
+     "assists": 2,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 7,
+     "p_dec": 10,
+     "pid": "134827",
+     "stats_league": "nor.1",
+     "season": 2026
+    },
+    {
+     "name": "Ruben Gabrielsen",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Lillestrom",
+     "goals": 3,
+     "assists": 0,
+     "apps": 21,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "133099",
+     "stats_league": "nor.1",
+     "season": 2026
     },
     {
      "name": "Eric Kitolano",
@@ -4355,90 +4348,23 @@
      "p_dec": 5,
      "pid": "223137",
      "stats_league": "nor.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Thomas Lehne Olsen",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Lillestrom",
-     "goals": 6,
-     "assists": 1,
-     "apps": 20,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 3,
-     "pid": "221124",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Frederik Elkaer",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Lillestrom",
-     "goals": 1,
-     "assists": 4,
-     "apps": 18,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 3
-     },
-     "p_goal": 2,
-     "p_dec": 10,
-     "pid": "304140",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Lars Ranger",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Lillestrom",
-     "goals": 2,
-     "assists": 2,
-     "apps": 23,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 2,
-     "p_dec": 6,
-     "pid": "267062",
-     "stats_league": "nor.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Lyon : 12e, 7 points, 6 buts marqués et 7 encaissés en 4 matchs.",
-    "Lillestrom : 35e, 1 point, 2 buts marqués et 10 encaissés en 4 matchs.",
+    "Lyon : 14e, 8 points, 6 buts marqués et 7 encaissés en 5 matchs.",
+    "Lillestrom : 33e, 2 points, 2 buts marqués et 10 encaissés en 5 matchs.",
     "Lyon : 14 buts marqués et 9 encaissés sur ses 10 derniers matchs de championnat.",
     "Lillestrom : 18 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
-    "Lyon : attaque revue à la baisse (−25 %) d'après la compo officielle (Zachary Athekame, Ernest Nuamah ne commencent pas).",
-    "Lillestrom : attaque revue à la baisse (−12 %) d'après la compo officielle (Thomas Lehne Olsen ne commence pas).",
-    "Compositions officielles prises en compte : Ernest Nuamah (remplaçant) ne commence pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Lyon est favori sans écraser le match (50 %). Le nul est une issue sérieuse (30 %).",
-   "stakes": "Lyon (12e) : place de barrage. Lillestrom (35e) : zone d'élimination.",
+   "stakes": "Lyon (14e) : place de barrage. Lillestrom (33e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Lyon ou nul",
-     "p": 0.8042,
+     "p": 0.8043,
      "prob": 80,
      "fair": 1.24,
      "stars": 5,
@@ -4455,7 +4381,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1879,
+     "p": 0.1878,
      "prob": 19,
      "fair": 5.32,
      "stars": 1,
@@ -4473,7 +4399,7 @@
      {
       "market": "htft_h",
       "label": "Lyon mène à la mi-temps et gagne le match",
-      "p": 0.2956,
+      "p": 0.2957,
       "prob": 30,
       "fair": 3.38,
       "stars": 1
@@ -4489,38 +4415,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Corentin Tolisso marque",
-     "p": 0.14,
-     "prob": 14,
-     "fair": 7.14,
+     "label": "Ernest Nuamah marque",
+     "p": 0.26,
+     "prob": 26,
+     "fair": 3.85,
      "stars": 1,
-     "player": "Corentin Tolisso",
+     "player": "Ernest Nuamah",
      "team": "Lyon",
-     "lineup": "start",
-     "pid": "192060",
+     "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 3 passes en 11 matchs · 10 derniers matchs : 2 buts, 2 passes · titulaire · Lyon favori (50 %) · 1,2 but attendu pour Lyon"
+     "why": "4 buts et 1 passe en 9 matchs · Lyon favori (50 %) · 1,2 but attendu pour Lyon"
     },
     "decisive": {
      "market": "dec",
-     "label": "Corentin Tolisso buteur ou passeur",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "label": "Ernest Nuamah buteur ou passeur",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Corentin Tolisso",
+     "player": "Ernest Nuamah",
      "team": "Lyon",
      "base": [
-      11,
-      2,
-      3
+      9,
+      4,
+      1
      ],
-     "lineup": "start",
-     "pid": "192060",
+     "pid": "333310",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "2 buts et 3 passes en 11 matchs · 10 derniers matchs : 2 buts, 2 passes · titulaire · Lyon favori (50 %) · 1,2 but attendu pour Lyon"
+     "why": "4 buts et 1 passe en 9 matchs · Lyon favori (50 %) · 1,2 but attendu pour Lyon"
     }
    },
    "second": {
@@ -4539,14 +4463,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "3-1",
    "home": "NEC",
    "away": "Rennes",
-   "form_h": "DVVDN",
-   "form_a": "NDNDV",
-   "rank_h": 11,
-   "rank_a": 18,
+   "form_h": "VDVVD",
+   "form_a": "DNDND",
+   "rank_h": 8,
+   "rank_a": 22,
    "pH": 30,
    "pD": 23,
    "pA": 48,
@@ -4584,8 +4508,7 @@
      "p_dec": 28,
      "pid": "116893",
      "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Dusan Tadic",
@@ -4605,8 +4528,27 @@
      "p_dec": 21,
      "pid": "122575",
      "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Kevin Kers",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "NEC",
+     "goals": 2,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 15,
+     "p_dec": 16,
+     "pid": "363412",
+     "stats_league": "ned.1",
+     "season": 2026
     },
     {
      "name": "Noé Lebreton",
@@ -4626,8 +4568,7 @@
      "p_dec": 17,
      "pid": "340685",
      "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Bryan Linssen",
@@ -4647,50 +4588,27 @@
      "p_dec": 16,
      "pid": "122954",
      "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Clement Bischoff",
+     "name": "Adam Tahaui",
      "pos": "Attaquant",
      "side": "h",
      "team": "NEC",
-     "goals": 1,
-     "assists": 1,
-     "apps": 11,
+     "goals": 2,
+     "assists": 0,
+     "apps": 9,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 7,
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 15,
-     "pid": "372851",
+     "p_goal": 12,
+     "p_dec": 13,
+     "pid": "388585",
      "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Darko Nejasmic",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "NEC",
-     "goals": 1,
-     "assists": 1,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 8,
-     "p_dec": 17,
-     "pid": "276579",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -4712,8 +4630,7 @@
      "p_dec": 43,
      "pid": "323850",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Boulaye Dia",
@@ -4733,8 +4650,7 @@
      "p_dec": 40,
      "pid": "282381",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Sebastian Szymanski",
@@ -4754,8 +4670,7 @@
      "p_dec": 32,
      "pid": "243844",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Adrien Thomasson",
@@ -4775,8 +4690,7 @@
      "p_dec": 28,
      "pid": "173266",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Przemyslaw Frankowski",
@@ -4792,47 +4706,42 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 3,
-     "p_dec": 7,
+     "p_goal": 9,
+     "p_dec": 21,
      "pid": "190806",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
-     "name": "Mahamadou Nagida",
-     "pos": "Défenseur",
+     "name": "Valentin Rongier",
+     "pos": "Milieu",
      "side": "a",
      "team": "Rennes",
-     "goals": 0,
-     "assists": 2,
+     "goals": 1,
+     "assists": 0,
      "apps": 11,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 0,
-      "a": 2
+      "g": 1,
+      "a": 0
      },
-     "p_goal": 1,
-     "p_dec": 16,
-     "pid": "372260",
+     "p_goal": 9,
+     "p_dec": 13,
+     "pid": "207136",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "NEC : 11e, 7 points, 8 buts marqués et 9 encaissés en 4 matchs.",
-    "Rennes : 18e, 6 points, 4 buts marqués et 3 encaissés en 4 matchs.",
+    "NEC : 8e, 10 points, 11 buts marqués et 10 encaissés en 5 matchs.",
+    "Rennes : 22e, 6 points, 5 buts marqués et 6 encaissés en 5 matchs.",
     "NEC : 13 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
     "Rennes : 20 buts marqués et 20 encaissés sur ses 10 derniers matchs de championnat.",
-    "NEC : attaque revue à la baisse (−16 %) d'après la compo officielle.",
-    "Rennes : attaque revue à la baisse (−4 %) d'après la compo officielle.",
-    "Compositions officielles prises en compte : Kevin Kers (remplaçant) ne commence pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Rennes est favori sans écraser le match (48 %).",
-   "stakes": "NEC (11e) : place de barrage. Rennes (18e) : place de barrage.",
+   "stakes": "NEC (8e) : top 8, qualification directe pour les 8es. Rennes (22e) : place de barrage.",
    "picks": {
     "main": {
      "market": "N2",
@@ -4863,7 +4772,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4164,
+     "p": 0.4163,
      "prob": 42,
      "fair": 2.4,
      "stars": 1
@@ -4895,11 +4804,10 @@
      "stars": 1,
      "player": "Esteban Lepaul",
      "team": "Rennes",
-     "lineup": "start",
      "pid": "323850",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 8 matchs · 10 derniers matchs : 6 buts, 0 passe (joué 7 sur 10) · titulaire · Rennes favori (48 %) · 1,9 buts attendus pour Rennes"
+     "why": "7 buts et 0 passe en 8 matchs · 10 derniers matchs : 6 buts, 0 passe (joué 7 sur 10) · Rennes favori (48 %) · 1,9 buts attendus pour Rennes"
     },
     "decisive": {
      "market": "dec",
@@ -4915,11 +4823,10 @@
       7,
       0
      ],
-     "lineup": "start",
      "pid": "323850",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "7 buts et 0 passe en 8 matchs · 10 derniers matchs : 6 buts, 0 passe (joué 7 sur 10) · titulaire · Rennes favori (48 %) · 1,9 buts attendus pour Rennes"
+     "why": "7 buts et 0 passe en 8 matchs · 10 derniers matchs : 6 buts, 0 passe (joué 7 sur 10) · Rennes favori (48 %) · 1,9 buts attendus pour Rennes"
     }
    },
    "second": {
@@ -4938,14 +4845,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "1-3",
    "home": "OFI Crete",
    "away": "Anderlecht",
-   "form_h": "NNVVV",
-   "form_a": "NNVVD",
-   "rank_h": 17,
-   "rank_a": 16,
+   "form_h": "DDNVV",
+   "form_a": "VVNVV",
+   "rank_h": 21,
+   "rank_a": 11,
    "pH": 29,
    "pD": 30,
    "pA": 41,
@@ -4966,6 +4873,26 @@
    "btts": 42,
    "squad_h": [
     {
+     "name": "Kenan Kodro",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "OFI Crete",
+     "goals": 4,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 21,
+     "p_dec": 22,
+     "pid": "208027",
+     "stats_league": "gre.1",
+     "season": 2026
+    },
+    {
      "name": "Thiago Thomas Nuss",
      "pos": "Attaquant",
      "side": "h",
@@ -4983,8 +4910,7 @@
      "p_dec": 23,
      "pid": "310785",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Thanasis Androutsos",
@@ -5004,8 +4930,7 @@
      "p_dec": 15,
      "pid": "241991",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Taxiarchis Fountas",
@@ -5025,8 +4950,7 @@
      "p_dec": 11,
      "pid": "183154",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Andreas Bouchalakis",
@@ -5046,8 +4970,7 @@
      "p_dec": 15,
      "pid": "187897",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Nicolaos Athanasiou",
@@ -5067,29 +4990,7 @@
      "p_dec": 20,
      "pid": "312967",
      "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Aitor Cantalapiedra",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "OFI Crete",
-     "goals": 0,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 3,
-     "p_dec": 10,
-     "pid": "229392",
-     "stats_league": "gre.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -5111,8 +5012,7 @@
      "p_dec": 25,
      "pid": "382432",
      "stats_league": "bel.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Mihajlo Cvetkovic",
@@ -5129,11 +5029,30 @@
       "a": 1
      },
      "p_goal": 15,
-     "p_dec": 22,
+     "p_dec": 23,
      "pid": "369978",
      "stats_league": "bel.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Adriano Bertaccini",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Anderlecht",
+     "goals": 3,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 10,
+      "gp": 4,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 15,
+     "p_dec": 16,
+     "pid": "277376",
+     "stats_league": "bel.1",
+     "season": 2026
     },
     {
      "name": "Marten Winkler",
@@ -5153,8 +5072,27 @@
      "p_dec": 16,
      "pid": "319271",
      "stats_league": "bel.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Danylo Sikan",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Anderlecht",
+     "goals": 1,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 12,
+     "pid": "288490",
+     "stats_league": "bel.1",
+     "season": 2026
     },
     {
      "name": "Lukás Ambros",
@@ -5174,63 +5112,18 @@
      "p_dec": 10,
      "pid": "351860",
      "stats_league": "bel.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Thelo Aasgaard",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Anderlecht",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 8,
-     "pid": "307477",
-     "stats_league": "bel.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Mario Stroeykens",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Anderlecht",
-     "goals": 1,
-     "assists": 0,
-     "apps": 5,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 7,
-     "p_dec": 8,
-     "pid": "312187",
-     "stats_league": "bel.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "OFI Crete : 17e, 6 points, 5 buts marqués et 4 encaissés en 4 matchs.",
-    "Anderlecht : 16e, 6 points, 6 buts marqués et 3 encaissés en 4 matchs.",
+    "OFI Crete : 21e, 6 points, 6 buts marqués et 7 encaissés en 5 matchs.",
+    "Anderlecht : 11e, 9 points, 9 buts marqués et 4 encaissés en 5 matchs.",
     "OFI Crete : 12 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
     "Anderlecht : 13 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
-    "OFI Crete : attaque revue à la baisse (−18 %) d'après la compo officielle (Kenan Kodro ne commence pas).",
-    "Compositions officielles prises en compte : Kenan Kodro (absent), Adriano Bertaccini (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (30 %).",
-   "stakes": "OFI Crete (17e) : place de barrage. Anderlecht (16e) : place de barrage.",
+   "stakes": "OFI Crete (21e) : place de barrage. Anderlecht (11e) : place de barrage.",
    "picks": {
     "main": {
      "market": "N2",
@@ -5270,7 +5163,7 @@
      {
       "market": "htft_a",
       "label": "Anderlecht mène à la mi-temps et gagne le match",
-      "p": 0.2373,
+      "p": 0.2374,
       "prob": 24,
       "fair": 4.21,
       "stars": 1
@@ -5278,7 +5171,7 @@
      {
       "market": "wa_by1",
       "label": "Anderlecht gagne d'un seul but",
-      "p": 0.235,
+      "p": 0.2351,
       "prob": 24,
       "fair": 4.25,
       "stars": 1
@@ -5293,11 +5186,10 @@
      "stars": 1,
      "player": "Tawfik Bentayeb",
      "team": "Anderlecht",
-     "lineup": "start",
      "pid": "382432",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · titulaire · Anderlecht annoncé gagnant (41 %) · 1,2 but attendu pour Anderlecht"
+     "why": "3 buts et 1 passe en 8 matchs · Anderlecht annoncé gagnant (41 %) · 1,2 but attendu pour Anderlecht"
     },
     "decisive": {
      "market": "dec",
@@ -5313,11 +5205,10 @@
       3,
       1
      ],
-     "lineup": "start",
      "pid": "382432",
      "stats_league": "bel.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 8 matchs · titulaire · Anderlecht annoncé gagnant (41 %) · 1,2 but attendu pour Anderlecht"
+     "why": "3 buts et 1 passe en 8 matchs · Anderlecht annoncé gagnant (41 %) · 1,2 but attendu pour Anderlecht"
     }
    },
    "second": {
@@ -5336,14 +5227,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "2-4",
    "home": "Sparta",
    "away": "AZ Alkmaar",
-   "form_h": "NDNVD",
-   "form_a": "VVDDD",
-   "rank_h": 26,
-   "rank_a": 15,
+   "form_h": "NDDNV",
+   "form_a": "NVVDD",
+   "rank_h": 29,
+   "rank_a": 10,
    "pH": 32,
    "pD": 29,
    "pA": 39,
@@ -5364,6 +5255,26 @@
    "btts": 45,
    "squad_h": [
     {
+     "name": "Tobias Guddal",
+     "pos": "Défenseur",
+     "side": "h",
+     "team": "Sparta",
+     "goals": 2,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 4,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 18,
+     "p_dec": 19,
+     "pid": "382244",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
      "name": "Josimar Alcócer",
      "pos": "Attaquant",
      "side": "h",
@@ -5372,38 +5283,16 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 1
      },
-     "p_goal": 17,
-     "p_dec": 28,
+     "p_goal": 15,
+     "p_dec": 26,
      "pid": "328393",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "John Mercado",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sparta",
-     "goals": 1,
-     "assists": 0,
-     "apps": 2,
-     "l10": {
-      "n": 4,
-      "gp": 2,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 13,
-     "pid": "297141",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Patrik Vydra",
@@ -5414,17 +5303,36 @@
      "assists": 0,
      "apps": 2,
      "l10": {
-      "n": 4,
-      "gp": 2,
-      "g": 1,
+      "n": 5,
+      "gp": 3,
+      "g": 2,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 11,
+     "p_goal": 14,
+     "p_dec": 15,
      "pid": "340212",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "John Mercado",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sparta",
+     "goals": 1,
+     "assists": 0,
+     "apps": 2,
+     "l10": {
+      "n": 5,
+      "gp": 3,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 11,
+     "p_dec": 16,
+     "pid": "297141",
+     "stats_league": "uefa.europa",
+     "season": 2026
     },
     {
      "name": "Jonatan Brunes",
@@ -5435,17 +5343,16 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 0,
-      "a": 1
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 2
      },
-     "p_goal": 6,
-     "p_dec": 18,
+     "p_goal": 10,
+     "p_dec": 24,
      "pid": "312933",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Ebrima Singhateh",
@@ -5456,41 +5363,119 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 1,
       "a": 0
      },
-     "p_goal": 3,
-     "p_dec": 4,
+     "p_goal": 10,
+     "p_dec": 13,
      "pid": "342633",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Sivert Mannsverk",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Sparta",
-     "goals": 0,
-     "assists": 0,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 2,
-     "p_dec": 6,
-     "pid": "312162",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
+    {
+     "name": "Mexx Meerdink",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "AZ Alkmaar",
+     "goals": 6,
+     "assists": 3,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 22,
+     "p_dec": 33,
+     "pid": "332465",
+     "stats_league": "ned.1",
+     "season": 2026
+    },
+    {
+     "name": "Ro-Zangelo Daal",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "AZ Alkmaar",
+     "goals": 6,
+     "assists": 3,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 3
+     },
+     "p_goal": 22,
+     "p_dec": 33,
+     "pid": "338775",
+     "stats_league": "ned.1",
+     "season": 2026
+    },
+    {
+     "name": "Mateo Chávez",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "AZ Alkmaar",
+     "goals": 3,
+     "assists": 5,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 12,
+     "p_dec": 25,
+     "pid": "379193",
+     "stats_league": "ned.1",
+     "season": 2026
+    },
+    {
+     "name": "Ayoub Oufkir",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "AZ Alkmaar",
+     "goals": 3,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 11,
+     "pid": "389354",
+     "stats_league": "ned.1",
+     "season": 2026
+    },
+    {
+     "name": "Dave Kwakman",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "AZ Alkmaar",
+     "goals": 2,
+     "assists": 1,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 14,
+     "pid": "346269",
+     "stats_league": "ned.1",
+     "season": 2026
+    },
     {
      "name": "Calvin Stengs",
      "pos": "Milieu",
@@ -5509,127 +5494,18 @@
      "p_dec": 13,
      "pid": "248677",
      "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Ro-Zangelo Daal",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "AZ Alkmaar",
-     "goals": 6,
-     "assists": 3,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 5,
-      "a": 3
-     },
-     "p_goal": 7,
-     "p_dec": 11,
-     "pid": "338775",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Mateo Chávez",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "AZ Alkmaar",
-     "goals": 3,
-     "assists": 5,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 3
-     },
-     "p_goal": 4,
-     "p_dec": 8,
-     "pid": "379193",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Jordy Clasie",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "AZ Alkmaar",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 4,
-     "p_dec": 5,
-     "pid": "150199",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Peer Koopmeiners",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "AZ Alkmaar",
-     "goals": 1,
-     "assists": 1,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 3,
-     "p_dec": 10,
-     "pid": "269610",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Dave Kwakman",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "AZ Alkmaar",
-     "goals": 2,
-     "assists": 1,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 3,
-     "p_dec": 4,
-     "pid": "346269",
-     "stats_league": "ned.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Sparta : 26e, 4 points, 6 buts marqués et 6 encaissés en 4 matchs.",
-    "AZ Alkmaar : 15e, 6 points, 7 buts marqués et 4 encaissés en 4 matchs.",
-    "Sparta : 6 buts marqués et 6 encaissés sur ses 4 derniers matchs de championnat.",
+    "Sparta : 29e, 4 points, 8 buts marqués et 10 encaissés en 5 matchs.",
+    "AZ Alkmaar : 10e, 9 points, 11 buts marqués et 6 encaissés en 5 matchs.",
+    "Sparta : 8 buts marqués et 10 encaissés sur ses 5 derniers matchs de championnat.",
     "AZ Alkmaar : 21 buts marqués et 16 encaissés sur ses 10 derniers matchs de championnat.",
-    "Sparta : attaque revue à la baisse (−22 %) d'après la compo officielle (Tobias Guddal, Ebrima Singhateh ne commencent pas).",
-    "AZ Alkmaar : attaque revue à la baisse (−25 %) d'après la compo officielle (Mateo Chávez, Mexx Meerdink, Ro-Zangelo Daal, Ayoub Oufkir ne commencent pas).",
-    "Compositions officielles prises en compte : Tobias Guddal (absent), Mexx Meerdink (absent), Ro-Zangelo Daal (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Sparta (26e) : zone d'élimination. AZ Alkmaar (15e) : place de barrage.",
+   "stakes": "Sparta (29e) : zone d'élimination. AZ Alkmaar (10e) : place de barrage.",
    "picks": {
     "main": {
      "market": "N2",
@@ -5651,7 +5527,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1274,
+     "p": 0.1273,
      "prob": 13,
      "fair": 7.85,
      "stars": 1,
@@ -5660,7 +5536,7 @@
     "fun": {
      "market": "wa_nil",
      "label": "AZ Alkmaar gagne sans encaisser de but",
-     "p": 0.242,
+     "p": 0.2419,
      "prob": 24,
      "fair": 4.13,
      "stars": 1
@@ -5669,7 +5545,7 @@
      {
       "market": "wa_by1",
       "label": "AZ Alkmaar gagne d'un seul but",
-      "p": 0.2232,
+      "p": 0.2231,
       "prob": 22,
       "fair": 4.48,
       "stars": 1
@@ -5685,38 +5561,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Calvin Stengs marque",
-     "p": 0.07,
-     "prob": 7,
-     "fair": 14.29,
+     "label": "Mexx Meerdink marque",
+     "p": 0.22,
+     "prob": 22,
+     "fair": 4.55,
      "stars": 1,
-     "player": "Calvin Stengs",
+     "player": "Mexx Meerdink",
      "team": "AZ Alkmaar",
-     "lineup": "start",
-     "pid": "248677",
+     "pid": "332465",
      "stats_league": "ned.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 13 matchs · 10 derniers matchs : 1 but, 1 passe · titulaire · AZ Alkmaar annoncé gagnant (39 %) · 1,2 but attendu pour AZ Alkmaar"
+     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 5 buts, 3 passes · AZ Alkmaar annoncé gagnant (39 %) · 1,2 but attendu pour AZ Alkmaar"
     },
     "decisive": {
      "market": "dec",
-     "label": "Calvin Stengs buteur ou passeur",
-     "p": 0.13,
-     "prob": 13,
-     "fair": 7.69,
+     "label": "Mexx Meerdink buteur ou passeur",
+     "p": 0.33,
+     "prob": 33,
+     "fair": 3.03,
      "stars": 1,
-     "player": "Calvin Stengs",
+     "player": "Mexx Meerdink",
      "team": "AZ Alkmaar",
      "base": [
       13,
-      2,
-      2
+      6,
+      3
      ],
-     "lineup": "start",
-     "pid": "248677",
+     "pid": "332465",
      "stats_league": "ned.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 13 matchs · 10 derniers matchs : 1 but, 1 passe · titulaire · AZ Alkmaar annoncé gagnant (39 %) · 1,2 but attendu pour AZ Alkmaar"
+     "why": "6 buts et 3 passes en 13 matchs · 10 derniers matchs : 5 buts, 3 passes · AZ Alkmaar annoncé gagnant (39 %) · 1,2 but attendu pour AZ Alkmaar"
     }
    },
    "second": {
@@ -5735,14 +5609,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "1-1",
    "home": "Sunderland",
    "away": "Jagiellonia ",
-   "form_h": "NVDDV",
-   "form_a": "DDVDV",
-   "rank_h": 10,
-   "rank_a": 31,
+   "form_h": "NNVDD",
+   "form_a": "NDDVD",
+   "rank_h": 13,
+   "rank_a": 30,
    "pH": 44,
    "pD": 29,
    "pA": 27,
@@ -5763,6 +5637,26 @@
    "btts": 42,
    "squad_h": [
     {
+     "name": "Brian Brobbey",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sunderland",
+     "goals": 3,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 32,
+     "p_dec": 34,
+     "pid": "282229",
+     "stats_league": "eng.1",
+     "season": 2026
+    },
+    {
      "name": "Enzo Le Fée",
      "pos": "Milieu",
      "side": "h",
@@ -5780,8 +5674,27 @@
      "p_dec": 41,
      "pid": "288340",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Wilson Isidor",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Sunderland",
+     "goals": 1,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 13,
+     "p_dec": 15,
+     "pid": "265915",
+     "stats_league": "eng.1",
+     "season": 2026
     },
     {
      "name": "Nilson Angulo",
@@ -5801,29 +5714,7 @@
      "p_dec": 21,
      "pid": "318090",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Wilson Isidor",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Sunderland",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 4,
-     "p_dec": 5,
-     "pid": "265915",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
      "name": "Noah Sadiki",
@@ -5843,12 +5734,11 @@
      "p_dec": 10,
      "pid": "340240",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Reinildo Mandava",
-     "pos": "Défenseur",
+     "name": "Granit Xhaka",
+     "pos": "Milieu",
      "side": "h",
      "team": "Sunderland",
      "goals": 0,
@@ -5860,78 +5750,14 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 1,
-     "p_dec": 3,
-     "pid": "230081",
+     "p_goal": 3,
+     "p_dec": 8,
+     "pid": "149981",
      "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Trai Hume",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Sunderland",
-     "goals": 0,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 1,
-     "p_dec": 2,
-     "pid": "290207",
-     "stats_league": "eng.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
-    {
-     "name": "Kajetan Szmyt",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Jagiellonia ",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 13,
-     "p_dec": 18,
-     "pid": "370144",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Rodrigo Conceição",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Jagiellonia ",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "323813",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
     {
      "name": "Kamil Jozwiak",
      "pos": "Milieu",
@@ -5941,38 +5767,36 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 16,
+     "p_dec": 18,
+     "pid": "235672",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Kajetan Szmyt",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Jagiellonia ",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
      "p_goal": 12,
-     "p_dec": 14,
-     "pid": "235672",
+     "p_dec": 18,
+     "pid": "370144",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Nik Prelec",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Jagiellonia ",
-     "goals": 0,
-     "assists": 1,
-     "apps": 3,
-     "l10": {
-      "n": 4,
-      "gp": 3,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 6,
-     "p_dec": 20,
-     "pid": "307060",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Ousmane Sow",
@@ -5983,17 +5807,56 @@
      "assists": 0,
      "apps": 3,
      "l10": {
-      "n": 4,
-      "gp": 3,
+      "n": 5,
+      "gp": 4,
       "g": 1,
       "a": 0
      },
-     "p_goal": 4,
-     "p_dec": 5,
+     "p_goal": 11,
+     "p_dec": 14,
      "pid": "345447",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
+    },
+    {
+     "name": "Rodrigo Conceição",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Jagiellonia ",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "323813",
+     "stats_league": "uefa.europa",
+     "season": 2026
+    },
+    {
+     "name": "Nik Prelec",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Jagiellonia ",
+     "goals": 0,
+     "assists": 1,
+     "apps": 3,
+     "l10": {
+      "n": 5,
+      "gp": 4,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 6,
+     "p_dec": 19,
+     "pid": "307060",
+     "stats_league": "uefa.europa",
+     "season": 2026
     },
     {
      "name": "Anders Klynge",
@@ -6004,30 +5867,27 @@
      "assists": 1,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 0,
       "a": 1
      },
      "p_goal": 3,
-     "p_dec": 19,
+     "p_dec": 18,
      "pid": "303934",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Sunderland : 10e, 7 points, 4 buts marqués et 4 encaissés en 4 matchs.",
-    "Jagiellonia  : 31e, 3 points, 4 buts marqués et 7 encaissés en 4 matchs.",
+    "Sunderland : 13e, 8 points, 5 buts marqués et 5 encaissés en 5 matchs.",
+    "Jagiellonia  : 30e, 4 points, 5 buts marqués et 8 encaissés en 5 matchs.",
     "Sunderland : 7 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
-    "Jagiellonia  : 4 buts marqués et 7 encaissés sur ses 4 derniers matchs de championnat.",
-    "Sunderland : attaque revue à la baisse (−23 %) d'après la compo officielle (Wilson Isidor, Brian Brobbey ne commencent pas).",
-    "Compositions officielles prises en compte : Brian Brobbey (absent) ne commence pas le match.",
+    "Jagiellonia  : 5 buts marqués et 8 encaissés sur ses 5 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %. Le nul est une issue sérieuse (29 %).",
-   "stakes": "Sunderland (10e) : place de barrage. Jagiellonia  (31e) : zone d'élimination.",
+   "stakes": "Sunderland (13e) : place de barrage. Jagiellonia  (30e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
@@ -6051,14 +5911,14 @@
      "label": "Score exact 1-0",
      "p": 0.148,
      "prob": 15,
-     "fair": 6.75,
+     "fair": 6.76,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_nil",
      "label": "Sunderland gagne sans encaisser de but",
-     "p": 0.2909,
+     "p": 0.2908,
      "prob": 29,
      "fair": 3.44,
      "stars": 1
@@ -6083,38 +5943,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Enzo Le Fée marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "label": "Brian Brobbey marque",
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
-     "player": "Enzo Le Fée",
+     "player": "Brian Brobbey",
      "team": "Sunderland",
-     "lineup": "start",
-     "pid": "288340",
+     "pid": "282229",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · Sunderland annoncé gagnant (44 %) · 1,2 but attendu pour Sunderland"
+     "why": "3 buts et 0 passe en 8 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 7 sur 10) · Sunderland annoncé gagnant (44 %) · 1,2 but attendu pour Sunderland"
     },
     "decisive": {
      "market": "dec",
-     "label": "Enzo Le Fée buteur ou passeur",
-     "p": 0.41,
-     "prob": 41,
-     "fair": 2.44,
+     "label": "Brian Brobbey buteur ou passeur",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
-     "player": "Enzo Le Fée",
+     "player": "Brian Brobbey",
      "team": "Sunderland",
      "base": [
-      11,
+      8,
       3,
-      1
+      0
      ],
-     "lineup": "start",
-     "pid": "288340",
+     "pid": "282229",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · Sunderland annoncé gagnant (44 %) · 1,2 but attendu pour Sunderland"
+     "why": "3 buts et 0 passe en 8 matchs · 10 derniers matchs : 3 buts, 0 passe (joué 7 sur 10) · Sunderland annoncé gagnant (44 %) · 1,2 but attendu pour Sunderland"
     }
    },
    "second": {
@@ -6133,14 +5991,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "1-2",
    "home": "Torreense",
    "away": "Celtic",
-   "form_h": "DVDDV",
-   "form_a": "VVVDN",
-   "rank_h": 22,
-   "rank_a": 32,
+   "form_h": "NDVDD",
+   "form_a": "NVVVD",
+   "rank_h": 23,
+   "rank_a": 25,
    "pH": 27,
    "pD": 23,
    "pA": 51,
@@ -6169,38 +6027,16 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 2,
       "a": 0
      },
-     "p_goal": 27,
-     "p_dec": 30,
+     "p_goal": 26,
+     "p_dec": 29,
      "pid": "359742",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Alejandro Alfaro",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Torreense",
-     "goals": 1,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 14,
-     "p_dec": 20,
-     "pid": "347520",
-     "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Musa Drammeh",
@@ -6211,8 +6047,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
@@ -6220,8 +6056,27 @@
      "p_dec": 16,
      "pid": "331396",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Alejandro Alfaro",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Torreense",
+     "goals": 1,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 5,
+      "gp": 5,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 13,
+     "p_dec": 19,
+     "pid": "347520",
+     "stats_league": "uefa.europa",
+     "season": 2026
     },
     {
      "name": "Javier Vazquez",
@@ -6232,17 +6087,16 @@
      "assists": 3,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 3
      },
      "p_goal": 12,
-     "p_dec": 39,
+     "p_dec": 38,
      "pid": "266780",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Volnei Feltes",
@@ -6253,8 +6107,8 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
+      "n": 5,
+      "gp": 5,
       "g": 1,
       "a": 0
      },
@@ -6262,8 +6116,7 @@
      "p_dec": 14,
      "pid": "321364",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Dany Jean",
@@ -6274,20 +6127,59 @@
      "assists": 0,
      "apps": 4,
      "l10": {
-      "n": 4,
-      "gp": 4,
-      "g": 0,
+      "n": 5,
+      "gp": 5,
+      "g": 1,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 9,
+     "p_goal": 11,
+     "p_dec": 13,
      "pid": "297183",
      "stats_league": "uefa.europa",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
+    {
+     "name": "Camilo Durán",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Celtic",
+     "goals": 8,
+     "assists": 6,
+     "apps": 14,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 5,
+      "a": 4
+     },
+     "p_goal": 37,
+     "p_dec": 56,
+     "pid": "367591",
+     "stats_league": "sco.1",
+     "season": 2026
+    },
+    {
+     "name": "Benjamin Nygren",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Celtic",
+     "goals": 6,
+     "assists": 3,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 1
+     },
+     "p_goal": 28,
+     "p_dec": 39,
+     "pid": "274522",
+     "stats_league": "sco.1",
+     "season": 2026
+    },
     {
      "name": "Liam Scales",
      "pos": "Défenseur",
@@ -6306,29 +6198,27 @@
      "p_dec": 24,
      "pid": "288959",
      "stats_league": "sco.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
-     "name": "Camilo Durán",
+     "name": "Callum Osmand",
      "pos": "Attaquant",
      "side": "a",
      "team": "Celtic",
-     "goals": 8,
-     "assists": 6,
-     "apps": 14,
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
      "l10": {
       "n": 10,
-      "gp": 10,
-      "g": 5,
-      "a": 4
+      "gp": 5,
+      "g": 2,
+      "a": 0
      },
      "p_goal": 13,
-     "p_dec": 22,
-     "pid": "367591",
+     "p_dec": 14,
+     "pid": "365343",
      "stats_league": "sco.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
      "name": "Kasper Høgh",
@@ -6348,8 +6238,7 @@
      "p_dec": 28,
      "pid": "272624",
      "stats_league": "sco.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Yang Hyun-Jun",
@@ -6369,63 +6258,18 @@
      "p_dec": 12,
      "pid": "350711",
      "stats_league": "sco.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Luke McCowan",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Celtic",
-     "goals": 2,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 4,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 10,
-     "pid": "259208",
-     "stats_league": "sco.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Callum McGregor",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Celtic",
-     "goals": 1,
-     "assists": 0,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 12,
-     "pid": "84049",
-     "stats_league": "sco.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Torreense : 22e, 6 points, 7 buts marqués et 9 encaissés en 4 matchs.",
-    "Celtic : 32e, 3 points, 6 buts marqués et 11 encaissés en 4 matchs.",
-    "Torreense : 7 buts marqués et 9 encaissés sur ses 4 derniers matchs de championnat.",
+    "Torreense : 23e, 6 points, 8 buts marqués et 11 encaissés en 5 matchs.",
+    "Celtic : 25e, 6 points, 8 buts marqués et 12 encaissés en 5 matchs.",
+    "Torreense : 8 buts marqués et 11 encaissés sur ses 5 derniers matchs de championnat.",
     "Celtic : 21 buts marqués et 9 encaissés sur ses 10 derniers matchs de championnat.",
-    "Celtic : attaque revue à la baisse (−23 %) d'après la compo officielle (Benjamin Nygren, Camilo Durán ne commencent pas).",
-    "Compositions officielles prises en compte : Benjamin Nygren (absent), Camilo Durán (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Celtic est favori sans écraser le match (51 %).",
-   "stakes": "Torreense (22e) : place de barrage. Celtic (32e) : zone d'élimination.",
+   "stakes": "Torreense (23e) : place de barrage. Celtic (25e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "N2",
@@ -6447,7 +6291,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0957,
+     "p": 0.0958,
      "prob": 10,
      "fair": 10.44,
      "stars": 1,
@@ -6456,7 +6300,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3802,
+     "p": 0.3801,
      "prob": 38,
      "fair": 2.63,
      "stars": 1
@@ -6473,7 +6317,7 @@
      {
       "market": "htft_a",
       "label": "Celtic mène à la mi-temps et gagne le match",
-      "p": 0.3167,
+      "p": 0.3168,
       "prob": 32,
       "fair": 3.16,
       "stars": 1
@@ -6481,38 +6325,36 @@
     ],
     "player": {
      "market": "scorer",
-     "label": "Liam Scales marque",
-     "p": 0.18,
-     "prob": 18,
-     "fair": 5.56,
+     "label": "Camilo Durán marque",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
-     "player": "Liam Scales",
+     "player": "Camilo Durán",
      "team": "Celtic",
-     "lineup": "start",
-     "pid": "288959",
+     "pid": "367591",
      "stats_league": "sco.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 12 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · Celtic favori (51 %) · 1,8 buts attendus pour Celtic"
+     "why": "8 buts et 6 passes en 14 matchs · 10 derniers matchs : 5 buts, 4 passes · Celtic favori (51 %) · 1,8 buts attendus pour Celtic"
     },
     "decisive": {
      "market": "dec",
-     "label": "Liam Scales buteur ou passeur",
-     "p": 0.24,
-     "prob": 24,
-     "fair": 4.17,
-     "stars": 1,
-     "player": "Liam Scales",
+     "label": "Camilo Durán buteur ou passeur",
+     "p": 0.56,
+     "prob": 56,
+     "fair": 1.79,
+     "stars": 2,
+     "player": "Camilo Durán",
      "team": "Celtic",
      "base": [
-      12,
-      3,
-      1
+      14,
+      8,
+      6
      ],
-     "lineup": "start",
-     "pid": "288959",
+     "pid": "367591",
      "stats_league": "sco.1",
      "season": 2026,
-     "why": "3 buts et 1 passe en 12 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · Celtic favori (51 %) · 1,8 buts attendus pour Celtic"
+     "why": "8 buts et 6 passes en 14 matchs · 10 derniers matchs : 5 buts, 4 passes · Celtic favori (51 %) · 1,8 buts attendus pour Celtic"
     }
    },
    "second": {
@@ -6531,14 +6373,14 @@
    "league": "Europa League",
    "kickoff": "2026-11-26T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "post",
+   "score": "3-1",
    "home": "Hoffenheim",
    "away": "Sturm Graz",
-   "form_h": "DVNDD",
-   "form_a": "DDDNN",
-   "rank_h": 27,
-   "rank_a": 28,
+   "form_h": "VDVND",
+   "form_a": "DDDDN",
+   "rank_h": 15,
+   "rank_a": 31,
    "pH": 45,
    "pD": 24,
    "pA": 31,
@@ -6576,8 +6418,7 @@
      "p_dec": 35,
      "pid": "338854",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Adam Hlozek",
@@ -6597,8 +6438,47 @@
      "p_dec": 28,
      "pid": "292169",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Tim Lemperle",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Hoffenheim",
+     "goals": 2,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 19,
+     "p_dec": 21,
+     "pid": "303792",
+     "stats_league": "ger.1",
+     "season": 2026
+    },
+    {
+     "name": "Bambasé Conté",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Hoffenheim",
+     "goals": 2,
+     "assists": 2,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 2,
+      "a": 2
+     },
+     "p_goal": 17,
+     "p_dec": 32,
+     "pid": "336355",
+     "stats_league": "ger.1",
+     "season": 2026
     },
     {
      "name": "Alexander Prass",
@@ -6618,8 +6498,7 @@
      "p_dec": 23,
      "pid": "320939",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Fisnik Asllani",
@@ -6639,50 +6518,7 @@
      "p_dec": 27,
      "pid": "331057",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Leon Avdullahu",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Hoffenheim",
-     "goals": 1,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 15,
-     "pid": "362590",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Ozan Kabak",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Hoffenheim",
-     "goals": 1,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 10,
-     "pid": "266565",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -6704,8 +6540,7 @@
      "p_dec": 40,
      "pid": "329483",
      "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Jon Gorenc Stankovic",
@@ -6725,8 +6560,27 @@
      "p_dec": 12,
      "pid": "214012",
      "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Belmin Beganovic",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Sturm Graz",
+     "goals": 2,
+     "assists": 0,
+     "apps": 4,
+     "l10": {
+      "n": 10,
+      "gp": 4,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 11,
+     "pid": "345652",
+     "stats_league": "aut.1",
+     "season": 2026
     },
     {
      "name": "Seedy Jatta",
@@ -6746,50 +6600,7 @@
      "p_dec": 10,
      "pid": "303704",
      "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Luca Weinhandl",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Sturm Graz",
-     "goals": 1,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 6,
-     "p_dec": 7,
-     "pid": "411273",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Belmin Beganovic",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Sturm Graz",
-     "goals": 2,
-     "assists": 0,
-     "apps": 4,
-     "l10": {
-      "n": 10,
-      "gp": 4,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 3,
-     "pid": "345652",
-     "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     },
     {
      "name": "Simon Seidl",
@@ -6805,31 +6616,47 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 2,
-     "p_dec": 6,
+     "p_goal": 6,
+     "p_dec": 19,
      "pid": "364541",
      "stats_league": "aut.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
+    },
+    {
+     "name": "Jürgen Heil",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Sturm Graz",
+     "goals": 1,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 7,
+     "pid": "274948",
+     "stats_league": "aut.1",
+     "season": 2026
     }
    ],
    "ctx": [
-    "Hoffenheim : 27e, 4 points, 6 buts marqués et 6 encaissés en 4 matchs.",
-    "Sturm Graz : 28e, 4 points, 3 buts marqués et 6 encaissés en 4 matchs.",
+    "Hoffenheim : 15e, 7 points, 9 buts marqués et 7 encaissés en 5 matchs.",
+    "Sturm Graz : 31e, 4 points, 4 buts marqués et 9 encaissés en 5 matchs.",
     "Hoffenheim : 16 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat.",
     "Sturm Graz : 18 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
-    "Hoffenheim : attaque revue à la baisse (−14 %) d'après la compo officielle (Bambasé Conté, Tim Lemperle ne commencent pas).",
-    "Sturm Graz : attaque revue à la baisse (−5 %) d'après la compo officielle.",
-    "Compositions officielles prises en compte : Bambasé Conté (remplaçant), Tim Lemperle (remplaçant) ne commencent pas le match.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
-   "stakes": "Hoffenheim (27e) : zone d'élimination. Sturm Graz (28e) : zone d'élimination.",
+   "stakes": "Hoffenheim (15e) : place de barrage. Sturm Graz (31e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Hoffenheim ou nul",
-     "p": 0.6902,
+     "p": 0.6903,
      "prob": 69,
      "fair": 1.45,
      "stars": 3,
@@ -6855,7 +6682,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.33,
+     "p": 0.3299,
      "prob": 33,
      "fair": 3.03,
      "stars": 1
@@ -6864,7 +6691,7 @@
      {
       "market": "wh_o25",
       "label": "Hoffenheim gagne et plus de 2,5 buts",
-      "p": 0.2866,
+      "p": 0.2867,
       "prob": 29,
       "fair": 3.49,
       "stars": 1
@@ -6872,7 +6699,7 @@
      {
       "market": "htft_h",
       "label": "Hoffenheim mène à la mi-temps et gagne le match",
-      "p": 0.2703,
+      "p": 0.2704,
       "prob": 27,
       "fair": 3.7,
       "stars": 1
@@ -6887,11 +6714,10 @@
      "stars": 1,
      "player": "Adam Daghim",
      "team": "Hoffenheim",
-     "lineup": "start",
      "pid": "338854",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 10 matchs · titulaire · Hoffenheim annoncé gagnant (45 %) · 1,6 buts attendus pour Hoffenheim"
+     "why": "2 buts et 2 passes en 10 matchs · Hoffenheim annoncé gagnant (45 %) · 1,6 buts attendus pour Hoffenheim"
     },
     "decisive": {
      "market": "dec",
@@ -6907,11 +6733,10 @@
       2,
       2
      ],
-     "lineup": "start",
      "pid": "338854",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "2 buts et 2 passes en 10 matchs · titulaire · Hoffenheim annoncé gagnant (45 %) · 1,6 buts attendus pour Hoffenheim"
+     "why": "2 buts et 2 passes en 10 matchs · Hoffenheim annoncé gagnant (45 %) · 1,6 buts attendus pour Hoffenheim"
     }
    },
    "second": {
@@ -6928,38 +6753,38 @@
  "nhl": [],
  "bilan": {
   "foot": {
-   "n": 380,
+   "n": 391,
    "fav_rate": 62,
    "fav_expected": 53,
-   "brier": 0.533,
+   "brier": 0.535,
    "brier_naive": 0.667,
    "vs_mkt": {
-    "n": 199,
-    "model": 0.548,
-    "mkt": 0.548
+    "n": 210,
+    "model": 0.551,
+    "mkt": 0.55
    },
    "bins": [
     {
      "range": "30-40 %",
-     "n": 57,
+     "n": 58,
      "announced": 38,
-     "actual": 47
+     "actual": 48
     },
     {
      "range": "40-50 %",
-     "n": 129,
+     "n": 134,
      "announced": 45,
      "actual": 54
     },
     {
      "range": "50-60 %",
-     "n": 86,
+     "n": 88,
      "announced": 55,
      "actual": 64
     },
     {
      "range": "60-70 %",
-     "n": 68,
+     "n": 71,
      "announced": 65,
      "actual": 75
     },
@@ -7016,20 +6841,20 @@
    ]
   },
   "picks": {
-   "n": 2177,
+   "n": 2210,
    "rate": 55,
    "expected": 53,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 2177,
-     "ok": 1195,
+     "n": 2210,
+     "ok": 1212,
      "rate": 55,
      "expected": 53
     },
     "foot": {
-     "n": 1245,
-     "ok": 669,
+     "n": 1278,
+     "ok": 686,
      "rate": 54,
      "expected": 51
     },
@@ -7042,14 +6867,14 @@
    },
    "fun": {
     "all": {
-     "n": 865,
-     "ok": 248,
-     "rate": 29,
+     "n": 887,
+     "ok": 251,
+     "rate": 28,
      "expected": 28
     },
     "foot": {
-     "n": 608,
-     "ok": 136,
+     "n": 630,
+     "ok": 139,
      "rate": 22,
      "expected": 24
     },
@@ -7064,16 +6889,16 @@
     {
      "date": "2026-11-26",
      "all": {
-      "n": 73,
-      "ok": 38,
+      "n": 106,
+      "ok": 55,
       "rate": 52,
-      "expected": 54
+      "expected": 52
      },
      "foot": {
-      "n": 24,
-      "ok": 13,
-      "rate": 54,
-      "expected": 56
+      "n": 57,
+      "ok": 30,
+      "rate": 53,
+      "expected": 51
      },
      "nhl": {
       "n": 49,
@@ -7083,16 +6908,16 @@
      },
      "fun": {
       "all": {
-       "n": 28,
-       "ok": 8,
-       "rate": 29,
-       "expected": 30
+       "n": 50,
+       "ok": 11,
+       "rate": 22,
+       "expected": 27
       },
       "foot": {
-       "n": 14,
-       "ok": 3,
-       "rate": 21,
-       "expected": 22
+       "n": 36,
+       "ok": 6,
+       "rate": 17,
+       "expected": 23
       },
       "nhl": {
        "n": 14,
@@ -8675,6 +8500,14 @@
     },
     {
      "sport": "foot",
+     "league": "Europa League",
+     "n": 195,
+     "ok": 83,
+     "rate": 43,
+     "expected": 49
+    },
+    {
+     "sport": "foot",
      "league": "LaLiga",
      "n": 180,
      "ok": 92,
@@ -8687,14 +8520,6 @@
      "n": 174,
      "ok": 85,
      "rate": 49,
-     "expected": 50
-    },
-    {
-     "sport": "foot",
-     "league": "Europa League",
-     "n": 162,
-     "ok": 66,
-     "rate": 41,
      "expected": 50
     },
     {
@@ -8725,31 +8550,31 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 915,
+     "n": 933,
      "announced": 35,
      "actual": 35
     },
     {
      "stars": 2,
-     "n": 394,
+     "n": 396,
      "announced": 55,
      "actual": 55
     },
     {
      "stars": 3,
-     "n": 491,
+     "n": 496,
      "announced": 64,
      "actual": 72
     },
     {
      "stars": 4,
-     "n": 249,
-     "announced": 75,
+     "n": 253,
+     "announced": 74,
      "actual": 79
     },
     {
      "stars": 5,
-     "n": 128,
+     "n": 132,
      "announced": 86,
      "actual": 88
     }
@@ -8965,6 +8790,71 @@
     },
     {
      "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915512",
+     "score": "1-2",
+     "match": "Torreense – Celtic",
+     "label": "Nul ou Celtic",
+     "prob": 73,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915512",
+     "score": "1-2",
+     "match": "Torreense – Celtic",
+     "label": "Victoire Celtic",
+     "prob": 51,
+     "stars": 2,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915512",
+     "score": "1-2",
+     "match": "Torreense – Celtic",
+     "label": "Score exact 1-2",
+     "prob": 10,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915512",
+     "score": "1-2",
+     "match": "Torreense – Celtic",
+     "label": "Liam Scales marque",
+     "prob": 18,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915512",
+     "score": "1-2",
+     "match": "Torreense – Celtic",
+     "label": "Plus de 3,5 buts",
+     "prob": 38,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
      "sport": "nhl",
      "league": "NHL",
      "mid": "nhl-2026020388",
@@ -9026,6 +8916,136 @@
      "prob": 41,
      "stars": 1,
      "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915513",
+     "score": "1-1",
+     "match": "Sunderland – Jagiellonia ",
+     "label": "Sunderland ou nul",
+     "prob": 73,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915513",
+     "score": "1-1",
+     "match": "Sunderland – Jagiellonia ",
+     "label": "Victoire Sunderland",
+     "prob": 44,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915513",
+     "score": "1-1",
+     "match": "Sunderland – Jagiellonia ",
+     "label": "Score exact 1-0",
+     "prob": 15,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915513",
+     "score": "1-1",
+     "match": "Sunderland – Jagiellonia ",
+     "label": "Enzo Le Fée marque",
+     "prob": 30,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915513",
+     "score": "1-1",
+     "match": "Sunderland – Jagiellonia ",
+     "label": "Sunderland gagne sans encaisser de but",
+     "prob": 29,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915514",
+     "score": "2-4",
+     "match": "Sparta – AZ Alkmaar",
+     "label": "Nul ou AZ Alkmaar",
+     "prob": 68,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915514",
+     "score": "2-4",
+     "match": "Sparta – AZ Alkmaar",
+     "label": "Victoire AZ Alkmaar",
+     "prob": 39,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915514",
+     "score": "2-4",
+     "match": "Sparta – AZ Alkmaar",
+     "label": "Score exact 0-1",
+     "prob": 13,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915514",
+     "score": "2-4",
+     "match": "Sparta – AZ Alkmaar",
+     "label": "Calvin Stengs marque",
+     "prob": 7,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915514",
+     "score": "2-4",
+     "match": "Sparta – AZ Alkmaar",
+     "label": "AZ Alkmaar gagne sans encaisser de but",
+     "prob": 24,
+     "stars": 1,
+     "ok": false,
      "fun": true
     },
     {
@@ -9290,6 +9310,84 @@
     },
     {
      "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915503",
+     "score": "1-3",
+     "match": "OFI Crete – Anderlecht",
+     "label": "Nul ou Anderlecht",
+     "prob": 71,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915503",
+     "score": "1-3",
+     "match": "OFI Crete – Anderlecht",
+     "label": "Victoire Anderlecht",
+     "prob": 41,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915503",
+     "score": "1-3",
+     "match": "OFI Crete – Anderlecht",
+     "label": "Tawfik Bentayeb marque",
+     "prob": 19,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915503",
+     "score": "1-3",
+     "match": "OFI Crete – Anderlecht",
+     "label": "Tawfik Bentayeb buteur ou passeur",
+     "prob": 25,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915503",
+     "score": "1-3",
+     "match": "OFI Crete – Anderlecht",
+     "label": "Anderlecht gagne sans encaisser de but",
+     "prob": 27,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915503",
+     "score": "1-3",
+     "match": "OFI Crete – Anderlecht",
+     "label": "Score exact 0-1",
+     "prob": 14,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
      "sport": "nhl",
      "league": "NHL",
      "mid": "nhl-2026020390",
@@ -9351,6 +9449,71 @@
      "prob": 31,
      "stars": 1,
      "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915505",
+     "score": "3-1",
+     "match": "NEC – Rennes",
+     "label": "Victoire Rennes",
+     "prob": 48,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915505",
+     "score": "3-1",
+     "match": "NEC – Rennes",
+     "label": "Esteban Lepaul marque",
+     "prob": 42,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915505",
+     "score": "3-1",
+     "match": "NEC – Rennes",
+     "label": "Score exact 1-2",
+     "prob": 9,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915505",
+     "score": "3-1",
+     "match": "NEC – Rennes",
+     "label": "Nul ou Rennes",
+     "prob": 70,
+     "stars": 4,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915505",
+     "score": "3-1",
+     "match": "NEC – Rennes",
+     "label": "Plus de 3,5 buts",
+     "prob": 42,
+     "stars": 1,
+     "ok": true,
      "fun": true
     },
     {
@@ -9498,6 +9661,201 @@
     },
     {
      "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915501",
+     "score": "0-0",
+     "match": "Lyon – Lillestrom",
+     "label": "Lyon ou nul",
+     "prob": 80,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915501",
+     "score": "0-0",
+     "match": "Lyon – Lillestrom",
+     "label": "Victoire Lyon",
+     "prob": 50,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915501",
+     "score": "0-0",
+     "match": "Lyon – Lillestrom",
+     "label": "Lyon gagne sans encaisser de but",
+     "prob": 37,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915501",
+     "score": "0-0",
+     "match": "Lyon – Lillestrom",
+     "label": "Score exact 1-0",
+     "prob": 19,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915501",
+     "score": "0-0",
+     "match": "Lyon – Lillestrom",
+     "label": "Corentin Tolisso marque",
+     "prob": 14,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915502",
+     "score": "4-1",
+     "match": "Juventus – Omonia",
+     "label": "Juventus ou nul",
+     "prob": 85,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915502",
+     "score": "4-1",
+     "match": "Juventus – Omonia",
+     "label": "Victoire Juventus",
+     "prob": 62,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915502",
+     "score": "4-1",
+     "match": "Juventus – Omonia",
+     "label": "Score exact 1-0",
+     "prob": 14,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915502",
+     "score": "4-1",
+     "match": "Juventus – Omonia",
+     "label": "Douglas Luiz marque",
+     "prob": 10,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915502",
+     "score": "4-1",
+     "match": "Juventus – Omonia",
+     "label": "Juventus gagne sans encaisser de but",
+     "prob": 39,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915515",
+     "score": "3-1",
+     "match": "Hoffenheim – Sturm Graz",
+     "label": "Hoffenheim ou nul",
+     "prob": 69,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915515",
+     "score": "3-1",
+     "match": "Hoffenheim – Sturm Graz",
+     "label": "Victoire Hoffenheim",
+     "prob": 45,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915515",
+     "score": "3-1",
+     "match": "Hoffenheim – Sturm Graz",
+     "label": "Adam Daghim marque",
+     "prob": 20,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915515",
+     "score": "3-1",
+     "match": "Hoffenheim – Sturm Graz",
+     "label": "Plus de 3,5 buts",
+     "prob": 33,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915515",
+     "score": "3-1",
+     "match": "Hoffenheim – Sturm Graz",
+     "label": "Score exact 2-1",
+     "prob": 9,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
      "sport": "nhl",
      "league": "NHL",
      "mid": "nhl-2026020389",
@@ -9546,6 +9904,71 @@
      "prob": 42,
      "stars": 1,
      "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915516",
+     "score": "0-0",
+     "match": "Ferencvaros – NK Celje",
+     "label": "Ferencvaros ou nul",
+     "prob": 87,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915516",
+     "score": "0-0",
+     "match": "Ferencvaros – NK Celje",
+     "label": "Victoire Ferencvaros",
+     "prob": 70,
+     "stars": 3,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915516",
+     "score": "0-0",
+     "match": "Ferencvaros – NK Celje",
+     "label": "Jonathan Levin marque",
+     "prob": 0,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915516",
+     "score": "0-0",
+     "match": "Ferencvaros – NK Celje",
+     "label": "Score exact 2-0",
+     "prob": 10,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915516",
+     "score": "0-0",
+     "match": "Ferencvaros – NK Celje",
+     "label": "Ferencvaros gagne sans encaisser de but",
+     "prob": 35,
+     "stars": 1,
+     "ok": false,
      "fun": true
     },
     {
@@ -9888,6 +10311,58 @@
     },
     {
      "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915504",
+     "score": "2-1",
+     "match": "C Palace – Real Sociedad",
+     "label": "Victoire Real Sociedad",
+     "prob": 46,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915504",
+     "score": "2-1",
+     "match": "C Palace – Real Sociedad",
+     "label": "Score exact 1-2",
+     "prob": 9,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915504",
+     "score": "2-1",
+     "match": "C Palace – Real Sociedad",
+     "label": "Mikel Oyarzabal marque",
+     "prob": 24,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915504",
+     "score": "2-1",
+     "match": "C Palace – Real Sociedad",
+     "label": "Real Sociedad gagne et plus de 2,5 buts",
+     "prob": 35,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
      "sport": "nhl",
      "league": "NHL",
      "mid": "nhl-2026020387",
@@ -10002,6 +10477,71 @@
      "stars": 1,
      "ok": false,
      "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915506",
+     "score": "2-1",
+     "match": "Besiktas – Hapoel Be'er",
+     "label": "Besiktas ou nul",
+     "prob": 86,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915506",
+     "score": "2-1",
+     "match": "Besiktas – Hapoel Be'er",
+     "label": "Victoire Besiktas",
+     "prob": 67,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915506",
+     "score": "2-1",
+     "match": "Besiktas – Hapoel Be'er",
+     "label": "Besiktas gagne sans encaisser de but",
+     "prob": 37,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915506",
+     "score": "2-1",
+     "match": "Besiktas – Hapoel Be'er",
+     "label": "Score exact 2-0",
+     "prob": 11,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-26",
+     "sport": "foot",
+     "league": "Europa League",
+     "mid": "foot-401915506",
+     "score": "2-1",
+     "match": "Besiktas – Hapoel Be'er",
+     "label": "Václav Cerný marque",
+     "prob": 20,
+     "stars": 1,
+     "ok": false,
+     "fun": false
     },
     {
      "date": "2026-11-26",
@@ -37092,7 +37632,7 @@
  },
  "second": {
   "foot": {
-   "ok": 9,
+   "ok": 0,
    "elo": {
     "tur.1": 720,
     "uefa.europa": 243,
@@ -37110,53 +37650,7 @@
     "ned.1": 717,
     "sco.1": 539
    },
-   "elo_fetch": {
-    "tur.1": {
-     "2026": 108
-    },
-    "uefa.europa": {
-     "2026": 75
-    },
-    "esp.1": {
-     "2026": 129
-    },
-    "eng.1": {
-     "2026": 110
-    },
-    "ger.1": {
-     "2026": 90
-    },
-    "fra.1": {
-     "2026": 99
-    },
-    "gre.1": {
-     "2026": 76
-    },
-    "ita.1": {
-     "2026": 120
-    },
-    "aut.1": {
-     "2026": 78
-    },
-    "bel.1": {
-     "2026": 108
-    },
-    "por.1": {
-     "2026": 98
-    },
-    "usa.usl.1": {
-     "2026": 390
-    },
-    "nor.1": {
-     "2026": 216
-    },
-    "ned.1": {
-     "2026": 117
-    },
-    "sco.1": {
-     "2026": 83
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
