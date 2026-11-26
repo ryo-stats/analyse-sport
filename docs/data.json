@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T18:05+01:00",
+ "generated": "2026-11-26T18:30+01:00",
  "date": "2026-11-26",
  "nhl_date": "2026-11-26",
  "foot": [
@@ -1883,15 +1883,6 @@
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Olympiacos (6e) : top 8, qualification directe pour les 8es. Milan (28e) : zone d'élimination.",
    "picks": {
-    "main": {
-     "market": "1N",
-     "label": "Olympiacos ou nul",
-     "p": 0.6642,
-     "prob": 66,
-     "fair": 1.51,
-     "stars": 3,
-     "why": "10 derniers matchs : Olympiacos 21 marqués / 7 encaissés · Milan 24 / 13"
-    },
     "winner": {
      "market": "1",
      "label": "Victoire Olympiacos",
@@ -1969,11 +1960,22 @@
      "stats_league": "gre.1",
      "season": 2026,
      "why": "6 buts et 1 passe en 11 matchs · 10 derniers matchs : 6 buts, 1 passe · titulaire · Olympiacos annoncé gagnant (41 %) · 1,4 but attendu pour Olympiacos"
+    },
+    "held": {
+     "market": "1N",
+     "label": "Olympiacos ou nul",
+     "p": 0.6642,
+     "prob": 66,
+     "fair": 1.51,
+     "stars": 3,
+     "why": "10 derniers matchs : Olympiacos 21 marqués / 7 encaissés · Milan 24 / 13",
+     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
    },
    "country": "Europe",
    "code": "uefa.europa",
