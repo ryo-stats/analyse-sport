@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T00:41+01:00",
+ "generated": "2026-11-26T01:06+01:00",
  "date": "2026-11-26",
  "nhl_date": "2026-11-25",
  "foot": [
@@ -6754,8 +6754,8 @@
    "league": "NHL",
    "kickoff": "2026-11-26T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Boston Bruins",
    "away": "Winnipeg Jets",
    "rec_h": "15-7-1 · 4e Atlantic · 2 victoires de suite",
@@ -7144,8 +7144,8 @@
    "league": "NHL",
    "kickoff": "2026-11-26T00:00:00+00:00",
    "time": "01:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Buffalo Sabres",
    "away": "New York Rangers",
    "rec_h": "10-10-4 · 6e Atlantic · 1 victoire de suite",
@@ -7445,7 +7445,6 @@
     "Buffalo Sabres : 73 buts marqués et 83 encaissés en 24 matchs.",
     "New York Rangers : 69 buts marqués et 63 encaissés en 23 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Buffalo Sabres : Ukko-Pekka Luukkonen (87,8 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "New York Rangers est favori (55 % en comptant la prolongation).",
@@ -9887,7 +9886,7 @@
    "league": "NHL",
    "kickoff": "2026-11-26T00:30:00+00:00",
    "time": "01:30",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Detroit Red Wings",
    "away": "Vancouver Canucks",
@@ -12323,19 +12322,19 @@
    ]
   },
   "picks": {
-   "n": 2097,
+   "n": 2104,
    "rate": 55,
    "expected": 53,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 2097,
+     "n": 2104,
      "ok": 1157,
      "rate": 55,
      "expected": 53
     },
     "foot": {
-     "n": 1214,
+     "n": 1221,
      "ok": 656,
      "rate": 54,
      "expected": 51
@@ -12412,16 +12411,16 @@
     {
      "date": "2026-11-24",
      "all": {
-      "n": 52,
+      "n": 59,
       "ok": 29,
-      "rate": 56,
-      "expected": 55
+      "rate": 49,
+      "expected": 52
      },
      "foot": {
-      "n": 28,
+      "n": 35,
       "ok": 19,
-      "rate": 68,
-      "expected": 53
+      "rate": 54,
+      "expected": 49
      },
      "nhl": {
       "n": 24,
@@ -13934,10 +13933,10 @@
     {
      "sport": "foot",
      "league": "Ligue des champions",
-     "n": 196,
+     "n": 203,
      "ok": 119,
-     "rate": 61,
-     "expected": 53
+     "rate": 59,
+     "expected": 52
     },
     {
      "sport": "foot",
@@ -13991,13 +13990,13 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 885,
+     "n": 891,
      "announced": 35,
      "actual": 35
     },
     {
      "stars": 2,
-     "n": 375,
+     "n": 376,
      "announced": 55,
      "actual": 56
     },
@@ -14886,6 +14885,19 @@
      "mid": "foot-401915297",
      "score": "0-2",
      "match": "S Bratislava – Betis",
+     "label": "Abde Ezzalzouli buteur ou passeur",
+     "prob": 34,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915297",
+     "score": "0-2",
+     "match": "S Bratislava – Betis",
      "label": "Score exact 0-2",
      "prob": 11,
      "stars": 1,
@@ -15328,6 +15340,19 @@
      "mid": "foot-401915379",
      "score": "2-2",
      "match": "Man City – Napoli",
+     "label": "Erling Haaland buteur ou passeur",
+     "prob": 54,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915379",
+     "score": "2-2",
+     "match": "Man City – Napoli",
      "label": "Score exact 2-1",
      "prob": 10,
      "stars": 1,
@@ -15382,6 +15407,19 @@
      "match": "Galatasaray – Aston Villa",
      "label": "Yunus Akgün marque",
      "prob": 18,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915300",
+     "score": "1-0",
+     "match": "Galatasaray – Aston Villa",
+     "label": "Yunus Akgün buteur ou passeur",
+     "prob": 20,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -15468,6 +15506,19 @@
      "date": "2026-11-24",
      "sport": "foot",
      "league": "Ligue des champions",
+     "mid": "foot-401915294",
+     "score": "0-1",
+     "match": "Feyenoord – FC Porto",
+     "label": "Gabri Veiga buteur ou passeur",
+     "prob": 37,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
      "mid": "foot-401915296",
      "score": "1-0",
      "match": "Como – AEK Athens",
@@ -15499,6 +15550,19 @@
      "match": "Como – AEK Athens",
      "label": "Tasos Douvikas marque",
      "prob": 24,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915296",
+     "score": "1-0",
+     "match": "Como – AEK Athens",
+     "label": "Tasos Douvikas buteur ou passeur",
+     "prob": 26,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -15588,6 +15652,19 @@
      "mid": "foot-401915380",
      "score": "1-0",
      "match": "Bodo/Glimt – LASK Linz",
+     "label": "Ole Didrik Blomberg buteur ou passeur",
+     "prob": 41,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915380",
+     "score": "1-0",
+     "match": "Bodo/Glimt – LASK Linz",
      "label": "Bodo/Glimt gagne et plus de 2,5 buts",
      "prob": 40,
      "stars": 1,
@@ -15655,6 +15732,19 @@
      "match": "Arsenal – Dortmund",
      "label": "Martin Ødegaard marque",
      "prob": 12,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-24",
+     "sport": "foot",
+     "league": "Ligue des champions",
+     "mid": "foot-401915295",
+     "score": "1-1",
+     "match": "Arsenal – Dortmund",
+     "label": "Martin Ødegaard buteur ou passeur",
+     "prob": 18,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -41379,7 +41469,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 14,
+   "ok": 12,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92288 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
