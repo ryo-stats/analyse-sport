@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T12:31+01:00",
+ "generated": "2026-11-26T14:24+01:00",
  "date": "2026-11-26",
  "nhl_date": "2026-11-26",
  "foot": [
@@ -1820,6 +1820,15 @@
    "reading": "Olympiacos est favori sans écraser le match (45 %).",
    "stakes": "Olympiacos (6e) : top 8, qualification directe pour les 8es. Milan (28e) : zone d'élimination.",
    "picks": {
+    "main": {
+     "market": "1N",
+     "label": "Olympiacos ou nul",
+     "p": 0.6884,
+     "prob": 69,
+     "fair": 1.45,
+     "stars": 3,
+     "why": "10 derniers matchs : Olympiacos 21 marqués / 7 encaissés · Milan 24 / 13"
+    },
     "winner": {
      "market": "1",
      "label": "Victoire Olympiacos",
@@ -1895,22 +1904,11 @@
      "stats_league": "gre.1",
      "season": 2026,
      "why": "6 buts et 1 passe en 11 matchs · 10 derniers matchs : 6 buts, 1 passe · Olympiacos favori (45 %) · 1,7 buts attendus pour Olympiacos"
-    },
-    "held": {
-     "market": "1N",
-     "label": "Olympiacos ou nul",
-     "p": 0.6884,
-     "prob": 69,
-     "fair": 1.45,
-     "stars": 3,
-     "why": "10 derniers matchs : Olympiacos 21 marqués / 7 encaissés · Milan 24 / 13",
-     "note": "l'analyse et le marché des paris ne désignent pas le même favori"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": false,
-    "note": "l'analyse et le marché des paris ne désignent pas le même favori"
+    "agree": true
    },
    "country": "Europe",
    "code": "uefa.europa",
@@ -3431,12 +3429,12 @@
    "form_a": "VNDDD",
    "rank_h": 3,
    "rank_a": 25,
-   "pH": 70,
-   "pD": 17,
+   "pH": 69,
+   "pD": 18,
    "pA": 13,
    "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
-   "xgH": 2.34,
-   "xgA": 0.89,
+   "xgH": 2.33,
+   "xgA": 0.9,
    "scores": [
     "2-0",
     "2-1",
@@ -3448,7 +3446,7 @@
     9
    ],
    "over25": 63,
-   "btts": 53,
+   "btts": 54,
    "squad_h": [
     {
      "name": "Jonathan Levin",
@@ -3481,7 +3479,7 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 20,
+     "p_goal": 21,
      "p_dec": 33,
      "pid": "306199",
      "stats_league": "uefa.europa",
@@ -3501,7 +3499,7 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
+     "p_goal": 15,
      "p_dec": 17,
      "pid": "290216",
      "stats_league": "uefa.europa",
@@ -3568,22 +3566,22 @@
      "season": 2026
     },
     {
-     "name": "Milot Avdyli",
-     "pos": "Milieu",
+     "name": "Veton Tusha",
+     "pos": "Attaquant",
      "side": "a",
      "team": "NK Celje",
      "goals": 0,
-     "assists": 1,
-     "apps": 4,
+     "assists": 0,
+     "apps": 3,
      "l10": {
       "n": 4,
-      "gp": 4,
+      "gp": 3,
       "g": 0,
-      "a": 1
+      "a": 0
      },
-     "p_goal": 3,
-     "p_dec": 18,
-     "pid": "363569",
+     "p_goal": 4,
+     "p_dec": 6,
+     "pid": "312664",
      "stats_league": "uefa.europa",
      "season": 2026
     }
@@ -3594,13 +3592,13 @@
     "NK Celje : 5 buts marqués et 9 encaissés sur ses 4 derniers matchs de championnat.",
     "Joueurs : statistiques de la saison en championnat national (plus de matchs que la Europa League)."
    ],
-   "reading": "Ferencvaros est nettement favori (70 %).",
+   "reading": "Ferencvaros est nettement favori (69 %).",
    "stakes": "Ferencvaros (3e) : top 8, qualification directe pour les 8es. NK Celje (25e) : zone d'élimination.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Ferencvaros ou nul",
-     "p": 0.8724,
+     "p": 0.873,
      "prob": 87,
      "fair": 1.15,
      "stars": 5,
@@ -3609,24 +3607,24 @@
     "winner": {
      "market": "1",
      "label": "Victoire Ferencvaros",
-     "p": 0.6984,
-     "prob": 70,
-     "fair": 1.43,
+     "p": 0.6916,
+     "prob": 69,
+     "fair": 1.45,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1085,
+     "p": 0.1076,
      "prob": 11,
-     "fair": 9.22,
+     "fair": 9.3,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.4034,
+     "p": 0.403,
      "prob": 40,
      "fair": 2.48,
      "stars": 1
@@ -3635,15 +3633,15 @@
      {
       "market": "wh_nil",
       "label": "Ferencvaros gagne sans encaisser de but",
-      "p": 0.3715,
+      "p": 0.3673,
       "prob": 37,
-      "fair": 2.69,
+      "fair": 2.72,
       "stars": 1
      },
      {
       "market": "wh_btts",
       "label": "Ferencvaros gagne et les deux équipes marquent",
-      "p": 0.326,
+      "p": 0.3257,
       "prob": 33,
       "fair": 3.07,
       "stars": 1
@@ -3661,7 +3659,7 @@
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026,
-     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (70 %) · 2,3 buts attendus pour Ferencvaros"
+     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (69 %) · 2,3 buts attendus pour Ferencvaros"
     },
     "decisive": {
      "market": "dec",
@@ -3680,7 +3678,7 @@
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026,
-     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (70 %) · 2,3 buts attendus pour Ferencvaros"
+     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (69 %) · 2,3 buts attendus pour Ferencvaros"
     }
    },
    "second": null,
@@ -36434,7 +36432,53 @@
     "ned.1": 717,
     "sco.1": 539
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "tur.1": {
+     "2026": 108
+    },
+    "uefa.europa": {
+     "2026": 72
+    },
+    "esp.1": {
+     "2026": 129
+    },
+    "eng.1": {
+     "2026": 110
+    },
+    "ger.1": {
+     "2026": 90
+    },
+    "fra.1": {
+     "2026": 99
+    },
+    "gre.1": {
+     "2026": 76
+    },
+    "ita.1": {
+     "2026": 120
+    },
+    "aut.1": {
+     "2026": 78
+    },
+    "bel.1": {
+     "2026": 108
+    },
+    "por.1": {
+     "2026": 98
+    },
+    "usa.usl.1": {
+     "2026": 390
+    },
+    "nor.1": {
+     "2026": 216
+    },
+    "ned.1": {
+     "2026": 117
+    },
+    "sco.1": {
+     "2026": 83
+    }
+   },
    "status": "ok"
   },
   "nhl": {
