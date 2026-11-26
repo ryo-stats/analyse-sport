@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T14:24+01:00",
+ "generated": "2026-11-26T16:32+01:00",
  "date": "2026-11-26",
  "nhl_date": "2026-11-26",
  "foot": [
@@ -3433,8 +3433,8 @@
    "pD": 18,
    "pA": 13,
    "source": "Marché des paris (l'analyse maison manque de données pour ce match)",
-   "xgH": 2.33,
-   "xgA": 0.9,
+   "xgH": 2.35,
+   "xgA": 0.92,
    "scores": [
     "2-0",
     "2-1",
@@ -3445,7 +3445,7 @@
     10,
     9
    ],
-   "over25": 63,
+   "over25": 64,
    "btts": 54,
    "squad_h": [
     {
@@ -3458,7 +3458,7 @@
      "apps": 4,
      "l10": null,
      "p_goal": 1,
-     "p_dec": 3,
+     "p_dec": 4,
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026
@@ -3480,7 +3480,7 @@
       "a": 1
      },
      "p_goal": 21,
-     "p_dec": 33,
+     "p_dec": 34,
      "pid": "306199",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -3500,7 +3500,7 @@
       "a": 0
      },
      "p_goal": 15,
-     "p_dec": 17,
+     "p_dec": 18,
      "pid": "290216",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -3519,8 +3519,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 15,
+     "p_goal": 14,
+     "p_dec": 16,
      "pid": "330626",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -3539,8 +3539,8 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 15,
+     "p_goal": 12,
+     "p_dec": 16,
      "pid": "189386",
      "stats_league": "uefa.europa",
      "season": 2026
@@ -3615,35 +3615,35 @@
     "score": {
      "market": "exact",
      "label": "Score exact 2-0",
-     "p": 0.1076,
+     "p": 0.1051,
      "prob": 11,
-     "fair": 9.3,
+     "fair": 9.52,
      "stars": 1,
      "value": "2-0"
     },
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.403,
-     "prob": 40,
-     "fair": 2.48,
+     "p": 0.4136,
+     "prob": 41,
+     "fair": 2.42,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wh_nil",
       "label": "Ferencvaros gagne sans encaisser de but",
-      "p": 0.3673,
-      "prob": 37,
-      "fair": 2.72,
+      "p": 0.3613,
+      "prob": 36,
+      "fair": 2.77,
       "stars": 1
      },
      {
       "market": "wh_btts",
       "label": "Ferencvaros gagne et les deux équipes marquent",
-      "p": 0.3257,
+      "p": 0.3323,
       "prob": 33,
-      "fair": 3.07,
+      "fair": 3.01,
       "stars": 1
      }
     ],
@@ -3659,14 +3659,14 @@
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026,
-     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (69 %) · 2,3 buts attendus pour Ferencvaros"
+     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (69 %) · 2,4 buts attendus pour Ferencvaros"
     },
     "decisive": {
      "market": "dec",
      "label": "Jonathan Levin buteur ou passeur",
-     "p": 0.03,
-     "prob": 3,
-     "fair": 33.33,
+     "p": 0.04,
+     "prob": 4,
+     "fair": 25.0,
      "stars": 1,
      "player": "Jonathan Levin",
      "team": "Ferencvaros",
@@ -3678,7 +3678,7 @@
      "pid": "206847",
      "stats_league": "usa.usl.1",
      "season": 2026,
-     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (69 %) · 2,3 buts attendus pour Ferencvaros"
+     "why": "0 but et 0 passe en 4 matchs · Ferencvaros favori (69 %) · 2,4 buts attendus pour Ferencvaros"
     }
    },
    "second": null,
@@ -36432,53 +36432,7 @@
     "ned.1": 717,
     "sco.1": 539
    },
-   "elo_fetch": {
-    "tur.1": {
-     "2026": 108
-    },
-    "uefa.europa": {
-     "2026": 72
-    },
-    "esp.1": {
-     "2026": 129
-    },
-    "eng.1": {
-     "2026": 110
-    },
-    "ger.1": {
-     "2026": 90
-    },
-    "fra.1": {
-     "2026": 99
-    },
-    "gre.1": {
-     "2026": 76
-    },
-    "ita.1": {
-     "2026": 120
-    },
-    "aut.1": {
-     "2026": 78
-    },
-    "bel.1": {
-     "2026": 108
-    },
-    "por.1": {
-     "2026": 98
-    },
-    "usa.usl.1": {
-     "2026": 390
-    },
-    "nor.1": {
-     "2026": 216
-    },
-    "ned.1": {
-     "2026": 117
-    },
-    "sco.1": {
-     "2026": 83
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
