@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T20:45+01:00",
+ "generated": "2026-11-27T21:10+01:00",
  "date": "2026-11-27",
  "nhl_date": "2026-11-27",
  "foot": [
@@ -10,7 +10,7 @@
    "kickoff": "2026-11-27T19:30:00+00:00",
    "time": "20:30",
    "state": "in",
-   "score": "0-0",
+   "score": "1-1",
    "home": "Bremen",
    "away": "Gladbach",
    "form_h": "VDVDV",
@@ -408,8 +408,8 @@
    "league": "Ligue 1",
    "kickoff": "2026-11-27T19:45:00+00:00",
    "time": "20:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Brest",
    "away": "Paris FC",
    "form_h": "VVVDN",
@@ -695,8 +695,6 @@
     "Paris FC : 2e, 23 points, 21 buts marqués et 10 encaissés en 11 matchs.",
     "Brest : 17 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
     "Paris FC : 21 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
-    "Brest : attaque revue à la baisse (−6 %) d'après la compo officielle (Mama Baldé ne commence pas).",
-    "Paris FC : attaque revue à la baisse (−3 %) d'après la compo officielle.",
     "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -705,7 +703,7 @@
     "main": {
      "market": "1N",
      "label": "Brest ou nul",
-     "p": 0.641,
+     "p": 0.6411,
      "prob": 64,
      "fair": 1.56,
      "stars": 3,
@@ -724,14 +722,14 @@
      "label": "Score exact 1-0",
      "p": 0.0912,
      "prob": 9,
-     "fair": 10.97,
+     "fair": 10.96,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Brest gagne et plus de 2,5 buts",
-     "p": 0.2297,
+     "p": 0.2296,
      "prob": 23,
      "fair": 4.35,
      "stars": 1
@@ -740,7 +738,7 @@
      {
       "market": "htft_h",
       "label": "Brest mène à la mi-temps et gagne le match",
-      "p": 0.2266,
+      "p": 0.2265,
       "prob": 23,
       "fair": 4.41,
       "stars": 1
@@ -803,8 +801,8 @@
    "league": "Serie A",
    "kickoff": "2026-11-27T19:45:00+00:00",
    "time": "20:45",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Venezia",
    "away": "Bologna",
    "form_h": "DVDDD",
@@ -1090,7 +1088,6 @@
     "Bologna : 9e, 18 points, 17 buts marqués et 15 encaissés en 12 matchs.",
     "Venezia : 8 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
     "Bologna : 17 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Venezia : attaque revue à la baisse (−9 %) d'après la compo officielle (Richie Sagrado, Toma Basic ne commencent pas).",
     "Compositions officielles prises en compte : Riccardo Orsolini (remplaçant) ne commence pas le match."
    ],
    "reading": "Bologna est favori sans écraser le match (58 %).",
@@ -1099,7 +1096,7 @@
     "main": {
      "market": "N2",
      "label": "Nul ou Bologna",
-     "p": 0.8107,
+     "p": 0.8108,
      "prob": 81,
      "fair": 1.23,
      "stars": 5,
@@ -1125,16 +1122,16 @@
     "fun": {
      "market": "htft_a",
      "label": "Bologna mène à la mi-temps et gagne le match",
-     "p": 0.367,
+     "p": 0.3669,
      "prob": 37,
-     "fair": 2.72,
+     "fair": 2.73,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "wa_o25",
       "label": "Bologna gagne et plus de 2,5 buts",
-      "p": 0.3554,
+      "p": 0.3553,
       "prob": 36,
       "fair": 2.81,
       "stars": 1
@@ -1197,8 +1194,8 @@
    "league": "Premier League",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "1-0",
    "home": "Nottm Forest",
    "away": "Chelsea",
    "form_h": "DVDND",
@@ -1484,8 +1481,6 @@
     "Chelsea : 8e, 16 points, 20 buts marqués et 20 encaissés en 11 matchs.",
     "Nottm Forest : 9 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
     "Chelsea : 17 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat.",
-    "Nottm Forest : attaque revue à la baisse (−8 %) d'après la compo officielle (Dan Ndoye ne commence pas).",
-    "Chelsea : attaque revue à la baisse (−12 %) d'après la compo officielle (João Pedro ne commence pas).",
     "Compositions officielles prises en compte : Dan Ndoye (remplaçant), João Pedro (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
@@ -1511,7 +1506,7 @@
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.0911,
+     "p": 0.0912,
      "prob": 9,
      "fair": 10.97,
      "stars": 1,
@@ -1520,7 +1515,7 @@
     "fun": {
      "market": "o35",
      "label": "Plus de 3,5 buts",
-     "p": 0.3002,
+     "p": 0.3001,
      "prob": 30,
      "fair": 3.33,
      "stars": 1
@@ -1529,7 +1524,7 @@
      {
       "market": "wh_o25",
       "label": "Nottm Forest gagne et plus de 2,5 buts",
-      "p": 0.2452,
+      "p": 0.2451,
       "prob": 25,
       "fair": 4.08,
       "stars": 1
@@ -1595,8 +1590,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Levante",
    "away": "Racing",
    "form_h": "NVNDD",
@@ -1882,7 +1877,6 @@
     "Racing : 7e, 17 points, 20 buts marqués et 32 encaissés en 13 matchs.",
     "Levante : 12 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
     "Racing : 15 buts marqués et 27 encaissés sur ses 10 derniers matchs de championnat.",
-    "Levante : attaque revue à la baisse (−14 %) d'après la compo officielle (Roger Brugué ne commence pas).",
     "Compositions officielles prises en compte : Roger Brugué (remplaçant) ne commence pas le match."
    ],
    "reading": "Levante est favori sans écraser le match (48 %).",
@@ -1891,7 +1885,7 @@
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7339,
+     "p": 0.7338,
      "prob": 73,
      "fair": 1.36,
      "stars": 4,
@@ -1926,7 +1920,7 @@
      {
       "market": "wh_btts",
       "label": "Levante gagne et les deux équipes marquent",
-      "p": 0.3172,
+      "p": 0.3171,
       "prob": 32,
       "fair": 3.15,
       "stars": 1
@@ -2385,7 +2379,7 @@
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
    "state": "LIVE",
-   "score": "2-3",
+   "score": "3-3",
    "home": "New Jersey Devils",
    "away": "Calgary Flames",
    "rec_h": "17-8-0 · 2e Metropolitan · 2 victoires de suite",
@@ -2776,7 +2770,7 @@
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
    "state": "LIVE",
-   "score": "2-3",
+   "score": "3-3",
    "home": "Nashville Predators",
    "away": "Utah Mammoth",
    "rec_h": "13-6-5 · 4e Central · 2 victoires de suite",
@@ -3538,8 +3532,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Tampa Bay Lightning",
    "away": "Ottawa Senators",
    "rec_h": "15-7-2 · 2e Atlantic · 2 défaites de suite",
@@ -3839,7 +3833,6 @@
     "Tampa Bay Lightning : 85 buts marqués et 71 encaissés en 24 matchs.",
     "Ottawa Senators : 84 buts marqués et 76 encaissés en 26 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Ottawa Senators : Linus Ullmark (93,5 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 6 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -3866,7 +3859,7 @@
     "fun": {
      "market": "a2",
      "label": "Ottawa Senators gagne par 2 buts d'écart ou plus",
-     "p": 0.3098,
+     "p": 0.3099,
      "prob": 31,
      "fair": 3.23,
      "stars": 1
@@ -3875,15 +3868,15 @@
      {
       "market": "wa_o55",
       "label": "Ottawa Senators gagne et plus de 5,5 buts",
-      "p": 0.2758,
+      "p": 0.2759,
       "prob": 28,
-      "fair": 3.63,
+      "fair": 3.62,
       "stars": 1
      },
      {
       "market": "wa_o65",
       "label": "Ottawa Senators gagne et plus de 6,5 buts",
-      "p": 0.2191,
+      "p": 0.2192,
       "prob": 22,
       "fair": 4.56,
       "stars": 1
@@ -3929,8 +3922,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Philadelphia Flyers",
    "away": "Vancouver Canucks",
    "rec_h": "9-12-6 · 5e Metropolitan · 1 défaite de suite",
@@ -4230,7 +4223,6 @@
     "Philadelphia Flyers : 70 buts marqués et 95 encaissés en 27 matchs.",
     "Vancouver Canucks : 75 buts marqués et 119 encaissés en 27 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Vancouver Canucks : Leevi Meriläinen (88,5 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 4 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Philadelphia Flyers est favori (64 % en comptant la prolongation).",
@@ -4258,7 +4250,7 @@
     "fun": {
      "market": "wh_o55",
      "label": "Philadelphia Flyers gagne et plus de 5,5 buts",
-     "p": 0.3866,
+     "p": 0.3867,
      "prob": 39,
      "fair": 2.59,
      "stars": 1
@@ -4321,8 +4313,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Washington Capitals",
    "away": "Florida Panthers",
    "rec_h": "11-11-0 · 6e Metropolitan · 1 victoire de suite",
@@ -4622,7 +4614,6 @@
     "Washington Capitals : 79 buts marqués et 86 encaissés en 22 matchs.",
     "Florida Panthers : 81 buts marqués et 74 encaissés en 25 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Washington Capitals : Logan Thompson (87,7 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -4632,7 +4623,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.7097,
+     "p": 0.7096,
      "prob": 71,
      "fair": 1.41,
      "stars": 4,
@@ -4712,8 +4703,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Columbus Blue Jackets",
    "away": "Detroit Red Wings",
    "rec_h": "9-13-1 · 7e Metropolitan · 1 défaite en prolongation de suite",
@@ -5013,7 +5004,6 @@
     "Columbus Blue Jackets : 58 buts marqués et 74 encaissés en 23 matchs.",
     "Detroit Red Wings : 65 buts marqués et 72 encaissés en 24 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Detroit Red Wings : John Gibson (86,2 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 7 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -5023,7 +5013,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.576,
+     "p": 0.5759,
      "prob": 58,
      "fair": 1.74,
      "stars": 2,
@@ -5049,7 +5039,7 @@
      {
       "market": "wh_o55",
       "label": "Columbus Blue Jackets gagne et plus de 5,5 buts",
-      "p": 0.3025,
+      "p": 0.3024,
       "prob": 30,
       "fair": 3.31,
       "stars": 1
@@ -5057,7 +5047,7 @@
      {
       "market": "wh_o65",
       "label": "Columbus Blue Jackets gagne et plus de 6,5 buts",
-      "p": 0.2443,
+      "p": 0.2442,
       "prob": 24,
       "fair": 4.09,
       "stars": 1
@@ -38808,7 +38798,7 @@
  },
  "second": {
   "foot": {
-   "ok": 4,
+   "ok": 0,
    "elo": {
     "fra.1": 696,
     "eng.1": 852,
@@ -38820,7 +38810,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 11,
+   "ok": 7,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92526 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
