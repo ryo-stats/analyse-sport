@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T20:20+01:00",
+ "generated": "2026-11-27T20:45+01:00",
  "date": "2026-11-27",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "time": "20:30",
    "home": "Bremen",
    "away": "Gladbach",
-   "state": "pre",
+   "state": "in",
    "xgH": 2.85,
    "xgA": 1.23,
    "pH": 71,
@@ -22,7 +22,7 @@
     "main": {
      "market": "1N",
      "label": "Bremen ou nul",
-     "p": 0.8627,
+     "p": 0.8626,
      "prob": 86,
      "fair": 1.16,
      "stars": 5,
@@ -198,6 +198,15 @@
    "pA": 58,
    "edate": "20261127",
    "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Bologna",
+     "p": 0.8107,
+     "prob": 81,
+     "fair": 1.23,
+     "stars": 5,
+     "why": "10 derniers matchs : Venezia 8 marqués / 21 encaissés · Bologna 17 / 13"
+    },
     "winner": {
      "market": "2",
      "label": "Victoire Bologna",
@@ -721,7 +730,7 @@
    "time": "21:00",
    "home": "Tampa Bay Lightning",
    "away": "Ottawa Senators",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.94,
    "xgA": 3.0,
    "pH": 41,
@@ -790,7 +799,7 @@
    "time": "21:00",
    "home": "Philadelphia Flyers",
    "away": "Vancouver Canucks",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.55,
    "xgA": 2.65,
    "pH": 56,
@@ -860,7 +869,7 @@
    "time": "21:00",
    "home": "Washington Capitals",
    "away": "Florida Panthers",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.41,
    "xgA": 3.67,
    "pH": 39,
@@ -929,7 +938,7 @@
    "time": "21:00",
    "home": "Columbus Blue Jackets",
    "away": "Detroit Red Wings",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 3.13,
    "xgA": 3.01,
    "pH": 44,
@@ -1487,10 +1496,10 @@
   "nhl": 15,
   "top": [
    {
-    "label": "Bremen ou nul",
-    "prob": 86,
-    "time": "20:30",
-    "match": "Bremen – Gladbach"
+    "label": "Nul ou Bologna",
+    "prob": 81,
+    "time": "20:45",
+    "match": "Venezia – Bologna"
    },
    {
     "label": "Connor McDavid : au moins 1 point",

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T20:20+01:00",
+ "generated": "2026-11-27T20:45+01:00",
  "date": "2026-11-27",
  "nhl_date": "2026-11-27",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "Bundesliga",
    "kickoff": "2026-11-27T19:30:00+00:00",
    "time": "20:30",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Bremen",
    "away": "Gladbach",
    "form_h": "VDVDV",
@@ -296,8 +296,6 @@
     "Gladbach : 18e, 4 points, 12 buts marqués et 26 encaissés en 10 matchs.",
     "Bremen : 21 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
     "Gladbach : 12 buts marqués et 26 encaissés sur ses 10 derniers matchs de championnat.",
-    "Bremen : attaque revue à la baisse (−8 %) d'après la compo officielle.",
-    "Gladbach : attaque revue à la baisse (−15 %) d'après la compo officielle (Hugo Bolin ne commence pas).",
     "Compositions officielles prises en compte : Marco Grüll (absent), Justin Njinmah (absent), Hugo Bolin (absent) ne commencent pas le match."
    ],
    "reading": "Bremen est nettement favori (71 %).",
@@ -306,7 +304,7 @@
     "main": {
      "market": "1N",
      "label": "Bremen ou nul",
-     "p": 0.8627,
+     "p": 0.8626,
      "prob": 86,
      "fair": 1.16,
      "stars": 5,
@@ -792,10 +790,7 @@
      "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": true
-   },
+   "second": null,
    "country": "France",
    "code": "fra.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
@@ -1101,6 +1096,15 @@
    "reading": "Bologna est favori sans écraser le match (58 %).",
    "stakes": "Venezia (20e) est en zone de relégation : match vital.",
    "picks": {
+    "main": {
+     "market": "N2",
+     "label": "Nul ou Bologna",
+     "p": 0.8107,
+     "prob": 81,
+     "fair": 1.23,
+     "stars": 5,
+     "why": "10 derniers matchs : Venezia 8 marqués / 21 encaissés · Bologna 17 / 13"
+    },
     "winner": {
      "market": "2",
      "label": "Victoire Bologna",
@@ -1178,23 +1182,9 @@
      "stats_league": "ita.1",
      "season": 2026,
      "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
-    },
-    "held": {
-     "market": "N2",
-     "label": "Nul ou Bologna",
-     "p": 0.8107,
-     "prob": 81,
-     "fair": 1.23,
-     "stars": 5,
-     "why": "10 derniers matchs : Venezia 8 marqués / 21 encaissés · Bologna 17 / 13",
-     "note": "« Nul ou Bologna » : 81 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
-   "second": {
-    "src": "marché des paris",
-    "agree": false,
-    "note": "« Nul ou Bologna » : 81 % selon l'analyse, le marché des paris est nettement moins confiant"
-   },
+   "second": null,
    "country": "Italie",
    "code": "ita.1",
    "league_logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
@@ -2005,7 +1995,7 @@
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
    "state": "LIVE",
-   "score": "1-1",
+   "score": "1-2",
    "home": "Boston Bruins",
    "away": "Toronto Maple Leafs",
    "rec_h": "15-8-1 · 4e Atlantic · 1 défaite de suite",
@@ -2395,7 +2385,7 @@
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
    "state": "LIVE",
-   "score": "2-2",
+   "score": "2-3",
    "home": "New Jersey Devils",
    "away": "Calgary Flames",
    "rec_h": "17-8-0 · 2e Metropolitan · 2 victoires de suite",
@@ -2786,7 +2776,7 @@
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
    "state": "LIVE",
-   "score": "2-2",
+   "score": "2-3",
    "home": "Nashville Predators",
    "away": "Utah Mammoth",
    "rec_h": "13-6-5 · 4e Central · 2 victoires de suite",
@@ -3176,7 +3166,7 @@
    "kickoff": "2026-11-27T19:00:00+00:00",
    "time": "20:00",
    "state": "LIVE",
-   "score": "1-0",
+   "score": "2-0",
    "home": "St. Louis Blues",
    "away": "Dallas Stars",
    "rec_h": "13-9-3 · 6e Central · 1 défaite en prolongation de suite",
@@ -3548,7 +3538,7 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Tampa Bay Lightning",
    "away": "Ottawa Senators",
@@ -3939,7 +3929,7 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Philadelphia Flyers",
    "away": "Vancouver Canucks",
@@ -4331,7 +4321,7 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Washington Capitals",
    "away": "Florida Panthers",
@@ -4722,7 +4712,7 @@
    "league": "NHL",
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
-   "state": "FUT",
+   "state": "PRE",
    "score": null,
    "home": "Columbus Blue Jackets",
    "away": "Detroit Red Wings",
@@ -38818,7 +38808,7 @@
  },
  "second": {
   "foot": {
-   "ok": 5,
+   "ok": 4,
    "elo": {
     "fra.1": 696,
     "eng.1": 852,
@@ -38826,23 +38816,7 @@
     "ita.1": 872,
     "ger.1": 676
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 99
-    },
-    "eng.1": {
-     "2026": 110
-    },
-    "esp.1": {
-     "2026": 129
-    },
-    "ita.1": {
-     "2026": 120
-    },
-    "ger.1": {
-     "2026": 90
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
