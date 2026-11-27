@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T18:40+01:00",
+ "generated": "2026-11-27T19:05+01:00",
  "date": "2026-11-27",
  "nhl_date": "2026-11-27",
  "foot": [
@@ -1919,8 +1919,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "0-0",
    "home": "Boston Bruins",
    "away": "Toronto Maple Leafs",
    "rec_h": "15-8-1 · 4e Atlantic · 1 défaite de suite",
@@ -2220,7 +2220,6 @@
     "Boston Bruins : 85 buts marqués et 65 encaissés en 24 matchs.",
     "Toronto Maple Leafs : 82 buts marqués et 92 encaissés en 26 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de Toronto Maple Leafs : Sergei Bobrovsky (87,4 % d'arrêts), sous la moyenne : l'adversaire devrait marquer environ 5 % de buts en plus.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Boston Bruins est favori (61 % en comptant la prolongation).",
@@ -2264,7 +2263,7 @@
      {
       "market": "wh_o65",
       "label": "Boston Bruins gagne et plus de 6,5 buts",
-      "p": 0.3075,
+      "p": 0.3074,
       "prob": 31,
       "fair": 3.25,
       "stars": 1
@@ -38750,7 +38749,7 @@
    "status": "ok"
   },
   "nhl": {
-   "ok": 15,
+   "ok": 14,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92526 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
