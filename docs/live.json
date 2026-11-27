@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T19:05+01:00",
+ "generated": "2026-11-27T19:30+01:00",
  "date": "2026-11-27",
  "matches": [
   {
@@ -12,45 +12,45 @@
    "home": "Bremen",
    "away": "Gladbach",
    "state": "pre",
-   "xgH": 3.1,
-   "xgA": 1.45,
-   "pH": 70,
+   "xgH": 2.85,
+   "xgA": 1.23,
+   "pH": 71,
    "pD": 15,
-   "pA": 15,
+   "pA": 14,
    "edate": "20261127",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Bremen ou nul",
-     "p": 0.8509,
-     "prob": 85,
-     "fair": 1.18,
+     "p": 0.8627,
+     "prob": 86,
+     "fair": 1.16,
      "stars": 5,
      "why": "10 derniers matchs : Bremen 21 marqués / 15 encaissés · Gladbach 12 / 26"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Bremen",
-     "p": 0.7034,
-     "prob": 70,
-     "fair": 1.42,
+     "p": 0.7091,
+     "prob": 71,
+     "fair": 1.41,
      "stars": 4
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 3-1",
-     "p": 0.0761,
+     "label": "Score exact 2-1",
+     "p": 0.0845,
      "prob": 8,
-     "fair": 13.14,
+     "fair": 11.83,
      "stars": 1,
-     "value": "3-1"
+     "value": "2-1"
     },
     "fun": {
      "market": "sc2",
      "label": "Niclas Füllkrug marque au moins 2 buts",
-     "p": 0.3898,
-     "prob": 39,
-     "fair": 2.57,
+     "p": 0.351,
+     "prob": 35,
+     "fair": 2.85,
      "stars": 1,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
@@ -59,23 +59,24 @@
     "player": {
      "market": "scorer",
      "label": "Niclas Füllkrug marque",
-     "p": 0.74,
-     "prob": 74,
-     "fair": 1.35,
+     "p": 0.71,
+     "prob": 71,
+     "fair": 1.41,
      "stars": 4,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
+     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "10 buts et 1 passe en 10 matchs · Bremen favori (70 %) · 3,1 buts attendus pour Bremen"
+     "why": "10 buts et 1 passe en 10 matchs · titulaire · Bremen favori (71 %) · 2,8 buts attendus pour Bremen"
     },
     "decisive": {
      "market": "dec",
      "label": "Niclas Füllkrug buteur ou passeur",
-     "p": 0.78,
-     "prob": 78,
-     "fair": 1.28,
+     "p": 0.75,
+     "prob": 75,
+     "fair": 1.33,
      "stars": 4,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
@@ -84,10 +85,11 @@
       10,
       1
      ],
+     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "10 buts et 1 passe en 10 matchs · Bremen favori (70 %) · 3,1 buts attendus pour Bremen"
+     "why": "10 buts et 1 passe en 10 matchs · titulaire · Bremen favori (71 %) · 2,8 buts attendus pour Bremen"
     }
    }
   },
@@ -512,7 +514,7 @@
    "time": "19:00",
    "home": "New Jersey Devils",
    "away": "Calgary Flames",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.85,
    "xgA": 2.44,
    "pH": 64,
@@ -543,7 +545,7 @@
     "fun": {
      "market": "wh_o65",
      "label": "New Jersey Devils gagne et plus de 6,5 buts",
-     "p": 0.351,
+     "p": 0.3509,
      "prob": 35,
      "fair": 2.85,
      "stars": 1
@@ -582,7 +584,7 @@
    "time": "19:00",
    "home": "Nashville Predators",
    "away": "Utah Mammoth",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 3.07,
    "xgA": 3.19,
    "pH": 40,
@@ -595,7 +597,7 @@
     "main": {
      "market": "o55",
      "label": "Plus de 5,5 buts",
-     "p": 0.5952,
+     "p": 0.5951,
      "prob": 60,
      "fair": 1.68,
      "stars": 2,
@@ -612,7 +614,7 @@
     "fun": {
      "market": "a2",
      "label": "Utah Mammoth gagne par 2 buts d'écart ou plus",
-     "p": 0.3223,
+     "p": 0.3222,
      "prob": 32,
      "fair": 3.1,
      "stars": 1
@@ -651,7 +653,7 @@
    "time": "20:00",
    "home": "St. Louis Blues",
    "away": "Dallas Stars",
-   "state": "FUT",
+   "state": "PRE",
    "xgH": 2.66,
    "xgA": 2.82,
    "pH": 39,
@@ -1487,7 +1489,7 @@
   "top": [
    {
     "label": "Bremen ou nul",
-    "prob": 85,
+    "prob": 86,
     "time": "20:30",
     "match": "Bremen – Gladbach"
    },
