@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T19:55+01:00",
+ "generated": "2026-11-27T20:20+01:00",
  "date": "2026-11-27",
  "matches": [
   {
@@ -103,67 +103,68 @@
    "home": "Brest",
    "away": "Paris FC",
    "state": "pre",
-   "xgH": 1.48,
-   "xgA": 1.38,
-   "pH": 40,
-   "pD": 25,
-   "pA": 35,
+   "xgH": 1.39,
+   "xgA": 1.33,
+   "pH": 38,
+   "pD": 26,
+   "pA": 36,
    "edate": "20261127",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Brest ou nul",
-     "p": 0.6462,
-     "prob": 65,
-     "fair": 1.55,
+     "p": 0.641,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3,
      "why": "10 derniers matchs : Brest 17 marqués / 10 encaissés · Paris FC 21 / 10"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Brest",
-     "p": 0.3966,
-     "prob": 40,
-     "fair": 2.52,
+     "p": 0.3843,
+     "prob": 38,
+     "fair": 2.6,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0864,
+     "label": "Score exact 1-0",
+     "p": 0.0912,
      "prob": 9,
-     "fair": 11.57,
+     "fair": 10.97,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Brest gagne et plus de 2,5 buts",
-     "p": 0.2491,
-     "prob": 25,
-     "fair": 4.01,
+     "p": 0.2297,
+     "prob": 23,
+     "fair": 4.35,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Ludovic Ajorque marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Ludovic Ajorque",
      "team": "Brest",
+     "lineup": "start",
      "pid": "192015",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Brest annoncé gagnant (40 %) · 1,5 but attendu pour Brest"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     },
     "decisive": {
      "market": "dec",
      "label": "Ludovic Ajorque buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Ludovic Ajorque",
      "team": "Brest",
@@ -172,10 +173,11 @@
       5,
       1
      ],
+     "lineup": "start",
      "pid": "192015",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Brest annoncé gagnant (40 %) · 1,5 but attendu pour Brest"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     }
    }
   },
@@ -189,45 +191,36 @@
    "home": "Venezia",
    "away": "Bologna",
    "state": "pre",
-   "xgH": 1.01,
+   "xgH": 0.92,
    "xgA": 1.8,
-   "pH": 21,
+   "pH": 19,
    "pD": 23,
-   "pA": 56,
+   "pA": 58,
    "edate": "20261127",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Bologna",
-     "p": 0.7905,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
-     "why": "10 derniers matchs : Venezia 8 marqués / 21 encaissés · Bologna 17 / 13"
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Bologna",
-     "p": 0.5597,
-     "prob": 56,
-     "fair": 1.79,
+     "p": 0.5813,
+     "prob": 58,
+     "fair": 1.72,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1089,
-     "prob": 11,
-     "fair": 9.18,
+     "p": 0.1189,
+     "prob": 12,
+     "fair": 8.41,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Bologna gagne et plus de 2,5 buts",
-     "p": 0.3529,
-     "prob": 35,
-     "fair": 2.83,
+     "market": "htft_a",
+     "label": "Bologna mène à la mi-temps et gagne le match",
+     "p": 0.367,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1
     },
     "player": {
@@ -239,10 +232,11 @@
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
+     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Bologna favori (56 %) · 1,8 buts attendus pour Bologna"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
     },
     "decisive": {
      "market": "dec",
@@ -258,10 +252,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Bologna favori (56 %) · 1,8 buts attendus pour Bologna"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
     }
    }
   },
@@ -275,67 +270,68 @@
    "home": "Nottm Forest",
    "away": "Chelsea",
    "state": "pre",
-   "xgH": 1.57,
-   "xgA": 1.51,
-   "pH": 39,
-   "pD": 24,
-   "pA": 37,
+   "xgH": 1.45,
+   "xgA": 1.32,
+   "pH": 40,
+   "pD": 25,
+   "pA": 34,
    "edate": "20261127",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Nottm Forest ou nul",
-     "p": 0.6332,
-     "prob": 63,
-     "fair": 1.58,
+     "p": 0.6563,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "why": "10 derniers matchs : Nottm Forest 9 marqués / 14 encaissés · Chelsea 17 / 18"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Nottm Forest",
-     "p": 0.3937,
-     "prob": 39,
-     "fair": 2.54,
+     "p": 0.4022,
+     "prob": 40,
+     "fair": 2.49,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0856,
+     "label": "Score exact 1-0",
+     "p": 0.0911,
      "prob": 9,
-     "fair": 11.68,
+     "fair": 10.97,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Nottm Forest gagne et plus de 2,5 buts",
-     "p": 0.2645,
-     "prob": 26,
-     "fair": 3.78,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3002,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1
     },
     "player": {
      "market": "scorer",
      "label": "Liam Delap marque",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Liam Delap",
      "team": "Nottm Forest",
+     "lineup": "start",
      "pid": "307114",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Nottm Forest annoncé gagnant (39 %) · 1,6 buts attendus pour Nottm Forest"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Nottm Forest annoncé gagnant (40 %) · 1,4 but attendu pour Nottm Forest"
     },
     "decisive": {
      "market": "dec",
      "label": "Liam Delap buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Liam Delap",
      "team": "Nottm Forest",
@@ -344,10 +340,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "307114",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Nottm Forest annoncé gagnant (39 %) · 1,6 buts attendus pour Nottm Forest"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Nottm Forest annoncé gagnant (40 %) · 1,4 but attendu pour Nottm Forest"
     }
    }
   },
@@ -361,79 +358,81 @@
    "home": "Levante",
    "away": "Racing",
    "state": "pre",
-   "xgH": 2.48,
+   "xgH": 2.12,
    "xgA": 1.7,
-   "pH": 55,
-   "pD": 19,
-   "pA": 26,
+   "pH": 48,
+   "pD": 21,
+   "pA": 31,
    "edate": "20261127",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7864,
-     "prob": 79,
-     "fair": 1.27,
+     "p": 0.7339,
+     "prob": 73,
+     "fair": 1.36,
      "stars": 4,
      "why": "10 derniers matchs : Levante 12 marqués / 17 encaissés · Racing 15 / 27"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Levante",
-     "p": 0.549,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2
+     "p": 0.478,
+     "prob": 48,
+     "fair": 2.09,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0801,
+     "p": 0.0838,
      "prob": 8,
-     "fair": 12.49,
+     "fair": 11.93,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Levante gagne et les deux équipes marquent",
-     "p": 0.3816,
+     "market": "wh_o25",
+     "label": "Levante gagne et plus de 2,5 buts",
+     "p": 0.3821,
      "prob": 38,
      "fair": 2.62,
      "stars": 1
     },
     "player": {
      "market": "scorer",
-     "label": "Roger Brugué marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "label": "Iván Romero marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
-     "player": "Roger Brugué",
+     "player": "Iván Romero",
      "team": "Levante",
-     "pid": "267591",
+     "lineup": "start",
+     "pid": "311054",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 12 matchs · 10 derniers matchs : 3 buts, 1 passe · Levante favori (55 %) · 2,5 buts attendus pour Levante"
+     "why": "3 buts et 0 passe en 13 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Levante favori (48 %) · 2,1 buts attendus pour Levante"
     },
     "decisive": {
      "market": "dec",
-     "label": "Roger Brugué buteur ou passeur",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2,
-     "player": "Roger Brugué",
+     "label": "Iván Romero buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Iván Romero",
      "team": "Levante",
      "base": [
-      12,
-      5,
-      1
+      13,
+      3,
+      0
      ],
-     "pid": "267591",
+     "lineup": "start",
+     "pid": "311054",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 12 matchs · 10 derniers matchs : 3 buts, 1 passe · Levante favori (55 %) · 2,5 buts attendus pour Levante"
+     "why": "3 buts et 0 passe en 13 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Levante favori (48 %) · 2,1 buts attendus pour Levante"
     }
    }
   },
@@ -653,7 +652,7 @@
    "time": "20:00",
    "home": "St. Louis Blues",
    "away": "Dallas Stars",
-   "state": "PRE",
+   "state": "LIVE",
    "xgH": 2.66,
    "xgA": 2.82,
    "pH": 39,
@@ -666,7 +665,7 @@
     "main": {
      "market": "u55",
      "label": "Moins de 5,5 buts",
-     "p": 0.533,
+     "p": 0.5329,
      "prob": 53,
      "fair": 1.88,
      "stars": 2,
@@ -1494,14 +1493,14 @@
     "match": "Bremen – Gladbach"
    },
    {
-    "label": "Nul ou Bologna",
-    "prob": 79,
-    "time": "20:45",
-    "match": "Venezia – Bologna"
+    "label": "Connor McDavid : au moins 1 point",
+    "prob": 76,
+    "time": "02:00",
+    "match": "Edmonton Oilers – Seattle Kraken"
    },
    {
     "label": "Plus de 2,5 buts",
-    "prob": 79,
+    "prob": 73,
     "time": "21:00",
     "match": "Levante – Racing"
    }

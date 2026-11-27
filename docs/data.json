@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T19:55+01:00",
+ "generated": "2026-11-27T20:20+01:00",
  "date": "2026-11-27",
  "nhl_date": "2026-11-27",
  "foot": [
@@ -418,24 +418,24 @@
    "form_a": "VVVDV",
    "rank_h": 6,
    "rank_a": 2,
-   "pH": 40,
-   "pD": 25,
-   "pA": 35,
+   "pH": 38,
+   "pD": 26,
+   "pA": 36,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.48,
-   "xgA": 1.38,
+   "xgH": 1.39,
+   "xgA": 1.33,
    "scores": [
     "1-1",
-    "2-1",
-    "1-0"
+    "1-0",
+    "0-1"
    ],
    "scorep": [
     12,
     9,
-    8
+    9
    ],
-   "over25": 54,
-   "btts": 58,
+   "over25": 51,
+   "btts": 55,
    "squad_h": [
     {
      "name": "Ludovic Ajorque",
@@ -451,11 +451,12 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 33,
-     "p_dec": 40,
+     "p_goal": 32,
+     "p_dec": 38,
      "pid": "192015",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Kamory Doumbia",
@@ -471,11 +472,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 33,
+     "p_goal": 22,
+     "p_dec": 31,
      "pid": "330412",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Noah Edjouma",
@@ -491,11 +493,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 20,
+     "p_goal": 19,
+     "p_dec": 19,
      "pid": "367360",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pathé Mboup",
@@ -511,31 +514,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 17,
-     "p_dec": 25,
+     "p_goal": 16,
+     "p_dec": 23,
      "pid": "365783",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Mama Baldé",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Brest",
-     "goals": 2,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 15,
-     "p_dec": 22,
-     "pid": "259960",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Lucas Tousart",
@@ -552,10 +536,32 @@
       "a": 0
      },
      "p_goal": 8,
-     "p_dec": 11,
+     "p_dec": 10,
      "pid": "215574",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Mama Baldé",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Brest",
+     "goals": 2,
+     "assists": 1,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 4,
+     "p_dec": 7,
+     "pid": "259960",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -573,11 +579,12 @@
       "g": 9,
       "a": 5
      },
-     "p_goal": 42,
-     "p_dec": 57,
+     "p_goal": 41,
+     "p_dec": 56,
      "pid": "271137",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Maxime López",
@@ -593,11 +600,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 17,
-     "p_dec": 28,
+     "p_goal": 16,
+     "p_dec": 27,
      "pid": "223122",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pablo Pagis",
@@ -614,10 +622,11 @@
       "a": 3
      },
      "p_goal": 14,
-     "p_dec": 29,
+     "p_dec": 28,
      "pid": "334359",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Luca Koleosho",
@@ -637,27 +646,8 @@
      "p_dec": 19,
      "pid": "341333",
      "stats_league": "fra.1",
-     "season": 2026
-    },
-    {
-     "name": "Ilan Kebbal",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Paris FC",
-     "goals": 1,
-     "assists": 1,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 7,
-     "p_dec": 15,
-     "pid": "304918",
-     "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Diego Coppola",
@@ -677,14 +667,39 @@
      "p_dec": 12,
      "pid": "332549",
      "stats_league": "fra.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Samir Chergui",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Paris FC",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 6,
+     "p_dec": 6,
+     "pid": "287572",
+     "stats_league": "fra.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Brest : 6e, 18 points, 19 buts marqués et 12 encaissés en 11 matchs.",
     "Paris FC : 2e, 23 points, 21 buts marqués et 10 encaissés en 11 matchs.",
     "Brest : 17 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
-    "Paris FC : 21 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat."
+    "Paris FC : 21 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
+    "Brest : attaque revue à la baisse (−6 %) d'après la compo officielle (Mama Baldé ne commence pas).",
+    "Paris FC : attaque revue à la baisse (−3 %) d'après la compo officielle.",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Brest (6e) est dans la course à l'Europe. Paris FC (2e) défend une place qualificative pour la Ligue des champions.",
@@ -692,50 +707,50 @@
     "main": {
      "market": "1N",
      "label": "Brest ou nul",
-     "p": 0.6462,
-     "prob": 65,
-     "fair": 1.55,
+     "p": 0.641,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3,
      "why": "10 derniers matchs : Brest 17 marqués / 10 encaissés · Paris FC 21 / 10"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Brest",
-     "p": 0.3966,
-     "prob": 40,
-     "fair": 2.52,
+     "p": 0.3843,
+     "prob": 38,
+     "fair": 2.6,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0864,
+     "label": "Score exact 1-0",
+     "p": 0.0912,
      "prob": 9,
-     "fair": 11.57,
+     "fair": 10.97,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
      "market": "wh_o25",
      "label": "Brest gagne et plus de 2,5 buts",
-     "p": 0.2491,
-     "prob": 25,
-     "fair": 4.01,
+     "p": 0.2297,
+     "prob": 23,
+     "fair": 4.35,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_h",
       "label": "Brest mène à la mi-temps et gagne le match",
-      "p": 0.2361,
-      "prob": 24,
-      "fair": 4.23,
+      "p": 0.2266,
+      "prob": 23,
+      "fair": 4.41,
       "stars": 1
      },
      {
       "market": "wh_by1",
       "label": "Brest gagne d'un seul but",
-      "p": 0.2061,
+      "p": 0.2063,
       "prob": 21,
       "fair": 4.85,
       "stars": 1
@@ -744,23 +759,24 @@
     "player": {
      "market": "scorer",
      "label": "Ludovic Ajorque marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Ludovic Ajorque",
      "team": "Brest",
+     "lineup": "start",
      "pid": "192015",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Brest annoncé gagnant (40 %) · 1,5 but attendu pour Brest"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     },
     "decisive": {
      "market": "dec",
      "label": "Ludovic Ajorque buteur ou passeur",
-     "p": 0.4,
-     "prob": 40,
-     "fair": 2.5,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Ludovic Ajorque",
      "team": "Brest",
@@ -769,10 +785,11 @@
       5,
       1
      ],
+     "lineup": "start",
      "pid": "192015",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Brest annoncé gagnant (40 %) · 1,5 but attendu pour Brest"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     }
    },
    "second": {
@@ -799,24 +816,24 @@
    "form_a": "NVVVV",
    "rank_h": 20,
    "rank_a": 9,
-   "pH": 21,
+   "pH": 19,
    "pD": 23,
-   "pA": 56,
+   "pA": 58,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.01,
+   "xgH": 0.92,
    "xgA": 1.8,
    "scores": [
-    "1-1",
     "0-1",
-    "1-2"
+    "1-1",
+    "0-2"
    ],
    "scorep": [
+    12,
     11,
-    11,
-    10
+    11
    ],
-   "over25": 53,
-   "btts": 53,
+   "over25": 51,
+   "btts": 50,
    "squad_h": [
     {
      "name": "Akor Adams",
@@ -832,11 +849,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 21,
-     "p_dec": 24,
+     "p_goal": 20,
+     "p_dec": 23,
      "pid": "288472",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Antoine Hainaut",
@@ -852,11 +870,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 16,
-     "p_dec": 30,
+     "p_goal": 15,
+     "p_dec": 28,
      "pid": "346916",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "John Yeboah",
@@ -872,11 +891,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 16,
+     "p_goal": 12,
+     "p_dec": 14,
      "pid": "265926",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Enrique Perez",
@@ -892,51 +912,54 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 15,
+     "p_goal": 9,
+     "p_dec": 13,
      "pid": "276636",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Toma Basic",
+     "name": "Matías Moreno",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 0,
+     "assists": 0,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 7,
+     "pid": "186457",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Simon Sohm",
      "pos": "Milieu",
      "side": "h",
      "team": "Venezia",
-     "goals": 1,
-     "assists": 0,
-     "apps": 8,
-     "l10": {
-      "n": 10,
-      "gp": 6,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 12,
-     "pid": "221057",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Richie Sagrado",
-     "pos": "Défenseur",
-     "side": "h",
-     "team": "Venezia",
-     "goals": 1,
+     "goals": 0,
      "assists": 1,
-     "apps": 7,
+     "apps": 11,
      "l10": {
       "n": 10,
-      "gp": 6,
-      "g": 1,
+      "gp": 10,
+      "g": 0,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 16,
-     "pid": "345713",
+     "p_goal": 2,
+     "p_dec": 12,
+     "pid": "275015",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -958,7 +981,8 @@
      "p_dec": 31,
      "pid": "180956",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Samuel Mbangula",
@@ -978,7 +1002,8 @@
      "p_dec": 25,
      "pid": "355997",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tommaso Pobega",
@@ -998,47 +1023,8 @@
      "p_dec": 22,
      "pid": "276654",
      "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Riccardo Orsolini",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Bologna",
-     "goals": 2,
-     "assists": 0,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 4,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 18,
-     "p_dec": 19,
-     "pid": "234426",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
-    {
-     "name": "Roberto Piccoli",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Bologna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "285438",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nadir Zortea",
@@ -1058,67 +1044,103 @@
      "p_dec": 18,
      "pid": "291560",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Nicoló Casale",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "250707",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Arthur Theate",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 1,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "304222",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Venezia : 20e, 6 points, 8 buts marqués et 25 encaissés en 12 matchs.",
     "Bologna : 9e, 18 points, 17 buts marqués et 15 encaissés en 12 matchs.",
     "Venezia : 8 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
-    "Bologna : 17 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat."
+    "Bologna : 17 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
+    "Venezia : attaque revue à la baisse (−9 %) d'après la compo officielle (Richie Sagrado, Toma Basic ne commencent pas).",
+    "Compositions officielles prises en compte : Riccardo Orsolini (remplaçant) ne commence pas le match."
    ],
-   "reading": "Bologna est favori sans écraser le match (56 %).",
+   "reading": "Bologna est favori sans écraser le match (58 %).",
    "stakes": "Venezia (20e) est en zone de relégation : match vital.",
    "picks": {
-    "main": {
-     "market": "N2",
-     "label": "Nul ou Bologna",
-     "p": 0.7905,
-     "prob": 79,
-     "fair": 1.27,
-     "stars": 4,
-     "why": "10 derniers matchs : Venezia 8 marqués / 21 encaissés · Bologna 17 / 13"
-    },
     "winner": {
      "market": "2",
      "label": "Victoire Bologna",
-     "p": 0.5597,
-     "prob": 56,
-     "fair": 1.79,
+     "p": 0.5813,
+     "prob": 58,
+     "fair": 1.72,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1089,
-     "prob": 11,
-     "fair": 9.18,
+     "p": 0.1189,
+     "prob": 12,
+     "fair": 8.41,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Bologna gagne et plus de 2,5 buts",
-     "p": 0.3529,
-     "prob": 35,
-     "fair": 2.83,
+     "market": "htft_a",
+     "label": "Bologna mène à la mi-temps et gagne le match",
+     "p": 0.367,
+     "prob": 37,
+     "fair": 2.72,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_a",
-      "label": "Bologna mène à la mi-temps et gagne le match",
-      "p": 0.352,
-      "prob": 35,
-      "fair": 2.84,
+      "market": "wa_o25",
+      "label": "Bologna gagne et plus de 2,5 buts",
+      "p": 0.3554,
+      "prob": 36,
+      "fair": 2.81,
       "stars": 1
      },
      {
-      "market": "a2",
-      "label": "Bologna gagne avec 2 buts d'écart ou plus",
-      "p": 0.3177,
-      "prob": 32,
-      "fair": 3.15,
+      "market": "wa_nil",
+      "label": "Bologna gagne sans encaisser de but",
+      "p": 0.3332,
+      "prob": 33,
+      "fair": 3.0,
       "stars": 1
      }
     ],
@@ -1131,10 +1153,11 @@
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
+     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Bologna favori (56 %) · 1,8 buts attendus pour Bologna"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
     },
     "decisive": {
      "market": "dec",
@@ -1150,15 +1173,27 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Bologna favori (56 %) · 1,8 buts attendus pour Bologna"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
+    },
+    "held": {
+     "market": "N2",
+     "label": "Nul ou Bologna",
+     "p": 0.8107,
+     "prob": 81,
+     "fair": 1.23,
+     "stars": 5,
+     "why": "10 derniers matchs : Venezia 8 marqués / 21 encaissés · Bologna 17 / 13",
+     "note": "« Nul ou Bologna » : 81 % selon l'analyse, le marché des paris est nettement moins confiant"
     }
    },
    "second": {
     "src": "marché des paris",
-    "agree": true
+    "agree": false,
+    "note": "« Nul ou Bologna » : 81 % selon l'analyse, le marché des paris est nettement moins confiant"
    },
    "country": "Italie",
    "code": "ita.1",
@@ -1180,24 +1215,24 @@
    "form_a": "NDVDD",
    "rank_h": 17,
    "rank_a": 8,
-   "pH": 39,
-   "pD": 24,
-   "pA": 37,
+   "pH": 40,
+   "pD": 25,
+   "pA": 34,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.57,
-   "xgA": 1.51,
+   "xgH": 1.45,
+   "xgA": 1.32,
    "scores": [
     "1-1",
-    "2-1",
-    "1-2"
+    "1-0",
+    "2-1"
    ],
    "scorep": [
-    11,
+    12,
     9,
-    8
+    9
    ],
-   "over25": 59,
-   "btts": 62,
+   "over25": 52,
+   "btts": 56,
    "squad_h": [
     {
      "name": "Liam Delap",
@@ -1213,31 +1248,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 36,
-     "p_dec": 39,
+     "p_goal": 34,
+     "p_dec": 37,
      "pid": "307114",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Dan Ndoye",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Nottm Forest",
-     "goals": 2,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 27,
-     "p_dec": 30,
-     "pid": "275842",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Morgan Gibbs-White",
@@ -1253,11 +1269,12 @@
       "g": 1,
       "a": 3
      },
-     "p_goal": 14,
-     "p_dec": 45,
+     "p_goal": 13,
+     "p_dec": 42,
      "pid": "243396",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Igor Jesus",
@@ -1273,11 +1290,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 16,
+     "p_goal": 13,
+     "p_dec": 15,
      "pid": "287869",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Neco Williams",
@@ -1293,11 +1311,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 15,
+     "p_goal": 12,
+     "p_dec": 14,
      "pid": "291638",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jair Cunha",
@@ -1313,34 +1332,36 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 14,
+     "p_goal": 11,
+     "p_dec": 13,
      "pid": "338876",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Dan Ndoye",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Nottm Forest",
+     "goals": 2,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "275842",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
-    {
-     "name": "João Pedro",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Chelsea",
-     "goals": 5,
-     "assists": 3,
-     "apps": 6,
-     "l10": {
-      "n": 10,
-      "gp": 5,
-      "g": 4,
-      "a": 2
-     },
-     "p_goal": 28,
-     "p_dec": 40,
-     "pid": "284960",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
     {
      "name": "Morgan Rogers",
      "pos": "Milieu",
@@ -1355,11 +1376,12 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 28,
-     "p_dec": 39,
+     "p_goal": 25,
+     "p_dec": 35,
      "pid": "265653",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Pedro Neto",
@@ -1375,11 +1397,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 22,
-     "p_dec": 29,
+     "p_goal": 19,
+     "p_dec": 26,
      "pid": "256115",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Cole Palmer",
@@ -1395,11 +1418,12 @@
       "g": 2,
       "a": 2
      },
-     "p_goal": 17,
-     "p_dec": 33,
+     "p_goal": 15,
+     "p_dec": 30,
      "pid": "296395",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jordan Henderson",
@@ -1415,11 +1439,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 14,
-     "p_dec": 21,
+     "p_goal": 12,
+     "p_dec": 19,
      "pid": "127262",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Romeo Lavia",
@@ -1435,18 +1460,43 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 8,
-     "p_dec": 16,
+     "p_goal": 7,
+     "p_dec": 14,
      "pid": "308217",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Emmanuel Emegha",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Chelsea",
+     "goals": 1,
+     "assists": 0,
+     "apps": 2,
+     "l10": {
+      "n": 10,
+      "gp": 2,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 2,
+     "pid": "304871",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Nottm Forest : 17e, 9 points, 9 buts marqués et 15 encaissés en 11 matchs.",
     "Chelsea : 8e, 16 points, 20 buts marqués et 20 encaissés en 11 matchs.",
     "Nottm Forest : 9 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
-    "Chelsea : 17 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat."
+    "Chelsea : 17 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat.",
+    "Nottm Forest : attaque revue à la baisse (−8 %) d'après la compo officielle (Dan Ndoye ne commence pas).",
+    "Chelsea : attaque revue à la baisse (−12 %) d'après la compo officielle (João Pedro ne commence pas).",
+    "Compositions officielles prises en compte : Dan Ndoye (remplaçant), João Pedro (absent) ne commencent pas le match."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Nottm Forest (17e) lutte pour le maintien, 0 point d'avance sur la zone rouge.",
@@ -1454,75 +1504,76 @@
     "main": {
      "market": "1N",
      "label": "Nottm Forest ou nul",
-     "p": 0.6332,
-     "prob": 63,
-     "fair": 1.58,
+     "p": 0.6563,
+     "prob": 66,
+     "fair": 1.52,
      "stars": 3,
      "why": "10 derniers matchs : Nottm Forest 9 marqués / 14 encaissés · Chelsea 17 / 18"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Nottm Forest",
-     "p": 0.3937,
-     "prob": 39,
-     "fair": 2.54,
+     "p": 0.4022,
+     "prob": 40,
+     "fair": 2.49,
      "stars": 1
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.0856,
+     "label": "Score exact 1-0",
+     "p": 0.0911,
      "prob": 9,
-     "fair": 11.68,
+     "fair": 10.97,
      "stars": 1,
-     "value": "2-1"
+     "value": "1-0"
     },
     "fun": {
-     "market": "wh_o25",
-     "label": "Nottm Forest gagne et plus de 2,5 buts",
-     "p": 0.2645,
-     "prob": 26,
-     "fair": 3.78,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3002,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Nottm Forest mène à la mi-temps et gagne le match",
-      "p": 0.2362,
-      "prob": 24,
-      "fair": 4.23,
+      "market": "wh_o25",
+      "label": "Nottm Forest gagne et plus de 2,5 buts",
+      "p": 0.2452,
+      "prob": 25,
+      "fair": 4.08,
       "stars": 1
      },
      {
-      "market": "wh_btts",
-      "label": "Nottm Forest gagne et les deux équipes marquent",
-      "p": 0.2182,
-      "prob": 22,
-      "fair": 4.58,
+      "market": "htft_h",
+      "label": "Nottm Forest mène à la mi-temps et gagne le match",
+      "p": 0.239,
+      "prob": 24,
+      "fair": 4.18,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Liam Delap marque",
-     "p": 0.36,
-     "prob": 36,
-     "fair": 2.78,
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
      "player": "Liam Delap",
      "team": "Nottm Forest",
+     "lineup": "start",
      "pid": "307114",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Nottm Forest annoncé gagnant (39 %) · 1,6 buts attendus pour Nottm Forest"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Nottm Forest annoncé gagnant (40 %) · 1,4 but attendu pour Nottm Forest"
     },
     "decisive": {
      "market": "dec",
      "label": "Liam Delap buteur ou passeur",
-     "p": 0.39,
-     "prob": 39,
-     "fair": 2.56,
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
      "stars": 1,
      "player": "Liam Delap",
      "team": "Nottm Forest",
@@ -1531,10 +1582,11 @@
       3,
       0
      ],
+     "lineup": "start",
      "pid": "307114",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 10 matchs · Nottm Forest annoncé gagnant (39 %) · 1,6 buts attendus pour Nottm Forest"
+     "why": "3 buts et 0 passe en 10 matchs · titulaire · Nottm Forest annoncé gagnant (40 %) · 1,4 but attendu pour Nottm Forest"
     }
    },
    "second": {
@@ -1561,45 +1613,25 @@
    "form_a": "VVDVV",
    "rank_h": 15,
    "rank_a": 7,
-   "pH": 55,
-   "pD": 19,
-   "pA": 26,
+   "pH": 48,
+   "pD": 21,
+   "pA": 31,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.48,
+   "xgH": 2.12,
    "xgA": 1.7,
    "scores": [
     "2-1",
-    "2-2",
-    "3-1"
+    "1-1",
+    "2-2"
    ],
    "scorep": [
     8,
-    7,
+    8,
     7
    ],
-   "over25": 79,
-   "btts": 75,
+   "over25": 73,
+   "btts": 72,
    "squad_h": [
-    {
-     "name": "Roger Brugué",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Levante",
-     "goals": 5,
-     "assists": 1,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 1
-     },
-     "p_goal": 44,
-     "p_dec": 54,
-     "pid": "267591",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
     {
      "name": "Iván Romero",
      "pos": "Attaquant",
@@ -1614,11 +1646,12 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 39,
-     "p_dec": 42,
+     "p_goal": 34,
+     "p_dec": 37,
      "pid": "311054",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Dani Requena",
@@ -1634,11 +1667,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 25,
-     "p_dec": 38,
+     "p_goal": 22,
+     "p_dec": 33,
      "pid": "362752",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Adrián de la Fuente",
@@ -1654,31 +1688,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 19,
-     "p_dec": 21,
+     "p_goal": 17,
+     "p_dec": 18,
      "pid": "276841",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Etta Eyong",
-     "pos": "Attaquant",
+     "name": "Roger Brugué",
+     "pos": "Milieu",
      "side": "h",
      "team": "Levante",
-     "goals": 1,
+     "goals": 5,
      "assists": 1,
-     "apps": 8,
+     "apps": 12,
      "l10": {
       "n": 10,
-      "gp": 5,
-      "g": 1,
-      "a": 0
+      "gp": 10,
+      "g": 3,
+      "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 21,
-     "pid": "346676",
+     "p_goal": 14,
+     "p_dec": 18,
+     "pid": "267591",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Nacho Pérez",
@@ -1694,11 +1730,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 15,
+     "p_goal": 12,
+     "p_dec": 13,
      "pid": "409383",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Jon Ander Olasagasti",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Levante",
+     "goals": 1,
+     "assists": 2,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 9,
+     "p_dec": 28,
+     "pid": "317784",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "squad_a": [
@@ -1720,7 +1778,8 @@
      "p_dec": 57,
      "pid": "390389",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Sergio Canales",
@@ -1740,7 +1799,8 @@
      "p_dec": 27,
      "pid": "125383",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Iker Luque",
@@ -1760,7 +1820,8 @@
      "p_dec": 18,
      "pid": "417258",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Iván Martín",
@@ -1780,27 +1841,8 @@
      "p_dec": 13,
      "pid": "330545",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Pablo García",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Racing",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 11,
-     "pid": "399278",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jeanuël Belocian",
@@ -1820,102 +1862,128 @@
      "p_dec": 9,
      "pid": "333927",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Iñigo Vicente",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Racing",
+     "goals": 0,
+     "assists": 3,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 2
+     },
+     "p_goal": 6,
+     "p_dec": 26,
+     "pid": "284699",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Levante : 15e, 12 points, 17 buts marqués et 22 encaissés en 13 matchs.",
     "Racing : 7e, 17 points, 20 buts marqués et 32 encaissés en 13 matchs.",
     "Levante : 12 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
-    "Racing : 15 buts marqués et 27 encaissés sur ses 10 derniers matchs de championnat."
+    "Racing : 15 buts marqués et 27 encaissés sur ses 10 derniers matchs de championnat.",
+    "Levante : attaque revue à la baisse (−14 %) d'après la compo officielle (Roger Brugué ne commence pas).",
+    "Compositions officielles prises en compte : Roger Brugué (remplaçant) ne commence pas le match."
    ],
-   "reading": "Levante est favori sans écraser le match (55 %).",
+   "reading": "Levante est favori sans écraser le match (48 %).",
    "stakes": "Levante (15e) lutte pour le maintien, 0 point d'avance sur la zone rouge. Racing (7e) est dans la course à l'Europe.",
    "picks": {
     "main": {
      "market": "o25",
      "label": "Plus de 2,5 buts",
-     "p": 0.7864,
-     "prob": 79,
-     "fair": 1.27,
+     "p": 0.7339,
+     "prob": 73,
+     "fair": 1.36,
      "stars": 4,
      "why": "10 derniers matchs : Levante 12 marqués / 17 encaissés · Racing 15 / 27"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Levante",
-     "p": 0.549,
-     "prob": 55,
-     "fair": 1.82,
-     "stars": 2
+     "p": 0.478,
+     "prob": 48,
+     "fair": 2.09,
+     "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 2-1",
-     "p": 0.0801,
+     "p": 0.0838,
      "prob": 8,
-     "fair": 12.49,
+     "fair": 11.93,
      "stars": 1,
      "value": "2-1"
     },
     "fun": {
-     "market": "wh_btts",
-     "label": "Levante gagne et les deux équipes marquent",
-     "p": 0.3816,
+     "market": "wh_o25",
+     "label": "Levante gagne et plus de 2,5 buts",
+     "p": 0.3821,
      "prob": 38,
      "fair": 2.62,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_h",
-      "label": "Levante mène à la mi-temps et gagne le match",
-      "p": 0.3588,
-      "prob": 36,
-      "fair": 2.79,
+      "market": "wh_btts",
+      "label": "Levante gagne et les deux équipes marquent",
+      "p": 0.3172,
+      "prob": 32,
+      "fair": 3.15,
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Levante gagne avec 2 buts d'écart ou plus",
-      "p": 0.3503,
-      "prob": 35,
-      "fair": 2.85,
+      "market": "htft_h",
+      "label": "Levante mène à la mi-temps et gagne le match",
+      "p": 0.3021,
+      "prob": 30,
+      "fair": 3.31,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Roger Brugué marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "label": "Iván Romero marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
      "stars": 1,
-     "player": "Roger Brugué",
+     "player": "Iván Romero",
      "team": "Levante",
-     "pid": "267591",
+     "lineup": "start",
+     "pid": "311054",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 12 matchs · 10 derniers matchs : 3 buts, 1 passe · Levante favori (55 %) · 2,5 buts attendus pour Levante"
+     "why": "3 buts et 0 passe en 13 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Levante favori (48 %) · 2,1 buts attendus pour Levante"
     },
     "decisive": {
      "market": "dec",
-     "label": "Roger Brugué buteur ou passeur",
-     "p": 0.54,
-     "prob": 54,
-     "fair": 1.85,
-     "stars": 2,
-     "player": "Roger Brugué",
+     "label": "Iván Romero buteur ou passeur",
+     "p": 0.37,
+     "prob": 37,
+     "fair": 2.7,
+     "stars": 1,
+     "player": "Iván Romero",
      "team": "Levante",
      "base": [
-      12,
-      5,
-      1
+      13,
+      3,
+      0
      ],
-     "pid": "267591",
+     "lineup": "start",
+     "pid": "311054",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 12 matchs · 10 derniers matchs : 3 buts, 1 passe · Levante favori (55 %) · 2,5 buts attendus pour Levante"
+     "why": "3 buts et 0 passe en 13 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Levante favori (48 %) · 2,1 buts attendus pour Levante"
     }
    },
    "second": {
@@ -2327,7 +2395,7 @@
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
    "state": "LIVE",
-   "score": "0-1",
+   "score": "2-2",
    "home": "New Jersey Devils",
    "away": "Calgary Flames",
    "rec_h": "17-8-0 · 2e Metropolitan · 2 victoires de suite",
@@ -3107,8 +3175,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T19:00:00+00:00",
    "time": "20:00",
-   "state": "PRE",
-   "score": null,
+   "state": "LIVE",
+   "score": "1-0",
    "home": "St. Louis Blues",
    "away": "Dallas Stars",
    "rec_h": "13-9-3 · 6e Central · 1 défaite en prolongation de suite",
@@ -3408,7 +3476,6 @@
     "St. Louis Blues : 84 buts marqués et 80 encaissés en 25 matchs.",
     "Dallas Stars : 66 buts marqués et 59 encaissés en 24 matchs.",
     "Aucune des deux équipes n'a joué hier.",
-    "Gardien probable de St. Louis Blues : Joel Hofer (92,0 % d'arrêts), au-dessus de la moyenne : l'adversaire devrait marquer environ 5 % de buts en moins.",
     "Blessés : non vérifiés automatiquement. Seuls les joueurs alignés au dernier match sont retenus."
    ],
    "reading": "Match très équilibré : au hockey, c'est presque un pile ou face.",
@@ -3418,7 +3485,7 @@
     "main": {
      "market": "u55",
      "label": "Moins de 5,5 buts",
-     "p": 0.533,
+     "p": 0.5329,
      "prob": 53,
      "fair": 1.88,
      "stars": 2,
@@ -38759,11 +38826,27 @@
     "ita.1": 872,
     "ger.1": 676
    },
-   "elo_fetch": {},
+   "elo_fetch": {
+    "fra.1": {
+     "2026": 99
+    },
+    "eng.1": {
+     "2026": 110
+    },
+    "esp.1": {
+     "2026": 129
+    },
+    "ita.1": {
+     "2026": 120
+    },
+    "ger.1": {
+     "2026": 90
+    }
+   },
    "status": "ok"
   },
   "nhl": {
-   "ok": 12,
+   "ok": 11,
    "missing": [],
    "fetch": {
     "https://moneypuck.com/moneypuck/playerData/seasonSummary/2026/regular/teams.csv": "HTTP 200, 92526 car., début : 'team,season,name,team,position,situation,games_played,xGoals'",
