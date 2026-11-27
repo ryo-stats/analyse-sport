@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T22:15+01:00",
+ "generated": "2026-11-27T22:40+01:00",
  "date": "2026-11-27",
  "nhl_date": "2026-11-27",
  "foot": [
@@ -9,12 +9,12 @@
    "league": "Bundesliga",
    "kickoff": "2026-11-27T19:30:00+00:00",
    "time": "20:30",
-   "state": "in",
-   "score": "1-3",
+   "state": "post",
+   "score": "3-3",
    "home": "Bremen",
    "away": "Gladbach",
-   "form_h": "VDVDV",
-   "form_a": "DDNVV",
+   "form_h": "NVDVD",
+   "form_a": "NDDNV",
    "rank_h": 6,
    "rank_a": 18,
    "pH": 71,
@@ -47,15 +47,14 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 10,
+      "g": 11,
       "a": 1
      },
      "p_goal": 71,
      "p_dec": 75,
      "pid": "170257",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Eren Dinkci",
@@ -68,15 +67,34 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 2,
+      "g": 4,
       "a": 1
      },
-     "p_goal": 26,
-     "p_dec": 36,
+     "p_goal": 33,
+     "p_dec": 42,
      "pid": "312112",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Marco Grüll",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Bremen",
+     "goals": 2,
+     "assists": 6,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 2,
+      "a": 5
+     },
+     "p_goal": 26,
+     "p_dec": 62,
+     "pid": "305853",
+     "stats_league": "ger.1",
+     "season": 2026
     },
     {
      "name": "Ludovit Reis",
@@ -92,12 +110,31 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 23,
-     "p_dec": 36,
+     "p_goal": 22,
+     "p_dec": 35,
      "pid": "261363",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Justin Njinmah",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Bremen",
+     "goals": 2,
+     "assists": 0,
+     "apps": 3,
+     "l10": {
+      "n": 10,
+      "gp": 2,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 21,
+     "p_dec": 22,
+     "pid": "340639",
+     "stats_league": "ger.1",
+     "season": 2026
     },
     {
      "name": "Marco Friedl",
@@ -114,53 +151,10 @@
       "a": 0
      },
      "p_goal": 12,
-     "p_dec": 14,
+     "p_dec": 13,
      "pid": "232477",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Chuki",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Bremen",
-     "goals": 0,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 2
-     },
-     "p_goal": 3,
-     "p_dec": 27,
-     "pid": "371689",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Youri Regeer",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Bremen",
-     "goals": 0,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 9,
-     "pid": "297292",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -182,8 +176,7 @@
      "p_dec": 33,
      "pid": "272135",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Shuto Machino",
@@ -203,8 +196,7 @@
      "p_dec": 18,
      "pid": "271352",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Wael Mohya",
@@ -224,8 +216,47 @@
      "p_dec": 25,
      "pid": "408539",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Hugo Bolin",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Gladbach",
+     "goals": 2,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 16,
+     "p_dec": 18,
+     "pid": "330239",
+     "stats_league": "ger.1",
+     "season": 2026
+    },
+    {
+     "name": "Isac Lidberg",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Gladbach",
+     "goals": 1,
+     "assists": 0,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 10,
+     "p_dec": 11,
+     "pid": "221690",
+     "stats_league": "ger.1",
+     "season": 2026
     },
     {
      "name": "Florian Neuhaus",
@@ -245,58 +276,14 @@
      "p_dec": 18,
      "pid": "238527",
      "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Isac Lidberg",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Gladbach",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 3,
-     "p_dec": 3,
-     "pid": "221690",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "bench"
-    },
-    {
-     "name": "Philipp Sander",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Gladbach",
-     "goals": 0,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 2,
-     "p_dec": 7,
-     "pid": "275805",
-     "stats_league": "ger.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Bremen : 6e, 18 points, 21 buts marqués et 15 encaissés en 10 matchs.",
-    "Gladbach : 18e, 4 points, 12 buts marqués et 26 encaissés en 10 matchs.",
-    "Bremen : 21 buts marqués et 15 encaissés sur ses 10 derniers matchs de championnat.",
-    "Gladbach : 12 buts marqués et 26 encaissés sur ses 10 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Marco Grüll (absent), Justin Njinmah (absent), Hugo Bolin (absent) ne commencent pas le match."
+    "Bremen : 6e, 19 points, 24 buts marqués et 18 encaissés en 11 matchs.",
+    "Gladbach : 18e, 5 points, 15 buts marqués et 29 encaissés en 11 matchs.",
+    "Bremen : 23 buts marqués et 14 encaissés sur ses 10 derniers matchs de championnat.",
+    "Gladbach : 12 buts marqués et 26 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Bremen est nettement favori (71 %).",
    "stakes": "Bremen (6e) est dans la course à l'Europe. Gladbach (18e) est en zone de relégation : match vital.",
@@ -365,11 +352,10 @@
      "stars": 4,
      "player": "Niclas Füllkrug",
      "team": "Bremen",
-     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "10 buts et 1 passe en 10 matchs · titulaire · Bremen favori (71 %) · 2,8 buts attendus pour Bremen"
+     "why": "10 buts et 1 passe en 10 matchs · 10 derniers matchs : 11 buts, 1 passe · Bremen favori (71 %) · 2,8 buts attendus pour Bremen"
     },
     "decisive": {
      "market": "dec",
@@ -385,11 +371,10 @@
       10,
       1
      ],
-     "lineup": "start",
      "pid": "170257",
      "stats_league": "ger.1",
      "season": 2026,
-     "why": "10 buts et 1 passe en 10 matchs · titulaire · Bremen favori (71 %) · 2,8 buts attendus pour Bremen"
+     "why": "10 buts et 1 passe en 10 matchs · 10 derniers matchs : 11 buts, 1 passe · Bremen favori (71 %) · 2,8 buts attendus pour Bremen"
     }
    },
    "second": {
@@ -408,12 +393,12 @@
    "league": "Ligue 1",
    "kickoff": "2026-11-27T19:45:00+00:00",
    "time": "20:45",
-   "state": "in",
+   "state": "post",
    "score": "1-0",
    "home": "Brest",
    "away": "Paris FC",
-   "form_h": "VVVDN",
-   "form_a": "VVVDV",
+   "form_h": "VVVVD",
+   "form_a": "DVVVD",
    "rank_h": 6,
    "rank_a": 2,
    "pH": 38,
@@ -453,8 +438,7 @@
      "p_dec": 38,
      "pid": "192015",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Kamory Doumbia",
@@ -474,8 +458,7 @@
      "p_dec": 31,
      "pid": "330412",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Noah Edjouma",
@@ -495,8 +478,7 @@
      "p_dec": 19,
      "pid": "367360",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Pathé Mboup",
@@ -516,8 +498,27 @@
      "p_dec": 23,
      "pid": "365783",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Mama Baldé",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Brest",
+     "goals": 2,
+     "assists": 1,
+     "apps": 10,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 1
+     },
+     "p_goal": 14,
+     "p_dec": 21,
+     "pid": "259960",
+     "stats_league": "fra.1",
+     "season": 2026
     },
     {
      "name": "Lucas Tousart",
@@ -537,29 +538,7 @@
      "p_dec": 10,
      "pid": "215574",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Mama Baldé",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Brest",
-     "goals": 2,
-     "assists": 1,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 1
-     },
-     "p_goal": 4,
-     "p_dec": 7,
-     "pid": "259960",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "bench"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -581,8 +560,7 @@
      "p_dec": 56,
      "pid": "271137",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Maxime López",
@@ -602,8 +580,7 @@
      "p_dec": 27,
      "pid": "223122",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Pablo Pagis",
@@ -623,8 +600,7 @@
      "p_dec": 28,
      "pid": "334359",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Luca Koleosho",
@@ -644,8 +620,27 @@
      "p_dec": 19,
      "pid": "341333",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Ilan Kebbal",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Paris FC",
+     "goals": 1,
+     "assists": 1,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 1
+     },
+     "p_goal": 7,
+     "p_dec": 14,
+     "pid": "304918",
+     "stats_league": "fra.1",
+     "season": 2026
     },
     {
      "name": "Diego Coppola",
@@ -665,37 +660,14 @@
      "p_dec": 12,
      "pid": "332549",
      "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Samir Chergui",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Paris FC",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 6,
-     "p_dec": 6,
-     "pid": "287572",
-     "stats_league": "fra.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
     "Brest : 6e, 18 points, 19 buts marqués et 12 encaissés en 11 matchs.",
     "Paris FC : 2e, 23 points, 21 buts marqués et 10 encaissés en 11 matchs.",
     "Brest : 17 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
-    "Paris FC : 21 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
+    "Paris FC : 21 buts marqués et 10 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Match très ouvert : aucune équipe ne dépasse 45 %.",
    "stakes": "Brest (6e) est dans la course à l'Europe. Paris FC (2e) défend une place qualificative pour la Ligue des champions.",
@@ -761,11 +733,10 @@
      "stars": 1,
      "player": "Ludovic Ajorque",
      "team": "Brest",
-     "lineup": "start",
      "pid": "192015",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     },
     "decisive": {
      "market": "dec",
@@ -781,11 +752,10 @@
       5,
       1
      ],
-     "lineup": "start",
      "pid": "192015",
      "stats_league": "fra.1",
      "season": 2026,
-     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · titulaire · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
+     "why": "5 buts et 1 passe en 11 matchs · 10 derniers matchs : 5 buts, 1 passe · Brest annoncé gagnant (38 %) · 1,4 but attendu pour Brest"
     }
    },
    "second": null,
@@ -801,14 +771,14 @@
    "league": "Serie A",
    "kickoff": "2026-11-27T19:45:00+00:00",
    "time": "20:45",
-   "state": "in",
+   "state": "post",
    "score": "0-0",
    "home": "Venezia",
    "away": "Bologna",
-   "form_h": "DVDDD",
-   "form_a": "NVVVV",
-   "rank_h": 20,
-   "rank_a": 9,
+   "form_h": "NDVDD",
+   "form_a": "NNVVV",
+   "rank_h": 19,
+   "rank_a": 8,
    "pH": 19,
    "pD": 23,
    "pA": 58,
@@ -842,12 +812,11 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 20,
-     "p_dec": 23,
+     "p_goal": 21,
+     "p_dec": 24,
      "pid": "288472",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Antoine Hainaut",
@@ -861,35 +830,13 @@
       "n": 10,
       "gp": 10,
       "g": 2,
-      "a": 2
+      "a": 1
      },
-     "p_goal": 15,
-     "p_dec": 28,
+     "p_goal": 16,
+     "p_dec": 27,
      "pid": "346916",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "John Yeboah",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Venezia",
-     "goals": 1,
-     "assists": 0,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "265926",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Enrique Perez",
@@ -905,12 +852,51 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 13,
+     "p_goal": 10,
+     "p_dec": 15,
      "pid": "276636",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Toma Basic",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 1,
+     "assists": 0,
+     "apps": 8,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 12,
+     "pid": "221057",
+     "stats_league": "ita.1",
+     "season": 2026
+    },
+    {
+     "name": "John Yeboah",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Venezia",
+     "goals": 1,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 12,
+     "pid": "265926",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Matías Moreno",
@@ -927,32 +913,10 @@
       "a": 0
      },
      "p_goal": 5,
-     "p_dec": 7,
+     "p_dec": 8,
      "pid": "186457",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Simon Sohm",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Venezia",
-     "goals": 0,
-     "assists": 1,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 1
-     },
-     "p_goal": 2,
-     "p_dec": 12,
-     "pid": "275015",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "squad_a": [
@@ -970,12 +934,11 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 28,
-     "p_dec": 31,
+     "p_goal": 30,
+     "p_dec": 32,
      "pid": "180956",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Samuel Mbangula",
@@ -991,12 +954,11 @@
       "g": 3,
       "a": 0
      },
-     "p_goal": 25,
-     "p_dec": 25,
+     "p_goal": 26,
+     "p_dec": 27,
      "pid": "355997",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Tommaso Pobega",
@@ -1012,12 +974,31 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 22,
+     "p_goal": 19,
+     "p_dec": 23,
      "pid": "276654",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
+    },
+    {
+     "name": "Riccardo Orsolini",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Bologna",
+     "goals": 2,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 10,
+      "gp": 5,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 19,
+     "p_dec": 20,
+     "pid": "234426",
+     "stats_league": "ita.1",
+     "season": 2026
     },
     {
      "name": "Nadir Zortea",
@@ -1029,16 +1010,15 @@
      "apps": 10,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 9,
       "g": 1,
       "a": 1
      },
-     "p_goal": 9,
-     "p_dec": 18,
+     "p_goal": 10,
+     "p_dec": 19,
      "pid": "291560",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     },
     {
      "name": "Nicoló Casale",
@@ -1050,48 +1030,25 @@
      "apps": 7,
      "l10": {
       "n": 10,
-      "gp": 7,
+      "gp": 8,
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
-     "p_dec": 10,
+     "p_goal": 10,
+     "p_dec": 11,
      "pid": "250707",
      "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
-    },
-    {
-     "name": "Arthur Theate",
-     "pos": "Défenseur",
-     "side": "a",
-     "team": "Bologna",
-     "goals": 1,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 9,
-     "p_dec": 10,
-     "pid": "304222",
-     "stats_league": "ita.1",
-     "season": 2026,
-     "lineup": "start"
+     "season": 2026
     }
    ],
    "ctx": [
-    "Venezia : 20e, 6 points, 8 buts marqués et 25 encaissés en 12 matchs.",
-    "Bologna : 9e, 18 points, 17 buts marqués et 15 encaissés en 12 matchs.",
-    "Venezia : 8 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
-    "Bologna : 17 buts marqués et 13 encaissés sur ses 10 derniers matchs de championnat.",
-    "Compositions officielles prises en compte : Riccardo Orsolini (remplaçant) ne commence pas le match."
+    "Venezia : 19e, 7 points, 8 buts marqués et 25 encaissés en 13 matchs.",
+    "Bologna : 8e, 19 points, 17 buts marqués et 15 encaissés en 13 matchs.",
+    "Venezia : 6 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat.",
+    "Bologna : 15 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat."
    ],
    "reading": "Bologna est favori sans écraser le match (58 %).",
-   "stakes": "Venezia (20e) est en zone de relégation : match vital.",
+   "stakes": "Venezia (19e) est en zone de relégation : match vital.",
    "picks": {
     "main": {
      "market": "N2",
@@ -1148,24 +1105,23 @@
     "player": {
      "market": "scorer",
      "label": "Federico Bernardeschi marque",
-     "p": 0.28,
-     "prob": 28,
-     "fair": 3.57,
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
-     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
     },
     "decisive": {
      "market": "dec",
      "label": "Federico Bernardeschi buteur ou passeur",
-     "p": 0.31,
-     "prob": 31,
-     "fair": 3.23,
+     "p": 0.32,
+     "prob": 32,
+     "fair": 3.12,
      "stars": 1,
      "player": "Federico Bernardeschi",
      "team": "Bologna",
@@ -1174,11 +1130,10 @@
       3,
       0
      ],
-     "lineup": "start",
      "pid": "180956",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · titulaire · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
+     "why": "3 buts et 0 passe en 12 matchs · 10 derniers matchs : 3 buts, 0 passe · Bologna favori (58 %) · 1,8 buts attendus pour Bologna"
     }
    },
    "second": null,
@@ -1195,7 +1150,7 @@
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
    "state": "in",
-   "score": "2-1",
+   "score": "3-1",
    "home": "Nottm Forest",
    "away": "Chelsea",
    "form_h": "DVDND",
@@ -1591,7 +1546,7 @@
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
    "state": "in",
-   "score": "1-0",
+   "score": "1-2",
    "home": "Levante",
    "away": "Racing",
    "form_h": "NVNDD",
@@ -2378,7 +2333,7 @@
    "league": "NHL",
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
-   "state": "FINAL",
+   "state": "OFF",
    "score": "5-3",
    "home": "New Jersey Devils",
    "away": "Calgary Flames",
@@ -2769,7 +2724,7 @@
    "league": "NHL",
    "kickoff": "2026-11-27T18:00:00+00:00",
    "time": "19:00",
-   "state": "FINAL",
+   "state": "OFF",
    "score": "5-6",
    "home": "Nashville Predators",
    "away": "Utah Mammoth",
@@ -2796,31 +2751,31 @@
    ],
    "goalie_h": {
     "name": "Juuse Saros",
-    "starts": 17,
-    "shots": 523,
-    "saves": 480,
-    "sv": "91,8 % d'arrêts",
+    "starts": 18,
+    "shots": 558,
+    "saves": 510,
+    "sv": "91,4 % d'arrêts",
     "note": ""
    },
    "goalie_a": {
     "name": "Karel Vejmelka",
-    "starts": 16,
-    "shots": 393,
-    "saves": 343,
-    "sv": "87,3 % d'arrêts",
+    "starts": 17,
+    "shots": 414,
+    "saves": 359,
+    "sv": "86,7 % d'arrêts",
     "note": ""
    },
    "squad_h": [
     {
      "name": "Steven Stamkos",
      "pos": "Centre",
-     "cur": "12 buts, 12 passes en 24",
+     "cur": "12 buts, 12 passes en 25",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 12,
      "assists": 12,
-     "gp": 24,
+     "gp": 25,
      "pid": 8474564,
      "l10": {
       "n": 10,
@@ -2829,19 +2784,19 @@
       "a": 4
      },
      "p_goal": 36,
-     "p_point": 55,
+     "p_point": 54,
      "p_assist": 28
     },
     {
      "name": "Filip Forsberg",
      "pos": "Ailier",
-     "cur": "9 buts, 17 passes en 24",
+     "cur": "10 buts, 17 passes en 25",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
-     "goals": 9,
+     "goals": 10,
      "assists": 17,
-     "gp": 24,
+     "gp": 25,
      "pid": 8476887,
      "l10": {
       "n": 10,
@@ -2849,20 +2804,20 @@
       "g": 5,
       "a": 2
      },
-     "p_goal": 34,
+     "p_goal": 35,
      "p_point": 58,
      "p_assist": 35
     },
     {
      "name": "Ryan O'Reilly",
      "pos": "Centre",
-     "cur": "9 buts, 14 passes en 24",
+     "cur": "9 buts, 15 passes en 25",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 9,
-     "assists": 14,
-     "gp": 24,
+     "assists": 15,
+     "gp": 25,
      "pid": 8475158,
      "l10": {
       "n": 10,
@@ -2877,13 +2832,13 @@
     {
      "name": "Ross Colton",
      "pos": "Centre",
-     "cur": "6 buts, 3 passes en 24",
+     "cur": "7 buts, 3 passes en 25",
      "new": true,
      "side": "h",
      "team": "Nashville Predators",
-     "goals": 6,
+     "goals": 7,
      "assists": 3,
-     "gp": 24,
+     "gp": 25,
      "pid": 8479525,
      "l10": {
       "n": 10,
@@ -2891,20 +2846,20 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 20,
+     "p_goal": 22,
      "p_point": 32,
      "p_assist": 12
     },
     {
      "name": "Jonathan Marchessault",
      "pos": "Ailier",
-     "cur": "4 buts, 4 passes en 17",
+     "cur": "4 buts, 4 passes en 18",
      "new": false,
      "side": "h",
      "team": "Nashville Predators",
      "goals": 4,
      "assists": 4,
-     "gp": 17,
+     "gp": 18,
      "pid": 8476539,
      "l10": {
       "n": 10,
@@ -2913,63 +2868,42 @@
       "a": 1
      },
      "p_goal": 18,
-     "p_point": 39,
+     "p_point": 38,
      "p_assist": 24
     },
     {
-     "name": "Nils Hoglander",
-     "pos": "Ailier",
-     "cur": "5 buts, 5 passes en 24",
-     "new": true,
+     "name": "Roman Josi",
+     "pos": "Défenseur",
+     "cur": "3 buts, 22 passes en 25",
+     "new": false,
      "side": "h",
      "team": "Nashville Predators",
-     "goals": 5,
-     "assists": 5,
-     "gp": 24,
-     "pid": 8481535,
+     "goals": 3,
+     "assists": 22,
+     "gp": 25,
+     "pid": 8474600,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 2,
-      "a": 4
+      "g": 1,
+      "a": 7
      },
-     "p_goal": 16,
-     "p_point": 35,
-     "p_assist": 22
+     "p_goal": 15,
+     "p_point": 55,
+     "p_assist": 46
     }
    ],
    "squad_a": [
     {
-     "name": "Logan Cooley",
-     "pos": "Centre",
-     "cur": "13 buts, 15 passes en 23",
-     "new": false,
-     "side": "a",
-     "team": "Utah Mammoth",
-     "goals": 13,
-     "assists": 15,
-     "gp": 23,
-     "pid": 8483431,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 2,
-      "a": 6
-     },
-     "p_goal": 32,
-     "p_point": 55,
-     "p_assist": 34
-    },
-    {
      "name": "Dylan Guenther",
      "pos": "Ailier",
-     "cur": "7 buts, 7 passes en 20",
+     "cur": "7 buts, 8 passes en 21",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 7,
-     "assists": 7,
-     "gp": 20,
+     "assists": 8,
+     "gp": 21,
      "pid": 8482699,
      "l10": {
       "n": 10,
@@ -2979,18 +2913,39 @@
      },
      "p_goal": 32,
      "p_point": 53,
-     "p_assist": 30
+     "p_assist": 31
+    },
+    {
+     "name": "Logan Cooley",
+     "pos": "Centre",
+     "cur": "13 buts, 16 passes en 24",
+     "new": false,
+     "side": "a",
+     "team": "Utah Mammoth",
+     "goals": 13,
+     "assists": 16,
+     "gp": 24,
+     "pid": 8483431,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 2,
+      "a": 6
+     },
+     "p_goal": 31,
+     "p_point": 55,
+     "p_assist": 34
     },
     {
      "name": "Clayton Keller",
      "pos": "Ailier",
-     "cur": "5 buts, 24 passes en 25",
+     "cur": "6 buts, 25 passes en 26",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
-     "goals": 5,
-     "assists": 24,
-     "gp": 25,
+     "goals": 6,
+     "assists": 25,
+     "gp": 26,
      "pid": 8479343,
      "l10": {
       "n": 10,
@@ -3005,13 +2960,13 @@
     {
      "name": "Lawson Crouse",
      "pos": "Ailier",
-     "cur": "4 buts, 5 passes en 26",
+     "cur": "5 buts, 5 passes en 27",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
-     "goals": 4,
+     "goals": 5,
      "assists": 5,
-     "gp": 26,
+     "gp": 27,
      "pid": 8478474,
      "l10": {
       "n": 10,
@@ -3019,20 +2974,20 @@
       "g": 4,
       "a": 1
      },
-     "p_goal": 21,
+     "p_goal": 22,
      "p_point": 37,
      "p_assist": 19
     },
     {
      "name": "Vincent Trocheck",
      "pos": "Centre",
-     "cur": "6 buts, 10 passes en 26",
+     "cur": "6 buts, 11 passes en 27",
      "new": true,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 6,
-     "assists": 10,
-     "gp": 26,
+     "assists": 11,
+     "gp": 27,
      "pid": 8476389,
      "l10": {
       "n": 10,
@@ -3041,19 +2996,19 @@
       "a": 4
      },
      "p_goal": 17,
-     "p_point": 40,
-     "p_assist": 27
+     "p_point": 41,
+     "p_assist": 28
     },
     {
      "name": "Kailer Yamamoto",
      "pos": "Ailier",
-     "cur": "3 buts, 9 passes en 17",
+     "cur": "3 buts, 9 passes en 18",
      "new": false,
      "side": "a",
      "team": "Utah Mammoth",
      "goals": 3,
      "assists": 9,
-     "gp": 17,
+     "gp": 18,
      "pid": 8479977,
      "l10": {
       "n": 10,
@@ -3129,19 +3084,19 @@
      "player": "Clayton Keller",
      "pid": 8479343,
      "team": "Utah Mammoth",
-     "why": "5 buts et 24 passes en 25 matchs · 10 derniers matchs : 2 buts, 7 passes (joué 9 sur 10) · Utah Mammoth favori (51 %) · 3,2 buts attendus pour Utah Mammoth"
+     "why": "6 buts et 25 passes en 26 matchs · 10 derniers matchs : 2 buts, 7 passes (joué 9 sur 10) · Utah Mammoth favori (51 %) · 3,2 buts attendus pour Utah Mammoth"
     },
     "scorer": {
      "market": "goal",
-     "label": "Logan Cooley marque",
+     "label": "Dylan Guenther marque",
      "p": 0.32,
      "prob": 32,
      "fair": 3.12,
      "stars": 1,
-     "player": "Logan Cooley",
-     "pid": 8483431,
+     "player": "Dylan Guenther",
+     "pid": 8482699,
      "team": "Utah Mammoth",
-     "why": "13 buts et 15 passes en 23 matchs · 10 derniers matchs : 2 buts, 6 passes (joué 7 sur 10) · Utah Mammoth favori (51 %) · 3,2 buts attendus pour Utah Mammoth"
+     "why": "7 buts et 8 passes en 21 matchs · 10 derniers matchs : 1 but, 2 passes (joué 4 sur 10) · Utah Mammoth favori (51 %) · 3,2 buts attendus pour Utah Mammoth"
     }
    },
    "second": {
@@ -3159,8 +3114,8 @@
    "league": "NHL",
    "kickoff": "2026-11-27T19:00:00+00:00",
    "time": "20:00",
-   "state": "LIVE",
-   "score": "3-3",
+   "state": "FINAL",
+   "score": "5-3",
    "home": "St. Louis Blues",
    "away": "Dallas Stars",
    "rec_h": "13-9-3 · 7e Central · 1 défaite en prolongation de suite",
@@ -3215,11 +3170,11 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 4,
-      "a": 3
+      "g": 6,
+      "a": 4
      },
-     "p_goal": 24,
-     "p_point": 49,
+     "p_goal": 25,
+     "p_point": 50,
      "p_assist": 32
     },
     {
@@ -3237,11 +3192,32 @@
       "n": 10,
       "gp": 10,
       "g": 3,
-      "a": 12
+      "a": 14
      },
      "p_goal": 23,
-     "p_point": 57,
-     "p_assist": 43
+     "p_point": 58,
+     "p_assist": 44
+    },
+    {
+     "name": "Pavel Buchnevich",
+     "pos": "Ailier",
+     "cur": "6 buts, 5 passes en 23",
+     "new": false,
+     "side": "h",
+     "team": "St. Louis Blues",
+     "goals": 6,
+     "assists": 5,
+     "gp": 23,
+     "pid": 8477402,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 3,
+      "a": 3
+     },
+     "p_goal": 19,
+     "p_point": 39,
+     "p_assist": 24
     },
     {
      "name": "Mason McTavish",
@@ -3257,12 +3233,12 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 3,
-      "a": 2
+      "g": 2,
+      "a": 1
      },
-     "p_goal": 21,
-     "p_point": 36,
-     "p_assist": 18
+     "p_goal": 19,
+     "p_point": 34,
+     "p_assist": 17
     },
     {
      "name": "Jonatan Berggren",
@@ -3277,13 +3253,13 @@
      "pid": 8481013,
      "l10": {
       "n": 10,
-      "gp": 7,
+      "gp": 8,
       "g": 3,
-      "a": 2
+      "a": 3
      },
      "p_goal": 16,
-     "p_point": 33,
-     "p_assist": 20
+     "p_point": 34,
+     "p_assist": 21
     },
     {
      "name": "Jake Neighbours",
@@ -3300,32 +3276,11 @@
       "n": 10,
       "gp": 10,
       "g": 1,
-      "a": 9
+      "a": 11
      },
      "p_goal": 15,
-     "p_point": 40,
-     "p_assist": 29
-    },
-    {
-     "name": "Pius Suter",
-     "pos": "Centre",
-     "cur": "5 buts, 5 passes en 25",
-     "new": false,
-     "side": "h",
-     "team": "St. Louis Blues",
-     "goals": 5,
-     "assists": 5,
-     "gp": 25,
-     "pid": 8480459,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 1,
-      "a": 1
-     },
-     "p_goal": 15,
-     "p_point": 31,
-     "p_assist": 18
+     "p_point": 41,
+     "p_assist": 30
     }
    ],
    "squad_a": [
@@ -3343,7 +3298,7 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 5,
+      "g": 4,
       "a": 7
      },
      "p_goal": 33,
@@ -3365,11 +3320,11 @@
       "n": 10,
       "gp": 10,
       "g": 5,
-      "a": 6
+      "a": 5
      },
      "p_goal": 33,
      "p_point": 56,
-     "p_assist": 35
+     "p_assist": 34
     },
     {
      "name": "Mikko Rantanen",
@@ -3385,8 +3340,8 @@
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 3,
-      "a": 8
+      "g": 2,
+      "a": 9
      },
      "p_goal": 24,
      "p_point": 60,
@@ -3407,11 +3362,11 @@
       "n": 10,
       "gp": 10,
       "g": 3,
-      "a": 8
+      "a": 7
      },
      "p_goal": 21,
-     "p_point": 50,
-     "p_assist": 36
+     "p_point": 49,
+     "p_assist": 35
     },
     {
      "name": "Jamie Benn",
@@ -3428,32 +3383,32 @@
       "n": 10,
       "gp": 10,
       "g": 2,
-      "a": 1
+      "a": 0
      },
      "p_goal": 16,
      "p_point": 34,
-     "p_assist": 21
+     "p_assist": 20
     },
     {
-     "name": "Joel Kiviranta",
-     "pos": "Ailier",
-     "cur": "3 buts, 1 passe en 18",
-     "new": true,
+     "name": "Miro Heiskanen",
+     "pos": "Défenseur",
+     "cur": "5 buts, 8 passes en 19",
+     "new": false,
      "side": "a",
      "team": "Dallas Stars",
-     "goals": 3,
-     "assists": 1,
-     "gp": 18,
-     "pid": 8481641,
+     "goals": 5,
+     "assists": 8,
+     "gp": 19,
+     "pid": 8480036,
      "l10": {
       "n": 10,
-      "gp": 8,
+      "gp": 5,
       "g": 2,
-      "a": 0
+      "a": 1
      },
-     "p_goal": 13,
-     "p_point": 22,
-     "p_assist": 9
+     "p_goal": 12,
+     "p_point": 47,
+     "p_assist": 39
     }
    ],
    "ctx": [
@@ -3502,7 +3457,7 @@
      "player": "Jason Robertson",
      "pid": 8480027,
      "team": "Dallas Stars",
-     "why": "10 buts et 16 passes en 24 matchs · 10 derniers matchs : 5 buts, 7 passes · Dallas Stars favori (52 %) · 2,8 buts attendus pour Dallas Stars"
+     "why": "10 buts et 16 passes en 24 matchs · 10 derniers matchs : 4 buts, 7 passes · Dallas Stars favori (52 %) · 2,8 buts attendus pour Dallas Stars"
     },
     "scorer": {
      "market": "goal",
@@ -3514,7 +3469,7 @@
      "player": "Jason Robertson",
      "pid": 8480027,
      "team": "Dallas Stars",
-     "why": "10 buts et 16 passes en 24 matchs · 10 derniers matchs : 5 buts, 7 passes · Dallas Stars favori (52 %) · 2,8 buts attendus pour Dallas Stars"
+     "why": "10 buts et 16 passes en 24 matchs · 10 derniers matchs : 4 buts, 7 passes · Dallas Stars favori (52 %) · 2,8 buts attendus pour Dallas Stars"
     }
    },
    "second": {
@@ -3533,7 +3488,7 @@
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
    "state": "LIVE",
-   "score": "0-2",
+   "score": "0-4",
    "home": "Tampa Bay Lightning",
    "away": "Ottawa Senators",
    "rec_h": "15-7-2 · 2e Atlantic · 2 défaites de suite",
@@ -3923,7 +3878,7 @@
    "kickoff": "2026-11-27T20:00:00+00:00",
    "time": "21:00",
    "state": "LIVE",
-   "score": "2-0",
+   "score": "3-1",
    "home": "Philadelphia Flyers",
    "away": "Vancouver Canucks",
    "rec_h": "9-12-6 · 5e Metropolitan · 1 défaite de suite",
@@ -5094,7 +5049,7 @@
    "kickoff": "2026-11-27T21:00:00+00:00",
    "time": "22:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "2-0",
    "home": "Minnesota Wild",
    "away": "Colorado Avalanche",
    "rec_h": "18-4-5 · 1e Central · 1 défaite de suite",
@@ -5484,7 +5439,7 @@
    "kickoff": "2026-11-27T21:00:00+00:00",
    "time": "22:00",
    "state": "LIVE",
-   "score": "0-0",
+   "score": "2-0",
    "home": "Anaheim Ducks",
    "away": "Los Angeles Kings",
    "rec_h": "12-13-1 · 3e Pacific · 1 victoire de suite",
@@ -7826,22 +7781,22 @@
  ],
  "bilan": {
   "foot": {
-   "n": 391,
+   "n": 394,
    "fav_rate": 62,
    "fav_expected": 53,
-   "brier": 0.535,
+   "brier": 0.538,
    "brier_naive": 0.667,
    "vs_mkt": {
-    "n": 210,
-    "model": 0.551,
-    "mkt": 0.55
+    "n": 211,
+    "model": 0.554,
+    "mkt": 0.552
    },
    "bins": [
     {
      "range": "30-40 %",
-     "n": 58,
+     "n": 59,
      "announced": 38,
-     "actual": 48
+     "actual": 49
     },
     {
      "range": "40-50 %",
@@ -7851,9 +7806,9 @@
     },
     {
      "range": "50-60 %",
-     "n": 88,
+     "n": 89,
      "announced": 55,
-     "actual": 64
+     "actual": 63
     },
     {
      "range": "60-70 %",
@@ -7863,9 +7818,9 @@
     },
     {
      "range": "70-80 %",
-     "n": 34,
+     "n": 35,
      "announced": 75,
-     "actual": 88
+     "actual": 86
     },
     {
      "range": "80-90 %",
@@ -7914,20 +7869,20 @@
    ]
   },
   "picks": {
-   "n": 2217,
+   "n": 2227,
    "rate": 55,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 2217,
-     "ok": 1212,
+     "n": 2227,
+     "ok": 1218,
      "rate": 55,
      "expected": 52
     },
     "foot": {
-     "n": 1285,
-     "ok": 686,
+     "n": 1295,
+     "ok": 692,
      "rate": 53,
      "expected": 51
     },
@@ -7940,14 +7895,14 @@
    },
    "fun": {
     "all": {
-     "n": 887,
-     "ok": 251,
+     "n": 893,
+     "ok": 252,
      "rate": 28,
      "expected": 28
     },
     "foot": {
-     "n": 630,
-     "ok": 139,
+     "n": 636,
+     "ok": 140,
      "rate": 22,
      "expected": 24
     },
@@ -7959,6 +7914,43 @@
     }
    },
    "days": [
+    {
+     "date": "2026-11-27",
+     "all": {
+      "n": 10,
+      "ok": 6,
+      "rate": 60,
+      "expected": 60
+     },
+     "foot": {
+      "n": 10,
+      "ok": 6,
+      "rate": 60,
+      "expected": 60
+     },
+     "nhl": {
+      "n": 0,
+      "ok": 0
+     },
+     "fun": {
+      "all": {
+       "n": 6,
+       "ok": 1,
+       "rate": 17,
+       "expected": 21
+      },
+      "foot": {
+       "n": 6,
+       "ok": 1,
+       "rate": 17,
+       "expected": 21
+      },
+      "nhl": {
+       "n": 0,
+       "ok": 0
+      }
+     }
+    },
     {
      "date": "2026-11-26",
      "all": {
@@ -9558,8 +9550,8 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 218,
-     "ok": 125,
+     "n": 221,
+     "ok": 126,
      "rate": 57,
      "expected": 51
     },
@@ -9598,16 +9590,16 @@
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 158,
-     "ok": 89,
-     "rate": 56,
+     "n": 161,
+     "ok": 91,
+     "rate": 57,
      "expected": 49
     },
     {
      "sport": "foot",
      "league": "Bundesliga",
-     "n": 150,
-     "ok": 93,
+     "n": 154,
+     "ok": 96,
      "rate": 62,
      "expected": 53
     },
@@ -9623,36 +9615,244 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 938,
+     "n": 941,
      "announced": 34,
      "actual": 35
     },
     {
      "stars": 2,
-     "n": 398,
+     "n": 399,
      "announced": 55,
-     "actual": 55
+     "actual": 54
     },
     {
      "stars": 3,
-     "n": 496,
+     "n": 497,
      "announced": 64,
      "actual": 72
     },
     {
      "stars": 4,
-     "n": 253,
+     "n": 256,
      "announced": 74,
      "actual": 79
     },
     {
      "stars": 5,
-     "n": 132,
+     "n": 134,
      "announced": 86,
      "actual": 88
     }
    ],
    "details": [
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875004",
+     "score": "0-0",
+     "match": "Venezia – Bologna",
+     "label": "Nul ou Bologna",
+     "prob": 81,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875004",
+     "score": "0-0",
+     "match": "Venezia – Bologna",
+     "label": "Victoire Bologna",
+     "prob": 58,
+     "stars": 2,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875004",
+     "score": "0-0",
+     "match": "Venezia – Bologna",
+     "label": "Federico Bernardeschi marque",
+     "prob": 28,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875004",
+     "score": "0-0",
+     "match": "Venezia – Bologna",
+     "label": "Score exact 0-1",
+     "prob": 12,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875004",
+     "score": "0-0",
+     "match": "Venezia – Bologna",
+     "label": "Bologna mène à la mi-temps et gagne le match",
+     "prob": 37,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876392",
+     "score": "1-0",
+     "match": "Brest – Paris FC",
+     "label": "Brest ou nul",
+     "prob": 64,
+     "stars": 3,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876392",
+     "score": "1-0",
+     "match": "Brest – Paris FC",
+     "label": "Victoire Brest",
+     "prob": 38,
+     "stars": 1,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876392",
+     "score": "1-0",
+     "match": "Brest – Paris FC",
+     "label": "Ludovic Ajorque marque",
+     "prob": 32,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876392",
+     "score": "1-0",
+     "match": "Brest – Paris FC",
+     "label": "Brest gagne et plus de 2,5 buts",
+     "prob": 23,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876392",
+     "score": "1-0",
+     "match": "Brest – Paris FC",
+     "label": "Score exact 1-0",
+     "prob": 9,
+     "stars": 1,
+     "ok": true,
+     "fun": true
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884720",
+     "score": "3-3",
+     "match": "Bremen – Gladbach",
+     "label": "Bremen ou nul",
+     "prob": 86,
+     "stars": 5,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884720",
+     "score": "3-3",
+     "match": "Bremen – Gladbach",
+     "label": "Victoire Bremen",
+     "prob": 71,
+     "stars": 4,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884720",
+     "score": "3-3",
+     "match": "Bremen – Gladbach",
+     "label": "Niclas Füllkrug marque",
+     "prob": 71,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884720",
+     "score": "3-3",
+     "match": "Bremen – Gladbach",
+     "label": "Niclas Füllkrug buteur ou passeur",
+     "prob": 75,
+     "stars": 4,
+     "ok": true,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884720",
+     "score": "3-3",
+     "match": "Bremen – Gladbach",
+     "label": "Niclas Füllkrug marque au moins 2 buts",
+     "prob": 35,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Bundesliga",
+     "mid": "foot-401884720",
+     "score": "3-3",
+     "match": "Bremen – Gladbach",
+     "label": "Score exact 2-1",
+     "prob": 8,
+     "stars": 1,
+     "ok": false,
+     "fun": true
+    },
     {
      "date": "2026-11-26",
      "sport": "nhl",
@@ -37754,1033 +37954,6 @@
      "score": "3-2",
      "match": "Carolina Hurricanes – Columbus Blue Jackets",
      "label": "Carolina Hurricanes gagne par 3 buts d'écart ou plus",
-     "prob": 39,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020194",
-     "score": "1-5",
-     "match": "Winnipeg Jets – Florida Panthers",
-     "label": "Plus de 5,5 buts",
-     "prob": 59,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020194",
-     "score": "1-5",
-     "match": "Winnipeg Jets – Florida Panthers",
-     "label": "Victoire Florida Panthers",
-     "prob": 53,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020194",
-     "score": "1-5",
-     "match": "Winnipeg Jets – Florida Panthers",
-     "label": "Matthew Tkachuk : au moins 1 point",
-     "prob": 66,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020194",
-     "score": "1-5",
-     "match": "Winnipeg Jets – Florida Panthers",
-     "label": "Sam Reinhart marque",
-     "prob": 34,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020194",
-     "score": "1-5",
-     "match": "Winnipeg Jets – Florida Panthers",
-     "label": "Florida Panthers gagne par 2 buts d'écart ou plus",
-     "prob": 34,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020199",
-     "score": "5-2",
-     "match": "Washington Capitals – Philadelphia Flyers",
-     "label": "Victoire Washington Capitals",
-     "prob": 63,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020199",
-     "score": "5-2",
-     "match": "Washington Capitals – Philadelphia Flyers",
-     "label": "Tom Wilson : au moins 1 point",
-     "prob": 54,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020199",
-     "score": "5-2",
-     "match": "Washington Capitals – Philadelphia Flyers",
-     "label": "Tom Wilson marque",
-     "prob": 30,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020199",
-     "score": "5-2",
-     "match": "Washington Capitals – Philadelphia Flyers",
-     "label": "Washington Capitals gagne et plus de 5,5 buts",
-     "prob": 38,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874773",
-     "score": "0-2",
-     "match": "Venezia – Inter Milan",
-     "label": "Nul ou Inter Milan",
-     "prob": 89,
-     "stars": 5,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874773",
-     "score": "0-2",
-     "match": "Venezia – Inter Milan",
-     "label": "Victoire Inter Milan",
-     "prob": 72,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874773",
-     "score": "0-2",
-     "match": "Venezia – Inter Milan",
-     "label": "Marcus Thuram marque",
-     "prob": 39,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874773",
-     "score": "0-2",
-     "match": "Venezia – Inter Milan",
-     "label": "Marcus Thuram buteur ou passeur",
-     "prob": 50,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874773",
-     "score": "0-2",
-     "match": "Venezia – Inter Milan",
-     "label": "Score exact 0-2",
-     "prob": 12,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874773",
-     "score": "0-2",
-     "match": "Venezia – Inter Milan",
-     "label": "Inter Milan gagne sans encaisser de but",
-     "prob": 40,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020196",
-     "score": "4-1",
-     "match": "Vegas Golden Knights – Ottawa Senators",
-     "label": "Victoire Vegas Golden Knights",
-     "prob": 55,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020196",
-     "score": "4-1",
-     "match": "Vegas Golden Knights – Ottawa Senators",
-     "label": "Jack Eichel : au moins 1 point",
-     "prob": 63,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020196",
-     "score": "4-1",
-     "match": "Vegas Golden Knights – Ottawa Senators",
-     "label": "Mark Stone marque",
-     "prob": 33,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020196",
-     "score": "4-1",
-     "match": "Vegas Golden Knights – Ottawa Senators",
-     "label": "Plus de 6,5 buts",
-     "prob": 39,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020195",
-     "score": "1-3",
-     "match": "Utah Mammoth – Minnesota Wild",
-     "label": "Victoire Minnesota Wild",
-     "prob": 53,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020195",
-     "score": "1-3",
-     "match": "Utah Mammoth – Minnesota Wild",
-     "label": "Kirill Kaprizov : au moins 1 point",
-     "prob": 68,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020195",
-     "score": "1-3",
-     "match": "Utah Mammoth – Minnesota Wild",
-     "label": "Kirill Kaprizov marque",
-     "prob": 44,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020195",
-     "score": "1-3",
-     "match": "Utah Mammoth – Minnesota Wild",
-     "label": "Minnesota Wild gagne par 2 buts d'écart ou plus",
-     "prob": 34,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020195",
-     "score": "1-3",
-     "match": "Utah Mammoth – Minnesota Wild",
-     "label": "Plus de 5,5 buts",
-     "prob": 61,
-     "stars": 3,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020191",
-     "score": "0-2",
-     "match": "St. Louis Blues – Montréal Canadiens",
-     "label": "Plus de 5,5 buts",
-     "prob": 57,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020191",
-     "score": "0-2",
-     "match": "St. Louis Blues – Montréal Canadiens",
-     "label": "Victoire St. Louis Blues",
-     "prob": 50,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020191",
-     "score": "0-2",
-     "match": "St. Louis Blues – Montréal Canadiens",
-     "label": "Dylan Holloway : au moins 1 point",
-     "prob": 57,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020191",
-     "score": "0-2",
-     "match": "St. Louis Blues – Montréal Canadiens",
-     "label": "Jimmy Snuggerud marque",
-     "prob": 28,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020191",
-     "score": "0-2",
-     "match": "St. Louis Blues – Montréal Canadiens",
-     "label": "St. Louis Blues gagne dans le temps réglementaire",
-     "prob": 42,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020198",
-     "score": "0-2",
-     "match": "San Jose Sharks – Buffalo Sabres",
-     "label": "Plus de 5,5 buts",
-     "prob": 63,
-     "stars": 3,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020198",
-     "score": "0-2",
-     "match": "San Jose Sharks – Buffalo Sabres",
-     "label": "Victoire Buffalo Sabres",
-     "prob": 53,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020198",
-     "score": "0-2",
-     "match": "San Jose Sharks – Buffalo Sabres",
-     "label": "Tage Thompson : au moins 1 point",
-     "prob": 58,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020198",
-     "score": "0-2",
-     "match": "San Jose Sharks – Buffalo Sabres",
-     "label": "Tage Thompson marque",
-     "prob": 34,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020198",
-     "score": "0-2",
-     "match": "San Jose Sharks – Buffalo Sabres",
-     "label": "Buffalo Sabres gagne par 2 buts d'écart ou plus",
-     "prob": 34,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874965",
-     "score": "0-0",
-     "match": "Parma – Udinese",
-     "label": "Score exact 0-1",
-     "prob": 12,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874965",
-     "score": "0-0",
-     "match": "Parma – Udinese",
-     "label": "Nul ou Udinese",
-     "prob": 65,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874965",
-     "score": "0-0",
-     "match": "Parma – Udinese",
-     "label": "Victoire Udinese",
-     "prob": 36,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874965",
-     "score": "0-0",
-     "match": "Parma – Udinese",
-     "label": "Jurgen Ekkelenkamp marque",
-     "prob": 24,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874965",
-     "score": "0-0",
-     "match": "Parma – Udinese",
-     "label": "Jurgen Ekkelenkamp buteur ou passeur",
-     "prob": 34,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874965",
-     "score": "0-0",
-     "match": "Parma – Udinese",
-     "label": "Udinese gagne sans encaisser de but",
-     "prob": 23,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020192",
-     "score": "3-4 (tirs au but)",
-     "match": "Nashville Predators – New York Islanders",
-     "label": "Plus de 5,5 buts",
-     "prob": 59,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020192",
-     "score": "3-4 (tirs au but)",
-     "match": "Nashville Predators – New York Islanders",
-     "label": "Victoire Nashville Predators",
-     "prob": 55,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020192",
-     "score": "3-4 (tirs au but)",
-     "match": "Nashville Predators – New York Islanders",
-     "label": "Ryan O'Reilly : au moins 1 point",
-     "prob": 61,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020192",
-     "score": "3-4 (tirs au but)",
-     "match": "Nashville Predators – New York Islanders",
-     "label": "Steven Stamkos marque",
-     "prob": 41,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020192",
-     "score": "3-4 (tirs au but)",
-     "match": "Nashville Predators – New York Islanders",
-     "label": "Nashville Predators gagne par 2 buts d'écart ou plus",
-     "prob": 34,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874799",
-     "score": "1-4",
-     "match": "Monza – Napoli",
-     "label": "Nul ou Napoli",
-     "prob": 71,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874799",
-     "score": "1-4",
-     "match": "Monza – Napoli",
-     "label": "Victoire Napoli",
-     "prob": 49,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874799",
-     "score": "1-4",
-     "match": "Monza – Napoli",
-     "label": "Score exact 1-2",
-     "prob": 9,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874799",
-     "score": "1-4",
-     "match": "Monza – Napoli",
-     "label": "Rasmus Højlund marque",
-     "prob": 25,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874799",
-     "score": "1-4",
-     "match": "Monza – Napoli",
-     "label": "Rasmus Højlund buteur ou passeur",
-     "prob": 29,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874799",
-     "score": "1-4",
-     "match": "Monza – Napoli",
-     "label": "Plus de 3,5 buts",
-     "prob": 41,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874993",
-     "score": "2-4",
-     "match": "Milan – Bologna",
-     "label": "Milan ou nul",
-     "prob": 83,
-     "stars": 5,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874993",
-     "score": "2-4",
-     "match": "Milan – Bologna",
-     "label": "Victoire Milan",
-     "prob": 54,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874993",
-     "score": "2-4",
-     "match": "Milan – Bologna",
-     "label": "Milan gagne sans encaisser de but",
-     "prob": 40,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874993",
-     "score": "2-4",
-     "match": "Milan – Bologna",
-     "label": "Score exact 1-0",
-     "prob": 19,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874993",
-     "score": "2-4",
-     "match": "Milan – Bologna",
-     "label": "Gonçalo Ramos marque",
-     "prob": 18,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874993",
-     "score": "2-4",
-     "match": "Milan – Bologna",
-     "label": "Gonçalo Ramos buteur ou passeur",
-     "prob": 26,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874988",
-     "score": "2-0",
-     "match": "Genoa – Juventus",
-     "label": "Nul ou Juventus",
-     "prob": 75,
-     "stars": 4,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874988",
-     "score": "2-0",
-     "match": "Genoa – Juventus",
-     "label": "Victoire Juventus",
-     "prob": 43,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874988",
-     "score": "2-0",
-     "match": "Genoa – Juventus",
-     "label": "Juventus gagne sans encaisser de but",
-     "prob": 31,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874988",
-     "score": "2-0",
-     "match": "Genoa – Juventus",
-     "label": "Score exact 0-1",
-     "prob": 17,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874988",
-     "score": "2-0",
-     "match": "Genoa – Juventus",
-     "label": "Randal Kolo Muani marque",
-     "prob": 12,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "foot",
-     "league": "Serie A",
-     "mid": "foot-401874988",
-     "score": "2-0",
-     "match": "Genoa – Juventus",
-     "label": "Randal Kolo Muani buteur ou passeur",
-     "prob": 21,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020193",
-     "score": "1-5",
-     "match": "Dallas Stars – New Jersey Devils",
-     "label": "Victoire New Jersey Devils",
-     "prob": 50,
-     "stars": 2,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020193",
-     "score": "1-5",
-     "match": "Dallas Stars – New Jersey Devils",
-     "label": "Jack Hughes : au moins 1 point",
-     "prob": 65,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020193",
-     "score": "1-5",
-     "match": "Dallas Stars – New Jersey Devils",
-     "label": "Jack Hughes marque",
-     "prob": 29,
-     "stars": 1,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020193",
-     "score": "1-5",
-     "match": "Dallas Stars – New Jersey Devils",
-     "label": "New Jersey Devils gagne par 2 buts d'écart ou plus",
-     "prob": 30,
-     "stars": 1,
-     "ok": true,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020190",
-     "score": "2-1",
-     "match": "Chicago Blackhawks – Los Angeles Kings",
-     "label": "Victoire Los Angeles Kings",
-     "prob": 56,
-     "stars": 2,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020190",
-     "score": "2-1",
-     "match": "Chicago Blackhawks – Los Angeles Kings",
-     "label": "Artemi Panarin : au moins 1 point",
-     "prob": 60,
-     "stars": 3,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020190",
-     "score": "2-1",
-     "match": "Chicago Blackhawks – Los Angeles Kings",
-     "label": "Artemi Panarin marque",
-     "prob": 33,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020190",
-     "score": "2-1",
-     "match": "Chicago Blackhawks – Los Angeles Kings",
-     "label": "Plus de 6,5 buts",
-     "prob": 35,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020189",
-     "score": "2-1",
-     "match": "Carolina Hurricanes – Boston Bruins",
-     "label": "Victoire Carolina Hurricanes",
-     "prob": 71,
-     "stars": 4,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020189",
-     "score": "2-1",
-     "match": "Carolina Hurricanes – Boston Bruins",
-     "label": "Sebastian Aho : au moins 1 point",
-     "prob": 66,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020189",
-     "score": "2-1",
-     "match": "Carolina Hurricanes – Boston Bruins",
-     "label": "Seth Jarvis marque",
-     "prob": 34,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020189",
-     "score": "2-1",
-     "match": "Carolina Hurricanes – Boston Bruins",
-     "label": "Carolina Hurricanes gagne et plus de 6,5 buts",
-     "prob": 38,
-     "stars": 1,
-     "ok": false,
-     "fun": true
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020197",
-     "score": "5-6 (prol.)",
-     "match": "Anaheim Ducks – Vancouver Canucks",
-     "label": "Victoire Anaheim Ducks",
-     "prob": 71,
-     "stars": 4,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020197",
-     "score": "5-6 (prol.)",
-     "match": "Anaheim Ducks – Vancouver Canucks",
-     "label": "Leo Carlsson : au moins 1 point",
-     "prob": 67,
-     "stars": 3,
-     "ok": true,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020197",
-     "score": "5-6 (prol.)",
-     "match": "Anaheim Ducks – Vancouver Canucks",
-     "label": "Cutter Gauthier marque",
-     "prob": 41,
-     "stars": 1,
-     "ok": false,
-     "fun": false
-    },
-    {
-     "date": "2026-10-28",
-     "sport": "nhl",
-     "league": "NHL",
-     "mid": "nhl-2026020197",
-     "score": "5-6 (prol.)",
-     "match": "Anaheim Ducks – Vancouver Canucks",
-     "label": "Anaheim Ducks gagne et plus de 6,5 buts",
      "prob": 39,
      "stars": 1,
      "ok": false,
