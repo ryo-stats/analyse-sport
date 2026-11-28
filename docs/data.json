@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T07:28+01:00",
+ "generated": "2026-11-28T12:28+01:00",
  "date": "2026-11-28",
  "nhl_date": "2026-11-28",
  "foot": [
@@ -12813,19 +12813,19 @@
    ]
   },
   "picks": {
-   "n": 2303,
+   "n": 2306,
    "rate": 54,
    "expected": 52,
    "since": "2026-10-18",
    "total": {
     "all": {
-     "n": 2303,
+     "n": 2306,
      "ok": 1252,
      "rate": 54,
      "expected": 52
     },
     "foot": {
-     "n": 1316,
+     "n": 1319,
      "ok": 697,
      "rate": 53,
      "expected": 51
@@ -12898,16 +12898,16 @@
     {
      "date": "2026-11-27",
      "all": {
-      "n": 61,
+      "n": 64,
       "ok": 36,
-      "rate": 59,
-      "expected": 54
+      "rate": 56,
+      "expected": 53
      },
      "foot": {
-      "n": 17,
+      "n": 20,
       "ok": 11,
-      "rate": 65,
-      "expected": 55
+      "rate": 55,
+      "expected": 52
      },
      "nhl": {
       "n": 44,
@@ -14535,7 +14535,7 @@
     {
      "sport": "foot",
      "league": "Serie A",
-     "n": 221,
+     "n": 222,
      "ok": 126,
      "rate": 57,
      "expected": 51
@@ -14567,7 +14567,7 @@
     {
      "sport": "foot",
      "league": "Premier League",
-     "n": 177,
+     "n": 178,
      "ok": 87,
      "rate": 49,
      "expected": 50
@@ -14575,9 +14575,9 @@
     {
      "sport": "foot",
      "league": "Ligue 1",
-     "n": 161,
+     "n": 162,
      "ok": 91,
-     "rate": 57,
+     "rate": 56,
      "expected": 49
     },
     {
@@ -14600,7 +14600,7 @@
    "by_stars": [
     {
      "stars": 1,
-     "n": 973,
+     "n": 976,
      "announced": 34,
      "actual": 34
     },
@@ -14923,6 +14923,19 @@
      "mid": "foot-401875004",
      "score": "0-0",
      "match": "Venezia – Bologna",
+     "label": "Federico Bernardeschi buteur ou passeur",
+     "prob": 31,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Serie A",
+     "mid": "foot-401875004",
+     "score": "0-0",
+     "match": "Venezia – Bologna",
      "label": "Score exact 0-1",
      "prob": 12,
      "stars": 1,
@@ -15211,6 +15224,19 @@
      "match": "Nottm Forest – Chelsea",
      "label": "Liam Delap marque",
      "prob": 34,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Premier League",
+     "mid": "foot-401879225",
+     "score": "3-2",
+     "match": "Nottm Forest – Chelsea",
+     "label": "Liam Delap buteur ou passeur",
+     "prob": 37,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -15653,6 +15679,19 @@
      "match": "Brest – Paris FC",
      "label": "Ludovic Ajorque marque",
      "prob": 32,
+     "stars": 1,
+     "ok": false,
+     "fun": false
+    },
+    {
+     "date": "2026-11-27",
+     "sport": "foot",
+     "league": "Ligue 1",
+     "mid": "foot-401876392",
+     "score": "1-0",
+     "match": "Brest – Paris FC",
+     "label": "Ludovic Ajorque buteur ou passeur",
+     "prob": 38,
      "stars": 1,
      "ok": false,
      "fun": false
@@ -43664,23 +43703,7 @@
     "ita.1": 873,
     "ger.1": 677
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 100
-    },
-    "eng.1": {
-     "2026": 111
-    },
-    "esp.1": {
-     "2026": 130
-    },
-    "ita.1": {
-     "2026": 121
-    },
-    "ger.1": {
-     "2026": 91
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
