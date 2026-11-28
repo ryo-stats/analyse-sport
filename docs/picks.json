@@ -78684,7 +78684,7 @@
   "kinds": [
    "main"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879227|1|": {
   "match": "foot-401879227",
@@ -78708,7 +78708,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879227|scorer|Dominic Calvert-Lewin": {
   "match": "foot-401879227",
@@ -78732,7 +78732,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879227|dec|Dominic Calvert-Lewin": {
   "match": "foot-401879227",
@@ -78760,7 +78760,7 @@
   "kinds": [
    "decisive"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879227|htft_h|": {
   "match": "foot-401879227",
@@ -78784,7 +78784,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879227|exact|": {
   "match": "foot-401879227",
@@ -78808,7 +78808,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879226|2|": {
   "match": "foot-401879226",
@@ -78832,7 +78832,7 @@
   "kinds": [
    "winner"
   ],
-  "result": null
+  "result": true
  },
  "foot-401879226|scorer|Keane Lewis-Potter": {
   "match": "foot-401879226",
@@ -78856,7 +78856,7 @@
   "kinds": [
    "player"
   ],
-  "result": null
+  "result": false
  },
  "foot-401879226|dec|Keane Lewis-Potter": {
   "match": "foot-401879226",
@@ -78908,7 +78908,7 @@
   "kinds": [
    "score"
   ],
-  "result": null
+  "result": false
  },
  "foot-401882790|N2|": {
   "match": "foot-401882790",
@@ -79315,7 +79315,7 @@
   "away": "Aston Villa",
   "market": "N2",
   "label": "Nul ou Aston Villa",
-  "p": 0.7006,
+  "p": 0.7242,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -79339,7 +79339,7 @@
   "away": "Aston Villa",
   "market": "2",
   "label": "Victoire Aston Villa",
-  "p": 0.4805,
+  "p": 0.4962,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -79363,7 +79363,7 @@
   "away": "Aston Villa",
   "market": "scorer",
   "label": "Nicolas Jackson marque",
-  "p": 0.51,
+  "p": 0.5,
   "stars": 2,
   "player": "Nicolas Jackson",
   "pid_player": "308524",
@@ -79387,7 +79387,7 @@
   "away": "Aston Villa",
   "market": "dec",
   "label": "Nicolas Jackson buteur ou passeur",
-  "p": 0.58,
+  "p": 0.56,
   "stars": 2,
   "player": "Nicolas Jackson",
   "pid_player": "308524",
@@ -79406,30 +79406,6 @@
   ],
   "result": null
  },
- "foot-401878752|wa_o25|": {
-  "match": "foot-401878752",
-  "sport": "foot",
-  "league": "Premier League",
-  "date": "2026-11-28",
-  "home": "Ipswich",
-  "away": "Aston Villa",
-  "market": "wa_o25",
-  "label": "Aston Villa gagne et plus de 2,5 buts",
-  "p": 0.3571,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401878752|exact|": {
   "match": "foot-401878752",
   "sport": "foot",
@@ -79439,7 +79415,7 @@
   "away": "Aston Villa",
   "market": "exact",
   "label": "Score exact 1-2",
-  "p": 0.0907,
+  "p": 0.0948,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -79463,7 +79439,7 @@
   "away": "Atlético",
   "market": "N2",
   "label": "Nul ou Atlético",
-  "p": 0.7848,
+  "p": 0.7783,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -79487,7 +79463,7 @@
   "away": "Atlético",
   "market": "2",
   "label": "Victoire Atlético",
-  "p": 0.5438,
+  "p": 0.5183,
   "stars": 2,
   "player": null,
   "pid_player": null,
@@ -79511,7 +79487,7 @@
   "away": "Atlético",
   "market": "scorer",
   "label": "Álex Baena marque",
-  "p": 0.26,
+  "p": 0.24,
   "stars": 1,
   "player": "Álex Baena",
   "pid_player": "297373",
@@ -79535,7 +79511,7 @@
   "away": "Atlético",
   "market": "dec",
   "label": "Álex Baena buteur ou passeur",
-  "p": 0.39,
+  "p": 0.36,
   "stars": 1,
   "player": "Álex Baena",
   "pid_player": "297373",
@@ -79554,30 +79530,6 @@
   ],
   "result": null
  },
- "foot-401882793|htft_a|": {
-  "match": "foot-401882793",
-  "sport": "foot",
-  "league": "LaLiga",
-  "date": "2026-11-28",
-  "home": "Elche",
-  "away": "Atlético",
-  "market": "htft_a",
-  "label": "Atlético mène à la mi-temps et gagne le match",
-  "p": 0.3379,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401882793|exact|": {
   "match": "foot-401882793",
   "sport": "foot",
@@ -79587,7 +79539,7 @@
   "away": "Atlético",
   "market": "exact",
   "label": "Score exact 0-1",
-  "p": 0.1185,
+  "p": 0.1369,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -79611,7 +79563,7 @@
   "away": "Frankfurt",
   "market": "1N",
   "label": "Stuttgart ou nul",
-  "p": 0.7366,
+  "p": 0.7208,
   "stars": 4,
   "player": null,
   "pid_player": null,
@@ -79635,8 +79587,8 @@
   "away": "Frankfurt",
   "market": "1",
   "label": "Victoire Stuttgart",
-  "p": 0.525,
-  "stars": 2,
+  "p": 0.4916,
+  "stars": 1,
   "player": null,
   "pid_player": null,
   "value": null,
@@ -79659,7 +79611,7 @@
   "away": "Frankfurt",
   "market": "scorer",
   "label": "Ermedin Demirovic marque",
-  "p": 0.46,
+  "p": 0.41,
   "stars": 1,
   "player": "Ermedin Demirovic",
   "pid_player": "269136",
@@ -79683,7 +79635,7 @@
   "away": "Frankfurt",
   "market": "dec",
   "label": "Ermedin Demirovic buteur ou passeur",
-  "p": 0.48,
+  "p": 0.43,
   "stars": 1,
   "player": "Ermedin Demirovic",
   "pid_player": "269136",
@@ -79702,30 +79654,6 @@
   ],
   "result": null
  },
- "foot-401884726|wh_o25|": {
-  "match": "foot-401884726",
-  "sport": "foot",
-  "league": "Bundesliga",
-  "date": "2026-11-28",
-  "home": "Stuttgart",
-  "away": "Frankfurt",
-  "market": "wh_o25",
-  "label": "Stuttgart gagne et plus de 2,5 buts",
-  "p": 0.3979,
-  "stars": 1,
-  "player": null,
-  "pid_player": null,
-  "value": null,
-  "stats_league": null,
-  "season": null,
-  "base": null,
-  "side": null,
-  "group": "fun",
-  "kinds": [
-   "fun"
-  ],
-  "result": null
- },
  "foot-401884726|exact|": {
   "match": "foot-401884726",
   "sport": "foot",
@@ -79735,7 +79663,7 @@
   "away": "Frankfurt",
   "market": "exact",
   "label": "Score exact 2-1",
-  "p": 0.0925,
+  "p": 0.0946,
   "stars": 1,
   "player": null,
   "pid_player": null,
@@ -82288,7 +82216,7 @@
   "kinds": [
    "fun"
   ],
-  "result": null
+  "result": true
  },
  "foot-401876394|htft_a|": {
   "match": "foot-401876394",
@@ -82324,6 +82252,78 @@
   "market": "htft_a",
   "label": "Lazio mène à la mi-temps et gagne le match",
   "p": 0.3561,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401878752|o35|": {
+  "match": "foot-401878752",
+  "sport": "foot",
+  "league": "Premier League",
+  "date": "2026-11-28",
+  "home": "Ipswich",
+  "away": "Aston Villa",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3878,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401882793|wa_nil|": {
+  "match": "foot-401882793",
+  "sport": "foot",
+  "league": "LaLiga",
+  "date": "2026-11-28",
+  "home": "Elche",
+  "away": "Atlético",
+  "market": "wa_nil",
+  "label": "Atlético gagne sans encaisser de but",
+  "p": 0.3202,
+  "stars": 1,
+  "player": null,
+  "pid_player": null,
+  "value": null,
+  "stats_league": null,
+  "season": null,
+  "base": null,
+  "side": null,
+  "group": "fun",
+  "kinds": [
+   "fun"
+  ],
+  "result": null
+ },
+ "foot-401884726|o35|": {
+  "match": "foot-401884726",
+  "sport": "foot",
+  "league": "Bundesliga",
+  "date": "2026-11-28",
+  "home": "Stuttgart",
+  "away": "Frankfurt",
+  "market": "o35",
+  "label": "Plus de 3,5 buts",
+  "p": 0.3841,
   "stars": 1,
   "player": null,
   "pid_player": null,
