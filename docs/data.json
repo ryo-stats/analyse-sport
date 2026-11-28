@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T14:58+01:00",
+ "generated": "2026-11-28T15:23+01:00",
  "date": "2026-11-28",
  "nhl_date": "2026-11-28",
  "foot": [
@@ -405,8 +405,8 @@
    "league": "Serie A",
    "kickoff": "2026-11-28T14:00:00+00:00",
    "time": "15:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Frosinone",
    "away": "Parma",
    "form_h": "DDVVN",
@@ -692,8 +692,6 @@
     "Parma : 17e, 8 points, 10 buts marqués et 22 encaissés en 12 matchs.",
     "Frosinone : 22 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
     "Parma : 10 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
-    "Frosinone : attaque revue à la baisse (−17 %) d'après la compo officielle (Antonio Raimondo ne commence pas).",
-    "Parma : attaque revue à la baisse (−25 %) d'après la compo officielle (Vincent Sierro, Pontus Almqvist, José Romero, Simone Lontani ne commencent pas).",
     "Compositions officielles prises en compte : Antonio Raimondo (remplaçant), Daniel Birligea (absent), José Romero (absent), Simone Lontani (remplaçant) ne commencent pas le match."
    ],
    "reading": "Frosinone est nettement favori (64 %).",
@@ -702,7 +700,7 @@
     "main": {
      "market": "1N",
      "label": "Frosinone ou nul",
-     "p": 0.8381,
+     "p": 0.8382,
      "prob": 84,
      "fair": 1.19,
      "stars": 5,
@@ -737,7 +735,7 @@
      {
       "market": "o35",
       "label": "Plus de 3,5 buts",
-      "p": 0.3844,
+      "p": 0.3843,
       "prob": 38,
       "fair": 2.6,
       "stars": 1
@@ -2385,23 +2383,23 @@
    "rank_h": 7,
    "rank_a": 15,
    "pH": 63,
-   "pD": 21,
-   "pA": 16,
+   "pD": 22,
+   "pA": 15,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.98,
-   "xgA": 0.87,
+   "xgH": 1.88,
+   "xgA": 0.8,
    "scores": [
     "1-0",
     "2-0",
     "1-1"
    ],
    "scorep": [
-    11,
-    11,
+    13,
+    12,
     10
    ],
-   "over25": 54,
-   "btts": 50,
+   "over25": 50,
+   "btts": 46,
    "squad_h": [
     {
      "name": "Dominic Calvert-Lewin",
@@ -2417,11 +2415,12 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 44,
-     "p_dec": 59,
+     "p_goal": 42,
+     "p_dec": 57,
      "pid": "197717",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Noah Okafor",
@@ -2437,11 +2436,12 @@
       "g": 4,
       "a": 0
      },
-     "p_goal": 42,
-     "p_dec": 44,
+     "p_goal": 40,
+     "p_dec": 42,
      "pid": "270641",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jayden Bogle",
@@ -2457,11 +2457,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 22,
-     "p_dec": 24,
+     "p_goal": 21,
+     "p_dec": 23,
      "pid": "243408",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "James Justin",
@@ -2477,11 +2478,33 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 13,
-     "p_dec": 15,
+     "p_goal": 12,
+     "p_dec": 14,
      "pid": "231863",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Ethan Ampadu",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Leeds",
+     "goals": 0,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 11,
+     "pid": "241317",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Brenden Aaronson",
@@ -2497,31 +2520,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 12,
-     "p_dec": 15,
+     "p_goal": 4,
+     "p_dec": 4,
      "pid": "259653",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Anton Stach",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Leeds",
-     "goals": 1,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 13,
-     "pid": "304802",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -2539,31 +2543,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 16,
-     "p_dec": 27,
+     "p_goal": 15,
+     "p_dec": 25,
      "pid": "286967",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Taiwo Awoniyi",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Coventry",
-     "goals": 2,
-     "assists": 0,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 12,
-     "p_dec": 14,
-     "pid": "194686",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Tatsuhiro Sakamoto",
@@ -2579,11 +2564,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 11,
-     "p_dec": 13,
+     "p_goal": 10,
+     "p_dec": 12,
      "pid": "302002",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Sidiki Cherif",
@@ -2599,11 +2585,12 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 7,
+     "p_goal": 6,
      "p_dec": 7,
      "pid": "366817",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jay Da Silva",
@@ -2619,11 +2606,33 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 6,
-     "p_dec": 12,
+     "p_goal": 5,
+     "p_dec": 11,
      "pid": "206172",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Stephen Mfuni",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Coventry",
+     "goals": 1,
+     "assists": 0,
+     "apps": 6,
+     "l10": {
+      "n": 10,
+      "gp": 6,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 5,
+     "p_dec": 5,
+     "pid": "374220",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Yann Gboho",
@@ -2639,18 +2648,22 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 6,
-     "p_dec": 7,
+     "p_goal": 2,
+     "p_dec": 2,
      "pid": "277383",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
     "Leeds : 7e, 17 points, 14 buts marqués et 9 encaissés en 11 matchs.",
     "Coventry : 15e, 12 points, 13 buts marqués et 21 encaissés en 11 matchs.",
     "Leeds : 13 buts marqués et 9 encaissés sur ses 10 derniers matchs de championnat.",
-    "Coventry : 13 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat."
+    "Coventry : 13 buts marqués et 18 encaissés sur ses 10 derniers matchs de championnat.",
+    "Leeds : attaque revue à la baisse (−5 %) d'après la compo officielle.",
+    "Coventry : attaque revue à la baisse (−8 %) d'après la compo officielle (Taiwo Awoniyi ne commence pas).",
+    "Compositions officielles prises en compte : les joueurs clés sont titulaires."
    ],
    "reading": "Leeds est nettement favori (63 %).",
    "stakes": "Leeds (7e) est dans la course à l'Europe. Coventry (15e) lutte pour le maintien, 3 points d'avance sur la zone rouge.",
@@ -2658,75 +2671,76 @@
     "main": {
      "market": "1N",
      "label": "Leeds ou nul",
-     "p": 0.843,
-     "prob": 84,
-     "fair": 1.19,
+     "p": 0.847,
+     "prob": 85,
+     "fair": 1.18,
      "stars": 5,
      "why": "10 derniers matchs : Leeds 13 marqués / 9 encaissés · Coventry 13 / 18"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Leeds",
-     "p": 0.6338,
+     "p": 0.6291,
      "prob": 63,
-     "fair": 1.58,
+     "fair": 1.59,
      "stars": 3
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-0",
-     "p": 0.1145,
-     "prob": 11,
-     "fair": 8.73,
+     "p": 0.1296,
+     "prob": 13,
+     "fair": 7.72,
      "stars": 1,
      "value": "1-0"
     },
     "fun": {
      "market": "htft_h",
      "label": "Leeds mène à la mi-temps et gagne le match",
-     "p": 0.4105,
-     "prob": 41,
-     "fair": 2.44,
+     "p": 0.4035,
+     "prob": 40,
+     "fair": 2.48,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_o25",
-      "label": "Leeds gagne et plus de 2,5 buts",
-      "p": 0.4058,
-      "prob": 41,
-      "fair": 2.46,
+      "market": "wh_nil",
+      "label": "Leeds gagne sans encaisser de but",
+      "p": 0.3818,
+      "prob": 38,
+      "fair": 2.62,
       "stars": 1
      },
      {
-      "market": "h2",
-      "label": "Leeds gagne avec 2 buts d'écart ou plus",
-      "p": 0.3879,
-      "prob": 39,
-      "fair": 2.58,
+      "market": "wh_o25",
+      "label": "Leeds gagne et plus de 2,5 buts",
+      "p": 0.3779,
+      "prob": 38,
+      "fair": 2.65,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Dominic Calvert-Lewin marque",
-     "p": 0.44,
-     "prob": 44,
-     "fair": 2.27,
+     "p": 0.42,
+     "prob": 42,
+     "fair": 2.38,
      "stars": 1,
      "player": "Dominic Calvert-Lewin",
      "team": "Leeds",
+     "lineup": "start",
      "pid": "197717",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 2 passes en 11 matchs · 10 derniers matchs : 4 buts, 2 passes · Leeds favori (63 %) · 2,0 buts attendus pour Leeds"
+     "why": "4 buts et 2 passes en 11 matchs · 10 derniers matchs : 4 buts, 2 passes · titulaire · Leeds favori (63 %) · 1,9 buts attendus pour Leeds"
     },
     "decisive": {
      "market": "dec",
      "label": "Dominic Calvert-Lewin buteur ou passeur",
-     "p": 0.59,
-     "prob": 59,
-     "fair": 1.69,
+     "p": 0.57,
+     "prob": 57,
+     "fair": 1.75,
      "stars": 2,
      "player": "Dominic Calvert-Lewin",
      "team": "Leeds",
@@ -2735,10 +2749,11 @@
       4,
       2
      ],
+     "lineup": "start",
      "pid": "197717",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 2 passes en 11 matchs · 10 derniers matchs : 4 buts, 2 passes · Leeds favori (63 %) · 2,0 buts attendus pour Leeds"
+     "why": "4 buts et 2 passes en 11 matchs · 10 derniers matchs : 4 buts, 2 passes · titulaire · Leeds favori (63 %) · 1,9 buts attendus pour Leeds"
     }
    },
    "second": {
@@ -2766,44 +2781,24 @@
    "rank_h": 19,
    "rank_a": 6,
    "pH": 29,
-   "pD": 21,
-   "pA": 50,
+   "pD": 23,
+   "pA": 48,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 1.53,
-   "xgA": 2.05,
+   "xgH": 1.33,
+   "xgA": 1.78,
    "scores": [
-    "1-2",
     "1-1",
-    "2-2"
+    "1-2",
+    "0-1"
    ],
    "scorep": [
+    11,
     9,
-    9,
-    7
+    8
    ],
-   "over25": 69,
-   "btts": 68,
+   "over25": 60,
+   "btts": 61,
    "squad_h": [
-    {
-     "name": "Bryan Mbeumo",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Man Utd",
-     "goals": 4,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 4,
-      "a": 0
-     },
-     "p_goal": 35,
-     "p_dec": 38,
-     "pid": "271170",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
     {
      "name": "Bruno Fernandes",
      "pos": "Milieu",
@@ -2818,31 +2813,33 @@
       "g": 4,
       "a": 2
      },
-     "p_goal": 32,
-     "p_dec": 46,
+     "p_goal": 28,
+     "p_dec": 42,
      "pid": "124091",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Matheus Cunha",
+     "name": "Bryan Mbeumo",
      "pos": "Attaquant",
      "side": "h",
      "team": "Man Utd",
-     "goals": 1,
-     "assists": 2,
+     "goals": 4,
+     "assists": 0,
      "apps": 11,
      "l10": {
       "n": 10,
       "gp": 10,
-      "g": 1,
-      "a": 2
+      "g": 4,
+      "a": 0
      },
-     "p_goal": 14,
-     "p_dec": 31,
-     "pid": "259902",
+     "p_goal": 11,
+     "p_dec": 12,
+     "pid": "271170",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Youri Tielemans",
@@ -2858,31 +2855,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 22,
+     "p_goal": 9,
+     "p_dec": 19,
      "pid": "193297",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Joshua Zirkzee",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Man Utd",
-     "goals": 1,
-     "assists": 0,
-     "apps": 7,
-     "l10": {
-      "n": 10,
-      "gp": 7,
-      "g": 1,
-      "a": 0
-     },
-     "p_goal": 10,
-     "p_dec": 10,
-     "pid": "276327",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Patrick Dorgu",
@@ -2898,11 +2876,54 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 9,
-     "p_dec": 24,
+     "p_goal": 8,
+     "p_dec": 21,
      "pid": "366781",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Joshua Zirkzee",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Man Utd",
+     "goals": 1,
+     "assists": 0,
+     "apps": 7,
+     "l10": {
+      "n": 10,
+      "gp": 7,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "276327",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Matheus Cunha",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Man Utd",
+     "goals": 1,
+     "assists": 2,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 4,
+     "p_dec": 9,
+     "pid": "259902",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -2920,51 +2941,12 @@
       "g": 3,
       "a": 1
      },
-     "p_goal": 33,
-     "p_dec": 42,
+     "p_goal": 30,
+     "p_dec": 38,
      "pid": "284490",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Kevin Schade",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Brentford",
-     "goals": 3,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 27,
-     "p_dec": 30,
-     "pid": "310958",
-     "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Igor Thiago",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Brentford",
-     "goals": 2,
-     "assists": 2,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 2
-     },
-     "p_goal": 23,
-     "p_dec": 39,
-     "pid": "301894",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Vitaly Janelt",
@@ -2980,31 +2962,12 @@
       "g": 2,
       "a": 0
      },
-     "p_goal": 23,
-     "p_dec": 28,
+     "p_goal": 21,
+     "p_dec": 24,
      "pid": "225564",
      "stats_league": "eng.1",
-     "season": 2026
-    },
-    {
-     "name": "Fábio Carvalho",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Brentford",
-     "goals": 2,
-     "assists": 0,
-     "apps": 2,
-     "l10": {
-      "n": 10,
-      "gp": 2,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 17,
-     "p_dec": 17,
-     "pid": "231049",
-     "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Jaidon Anthony",
@@ -3020,11 +2983,75 @@
       "g": 1,
       "a": 4
      },
-     "p_goal": 13,
-     "p_dec": 42,
+     "p_goal": 12,
+     "p_dec": 38,
      "pid": "307657",
      "stats_league": "eng.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Dango Ouattara",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Brentford",
+     "goals": 1,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 11,
+     "p_dec": 13,
+     "pid": "315530",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kristoffer Ajer",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Brentford",
+     "goals": 1,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 9,
+     "p_dec": 10,
+     "pid": "206173",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Kevin Schade",
+     "pos": "Milieu",
+     "side": "a",
+     "team": "Brentford",
+     "goals": 3,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "310958",
+     "stats_league": "eng.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "ctx": [
@@ -3032,74 +3059,78 @@
     "Brentford : 6e, 17 points, 20 buts marqués et 11 encaissés en 11 matchs.",
     "Man Utd : 14 buts marqués et 21 encaissés sur ses 10 derniers matchs de championnat.",
     "Brentford : 17 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat.",
-    "Man Utd a joué il y a 3 jours : fatigue probable, chances un peu réduites."
+    "Man Utd a joué il y a 3 jours : fatigue probable, chances un peu réduites.",
+    "Man Utd : attaque revue à la baisse (−13 %) d'après la compo officielle (Bryan Mbeumo ne commence pas).",
+    "Brentford : attaque revue à la baisse (−13 %) d'après la compo officielle (Kevin Schade, Igor Thiago ne commencent pas).",
+    "Compositions officielles prises en compte : Bryan Mbeumo (remplaçant), Fábio Carvalho (remplaçant), Kevin Schade (remplaçant), Igor Thiago (absent) ne commencent pas le match."
    ],
-   "reading": "Brentford est favori sans écraser le match (50 %).",
+   "reading": "Brentford est favori sans écraser le match (48 %).",
    "stakes": "Man Utd (19e) est en zone de relégation : match vital. Brentford (6e) est dans la course à l'Europe.",
    "picks": {
     "winner": {
      "market": "2",
      "label": "Victoire Brentford",
-     "p": 0.497,
-     "prob": 50,
-     "fair": 2.01,
+     "p": 0.48,
+     "prob": 48,
+     "fair": 2.08,
      "stars": 1
     },
     "score": {
      "market": "exact",
      "label": "Score exact 1-2",
-     "p": 0.0895,
+     "p": 0.094,
      "prob": 9,
-     "fair": 11.18,
+     "fair": 10.64,
      "stars": 1,
      "value": "1-2"
     },
     "fun": {
-     "market": "wa_o25",
-     "label": "Brentford gagne et plus de 2,5 buts",
-     "p": 0.3819,
+     "market": "o35",
+     "label": "Plus de 3,5 buts",
+     "p": 0.3759,
      "prob": 38,
-     "fair": 2.62,
+     "fair": 2.66,
      "stars": 1
     },
     "fun_alt": [
      {
-      "market": "htft_a",
-      "label": "Brentford mène à la mi-temps et gagne le match",
-      "p": 0.3142,
-      "prob": 31,
-      "fair": 3.18,
+      "market": "wa_o25",
+      "label": "Brentford gagne et plus de 2,5 buts",
+      "p": 0.3295,
+      "prob": 33,
+      "fair": 3.03,
       "stars": 1
      },
      {
-      "market": "wa_btts",
-      "label": "Brentford gagne et les deux équipes marquent",
-      "p": 0.3093,
-      "prob": 31,
-      "fair": 3.23,
+      "market": "htft_a",
+      "label": "Brentford mène à la mi-temps et gagne le match",
+      "p": 0.2969,
+      "prob": 30,
+      "fair": 3.37,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Keane Lewis-Potter marque",
-     "p": 0.33,
-     "prob": 33,
-     "fair": 3.03,
+     "p": 0.3,
+     "prob": 30,
+     "fair": 3.33,
      "stars": 1,
      "player": "Keane Lewis-Potter",
      "team": "Brentford",
+     "lineup": "start",
      "pid": "284490",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · Brentford favori (50 %) · 2,1 buts attendus pour Brentford"
+     "why": "4 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · Brentford favori (48 %) · 1,8 buts attendus pour Brentford"
     },
     "decisive": {
      "market": "dec",
      "label": "Keane Lewis-Potter buteur ou passeur",
-     "p": 0.42,
-     "prob": 42,
-     "fair": 2.38,
+     "p": 0.38,
+     "prob": 38,
+     "fair": 2.63,
      "stars": 1,
      "player": "Keane Lewis-Potter",
      "team": "Brentford",
@@ -3108,17 +3139,18 @@
       4,
       1
      ],
+     "lineup": "start",
      "pid": "284490",
      "stats_league": "eng.1",
      "season": 2026,
-     "why": "4 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · Brentford favori (50 %) · 2,1 buts attendus pour Brentford"
+     "why": "4 buts et 1 passe en 11 matchs · 10 derniers matchs : 3 buts, 1 passe · titulaire · Brentford favori (48 %) · 1,8 buts attendus pour Brentford"
     },
     "held": {
      "market": "N2",
      "label": "Nul ou Brentford",
-     "p": 0.7101,
+     "p": 0.7121,
      "prob": 71,
-     "fair": 1.41,
+     "fair": 1.4,
      "stars": 4,
      "why": "10 derniers matchs : Man Utd 14 marqués / 21 encaissés · Brentford 17 / 11",
      "note": "l'analyse et le marché des paris ne désignent pas le même favori"
@@ -3149,24 +3181,24 @@
    "form_a": "DNVVV",
    "rank_h": 20,
    "rank_a": 8,
-   "pH": 22,
-   "pD": 27,
-   "pA": 51,
+   "pH": 20,
+   "pD": 28,
+   "pA": 52,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 0.85,
-   "xgA": 1.43,
+   "xgH": 0.72,
+   "xgA": 1.36,
    "scores": [
     "0-1",
-    "1-1",
-    "0-2"
+    "0-0",
+    "1-1"
    ],
    "scorep": [
-    15,
-    12,
-    10
+    17,
+    13,
+    12
    ],
-   "over25": 40,
-   "btts": 43,
+   "over25": 34,
+   "btts": 38,
    "squad_h": [
     {
      "name": "Adrián Niño",
@@ -3182,71 +3214,12 @@
       "g": 5,
       "a": 1
      },
-     "p_goal": 31,
-     "p_dec": 36,
+     "p_goal": 27,
+     "p_dec": 32,
      "pid": "373542",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Carlos Dotor",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Málaga",
-     "goals": 2,
-     "assists": 0,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 14,
-     "p_dec": 17,
-     "pid": "324098",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Pablo Martínez",
-     "pos": "Milieu",
-     "side": "h",
-     "team": "Málaga",
-     "goals": 1,
-     "assists": 2,
-     "apps": 9,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 1,
-      "a": 2
-     },
-     "p_goal": 8,
-     "p_dec": 21,
-     "pid": "271151",
-     "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Chupete",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Málaga",
-     "goals": 1,
-     "assists": 0,
-     "apps": 13,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 0,
-      "a": 0
-     },
-     "p_goal": 8,
-     "p_dec": 10,
-     "pid": "388602",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "David Larrubia",
@@ -3262,11 +3235,54 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 5,
-     "p_dec": 8,
+     "p_goal": 4,
+     "p_dec": 7,
      "pid": "297828",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Carlos Dotor",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Málaga",
+     "goals": 2,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 2,
+      "a": 0
+     },
+     "p_goal": 4,
+     "p_dec": 5,
+     "pid": "324098",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "Pablo Martínez",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Málaga",
+     "goals": 1,
+     "assists": 2,
+     "apps": 9,
+     "l10": {
+      "n": 10,
+      "gp": 8,
+      "g": 1,
+      "a": 2
+     },
+     "p_goal": 2,
+     "p_dec": 6,
+     "pid": "271151",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Joaquín Muñoz",
@@ -3282,11 +3298,33 @@
       "g": 0,
       "a": 0
      },
-     "p_goal": 3,
+     "p_goal": 2,
      "p_dec": 4,
      "pid": "180444",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Chupete",
+     "pos": "Attaquant",
+     "side": "h",
+     "team": "Málaga",
+     "goals": 1,
+     "assists": 0,
+     "apps": 13,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 0
+     },
+     "p_goal": 2,
+     "p_dec": 3,
+     "pid": "388602",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "bench"
     }
    ],
    "squad_a": [
@@ -3304,11 +3342,12 @@
       "g": 4,
       "a": 4
      },
-     "p_goal": 30,
-     "p_dec": 50,
+     "p_goal": 29,
+     "p_dec": 48,
      "pid": "209579",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Iñaki Williams",
@@ -3324,11 +3363,12 @@
       "g": 3,
       "a": 2
      },
-     "p_goal": 25,
-     "p_dec": 37,
+     "p_goal": 24,
+     "p_dec": 36,
      "pid": "214412",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Nico Williams",
@@ -3344,31 +3384,12 @@
       "g": 2,
       "a": 1
      },
-     "p_goal": 18,
-     "p_dec": 26,
+     "p_goal": 17,
+     "p_dec": 25,
      "pid": "312146",
      "stats_league": "esp.1",
-     "season": 2026
-    },
-    {
-     "name": "Robert Navarro",
-     "pos": "Milieu",
-     "side": "a",
-     "team": "Athletic",
-     "goals": 2,
-     "assists": 0,
-     "apps": 11,
-     "l10": {
-      "n": 10,
-      "gp": 9,
-      "g": 2,
-      "a": 0
-     },
-     "p_goal": 16,
-     "p_dec": 18,
-     "pid": "276996",
-     "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Aitor Paredes",
@@ -3385,10 +3406,11 @@
       "a": 0
      },
      "p_goal": 11,
-     "p_dec": 12,
+     "p_dec": 11,
      "pid": "308254",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Oihan Sancet",
@@ -3404,95 +3426,121 @@
       "g": 1,
       "a": 0
      },
-     "p_goal": 9,
+     "p_goal": 8,
      "p_dec": 11,
      "pid": "291616",
      "stats_league": "esp.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Yuri Berchiche",
+     "pos": "Défenseur",
+     "side": "a",
+     "team": "Athletic",
+     "goals": 1,
+     "assists": 0,
+     "apps": 11,
+     "l10": {
+      "n": 10,
+      "gp": 9,
+      "g": 1,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 9,
+     "pid": "133768",
+     "stats_league": "esp.1",
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Málaga : 20e, 5 points, 9 buts marqués et 24 encaissés en 13 matchs.",
     "Athletic : 8e, 16 points, 15 buts marqués et 12 encaissés en 12 matchs.",
     "Málaga : 8 buts marqués et 17 encaissés sur ses 10 derniers matchs de championnat.",
-    "Athletic : 14 buts marqués et 7 encaissés sur ses 10 derniers matchs de championnat."
+    "Athletic : 14 buts marqués et 7 encaissés sur ses 10 derniers matchs de championnat.",
+    "Málaga : attaque revue à la baisse (−16 %) d'après la compo officielle (Pablo Martínez, Carlos Dotor, Chupete ne commencent pas).",
+    "Athletic : attaque revue à la baisse (−5 %) d'après la compo officielle (Robert Navarro ne commence pas).",
+    "Compositions officielles prises en compte : Robert Navarro (remplaçant) ne commence pas le match."
    ],
-   "reading": "Athletic est favori sans écraser le match (51 %).",
+   "reading": "Athletic est favori sans écraser le match (52 %).",
    "stakes": "Málaga (20e) est en zone de relégation : match vital.",
    "picks": {
     "main": {
      "market": "N2",
      "label": "Nul ou Athletic",
-     "p": 0.7769,
-     "prob": 78,
-     "fair": 1.29,
-     "stars": 4,
+     "p": 0.8034,
+     "prob": 80,
+     "fair": 1.24,
+     "stars": 5,
      "why": "10 derniers matchs : Málaga 8 marqués / 17 encaissés · Athletic 14 / 7"
     },
     "winner": {
      "market": "2",
      "label": "Victoire Athletic",
-     "p": 0.5066,
-     "prob": 51,
-     "fair": 1.97,
+     "p": 0.5228,
+     "prob": 52,
+     "fair": 1.91,
      "stars": 2
     },
     "score": {
      "market": "exact",
      "label": "Score exact 0-1",
-     "p": 0.1468,
-     "prob": 15,
-     "fair": 6.81,
+     "p": 0.1707,
+     "prob": 17,
+     "fair": 5.86,
      "stars": 1,
      "value": "0-1"
     },
     "fun": {
      "market": "wa_nil",
      "label": "Athletic gagne sans encaisser de but",
-     "p": 0.3258,
-     "prob": 33,
-     "fair": 3.07,
+     "p": 0.3636,
+     "prob": 36,
+     "fair": 2.75,
      "stars": 1
     },
     "fun_alt": [
      {
       "market": "htft_a",
       "label": "Athletic mène à la mi-temps et gagne le match",
-      "p": 0.305,
-      "prob": 30,
-      "fair": 3.28,
+      "p": 0.313,
+      "prob": 31,
+      "fair": 3.2,
       "stars": 1
      },
      {
       "market": "wa_by1",
       "label": "Athletic gagne d'un seul but",
-      "p": 0.2554,
-      "prob": 26,
-      "fair": 3.92,
+      "p": 0.2684,
+      "prob": 27,
+      "fair": 3.73,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
      "label": "Álex Berenguer marque",
-     "p": 0.3,
-     "prob": 30,
-     "fair": 3.33,
+     "p": 0.29,
+     "prob": 29,
+     "fair": 3.45,
      "stars": 1,
      "player": "Álex Berenguer",
      "team": "Athletic",
+     "lineup": "start",
      "pid": "209579",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "4 buts et 4 passes en 13 matchs · 10 derniers matchs : 4 buts, 4 passes · Athletic favori (51 %) · 1,4 but attendu pour Athletic"
+     "why": "4 buts et 4 passes en 13 matchs · 10 derniers matchs : 4 buts, 4 passes · titulaire · Athletic favori (52 %) · 1,4 but attendu pour Athletic"
     },
     "decisive": {
      "market": "dec",
      "label": "Álex Berenguer buteur ou passeur",
-     "p": 0.5,
-     "prob": 50,
-     "fair": 2.0,
-     "stars": 2,
+     "p": 0.48,
+     "prob": 48,
+     "fair": 2.08,
+     "stars": 1,
      "player": "Álex Berenguer",
      "team": "Athletic",
      "base": [
@@ -3500,10 +3548,11 @@
       4,
       4
      ],
+     "lineup": "start",
      "pid": "209579",
      "stats_league": "esp.1",
      "season": 2026,
-     "why": "4 buts et 4 passes en 13 matchs · 10 derniers matchs : 4 buts, 4 passes · Athletic favori (51 %) · 1,4 but attendu pour Athletic"
+     "why": "4 buts et 4 passes en 13 matchs · 10 derniers matchs : 4 buts, 4 passes · titulaire · Athletic favori (52 %) · 1,4 but attendu pour Athletic"
     }
    },
    "second": {
@@ -43783,7 +43832,7 @@
  },
  "second": {
   "foot": {
-   "ok": 19,
+   "ok": 18,
    "elo": {
     "fra.1": 697,
     "eng.1": 853,
