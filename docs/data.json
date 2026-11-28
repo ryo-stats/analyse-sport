@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T13:43+01:00",
+ "generated": "2026-11-28T14:08+01:00",
  "date": "2026-11-28",
  "nhl_date": "2026-11-28",
  "foot": [
@@ -9,8 +9,8 @@
    "league": "LaLiga",
    "kickoff": "2026-11-28T13:00:00+00:00",
    "time": "14:00",
-   "state": "pre",
-   "score": null,
+   "state": "in",
+   "score": "0-0",
    "home": "Betis",
    "away": "Rayo",
    "form_h": "VNVVD",
@@ -296,7 +296,6 @@
     "Rayo : 16e, 12 points, 15 buts marqués et 22 encaissés en 12 matchs.",
     "Betis : 17 buts marqués et 11 encaissés sur ses 10 derniers matchs de championnat.",
     "Rayo : 13 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
-    "Betis : attaque revue à la baisse (−7 %) d'après la compo officielle (Rodrigo Riquelme ne commence pas).",
     "Compositions officielles prises en compte : Rodrigo Riquelme (remplaçant) ne commence pas le match."
    ],
    "reading": "Betis est nettement favori (62 %).",
@@ -348,7 +347,7 @@
      {
       "market": "h2",
       "label": "Betis gagne avec 2 buts d'écart ou plus",
-      "p": 0.3879,
+      "p": 0.388,
       "prob": 39,
       "fair": 2.58,
       "stars": 1
@@ -414,45 +413,25 @@
    "form_a": "DDVND",
    "rank_h": 7,
    "rank_a": 17,
-   "pH": 65,
-   "pD": 17,
-   "pA": 18,
+   "pH": 64,
+   "pD": 20,
+   "pA": 16,
    "source": "Analyse maison : classement maison (tous les résultats depuis deux saisons) et buts marqués et encaissés (saison et 10 derniers matchs), avantage du terrain",
-   "xgH": 2.59,
-   "xgA": 1.31,
+   "xgH": 2.16,
+   "xgA": 0.98,
    "scores": [
+    "2-0",
     "2-1",
-    "3-1",
-    "1-1"
+    "1-0"
    ],
    "scorep": [
-    9,
-    8,
-    7
+    10,
+    10,
+    9
    ],
-   "over25": 75,
-   "btts": 68,
+   "over25": 61,
+   "btts": 55,
    "squad_h": [
-    {
-     "name": "Antonio Raimondo",
-     "pos": "Attaquant",
-     "side": "h",
-     "team": "Frosinone",
-     "goals": 8,
-     "assists": 0,
-     "apps": 10,
-     "l10": {
-      "n": 10,
-      "gp": 8,
-      "g": 6,
-      "a": 0
-     },
-     "p_goal": 51,
-     "p_dec": 53,
-     "pid": "319265",
-     "stats_league": "ita.1",
-     "season": 2026
-    },
     {
      "name": "Giacomo Calo",
      "pos": "Milieu",
@@ -467,11 +446,12 @@
       "g": 5,
       "a": 0
      },
-     "p_goal": 39,
-     "p_dec": 45,
+     "p_goal": 34,
+     "p_dec": 40,
      "pid": "236038",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giorgi Kvernadze",
@@ -487,11 +467,12 @@
       "g": 3,
       "a": 3
      },
-     "p_goal": 30,
-     "p_dec": 52,
+     "p_goal": 26,
+     "p_dec": 46,
      "pid": "360714",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Romano Schmid",
@@ -507,31 +488,33 @@
       "g": 2,
       "a": 4
      },
-     "p_goal": 19,
-     "p_dec": 47,
+     "p_goal": 16,
+     "p_dec": 42,
      "pid": "238296",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "Daniel Birligea",
+     "name": "Antonio Raimondo",
      "pos": "Attaquant",
      "side": "h",
      "team": "Frosinone",
-     "goals": 2,
+     "goals": 8,
      "assists": 0,
-     "apps": 7,
+     "apps": 10,
      "l10": {
       "n": 10,
-      "gp": 6,
-      "g": 2,
+      "gp": 8,
+      "g": 6,
       "a": 0
      },
-     "p_goal": 18,
-     "p_dec": 19,
-     "pid": "335061",
+     "p_goal": 16,
+     "p_dec": 17,
+     "pid": "319265",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
      "name": "Farès Ghedjemis",
@@ -547,54 +530,36 @@
       "g": 1,
       "a": 4
      },
-     "p_goal": 14,
-     "p_dec": 43,
+     "p_goal": 12,
+     "p_dec": 38,
      "pid": "356536",
      "stats_league": "ita.1",
-     "season": 2026
-    }
-   ],
-   "squad_a": [
-    {
-     "name": "Simone Lontani",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Parma",
-     "goals": 3,
-     "assists": 0,
-     "apps": 12,
-     "l10": {
-      "n": 10,
-      "gp": 10,
-      "g": 3,
-      "a": 0
-     },
-     "p_goal": 30,
-     "p_dec": 31,
-     "pid": "413818",
-     "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
-     "name": "José Romero",
-     "pos": "Attaquant",
-     "side": "a",
-     "team": "Parma",
-     "goals": 2,
-     "assists": 0,
-     "apps": 9,
+     "name": "Patrizio Masini",
+     "pos": "Milieu",
+     "side": "h",
+     "team": "Frosinone",
+     "goals": 1,
+     "assists": 1,
+     "apps": 10,
      "l10": {
       "n": 10,
       "gp": 8,
-      "g": 2,
-      "a": 0
+      "g": 1,
+      "a": 1
      },
-     "p_goal": 21,
-     "p_dec": 23,
-     "pid": "301980",
+     "p_goal": 9,
+     "p_dec": 19,
+     "pid": "346840",
      "stats_league": "ita.1",
-     "season": 2026
-    },
+     "season": 2026,
+     "lineup": "start"
+    }
+   ],
+   "squad_a": [
     {
      "name": "Nesta Elphege",
      "pos": "Attaquant",
@@ -609,11 +574,12 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 12,
-     "p_dec": 22,
+     "p_goal": 9,
+     "p_dec": 17,
      "pid": "361749",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Giovanni Fabbian",
@@ -629,11 +595,54 @@
       "g": 1,
       "a": 2
      },
-     "p_goal": 11,
-     "p_dec": 29,
+     "p_goal": 8,
+     "p_dec": 23,
      "pid": "323118",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
+    },
+    {
+     "name": "Simone Lontani",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Parma",
+     "goals": 3,
+     "assists": 0,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 3,
+      "a": 0
+     },
+     "p_goal": 8,
+     "p_dec": 8,
+     "pid": "413818",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "bench"
+    },
+    {
+     "name": "El Bilal Toure",
+     "pos": "Attaquant",
+     "side": "a",
+     "team": "Parma",
+     "goals": 0,
+     "assists": 1,
+     "apps": 12,
+     "l10": {
+      "n": 10,
+      "gp": 10,
+      "g": 0,
+      "a": 1
+     },
+     "p_goal": 5,
+     "p_dec": 15,
+     "pid": "287430",
+     "stats_league": "ita.1",
+     "season": 2026,
+     "lineup": "start"
     },
     {
      "name": "Vincent Sierro",
@@ -649,129 +658,133 @@
       "g": 1,
       "a": 1
      },
-     "p_goal": 11,
-     "p_dec": 23,
+     "p_goal": 3,
+     "p_dec": 6,
      "pid": "218857",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "bench"
     },
     {
-     "name": "Pontus Almqvist",
-     "pos": "Attaquant",
+     "name": "Mandela Keita",
+     "pos": "Milieu",
      "side": "a",
      "team": "Parma",
-     "goals": 1,
-     "assists": 1,
-     "apps": 7,
+     "goals": 0,
+     "assists": 0,
+     "apps": 12,
      "l10": {
       "n": 10,
-      "gp": 5,
-      "g": 1,
-      "a": 1
+      "gp": 10,
+      "g": 0,
+      "a": 0
      },
-     "p_goal": 10,
-     "p_dec": 19,
-     "pid": "253569",
+     "p_goal": 2,
+     "p_dec": 7,
+     "pid": "316609",
      "stats_league": "ita.1",
-     "season": 2026
+     "season": 2026,
+     "lineup": "start"
     }
    ],
    "ctx": [
     "Frosinone : 7e, 20 points, 25 buts marqués et 20 encaissés en 12 matchs.",
     "Parma : 17e, 8 points, 10 buts marqués et 22 encaissés en 12 matchs.",
     "Frosinone : 22 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
-    "Parma : 10 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat."
+    "Parma : 10 buts marqués et 19 encaissés sur ses 10 derniers matchs de championnat.",
+    "Frosinone : attaque revue à la baisse (−17 %) d'après la compo officielle (Antonio Raimondo ne commence pas).",
+    "Parma : attaque revue à la baisse (−25 %) d'après la compo officielle (Vincent Sierro, Pontus Almqvist, José Romero, Simone Lontani ne commencent pas).",
+    "Compositions officielles prises en compte : Antonio Raimondo (remplaçant), Daniel Birligea (absent), José Romero (absent), Simone Lontani (remplaçant) ne commencent pas le match."
    ],
-   "reading": "Frosinone est nettement favori (65 %).",
+   "reading": "Frosinone est nettement favori (64 %).",
    "stakes": "Frosinone (7e) est dans la course à l'Europe. Parma (17e) lutte pour le maintien, 0 point d'avance sur la zone rouge.",
    "picks": {
     "main": {
      "market": "1N",
      "label": "Frosinone ou nul",
-     "p": 0.8231,
-     "prob": 82,
-     "fair": 1.21,
+     "p": 0.8381,
+     "prob": 84,
+     "fair": 1.19,
      "stars": 5,
      "why": "10 derniers matchs : Frosinone 22 marqués / 19 encaissés · Parma 10 / 19"
     },
     "winner": {
      "market": "1",
      "label": "Victoire Frosinone",
-     "p": 0.6481,
-     "prob": 65,
-     "fair": 1.54,
+     "p": 0.6412,
+     "prob": 64,
+     "fair": 1.56,
      "stars": 3
     },
     "score": {
      "market": "exact",
-     "label": "Score exact 2-1",
-     "p": 0.089,
-     "prob": 9,
-     "fair": 11.24,
+     "label": "Score exact 2-0",
+     "p": 0.1005,
+     "prob": 10,
+     "fair": 9.95,
      "stars": 1,
-     "value": "2-1"
+     "value": "2-0"
     },
     "fun": {
-     "market": "scw",
-     "label": "Antonio Raimondo marque et Frosinone gagne",
-     "p": 0.4005,
-     "prob": 40,
-     "fair": 2.5,
-     "stars": 1,
-     "player": "Antonio Raimondo",
-     "team": "Frosinone",
-     "side": "h"
+     "market": "h2",
+     "label": "Frosinone gagne avec 2 buts d'écart ou plus",
+     "p": 0.407,
+     "prob": 41,
+     "fair": 2.46,
+     "stars": 1
     },
     "fun_alt": [
      {
-      "market": "wh_btts",
-      "label": "Frosinone gagne et les deux équipes marquent",
-      "p": 0.3995,
-      "prob": 40,
-      "fair": 2.5,
+      "market": "o35",
+      "label": "Plus de 3,5 buts",
+      "p": 0.3844,
+      "prob": 38,
+      "fair": 2.6,
       "stars": 1
      },
      {
-      "market": "h3",
-      "label": "Frosinone gagne avec 3 buts d'écart ou plus",
-      "p": 0.254,
-      "prob": 25,
-      "fair": 3.94,
+      "market": "wh_nil",
+      "label": "Frosinone gagne sans encaisser de but",
+      "p": 0.3302,
+      "prob": 33,
+      "fair": 3.03,
       "stars": 1
      }
     ],
     "player": {
      "market": "scorer",
-     "label": "Antonio Raimondo marque",
-     "p": 0.51,
-     "prob": 51,
-     "fair": 1.96,
-     "stars": 2,
-     "player": "Antonio Raimondo",
+     "label": "Giacomo Calo marque",
+     "p": 0.34,
+     "prob": 34,
+     "fair": 2.94,
+     "stars": 1,
+     "player": "Giacomo Calo",
      "team": "Frosinone",
-     "pid": "319265",
+     "lineup": "start",
+     "pid": "236038",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 10 matchs · 10 derniers matchs : 6 buts, 0 passe (joué 8 sur 10) · Frosinone favori (65 %) · 2,6 buts attendus pour Frosinone"
+     "why": "5 buts et 1 passe en 12 matchs · 10 derniers matchs : 5 buts, 0 passe · titulaire · Frosinone favori (64 %) · 2,2 buts attendus pour Frosinone"
     },
     "decisive": {
      "market": "dec",
-     "label": "Antonio Raimondo buteur ou passeur",
-     "p": 0.53,
-     "prob": 53,
-     "fair": 1.89,
-     "stars": 2,
-     "player": "Antonio Raimondo",
+     "label": "Giacomo Calo buteur ou passeur",
+     "p": 0.4,
+     "prob": 40,
+     "fair": 2.5,
+     "stars": 1,
+     "player": "Giacomo Calo",
      "team": "Frosinone",
      "base": [
-      10,
-      8,
-      0
+      12,
+      5,
+      1
      ],
-     "pid": "319265",
+     "lineup": "start",
+     "pid": "236038",
      "stats_league": "ita.1",
      "season": 2026,
-     "why": "8 buts et 0 passe en 10 matchs · 10 derniers matchs : 6 buts, 0 passe (joué 8 sur 10) · Frosinone favori (65 %) · 2,6 buts attendus pour Frosinone"
+     "why": "5 buts et 1 passe en 12 matchs · 10 derniers matchs : 5 buts, 0 passe · titulaire · Frosinone favori (64 %) · 2,2 buts attendus pour Frosinone"
     }
    },
    "second": {
@@ -43708,7 +43721,7 @@
  },
  "second": {
   "foot": {
-   "ok": 20,
+   "ok": 19,
    "elo": {
     "fra.1": 697,
     "eng.1": 853,
@@ -43716,23 +43729,7 @@
     "ita.1": 873,
     "ger.1": 677
    },
-   "elo_fetch": {
-    "fra.1": {
-     "2026": 100
-    },
-    "eng.1": {
-     "2026": 111
-    },
-    "esp.1": {
-     "2026": 130
-    },
-    "ita.1": {
-     "2026": 121
-    },
-    "ger.1": {
-     "2026": 91
-    }
-   },
+   "elo_fetch": {},
    "status": "ok"
   },
   "nhl": {
